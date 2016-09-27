@@ -1,0 +1,5298 @@
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.mcp2515_modifyRegister,"ax",%progbits
+  19              		.align	2
+  20              		.global	mcp2515_modifyRegister
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	mcp2515_modifyRegister, %function
+  24              	mcp2515_modifyRegister:
+  25              	.LFB63:
+  26              		.file 1 ".\\main.c"
+   1:.\main.c      **** #include <project.h>
+   2:.\main.c      **** #include <Value.c>
+   3:.\main.c      **** #define MAX_CHAR_IN_MESSAGE 8
+   4:.\main.c      **** int8 dato_TX,dato_RX;
+   5:.\main.c      **** uint8   m_nExtFlg;                                                  // Identifier Type
+   6:.\main.c      **** uint32  m_nID;                                                      // CAN ID
+   7:.\main.c      **** uint8   m_nDlc;                                                     // Data Length Code
+   8:.\main.c      **** uint8   m_nDta[MAX_CHAR_IN_MESSAGE];                            	// Data array
+   9:.\main.c      **** uint8   m_nRtr;                                                     // Remote request flag
+  10:.\main.c      **** uint8   m_nfilhit;                                                  // The number of the filter tha
+  11:.\main.c      **** uint8   MCPCS;                                                      // Chip Select pin number
+  12:.\main.c      **** uint8   mcpMode;    
+  13:.\main.c      **** 
+  14:.\main.c      **** void mcp2515_modifyRegister(const uint8 address, const uint8 mask, const uint8 data){
+  27              		.loc 1 14 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 70B5     		push	{r4, r5, r6, lr}
+  33              		.cfi_def_cfa_offset 16
+  34              		.cfi_offset 4, -16
+  35              		.cfi_offset 5, -12
+  36              		.cfi_offset 6, -8
+  37              		.cfi_offset 14, -4
+  38 0002 0646     		mov	r6, r0
+  39 0004 0D46     		mov	r5, r1
+  40 0006 1446     		mov	r4, r2
+  15:.\main.c      ****     SPIM_1_WriteTxData(MCP_BITMOD);
+  41              		.loc 1 15 0
+  42 0008 0520     		movs	r0, #5
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 2
+
+
+  43              	.LVL1:
+  44 000a FFF7FEFF 		bl	SPIM_1_WriteTxData
+  45              	.LVL2:
+  16:.\main.c      ****     SPIM_1_WriteTxData(address);
+  46              		.loc 1 16 0
+  47 000e 3046     		mov	r0, r6
+  48 0010 FFF7FEFF 		bl	SPIM_1_WriteTxData
+  49              	.LVL3:
+  17:.\main.c      ****     SPIM_1_WriteTxData(mask);
+  50              		.loc 1 17 0
+  51 0014 2846     		mov	r0, r5
+  52 0016 FFF7FEFF 		bl	SPIM_1_WriteTxData
+  53              	.LVL4:
+  18:.\main.c      ****     SPIM_1_WriteTxData(data);
+  54              		.loc 1 18 0
+  55 001a 2046     		mov	r0, r4
+  56 001c FFF7FEFF 		bl	SPIM_1_WriteTxData
+  57              	.LVL5:
+  19:.\main.c      ****     CyDelayCycles(250);
+  58              		.loc 1 19 0
+  59 0020 FA20     		movs	r0, #250
+  60 0022 FFF7FEFF 		bl	CyDelayCycles
+  61              	.LVL6:
+  62 0026 70BD     		pop	{r4, r5, r6, pc}
+  63              		.cfi_endproc
+  64              	.LFE63:
+  65              		.size	mcp2515_modifyRegister, .-mcp2515_modifyRegister
+  66              		.section	.text.mcp2515_readRegister,"ax",%progbits
+  67              		.align	2
+  68              		.global	mcp2515_readRegister
+  69              		.thumb
+  70              		.thumb_func
+  71              		.type	mcp2515_readRegister, %function
+  72              	mcp2515_readRegister:
+  73              	.LFB64:
+  20:.\main.c      **** }
+  21:.\main.c      **** 
+  22:.\main.c      **** uint8 mcp2515_readRegister(const uint8 address){
+  74              		.loc 1 22 0
+  75              		.cfi_startproc
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78              	.LVL7:
+  79 0000 10B5     		push	{r4, lr}
+  80              		.cfi_def_cfa_offset 8
+  81              		.cfi_offset 4, -8
+  82              		.cfi_offset 14, -4
+  83 0002 0446     		mov	r4, r0
+  23:.\main.c      ****     uint8 ret;
+  24:.\main.c      ****     SPIM_1_WriteTxData(MCP_READ);
+  84              		.loc 1 24 0
+  85 0004 0320     		movs	r0, #3
+  86              	.LVL8:
+  87 0006 FFF7FEFF 		bl	SPIM_1_WriteTxData
+  88              	.LVL9:
+  25:.\main.c      ****     SPIM_1_WriteTxData(address);
+  89              		.loc 1 25 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 3
+
+
+  90 000a 2046     		mov	r0, r4
+  91 000c FFF7FEFF 		bl	SPIM_1_WriteTxData
+  92              	.LVL10:
+  26:.\main.c      ****     ret = SPIM_1_ReadRxData();
+  93              		.loc 1 26 0
+  94 0010 FFF7FEFF 		bl	SPIM_1_ReadRxData
+  95              	.LVL11:
+  27:.\main.c      ****     return ret;
+  28:.\main.c      **** }
+  96              		.loc 1 28 0
+  97 0014 10BD     		pop	{r4, pc}
+  98              		.cfi_endproc
+  99              	.LFE64:
+ 100              		.size	mcp2515_readRegister, .-mcp2515_readRegister
+ 101 0016 00BF     		.section	.text.mcp2515_reset,"ax",%progbits
+ 102              		.align	2
+ 103              		.global	mcp2515_reset
+ 104              		.thumb
+ 105              		.thumb_func
+ 106              		.type	mcp2515_reset, %function
+ 107              	mcp2515_reset:
+ 108              	.LFB65:
+  29:.\main.c      **** 
+  30:.\main.c      **** void mcp2515_reset(void){SPIM_1_WriteTxData(MCP_RESET);}
+ 109              		.loc 1 30 0
+ 110              		.cfi_startproc
+ 111              		@ args = 0, pretend = 0, frame = 0
+ 112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 113 0000 08B5     		push	{r3, lr}
+ 114              		.cfi_def_cfa_offset 8
+ 115              		.cfi_offset 3, -8
+ 116              		.cfi_offset 14, -4
+ 117              		.loc 1 30 0
+ 118 0002 C020     		movs	r0, #192
+ 119 0004 FFF7FEFF 		bl	SPIM_1_WriteTxData
+ 120              	.LVL12:
+ 121 0008 08BD     		pop	{r3, pc}
+ 122              		.cfi_endproc
+ 123              	.LFE65:
+ 124              		.size	mcp2515_reset, .-mcp2515_reset
+ 125 000a 00BF     		.section	.text.mcp2515_setCANCTRL_Mode,"ax",%progbits
+ 126              		.align	2
+ 127              		.global	mcp2515_setCANCTRL_Mode
+ 128              		.thumb
+ 129              		.thumb_func
+ 130              		.type	mcp2515_setCANCTRL_Mode, %function
+ 131              	mcp2515_setCANCTRL_Mode:
+ 132              	.LFB66:
+  31:.\main.c      **** 
+  32:.\main.c      **** int8 mcp2515_setCANCTRL_Mode(const uint8 newmode){
+ 133              		.loc 1 32 0
+ 134              		.cfi_startproc
+ 135              		@ args = 0, pretend = 0, frame = 0
+ 136              		@ frame_needed = 0, uses_anonymous_args = 0
+ 137              	.LVL13:
+ 138 0000 10B5     		push	{r4, lr}
+ 139              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 4
+
+
+ 140              		.cfi_offset 4, -8
+ 141              		.cfi_offset 14, -4
+ 142 0002 0446     		mov	r4, r0
+  33:.\main.c      ****     uint8 i;
+  34:.\main.c      ****     mcp2515_modifyRegister(MCP_CANCTRL, MODE_MASK, newmode);
+ 143              		.loc 1 34 0
+ 144 0004 0F20     		movs	r0, #15
+ 145              	.LVL14:
+ 146 0006 E021     		movs	r1, #224
+ 147 0008 2246     		mov	r2, r4
+ 148 000a FFF7FEFF 		bl	mcp2515_modifyRegister
+ 149              	.LVL15:
+  35:.\main.c      ****     i = mcp2515_readRegister(MCP_CANCTRL);
+ 150              		.loc 1 35 0
+ 151 000e 0F20     		movs	r0, #15
+ 152 0010 FFF7FEFF 		bl	mcp2515_readRegister
+ 153              	.LVL16:
+  36:.\main.c      ****     i &= MODE_MASK;
+ 154              		.loc 1 36 0
+ 155 0014 00F0E000 		and	r0, r0, #224
+ 156              	.LVL17:
+  37:.\main.c      ****     if ( i == newmode ) 
+ 157              		.loc 1 37 0
+ 158 0018 A042     		cmp	r0, r4
+ 159 001a 01D1     		bne	.L9
+  38:.\main.c      ****         return MCP2515_OK;
+ 160              		.loc 1 38 0
+ 161 001c 0020     		movs	r0, #0
+ 162              	.LVL18:
+ 163 001e 10BD     		pop	{r4, pc}
+ 164              	.LVL19:
+ 165              	.L9:
+  39:.\main.c      ****     return MCP2515_FAIL;
+ 166              		.loc 1 39 0
+ 167 0020 0120     		movs	r0, #1
+ 168              	.LVL20:
+  40:.\main.c      **** }
+ 169              		.loc 1 40 0
+ 170 0022 10BD     		pop	{r4, pc}
+ 171              		.cfi_endproc
+ 172              	.LFE66:
+ 173              		.size	mcp2515_setCANCTRL_Mode, .-mcp2515_setCANCTRL_Mode
+ 174              		.section	.text.mcp2515_setRegister,"ax",%progbits
+ 175              		.align	2
+ 176              		.global	mcp2515_setRegister
+ 177              		.thumb
+ 178              		.thumb_func
+ 179              		.type	mcp2515_setRegister, %function
+ 180              	mcp2515_setRegister:
+ 181              	.LFB67:
+  41:.\main.c      **** 
+  42:.\main.c      **** void mcp2515_setRegister(const uint8 address, const uint8 value){
+ 182              		.loc 1 42 0
+ 183              		.cfi_startproc
+ 184              		@ args = 0, pretend = 0, frame = 0
+ 185              		@ frame_needed = 0, uses_anonymous_args = 0
+ 186              	.LVL21:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 5
+
+
+ 187 0000 38B5     		push	{r3, r4, r5, lr}
+ 188              		.cfi_def_cfa_offset 16
+ 189              		.cfi_offset 3, -16
+ 190              		.cfi_offset 4, -12
+ 191              		.cfi_offset 5, -8
+ 192              		.cfi_offset 14, -4
+ 193 0002 0546     		mov	r5, r0
+ 194 0004 0C46     		mov	r4, r1
+  43:.\main.c      ****     SPIM_1_WriteTxData(MCP_WRITE);
+ 195              		.loc 1 43 0
+ 196 0006 0220     		movs	r0, #2
+ 197              	.LVL22:
+ 198 0008 FFF7FEFF 		bl	SPIM_1_WriteTxData
+ 199              	.LVL23:
+  44:.\main.c      ****     SPIM_1_WriteTxData(address);
+ 200              		.loc 1 44 0
+ 201 000c 2846     		mov	r0, r5
+ 202 000e FFF7FEFF 		bl	SPIM_1_WriteTxData
+ 203              	.LVL24:
+  45:.\main.c      ****     SPIM_1_WriteTxData(value);
+ 204              		.loc 1 45 0
+ 205 0012 2046     		mov	r0, r4
+ 206 0014 FFF7FEFF 		bl	SPIM_1_WriteTxData
+ 207              	.LVL25:
+  46:.\main.c      ****     CyDelayUs(250);
+ 208              		.loc 1 46 0
+ 209 0018 FA20     		movs	r0, #250
+ 210 001a FFF7FEFF 		bl	CyDelayUs
+ 211              	.LVL26:
+ 212 001e 38BD     		pop	{r3, r4, r5, pc}
+ 213              		.cfi_endproc
+ 214              	.LFE67:
+ 215              		.size	mcp2515_setRegister, .-mcp2515_setRegister
+ 216              		.section	.text.mcp2515_configRate,"ax",%progbits
+ 217              		.align	2
+ 218              		.global	mcp2515_configRate
+ 219              		.thumb
+ 220              		.thumb_func
+ 221              		.type	mcp2515_configRate, %function
+ 222              	mcp2515_configRate:
+ 223              	.LFB68:
+  47:.\main.c      **** }
+  48:.\main.c      **** 
+  49:.\main.c      **** uint8 mcp2515_configRate(const uint8 canSpeed, const uint8 canClock){
+ 224              		.loc 1 49 0
+ 225              		.cfi_startproc
+ 226              		@ args = 0, pretend = 0, frame = 0
+ 227              		@ frame_needed = 0, uses_anonymous_args = 0
+ 228              	.LVL27:
+ 229 0000 38B5     		push	{r3, r4, r5, lr}
+ 230              		.cfi_def_cfa_offset 16
+ 231              		.cfi_offset 3, -16
+ 232              		.cfi_offset 4, -12
+ 233              		.cfi_offset 5, -8
+ 234              		.cfi_offset 14, -4
+ 235              	.LVL28:
+  50:.\main.c      ****     uint8 set, cfg1, cfg2, cfg3;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 6
+
+
+  51:.\main.c      ****     set = 1;
+  52:.\main.c      ****     switch (canClock)
+ 236              		.loc 1 52 0
+ 237 0002 0129     		cmp	r1, #1
+ 238 0004 41D0     		beq	.L15
+ 239 0006 0029     		cmp	r1, #0
+ 240 0008 76D0     		beq	.L16
+ 241 000a 0229     		cmp	r1, #2
+ 242 000c 40F0B780 		bne	.L60
+  53:.\main.c      ****     {
+  54:.\main.c      ****         case (MCP_8MHZ):
+  55:.\main.c      ****         switch (canSpeed) 
+ 243              		.loc 1 55 0
+ 244 0010 0138     		subs	r0, r0, #1
+ 245              	.LVL29:
+ 246 0012 0C28     		cmp	r0, #12
+ 247 0014 00F2B580 		bhi	.L54
+ 248 0018 DFE800F0 		tbb	[pc, r0]
+ 249              	.L19:
+ 250 001c 07       		.byte	(.L18-.L19)/2
+ 251 001d 98       		.byte	(.L55-.L19)/2
+ 252 001e 0B       		.byte	(.L21-.L19)/2
+ 253 001f 0F       		.byte	(.L22-.L19)/2
+ 254 0020 13       		.byte	(.L23-.L19)/2
+ 255 0021 17       		.byte	(.L24-.L19)/2
+ 256 0022 1B       		.byte	(.L25-.L19)/2
+ 257 0023 1F       		.byte	(.L26-.L19)/2
+ 258 0024 23       		.byte	(.L27-.L19)/2
+ 259 0025 27       		.byte	(.L28-.L19)/2
+ 260 0026 2B       		.byte	(.L29-.L19)/2
+ 261 0027 2F       		.byte	(.L30-.L19)/2
+ 262 0028 33       		.byte	(.L31-.L19)/2
+ 263 0029 00       		.p2align 1
+ 264              	.L18:
+  56:.\main.c      ****         {
+  57:.\main.c      ****             case (CAN_5KBPS):                                               //   5KBPS             
+  58:.\main.c      ****             cfg1 = MCP_8MHz_5kBPS_CFG1;
+  59:.\main.c      ****             cfg2 = MCP_8MHz_5kBPS_CFG2;
+  60:.\main.c      ****             cfg3 = MCP_8MHz_5kBPS_CFG3;
+ 265              		.loc 1 60 0
+ 266 002a 8724     		movs	r4, #135
+  59:.\main.c      ****             cfg3 = MCP_8MHz_5kBPS_CFG3;
+ 267              		.loc 1 59 0
+ 268 002c BF25     		movs	r5, #191
+  58:.\main.c      ****             cfg2 = MCP_8MHz_5kBPS_CFG2;
+ 269              		.loc 1 58 0
+ 270 002e 1F23     		movs	r3, #31
+ 271 0030 97E0     		b	.L20
+ 272              	.L21:
+ 273              	.LVL30:
+  61:.\main.c      ****             break;
+  62:.\main.c      **** 
+  63:.\main.c      ****             case (CAN_10KBPS):                                              //  10KBPS             
+  64:.\main.c      ****             cfg1 = MCP_8MHz_10kBPS_CFG1;
+  65:.\main.c      ****             cfg2 = MCP_8MHz_10kBPS_CFG2;
+  66:.\main.c      ****             cfg3 = MCP_8MHz_10kBPS_CFG3;
+  67:.\main.c      ****             break;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 7
+
+
+  68:.\main.c      **** 
+  69:.\main.c      ****             case (CAN_20KBPS):                                              //  20KBPS             
+  70:.\main.c      ****             cfg1 = MCP_8MHz_20kBPS_CFG1;
+  71:.\main.c      ****             cfg2 = MCP_8MHz_20kBPS_CFG2;
+  72:.\main.c      ****             cfg3 = MCP_8MHz_20kBPS_CFG3;
+ 274              		.loc 1 72 0
+ 275 0032 8724     		movs	r4, #135
+  71:.\main.c      ****             cfg3 = MCP_8MHz_20kBPS_CFG3;
+ 276              		.loc 1 71 0
+ 277 0034 BF25     		movs	r5, #191
+  70:.\main.c      ****             cfg2 = MCP_8MHz_20kBPS_CFG2;
+ 278              		.loc 1 70 0
+ 279 0036 0723     		movs	r3, #7
+  73:.\main.c      ****             break;
+ 280              		.loc 1 73 0
+ 281 0038 93E0     		b	.L20
+ 282              	.LVL31:
+ 283              	.L22:
+  74:.\main.c      **** 
+  75:.\main.c      ****             case (CAN_31K25BPS):                                            //  31.25KBPS          
+  76:.\main.c      ****             cfg1 = MCP_8MHz_31k25BPS_CFG1;
+  77:.\main.c      ****             cfg2 = MCP_8MHz_31k25BPS_CFG2;
+  78:.\main.c      ****             cfg3 = MCP_8MHz_31k25BPS_CFG3;
+ 284              		.loc 1 78 0
+ 285 003a 8424     		movs	r4, #132
+  77:.\main.c      ****             cfg3 = MCP_8MHz_31k25BPS_CFG3;
+ 286              		.loc 1 77 0
+ 287 003c A425     		movs	r5, #164
+  76:.\main.c      ****             cfg2 = MCP_8MHz_31k25BPS_CFG2;
+ 288              		.loc 1 76 0
+ 289 003e 0723     		movs	r3, #7
+  79:.\main.c      ****             break;
+ 290              		.loc 1 79 0
+ 291 0040 8FE0     		b	.L20
+ 292              	.LVL32:
+ 293              	.L23:
+  80:.\main.c      **** 
+  81:.\main.c      ****             case (CAN_40KBPS):                                              //  40Kbps
+  82:.\main.c      ****             cfg1 = MCP_8MHz_40kBPS_CFG1;
+  83:.\main.c      ****             cfg2 = MCP_8MHz_40kBPS_CFG2;
+  84:.\main.c      ****             cfg3 = MCP_8MHz_40kBPS_CFG3;
+ 294              		.loc 1 84 0
+ 295 0042 8724     		movs	r4, #135
+  83:.\main.c      ****             cfg3 = MCP_8MHz_40kBPS_CFG3;
+ 296              		.loc 1 83 0
+ 297 0044 BF25     		movs	r5, #191
+  82:.\main.c      ****             cfg2 = MCP_8MHz_40kBPS_CFG2;
+ 298              		.loc 1 82 0
+ 299 0046 0323     		movs	r3, #3
+  85:.\main.c      ****             break;
+ 300              		.loc 1 85 0
+ 301 0048 8BE0     		b	.L20
+ 302              	.LVL33:
+ 303              	.L24:
+  86:.\main.c      **** 
+  87:.\main.c      ****             case (CAN_50KBPS):                                              //  50Kbps
+  88:.\main.c      ****             cfg1 = MCP_8MHz_50kBPS_CFG1;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 8
+
+
+  89:.\main.c      ****             cfg2 = MCP_8MHz_50kBPS_CFG2;
+  90:.\main.c      ****             cfg3 = MCP_8MHz_50kBPS_CFG3;
+ 304              		.loc 1 90 0
+ 305 004a 8624     		movs	r4, #134
+  89:.\main.c      ****             cfg3 = MCP_8MHz_50kBPS_CFG3;
+ 306              		.loc 1 89 0
+ 307 004c B425     		movs	r5, #180
+  88:.\main.c      ****             cfg2 = MCP_8MHz_50kBPS_CFG2;
+ 308              		.loc 1 88 0
+ 309 004e 0323     		movs	r3, #3
+  91:.\main.c      ****             break;
+ 310              		.loc 1 91 0
+ 311 0050 87E0     		b	.L20
+ 312              	.LVL34:
+ 313              	.L25:
+  92:.\main.c      **** 
+  93:.\main.c      ****             case (CAN_80KBPS):                                              //  80Kbps
+  94:.\main.c      ****             cfg1 = MCP_8MHz_80kBPS_CFG1;
+  95:.\main.c      ****             cfg2 = MCP_8MHz_80kBPS_CFG2;
+  96:.\main.c      ****             cfg3 = MCP_8MHz_80kBPS_CFG3;
+ 314              		.loc 1 96 0
+ 315 0052 8724     		movs	r4, #135
+  95:.\main.c      ****             cfg3 = MCP_8MHz_80kBPS_CFG3;
+ 316              		.loc 1 95 0
+ 317 0054 BF25     		movs	r5, #191
+  94:.\main.c      ****             cfg2 = MCP_8MHz_80kBPS_CFG2;
+ 318              		.loc 1 94 0
+ 319 0056 0123     		movs	r3, #1
+  97:.\main.c      ****             break;
+ 320              		.loc 1 97 0
+ 321 0058 83E0     		b	.L20
+ 322              	.LVL35:
+ 323              	.L26:
+  98:.\main.c      **** 
+  99:.\main.c      ****             case (CAN_100KBPS):                                             // 100Kbps
+ 100:.\main.c      ****             cfg1 = MCP_8MHz_100kBPS_CFG1;
+ 101:.\main.c      ****             cfg2 = MCP_8MHz_100kBPS_CFG2;
+ 102:.\main.c      ****             cfg3 = MCP_8MHz_100kBPS_CFG3;
+ 324              		.loc 1 102 0
+ 325 005a 8624     		movs	r4, #134
+ 101:.\main.c      ****             cfg3 = MCP_8MHz_100kBPS_CFG3;
+ 326              		.loc 1 101 0
+ 327 005c B425     		movs	r5, #180
+ 100:.\main.c      ****             cfg2 = MCP_8MHz_100kBPS_CFG2;
+ 328              		.loc 1 100 0
+ 329 005e 0123     		movs	r3, #1
+ 103:.\main.c      ****             break;
+ 330              		.loc 1 103 0
+ 331 0060 7FE0     		b	.L20
+ 332              	.LVL36:
+ 333              	.L27:
+ 104:.\main.c      **** 
+ 105:.\main.c      ****             case (CAN_125KBPS):                                             // 125Kbps
+ 106:.\main.c      ****             cfg1 = MCP_8MHz_125kBPS_CFG1;
+ 107:.\main.c      ****             cfg2 = MCP_8MHz_125kBPS_CFG2;
+ 108:.\main.c      ****             cfg3 = MCP_8MHz_125kBPS_CFG3;
+ 334              		.loc 1 108 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 9
+
+
+ 335 0062 8524     		movs	r4, #133
+ 107:.\main.c      ****             cfg3 = MCP_8MHz_125kBPS_CFG3;
+ 336              		.loc 1 107 0
+ 337 0064 B125     		movs	r5, #177
+ 106:.\main.c      ****             cfg2 = MCP_8MHz_125kBPS_CFG2;
+ 338              		.loc 1 106 0
+ 339 0066 0123     		movs	r3, #1
+ 109:.\main.c      ****             break;
+ 340              		.loc 1 109 0
+ 341 0068 7BE0     		b	.L20
+ 342              	.LVL37:
+ 343              	.L28:
+ 110:.\main.c      **** 
+ 111:.\main.c      ****             case (CAN_200KBPS):                                             // 200Kbps
+ 112:.\main.c      ****             cfg1 = MCP_8MHz_200kBPS_CFG1;
+ 113:.\main.c      ****             cfg2 = MCP_8MHz_200kBPS_CFG2;
+ 114:.\main.c      ****             cfg3 = MCP_8MHz_200kBPS_CFG3;
+ 344              		.loc 1 114 0
+ 345 006a 8624     		movs	r4, #134
+ 113:.\main.c      ****             cfg3 = MCP_8MHz_200kBPS_CFG3;
+ 346              		.loc 1 113 0
+ 347 006c B425     		movs	r5, #180
+ 112:.\main.c      ****             cfg2 = MCP_8MHz_200kBPS_CFG2;
+ 348              		.loc 1 112 0
+ 349 006e 0023     		movs	r3, #0
+ 115:.\main.c      ****             break;
+ 350              		.loc 1 115 0
+ 351 0070 77E0     		b	.L20
+ 352              	.LVL38:
+ 353              	.L29:
+ 116:.\main.c      **** 
+ 117:.\main.c      ****             case (CAN_250KBPS):                                             // 250Kbps
+ 118:.\main.c      ****             cfg1 = MCP_8MHz_250kBPS_CFG1;
+ 119:.\main.c      ****             cfg2 = MCP_8MHz_250kBPS_CFG2;
+ 120:.\main.c      ****             cfg3 = MCP_8MHz_250kBPS_CFG3;
+ 354              		.loc 1 120 0
+ 355 0072 8524     		movs	r4, #133
+ 119:.\main.c      ****             cfg3 = MCP_8MHz_250kBPS_CFG3;
+ 356              		.loc 1 119 0
+ 357 0074 B125     		movs	r5, #177
+ 118:.\main.c      ****             cfg2 = MCP_8MHz_250kBPS_CFG2;
+ 358              		.loc 1 118 0
+ 359 0076 0023     		movs	r3, #0
+ 121:.\main.c      ****             break;
+ 360              		.loc 1 121 0
+ 361 0078 73E0     		b	.L20
+ 362              	.LVL39:
+ 363              	.L30:
+ 122:.\main.c      **** 
+ 123:.\main.c      ****             case (CAN_500KBPS):                                             // 500Kbps
+ 124:.\main.c      ****             cfg1 = MCP_8MHz_500kBPS_CFG1;
+ 125:.\main.c      ****             cfg2 = MCP_8MHz_500kBPS_CFG2;
+ 126:.\main.c      ****             cfg3 = MCP_8MHz_500kBPS_CFG3;
+ 364              		.loc 1 126 0
+ 365 007a 8224     		movs	r4, #130
+ 125:.\main.c      ****             cfg3 = MCP_8MHz_500kBPS_CFG3;
+ 366              		.loc 1 125 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 10
+
+
+ 367 007c 9025     		movs	r5, #144
+ 124:.\main.c      ****             cfg2 = MCP_8MHz_500kBPS_CFG2;
+ 368              		.loc 1 124 0
+ 369 007e 0023     		movs	r3, #0
+ 127:.\main.c      ****             break;
+ 370              		.loc 1 127 0
+ 371 0080 6FE0     		b	.L20
+ 372              	.LVL40:
+ 373              	.L31:
+ 128:.\main.c      ****         
+ 129:.\main.c      ****             case (CAN_1000KBPS):                                            //   1Mbps
+ 130:.\main.c      ****             cfg1 = MCP_8MHz_1000kBPS_CFG1;
+ 131:.\main.c      ****             cfg2 = MCP_8MHz_1000kBPS_CFG2;
+ 132:.\main.c      ****             cfg3 = MCP_8MHz_1000kBPS_CFG3;
+ 374              		.loc 1 132 0
+ 375 0082 8024     		movs	r4, #128
+ 131:.\main.c      ****             cfg3 = MCP_8MHz_1000kBPS_CFG3;
+ 376              		.loc 1 131 0
+ 377 0084 2546     		mov	r5, r4
+ 130:.\main.c      ****             cfg2 = MCP_8MHz_1000kBPS_CFG2;
+ 378              		.loc 1 130 0
+ 379 0086 0023     		movs	r3, #0
+ 133:.\main.c      ****             break;  
+ 380              		.loc 1 133 0
+ 381 0088 6BE0     		b	.L20
+ 382              	.LVL41:
+ 383              	.L15:
+ 134:.\main.c      **** 
+ 135:.\main.c      ****             default:
+ 136:.\main.c      ****             set = 0;
+ 137:.\main.c      **** 	    return MCP2515_FAIL;
+ 138:.\main.c      ****             break;
+ 139:.\main.c      ****         }
+ 140:.\main.c      ****         break;
+ 141:.\main.c      **** 
+ 142:.\main.c      ****         case (MCP_16MHZ):
+ 143:.\main.c      ****         switch (canSpeed) 
+ 384              		.loc 1 143 0
+ 385 008a 0138     		subs	r0, r0, #1
+ 386              	.LVL42:
+ 387 008c 0C28     		cmp	r0, #12
+ 388 008e 7AD8     		bhi	.L56
+ 389 0090 DFE800F0 		tbb	[pc, r0]
+ 390              	.L33:
+ 391 0094 07       		.byte	(.L32-.L33)/2
+ 392 0095 60       		.byte	(.L57-.L33)/2
+ 393 0096 0B       		.byte	(.L34-.L33)/2
+ 394 0097 79       		.byte	(.L56-.L33)/2
+ 395 0098 0F       		.byte	(.L35-.L33)/2
+ 396 0099 13       		.byte	(.L36-.L33)/2
+ 397 009a 16       		.byte	(.L37-.L33)/2
+ 398 009b 1A       		.byte	(.L38-.L33)/2
+ 399 009c 1E       		.byte	(.L39-.L33)/2
+ 400 009d 22       		.byte	(.L40-.L33)/2
+ 401 009e 26       		.byte	(.L41-.L33)/2
+ 402 009f 2A       		.byte	(.L42-.L33)/2
+ 403 00a0 2E       		.byte	(.L43-.L33)/2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 11
+
+
+ 404 00a1 00       		.p2align 1
+ 405              	.L32:
+ 144:.\main.c      ****         {
+ 145:.\main.c      ****             case (CAN_5KBPS):                                               //   5Kbps
+ 146:.\main.c      ****             cfg1 = MCP_16MHz_5kBPS_CFG1;
+ 147:.\main.c      ****             cfg2 = MCP_16MHz_5kBPS_CFG2;
+ 148:.\main.c      ****             cfg3 = MCP_16MHz_5kBPS_CFG3;
+ 406              		.loc 1 148 0
+ 407 00a2 8724     		movs	r4, #135
+ 147:.\main.c      ****             cfg3 = MCP_16MHz_5kBPS_CFG3;
+ 408              		.loc 1 147 0
+ 409 00a4 FF25     		movs	r5, #255
+ 146:.\main.c      ****             cfg2 = MCP_16MHz_5kBPS_CFG2;
+ 410              		.loc 1 146 0
+ 411 00a6 3F23     		movs	r3, #63
+ 412 00a8 5BE0     		b	.L20
+ 413              	.L34:
+ 414              	.LVL43:
+ 149:.\main.c      ****             break;
+ 150:.\main.c      **** 
+ 151:.\main.c      ****             case (CAN_10KBPS):                                              //  10Kbps
+ 152:.\main.c      ****             cfg1 = MCP_16MHz_10kBPS_CFG1;
+ 153:.\main.c      ****             cfg2 = MCP_16MHz_10kBPS_CFG2;
+ 154:.\main.c      ****             cfg3 = MCP_16MHz_10kBPS_CFG3;
+ 155:.\main.c      ****             break;
+ 156:.\main.c      **** 
+ 157:.\main.c      ****             case (CAN_20KBPS):                                              //  20Kbps
+ 158:.\main.c      ****             cfg1 = MCP_16MHz_20kBPS_CFG1;
+ 159:.\main.c      ****             cfg2 = MCP_16MHz_20kBPS_CFG2;
+ 160:.\main.c      ****             cfg3 = MCP_16MHz_20kBPS_CFG3;
+ 415              		.loc 1 160 0
+ 416 00aa 8724     		movs	r4, #135
+ 159:.\main.c      ****             cfg3 = MCP_16MHz_20kBPS_CFG3;
+ 417              		.loc 1 159 0
+ 418 00ac FF25     		movs	r5, #255
+ 158:.\main.c      ****             cfg2 = MCP_16MHz_20kBPS_CFG2;
+ 419              		.loc 1 158 0
+ 420 00ae 0F23     		movs	r3, #15
+ 161:.\main.c      ****             break;
+ 421              		.loc 1 161 0
+ 422 00b0 57E0     		b	.L20
+ 423              	.LVL44:
+ 424              	.L35:
+ 162:.\main.c      **** 
+ 163:.\main.c      ****             case (CAN_40KBPS):                                              //  40Kbps
+ 164:.\main.c      ****             cfg1 = MCP_16MHz_40kBPS_CFG1;
+ 165:.\main.c      ****             cfg2 = MCP_16MHz_40kBPS_CFG2;
+ 166:.\main.c      ****             cfg3 = MCP_16MHz_40kBPS_CFG3;
+ 425              		.loc 1 166 0
+ 426 00b2 8724     		movs	r4, #135
+ 165:.\main.c      ****             cfg3 = MCP_16MHz_40kBPS_CFG3;
+ 427              		.loc 1 165 0
+ 428 00b4 FF25     		movs	r5, #255
+ 164:.\main.c      ****             cfg2 = MCP_16MHz_40kBPS_CFG2;
+ 429              		.loc 1 164 0
+ 430 00b6 0723     		movs	r3, #7
+ 167:.\main.c      ****             break;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 12
+
+
+ 431              		.loc 1 167 0
+ 432 00b8 53E0     		b	.L20
+ 433              	.LVL45:
+ 434              	.L36:
+ 168:.\main.c      **** 
+ 169:.\main.c      ****             case (CAN_50KBPS):                                              //  50Kbps
+ 170:.\main.c      ****             cfg2 = MCP_16MHz_50kBPS_CFG2;
+ 171:.\main.c      ****             cfg3 = MCP_16MHz_50kBPS_CFG3;
+ 435              		.loc 1 171 0
+ 436 00ba 8724     		movs	r4, #135
+ 170:.\main.c      ****             cfg3 = MCP_16MHz_50kBPS_CFG3;
+ 437              		.loc 1 170 0
+ 438 00bc FA25     		movs	r5, #250
+ 172:.\main.c      ****             break;
+ 439              		.loc 1 172 0
+ 440 00be 50E0     		b	.L20
+ 441              	.LVL46:
+ 442              	.L37:
+ 173:.\main.c      **** 
+ 174:.\main.c      ****             case (CAN_80KBPS):                                              //  80Kbps
+ 175:.\main.c      ****             cfg1 = MCP_16MHz_80kBPS_CFG1;
+ 176:.\main.c      ****             cfg2 = MCP_16MHz_80kBPS_CFG2;
+ 177:.\main.c      ****             cfg3 = MCP_16MHz_80kBPS_CFG3;
+ 443              		.loc 1 177 0
+ 444 00c0 8724     		movs	r4, #135
+ 176:.\main.c      ****             cfg3 = MCP_16MHz_80kBPS_CFG3;
+ 445              		.loc 1 176 0
+ 446 00c2 FF25     		movs	r5, #255
+ 175:.\main.c      ****             cfg2 = MCP_16MHz_80kBPS_CFG2;
+ 447              		.loc 1 175 0
+ 448 00c4 0323     		movs	r3, #3
+ 178:.\main.c      ****             break;
+ 449              		.loc 1 178 0
+ 450 00c6 4CE0     		b	.L20
+ 451              	.LVL47:
+ 452              	.L38:
+ 179:.\main.c      **** 
+ 180:.\main.c      ****             case (CAN_100KBPS):                                             // 100Kbps
+ 181:.\main.c      ****             cfg1 = MCP_16MHz_100kBPS_CFG1;
+ 182:.\main.c      ****             cfg2 = MCP_16MHz_100kBPS_CFG2;
+ 183:.\main.c      ****             cfg3 = MCP_16MHz_100kBPS_CFG3;
+ 453              		.loc 1 183 0
+ 454 00c8 8724     		movs	r4, #135
+ 182:.\main.c      ****             cfg3 = MCP_16MHz_100kBPS_CFG3;
+ 455              		.loc 1 182 0
+ 456 00ca FA25     		movs	r5, #250
+ 181:.\main.c      ****             cfg2 = MCP_16MHz_100kBPS_CFG2;
+ 457              		.loc 1 181 0
+ 458 00cc 0323     		movs	r3, #3
+ 184:.\main.c      ****             break;
+ 459              		.loc 1 184 0
+ 460 00ce 48E0     		b	.L20
+ 461              	.LVL48:
+ 462              	.L39:
+ 185:.\main.c      **** 
+ 186:.\main.c      ****             case (CAN_125KBPS):                                             // 125Kbps
+ 187:.\main.c      ****             cfg1 = MCP_16MHz_125kBPS_CFG1;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 13
+
+
+ 188:.\main.c      ****             cfg2 = MCP_16MHz_125kBPS_CFG2;
+ 189:.\main.c      ****             cfg3 = MCP_16MHz_125kBPS_CFG3;
+ 463              		.loc 1 189 0
+ 464 00d0 8624     		movs	r4, #134
+ 188:.\main.c      ****             cfg3 = MCP_16MHz_125kBPS_CFG3;
+ 465              		.loc 1 188 0
+ 466 00d2 F025     		movs	r5, #240
+ 187:.\main.c      ****             cfg2 = MCP_16MHz_125kBPS_CFG2;
+ 467              		.loc 1 187 0
+ 468 00d4 0323     		movs	r3, #3
+ 190:.\main.c      ****             break;
+ 469              		.loc 1 190 0
+ 470 00d6 44E0     		b	.L20
+ 471              	.LVL49:
+ 472              	.L40:
+ 191:.\main.c      **** 
+ 192:.\main.c      ****             case (CAN_200KBPS):                                             // 200Kbps
+ 193:.\main.c      ****             cfg1 = MCP_16MHz_200kBPS_CFG1;
+ 194:.\main.c      ****             cfg2 = MCP_16MHz_200kBPS_CFG2;
+ 195:.\main.c      ****             cfg3 = MCP_16MHz_200kBPS_CFG3;
+ 473              		.loc 1 195 0
+ 474 00d8 8724     		movs	r4, #135
+ 194:.\main.c      ****             cfg3 = MCP_16MHz_200kBPS_CFG3;
+ 475              		.loc 1 194 0
+ 476 00da FA25     		movs	r5, #250
+ 193:.\main.c      ****             cfg2 = MCP_16MHz_200kBPS_CFG2;
+ 477              		.loc 1 193 0
+ 478 00dc 0123     		movs	r3, #1
+ 196:.\main.c      ****             break;
+ 479              		.loc 1 196 0
+ 480 00de 40E0     		b	.L20
+ 481              	.LVL50:
+ 482              	.L41:
+ 197:.\main.c      **** 
+ 198:.\main.c      ****             case (CAN_250KBPS):                                             // 250Kbps
+ 199:.\main.c      ****             cfg1 = MCP_16MHz_250kBPS_CFG1;
+ 200:.\main.c      ****             cfg2 = MCP_16MHz_250kBPS_CFG2;
+ 201:.\main.c      ****             cfg3 = MCP_16MHz_250kBPS_CFG3;
+ 483              		.loc 1 201 0
+ 484 00e0 8524     		movs	r4, #133
+ 200:.\main.c      ****             cfg3 = MCP_16MHz_250kBPS_CFG3;
+ 485              		.loc 1 200 0
+ 486 00e2 F125     		movs	r5, #241
+ 199:.\main.c      ****             cfg2 = MCP_16MHz_250kBPS_CFG2;
+ 487              		.loc 1 199 0
+ 488 00e4 4123     		movs	r3, #65
+ 202:.\main.c      ****             break;
+ 489              		.loc 1 202 0
+ 490 00e6 3CE0     		b	.L20
+ 491              	.LVL51:
+ 492              	.L42:
+ 203:.\main.c      **** 
+ 204:.\main.c      ****             case (CAN_500KBPS):                                             // 500Kbps
+ 205:.\main.c      ****             cfg1 = MCP_16MHz_500kBPS_CFG1;
+ 206:.\main.c      ****             cfg2 = MCP_16MHz_500kBPS_CFG2;
+ 207:.\main.c      ****             cfg3 = MCP_16MHz_500kBPS_CFG3;
+ 493              		.loc 1 207 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 14
+
+
+ 494 00e8 8624     		movs	r4, #134
+ 206:.\main.c      ****             cfg3 = MCP_16MHz_500kBPS_CFG3;
+ 495              		.loc 1 206 0
+ 496 00ea F025     		movs	r5, #240
+ 205:.\main.c      ****             cfg2 = MCP_16MHz_500kBPS_CFG2;
+ 497              		.loc 1 205 0
+ 498 00ec 0023     		movs	r3, #0
+ 208:.\main.c      ****             break;
+ 499              		.loc 1 208 0
+ 500 00ee 38E0     		b	.L20
+ 501              	.LVL52:
+ 502              	.L43:
+ 209:.\main.c      ****         
+ 210:.\main.c      ****             case (CAN_1000KBPS):                                            //   1Mbps
+ 211:.\main.c      ****             cfg1 = MCP_16MHz_1000kBPS_CFG1;
+ 212:.\main.c      ****             cfg2 = MCP_16MHz_1000kBPS_CFG2;
+ 213:.\main.c      ****             cfg3 = MCP_16MHz_1000kBPS_CFG3;
+ 503              		.loc 1 213 0
+ 504 00f0 8224     		movs	r4, #130
+ 212:.\main.c      ****             cfg3 = MCP_16MHz_1000kBPS_CFG3;
+ 505              		.loc 1 212 0
+ 506 00f2 D025     		movs	r5, #208
+ 211:.\main.c      ****             cfg2 = MCP_16MHz_1000kBPS_CFG2;
+ 507              		.loc 1 211 0
+ 508 00f4 0023     		movs	r3, #0
+ 214:.\main.c      ****             break;  
+ 509              		.loc 1 214 0
+ 510 00f6 34E0     		b	.L20
+ 511              	.LVL53:
+ 512              	.L16:
+ 215:.\main.c      **** 
+ 216:.\main.c      ****             default:
+ 217:.\main.c      ****             set = 0;
+ 218:.\main.c      **** 	    return MCP2515_FAIL;
+ 219:.\main.c      ****             break;
+ 220:.\main.c      ****         }
+ 221:.\main.c      ****         break;
+ 222:.\main.c      ****         
+ 223:.\main.c      ****         case (MCP_20MHZ):
+ 224:.\main.c      ****         switch (canSpeed) 
+ 513              		.loc 1 224 0
+ 514 00f8 0538     		subs	r0, r0, #5
+ 515              	.LVL54:
+ 516 00fa 0828     		cmp	r0, #8
+ 517 00fc 45D8     		bhi	.L58
+ 518 00fe DFE800F0 		tbb	[pc, r0]
+ 519              	.L45:
+ 520 0102 05       		.byte	(.L44-.L45)/2
+ 521 0103 2D       		.byte	(.L59-.L45)/2
+ 522 0104 09       		.byte	(.L46-.L45)/2
+ 523 0105 0D       		.byte	(.L47-.L45)/2
+ 524 0106 11       		.byte	(.L48-.L45)/2
+ 525 0107 15       		.byte	(.L49-.L45)/2
+ 526 0108 19       		.byte	(.L50-.L45)/2
+ 527 0109 1D       		.byte	(.L51-.L45)/2
+ 528 010a 21       		.byte	(.L52-.L45)/2
+ 529 010b 00       		.p2align 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 15
+
+
+ 530              	.L44:
+ 225:.\main.c      ****         {
+ 226:.\main.c      ****             case (CAN_40KBPS):                                              //  40Kbps
+ 227:.\main.c      ****             cfg1 = MCP_20MHz_40kBPS_CFG1;
+ 228:.\main.c      ****             cfg2 = MCP_20MHz_40kBPS_CFG2;
+ 229:.\main.c      ****             cfg3 = MCP_20MHz_40kBPS_CFG3;
+ 531              		.loc 1 229 0
+ 532 010c 8724     		movs	r4, #135
+ 228:.\main.c      ****             cfg3 = MCP_20MHz_40kBPS_CFG3;
+ 533              		.loc 1 228 0
+ 534 010e FF25     		movs	r5, #255
+ 227:.\main.c      ****             cfg2 = MCP_20MHz_40kBPS_CFG2;
+ 535              		.loc 1 227 0
+ 536 0110 0923     		movs	r3, #9
+ 537 0112 26E0     		b	.L20
+ 538              	.L46:
+ 539              	.LVL55:
+ 230:.\main.c      ****             break;
+ 231:.\main.c      **** 
+ 232:.\main.c      ****             case (CAN_50KBPS):                                              //  50Kbps
+ 233:.\main.c      ****             cfg1 = MCP_20MHz_50kBPS_CFG1;
+ 234:.\main.c      ****             cfg2 = MCP_20MHz_50kBPS_CFG2;
+ 235:.\main.c      ****             cfg3 = MCP_20MHz_50kBPS_CFG3;
+ 236:.\main.c      ****             break;
+ 237:.\main.c      **** 
+ 238:.\main.c      ****             case (CAN_80KBPS):                                              //  80Kbps
+ 239:.\main.c      ****             cfg1 = MCP_20MHz_80kBPS_CFG1;
+ 240:.\main.c      ****             cfg2 = MCP_20MHz_80kBPS_CFG2;
+ 241:.\main.c      ****             cfg3 = MCP_20MHz_80kBPS_CFG3;
+ 540              		.loc 1 241 0
+ 541 0114 8724     		movs	r4, #135
+ 240:.\main.c      ****             cfg3 = MCP_20MHz_80kBPS_CFG3;
+ 542              		.loc 1 240 0
+ 543 0116 FF25     		movs	r5, #255
+ 239:.\main.c      ****             cfg2 = MCP_20MHz_80kBPS_CFG2;
+ 544              		.loc 1 239 0
+ 545 0118 0423     		movs	r3, #4
+ 242:.\main.c      ****             break;
+ 546              		.loc 1 242 0
+ 547 011a 22E0     		b	.L20
+ 548              	.LVL56:
+ 549              	.L47:
+ 243:.\main.c      **** 
+ 244:.\main.c      ****             case (CAN_100KBPS):                                             // 100Kbps
+ 245:.\main.c      ****             cfg1 = MCP_20MHz_100kBPS_CFG1;
+ 246:.\main.c      ****             cfg2 = MCP_20MHz_100kBPS_CFG2;
+ 247:.\main.c      ****             cfg3 = MCP_20MHz_100kBPS_CFG3;
+ 550              		.loc 1 247 0
+ 551 011c 8724     		movs	r4, #135
+ 246:.\main.c      ****             cfg3 = MCP_20MHz_100kBPS_CFG3;
+ 552              		.loc 1 246 0
+ 553 011e FA25     		movs	r5, #250
+ 245:.\main.c      ****             cfg2 = MCP_20MHz_100kBPS_CFG2;
+ 554              		.loc 1 245 0
+ 555 0120 0423     		movs	r3, #4
+ 248:.\main.c      ****             break;
+ 556              		.loc 1 248 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 16
+
+
+ 557 0122 1EE0     		b	.L20
+ 558              	.LVL57:
+ 559              	.L48:
+ 249:.\main.c      **** 
+ 250:.\main.c      ****             case (CAN_125KBPS):                                             // 125Kbps
+ 251:.\main.c      ****             cfg1 = MCP_20MHz_125kBPS_CFG1;
+ 252:.\main.c      ****             cfg2 = MCP_20MHz_125kBPS_CFG2;
+ 253:.\main.c      ****             cfg3 = MCP_20MHz_125kBPS_CFG3;
+ 560              		.loc 1 253 0
+ 561 0124 8724     		movs	r4, #135
+ 252:.\main.c      ****             cfg3 = MCP_20MHz_125kBPS_CFG3;
+ 562              		.loc 1 252 0
+ 563 0126 FA25     		movs	r5, #250
+ 251:.\main.c      ****             cfg2 = MCP_20MHz_125kBPS_CFG2;
+ 564              		.loc 1 251 0
+ 565 0128 0323     		movs	r3, #3
+ 254:.\main.c      ****             break;
+ 566              		.loc 1 254 0
+ 567 012a 1AE0     		b	.L20
+ 568              	.LVL58:
+ 569              	.L49:
+ 255:.\main.c      **** 
+ 256:.\main.c      ****             case (CAN_200KBPS):                                             // 200Kbps
+ 257:.\main.c      ****             cfg1 = MCP_20MHz_200kBPS_CFG1;
+ 258:.\main.c      ****             cfg2 = MCP_20MHz_200kBPS_CFG2;
+ 259:.\main.c      ****             cfg3 = MCP_20MHz_200kBPS_CFG3;
+ 570              		.loc 1 259 0
+ 571 012c 8724     		movs	r4, #135
+ 258:.\main.c      ****             cfg3 = MCP_20MHz_200kBPS_CFG3;
+ 572              		.loc 1 258 0
+ 573 012e FF25     		movs	r5, #255
+ 257:.\main.c      ****             cfg2 = MCP_20MHz_200kBPS_CFG2;
+ 574              		.loc 1 257 0
+ 575 0130 0123     		movs	r3, #1
+ 260:.\main.c      ****             break;
+ 576              		.loc 1 260 0
+ 577 0132 16E0     		b	.L20
+ 578              	.LVL59:
+ 579              	.L50:
+ 261:.\main.c      **** 
+ 262:.\main.c      ****             case (CAN_250KBPS):                                             // 250Kbps
+ 263:.\main.c      ****             cfg1 = MCP_20MHz_250kBPS_CFG1;
+ 264:.\main.c      ****             cfg2 = MCP_20MHz_250kBPS_CFG2;
+ 265:.\main.c      ****             cfg3 = MCP_20MHz_250kBPS_CFG3;
+ 580              		.loc 1 265 0
+ 581 0134 8624     		movs	r4, #134
+ 264:.\main.c      ****             cfg3 = MCP_20MHz_250kBPS_CFG3;
+ 582              		.loc 1 264 0
+ 583 0136 FB25     		movs	r5, #251
+ 263:.\main.c      ****             cfg2 = MCP_20MHz_250kBPS_CFG2;
+ 584              		.loc 1 263 0
+ 585 0138 4123     		movs	r3, #65
+ 266:.\main.c      ****             break;
+ 586              		.loc 1 266 0
+ 587 013a 12E0     		b	.L20
+ 588              	.LVL60:
+ 589              	.L51:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 17
+
+
+ 267:.\main.c      **** 
+ 268:.\main.c      ****             case (CAN_500KBPS):                                             // 500Kbps
+ 269:.\main.c      ****             cfg1 = MCP_20MHz_500kBPS_CFG1;
+ 270:.\main.c      ****             cfg2 = MCP_20MHz_500kBPS_CFG2;
+ 271:.\main.c      ****             cfg3 = MCP_20MHz_500kBPS_CFG3;
+ 590              		.loc 1 271 0
+ 591 013c 8724     		movs	r4, #135
+ 270:.\main.c      ****             cfg3 = MCP_20MHz_500kBPS_CFG3;
+ 592              		.loc 1 270 0
+ 593 013e FA25     		movs	r5, #250
+ 269:.\main.c      ****             cfg2 = MCP_20MHz_500kBPS_CFG2;
+ 594              		.loc 1 269 0
+ 595 0140 0023     		movs	r3, #0
+ 272:.\main.c      ****             break;
+ 596              		.loc 1 272 0
+ 597 0142 0EE0     		b	.L20
+ 598              	.LVL61:
+ 599              	.L52:
+ 273:.\main.c      ****         
+ 274:.\main.c      ****             case (CAN_1000KBPS):                                            //   1Mbps
+ 275:.\main.c      ****             cfg1 = MCP_20MHz_1000kBPS_CFG1;
+ 276:.\main.c      ****             cfg2 = MCP_20MHz_1000kBPS_CFG2;
+ 277:.\main.c      ****             cfg3 = MCP_20MHz_1000kBPS_CFG3;
+ 600              		.loc 1 277 0
+ 601 0144 8224     		movs	r4, #130
+ 276:.\main.c      ****             cfg3 = MCP_20MHz_1000kBPS_CFG3;
+ 602              		.loc 1 276 0
+ 603 0146 D925     		movs	r5, #217
+ 275:.\main.c      ****             cfg2 = MCP_20MHz_1000kBPS_CFG2;
+ 604              		.loc 1 275 0
+ 605 0148 0023     		movs	r3, #0
+ 278:.\main.c      ****             break;  
+ 606              		.loc 1 278 0
+ 607 014a 0AE0     		b	.L20
+ 608              	.LVL62:
+ 609              	.L55:
+  66:.\main.c      ****             break;
+ 610              		.loc 1 66 0
+ 611 014c 8724     		movs	r4, #135
+  65:.\main.c      ****             cfg3 = MCP_8MHz_10kBPS_CFG3;
+ 612              		.loc 1 65 0
+ 613 014e BF25     		movs	r5, #191
+  64:.\main.c      ****             cfg2 = MCP_8MHz_10kBPS_CFG2;
+ 614              		.loc 1 64 0
+ 615 0150 0F23     		movs	r3, #15
+ 616 0152 06E0     		b	.L20
+ 617              	.L57:
+ 154:.\main.c      ****             break;
+ 618              		.loc 1 154 0
+ 619 0154 8724     		movs	r4, #135
+ 153:.\main.c      ****             cfg3 = MCP_16MHz_10kBPS_CFG3;
+ 620              		.loc 1 153 0
+ 621 0156 FF25     		movs	r5, #255
+ 152:.\main.c      ****             cfg2 = MCP_16MHz_10kBPS_CFG2;
+ 622              		.loc 1 152 0
+ 623 0158 1F23     		movs	r3, #31
+ 624 015a 02E0     		b	.L20
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 18
+
+
+ 625              	.L59:
+ 235:.\main.c      ****             break;
+ 626              		.loc 1 235 0
+ 627 015c 8724     		movs	r4, #135
+ 234:.\main.c      ****             cfg3 = MCP_20MHz_50kBPS_CFG3;
+ 628              		.loc 1 234 0
+ 629 015e FA25     		movs	r5, #250
+ 233:.\main.c      ****             cfg2 = MCP_20MHz_50kBPS_CFG2;
+ 630              		.loc 1 233 0
+ 631 0160 0923     		movs	r3, #9
+ 632              	.L20:
+ 633              	.LVL63:
+ 279:.\main.c      **** 
+ 280:.\main.c      ****             default:
+ 281:.\main.c      ****             set = 0;
+ 282:.\main.c      ****             return MCP2515_FAIL;
+ 283:.\main.c      ****             break;
+ 284:.\main.c      ****         }
+ 285:.\main.c      ****         break;
+ 286:.\main.c      ****         
+ 287:.\main.c      ****         default:
+ 288:.\main.c      ****         set = 0;
+ 289:.\main.c      **** 	return MCP2515_FAIL;
+ 290:.\main.c      ****         break;
+ 291:.\main.c      ****     }
+ 292:.\main.c      **** 
+ 293:.\main.c      ****     if (set) {
+ 294:.\main.c      ****         mcp2515_setRegister(MCP_CNF1, cfg1);
+ 634              		.loc 1 294 0
+ 635 0162 2A20     		movs	r0, #42
+ 636 0164 1946     		mov	r1, r3
+ 637              	.LVL64:
+ 638 0166 FFF7FEFF 		bl	mcp2515_setRegister
+ 639              	.LVL65:
+ 295:.\main.c      ****         mcp2515_setRegister(MCP_CNF2, cfg2);
+ 640              		.loc 1 295 0
+ 641 016a 2920     		movs	r0, #41
+ 642 016c 2946     		mov	r1, r5
+ 643 016e FFF7FEFF 		bl	mcp2515_setRegister
+ 644              	.LVL66:
+ 296:.\main.c      ****         mcp2515_setRegister(MCP_CNF3, cfg3);
+ 645              		.loc 1 296 0
+ 646 0172 2820     		movs	r0, #40
+ 647 0174 2146     		mov	r1, r4
+ 648 0176 FFF7FEFF 		bl	mcp2515_setRegister
+ 649              	.LVL67:
+ 297:.\main.c      ****         return MCP2515_OK;
+ 650              		.loc 1 297 0
+ 651 017a 0020     		movs	r0, #0
+ 652 017c 38BD     		pop	{r3, r4, r5, pc}
+ 653              	.LVL68:
+ 654              	.L60:
+ 289:.\main.c      ****         break;
+ 655              		.loc 1 289 0
+ 656 017e 0120     		movs	r0, #1
+ 657              	.LVL69:
+ 658 0180 38BD     		pop	{r3, r4, r5, pc}
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 19
+
+
+ 659              	.L54:
+ 137:.\main.c      ****             break;
+ 660              		.loc 1 137 0
+ 661 0182 0120     		movs	r0, #1
+ 662 0184 38BD     		pop	{r3, r4, r5, pc}
+ 663              	.L56:
+ 218:.\main.c      ****             break;
+ 664              		.loc 1 218 0
+ 665 0186 0120     		movs	r0, #1
+ 666 0188 38BD     		pop	{r3, r4, r5, pc}
+ 667              	.L58:
+ 282:.\main.c      ****             break;
+ 668              		.loc 1 282 0
+ 669 018a 0120     		movs	r0, #1
+ 298:.\main.c      ****     }
+ 299:.\main.c      ****      
+ 300:.\main.c      ****     return MCP2515_FAIL;
+ 301:.\main.c      **** }
+ 670              		.loc 1 301 0
+ 671 018c 38BD     		pop	{r3, r4, r5, pc}
+ 672              		.cfi_endproc
+ 673              	.LFE68:
+ 674              		.size	mcp2515_configRate, .-mcp2515_configRate
+ 675 018e 00BF     		.section	.text.mcp2515_setRegisterS,"ax",%progbits
+ 676              		.align	2
+ 677              		.global	mcp2515_setRegisterS
+ 678              		.thumb
+ 679              		.thumb_func
+ 680              		.type	mcp2515_setRegisterS, %function
+ 681              	mcp2515_setRegisterS:
+ 682              	.LFB69:
+ 302:.\main.c      **** 
+ 303:.\main.c      **** void mcp2515_setRegisterS(const uint8 address, const uint8 values[], const uint8 n){
+ 683              		.loc 1 303 0
+ 684              		.cfi_startproc
+ 685              		@ args = 0, pretend = 0, frame = 0
+ 686              		@ frame_needed = 0, uses_anonymous_args = 0
+ 687              	.LVL70:
+ 688 0000 70B5     		push	{r4, r5, r6, lr}
+ 689              		.cfi_def_cfa_offset 16
+ 690              		.cfi_offset 4, -16
+ 691              		.cfi_offset 5, -12
+ 692              		.cfi_offset 6, -8
+ 693              		.cfi_offset 14, -4
+ 694 0002 0446     		mov	r4, r0
+ 695 0004 0E46     		mov	r6, r1
+ 696 0006 1546     		mov	r5, r2
+ 304:.\main.c      ****     uint8 i;
+ 305:.\main.c      ****     SPIM_1_WriteTxData(MCP_WRITE);
+ 697              		.loc 1 305 0
+ 698 0008 0220     		movs	r0, #2
+ 699              	.LVL71:
+ 700 000a FFF7FEFF 		bl	SPIM_1_WriteTxData
+ 701              	.LVL72:
+ 306:.\main.c      ****     SPIM_1_WriteTxData(address);
+ 702              		.loc 1 306 0
+ 703 000e 2046     		mov	r0, r4
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 20
+
+
+ 704 0010 FFF7FEFF 		bl	SPIM_1_WriteTxData
+ 705              	.LVL73:
+ 307:.\main.c      ****     for (i=0; i<n; i++){
+ 706              		.loc 1 307 0
+ 707 0014 0024     		movs	r4, #0
+ 708 0016 04E0     		b	.L63
+ 709              	.LVL74:
+ 710              	.L64:
+ 308:.\main.c      ****         SPIM_1_WriteByte(values[i]);}
+ 711              		.loc 1 308 0 discriminator 3
+ 712 0018 305D     		ldrb	r0, [r6, r4]	@ zero_extendqisi2
+ 713 001a FFF7FEFF 		bl	SPIM_1_WriteTxData
+ 714              	.LVL75:
+ 307:.\main.c      ****     for (i=0; i<n; i++){
+ 715              		.loc 1 307 0 discriminator 3
+ 716 001e 0134     		adds	r4, r4, #1
+ 717              	.LVL76:
+ 718 0020 E4B2     		uxtb	r4, r4
+ 719              	.LVL77:
+ 720              	.L63:
+ 307:.\main.c      ****     for (i=0; i<n; i++){
+ 721              		.loc 1 307 0 is_stmt 0 discriminator 1
+ 722 0022 AC42     		cmp	r4, r5
+ 723 0024 F8D3     		bcc	.L64
+ 309:.\main.c      ****     CyDelayUs(250);
+ 724              		.loc 1 309 0 is_stmt 1
+ 725 0026 FA20     		movs	r0, #250
+ 726 0028 FFF7FEFF 		bl	CyDelayUs
+ 727              	.LVL78:
+ 728 002c 70BD     		pop	{r4, r5, r6, pc}
+ 729              		.cfi_endproc
+ 730              	.LFE69:
+ 731              		.size	mcp2515_setRegisterS, .-mcp2515_setRegisterS
+ 732 002e 00BF     		.section	.text.mcp2515_write_mf,"ax",%progbits
+ 733              		.align	2
+ 734              		.global	mcp2515_write_mf
+ 735              		.thumb
+ 736              		.thumb_func
+ 737              		.type	mcp2515_write_mf, %function
+ 738              	mcp2515_write_mf:
+ 739              	.LFB70:
+ 310:.\main.c      **** }
+ 311:.\main.c      **** 
+ 312:.\main.c      **** void mcp2515_write_mf( const uint8 mcp_addr, const uint8 ext, const uint32 id ){
+ 740              		.loc 1 312 0
+ 741              		.cfi_startproc
+ 742              		@ args = 0, pretend = 0, frame = 8
+ 743              		@ frame_needed = 0, uses_anonymous_args = 0
+ 744              	.LVL79:
+ 745 0000 00B5     		push	{lr}
+ 746              		.cfi_def_cfa_offset 4
+ 747              		.cfi_offset 14, -4
+ 748 0002 83B0     		sub	sp, sp, #12
+ 749              		.cfi_def_cfa_offset 16
+ 313:.\main.c      ****     uint16_t canid;
+ 314:.\main.c      ****     uint8 tbufdata[4];
+ 315:.\main.c      **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 21
+
+
+ 316:.\main.c      ****     canid = (uint16_t)(id & 0x0FFFF);
+ 750              		.loc 1 316 0
+ 751 0004 93B2     		uxth	r3, r2
+ 752              	.LVL80:
+ 317:.\main.c      **** 
+ 318:.\main.c      ****     if ( ext == 1) 
+ 753              		.loc 1 318 0
+ 754 0006 0129     		cmp	r1, #1
+ 755 0008 15D1     		bne	.L67
+ 319:.\main.c      ****     {
+ 320:.\main.c      ****         tbufdata[MCP_EID0] = (uint8) (canid & 0xFF);
+ 756              		.loc 1 320 0
+ 757 000a 8DF80720 		strb	r2, [sp, #7]
+ 321:.\main.c      ****         tbufdata[MCP_EID8] = (uint8) (canid >> 8);
+ 758              		.loc 1 321 0
+ 759 000e 1B0A     		lsrs	r3, r3, #8
+ 760              	.LVL81:
+ 761 0010 8DF80630 		strb	r3, [sp, #6]
+ 322:.\main.c      ****         canid = (uint16_t)(id >> 16);
+ 762              		.loc 1 322 0
+ 763 0014 120C     		lsrs	r2, r2, #16
+ 764              	.LVL82:
+ 323:.\main.c      ****         tbufdata[MCP_SIDL] = (uint8) (canid & 0x03);
+ 765              		.loc 1 323 0
+ 766 0016 D3B2     		uxtb	r3, r2
+ 767 0018 03F00301 		and	r1, r3, #3
+ 768              	.LVL83:
+ 324:.\main.c      ****         tbufdata[MCP_SIDL] += (uint8) ((canid & 0x1C) << 3);
+ 769              		.loc 1 324 0
+ 770 001c 03F01C03 		and	r3, r3, #28
+ 771 0020 01EBC303 		add	r3, r1, r3, lsl #3
+ 325:.\main.c      ****         tbufdata[MCP_SIDL] |= MCP_TXB_EXIDE_M;
+ 772              		.loc 1 325 0
+ 773 0024 43F00803 		orr	r3, r3, #8
+ 774 0028 8DF80530 		strb	r3, [sp, #5]
+ 326:.\main.c      ****         tbufdata[MCP_SIDH] = (uint8) (canid >> 5 );
+ 775              		.loc 1 326 0
+ 776 002c C2F34712 		ubfx	r2, r2, #5, #8
+ 777              	.LVL84:
+ 778 0030 8DF80420 		strb	r2, [sp, #4]
+ 779 0034 0CE0     		b	.L68
+ 780              	.LVL85:
+ 781              	.L67:
+ 327:.\main.c      ****     }
+ 328:.\main.c      ****     else 
+ 329:.\main.c      ****     {
+ 330:.\main.c      ****         tbufdata[MCP_EID0] = (uint8) (canid & 0xFF);
+ 782              		.loc 1 330 0
+ 783 0036 8DF80720 		strb	r2, [sp, #7]
+ 331:.\main.c      ****         tbufdata[MCP_EID8] = (uint8) (canid >> 8);
+ 784              		.loc 1 331 0
+ 785 003a 1B0A     		lsrs	r3, r3, #8
+ 786              	.LVL86:
+ 787 003c 8DF80630 		strb	r3, [sp, #6]
+ 332:.\main.c      ****         canid = (uint16_t)(id >> 16);
+ 788              		.loc 1 332 0
+ 789 0040 120C     		lsrs	r2, r2, #16
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 22
+
+
+ 790              	.LVL87:
+ 333:.\main.c      ****         tbufdata[MCP_SIDL] = (uint8) ((canid & 0x07) << 5);
+ 791              		.loc 1 333 0
+ 792 0042 5301     		lsls	r3, r2, #5
+ 793 0044 8DF80530 		strb	r3, [sp, #5]
+ 334:.\main.c      ****         tbufdata[MCP_SIDH] = (uint8) (canid >> 3 );
+ 794              		.loc 1 334 0
+ 795 0048 C2F3C702 		ubfx	r2, r2, #3, #8
+ 796              	.LVL88:
+ 797 004c 8DF80420 		strb	r2, [sp, #4]
+ 798              	.LVL89:
+ 799              	.L68:
+ 335:.\main.c      ****     } 
+ 336:.\main.c      ****     mcp2515_setRegisterS( mcp_addr, tbufdata, 4 );
+ 800              		.loc 1 336 0
+ 801 0050 01A9     		add	r1, sp, #4
+ 802 0052 0422     		movs	r2, #4
+ 803 0054 FFF7FEFF 		bl	mcp2515_setRegisterS
+ 804              	.LVL90:
+ 337:.\main.c      **** }
+ 805              		.loc 1 337 0
+ 806 0058 03B0     		add	sp, sp, #12
+ 807              		.cfi_def_cfa_offset 4
+ 808              		@ sp needed
+ 809 005a 5DF804FB 		ldr	pc, [sp], #4
+ 810              		.cfi_endproc
+ 811              	.LFE70:
+ 812              		.size	mcp2515_write_mf, .-mcp2515_write_mf
+ 813 005e 00BF     		.section	.text.mcp2515_initCANBuffers,"ax",%progbits
+ 814              		.align	2
+ 815              		.global	mcp2515_initCANBuffers
+ 816              		.thumb
+ 817              		.thumb_func
+ 818              		.type	mcp2515_initCANBuffers, %function
+ 819              	mcp2515_initCANBuffers:
+ 820              	.LFB71:
+ 338:.\main.c      **** 
+ 339:.\main.c      **** void mcp2515_initCANBuffers(void){
+ 821              		.loc 1 339 0
+ 822              		.cfi_startproc
+ 823              		@ args = 0, pretend = 0, frame = 0
+ 824              		@ frame_needed = 0, uses_anonymous_args = 0
+ 825 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 826              		.cfi_def_cfa_offset 24
+ 827              		.cfi_offset 3, -24
+ 828              		.cfi_offset 4, -20
+ 829              		.cfi_offset 5, -16
+ 830              		.cfi_offset 6, -12
+ 831              		.cfi_offset 7, -8
+ 832              		.cfi_offset 14, -4
+ 833              	.LVL91:
+ 340:.\main.c      ****     uint8 i, a1, a2, a3;
+ 341:.\main.c      ****     uint8 std = 0;               
+ 342:.\main.c      ****     uint8 ext = 1;
+ 343:.\main.c      ****     uint32 ulMask = 0x00, ulFilt = 0x00;
+ 344:.\main.c      ****     mcp2515_write_mf(MCP_RXM0SIDH, ext, ulMask);			/*Set both masks to 0           */
+ 834              		.loc 1 344 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 23
+
+
+ 835 0002 2020     		movs	r0, #32
+ 836 0004 0121     		movs	r1, #1
+ 837 0006 0022     		movs	r2, #0
+ 838 0008 FFF7FEFF 		bl	mcp2515_write_mf
+ 839              	.LVL92:
+ 345:.\main.c      ****     mcp2515_write_mf(MCP_RXM1SIDH, ext, ulMask);			/*Mask register ignores ext bit */              
+ 840              		.loc 1 345 0
+ 841 000c 2420     		movs	r0, #36
+ 842 000e 0121     		movs	r1, #1
+ 843 0010 0022     		movs	r2, #0
+ 844 0012 FFF7FEFF 		bl	mcp2515_write_mf
+ 845              	.LVL93:
+ 346:.\main.c      ****     mcp2515_write_mf(MCP_RXF0SIDH, ext, ulFilt);			/* RXB0: extended               */
+ 846              		.loc 1 346 0
+ 847 0016 0020     		movs	r0, #0
+ 848 0018 0121     		movs	r1, #1
+ 849 001a 0246     		mov	r2, r0
+ 850 001c FFF7FEFF 		bl	mcp2515_write_mf
+ 851              	.LVL94:
+ 347:.\main.c      ****     mcp2515_write_mf(MCP_RXF1SIDH, std, ulFilt);			/* RXB1: standard               */
+ 852              		.loc 1 347 0
+ 853 0020 0420     		movs	r0, #4
+ 854 0022 0021     		movs	r1, #0
+ 855 0024 0A46     		mov	r2, r1
+ 856 0026 FFF7FEFF 		bl	mcp2515_write_mf
+ 857              	.LVL95:
+ 348:.\main.c      ****     mcp2515_write_mf(MCP_RXF2SIDH, ext, ulFilt);			/* RXB2: extended               */
+ 858              		.loc 1 348 0
+ 859 002a 0820     		movs	r0, #8
+ 860 002c 0121     		movs	r1, #1
+ 861 002e 0022     		movs	r2, #0
+ 862 0030 FFF7FEFF 		bl	mcp2515_write_mf
+ 863              	.LVL96:
+ 349:.\main.c      ****     mcp2515_write_mf(MCP_RXF3SIDH, std, ulFilt);			/* RXB3: standard               */
+ 864              		.loc 1 349 0
+ 865 0034 1020     		movs	r0, #16
+ 866 0036 0021     		movs	r1, #0
+ 867 0038 0A46     		mov	r2, r1
+ 868 003a FFF7FEFF 		bl	mcp2515_write_mf
+ 869              	.LVL97:
+ 350:.\main.c      ****     mcp2515_write_mf(MCP_RXF4SIDH, ext, ulFilt);
+ 870              		.loc 1 350 0
+ 871 003e 1420     		movs	r0, #20
+ 872 0040 0121     		movs	r1, #1
+ 873 0042 0022     		movs	r2, #0
+ 874 0044 FFF7FEFF 		bl	mcp2515_write_mf
+ 875              	.LVL98:
+ 351:.\main.c      ****     mcp2515_write_mf(MCP_RXF5SIDH, std, ulFilt);
+ 876              		.loc 1 351 0
+ 877 0048 1820     		movs	r0, #24
+ 878 004a 0021     		movs	r1, #0
+ 879 004c 0A46     		mov	r2, r1
+ 880 004e FFF7FEFF 		bl	mcp2515_write_mf
+ 881              	.LVL99:
+ 352:.\main.c      **** 
+ 353:.\main.c      ****                                                                         /* Clear, deactivate the th
+ 354:.\main.c      ****                                                                         /* transmit buffers        
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 24
+
+
+ 355:.\main.c      ****                                                                         /* TXBnCTRL -> TXBnD7      
+ 356:.\main.c      ****     a1 = MCP_TXB0CTRL;
+ 357:.\main.c      ****     a2 = MCP_TXB1CTRL;
+ 358:.\main.c      ****     a3 = MCP_TXB2CTRL;
+ 882              		.loc 1 358 0
+ 883 0052 5027     		movs	r7, #80
+ 357:.\main.c      ****     a3 = MCP_TXB2CTRL;
+ 884              		.loc 1 357 0
+ 885 0054 4026     		movs	r6, #64
+ 356:.\main.c      ****     a2 = MCP_TXB1CTRL;
+ 886              		.loc 1 356 0
+ 887 0056 3025     		movs	r5, #48
+ 359:.\main.c      ****     for (i = 0; i < 14; i++) {                                          /* in-buffer loop          
+ 888              		.loc 1 359 0
+ 889 0058 0024     		movs	r4, #0
+ 890 005a 13E0     		b	.L71
+ 891              	.LVL100:
+ 892              	.L72:
+ 360:.\main.c      ****         mcp2515_setRegister(a1, 0);
+ 893              		.loc 1 360 0 discriminator 3
+ 894 005c 2846     		mov	r0, r5
+ 895 005e 0021     		movs	r1, #0
+ 896 0060 FFF7FEFF 		bl	mcp2515_setRegister
+ 897              	.LVL101:
+ 361:.\main.c      ****         mcp2515_setRegister(a2, 0);
+ 898              		.loc 1 361 0 discriminator 3
+ 899 0064 3046     		mov	r0, r6
+ 900 0066 0021     		movs	r1, #0
+ 901 0068 FFF7FEFF 		bl	mcp2515_setRegister
+ 902              	.LVL102:
+ 362:.\main.c      ****         mcp2515_setRegister(a3, 0);
+ 903              		.loc 1 362 0 discriminator 3
+ 904 006c 3846     		mov	r0, r7
+ 905 006e 0021     		movs	r1, #0
+ 906 0070 FFF7FEFF 		bl	mcp2515_setRegister
+ 907              	.LVL103:
+ 363:.\main.c      ****         a1++;
+ 908              		.loc 1 363 0 discriminator 3
+ 909 0074 0135     		adds	r5, r5, #1
+ 910              	.LVL104:
+ 911 0076 EDB2     		uxtb	r5, r5
+ 912              	.LVL105:
+ 364:.\main.c      ****         a2++;
+ 913              		.loc 1 364 0 discriminator 3
+ 914 0078 0136     		adds	r6, r6, #1
+ 915              	.LVL106:
+ 916 007a F6B2     		uxtb	r6, r6
+ 917              	.LVL107:
+ 365:.\main.c      ****         a3++;
+ 918              		.loc 1 365 0 discriminator 3
+ 919 007c 0137     		adds	r7, r7, #1
+ 920              	.LVL108:
+ 921 007e FFB2     		uxtb	r7, r7
+ 922              	.LVL109:
+ 359:.\main.c      ****         mcp2515_setRegister(a1, 0);
+ 923              		.loc 1 359 0 discriminator 3
+ 924 0080 0134     		adds	r4, r4, #1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 25
+
+
+ 925              	.LVL110:
+ 926 0082 E4B2     		uxtb	r4, r4
+ 927              	.LVL111:
+ 928              	.L71:
+ 359:.\main.c      ****         mcp2515_setRegister(a1, 0);
+ 929              		.loc 1 359 0 is_stmt 0 discriminator 1
+ 930 0084 0D2C     		cmp	r4, #13
+ 931 0086 E9D9     		bls	.L72
+ 366:.\main.c      ****     }
+ 367:.\main.c      ****     mcp2515_setRegister(MCP_RXB0CTRL, 0);
+ 932              		.loc 1 367 0 is_stmt 1
+ 933 0088 6020     		movs	r0, #96
+ 934 008a 0021     		movs	r1, #0
+ 935 008c FFF7FEFF 		bl	mcp2515_setRegister
+ 936              	.LVL112:
+ 368:.\main.c      ****     mcp2515_setRegister(MCP_RXB1CTRL, 0);
+ 937              		.loc 1 368 0
+ 938 0090 7020     		movs	r0, #112
+ 939 0092 0021     		movs	r1, #0
+ 940 0094 FFF7FEFF 		bl	mcp2515_setRegister
+ 941              	.LVL113:
+ 942 0098 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 943              		.cfi_endproc
+ 944              	.LFE71:
+ 945              		.size	mcp2515_initCANBuffers, .-mcp2515_initCANBuffers
+ 946 009a 00BF     		.section	.text.mcp2515_init,"ax",%progbits
+ 947              		.align	2
+ 948              		.global	mcp2515_init
+ 949              		.thumb
+ 950              		.thumb_func
+ 951              		.type	mcp2515_init, %function
+ 952              	mcp2515_init:
+ 953              	.LFB72:
+ 369:.\main.c      **** }
+ 370:.\main.c      **** 
+ 371:.\main.c      **** uint8 mcp2515_init(const uint8 canIDMode, const uint8 canSpeed, const uint8 canClock){
+ 954              		.loc 1 371 0
+ 955              		.cfi_startproc
+ 956              		@ args = 0, pretend = 0, frame = 0
+ 957              		@ frame_needed = 0, uses_anonymous_args = 0
+ 958              	.LVL114:
+ 959 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 960              		.cfi_def_cfa_offset 24
+ 961              		.cfi_offset 3, -24
+ 962              		.cfi_offset 4, -20
+ 963              		.cfi_offset 5, -16
+ 964              		.cfi_offset 6, -12
+ 965              		.cfi_offset 7, -8
+ 966              		.cfi_offset 14, -4
+ 967 0002 0746     		mov	r7, r0
+ 968 0004 0E46     		mov	r6, r1
+ 969 0006 1546     		mov	r5, r2
+ 372:.\main.c      ****     uint8 res;
+ 373:.\main.c      ****     mcp2515_reset();
+ 970              		.loc 1 373 0
+ 971 0008 FFF7FEFF 		bl	mcp2515_reset
+ 972              	.LVL115:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 26
+
+
+ 374:.\main.c      ****     mcpMode = MCP_LOOPBACK;
+ 973              		.loc 1 374 0
+ 974 000c 4022     		movs	r2, #64
+ 975 000e 1D4B     		ldr	r3, .L86
+ 976 0010 1A70     		strb	r2, [r3]
+ 375:.\main.c      ****     res = mcp2515_setCANCTRL_Mode(MODE_CONFIG);
+ 977              		.loc 1 375 0
+ 978 0012 8020     		movs	r0, #128
+ 979 0014 FFF7FEFF 		bl	mcp2515_setCANCTRL_Mode
+ 980              	.LVL116:
+ 981 0018 C4B2     		uxtb	r4, r0
+ 982              	.LVL117:
+ 376:.\main.c      ****     if(res > 0){return res;}
+ 983              		.loc 1 376 0
+ 984 001a 5CBB     		cbnz	r4, .L80
+ 377:.\main.c      ****     // Set Baudrate
+ 378:.\main.c      ****     if(mcp2515_configRate(canSpeed, canClock)){return res;}
+ 985              		.loc 1 378 0
+ 986 001c 3046     		mov	r0, r6
+ 987 001e 2946     		mov	r1, r5
+ 988 0020 FFF7FEFF 		bl	mcp2515_configRate
+ 989              	.LVL118:
+ 990 0024 40BB     		cbnz	r0, .L81
+ 379:.\main.c      ****     if ( res == MCP2515_OK ) {                                                       /* init canbuf
+ 991              		.loc 1 379 0
+ 992 0026 1CBB     		cbnz	r4, .L76
+ 380:.\main.c      ****         mcp2515_initCANBuffers();                                                               /* 
+ 993              		.loc 1 380 0
+ 994 0028 FFF7FEFF 		bl	mcp2515_initCANBuffers
+ 995              	.LVL119:
+ 381:.\main.c      ****         mcp2515_setRegister(MCP_CANINTE, MCP_RX0IF | MCP_RX1IF);
+ 996              		.loc 1 381 0
+ 997 002c 2B20     		movs	r0, #43
+ 998 002e 0321     		movs	r1, #3
+ 999 0030 FFF7FEFF 		bl	mcp2515_setRegister
+ 1000              	.LVL120:
+ 382:.\main.c      ****         switch(canIDMode)
+ 1001              		.loc 1 382 0
+ 1002 0034 67B1     		cbz	r7, .L77
+ 1003 0036 032F     		cmp	r7, #3
+ 1004 0038 20D1     		bne	.L84
+ 383:.\main.c      ****         {
+ 384:.\main.c      ****             case (MCP_ANY):
+ 385:.\main.c      ****             mcp2515_modifyRegister(MCP_RXB0CTRL,
+ 1005              		.loc 1 385 0
+ 1006 003a 6020     		movs	r0, #96
+ 1007 003c 6421     		movs	r1, #100
+ 1008 003e 0A46     		mov	r2, r1
+ 1009 0040 FFF7FEFF 		bl	mcp2515_modifyRegister
+ 1010              	.LVL121:
+ 386:.\main.c      ****             MCP_RXB_RX_MASK | MCP_RXB_BUKT_MASK,
+ 387:.\main.c      ****             MCP_RXB_RX_ANY | MCP_RXB_BUKT_MASK);
+ 388:.\main.c      ****             mcp2515_modifyRegister(MCP_RXB1CTRL, MCP_RXB_RX_MASK,
+ 1011              		.loc 1 388 0
+ 1012 0044 7020     		movs	r0, #112
+ 1013 0046 6021     		movs	r1, #96
+ 1014 0048 0A46     		mov	r2, r1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 27
+
+
+ 1015 004a FFF7FEFF 		bl	mcp2515_modifyRegister
+ 1016              	.LVL122:
+ 389:.\main.c      ****             MCP_RXB_RX_ANY);
+ 390:.\main.c      ****             break;
+ 1017              		.loc 1 390 0
+ 1018 004e 09E0     		b	.L79
+ 1019              	.L77:
+ 391:.\main.c      ****             case (MCP_STDEXT): 
+ 392:.\main.c      ****             mcp2515_modifyRegister(MCP_RXB0CTRL,
+ 1020              		.loc 1 392 0
+ 1021 0050 6020     		movs	r0, #96
+ 1022 0052 6421     		movs	r1, #100
+ 1023 0054 0422     		movs	r2, #4
+ 1024 0056 FFF7FEFF 		bl	mcp2515_modifyRegister
+ 1025              	.LVL123:
+ 393:.\main.c      ****             MCP_RXB_RX_MASK | MCP_RXB_BUKT_MASK,
+ 394:.\main.c      ****             MCP_RXB_RX_STDEXT | MCP_RXB_BUKT_MASK );
+ 395:.\main.c      ****             mcp2515_modifyRegister(MCP_RXB1CTRL, MCP_RXB_RX_MASK,
+ 1026              		.loc 1 395 0
+ 1027 005a 7020     		movs	r0, #112
+ 1028 005c 6021     		movs	r1, #96
+ 1029 005e 0022     		movs	r2, #0
+ 1030 0060 FFF7FEFF 		bl	mcp2515_modifyRegister
+ 1031              	.LVL124:
+ 1032              	.L79:
+ 396:.\main.c      ****             MCP_RXB_RX_STDEXT);
+ 397:.\main.c      ****             break;
+ 398:.\main.c      ****             default:         
+ 399:.\main.c      ****             return MCP2515_FAIL;
+ 400:.\main.c      ****             break;
+ 401:.\main.c      **** }    
+ 402:.\main.c      ****         res = mcp2515_setCANCTRL_Mode(mcpMode);                                                    
+ 1033              		.loc 1 402 0
+ 1034 0064 074B     		ldr	r3, .L86
+ 1035 0066 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 1036 0068 FFF7FEFF 		bl	mcp2515_setCANCTRL_Mode
+ 1037              	.LVL125:
+ 1038 006c C4B2     		uxtb	r4, r0
+ 1039              	.LVL126:
+ 403:.\main.c      ****         if(res){return res;}
+ 1040              		.loc 1 403 0
+ 1041 006e 3CB9     		cbnz	r4, .L83
+ 1042              	.L76:
+ 404:.\main.c      ****     }
+ 405:.\main.c      ****     return res;
+ 1043              		.loc 1 405 0
+ 1044 0070 2046     		mov	r0, r4
+ 1045 0072 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1046              	.LVL127:
+ 1047              	.L80:
+ 376:.\main.c      ****     // Set Baudrate
+ 1048              		.loc 1 376 0
+ 1049 0074 2046     		mov	r0, r4
+ 1050 0076 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1051              	.LVL128:
+ 1052              	.L81:
+ 378:.\main.c      ****     if ( res == MCP2515_OK ) {                                                       /* init canbuf
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 28
+
+
+ 1053              		.loc 1 378 0
+ 1054 0078 2046     		mov	r0, r4
+ 1055 007a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1056              	.LVL129:
+ 1057              	.L84:
+ 399:.\main.c      ****             break;
+ 1058              		.loc 1 399 0
+ 1059 007c 0120     		movs	r0, #1
+ 1060 007e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1061              	.LVL130:
+ 1062              	.L83:
+ 403:.\main.c      ****     }
+ 1063              		.loc 1 403 0
+ 1064 0080 2046     		mov	r0, r4
+ 406:.\main.c      **** }
+ 1065              		.loc 1 406 0
+ 1066 0082 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1067              	.LVL131:
+ 1068              	.L87:
+ 1069              		.align	2
+ 1070              	.L86:
+ 1071 0084 00000000 		.word	mcpMode
+ 1072              		.cfi_endproc
+ 1073              	.LFE72:
+ 1074              		.size	mcp2515_init, .-mcp2515_init
+ 1075              		.section	.text.begin,"ax",%progbits
+ 1076              		.align	2
+ 1077              		.global	begin
+ 1078              		.thumb
+ 1079              		.thumb_func
+ 1080              		.type	begin, %function
+ 1081              	begin:
+ 1082              	.LFB73:
+ 407:.\main.c      **** 
+ 408:.\main.c      **** uint8 begin(uint8 idmodeset, uint8 speedset, uint8 clockset){
+ 1083              		.loc 1 408 0
+ 1084              		.cfi_startproc
+ 1085              		@ args = 0, pretend = 0, frame = 0
+ 1086              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1087              	.LVL132:
+ 1088 0000 08B5     		push	{r3, lr}
+ 1089              		.cfi_def_cfa_offset 8
+ 1090              		.cfi_offset 3, -8
+ 1091              		.cfi_offset 14, -4
+ 409:.\main.c      ****     uint8 res;
+ 410:.\main.c      ****     res = mcp2515_init(idmodeset, speedset, clockset);
+ 1092              		.loc 1 410 0
+ 1093 0002 FFF7FEFF 		bl	mcp2515_init
+ 1094              	.LVL133:
+ 411:.\main.c      ****     if (res == MCP2515_OK){return CAN_OK;}
+ 1095              		.loc 1 411 0
+ 1096 0006 00B1     		cbz	r0, .L89
+ 412:.\main.c      ****     return CAN_FAILINIT;
+ 1097              		.loc 1 412 0
+ 1098 0008 0120     		movs	r0, #1
+ 1099              	.LVL134:
+ 1100              	.L89:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 29
+
+
+ 413:.\main.c      **** }
+ 1101              		.loc 1 413 0
+ 1102 000a 08BD     		pop	{r3, pc}
+ 1103              		.cfi_endproc
+ 1104              	.LFE73:
+ 1105              		.size	begin, .-begin
+ 1106              		.section	.text.main,"ax",%progbits
+ 1107              		.align	2
+ 1108              		.global	main
+ 1109              		.thumb
+ 1110              		.thumb_func
+ 1111              		.type	main, %function
+ 1112              	main:
+ 1113              	.LFB74:
+ 414:.\main.c      **** 
+ 415:.\main.c      **** int main(){
+ 1114              		.loc 1 415 0
+ 1115              		.cfi_startproc
+ 1116              		@ Volatile: function does not return.
+ 1117              		@ args = 0, pretend = 0, frame = 0
+ 1118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1119 0000 08B5     		push	{r3, lr}
+ 1120              		.cfi_def_cfa_offset 8
+ 1121              		.cfi_offset 3, -8
+ 1122              		.cfi_offset 14, -4
+ 416:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 1123              		.loc 1 416 0
+ 1124              	@ 416 ".\main.c" 1
+ 1125 0002 62B6     		CPSIE   i
+ 1126              	@ 0 "" 2
+ 417:.\main.c      ****     SPIM_1_Start();
+ 1127              		.loc 1 417 0
+ 1128              		.thumb
+ 1129 0004 FFF7FEFF 		bl	SPIM_1_Start
+ 1130              	.LVL135:
+ 418:.\main.c      ****     LCD_Char_1_Start();
+ 1131              		.loc 1 418 0
+ 1132 0008 FFF7FEFF 		bl	LCD_Char_1_Start
+ 1133              	.LVL136:
+ 419:.\main.c      ****     LCD_Char_1_Position(0,0);
+ 1134              		.loc 1 419 0
+ 1135 000c 0020     		movs	r0, #0
+ 1136 000e 0146     		mov	r1, r0
+ 1137 0010 FFF7FEFF 		bl	LCD_Char_1_Position
+ 1138              	.LVL137:
+ 420:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+ 421:.\main.c      ****     if(begin(MCP_ANY, CAN_500KBPS, MCP_8MHZ) == CAN_OK){
+ 1139              		.loc 1 421 0
+ 1140 0014 0320     		movs	r0, #3
+ 1141 0016 0C21     		movs	r1, #12
+ 1142 0018 0222     		movs	r2, #2
+ 1143 001a FFF7FEFF 		bl	begin
+ 1144              	.LVL138:
+ 1145 001e 18B9     		cbnz	r0, .L93
+ 422:.\main.c      ****         LCD_Char_1_PrintString("OK");
+ 1146              		.loc 1 422 0
+ 1147 0020 1248     		ldr	r0, .L97
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 30
+
+
+ 1148 0022 FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 1149              	.LVL139:
+ 1150 0026 02E0     		b	.L95
+ 1151              	.L93:
+ 423:.\main.c      ****         }
+ 424:.\main.c      ****     else {LCD_Char_1_PrintString("ERROR");}
+ 1152              		.loc 1 424 0
+ 1153 0028 1148     		ldr	r0, .L97+4
+ 1154 002a FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 1155              	.LVL140:
+ 1156              	.L95:
+ 425:.\main.c      ****     for(;;)
+ 426:.\main.c      ****     {
+ 427:.\main.c      ****         SPIM_1_WriteTxData(dato_TX);
+ 1157              		.loc 1 427 0 discriminator 1
+ 1158 002e 114C     		ldr	r4, .L97+8
+ 1159 0030 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
+ 1160 0032 FFF7FEFF 		bl	SPIM_1_WriteTxData
+ 1161              	.LVL141:
+ 428:.\main.c      ****         dato_RX=SPIM_1_ReadRxData();
+ 1162              		.loc 1 428 0 discriminator 1
+ 1163 0036 FFF7FEFF 		bl	SPIM_1_ReadRxData
+ 1164              	.LVL142:
+ 1165 003a 0F4D     		ldr	r5, .L97+12
+ 1166 003c 2870     		strb	r0, [r5]
+ 429:.\main.c      ****         dato_TX++;
+ 1167              		.loc 1 429 0 discriminator 1
+ 1168 003e 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 1169 0040 0133     		adds	r3, r3, #1
+ 1170 0042 2370     		strb	r3, [r4]
+ 430:.\main.c      ****         LCD_Char_1_Position(1,0);
+ 1171              		.loc 1 430 0 discriminator 1
+ 1172 0044 0120     		movs	r0, #1
+ 1173 0046 0021     		movs	r1, #0
+ 1174 0048 FFF7FEFF 		bl	LCD_Char_1_Position
+ 1175              	.LVL143:
+ 431:.\main.c      ****         LCD_Char_1_PrintInt8(dato_RX);
+ 1176              		.loc 1 431 0 discriminator 1
+ 1177 004c 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
+ 1178 004e FFF7FEFF 		bl	LCD_Char_1_PrintInt8
+ 1179              	.LVL144:
+ 432:.\main.c      ****         LCD_Char_1_Position(1,8);
+ 1180              		.loc 1 432 0 discriminator 1
+ 1181 0052 0120     		movs	r0, #1
+ 1182 0054 0821     		movs	r1, #8
+ 1183 0056 FFF7FEFF 		bl	LCD_Char_1_Position
+ 1184              	.LVL145:
+ 433:.\main.c      ****         LCD_Char_1_PrintInt8(dato_TX);
+ 1185              		.loc 1 433 0 discriminator 1
+ 1186 005a 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
+ 1187 005c FFF7FEFF 		bl	LCD_Char_1_PrintInt8
+ 1188              	.LVL146:
+ 434:.\main.c      ****         CyDelay(1000);
+ 1189              		.loc 1 434 0 discriminator 1
+ 1190 0060 4FF47A70 		mov	r0, #1000
+ 1191 0064 FFF7FEFF 		bl	CyDelay
+ 1192              	.LVL147:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 31
+
+
+ 435:.\main.c      ****     }
+ 1193              		.loc 1 435 0 discriminator 1
+ 1194 0068 E1E7     		b	.L95
+ 1195              	.L98:
+ 1196 006a 00BF     		.align	2
+ 1197              	.L97:
+ 1198 006c 00000000 		.word	.LC0
+ 1199 0070 04000000 		.word	.LC1
+ 1200 0074 00000000 		.word	dato_TX
+ 1201 0078 00000000 		.word	dato_RX
+ 1202              		.cfi_endproc
+ 1203              	.LFE74:
+ 1204              		.size	main, .-main
+ 1205              		.comm	mcpMode,1,1
+ 1206              		.comm	MCPCS,1,1
+ 1207              		.comm	m_nfilhit,1,1
+ 1208              		.comm	m_nRtr,1,1
+ 1209              		.comm	m_nDta,8,4
+ 1210              		.comm	m_nDlc,1,1
+ 1211              		.comm	m_nID,4,4
+ 1212              		.comm	m_nExtFlg,1,1
+ 1213              		.comm	dato_RX,1,1
+ 1214              		.comm	dato_TX,1,1
+ 1215              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 1216              		.align	2
+ 1217              	.LC0:
+ 1218 0000 4F4B00   		.ascii	"OK\000"
+ 1219 0003 00       		.space	1
+ 1220              	.LC1:
+ 1221 0004 4552524F 		.ascii	"ERROR\000"
+ 1221      5200
+ 1222 000a 0000     		.text
+ 1223              	.Letext0:
+ 1224              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 1225              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 1226              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 1227              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 1228              		.file 6 "Generated_Source\\PSoC5/SPIM_1.h"
+ 1229              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
+ 1230              		.file 8 "Generated_Source\\PSoC5/LCD_Char_1.h"
+ 1231              		.section	.debug_info,"",%progbits
+ 1232              	.Ldebug_info0:
+ 1233 0000 C30A0000 		.4byte	0xac3
+ 1234 0004 0400     		.2byte	0x4
+ 1235 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1236 000a 04       		.byte	0x4
+ 1237 000b 01       		.uleb128 0x1
+ 1238 000c 35030000 		.4byte	.LASF73
+ 1239 0010 01       		.byte	0x1
+ 1240 0011 1A030000 		.4byte	.LASF74
+ 1241 0015 D9010000 		.4byte	.LASF75
+ 1242 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1243 001d 00000000 		.4byte	0
+ 1244 0021 00000000 		.4byte	.Ldebug_line0
+ 1245 0025 02       		.uleb128 0x2
+ 1246 0026 01       		.byte	0x1
+ 1247 0027 06       		.byte	0x6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 32
+
+
+ 1248 0028 A1010000 		.4byte	.LASF0
+ 1249 002c 02       		.uleb128 0x2
+ 1250 002d 01       		.byte	0x1
+ 1251 002e 08       		.byte	0x8
+ 1252 002f 89010000 		.4byte	.LASF1
+ 1253 0033 02       		.uleb128 0x2
+ 1254 0034 02       		.byte	0x2
+ 1255 0035 05       		.byte	0x5
+ 1256 0036 11000000 		.4byte	.LASF2
+ 1257 003a 03       		.uleb128 0x3
+ 1258 003b 73000000 		.4byte	.LASF4
+ 1259 003f 02       		.byte	0x2
+ 1260 0040 2B       		.byte	0x2b
+ 1261 0041 45000000 		.4byte	0x45
+ 1262 0045 02       		.uleb128 0x2
+ 1263 0046 02       		.byte	0x2
+ 1264 0047 07       		.byte	0x7
+ 1265 0048 2F020000 		.4byte	.LASF3
+ 1266 004c 03       		.uleb128 0x3
+ 1267 004d 23030000 		.4byte	.LASF5
+ 1268 0051 02       		.byte	0x2
+ 1269 0052 3F       		.byte	0x3f
+ 1270 0053 57000000 		.4byte	0x57
+ 1271 0057 02       		.uleb128 0x2
+ 1272 0058 04       		.byte	0x4
+ 1273 0059 05       		.byte	0x5
+ 1274 005a 73020000 		.4byte	.LASF6
+ 1275 005e 02       		.uleb128 0x2
+ 1276 005f 04       		.byte	0x4
+ 1277 0060 07       		.byte	0x7
+ 1278 0061 23010000 		.4byte	.LASF7
+ 1279 0065 02       		.uleb128 0x2
+ 1280 0066 08       		.byte	0x8
+ 1281 0067 05       		.byte	0x5
+ 1282 0068 F7000000 		.4byte	.LASF8
+ 1283 006c 02       		.uleb128 0x2
+ 1284 006d 08       		.byte	0x8
+ 1285 006e 07       		.byte	0x7
+ 1286 006f B5010000 		.4byte	.LASF9
+ 1287 0073 04       		.uleb128 0x4
+ 1288 0074 04       		.byte	0x4
+ 1289 0075 05       		.byte	0x5
+ 1290 0076 696E7400 		.ascii	"int\000"
+ 1291 007a 02       		.uleb128 0x2
+ 1292 007b 04       		.byte	0x4
+ 1293 007c 07       		.byte	0x7
+ 1294 007d CC010000 		.4byte	.LASF10
+ 1295 0081 03       		.uleb128 0x3
+ 1296 0082 A4020000 		.4byte	.LASF11
+ 1297 0086 03       		.byte	0x3
+ 1298 0087 21       		.byte	0x21
+ 1299 0088 3A000000 		.4byte	0x3a
+ 1300 008c 03       		.uleb128 0x3
+ 1301 008d AD010000 		.4byte	.LASF12
+ 1302 0091 03       		.byte	0x3
+ 1303 0092 2C       		.byte	0x2c
+ 1304 0093 4C000000 		.4byte	0x4c
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 33
+
+
+ 1305 0097 05       		.uleb128 0x5
+ 1306 0098 DC000000 		.4byte	.LASF13
+ 1307 009c 04       		.byte	0x4
+ 1308 009d 9201     		.2byte	0x192
+ 1309 009f 2C000000 		.4byte	0x2c
+ 1310 00a3 05       		.uleb128 0x5
+ 1311 00a4 9D020000 		.4byte	.LASF14
+ 1312 00a8 04       		.byte	0x4
+ 1313 00a9 9301     		.2byte	0x193
+ 1314 00ab 45000000 		.4byte	0x45
+ 1315 00af 05       		.uleb128 0x5
+ 1316 00b0 E2020000 		.4byte	.LASF15
+ 1317 00b4 04       		.byte	0x4
+ 1318 00b5 9401     		.2byte	0x194
+ 1319 00b7 5E000000 		.4byte	0x5e
+ 1320 00bb 05       		.uleb128 0x5
+ 1321 00bc 05010000 		.4byte	.LASF16
+ 1322 00c0 04       		.byte	0x4
+ 1323 00c1 9501     		.2byte	0x195
+ 1324 00c3 25000000 		.4byte	0x25
+ 1325 00c7 02       		.uleb128 0x2
+ 1326 00c8 04       		.byte	0x4
+ 1327 00c9 04       		.byte	0x4
+ 1328 00ca EA000000 		.4byte	.LASF17
+ 1329 00ce 02       		.uleb128 0x2
+ 1330 00cf 08       		.byte	0x8
+ 1331 00d0 04       		.byte	0x4
+ 1332 00d1 D7030000 		.4byte	.LASF18
+ 1333 00d5 05       		.uleb128 0x5
+ 1334 00d6 50000000 		.4byte	.LASF19
+ 1335 00da 04       		.byte	0x4
+ 1336 00db A301     		.2byte	0x1a3
+ 1337 00dd E1000000 		.4byte	0xe1
+ 1338 00e1 02       		.uleb128 0x2
+ 1339 00e2 01       		.byte	0x1
+ 1340 00e3 08       		.byte	0x8
+ 1341 00e4 57020000 		.4byte	.LASF20
+ 1342 00e8 02       		.uleb128 0x2
+ 1343 00e9 04       		.byte	0x4
+ 1344 00ea 07       		.byte	0x7
+ 1345 00eb 38000000 		.4byte	.LASF21
+ 1346 00ef 06       		.uleb128 0x6
+ 1347 00f0 97000000 		.4byte	0x97
+ 1348 00f4 FF000000 		.4byte	0xff
+ 1349 00f8 07       		.uleb128 0x7
+ 1350 00f9 E8000000 		.4byte	0xe8
+ 1351 00fd 03       		.byte	0x3
+ 1352 00fe 00       		.byte	0
+ 1353 00ff 08       		.uleb128 0x8
+ 1354 0100 FE020000 		.4byte	.LASF25
+ 1355 0104 01       		.byte	0x1
+ 1356 0105 0E       		.byte	0xe
+ 1357 0106 00000000 		.4byte	.LFB63
+ 1358 010a 28000000 		.4byte	.LFE63-.LFB63
+ 1359 010e 01       		.uleb128 0x1
+ 1360 010f 9C       		.byte	0x9c
+ 1361 0110 A1010000 		.4byte	0x1a1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 34
+
+
+ 1362 0114 09       		.uleb128 0x9
+ 1363 0115 09000000 		.4byte	.LASF22
+ 1364 0119 01       		.byte	0x1
+ 1365 011a 0E       		.byte	0xe
+ 1366 011b A1010000 		.4byte	0x1a1
+ 1367 011f 00000000 		.4byte	.LLST0
+ 1368 0123 09       		.uleb128 0x9
+ 1369 0124 15030000 		.4byte	.LASF23
+ 1370 0128 01       		.byte	0x1
+ 1371 0129 0E       		.byte	0xe
+ 1372 012a A1010000 		.4byte	0x1a1
+ 1373 012e 21000000 		.4byte	.LLST1
+ 1374 0132 09       		.uleb128 0x9
+ 1375 0133 98020000 		.4byte	.LASF24
+ 1376 0137 01       		.byte	0x1
+ 1377 0138 0E       		.byte	0xe
+ 1378 0139 A1010000 		.4byte	0x1a1
+ 1379 013d 42000000 		.4byte	.LLST2
+ 1380 0141 0A       		.uleb128 0xa
+ 1381 0142 0E000000 		.4byte	.LVL2
+ 1382 0146 2A0A0000 		.4byte	0xa2a
+ 1383 014a 54010000 		.4byte	0x154
+ 1384 014e 0B       		.uleb128 0xb
+ 1385 014f 01       		.uleb128 0x1
+ 1386 0150 50       		.byte	0x50
+ 1387 0151 01       		.uleb128 0x1
+ 1388 0152 35       		.byte	0x35
+ 1389 0153 00       		.byte	0
+ 1390 0154 0A       		.uleb128 0xa
+ 1391 0155 14000000 		.4byte	.LVL3
+ 1392 0159 2A0A0000 		.4byte	0xa2a
+ 1393 015d 68010000 		.4byte	0x168
+ 1394 0161 0B       		.uleb128 0xb
+ 1395 0162 01       		.uleb128 0x1
+ 1396 0163 50       		.byte	0x50
+ 1397 0164 02       		.uleb128 0x2
+ 1398 0165 76       		.byte	0x76
+ 1399 0166 00       		.sleb128 0
+ 1400 0167 00       		.byte	0
+ 1401 0168 0A       		.uleb128 0xa
+ 1402 0169 1A000000 		.4byte	.LVL4
+ 1403 016d 2A0A0000 		.4byte	0xa2a
+ 1404 0171 7C010000 		.4byte	0x17c
+ 1405 0175 0B       		.uleb128 0xb
+ 1406 0176 01       		.uleb128 0x1
+ 1407 0177 50       		.byte	0x50
+ 1408 0178 02       		.uleb128 0x2
+ 1409 0179 75       		.byte	0x75
+ 1410 017a 00       		.sleb128 0
+ 1411 017b 00       		.byte	0
+ 1412 017c 0A       		.uleb128 0xa
+ 1413 017d 20000000 		.4byte	.LVL5
+ 1414 0181 2A0A0000 		.4byte	0xa2a
+ 1415 0185 90010000 		.4byte	0x190
+ 1416 0189 0B       		.uleb128 0xb
+ 1417 018a 01       		.uleb128 0x1
+ 1418 018b 50       		.byte	0x50
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 35
+
+
+ 1419 018c 02       		.uleb128 0x2
+ 1420 018d 74       		.byte	0x74
+ 1421 018e 00       		.sleb128 0
+ 1422 018f 00       		.byte	0
+ 1423 0190 0C       		.uleb128 0xc
+ 1424 0191 26000000 		.4byte	.LVL6
+ 1425 0195 3B0A0000 		.4byte	0xa3b
+ 1426 0199 0B       		.uleb128 0xb
+ 1427 019a 01       		.uleb128 0x1
+ 1428 019b 50       		.byte	0x50
+ 1429 019c 02       		.uleb128 0x2
+ 1430 019d 08       		.byte	0x8
+ 1431 019e FA       		.byte	0xfa
+ 1432 019f 00       		.byte	0
+ 1433 01a0 00       		.byte	0
+ 1434 01a1 0D       		.uleb128 0xd
+ 1435 01a2 97000000 		.4byte	0x97
+ 1436 01a6 0E       		.uleb128 0xe
+ 1437 01a7 14020000 		.4byte	.LASF27
+ 1438 01ab 01       		.byte	0x1
+ 1439 01ac 16       		.byte	0x16
+ 1440 01ad 97000000 		.4byte	0x97
+ 1441 01b1 00000000 		.4byte	.LFB64
+ 1442 01b5 16000000 		.4byte	.LFE64-.LFB64
+ 1443 01b9 01       		.uleb128 0x1
+ 1444 01ba 9C       		.byte	0x9c
+ 1445 01bb 0C020000 		.4byte	0x20c
+ 1446 01bf 09       		.uleb128 0x9
+ 1447 01c0 09000000 		.4byte	.LASF22
+ 1448 01c4 01       		.byte	0x1
+ 1449 01c5 16       		.byte	0x16
+ 1450 01c6 A1010000 		.4byte	0x1a1
+ 1451 01ca 63000000 		.4byte	.LLST3
+ 1452 01ce 0F       		.uleb128 0xf
+ 1453 01cf 72657400 		.ascii	"ret\000"
+ 1454 01d3 01       		.byte	0x1
+ 1455 01d4 17       		.byte	0x17
+ 1456 01d5 97000000 		.4byte	0x97
+ 1457 01d9 01       		.uleb128 0x1
+ 1458 01da 50       		.byte	0x50
+ 1459 01db 0A       		.uleb128 0xa
+ 1460 01dc 0A000000 		.4byte	.LVL9
+ 1461 01e0 2A0A0000 		.4byte	0xa2a
+ 1462 01e4 EE010000 		.4byte	0x1ee
+ 1463 01e8 0B       		.uleb128 0xb
+ 1464 01e9 01       		.uleb128 0x1
+ 1465 01ea 50       		.byte	0x50
+ 1466 01eb 01       		.uleb128 0x1
+ 1467 01ec 33       		.byte	0x33
+ 1468 01ed 00       		.byte	0
+ 1469 01ee 0A       		.uleb128 0xa
+ 1470 01ef 10000000 		.4byte	.LVL10
+ 1471 01f3 2A0A0000 		.4byte	0xa2a
+ 1472 01f7 02020000 		.4byte	0x202
+ 1473 01fb 0B       		.uleb128 0xb
+ 1474 01fc 01       		.uleb128 0x1
+ 1475 01fd 50       		.byte	0x50
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 36
+
+
+ 1476 01fe 02       		.uleb128 0x2
+ 1477 01ff 74       		.byte	0x74
+ 1478 0200 00       		.sleb128 0
+ 1479 0201 00       		.byte	0
+ 1480 0202 10       		.uleb128 0x10
+ 1481 0203 14000000 		.4byte	.LVL11
+ 1482 0207 4C0A0000 		.4byte	0xa4c
+ 1483 020b 00       		.byte	0
+ 1484 020c 08       		.uleb128 0x8
+ 1485 020d F9030000 		.4byte	.LASF26
+ 1486 0211 01       		.byte	0x1
+ 1487 0212 1E       		.byte	0x1e
+ 1488 0213 00000000 		.4byte	.LFB65
+ 1489 0217 0A000000 		.4byte	.LFE65-.LFB65
+ 1490 021b 01       		.uleb128 0x1
+ 1491 021c 9C       		.byte	0x9c
+ 1492 021d 32020000 		.4byte	0x232
+ 1493 0221 0C       		.uleb128 0xc
+ 1494 0222 08000000 		.4byte	.LVL12
+ 1495 0226 2A0A0000 		.4byte	0xa2a
+ 1496 022a 0B       		.uleb128 0xb
+ 1497 022b 01       		.uleb128 0x1
+ 1498 022c 50       		.byte	0x50
+ 1499 022d 02       		.uleb128 0x2
+ 1500 022e 09       		.byte	0x9
+ 1501 022f C0       		.byte	0xc0
+ 1502 0230 00       		.byte	0
+ 1503 0231 00       		.byte	0
+ 1504 0232 0E       		.uleb128 0xe
+ 1505 0233 5B000000 		.4byte	.LASF28
+ 1506 0237 01       		.byte	0x1
+ 1507 0238 20       		.byte	0x20
+ 1508 0239 BB000000 		.4byte	0xbb
+ 1509 023d 00000000 		.4byte	.LFB66
+ 1510 0241 24000000 		.4byte	.LFE66-.LFB66
+ 1511 0245 01       		.uleb128 0x1
+ 1512 0246 9C       		.byte	0x9c
+ 1513 0247 96020000 		.4byte	0x296
+ 1514 024b 09       		.uleb128 0x9
+ 1515 024c BD000000 		.4byte	.LASF29
+ 1516 0250 01       		.byte	0x1
+ 1517 0251 20       		.byte	0x20
+ 1518 0252 A1010000 		.4byte	0x1a1
+ 1519 0256 84000000 		.4byte	.LLST4
+ 1520 025a 11       		.uleb128 0x11
+ 1521 025b 6900     		.ascii	"i\000"
+ 1522 025d 01       		.byte	0x1
+ 1523 025e 21       		.byte	0x21
+ 1524 025f 97000000 		.4byte	0x97
+ 1525 0263 A5000000 		.4byte	.LLST5
+ 1526 0267 0A       		.uleb128 0xa
+ 1527 0268 0E000000 		.4byte	.LVL15
+ 1528 026c FF000000 		.4byte	0xff
+ 1529 0270 86020000 		.4byte	0x286
+ 1530 0274 0B       		.uleb128 0xb
+ 1531 0275 01       		.uleb128 0x1
+ 1532 0276 52       		.byte	0x52
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 37
+
+
+ 1533 0277 02       		.uleb128 0x2
+ 1534 0278 74       		.byte	0x74
+ 1535 0279 00       		.sleb128 0
+ 1536 027a 0B       		.uleb128 0xb
+ 1537 027b 01       		.uleb128 0x1
+ 1538 027c 51       		.byte	0x51
+ 1539 027d 02       		.uleb128 0x2
+ 1540 027e 09       		.byte	0x9
+ 1541 027f E0       		.byte	0xe0
+ 1542 0280 0B       		.uleb128 0xb
+ 1543 0281 01       		.uleb128 0x1
+ 1544 0282 50       		.byte	0x50
+ 1545 0283 01       		.uleb128 0x1
+ 1546 0284 3F       		.byte	0x3f
+ 1547 0285 00       		.byte	0
+ 1548 0286 0C       		.uleb128 0xc
+ 1549 0287 14000000 		.4byte	.LVL16
+ 1550 028b A6010000 		.4byte	0x1a6
+ 1551 028f 0B       		.uleb128 0xb
+ 1552 0290 01       		.uleb128 0x1
+ 1553 0291 50       		.byte	0x50
+ 1554 0292 01       		.uleb128 0x1
+ 1555 0293 3F       		.byte	0x3f
+ 1556 0294 00       		.byte	0
+ 1557 0295 00       		.byte	0
+ 1558 0296 08       		.uleb128 0x8
+ 1559 0297 24000000 		.4byte	.LASF30
+ 1560 029b 01       		.byte	0x1
+ 1561 029c 2A       		.byte	0x2a
+ 1562 029d 00000000 		.4byte	.LFB67
+ 1563 02a1 20000000 		.4byte	.LFE67-.LFB67
+ 1564 02a5 01       		.uleb128 0x1
+ 1565 02a6 9C       		.byte	0x9c
+ 1566 02a7 15030000 		.4byte	0x315
+ 1567 02ab 09       		.uleb128 0x9
+ 1568 02ac 09000000 		.4byte	.LASF22
+ 1569 02b0 01       		.byte	0x1
+ 1570 02b1 2A       		.byte	0x2a
+ 1571 02b2 A1010000 		.4byte	0x1a1
+ 1572 02b6 C3000000 		.4byte	.LLST6
+ 1573 02ba 09       		.uleb128 0x9
+ 1574 02bb 96000000 		.4byte	.LASF31
+ 1575 02bf 01       		.byte	0x1
+ 1576 02c0 2A       		.byte	0x2a
+ 1577 02c1 A1010000 		.4byte	0x1a1
+ 1578 02c5 E4000000 		.4byte	.LLST7
+ 1579 02c9 0A       		.uleb128 0xa
+ 1580 02ca 0C000000 		.4byte	.LVL23
+ 1581 02ce 2A0A0000 		.4byte	0xa2a
+ 1582 02d2 DC020000 		.4byte	0x2dc
+ 1583 02d6 0B       		.uleb128 0xb
+ 1584 02d7 01       		.uleb128 0x1
+ 1585 02d8 50       		.byte	0x50
+ 1586 02d9 01       		.uleb128 0x1
+ 1587 02da 32       		.byte	0x32
+ 1588 02db 00       		.byte	0
+ 1589 02dc 0A       		.uleb128 0xa
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 38
+
+
+ 1590 02dd 12000000 		.4byte	.LVL24
+ 1591 02e1 2A0A0000 		.4byte	0xa2a
+ 1592 02e5 F0020000 		.4byte	0x2f0
+ 1593 02e9 0B       		.uleb128 0xb
+ 1594 02ea 01       		.uleb128 0x1
+ 1595 02eb 50       		.byte	0x50
+ 1596 02ec 02       		.uleb128 0x2
+ 1597 02ed 75       		.byte	0x75
+ 1598 02ee 00       		.sleb128 0
+ 1599 02ef 00       		.byte	0
+ 1600 02f0 0A       		.uleb128 0xa
+ 1601 02f1 18000000 		.4byte	.LVL25
+ 1602 02f5 2A0A0000 		.4byte	0xa2a
+ 1603 02f9 04030000 		.4byte	0x304
+ 1604 02fd 0B       		.uleb128 0xb
+ 1605 02fe 01       		.uleb128 0x1
+ 1606 02ff 50       		.byte	0x50
+ 1607 0300 02       		.uleb128 0x2
+ 1608 0301 74       		.byte	0x74
+ 1609 0302 00       		.sleb128 0
+ 1610 0303 00       		.byte	0
+ 1611 0304 0C       		.uleb128 0xc
+ 1612 0305 1E000000 		.4byte	.LVL26
+ 1613 0309 570A0000 		.4byte	0xa57
+ 1614 030d 0B       		.uleb128 0xb
+ 1615 030e 01       		.uleb128 0x1
+ 1616 030f 50       		.byte	0x50
+ 1617 0310 02       		.uleb128 0x2
+ 1618 0311 08       		.byte	0x8
+ 1619 0312 FA       		.byte	0xfa
+ 1620 0313 00       		.byte	0
+ 1621 0314 00       		.byte	0
+ 1622 0315 0E       		.uleb128 0xe
+ 1623 0316 AD020000 		.4byte	.LASF32
+ 1624 031a 01       		.byte	0x1
+ 1625 031b 31       		.byte	0x31
+ 1626 031c 97000000 		.4byte	0x97
+ 1627 0320 00000000 		.4byte	.LFB68
+ 1628 0324 8E010000 		.4byte	.LFE68-.LFB68
+ 1629 0328 01       		.uleb128 0x1
+ 1630 0329 9C       		.byte	0x9c
+ 1631 032a CA030000 		.4byte	0x3ca
+ 1632 032e 09       		.uleb128 0x9
+ 1633 032f 1A010000 		.4byte	.LASF33
+ 1634 0333 01       		.byte	0x1
+ 1635 0334 31       		.byte	0x31
+ 1636 0335 A1010000 		.4byte	0x1a1
+ 1637 0339 05010000 		.4byte	.LLST8
+ 1638 033d 09       		.uleb128 0x9
+ 1639 033e 00000000 		.4byte	.LASF34
+ 1640 0342 01       		.byte	0x1
+ 1641 0343 31       		.byte	0x31
+ 1642 0344 A1010000 		.4byte	0x1a1
+ 1643 0348 71010000 		.4byte	.LLST9
+ 1644 034c 12       		.uleb128 0x12
+ 1645 034d 73657400 		.ascii	"set\000"
+ 1646 0351 01       		.byte	0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 39
+
+
+ 1647 0352 32       		.byte	0x32
+ 1648 0353 97000000 		.4byte	0x97
+ 1649 0357 01       		.byte	0x1
+ 1650 0358 13       		.uleb128 0x13
+ 1651 0359 9C000000 		.4byte	.LASF35
+ 1652 035d 01       		.byte	0x1
+ 1653 035e 32       		.byte	0x32
+ 1654 035f 97000000 		.4byte	0x97
+ 1655 0363 9D010000 		.4byte	.LLST10
+ 1656 0367 13       		.uleb128 0x13
+ 1657 0368 A1000000 		.4byte	.LASF36
+ 1658 036c 01       		.byte	0x1
+ 1659 036d 32       		.byte	0x32
+ 1660 036e 97000000 		.4byte	0x97
+ 1661 0372 66020000 		.4byte	.LLST11
+ 1662 0376 13       		.uleb128 0x13
+ 1663 0377 A6000000 		.4byte	.LASF37
+ 1664 037b 01       		.byte	0x1
+ 1665 037c 32       		.byte	0x32
+ 1666 037d 97000000 		.4byte	0x97
+ 1667 0381 CB030000 		.4byte	.LLST12
+ 1668 0385 0A       		.uleb128 0xa
+ 1669 0386 6A010000 		.4byte	.LVL65
+ 1670 038a 96020000 		.4byte	0x296
+ 1671 038e 99030000 		.4byte	0x399
+ 1672 0392 0B       		.uleb128 0xb
+ 1673 0393 01       		.uleb128 0x1
+ 1674 0394 50       		.byte	0x50
+ 1675 0395 02       		.uleb128 0x2
+ 1676 0396 08       		.byte	0x8
+ 1677 0397 2A       		.byte	0x2a
+ 1678 0398 00       		.byte	0
+ 1679 0399 0A       		.uleb128 0xa
+ 1680 039a 72010000 		.4byte	.LVL66
+ 1681 039e 96020000 		.4byte	0x296
+ 1682 03a2 B3030000 		.4byte	0x3b3
+ 1683 03a6 0B       		.uleb128 0xb
+ 1684 03a7 01       		.uleb128 0x1
+ 1685 03a8 51       		.byte	0x51
+ 1686 03a9 02       		.uleb128 0x2
+ 1687 03aa 75       		.byte	0x75
+ 1688 03ab 00       		.sleb128 0
+ 1689 03ac 0B       		.uleb128 0xb
+ 1690 03ad 01       		.uleb128 0x1
+ 1691 03ae 50       		.byte	0x50
+ 1692 03af 02       		.uleb128 0x2
+ 1693 03b0 08       		.byte	0x8
+ 1694 03b1 29       		.byte	0x29
+ 1695 03b2 00       		.byte	0
+ 1696 03b3 0C       		.uleb128 0xc
+ 1697 03b4 7A010000 		.4byte	.LVL67
+ 1698 03b8 96020000 		.4byte	0x296
+ 1699 03bc 0B       		.uleb128 0xb
+ 1700 03bd 01       		.uleb128 0x1
+ 1701 03be 51       		.byte	0x51
+ 1702 03bf 02       		.uleb128 0x2
+ 1703 03c0 74       		.byte	0x74
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 40
+
+
+ 1704 03c1 00       		.sleb128 0
+ 1705 03c2 0B       		.uleb128 0xb
+ 1706 03c3 01       		.uleb128 0x1
+ 1707 03c4 50       		.byte	0x50
+ 1708 03c5 02       		.uleb128 0x2
+ 1709 03c6 08       		.byte	0x8
+ 1710 03c7 28       		.byte	0x28
+ 1711 03c8 00       		.byte	0
+ 1712 03c9 00       		.byte	0
+ 1713 03ca 14       		.uleb128 0x14
+ 1714 03cb E9020000 		.4byte	.LASF38
+ 1715 03cf 01       		.byte	0x1
+ 1716 03d0 2F01     		.2byte	0x12f
+ 1717 03d2 00000000 		.4byte	.LFB69
+ 1718 03d6 2E000000 		.4byte	.LFE69-.LFB69
+ 1719 03da 01       		.uleb128 0x1
+ 1720 03db 9C       		.byte	0x9c
+ 1721 03dc 5D040000 		.4byte	0x45d
+ 1722 03e0 15       		.uleb128 0x15
+ 1723 03e1 09000000 		.4byte	.LASF22
+ 1724 03e5 01       		.byte	0x1
+ 1725 03e6 2F01     		.2byte	0x12f
+ 1726 03e8 A1010000 		.4byte	0x1a1
+ 1727 03ec EF040000 		.4byte	.LLST13
+ 1728 03f0 15       		.uleb128 0x15
+ 1729 03f1 35010000 		.4byte	.LASF39
+ 1730 03f5 01       		.byte	0x1
+ 1731 03f6 2F01     		.2byte	0x12f
+ 1732 03f8 5D040000 		.4byte	0x45d
+ 1733 03fc 10050000 		.4byte	.LLST14
+ 1734 0400 16       		.uleb128 0x16
+ 1735 0401 6E00     		.ascii	"n\000"
+ 1736 0403 01       		.byte	0x1
+ 1737 0404 2F01     		.2byte	0x12f
+ 1738 0406 A1010000 		.4byte	0x1a1
+ 1739 040a 2E050000 		.4byte	.LLST15
+ 1740 040e 17       		.uleb128 0x17
+ 1741 040f 6900     		.ascii	"i\000"
+ 1742 0411 01       		.byte	0x1
+ 1743 0412 3001     		.2byte	0x130
+ 1744 0414 97000000 		.4byte	0x97
+ 1745 0418 4F050000 		.4byte	.LLST16
+ 1746 041c 0A       		.uleb128 0xa
+ 1747 041d 0E000000 		.4byte	.LVL72
+ 1748 0421 2A0A0000 		.4byte	0xa2a
+ 1749 0425 2F040000 		.4byte	0x42f
+ 1750 0429 0B       		.uleb128 0xb
+ 1751 042a 01       		.uleb128 0x1
+ 1752 042b 50       		.byte	0x50
+ 1753 042c 01       		.uleb128 0x1
+ 1754 042d 32       		.byte	0x32
+ 1755 042e 00       		.byte	0
+ 1756 042f 0A       		.uleb128 0xa
+ 1757 0430 14000000 		.4byte	.LVL73
+ 1758 0434 2A0A0000 		.4byte	0xa2a
+ 1759 0438 43040000 		.4byte	0x443
+ 1760 043c 0B       		.uleb128 0xb
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 41
+
+
+ 1761 043d 01       		.uleb128 0x1
+ 1762 043e 50       		.byte	0x50
+ 1763 043f 02       		.uleb128 0x2
+ 1764 0440 74       		.byte	0x74
+ 1765 0441 00       		.sleb128 0
+ 1766 0442 00       		.byte	0
+ 1767 0443 10       		.uleb128 0x10
+ 1768 0444 1E000000 		.4byte	.LVL75
+ 1769 0448 2A0A0000 		.4byte	0xa2a
+ 1770 044c 0C       		.uleb128 0xc
+ 1771 044d 2C000000 		.4byte	.LVL78
+ 1772 0451 570A0000 		.4byte	0xa57
+ 1773 0455 0B       		.uleb128 0xb
+ 1774 0456 01       		.uleb128 0x1
+ 1775 0457 50       		.byte	0x50
+ 1776 0458 02       		.uleb128 0x2
+ 1777 0459 08       		.byte	0x8
+ 1778 045a FA       		.byte	0xfa
+ 1779 045b 00       		.byte	0
+ 1780 045c 00       		.byte	0
+ 1781 045d 18       		.uleb128 0x18
+ 1782 045e 04       		.byte	0x4
+ 1783 045f A1010000 		.4byte	0x1a1
+ 1784 0463 14       		.uleb128 0x14
+ 1785 0464 3C010000 		.4byte	.LASF40
+ 1786 0468 01       		.byte	0x1
+ 1787 0469 3801     		.2byte	0x138
+ 1788 046b 00000000 		.4byte	.LFB70
+ 1789 046f 5E000000 		.4byte	.LFE70-.LFB70
+ 1790 0473 01       		.uleb128 0x1
+ 1791 0474 9C       		.byte	0x9c
+ 1792 0475 DD040000 		.4byte	0x4dd
+ 1793 0479 15       		.uleb128 0x15
+ 1794 047a 41000000 		.4byte	.LASF41
+ 1795 047e 01       		.byte	0x1
+ 1796 047f 3801     		.2byte	0x138
+ 1797 0481 A1010000 		.4byte	0x1a1
+ 1798 0485 79050000 		.4byte	.LLST17
+ 1799 0489 16       		.uleb128 0x16
+ 1800 048a 65787400 		.ascii	"ext\000"
+ 1801 048e 01       		.byte	0x1
+ 1802 048f 3801     		.2byte	0x138
+ 1803 0491 A1010000 		.4byte	0x1a1
+ 1804 0495 9A050000 		.4byte	.LLST18
+ 1805 0499 16       		.uleb128 0x16
+ 1806 049a 696400   		.ascii	"id\000"
+ 1807 049d 01       		.byte	0x1
+ 1808 049e 3801     		.2byte	0x138
+ 1809 04a0 DD040000 		.4byte	0x4dd
+ 1810 04a4 D4050000 		.4byte	.LLST19
+ 1811 04a8 19       		.uleb128 0x19
+ 1812 04a9 29020000 		.4byte	.LASF42
+ 1813 04ad 01       		.byte	0x1
+ 1814 04ae 3901     		.2byte	0x139
+ 1815 04b0 81000000 		.4byte	0x81
+ 1816 04b4 0E060000 		.4byte	.LLST20
+ 1817 04b8 1A       		.uleb128 0x1a
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 42
+
+
+ 1818 04b9 AB000000 		.4byte	.LASF43
+ 1819 04bd 01       		.byte	0x1
+ 1820 04be 3A01     		.2byte	0x13a
+ 1821 04c0 EF000000 		.4byte	0xef
+ 1822 04c4 02       		.uleb128 0x2
+ 1823 04c5 91       		.byte	0x91
+ 1824 04c6 74       		.sleb128 -12
+ 1825 04c7 0C       		.uleb128 0xc
+ 1826 04c8 58000000 		.4byte	.LVL90
+ 1827 04cc CA030000 		.4byte	0x3ca
+ 1828 04d0 0B       		.uleb128 0xb
+ 1829 04d1 01       		.uleb128 0x1
+ 1830 04d2 52       		.byte	0x52
+ 1831 04d3 01       		.uleb128 0x1
+ 1832 04d4 34       		.byte	0x34
+ 1833 04d5 0B       		.uleb128 0xb
+ 1834 04d6 01       		.uleb128 0x1
+ 1835 04d7 51       		.byte	0x51
+ 1836 04d8 02       		.uleb128 0x2
+ 1837 04d9 91       		.byte	0x91
+ 1838 04da 74       		.sleb128 -12
+ 1839 04db 00       		.byte	0
+ 1840 04dc 00       		.byte	0
+ 1841 04dd 0D       		.uleb128 0xd
+ 1842 04de AF000000 		.4byte	0xaf
+ 1843 04e2 14       		.uleb128 0x14
+ 1844 04e3 C5000000 		.4byte	.LASF44
+ 1845 04e7 01       		.byte	0x1
+ 1846 04e8 5301     		.2byte	0x153
+ 1847 04ea 00000000 		.4byte	.LFB71
+ 1848 04ee 9A000000 		.4byte	.LFE71-.LFB71
+ 1849 04f2 01       		.uleb128 0x1
+ 1850 04f3 9C       		.byte	0x9c
+ 1851 04f4 CB060000 		.4byte	0x6cb
+ 1852 04f8 17       		.uleb128 0x17
+ 1853 04f9 6900     		.ascii	"i\000"
+ 1854 04fb 01       		.byte	0x1
+ 1855 04fc 5401     		.2byte	0x154
+ 1856 04fe 97000000 		.4byte	0x97
+ 1857 0502 62060000 		.4byte	.LLST21
+ 1858 0506 17       		.uleb128 0x17
+ 1859 0507 613100   		.ascii	"a1\000"
+ 1860 050a 01       		.byte	0x1
+ 1861 050b 5401     		.2byte	0x154
+ 1862 050d 97000000 		.4byte	0x97
+ 1863 0511 8C060000 		.4byte	.LLST22
+ 1864 0515 17       		.uleb128 0x17
+ 1865 0516 613200   		.ascii	"a2\000"
+ 1866 0519 01       		.byte	0x1
+ 1867 051a 5401     		.2byte	0x154
+ 1868 051c 97000000 		.4byte	0x97
+ 1869 0520 B7060000 		.4byte	.LLST23
+ 1870 0524 17       		.uleb128 0x17
+ 1871 0525 613300   		.ascii	"a3\000"
+ 1872 0528 01       		.byte	0x1
+ 1873 0529 5401     		.2byte	0x154
+ 1874 052b 97000000 		.4byte	0x97
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 43
+
+
+ 1875 052f E2060000 		.4byte	.LLST24
+ 1876 0533 1B       		.uleb128 0x1b
+ 1877 0534 73746400 		.ascii	"std\000"
+ 1878 0538 01       		.byte	0x1
+ 1879 0539 5501     		.2byte	0x155
+ 1880 053b 97000000 		.4byte	0x97
+ 1881 053f 00       		.byte	0
+ 1882 0540 1B       		.uleb128 0x1b
+ 1883 0541 65787400 		.ascii	"ext\000"
+ 1884 0545 01       		.byte	0x1
+ 1885 0546 5601     		.2byte	0x156
+ 1886 0548 97000000 		.4byte	0x97
+ 1887 054c 01       		.byte	0x1
+ 1888 054d 1C       		.uleb128 0x1c
+ 1889 054e C7020000 		.4byte	.LASF45
+ 1890 0552 01       		.byte	0x1
+ 1891 0553 5701     		.2byte	0x157
+ 1892 0555 AF000000 		.4byte	0xaf
+ 1893 0559 00       		.byte	0
+ 1894 055a 1C       		.uleb128 0x1c
+ 1895 055b 7E000000 		.4byte	.LASF46
+ 1896 055f 01       		.byte	0x1
+ 1897 0560 5701     		.2byte	0x157
+ 1898 0562 AF000000 		.4byte	0xaf
+ 1899 0566 00       		.byte	0
+ 1900 0567 0A       		.uleb128 0xa
+ 1901 0568 0C000000 		.4byte	.LVL92
+ 1902 056c 63040000 		.4byte	0x463
+ 1903 0570 85050000 		.4byte	0x585
+ 1904 0574 0B       		.uleb128 0xb
+ 1905 0575 01       		.uleb128 0x1
+ 1906 0576 52       		.byte	0x52
+ 1907 0577 01       		.uleb128 0x1
+ 1908 0578 30       		.byte	0x30
+ 1909 0579 0B       		.uleb128 0xb
+ 1910 057a 01       		.uleb128 0x1
+ 1911 057b 51       		.byte	0x51
+ 1912 057c 01       		.uleb128 0x1
+ 1913 057d 31       		.byte	0x31
+ 1914 057e 0B       		.uleb128 0xb
+ 1915 057f 01       		.uleb128 0x1
+ 1916 0580 50       		.byte	0x50
+ 1917 0581 02       		.uleb128 0x2
+ 1918 0582 08       		.byte	0x8
+ 1919 0583 20       		.byte	0x20
+ 1920 0584 00       		.byte	0
+ 1921 0585 0A       		.uleb128 0xa
+ 1922 0586 16000000 		.4byte	.LVL93
+ 1923 058a 63040000 		.4byte	0x463
+ 1924 058e A3050000 		.4byte	0x5a3
+ 1925 0592 0B       		.uleb128 0xb
+ 1926 0593 01       		.uleb128 0x1
+ 1927 0594 52       		.byte	0x52
+ 1928 0595 01       		.uleb128 0x1
+ 1929 0596 30       		.byte	0x30
+ 1930 0597 0B       		.uleb128 0xb
+ 1931 0598 01       		.uleb128 0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 44
+
+
+ 1932 0599 51       		.byte	0x51
+ 1933 059a 01       		.uleb128 0x1
+ 1934 059b 31       		.byte	0x31
+ 1935 059c 0B       		.uleb128 0xb
+ 1936 059d 01       		.uleb128 0x1
+ 1937 059e 50       		.byte	0x50
+ 1938 059f 02       		.uleb128 0x2
+ 1939 05a0 08       		.byte	0x8
+ 1940 05a1 24       		.byte	0x24
+ 1941 05a2 00       		.byte	0
+ 1942 05a3 0A       		.uleb128 0xa
+ 1943 05a4 20000000 		.4byte	.LVL94
+ 1944 05a8 63040000 		.4byte	0x463
+ 1945 05ac C0050000 		.4byte	0x5c0
+ 1946 05b0 0B       		.uleb128 0xb
+ 1947 05b1 01       		.uleb128 0x1
+ 1948 05b2 52       		.byte	0x52
+ 1949 05b3 01       		.uleb128 0x1
+ 1950 05b4 30       		.byte	0x30
+ 1951 05b5 0B       		.uleb128 0xb
+ 1952 05b6 01       		.uleb128 0x1
+ 1953 05b7 51       		.byte	0x51
+ 1954 05b8 01       		.uleb128 0x1
+ 1955 05b9 31       		.byte	0x31
+ 1956 05ba 0B       		.uleb128 0xb
+ 1957 05bb 01       		.uleb128 0x1
+ 1958 05bc 50       		.byte	0x50
+ 1959 05bd 01       		.uleb128 0x1
+ 1960 05be 30       		.byte	0x30
+ 1961 05bf 00       		.byte	0
+ 1962 05c0 0A       		.uleb128 0xa
+ 1963 05c1 2A000000 		.4byte	.LVL95
+ 1964 05c5 63040000 		.4byte	0x463
+ 1965 05c9 DD050000 		.4byte	0x5dd
+ 1966 05cd 0B       		.uleb128 0xb
+ 1967 05ce 01       		.uleb128 0x1
+ 1968 05cf 52       		.byte	0x52
+ 1969 05d0 01       		.uleb128 0x1
+ 1970 05d1 30       		.byte	0x30
+ 1971 05d2 0B       		.uleb128 0xb
+ 1972 05d3 01       		.uleb128 0x1
+ 1973 05d4 51       		.byte	0x51
+ 1974 05d5 01       		.uleb128 0x1
+ 1975 05d6 30       		.byte	0x30
+ 1976 05d7 0B       		.uleb128 0xb
+ 1977 05d8 01       		.uleb128 0x1
+ 1978 05d9 50       		.byte	0x50
+ 1979 05da 01       		.uleb128 0x1
+ 1980 05db 34       		.byte	0x34
+ 1981 05dc 00       		.byte	0
+ 1982 05dd 0A       		.uleb128 0xa
+ 1983 05de 34000000 		.4byte	.LVL96
+ 1984 05e2 63040000 		.4byte	0x463
+ 1985 05e6 FA050000 		.4byte	0x5fa
+ 1986 05ea 0B       		.uleb128 0xb
+ 1987 05eb 01       		.uleb128 0x1
+ 1988 05ec 52       		.byte	0x52
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 45
+
+
+ 1989 05ed 01       		.uleb128 0x1
+ 1990 05ee 30       		.byte	0x30
+ 1991 05ef 0B       		.uleb128 0xb
+ 1992 05f0 01       		.uleb128 0x1
+ 1993 05f1 51       		.byte	0x51
+ 1994 05f2 01       		.uleb128 0x1
+ 1995 05f3 31       		.byte	0x31
+ 1996 05f4 0B       		.uleb128 0xb
+ 1997 05f5 01       		.uleb128 0x1
+ 1998 05f6 50       		.byte	0x50
+ 1999 05f7 01       		.uleb128 0x1
+ 2000 05f8 38       		.byte	0x38
+ 2001 05f9 00       		.byte	0
+ 2002 05fa 0A       		.uleb128 0xa
+ 2003 05fb 3E000000 		.4byte	.LVL97
+ 2004 05ff 63040000 		.4byte	0x463
+ 2005 0603 17060000 		.4byte	0x617
+ 2006 0607 0B       		.uleb128 0xb
+ 2007 0608 01       		.uleb128 0x1
+ 2008 0609 52       		.byte	0x52
+ 2009 060a 01       		.uleb128 0x1
+ 2010 060b 30       		.byte	0x30
+ 2011 060c 0B       		.uleb128 0xb
+ 2012 060d 01       		.uleb128 0x1
+ 2013 060e 51       		.byte	0x51
+ 2014 060f 01       		.uleb128 0x1
+ 2015 0610 30       		.byte	0x30
+ 2016 0611 0B       		.uleb128 0xb
+ 2017 0612 01       		.uleb128 0x1
+ 2018 0613 50       		.byte	0x50
+ 2019 0614 01       		.uleb128 0x1
+ 2020 0615 40       		.byte	0x40
+ 2021 0616 00       		.byte	0
+ 2022 0617 0A       		.uleb128 0xa
+ 2023 0618 48000000 		.4byte	.LVL98
+ 2024 061c 63040000 		.4byte	0x463
+ 2025 0620 34060000 		.4byte	0x634
+ 2026 0624 0B       		.uleb128 0xb
+ 2027 0625 01       		.uleb128 0x1
+ 2028 0626 52       		.byte	0x52
+ 2029 0627 01       		.uleb128 0x1
+ 2030 0628 30       		.byte	0x30
+ 2031 0629 0B       		.uleb128 0xb
+ 2032 062a 01       		.uleb128 0x1
+ 2033 062b 51       		.byte	0x51
+ 2034 062c 01       		.uleb128 0x1
+ 2035 062d 31       		.byte	0x31
+ 2036 062e 0B       		.uleb128 0xb
+ 2037 062f 01       		.uleb128 0x1
+ 2038 0630 50       		.byte	0x50
+ 2039 0631 01       		.uleb128 0x1
+ 2040 0632 44       		.byte	0x44
+ 2041 0633 00       		.byte	0
+ 2042 0634 0A       		.uleb128 0xa
+ 2043 0635 52000000 		.4byte	.LVL99
+ 2044 0639 63040000 		.4byte	0x463
+ 2045 063d 51060000 		.4byte	0x651
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 46
+
+
+ 2046 0641 0B       		.uleb128 0xb
+ 2047 0642 01       		.uleb128 0x1
+ 2048 0643 52       		.byte	0x52
+ 2049 0644 01       		.uleb128 0x1
+ 2050 0645 30       		.byte	0x30
+ 2051 0646 0B       		.uleb128 0xb
+ 2052 0647 01       		.uleb128 0x1
+ 2053 0648 51       		.byte	0x51
+ 2054 0649 01       		.uleb128 0x1
+ 2055 064a 30       		.byte	0x30
+ 2056 064b 0B       		.uleb128 0xb
+ 2057 064c 01       		.uleb128 0x1
+ 2058 064d 50       		.byte	0x50
+ 2059 064e 01       		.uleb128 0x1
+ 2060 064f 48       		.byte	0x48
+ 2061 0650 00       		.byte	0
+ 2062 0651 0A       		.uleb128 0xa
+ 2063 0652 64000000 		.4byte	.LVL101
+ 2064 0656 96020000 		.4byte	0x296
+ 2065 065a 6A060000 		.4byte	0x66a
+ 2066 065e 0B       		.uleb128 0xb
+ 2067 065f 01       		.uleb128 0x1
+ 2068 0660 51       		.byte	0x51
+ 2069 0661 01       		.uleb128 0x1
+ 2070 0662 30       		.byte	0x30
+ 2071 0663 0B       		.uleb128 0xb
+ 2072 0664 01       		.uleb128 0x1
+ 2073 0665 50       		.byte	0x50
+ 2074 0666 02       		.uleb128 0x2
+ 2075 0667 75       		.byte	0x75
+ 2076 0668 00       		.sleb128 0
+ 2077 0669 00       		.byte	0
+ 2078 066a 0A       		.uleb128 0xa
+ 2079 066b 6C000000 		.4byte	.LVL102
+ 2080 066f 96020000 		.4byte	0x296
+ 2081 0673 83060000 		.4byte	0x683
+ 2082 0677 0B       		.uleb128 0xb
+ 2083 0678 01       		.uleb128 0x1
+ 2084 0679 51       		.byte	0x51
+ 2085 067a 01       		.uleb128 0x1
+ 2086 067b 30       		.byte	0x30
+ 2087 067c 0B       		.uleb128 0xb
+ 2088 067d 01       		.uleb128 0x1
+ 2089 067e 50       		.byte	0x50
+ 2090 067f 02       		.uleb128 0x2
+ 2091 0680 76       		.byte	0x76
+ 2092 0681 00       		.sleb128 0
+ 2093 0682 00       		.byte	0
+ 2094 0683 0A       		.uleb128 0xa
+ 2095 0684 74000000 		.4byte	.LVL103
+ 2096 0688 96020000 		.4byte	0x296
+ 2097 068c 9C060000 		.4byte	0x69c
+ 2098 0690 0B       		.uleb128 0xb
+ 2099 0691 01       		.uleb128 0x1
+ 2100 0692 51       		.byte	0x51
+ 2101 0693 01       		.uleb128 0x1
+ 2102 0694 30       		.byte	0x30
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 47
+
+
+ 2103 0695 0B       		.uleb128 0xb
+ 2104 0696 01       		.uleb128 0x1
+ 2105 0697 50       		.byte	0x50
+ 2106 0698 02       		.uleb128 0x2
+ 2107 0699 77       		.byte	0x77
+ 2108 069a 00       		.sleb128 0
+ 2109 069b 00       		.byte	0
+ 2110 069c 0A       		.uleb128 0xa
+ 2111 069d 90000000 		.4byte	.LVL112
+ 2112 06a1 96020000 		.4byte	0x296
+ 2113 06a5 B5060000 		.4byte	0x6b5
+ 2114 06a9 0B       		.uleb128 0xb
+ 2115 06aa 01       		.uleb128 0x1
+ 2116 06ab 51       		.byte	0x51
+ 2117 06ac 01       		.uleb128 0x1
+ 2118 06ad 30       		.byte	0x30
+ 2119 06ae 0B       		.uleb128 0xb
+ 2120 06af 01       		.uleb128 0x1
+ 2121 06b0 50       		.byte	0x50
+ 2122 06b1 02       		.uleb128 0x2
+ 2123 06b2 08       		.byte	0x8
+ 2124 06b3 60       		.byte	0x60
+ 2125 06b4 00       		.byte	0
+ 2126 06b5 0C       		.uleb128 0xc
+ 2127 06b6 98000000 		.4byte	.LVL113
+ 2128 06ba 96020000 		.4byte	0x296
+ 2129 06be 0B       		.uleb128 0xb
+ 2130 06bf 01       		.uleb128 0x1
+ 2131 06c0 51       		.byte	0x51
+ 2132 06c1 01       		.uleb128 0x1
+ 2133 06c2 30       		.byte	0x30
+ 2134 06c3 0B       		.uleb128 0xb
+ 2135 06c4 01       		.uleb128 0x1
+ 2136 06c5 50       		.byte	0x50
+ 2137 06c6 02       		.uleb128 0x2
+ 2138 06c7 08       		.byte	0x8
+ 2139 06c8 70       		.byte	0x70
+ 2140 06c9 00       		.byte	0
+ 2141 06ca 00       		.byte	0
+ 2142 06cb 1D       		.uleb128 0x1d
+ 2143 06cc 6A010000 		.4byte	.LASF47
+ 2144 06d0 01       		.byte	0x1
+ 2145 06d1 7301     		.2byte	0x173
+ 2146 06d3 97000000 		.4byte	0x97
+ 2147 06d7 00000000 		.4byte	.LFB72
+ 2148 06db 88000000 		.4byte	.LFE72-.LFB72
+ 2149 06df 01       		.uleb128 0x1
+ 2150 06e0 9C       		.byte	0x9c
+ 2151 06e1 06080000 		.4byte	0x806
+ 2152 06e5 15       		.uleb128 0x15
+ 2153 06e6 0A010000 		.4byte	.LASF48
+ 2154 06ea 01       		.byte	0x1
+ 2155 06eb 7301     		.2byte	0x173
+ 2156 06ed A1010000 		.4byte	0x1a1
+ 2157 06f1 0D070000 		.4byte	.LLST25
+ 2158 06f5 15       		.uleb128 0x15
+ 2159 06f6 1A010000 		.4byte	.LASF33
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 48
+
+
+ 2160 06fa 01       		.byte	0x1
+ 2161 06fb 7301     		.2byte	0x173
+ 2162 06fd A1010000 		.4byte	0x1a1
+ 2163 0701 2E070000 		.4byte	.LLST26
+ 2164 0705 15       		.uleb128 0x15
+ 2165 0706 00000000 		.4byte	.LASF34
+ 2166 070a 01       		.byte	0x1
+ 2167 070b 7301     		.2byte	0x173
+ 2168 070d A1010000 		.4byte	0x1a1
+ 2169 0711 4F070000 		.4byte	.LLST27
+ 2170 0715 17       		.uleb128 0x17
+ 2171 0716 72657300 		.ascii	"res\000"
+ 2172 071a 01       		.byte	0x1
+ 2173 071b 7401     		.2byte	0x174
+ 2174 071d 97000000 		.4byte	0x97
+ 2175 0721 70070000 		.4byte	.LLST28
+ 2176 0725 10       		.uleb128 0x10
+ 2177 0726 0C000000 		.4byte	.LVL115
+ 2178 072a 0C020000 		.4byte	0x20c
+ 2179 072e 0A       		.uleb128 0xa
+ 2180 072f 18000000 		.4byte	.LVL116
+ 2181 0733 32020000 		.4byte	0x232
+ 2182 0737 42070000 		.4byte	0x742
+ 2183 073b 0B       		.uleb128 0xb
+ 2184 073c 01       		.uleb128 0x1
+ 2185 073d 50       		.byte	0x50
+ 2186 073e 02       		.uleb128 0x2
+ 2187 073f 09       		.byte	0x9
+ 2188 0740 80       		.byte	0x80
+ 2189 0741 00       		.byte	0
+ 2190 0742 0A       		.uleb128 0xa
+ 2191 0743 24000000 		.4byte	.LVL118
+ 2192 0747 15030000 		.4byte	0x315
+ 2193 074b 5C070000 		.4byte	0x75c
+ 2194 074f 0B       		.uleb128 0xb
+ 2195 0750 01       		.uleb128 0x1
+ 2196 0751 51       		.byte	0x51
+ 2197 0752 02       		.uleb128 0x2
+ 2198 0753 75       		.byte	0x75
+ 2199 0754 00       		.sleb128 0
+ 2200 0755 0B       		.uleb128 0xb
+ 2201 0756 01       		.uleb128 0x1
+ 2202 0757 50       		.byte	0x50
+ 2203 0758 02       		.uleb128 0x2
+ 2204 0759 76       		.byte	0x76
+ 2205 075a 00       		.sleb128 0
+ 2206 075b 00       		.byte	0
+ 2207 075c 10       		.uleb128 0x10
+ 2208 075d 2C000000 		.4byte	.LVL119
+ 2209 0761 E2040000 		.4byte	0x4e2
+ 2210 0765 0A       		.uleb128 0xa
+ 2211 0766 34000000 		.4byte	.LVL120
+ 2212 076a 96020000 		.4byte	0x296
+ 2213 076e 7E070000 		.4byte	0x77e
+ 2214 0772 0B       		.uleb128 0xb
+ 2215 0773 01       		.uleb128 0x1
+ 2216 0774 51       		.byte	0x51
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 49
+
+
+ 2217 0775 01       		.uleb128 0x1
+ 2218 0776 33       		.byte	0x33
+ 2219 0777 0B       		.uleb128 0xb
+ 2220 0778 01       		.uleb128 0x1
+ 2221 0779 50       		.byte	0x50
+ 2222 077a 02       		.uleb128 0x2
+ 2223 077b 08       		.byte	0x8
+ 2224 077c 2B       		.byte	0x2b
+ 2225 077d 00       		.byte	0
+ 2226 077e 0A       		.uleb128 0xa
+ 2227 077f 44000000 		.4byte	.LVL121
+ 2228 0783 FF000000 		.4byte	0xff
+ 2229 0787 9E070000 		.4byte	0x79e
+ 2230 078b 0B       		.uleb128 0xb
+ 2231 078c 01       		.uleb128 0x1
+ 2232 078d 52       		.byte	0x52
+ 2233 078e 02       		.uleb128 0x2
+ 2234 078f 08       		.byte	0x8
+ 2235 0790 64       		.byte	0x64
+ 2236 0791 0B       		.uleb128 0xb
+ 2237 0792 01       		.uleb128 0x1
+ 2238 0793 51       		.byte	0x51
+ 2239 0794 02       		.uleb128 0x2
+ 2240 0795 08       		.byte	0x8
+ 2241 0796 64       		.byte	0x64
+ 2242 0797 0B       		.uleb128 0xb
+ 2243 0798 01       		.uleb128 0x1
+ 2244 0799 50       		.byte	0x50
+ 2245 079a 02       		.uleb128 0x2
+ 2246 079b 08       		.byte	0x8
+ 2247 079c 60       		.byte	0x60
+ 2248 079d 00       		.byte	0
+ 2249 079e 0A       		.uleb128 0xa
+ 2250 079f 4E000000 		.4byte	.LVL122
+ 2251 07a3 FF000000 		.4byte	0xff
+ 2252 07a7 BE070000 		.4byte	0x7be
+ 2253 07ab 0B       		.uleb128 0xb
+ 2254 07ac 01       		.uleb128 0x1
+ 2255 07ad 52       		.byte	0x52
+ 2256 07ae 02       		.uleb128 0x2
+ 2257 07af 08       		.byte	0x8
+ 2258 07b0 60       		.byte	0x60
+ 2259 07b1 0B       		.uleb128 0xb
+ 2260 07b2 01       		.uleb128 0x1
+ 2261 07b3 51       		.byte	0x51
+ 2262 07b4 02       		.uleb128 0x2
+ 2263 07b5 08       		.byte	0x8
+ 2264 07b6 60       		.byte	0x60
+ 2265 07b7 0B       		.uleb128 0xb
+ 2266 07b8 01       		.uleb128 0x1
+ 2267 07b9 50       		.byte	0x50
+ 2268 07ba 02       		.uleb128 0x2
+ 2269 07bb 08       		.byte	0x8
+ 2270 07bc 70       		.byte	0x70
+ 2271 07bd 00       		.byte	0
+ 2272 07be 0A       		.uleb128 0xa
+ 2273 07bf 5A000000 		.4byte	.LVL123
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 50
+
+
+ 2274 07c3 FF000000 		.4byte	0xff
+ 2275 07c7 DD070000 		.4byte	0x7dd
+ 2276 07cb 0B       		.uleb128 0xb
+ 2277 07cc 01       		.uleb128 0x1
+ 2278 07cd 52       		.byte	0x52
+ 2279 07ce 01       		.uleb128 0x1
+ 2280 07cf 34       		.byte	0x34
+ 2281 07d0 0B       		.uleb128 0xb
+ 2282 07d1 01       		.uleb128 0x1
+ 2283 07d2 51       		.byte	0x51
+ 2284 07d3 02       		.uleb128 0x2
+ 2285 07d4 08       		.byte	0x8
+ 2286 07d5 64       		.byte	0x64
+ 2287 07d6 0B       		.uleb128 0xb
+ 2288 07d7 01       		.uleb128 0x1
+ 2289 07d8 50       		.byte	0x50
+ 2290 07d9 02       		.uleb128 0x2
+ 2291 07da 08       		.byte	0x8
+ 2292 07db 60       		.byte	0x60
+ 2293 07dc 00       		.byte	0
+ 2294 07dd 0A       		.uleb128 0xa
+ 2295 07de 64000000 		.4byte	.LVL124
+ 2296 07e2 FF000000 		.4byte	0xff
+ 2297 07e6 FC070000 		.4byte	0x7fc
+ 2298 07ea 0B       		.uleb128 0xb
+ 2299 07eb 01       		.uleb128 0x1
+ 2300 07ec 52       		.byte	0x52
+ 2301 07ed 01       		.uleb128 0x1
+ 2302 07ee 30       		.byte	0x30
+ 2303 07ef 0B       		.uleb128 0xb
+ 2304 07f0 01       		.uleb128 0x1
+ 2305 07f1 51       		.byte	0x51
+ 2306 07f2 02       		.uleb128 0x2
+ 2307 07f3 08       		.byte	0x8
+ 2308 07f4 60       		.byte	0x60
+ 2309 07f5 0B       		.uleb128 0xb
+ 2310 07f6 01       		.uleb128 0x1
+ 2311 07f7 50       		.byte	0x50
+ 2312 07f8 02       		.uleb128 0x2
+ 2313 07f9 08       		.byte	0x8
+ 2314 07fa 70       		.byte	0x70
+ 2315 07fb 00       		.byte	0
+ 2316 07fc 10       		.uleb128 0x10
+ 2317 07fd 6C000000 		.4byte	.LVL125
+ 2318 0801 32020000 		.4byte	0x232
+ 2319 0805 00       		.byte	0
+ 2320 0806 1D       		.uleb128 0x1d
+ 2321 0807 4A000000 		.4byte	.LASF49
+ 2322 080b 01       		.byte	0x1
+ 2323 080c 9801     		.2byte	0x198
+ 2324 080e 97000000 		.4byte	0x97
+ 2325 0812 00000000 		.4byte	.LFB73
+ 2326 0816 0C000000 		.4byte	.LFE73-.LFB73
+ 2327 081a 01       		.uleb128 0x1
+ 2328 081b 9C       		.byte	0x9c
+ 2329 081c 6A080000 		.4byte	0x86a
+ 2330 0820 15       		.uleb128 0x15
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 51
+
+
+ 2331 0821 97010000 		.4byte	.LASF50
+ 2332 0825 01       		.byte	0x1
+ 2333 0826 9801     		.2byte	0x198
+ 2334 0828 97000000 		.4byte	0x97
+ 2335 082c 8E070000 		.4byte	.LLST29
+ 2336 0830 15       		.uleb128 0x15
+ 2337 0831 B4000000 		.4byte	.LASF51
+ 2338 0835 01       		.byte	0x1
+ 2339 0836 9801     		.2byte	0x198
+ 2340 0838 97000000 		.4byte	0x97
+ 2341 083c AF070000 		.4byte	.LLST30
+ 2342 0840 15       		.uleb128 0x15
+ 2343 0841 1B000000 		.4byte	.LASF52
+ 2344 0845 01       		.byte	0x1
+ 2345 0846 9801     		.2byte	0x198
+ 2346 0848 97000000 		.4byte	0x97
+ 2347 084c D0070000 		.4byte	.LLST31
+ 2348 0850 17       		.uleb128 0x17
+ 2349 0851 72657300 		.ascii	"res\000"
+ 2350 0855 01       		.byte	0x1
+ 2351 0856 9901     		.2byte	0x199
+ 2352 0858 97000000 		.4byte	0x97
+ 2353 085c F1070000 		.4byte	.LLST32
+ 2354 0860 10       		.uleb128 0x10
+ 2355 0861 06000000 		.4byte	.LVL133
+ 2356 0865 CB060000 		.4byte	0x6cb
+ 2357 0869 00       		.byte	0
+ 2358 086a 1E       		.uleb128 0x1e
+ 2359 086b 56000000 		.4byte	.LASF53
+ 2360 086f 01       		.byte	0x1
+ 2361 0870 9F01     		.2byte	0x19f
+ 2362 0872 73000000 		.4byte	0x73
+ 2363 0876 00000000 		.4byte	.LFB74
+ 2364 087a 7C000000 		.4byte	.LFE74-.LFB74
+ 2365 087e 01       		.uleb128 0x1
+ 2366 087f 9C       		.byte	0x9c
+ 2367 0880 5F090000 		.4byte	0x95f
+ 2368 0884 10       		.uleb128 0x10
+ 2369 0885 08000000 		.4byte	.LVL135
+ 2370 0889 680A0000 		.4byte	0xa68
+ 2371 088d 10       		.uleb128 0x10
+ 2372 088e 0C000000 		.4byte	.LVL136
+ 2373 0892 6F0A0000 		.4byte	0xa6f
+ 2374 0896 0A       		.uleb128 0xa
+ 2375 0897 14000000 		.4byte	.LVL137
+ 2376 089b 760A0000 		.4byte	0xa76
+ 2377 089f AE080000 		.4byte	0x8ae
+ 2378 08a3 0B       		.uleb128 0xb
+ 2379 08a4 01       		.uleb128 0x1
+ 2380 08a5 51       		.byte	0x51
+ 2381 08a6 01       		.uleb128 0x1
+ 2382 08a7 30       		.byte	0x30
+ 2383 08a8 0B       		.uleb128 0xb
+ 2384 08a9 01       		.uleb128 0x1
+ 2385 08aa 50       		.byte	0x50
+ 2386 08ab 01       		.uleb128 0x1
+ 2387 08ac 30       		.byte	0x30
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 52
+
+
+ 2388 08ad 00       		.byte	0
+ 2389 08ae 0A       		.uleb128 0xa
+ 2390 08af 1E000000 		.4byte	.LVL138
+ 2391 08b3 06080000 		.4byte	0x806
+ 2392 08b7 CB080000 		.4byte	0x8cb
+ 2393 08bb 0B       		.uleb128 0xb
+ 2394 08bc 01       		.uleb128 0x1
+ 2395 08bd 52       		.byte	0x52
+ 2396 08be 01       		.uleb128 0x1
+ 2397 08bf 32       		.byte	0x32
+ 2398 08c0 0B       		.uleb128 0xb
+ 2399 08c1 01       		.uleb128 0x1
+ 2400 08c2 51       		.byte	0x51
+ 2401 08c3 01       		.uleb128 0x1
+ 2402 08c4 3C       		.byte	0x3c
+ 2403 08c5 0B       		.uleb128 0xb
+ 2404 08c6 01       		.uleb128 0x1
+ 2405 08c7 50       		.byte	0x50
+ 2406 08c8 01       		.uleb128 0x1
+ 2407 08c9 33       		.byte	0x33
+ 2408 08ca 00       		.byte	0
+ 2409 08cb 0A       		.uleb128 0xa
+ 2410 08cc 26000000 		.4byte	.LVL139
+ 2411 08d0 8C0A0000 		.4byte	0xa8c
+ 2412 08d4 E2080000 		.4byte	0x8e2
+ 2413 08d8 0B       		.uleb128 0xb
+ 2414 08d9 01       		.uleb128 0x1
+ 2415 08da 50       		.byte	0x50
+ 2416 08db 05       		.uleb128 0x5
+ 2417 08dc 03       		.byte	0x3
+ 2418 08dd 00000000 		.4byte	.LC0
+ 2419 08e1 00       		.byte	0
+ 2420 08e2 0A       		.uleb128 0xa
+ 2421 08e3 2E000000 		.4byte	.LVL140
+ 2422 08e7 8C0A0000 		.4byte	0xa8c
+ 2423 08eb F9080000 		.4byte	0x8f9
+ 2424 08ef 0B       		.uleb128 0xb
+ 2425 08f0 01       		.uleb128 0x1
+ 2426 08f1 50       		.byte	0x50
+ 2427 08f2 05       		.uleb128 0x5
+ 2428 08f3 03       		.byte	0x3
+ 2429 08f4 04000000 		.4byte	.LC1
+ 2430 08f8 00       		.byte	0
+ 2431 08f9 10       		.uleb128 0x10
+ 2432 08fa 36000000 		.4byte	.LVL141
+ 2433 08fe 2A0A0000 		.4byte	0xa2a
+ 2434 0902 10       		.uleb128 0x10
+ 2435 0903 3A000000 		.4byte	.LVL142
+ 2436 0907 4C0A0000 		.4byte	0xa4c
+ 2437 090b 0A       		.uleb128 0xa
+ 2438 090c 4C000000 		.4byte	.LVL143
+ 2439 0910 760A0000 		.4byte	0xa76
+ 2440 0914 23090000 		.4byte	0x923
+ 2441 0918 0B       		.uleb128 0xb
+ 2442 0919 01       		.uleb128 0x1
+ 2443 091a 51       		.byte	0x51
+ 2444 091b 01       		.uleb128 0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 53
+
+
+ 2445 091c 30       		.byte	0x30
+ 2446 091d 0B       		.uleb128 0xb
+ 2447 091e 01       		.uleb128 0x1
+ 2448 091f 50       		.byte	0x50
+ 2449 0920 01       		.uleb128 0x1
+ 2450 0921 31       		.byte	0x31
+ 2451 0922 00       		.byte	0
+ 2452 0923 10       		.uleb128 0x10
+ 2453 0924 52000000 		.4byte	.LVL144
+ 2454 0928 A80A0000 		.4byte	0xaa8
+ 2455 092c 0A       		.uleb128 0xa
+ 2456 092d 5A000000 		.4byte	.LVL145
+ 2457 0931 760A0000 		.4byte	0xa76
+ 2458 0935 44090000 		.4byte	0x944
+ 2459 0939 0B       		.uleb128 0xb
+ 2460 093a 01       		.uleb128 0x1
+ 2461 093b 51       		.byte	0x51
+ 2462 093c 01       		.uleb128 0x1
+ 2463 093d 38       		.byte	0x38
+ 2464 093e 0B       		.uleb128 0xb
+ 2465 093f 01       		.uleb128 0x1
+ 2466 0940 50       		.byte	0x50
+ 2467 0941 01       		.uleb128 0x1
+ 2468 0942 31       		.byte	0x31
+ 2469 0943 00       		.byte	0
+ 2470 0944 10       		.uleb128 0x10
+ 2471 0945 60000000 		.4byte	.LVL146
+ 2472 0949 A80A0000 		.4byte	0xaa8
+ 2473 094d 0C       		.uleb128 0xc
+ 2474 094e 68000000 		.4byte	.LVL147
+ 2475 0952 B90A0000 		.4byte	0xab9
+ 2476 0956 0B       		.uleb128 0xb
+ 2477 0957 01       		.uleb128 0x1
+ 2478 0958 50       		.byte	0x50
+ 2479 0959 03       		.uleb128 0x3
+ 2480 095a 0A       		.byte	0xa
+ 2481 095b E803     		.2byte	0x3e8
+ 2482 095d 00       		.byte	0
+ 2483 095e 00       		.byte	0
+ 2484 095f 1F       		.uleb128 0x1f
+ 2485 0960 E4030000 		.4byte	.LASF54
+ 2486 0964 05       		.byte	0x5
+ 2487 0965 9606     		.2byte	0x696
+ 2488 0967 6B090000 		.4byte	0x96b
+ 2489 096b 20       		.uleb128 0x20
+ 2490 096c 8C000000 		.4byte	0x8c
+ 2491 0970 21       		.uleb128 0x21
+ 2492 0971 2D030000 		.4byte	.LASF55
+ 2493 0975 01       		.byte	0x1
+ 2494 0976 04       		.byte	0x4
+ 2495 0977 BB000000 		.4byte	0xbb
+ 2496 097b 05       		.uleb128 0x5
+ 2497 097c 03       		.byte	0x3
+ 2498 097d 00000000 		.4byte	dato_TX
+ 2499 0981 21       		.uleb128 0x21
+ 2500 0982 E2000000 		.4byte	.LASF56
+ 2501 0986 01       		.byte	0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 54
+
+
+ 2502 0987 04       		.byte	0x4
+ 2503 0988 BB000000 		.4byte	0xbb
+ 2504 098c 05       		.uleb128 0x5
+ 2505 098d 03       		.byte	0x3
+ 2506 098e 00000000 		.4byte	dato_RX
+ 2507 0992 21       		.uleb128 0x21
+ 2508 0993 7C020000 		.4byte	.LASF57
+ 2509 0997 01       		.byte	0x1
+ 2510 0998 05       		.byte	0x5
+ 2511 0999 97000000 		.4byte	0x97
+ 2512 099d 05       		.uleb128 0x5
+ 2513 099e 03       		.byte	0x3
+ 2514 099f 00000000 		.4byte	m_nExtFlg
+ 2515 09a3 21       		.uleb128 0x21
+ 2516 09a4 DE030000 		.4byte	.LASF58
+ 2517 09a8 01       		.byte	0x1
+ 2518 09a9 06       		.byte	0x6
+ 2519 09aa AF000000 		.4byte	0xaf
+ 2520 09ae 05       		.uleb128 0x5
+ 2521 09af 03       		.byte	0x3
+ 2522 09b0 00000000 		.4byte	m_nID
+ 2523 09b4 21       		.uleb128 0x21
+ 2524 09b5 C0020000 		.4byte	.LASF59
+ 2525 09b9 01       		.byte	0x1
+ 2526 09ba 07       		.byte	0x7
+ 2527 09bb 97000000 		.4byte	0x97
+ 2528 09bf 05       		.uleb128 0x5
+ 2529 09c0 03       		.byte	0x3
+ 2530 09c1 00000000 		.4byte	m_nDlc
+ 2531 09c5 06       		.uleb128 0x6
+ 2532 09c6 97000000 		.4byte	0x97
+ 2533 09ca D5090000 		.4byte	0x9d5
+ 2534 09ce 07       		.uleb128 0x7
+ 2535 09cf E8000000 		.4byte	0xe8
+ 2536 09d3 07       		.byte	0x7
+ 2537 09d4 00       		.byte	0
+ 2538 09d5 21       		.uleb128 0x21
+ 2539 09d6 C3030000 		.4byte	.LASF60
+ 2540 09da 01       		.byte	0x1
+ 2541 09db 08       		.byte	0x8
+ 2542 09dc C5090000 		.4byte	0x9c5
+ 2543 09e0 05       		.uleb128 0x5
+ 2544 09e1 03       		.byte	0x3
+ 2545 09e2 00000000 		.4byte	m_nDta
+ 2546 09e6 21       		.uleb128 0x21
+ 2547 09e7 F0000000 		.4byte	.LASF61
+ 2548 09eb 01       		.byte	0x1
+ 2549 09ec 09       		.byte	0x9
+ 2550 09ed 97000000 		.4byte	0x97
+ 2551 09f1 05       		.uleb128 0x5
+ 2552 09f2 03       		.byte	0x3
+ 2553 09f3 00000000 		.4byte	m_nRtr
+ 2554 09f7 21       		.uleb128 0x21
+ 2555 09f8 4D010000 		.4byte	.LASF62
+ 2556 09fc 01       		.byte	0x1
+ 2557 09fd 0A       		.byte	0xa
+ 2558 09fe 97000000 		.4byte	0x97
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 55
+
+
+ 2559 0a02 05       		.uleb128 0x5
+ 2560 0a03 03       		.byte	0x3
+ 2561 0a04 00000000 		.4byte	m_nfilhit
+ 2562 0a08 21       		.uleb128 0x21
+ 2563 0a09 14010000 		.4byte	.LASF63
+ 2564 0a0d 01       		.byte	0x1
+ 2565 0a0e 0B       		.byte	0xb
+ 2566 0a0f 97000000 		.4byte	0x97
+ 2567 0a13 05       		.uleb128 0x5
+ 2568 0a14 03       		.byte	0x3
+ 2569 0a15 00000000 		.4byte	MCPCS
+ 2570 0a19 21       		.uleb128 0x21
+ 2571 0a1a 77010000 		.4byte	.LASF64
+ 2572 0a1e 01       		.byte	0x1
+ 2573 0a1f 0C       		.byte	0xc
+ 2574 0a20 97000000 		.4byte	0x97
+ 2575 0a24 05       		.uleb128 0x5
+ 2576 0a25 03       		.byte	0x3
+ 2577 0a26 00000000 		.4byte	mcpMode
+ 2578 0a2a 22       		.uleb128 0x22
+ 2579 0a2b 57010000 		.4byte	.LASF65
+ 2580 0a2f 06       		.byte	0x6
+ 2581 0a30 64       		.byte	0x64
+ 2582 0a31 3B0A0000 		.4byte	0xa3b
+ 2583 0a35 23       		.uleb128 0x23
+ 2584 0a36 97000000 		.4byte	0x97
+ 2585 0a3a 00       		.byte	0
+ 2586 0a3b 22       		.uleb128 0x22
+ 2587 0a3c 06020000 		.4byte	.LASF66
+ 2588 0a40 07       		.byte	0x7
+ 2589 0a41 79       		.byte	0x79
+ 2590 0a42 4C0A0000 		.4byte	0xa4c
+ 2591 0a46 23       		.uleb128 0x23
+ 2592 0a47 AF000000 		.4byte	0xaf
+ 2593 0a4b 00       		.byte	0
+ 2594 0a4c 24       		.uleb128 0x24
+ 2595 0a4d 86020000 		.4byte	.LASF76
+ 2596 0a51 06       		.byte	0x6
+ 2597 0a52 66       		.byte	0x66
+ 2598 0a53 97000000 		.4byte	0x97
+ 2599 0a57 22       		.uleb128 0x22
+ 2600 0a58 7F010000 		.4byte	.LASF67
+ 2601 0a5c 07       		.byte	0x7
+ 2602 0a5d 77       		.byte	0x77
+ 2603 0a5e 680A0000 		.4byte	0xa68
+ 2604 0a62 23       		.uleb128 0x23
+ 2605 0a63 A3000000 		.4byte	0xa3
+ 2606 0a67 00       		.byte	0
+ 2607 0a68 25       		.uleb128 0x25
+ 2608 0a69 CA030000 		.4byte	.LASF68
+ 2609 0a6d 06       		.byte	0x6
+ 2610 0a6e 53       		.byte	0x53
+ 2611 0a6f 25       		.uleb128 0x25
+ 2612 0a70 85000000 		.4byte	.LASF69
+ 2613 0a74 08       		.byte	0x8
+ 2614 0a75 38       		.byte	0x38
+ 2615 0a76 22       		.uleb128 0x22
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 56
+
+
+ 2616 0a77 CE020000 		.4byte	.LASF70
+ 2617 0a7b 08       		.byte	0x8
+ 2618 0a7c 3D       		.byte	0x3d
+ 2619 0a7d 8C0A0000 		.4byte	0xa8c
+ 2620 0a81 23       		.uleb128 0x23
+ 2621 0a82 97000000 		.4byte	0x97
+ 2622 0a86 23       		.uleb128 0x23
+ 2623 0a87 97000000 		.4byte	0x97
+ 2624 0a8b 00       		.byte	0
+ 2625 0a8c 22       		.uleb128 0x22
+ 2626 0a8d 5C020000 		.4byte	.LASF71
+ 2627 0a91 08       		.byte	0x8
+ 2628 0a92 3C       		.byte	0x3c
+ 2629 0a93 9D0A0000 		.4byte	0xa9d
+ 2630 0a97 23       		.uleb128 0x23
+ 2631 0a98 9D0A0000 		.4byte	0xa9d
+ 2632 0a9c 00       		.byte	0
+ 2633 0a9d 18       		.uleb128 0x18
+ 2634 0a9e 04       		.byte	0x4
+ 2635 0a9f A30A0000 		.4byte	0xaa3
+ 2636 0aa3 0D       		.uleb128 0xd
+ 2637 0aa4 D5000000 		.4byte	0xd5
+ 2638 0aa8 22       		.uleb128 0x22
+ 2639 0aa9 42020000 		.4byte	.LASF72
+ 2640 0aad 08       		.byte	0x8
+ 2641 0aae 5D       		.byte	0x5d
+ 2642 0aaf B90A0000 		.4byte	0xab9
+ 2643 0ab3 23       		.uleb128 0x23
+ 2644 0ab4 97000000 		.4byte	0x97
+ 2645 0ab8 00       		.byte	0
+ 2646 0ab9 26       		.uleb128 0x26
+ 2647 0aba F1030000 		.4byte	.LASF77
+ 2648 0abe 07       		.byte	0x7
+ 2649 0abf 76       		.byte	0x76
+ 2650 0ac0 23       		.uleb128 0x23
+ 2651 0ac1 AF000000 		.4byte	0xaf
+ 2652 0ac5 00       		.byte	0
+ 2653 0ac6 00       		.byte	0
+ 2654              		.section	.debug_abbrev,"",%progbits
+ 2655              	.Ldebug_abbrev0:
+ 2656 0000 01       		.uleb128 0x1
+ 2657 0001 11       		.uleb128 0x11
+ 2658 0002 01       		.byte	0x1
+ 2659 0003 25       		.uleb128 0x25
+ 2660 0004 0E       		.uleb128 0xe
+ 2661 0005 13       		.uleb128 0x13
+ 2662 0006 0B       		.uleb128 0xb
+ 2663 0007 03       		.uleb128 0x3
+ 2664 0008 0E       		.uleb128 0xe
+ 2665 0009 1B       		.uleb128 0x1b
+ 2666 000a 0E       		.uleb128 0xe
+ 2667 000b 55       		.uleb128 0x55
+ 2668 000c 17       		.uleb128 0x17
+ 2669 000d 11       		.uleb128 0x11
+ 2670 000e 01       		.uleb128 0x1
+ 2671 000f 10       		.uleb128 0x10
+ 2672 0010 17       		.uleb128 0x17
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 57
+
+
+ 2673 0011 00       		.byte	0
+ 2674 0012 00       		.byte	0
+ 2675 0013 02       		.uleb128 0x2
+ 2676 0014 24       		.uleb128 0x24
+ 2677 0015 00       		.byte	0
+ 2678 0016 0B       		.uleb128 0xb
+ 2679 0017 0B       		.uleb128 0xb
+ 2680 0018 3E       		.uleb128 0x3e
+ 2681 0019 0B       		.uleb128 0xb
+ 2682 001a 03       		.uleb128 0x3
+ 2683 001b 0E       		.uleb128 0xe
+ 2684 001c 00       		.byte	0
+ 2685 001d 00       		.byte	0
+ 2686 001e 03       		.uleb128 0x3
+ 2687 001f 16       		.uleb128 0x16
+ 2688 0020 00       		.byte	0
+ 2689 0021 03       		.uleb128 0x3
+ 2690 0022 0E       		.uleb128 0xe
+ 2691 0023 3A       		.uleb128 0x3a
+ 2692 0024 0B       		.uleb128 0xb
+ 2693 0025 3B       		.uleb128 0x3b
+ 2694 0026 0B       		.uleb128 0xb
+ 2695 0027 49       		.uleb128 0x49
+ 2696 0028 13       		.uleb128 0x13
+ 2697 0029 00       		.byte	0
+ 2698 002a 00       		.byte	0
+ 2699 002b 04       		.uleb128 0x4
+ 2700 002c 24       		.uleb128 0x24
+ 2701 002d 00       		.byte	0
+ 2702 002e 0B       		.uleb128 0xb
+ 2703 002f 0B       		.uleb128 0xb
+ 2704 0030 3E       		.uleb128 0x3e
+ 2705 0031 0B       		.uleb128 0xb
+ 2706 0032 03       		.uleb128 0x3
+ 2707 0033 08       		.uleb128 0x8
+ 2708 0034 00       		.byte	0
+ 2709 0035 00       		.byte	0
+ 2710 0036 05       		.uleb128 0x5
+ 2711 0037 16       		.uleb128 0x16
+ 2712 0038 00       		.byte	0
+ 2713 0039 03       		.uleb128 0x3
+ 2714 003a 0E       		.uleb128 0xe
+ 2715 003b 3A       		.uleb128 0x3a
+ 2716 003c 0B       		.uleb128 0xb
+ 2717 003d 3B       		.uleb128 0x3b
+ 2718 003e 05       		.uleb128 0x5
+ 2719 003f 49       		.uleb128 0x49
+ 2720 0040 13       		.uleb128 0x13
+ 2721 0041 00       		.byte	0
+ 2722 0042 00       		.byte	0
+ 2723 0043 06       		.uleb128 0x6
+ 2724 0044 01       		.uleb128 0x1
+ 2725 0045 01       		.byte	0x1
+ 2726 0046 49       		.uleb128 0x49
+ 2727 0047 13       		.uleb128 0x13
+ 2728 0048 01       		.uleb128 0x1
+ 2729 0049 13       		.uleb128 0x13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 58
+
+
+ 2730 004a 00       		.byte	0
+ 2731 004b 00       		.byte	0
+ 2732 004c 07       		.uleb128 0x7
+ 2733 004d 21       		.uleb128 0x21
+ 2734 004e 00       		.byte	0
+ 2735 004f 49       		.uleb128 0x49
+ 2736 0050 13       		.uleb128 0x13
+ 2737 0051 2F       		.uleb128 0x2f
+ 2738 0052 0B       		.uleb128 0xb
+ 2739 0053 00       		.byte	0
+ 2740 0054 00       		.byte	0
+ 2741 0055 08       		.uleb128 0x8
+ 2742 0056 2E       		.uleb128 0x2e
+ 2743 0057 01       		.byte	0x1
+ 2744 0058 3F       		.uleb128 0x3f
+ 2745 0059 19       		.uleb128 0x19
+ 2746 005a 03       		.uleb128 0x3
+ 2747 005b 0E       		.uleb128 0xe
+ 2748 005c 3A       		.uleb128 0x3a
+ 2749 005d 0B       		.uleb128 0xb
+ 2750 005e 3B       		.uleb128 0x3b
+ 2751 005f 0B       		.uleb128 0xb
+ 2752 0060 27       		.uleb128 0x27
+ 2753 0061 19       		.uleb128 0x19
+ 2754 0062 11       		.uleb128 0x11
+ 2755 0063 01       		.uleb128 0x1
+ 2756 0064 12       		.uleb128 0x12
+ 2757 0065 06       		.uleb128 0x6
+ 2758 0066 40       		.uleb128 0x40
+ 2759 0067 18       		.uleb128 0x18
+ 2760 0068 9742     		.uleb128 0x2117
+ 2761 006a 19       		.uleb128 0x19
+ 2762 006b 01       		.uleb128 0x1
+ 2763 006c 13       		.uleb128 0x13
+ 2764 006d 00       		.byte	0
+ 2765 006e 00       		.byte	0
+ 2766 006f 09       		.uleb128 0x9
+ 2767 0070 05       		.uleb128 0x5
+ 2768 0071 00       		.byte	0
+ 2769 0072 03       		.uleb128 0x3
+ 2770 0073 0E       		.uleb128 0xe
+ 2771 0074 3A       		.uleb128 0x3a
+ 2772 0075 0B       		.uleb128 0xb
+ 2773 0076 3B       		.uleb128 0x3b
+ 2774 0077 0B       		.uleb128 0xb
+ 2775 0078 49       		.uleb128 0x49
+ 2776 0079 13       		.uleb128 0x13
+ 2777 007a 02       		.uleb128 0x2
+ 2778 007b 17       		.uleb128 0x17
+ 2779 007c 00       		.byte	0
+ 2780 007d 00       		.byte	0
+ 2781 007e 0A       		.uleb128 0xa
+ 2782 007f 898201   		.uleb128 0x4109
+ 2783 0082 01       		.byte	0x1
+ 2784 0083 11       		.uleb128 0x11
+ 2785 0084 01       		.uleb128 0x1
+ 2786 0085 31       		.uleb128 0x31
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 59
+
+
+ 2787 0086 13       		.uleb128 0x13
+ 2788 0087 01       		.uleb128 0x1
+ 2789 0088 13       		.uleb128 0x13
+ 2790 0089 00       		.byte	0
+ 2791 008a 00       		.byte	0
+ 2792 008b 0B       		.uleb128 0xb
+ 2793 008c 8A8201   		.uleb128 0x410a
+ 2794 008f 00       		.byte	0
+ 2795 0090 02       		.uleb128 0x2
+ 2796 0091 18       		.uleb128 0x18
+ 2797 0092 9142     		.uleb128 0x2111
+ 2798 0094 18       		.uleb128 0x18
+ 2799 0095 00       		.byte	0
+ 2800 0096 00       		.byte	0
+ 2801 0097 0C       		.uleb128 0xc
+ 2802 0098 898201   		.uleb128 0x4109
+ 2803 009b 01       		.byte	0x1
+ 2804 009c 11       		.uleb128 0x11
+ 2805 009d 01       		.uleb128 0x1
+ 2806 009e 31       		.uleb128 0x31
+ 2807 009f 13       		.uleb128 0x13
+ 2808 00a0 00       		.byte	0
+ 2809 00a1 00       		.byte	0
+ 2810 00a2 0D       		.uleb128 0xd
+ 2811 00a3 26       		.uleb128 0x26
+ 2812 00a4 00       		.byte	0
+ 2813 00a5 49       		.uleb128 0x49
+ 2814 00a6 13       		.uleb128 0x13
+ 2815 00a7 00       		.byte	0
+ 2816 00a8 00       		.byte	0
+ 2817 00a9 0E       		.uleb128 0xe
+ 2818 00aa 2E       		.uleb128 0x2e
+ 2819 00ab 01       		.byte	0x1
+ 2820 00ac 3F       		.uleb128 0x3f
+ 2821 00ad 19       		.uleb128 0x19
+ 2822 00ae 03       		.uleb128 0x3
+ 2823 00af 0E       		.uleb128 0xe
+ 2824 00b0 3A       		.uleb128 0x3a
+ 2825 00b1 0B       		.uleb128 0xb
+ 2826 00b2 3B       		.uleb128 0x3b
+ 2827 00b3 0B       		.uleb128 0xb
+ 2828 00b4 27       		.uleb128 0x27
+ 2829 00b5 19       		.uleb128 0x19
+ 2830 00b6 49       		.uleb128 0x49
+ 2831 00b7 13       		.uleb128 0x13
+ 2832 00b8 11       		.uleb128 0x11
+ 2833 00b9 01       		.uleb128 0x1
+ 2834 00ba 12       		.uleb128 0x12
+ 2835 00bb 06       		.uleb128 0x6
+ 2836 00bc 40       		.uleb128 0x40
+ 2837 00bd 18       		.uleb128 0x18
+ 2838 00be 9742     		.uleb128 0x2117
+ 2839 00c0 19       		.uleb128 0x19
+ 2840 00c1 01       		.uleb128 0x1
+ 2841 00c2 13       		.uleb128 0x13
+ 2842 00c3 00       		.byte	0
+ 2843 00c4 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 60
+
+
+ 2844 00c5 0F       		.uleb128 0xf
+ 2845 00c6 34       		.uleb128 0x34
+ 2846 00c7 00       		.byte	0
+ 2847 00c8 03       		.uleb128 0x3
+ 2848 00c9 08       		.uleb128 0x8
+ 2849 00ca 3A       		.uleb128 0x3a
+ 2850 00cb 0B       		.uleb128 0xb
+ 2851 00cc 3B       		.uleb128 0x3b
+ 2852 00cd 0B       		.uleb128 0xb
+ 2853 00ce 49       		.uleb128 0x49
+ 2854 00cf 13       		.uleb128 0x13
+ 2855 00d0 02       		.uleb128 0x2
+ 2856 00d1 18       		.uleb128 0x18
+ 2857 00d2 00       		.byte	0
+ 2858 00d3 00       		.byte	0
+ 2859 00d4 10       		.uleb128 0x10
+ 2860 00d5 898201   		.uleb128 0x4109
+ 2861 00d8 00       		.byte	0
+ 2862 00d9 11       		.uleb128 0x11
+ 2863 00da 01       		.uleb128 0x1
+ 2864 00db 31       		.uleb128 0x31
+ 2865 00dc 13       		.uleb128 0x13
+ 2866 00dd 00       		.byte	0
+ 2867 00de 00       		.byte	0
+ 2868 00df 11       		.uleb128 0x11
+ 2869 00e0 34       		.uleb128 0x34
+ 2870 00e1 00       		.byte	0
+ 2871 00e2 03       		.uleb128 0x3
+ 2872 00e3 08       		.uleb128 0x8
+ 2873 00e4 3A       		.uleb128 0x3a
+ 2874 00e5 0B       		.uleb128 0xb
+ 2875 00e6 3B       		.uleb128 0x3b
+ 2876 00e7 0B       		.uleb128 0xb
+ 2877 00e8 49       		.uleb128 0x49
+ 2878 00e9 13       		.uleb128 0x13
+ 2879 00ea 02       		.uleb128 0x2
+ 2880 00eb 17       		.uleb128 0x17
+ 2881 00ec 00       		.byte	0
+ 2882 00ed 00       		.byte	0
+ 2883 00ee 12       		.uleb128 0x12
+ 2884 00ef 34       		.uleb128 0x34
+ 2885 00f0 00       		.byte	0
+ 2886 00f1 03       		.uleb128 0x3
+ 2887 00f2 08       		.uleb128 0x8
+ 2888 00f3 3A       		.uleb128 0x3a
+ 2889 00f4 0B       		.uleb128 0xb
+ 2890 00f5 3B       		.uleb128 0x3b
+ 2891 00f6 0B       		.uleb128 0xb
+ 2892 00f7 49       		.uleb128 0x49
+ 2893 00f8 13       		.uleb128 0x13
+ 2894 00f9 1C       		.uleb128 0x1c
+ 2895 00fa 0B       		.uleb128 0xb
+ 2896 00fb 00       		.byte	0
+ 2897 00fc 00       		.byte	0
+ 2898 00fd 13       		.uleb128 0x13
+ 2899 00fe 34       		.uleb128 0x34
+ 2900 00ff 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 61
+
+
+ 2901 0100 03       		.uleb128 0x3
+ 2902 0101 0E       		.uleb128 0xe
+ 2903 0102 3A       		.uleb128 0x3a
+ 2904 0103 0B       		.uleb128 0xb
+ 2905 0104 3B       		.uleb128 0x3b
+ 2906 0105 0B       		.uleb128 0xb
+ 2907 0106 49       		.uleb128 0x49
+ 2908 0107 13       		.uleb128 0x13
+ 2909 0108 02       		.uleb128 0x2
+ 2910 0109 17       		.uleb128 0x17
+ 2911 010a 00       		.byte	0
+ 2912 010b 00       		.byte	0
+ 2913 010c 14       		.uleb128 0x14
+ 2914 010d 2E       		.uleb128 0x2e
+ 2915 010e 01       		.byte	0x1
+ 2916 010f 3F       		.uleb128 0x3f
+ 2917 0110 19       		.uleb128 0x19
+ 2918 0111 03       		.uleb128 0x3
+ 2919 0112 0E       		.uleb128 0xe
+ 2920 0113 3A       		.uleb128 0x3a
+ 2921 0114 0B       		.uleb128 0xb
+ 2922 0115 3B       		.uleb128 0x3b
+ 2923 0116 05       		.uleb128 0x5
+ 2924 0117 27       		.uleb128 0x27
+ 2925 0118 19       		.uleb128 0x19
+ 2926 0119 11       		.uleb128 0x11
+ 2927 011a 01       		.uleb128 0x1
+ 2928 011b 12       		.uleb128 0x12
+ 2929 011c 06       		.uleb128 0x6
+ 2930 011d 40       		.uleb128 0x40
+ 2931 011e 18       		.uleb128 0x18
+ 2932 011f 9742     		.uleb128 0x2117
+ 2933 0121 19       		.uleb128 0x19
+ 2934 0122 01       		.uleb128 0x1
+ 2935 0123 13       		.uleb128 0x13
+ 2936 0124 00       		.byte	0
+ 2937 0125 00       		.byte	0
+ 2938 0126 15       		.uleb128 0x15
+ 2939 0127 05       		.uleb128 0x5
+ 2940 0128 00       		.byte	0
+ 2941 0129 03       		.uleb128 0x3
+ 2942 012a 0E       		.uleb128 0xe
+ 2943 012b 3A       		.uleb128 0x3a
+ 2944 012c 0B       		.uleb128 0xb
+ 2945 012d 3B       		.uleb128 0x3b
+ 2946 012e 05       		.uleb128 0x5
+ 2947 012f 49       		.uleb128 0x49
+ 2948 0130 13       		.uleb128 0x13
+ 2949 0131 02       		.uleb128 0x2
+ 2950 0132 17       		.uleb128 0x17
+ 2951 0133 00       		.byte	0
+ 2952 0134 00       		.byte	0
+ 2953 0135 16       		.uleb128 0x16
+ 2954 0136 05       		.uleb128 0x5
+ 2955 0137 00       		.byte	0
+ 2956 0138 03       		.uleb128 0x3
+ 2957 0139 08       		.uleb128 0x8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 62
+
+
+ 2958 013a 3A       		.uleb128 0x3a
+ 2959 013b 0B       		.uleb128 0xb
+ 2960 013c 3B       		.uleb128 0x3b
+ 2961 013d 05       		.uleb128 0x5
+ 2962 013e 49       		.uleb128 0x49
+ 2963 013f 13       		.uleb128 0x13
+ 2964 0140 02       		.uleb128 0x2
+ 2965 0141 17       		.uleb128 0x17
+ 2966 0142 00       		.byte	0
+ 2967 0143 00       		.byte	0
+ 2968 0144 17       		.uleb128 0x17
+ 2969 0145 34       		.uleb128 0x34
+ 2970 0146 00       		.byte	0
+ 2971 0147 03       		.uleb128 0x3
+ 2972 0148 08       		.uleb128 0x8
+ 2973 0149 3A       		.uleb128 0x3a
+ 2974 014a 0B       		.uleb128 0xb
+ 2975 014b 3B       		.uleb128 0x3b
+ 2976 014c 05       		.uleb128 0x5
+ 2977 014d 49       		.uleb128 0x49
+ 2978 014e 13       		.uleb128 0x13
+ 2979 014f 02       		.uleb128 0x2
+ 2980 0150 17       		.uleb128 0x17
+ 2981 0151 00       		.byte	0
+ 2982 0152 00       		.byte	0
+ 2983 0153 18       		.uleb128 0x18
+ 2984 0154 0F       		.uleb128 0xf
+ 2985 0155 00       		.byte	0
+ 2986 0156 0B       		.uleb128 0xb
+ 2987 0157 0B       		.uleb128 0xb
+ 2988 0158 49       		.uleb128 0x49
+ 2989 0159 13       		.uleb128 0x13
+ 2990 015a 00       		.byte	0
+ 2991 015b 00       		.byte	0
+ 2992 015c 19       		.uleb128 0x19
+ 2993 015d 34       		.uleb128 0x34
+ 2994 015e 00       		.byte	0
+ 2995 015f 03       		.uleb128 0x3
+ 2996 0160 0E       		.uleb128 0xe
+ 2997 0161 3A       		.uleb128 0x3a
+ 2998 0162 0B       		.uleb128 0xb
+ 2999 0163 3B       		.uleb128 0x3b
+ 3000 0164 05       		.uleb128 0x5
+ 3001 0165 49       		.uleb128 0x49
+ 3002 0166 13       		.uleb128 0x13
+ 3003 0167 02       		.uleb128 0x2
+ 3004 0168 17       		.uleb128 0x17
+ 3005 0169 00       		.byte	0
+ 3006 016a 00       		.byte	0
+ 3007 016b 1A       		.uleb128 0x1a
+ 3008 016c 34       		.uleb128 0x34
+ 3009 016d 00       		.byte	0
+ 3010 016e 03       		.uleb128 0x3
+ 3011 016f 0E       		.uleb128 0xe
+ 3012 0170 3A       		.uleb128 0x3a
+ 3013 0171 0B       		.uleb128 0xb
+ 3014 0172 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 63
+
+
+ 3015 0173 05       		.uleb128 0x5
+ 3016 0174 49       		.uleb128 0x49
+ 3017 0175 13       		.uleb128 0x13
+ 3018 0176 02       		.uleb128 0x2
+ 3019 0177 18       		.uleb128 0x18
+ 3020 0178 00       		.byte	0
+ 3021 0179 00       		.byte	0
+ 3022 017a 1B       		.uleb128 0x1b
+ 3023 017b 34       		.uleb128 0x34
+ 3024 017c 00       		.byte	0
+ 3025 017d 03       		.uleb128 0x3
+ 3026 017e 08       		.uleb128 0x8
+ 3027 017f 3A       		.uleb128 0x3a
+ 3028 0180 0B       		.uleb128 0xb
+ 3029 0181 3B       		.uleb128 0x3b
+ 3030 0182 05       		.uleb128 0x5
+ 3031 0183 49       		.uleb128 0x49
+ 3032 0184 13       		.uleb128 0x13
+ 3033 0185 1C       		.uleb128 0x1c
+ 3034 0186 0B       		.uleb128 0xb
+ 3035 0187 00       		.byte	0
+ 3036 0188 00       		.byte	0
+ 3037 0189 1C       		.uleb128 0x1c
+ 3038 018a 34       		.uleb128 0x34
+ 3039 018b 00       		.byte	0
+ 3040 018c 03       		.uleb128 0x3
+ 3041 018d 0E       		.uleb128 0xe
+ 3042 018e 3A       		.uleb128 0x3a
+ 3043 018f 0B       		.uleb128 0xb
+ 3044 0190 3B       		.uleb128 0x3b
+ 3045 0191 05       		.uleb128 0x5
+ 3046 0192 49       		.uleb128 0x49
+ 3047 0193 13       		.uleb128 0x13
+ 3048 0194 1C       		.uleb128 0x1c
+ 3049 0195 0B       		.uleb128 0xb
+ 3050 0196 00       		.byte	0
+ 3051 0197 00       		.byte	0
+ 3052 0198 1D       		.uleb128 0x1d
+ 3053 0199 2E       		.uleb128 0x2e
+ 3054 019a 01       		.byte	0x1
+ 3055 019b 3F       		.uleb128 0x3f
+ 3056 019c 19       		.uleb128 0x19
+ 3057 019d 03       		.uleb128 0x3
+ 3058 019e 0E       		.uleb128 0xe
+ 3059 019f 3A       		.uleb128 0x3a
+ 3060 01a0 0B       		.uleb128 0xb
+ 3061 01a1 3B       		.uleb128 0x3b
+ 3062 01a2 05       		.uleb128 0x5
+ 3063 01a3 27       		.uleb128 0x27
+ 3064 01a4 19       		.uleb128 0x19
+ 3065 01a5 49       		.uleb128 0x49
+ 3066 01a6 13       		.uleb128 0x13
+ 3067 01a7 11       		.uleb128 0x11
+ 3068 01a8 01       		.uleb128 0x1
+ 3069 01a9 12       		.uleb128 0x12
+ 3070 01aa 06       		.uleb128 0x6
+ 3071 01ab 40       		.uleb128 0x40
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 64
+
+
+ 3072 01ac 18       		.uleb128 0x18
+ 3073 01ad 9742     		.uleb128 0x2117
+ 3074 01af 19       		.uleb128 0x19
+ 3075 01b0 01       		.uleb128 0x1
+ 3076 01b1 13       		.uleb128 0x13
+ 3077 01b2 00       		.byte	0
+ 3078 01b3 00       		.byte	0
+ 3079 01b4 1E       		.uleb128 0x1e
+ 3080 01b5 2E       		.uleb128 0x2e
+ 3081 01b6 01       		.byte	0x1
+ 3082 01b7 3F       		.uleb128 0x3f
+ 3083 01b8 19       		.uleb128 0x19
+ 3084 01b9 03       		.uleb128 0x3
+ 3085 01ba 0E       		.uleb128 0xe
+ 3086 01bb 3A       		.uleb128 0x3a
+ 3087 01bc 0B       		.uleb128 0xb
+ 3088 01bd 3B       		.uleb128 0x3b
+ 3089 01be 05       		.uleb128 0x5
+ 3090 01bf 49       		.uleb128 0x49
+ 3091 01c0 13       		.uleb128 0x13
+ 3092 01c1 11       		.uleb128 0x11
+ 3093 01c2 01       		.uleb128 0x1
+ 3094 01c3 12       		.uleb128 0x12
+ 3095 01c4 06       		.uleb128 0x6
+ 3096 01c5 40       		.uleb128 0x40
+ 3097 01c6 18       		.uleb128 0x18
+ 3098 01c7 9742     		.uleb128 0x2117
+ 3099 01c9 19       		.uleb128 0x19
+ 3100 01ca 01       		.uleb128 0x1
+ 3101 01cb 13       		.uleb128 0x13
+ 3102 01cc 00       		.byte	0
+ 3103 01cd 00       		.byte	0
+ 3104 01ce 1F       		.uleb128 0x1f
+ 3105 01cf 34       		.uleb128 0x34
+ 3106 01d0 00       		.byte	0
+ 3107 01d1 03       		.uleb128 0x3
+ 3108 01d2 0E       		.uleb128 0xe
+ 3109 01d3 3A       		.uleb128 0x3a
+ 3110 01d4 0B       		.uleb128 0xb
+ 3111 01d5 3B       		.uleb128 0x3b
+ 3112 01d6 05       		.uleb128 0x5
+ 3113 01d7 49       		.uleb128 0x49
+ 3114 01d8 13       		.uleb128 0x13
+ 3115 01d9 3F       		.uleb128 0x3f
+ 3116 01da 19       		.uleb128 0x19
+ 3117 01db 3C       		.uleb128 0x3c
+ 3118 01dc 19       		.uleb128 0x19
+ 3119 01dd 00       		.byte	0
+ 3120 01de 00       		.byte	0
+ 3121 01df 20       		.uleb128 0x20
+ 3122 01e0 35       		.uleb128 0x35
+ 3123 01e1 00       		.byte	0
+ 3124 01e2 49       		.uleb128 0x49
+ 3125 01e3 13       		.uleb128 0x13
+ 3126 01e4 00       		.byte	0
+ 3127 01e5 00       		.byte	0
+ 3128 01e6 21       		.uleb128 0x21
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 65
+
+
+ 3129 01e7 34       		.uleb128 0x34
+ 3130 01e8 00       		.byte	0
+ 3131 01e9 03       		.uleb128 0x3
+ 3132 01ea 0E       		.uleb128 0xe
+ 3133 01eb 3A       		.uleb128 0x3a
+ 3134 01ec 0B       		.uleb128 0xb
+ 3135 01ed 3B       		.uleb128 0x3b
+ 3136 01ee 0B       		.uleb128 0xb
+ 3137 01ef 49       		.uleb128 0x49
+ 3138 01f0 13       		.uleb128 0x13
+ 3139 01f1 3F       		.uleb128 0x3f
+ 3140 01f2 19       		.uleb128 0x19
+ 3141 01f3 02       		.uleb128 0x2
+ 3142 01f4 18       		.uleb128 0x18
+ 3143 01f5 00       		.byte	0
+ 3144 01f6 00       		.byte	0
+ 3145 01f7 22       		.uleb128 0x22
+ 3146 01f8 2E       		.uleb128 0x2e
+ 3147 01f9 01       		.byte	0x1
+ 3148 01fa 3F       		.uleb128 0x3f
+ 3149 01fb 19       		.uleb128 0x19
+ 3150 01fc 03       		.uleb128 0x3
+ 3151 01fd 0E       		.uleb128 0xe
+ 3152 01fe 3A       		.uleb128 0x3a
+ 3153 01ff 0B       		.uleb128 0xb
+ 3154 0200 3B       		.uleb128 0x3b
+ 3155 0201 0B       		.uleb128 0xb
+ 3156 0202 27       		.uleb128 0x27
+ 3157 0203 19       		.uleb128 0x19
+ 3158 0204 3C       		.uleb128 0x3c
+ 3159 0205 19       		.uleb128 0x19
+ 3160 0206 01       		.uleb128 0x1
+ 3161 0207 13       		.uleb128 0x13
+ 3162 0208 00       		.byte	0
+ 3163 0209 00       		.byte	0
+ 3164 020a 23       		.uleb128 0x23
+ 3165 020b 05       		.uleb128 0x5
+ 3166 020c 00       		.byte	0
+ 3167 020d 49       		.uleb128 0x49
+ 3168 020e 13       		.uleb128 0x13
+ 3169 020f 00       		.byte	0
+ 3170 0210 00       		.byte	0
+ 3171 0211 24       		.uleb128 0x24
+ 3172 0212 2E       		.uleb128 0x2e
+ 3173 0213 00       		.byte	0
+ 3174 0214 3F       		.uleb128 0x3f
+ 3175 0215 19       		.uleb128 0x19
+ 3176 0216 03       		.uleb128 0x3
+ 3177 0217 0E       		.uleb128 0xe
+ 3178 0218 3A       		.uleb128 0x3a
+ 3179 0219 0B       		.uleb128 0xb
+ 3180 021a 3B       		.uleb128 0x3b
+ 3181 021b 0B       		.uleb128 0xb
+ 3182 021c 27       		.uleb128 0x27
+ 3183 021d 19       		.uleb128 0x19
+ 3184 021e 49       		.uleb128 0x49
+ 3185 021f 13       		.uleb128 0x13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 66
+
+
+ 3186 0220 3C       		.uleb128 0x3c
+ 3187 0221 19       		.uleb128 0x19
+ 3188 0222 00       		.byte	0
+ 3189 0223 00       		.byte	0
+ 3190 0224 25       		.uleb128 0x25
+ 3191 0225 2E       		.uleb128 0x2e
+ 3192 0226 00       		.byte	0
+ 3193 0227 3F       		.uleb128 0x3f
+ 3194 0228 19       		.uleb128 0x19
+ 3195 0229 03       		.uleb128 0x3
+ 3196 022a 0E       		.uleb128 0xe
+ 3197 022b 3A       		.uleb128 0x3a
+ 3198 022c 0B       		.uleb128 0xb
+ 3199 022d 3B       		.uleb128 0x3b
+ 3200 022e 0B       		.uleb128 0xb
+ 3201 022f 27       		.uleb128 0x27
+ 3202 0230 19       		.uleb128 0x19
+ 3203 0231 3C       		.uleb128 0x3c
+ 3204 0232 19       		.uleb128 0x19
+ 3205 0233 00       		.byte	0
+ 3206 0234 00       		.byte	0
+ 3207 0235 26       		.uleb128 0x26
+ 3208 0236 2E       		.uleb128 0x2e
+ 3209 0237 01       		.byte	0x1
+ 3210 0238 3F       		.uleb128 0x3f
+ 3211 0239 19       		.uleb128 0x19
+ 3212 023a 03       		.uleb128 0x3
+ 3213 023b 0E       		.uleb128 0xe
+ 3214 023c 3A       		.uleb128 0x3a
+ 3215 023d 0B       		.uleb128 0xb
+ 3216 023e 3B       		.uleb128 0x3b
+ 3217 023f 0B       		.uleb128 0xb
+ 3218 0240 27       		.uleb128 0x27
+ 3219 0241 19       		.uleb128 0x19
+ 3220 0242 3C       		.uleb128 0x3c
+ 3221 0243 19       		.uleb128 0x19
+ 3222 0244 00       		.byte	0
+ 3223 0245 00       		.byte	0
+ 3224 0246 00       		.byte	0
+ 3225              		.section	.debug_loc,"",%progbits
+ 3226              	.Ldebug_loc0:
+ 3227              	.LLST0:
+ 3228 0000 00000000 		.4byte	.LVL0
+ 3229 0004 0A000000 		.4byte	.LVL1
+ 3230 0008 0100     		.2byte	0x1
+ 3231 000a 50       		.byte	0x50
+ 3232 000b 0A000000 		.4byte	.LVL1
+ 3233 000f 28000000 		.4byte	.LFE63
+ 3234 0013 0400     		.2byte	0x4
+ 3235 0015 F3       		.byte	0xf3
+ 3236 0016 01       		.uleb128 0x1
+ 3237 0017 50       		.byte	0x50
+ 3238 0018 9F       		.byte	0x9f
+ 3239 0019 00000000 		.4byte	0
+ 3240 001d 00000000 		.4byte	0
+ 3241              	.LLST1:
+ 3242 0021 00000000 		.4byte	.LVL0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 67
+
+
+ 3243 0025 0D000000 		.4byte	.LVL2-1
+ 3244 0029 0100     		.2byte	0x1
+ 3245 002b 51       		.byte	0x51
+ 3246 002c 0D000000 		.4byte	.LVL2-1
+ 3247 0030 28000000 		.4byte	.LFE63
+ 3248 0034 0400     		.2byte	0x4
+ 3249 0036 F3       		.byte	0xf3
+ 3250 0037 01       		.uleb128 0x1
+ 3251 0038 51       		.byte	0x51
+ 3252 0039 9F       		.byte	0x9f
+ 3253 003a 00000000 		.4byte	0
+ 3254 003e 00000000 		.4byte	0
+ 3255              	.LLST2:
+ 3256 0042 00000000 		.4byte	.LVL0
+ 3257 0046 0D000000 		.4byte	.LVL2-1
+ 3258 004a 0100     		.2byte	0x1
+ 3259 004c 52       		.byte	0x52
+ 3260 004d 0D000000 		.4byte	.LVL2-1
+ 3261 0051 28000000 		.4byte	.LFE63
+ 3262 0055 0400     		.2byte	0x4
+ 3263 0057 F3       		.byte	0xf3
+ 3264 0058 01       		.uleb128 0x1
+ 3265 0059 52       		.byte	0x52
+ 3266 005a 9F       		.byte	0x9f
+ 3267 005b 00000000 		.4byte	0
+ 3268 005f 00000000 		.4byte	0
+ 3269              	.LLST3:
+ 3270 0063 00000000 		.4byte	.LVL7
+ 3271 0067 06000000 		.4byte	.LVL8
+ 3272 006b 0100     		.2byte	0x1
+ 3273 006d 50       		.byte	0x50
+ 3274 006e 06000000 		.4byte	.LVL8
+ 3275 0072 16000000 		.4byte	.LFE64
+ 3276 0076 0400     		.2byte	0x4
+ 3277 0078 F3       		.byte	0xf3
+ 3278 0079 01       		.uleb128 0x1
+ 3279 007a 50       		.byte	0x50
+ 3280 007b 9F       		.byte	0x9f
+ 3281 007c 00000000 		.4byte	0
+ 3282 0080 00000000 		.4byte	0
+ 3283              	.LLST4:
+ 3284 0084 00000000 		.4byte	.LVL13
+ 3285 0088 06000000 		.4byte	.LVL14
+ 3286 008c 0100     		.2byte	0x1
+ 3287 008e 50       		.byte	0x50
+ 3288 008f 06000000 		.4byte	.LVL14
+ 3289 0093 24000000 		.4byte	.LFE66
+ 3290 0097 0400     		.2byte	0x4
+ 3291 0099 F3       		.byte	0xf3
+ 3292 009a 01       		.uleb128 0x1
+ 3293 009b 50       		.byte	0x50
+ 3294 009c 9F       		.byte	0x9f
+ 3295 009d 00000000 		.4byte	0
+ 3296 00a1 00000000 		.4byte	0
+ 3297              	.LLST5:
+ 3298 00a5 14000000 		.4byte	.LVL16
+ 3299 00a9 1E000000 		.4byte	.LVL18
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 68
+
+
+ 3300 00ad 0100     		.2byte	0x1
+ 3301 00af 50       		.byte	0x50
+ 3302 00b0 20000000 		.4byte	.LVL19
+ 3303 00b4 22000000 		.4byte	.LVL20
+ 3304 00b8 0100     		.2byte	0x1
+ 3305 00ba 50       		.byte	0x50
+ 3306 00bb 00000000 		.4byte	0
+ 3307 00bf 00000000 		.4byte	0
+ 3308              	.LLST6:
+ 3309 00c3 00000000 		.4byte	.LVL21
+ 3310 00c7 08000000 		.4byte	.LVL22
+ 3311 00cb 0100     		.2byte	0x1
+ 3312 00cd 50       		.byte	0x50
+ 3313 00ce 08000000 		.4byte	.LVL22
+ 3314 00d2 20000000 		.4byte	.LFE67
+ 3315 00d6 0400     		.2byte	0x4
+ 3316 00d8 F3       		.byte	0xf3
+ 3317 00d9 01       		.uleb128 0x1
+ 3318 00da 50       		.byte	0x50
+ 3319 00db 9F       		.byte	0x9f
+ 3320 00dc 00000000 		.4byte	0
+ 3321 00e0 00000000 		.4byte	0
+ 3322              	.LLST7:
+ 3323 00e4 00000000 		.4byte	.LVL21
+ 3324 00e8 0B000000 		.4byte	.LVL23-1
+ 3325 00ec 0100     		.2byte	0x1
+ 3326 00ee 51       		.byte	0x51
+ 3327 00ef 0B000000 		.4byte	.LVL23-1
+ 3328 00f3 20000000 		.4byte	.LFE67
+ 3329 00f7 0400     		.2byte	0x4
+ 3330 00f9 F3       		.byte	0xf3
+ 3331 00fa 01       		.uleb128 0x1
+ 3332 00fb 51       		.byte	0x51
+ 3333 00fc 9F       		.byte	0x9f
+ 3334 00fd 00000000 		.4byte	0
+ 3335 0101 00000000 		.4byte	0
+ 3336              	.LLST8:
+ 3337 0105 00000000 		.4byte	.LVL27
+ 3338 0109 12000000 		.4byte	.LVL29
+ 3339 010d 0100     		.2byte	0x1
+ 3340 010f 50       		.byte	0x50
+ 3341 0110 12000000 		.4byte	.LVL29
+ 3342 0114 8A000000 		.4byte	.LVL41
+ 3343 0118 0400     		.2byte	0x4
+ 3344 011a F3       		.byte	0xf3
+ 3345 011b 01       		.uleb128 0x1
+ 3346 011c 50       		.byte	0x50
+ 3347 011d 9F       		.byte	0x9f
+ 3348 011e 8A000000 		.4byte	.LVL41
+ 3349 0122 8C000000 		.4byte	.LVL42
+ 3350 0126 0100     		.2byte	0x1
+ 3351 0128 50       		.byte	0x50
+ 3352 0129 8C000000 		.4byte	.LVL42
+ 3353 012d F8000000 		.4byte	.LVL53
+ 3354 0131 0400     		.2byte	0x4
+ 3355 0133 F3       		.byte	0xf3
+ 3356 0134 01       		.uleb128 0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 69
+
+
+ 3357 0135 50       		.byte	0x50
+ 3358 0136 9F       		.byte	0x9f
+ 3359 0137 F8000000 		.4byte	.LVL53
+ 3360 013b FA000000 		.4byte	.LVL54
+ 3361 013f 0100     		.2byte	0x1
+ 3362 0141 50       		.byte	0x50
+ 3363 0142 FA000000 		.4byte	.LVL54
+ 3364 0146 7E010000 		.4byte	.LVL68
+ 3365 014a 0400     		.2byte	0x4
+ 3366 014c F3       		.byte	0xf3
+ 3367 014d 01       		.uleb128 0x1
+ 3368 014e 50       		.byte	0x50
+ 3369 014f 9F       		.byte	0x9f
+ 3370 0150 7E010000 		.4byte	.LVL68
+ 3371 0154 80010000 		.4byte	.LVL69
+ 3372 0158 0100     		.2byte	0x1
+ 3373 015a 50       		.byte	0x50
+ 3374 015b 80010000 		.4byte	.LVL69
+ 3375 015f 8E010000 		.4byte	.LFE68
+ 3376 0163 0400     		.2byte	0x4
+ 3377 0165 F3       		.byte	0xf3
+ 3378 0166 01       		.uleb128 0x1
+ 3379 0167 50       		.byte	0x50
+ 3380 0168 9F       		.byte	0x9f
+ 3381 0169 00000000 		.4byte	0
+ 3382 016d 00000000 		.4byte	0
+ 3383              	.LLST9:
+ 3384 0171 00000000 		.4byte	.LVL27
+ 3385 0175 66010000 		.4byte	.LVL64
+ 3386 0179 0100     		.2byte	0x1
+ 3387 017b 51       		.byte	0x51
+ 3388 017c 66010000 		.4byte	.LVL64
+ 3389 0180 7E010000 		.4byte	.LVL68
+ 3390 0184 0400     		.2byte	0x4
+ 3391 0186 F3       		.byte	0xf3
+ 3392 0187 01       		.uleb128 0x1
+ 3393 0188 51       		.byte	0x51
+ 3394 0189 9F       		.byte	0x9f
+ 3395 018a 7E010000 		.4byte	.LVL68
+ 3396 018e 8E010000 		.4byte	.LFE68
+ 3397 0192 0100     		.2byte	0x1
+ 3398 0194 51       		.byte	0x51
+ 3399 0195 00000000 		.4byte	0
+ 3400 0199 00000000 		.4byte	0
+ 3401              	.LLST10:
+ 3402 019d 32000000 		.4byte	.LVL30
+ 3403 01a1 42000000 		.4byte	.LVL32
+ 3404 01a5 0200     		.2byte	0x2
+ 3405 01a7 37       		.byte	0x37
+ 3406 01a8 9F       		.byte	0x9f
+ 3407 01a9 42000000 		.4byte	.LVL32
+ 3408 01ad 52000000 		.4byte	.LVL34
+ 3409 01b1 0200     		.2byte	0x2
+ 3410 01b3 33       		.byte	0x33
+ 3411 01b4 9F       		.byte	0x9f
+ 3412 01b5 52000000 		.4byte	.LVL34
+ 3413 01b9 6A000000 		.4byte	.LVL37
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 70
+
+
+ 3414 01bd 0200     		.2byte	0x2
+ 3415 01bf 31       		.byte	0x31
+ 3416 01c0 9F       		.byte	0x9f
+ 3417 01c1 6A000000 		.4byte	.LVL37
+ 3418 01c5 8A000000 		.4byte	.LVL41
+ 3419 01c9 0200     		.2byte	0x2
+ 3420 01cb 30       		.byte	0x30
+ 3421 01cc 9F       		.byte	0x9f
+ 3422 01cd AA000000 		.4byte	.LVL43
+ 3423 01d1 B2000000 		.4byte	.LVL44
+ 3424 01d5 0200     		.2byte	0x2
+ 3425 01d7 3F       		.byte	0x3f
+ 3426 01d8 9F       		.byte	0x9f
+ 3427 01d9 B2000000 		.4byte	.LVL44
+ 3428 01dd BA000000 		.4byte	.LVL45
+ 3429 01e1 0200     		.2byte	0x2
+ 3430 01e3 37       		.byte	0x37
+ 3431 01e4 9F       		.byte	0x9f
+ 3432 01e5 C0000000 		.4byte	.LVL46
+ 3433 01e9 D8000000 		.4byte	.LVL49
+ 3434 01ed 0200     		.2byte	0x2
+ 3435 01ef 33       		.byte	0x33
+ 3436 01f0 9F       		.byte	0x9f
+ 3437 01f1 D8000000 		.4byte	.LVL49
+ 3438 01f5 E0000000 		.4byte	.LVL50
+ 3439 01f9 0200     		.2byte	0x2
+ 3440 01fb 31       		.byte	0x31
+ 3441 01fc 9F       		.byte	0x9f
+ 3442 01fd E0000000 		.4byte	.LVL50
+ 3443 0201 E8000000 		.4byte	.LVL51
+ 3444 0205 0300     		.2byte	0x3
+ 3445 0207 08       		.byte	0x8
+ 3446 0208 41       		.byte	0x41
+ 3447 0209 9F       		.byte	0x9f
+ 3448 020a E8000000 		.4byte	.LVL51
+ 3449 020e F8000000 		.4byte	.LVL53
+ 3450 0212 0200     		.2byte	0x2
+ 3451 0214 30       		.byte	0x30
+ 3452 0215 9F       		.byte	0x9f
+ 3453 0216 14010000 		.4byte	.LVL55
+ 3454 021a 24010000 		.4byte	.LVL57
+ 3455 021e 0200     		.2byte	0x2
+ 3456 0220 34       		.byte	0x34
+ 3457 0221 9F       		.byte	0x9f
+ 3458 0222 24010000 		.4byte	.LVL57
+ 3459 0226 2C010000 		.4byte	.LVL58
+ 3460 022a 0200     		.2byte	0x2
+ 3461 022c 33       		.byte	0x33
+ 3462 022d 9F       		.byte	0x9f
+ 3463 022e 2C010000 		.4byte	.LVL58
+ 3464 0232 34010000 		.4byte	.LVL59
+ 3465 0236 0200     		.2byte	0x2
+ 3466 0238 31       		.byte	0x31
+ 3467 0239 9F       		.byte	0x9f
+ 3468 023a 34010000 		.4byte	.LVL59
+ 3469 023e 3C010000 		.4byte	.LVL60
+ 3470 0242 0300     		.2byte	0x3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 71
+
+
+ 3471 0244 08       		.byte	0x8
+ 3472 0245 41       		.byte	0x41
+ 3473 0246 9F       		.byte	0x9f
+ 3474 0247 3C010000 		.4byte	.LVL60
+ 3475 024b 4C010000 		.4byte	.LVL62
+ 3476 024f 0200     		.2byte	0x2
+ 3477 0251 30       		.byte	0x30
+ 3478 0252 9F       		.byte	0x9f
+ 3479 0253 62010000 		.4byte	.LVL63
+ 3480 0257 69010000 		.4byte	.LVL65-1
+ 3481 025b 0100     		.2byte	0x1
+ 3482 025d 53       		.byte	0x53
+ 3483 025e 00000000 		.4byte	0
+ 3484 0262 00000000 		.4byte	0
+ 3485              	.LLST11:
+ 3486 0266 32000000 		.4byte	.LVL30
+ 3487 026a 3A000000 		.4byte	.LVL31
+ 3488 026e 0300     		.2byte	0x3
+ 3489 0270 09       		.byte	0x9
+ 3490 0271 BF       		.byte	0xbf
+ 3491 0272 9F       		.byte	0x9f
+ 3492 0273 3A000000 		.4byte	.LVL31
+ 3493 0277 42000000 		.4byte	.LVL32
+ 3494 027b 0300     		.2byte	0x3
+ 3495 027d 09       		.byte	0x9
+ 3496 027e A4       		.byte	0xa4
+ 3497 027f 9F       		.byte	0x9f
+ 3498 0280 42000000 		.4byte	.LVL32
+ 3499 0284 4A000000 		.4byte	.LVL33
+ 3500 0288 0300     		.2byte	0x3
+ 3501 028a 09       		.byte	0x9
+ 3502 028b BF       		.byte	0xbf
+ 3503 028c 9F       		.byte	0x9f
+ 3504 028d 4A000000 		.4byte	.LVL33
+ 3505 0291 52000000 		.4byte	.LVL34
+ 3506 0295 0300     		.2byte	0x3
+ 3507 0297 09       		.byte	0x9
+ 3508 0298 B4       		.byte	0xb4
+ 3509 0299 9F       		.byte	0x9f
+ 3510 029a 52000000 		.4byte	.LVL34
+ 3511 029e 5A000000 		.4byte	.LVL35
+ 3512 02a2 0300     		.2byte	0x3
+ 3513 02a4 09       		.byte	0x9
+ 3514 02a5 BF       		.byte	0xbf
+ 3515 02a6 9F       		.byte	0x9f
+ 3516 02a7 5A000000 		.4byte	.LVL35
+ 3517 02ab 62000000 		.4byte	.LVL36
+ 3518 02af 0300     		.2byte	0x3
+ 3519 02b1 09       		.byte	0x9
+ 3520 02b2 B4       		.byte	0xb4
+ 3521 02b3 9F       		.byte	0x9f
+ 3522 02b4 62000000 		.4byte	.LVL36
+ 3523 02b8 6A000000 		.4byte	.LVL37
+ 3524 02bc 0300     		.2byte	0x3
+ 3525 02be 09       		.byte	0x9
+ 3526 02bf B1       		.byte	0xb1
+ 3527 02c0 9F       		.byte	0x9f
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 72
+
+
+ 3528 02c1 6A000000 		.4byte	.LVL37
+ 3529 02c5 72000000 		.4byte	.LVL38
+ 3530 02c9 0300     		.2byte	0x3
+ 3531 02cb 09       		.byte	0x9
+ 3532 02cc B4       		.byte	0xb4
+ 3533 02cd 9F       		.byte	0x9f
+ 3534 02ce 72000000 		.4byte	.LVL38
+ 3535 02d2 7A000000 		.4byte	.LVL39
+ 3536 02d6 0300     		.2byte	0x3
+ 3537 02d8 09       		.byte	0x9
+ 3538 02d9 B1       		.byte	0xb1
+ 3539 02da 9F       		.byte	0x9f
+ 3540 02db 7A000000 		.4byte	.LVL39
+ 3541 02df 82000000 		.4byte	.LVL40
+ 3542 02e3 0300     		.2byte	0x3
+ 3543 02e5 09       		.byte	0x9
+ 3544 02e6 90       		.byte	0x90
+ 3545 02e7 9F       		.byte	0x9f
+ 3546 02e8 82000000 		.4byte	.LVL40
+ 3547 02ec 8A000000 		.4byte	.LVL41
+ 3548 02f0 0300     		.2byte	0x3
+ 3549 02f2 09       		.byte	0x9
+ 3550 02f3 80       		.byte	0x80
+ 3551 02f4 9F       		.byte	0x9f
+ 3552 02f5 AA000000 		.4byte	.LVL43
+ 3553 02f9 BA000000 		.4byte	.LVL45
+ 3554 02fd 0300     		.2byte	0x3
+ 3555 02ff 09       		.byte	0x9
+ 3556 0300 FF       		.byte	0xff
+ 3557 0301 9F       		.byte	0x9f
+ 3558 0302 BA000000 		.4byte	.LVL45
+ 3559 0306 C0000000 		.4byte	.LVL46
+ 3560 030a 0300     		.2byte	0x3
+ 3561 030c 09       		.byte	0x9
+ 3562 030d FA       		.byte	0xfa
+ 3563 030e 9F       		.byte	0x9f
+ 3564 030f C0000000 		.4byte	.LVL46
+ 3565 0313 C8000000 		.4byte	.LVL47
+ 3566 0317 0300     		.2byte	0x3
+ 3567 0319 09       		.byte	0x9
+ 3568 031a FF       		.byte	0xff
+ 3569 031b 9F       		.byte	0x9f
+ 3570 031c C8000000 		.4byte	.LVL47
+ 3571 0320 D0000000 		.4byte	.LVL48
+ 3572 0324 0300     		.2byte	0x3
+ 3573 0326 09       		.byte	0x9
+ 3574 0327 FA       		.byte	0xfa
+ 3575 0328 9F       		.byte	0x9f
+ 3576 0329 D0000000 		.4byte	.LVL48
+ 3577 032d D8000000 		.4byte	.LVL49
+ 3578 0331 0300     		.2byte	0x3
+ 3579 0333 09       		.byte	0x9
+ 3580 0334 F0       		.byte	0xf0
+ 3581 0335 9F       		.byte	0x9f
+ 3582 0336 D8000000 		.4byte	.LVL49
+ 3583 033a E0000000 		.4byte	.LVL50
+ 3584 033e 0300     		.2byte	0x3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 73
+
+
+ 3585 0340 09       		.byte	0x9
+ 3586 0341 FA       		.byte	0xfa
+ 3587 0342 9F       		.byte	0x9f
+ 3588 0343 E0000000 		.4byte	.LVL50
+ 3589 0347 E8000000 		.4byte	.LVL51
+ 3590 034b 0300     		.2byte	0x3
+ 3591 034d 09       		.byte	0x9
+ 3592 034e F1       		.byte	0xf1
+ 3593 034f 9F       		.byte	0x9f
+ 3594 0350 E8000000 		.4byte	.LVL51
+ 3595 0354 F0000000 		.4byte	.LVL52
+ 3596 0358 0300     		.2byte	0x3
+ 3597 035a 09       		.byte	0x9
+ 3598 035b F0       		.byte	0xf0
+ 3599 035c 9F       		.byte	0x9f
+ 3600 035d F0000000 		.4byte	.LVL52
+ 3601 0361 F8000000 		.4byte	.LVL53
+ 3602 0365 0300     		.2byte	0x3
+ 3603 0367 09       		.byte	0x9
+ 3604 0368 D0       		.byte	0xd0
+ 3605 0369 9F       		.byte	0x9f
+ 3606 036a 14010000 		.4byte	.LVL55
+ 3607 036e 1C010000 		.4byte	.LVL56
+ 3608 0372 0300     		.2byte	0x3
+ 3609 0374 09       		.byte	0x9
+ 3610 0375 FF       		.byte	0xff
+ 3611 0376 9F       		.byte	0x9f
+ 3612 0377 1C010000 		.4byte	.LVL56
+ 3613 037b 2C010000 		.4byte	.LVL58
+ 3614 037f 0300     		.2byte	0x3
+ 3615 0381 09       		.byte	0x9
+ 3616 0382 FA       		.byte	0xfa
+ 3617 0383 9F       		.byte	0x9f
+ 3618 0384 2C010000 		.4byte	.LVL58
+ 3619 0388 34010000 		.4byte	.LVL59
+ 3620 038c 0300     		.2byte	0x3
+ 3621 038e 09       		.byte	0x9
+ 3622 038f FF       		.byte	0xff
+ 3623 0390 9F       		.byte	0x9f
+ 3624 0391 34010000 		.4byte	.LVL59
+ 3625 0395 3C010000 		.4byte	.LVL60
+ 3626 0399 0300     		.2byte	0x3
+ 3627 039b 09       		.byte	0x9
+ 3628 039c FB       		.byte	0xfb
+ 3629 039d 9F       		.byte	0x9f
+ 3630 039e 3C010000 		.4byte	.LVL60
+ 3631 03a2 44010000 		.4byte	.LVL61
+ 3632 03a6 0300     		.2byte	0x3
+ 3633 03a8 09       		.byte	0x9
+ 3634 03a9 FA       		.byte	0xfa
+ 3635 03aa 9F       		.byte	0x9f
+ 3636 03ab 44010000 		.4byte	.LVL61
+ 3637 03af 4C010000 		.4byte	.LVL62
+ 3638 03b3 0300     		.2byte	0x3
+ 3639 03b5 09       		.byte	0x9
+ 3640 03b6 D9       		.byte	0xd9
+ 3641 03b7 9F       		.byte	0x9f
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 74
+
+
+ 3642 03b8 62010000 		.4byte	.LVL63
+ 3643 03bc 7E010000 		.4byte	.LVL68
+ 3644 03c0 0100     		.2byte	0x1
+ 3645 03c2 55       		.byte	0x55
+ 3646 03c3 00000000 		.4byte	0
+ 3647 03c7 00000000 		.4byte	0
+ 3648              	.LLST12:
+ 3649 03cb 32000000 		.4byte	.LVL30
+ 3650 03cf 3A000000 		.4byte	.LVL31
+ 3651 03d3 0300     		.2byte	0x3
+ 3652 03d5 09       		.byte	0x9
+ 3653 03d6 87       		.byte	0x87
+ 3654 03d7 9F       		.byte	0x9f
+ 3655 03d8 3A000000 		.4byte	.LVL31
+ 3656 03dc 42000000 		.4byte	.LVL32
+ 3657 03e0 0300     		.2byte	0x3
+ 3658 03e2 09       		.byte	0x9
+ 3659 03e3 84       		.byte	0x84
+ 3660 03e4 9F       		.byte	0x9f
+ 3661 03e5 42000000 		.4byte	.LVL32
+ 3662 03e9 4A000000 		.4byte	.LVL33
+ 3663 03ed 0300     		.2byte	0x3
+ 3664 03ef 09       		.byte	0x9
+ 3665 03f0 87       		.byte	0x87
+ 3666 03f1 9F       		.byte	0x9f
+ 3667 03f2 4A000000 		.4byte	.LVL33
+ 3668 03f6 52000000 		.4byte	.LVL34
+ 3669 03fa 0300     		.2byte	0x3
+ 3670 03fc 09       		.byte	0x9
+ 3671 03fd 86       		.byte	0x86
+ 3672 03fe 9F       		.byte	0x9f
+ 3673 03ff 52000000 		.4byte	.LVL34
+ 3674 0403 5A000000 		.4byte	.LVL35
+ 3675 0407 0300     		.2byte	0x3
+ 3676 0409 09       		.byte	0x9
+ 3677 040a 87       		.byte	0x87
+ 3678 040b 9F       		.byte	0x9f
+ 3679 040c 5A000000 		.4byte	.LVL35
+ 3680 0410 62000000 		.4byte	.LVL36
+ 3681 0414 0300     		.2byte	0x3
+ 3682 0416 09       		.byte	0x9
+ 3683 0417 86       		.byte	0x86
+ 3684 0418 9F       		.byte	0x9f
+ 3685 0419 62000000 		.4byte	.LVL36
+ 3686 041d 6A000000 		.4byte	.LVL37
+ 3687 0421 0300     		.2byte	0x3
+ 3688 0423 09       		.byte	0x9
+ 3689 0424 85       		.byte	0x85
+ 3690 0425 9F       		.byte	0x9f
+ 3691 0426 6A000000 		.4byte	.LVL37
+ 3692 042a 72000000 		.4byte	.LVL38
+ 3693 042e 0300     		.2byte	0x3
+ 3694 0430 09       		.byte	0x9
+ 3695 0431 86       		.byte	0x86
+ 3696 0432 9F       		.byte	0x9f
+ 3697 0433 72000000 		.4byte	.LVL38
+ 3698 0437 7A000000 		.4byte	.LVL39
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 75
+
+
+ 3699 043b 0300     		.2byte	0x3
+ 3700 043d 09       		.byte	0x9
+ 3701 043e 85       		.byte	0x85
+ 3702 043f 9F       		.byte	0x9f
+ 3703 0440 7A000000 		.4byte	.LVL39
+ 3704 0444 82000000 		.4byte	.LVL40
+ 3705 0448 0300     		.2byte	0x3
+ 3706 044a 09       		.byte	0x9
+ 3707 044b 82       		.byte	0x82
+ 3708 044c 9F       		.byte	0x9f
+ 3709 044d 82000000 		.4byte	.LVL40
+ 3710 0451 8A000000 		.4byte	.LVL41
+ 3711 0455 0300     		.2byte	0x3
+ 3712 0457 09       		.byte	0x9
+ 3713 0458 80       		.byte	0x80
+ 3714 0459 9F       		.byte	0x9f
+ 3715 045a AA000000 		.4byte	.LVL43
+ 3716 045e D0000000 		.4byte	.LVL48
+ 3717 0462 0300     		.2byte	0x3
+ 3718 0464 09       		.byte	0x9
+ 3719 0465 87       		.byte	0x87
+ 3720 0466 9F       		.byte	0x9f
+ 3721 0467 D0000000 		.4byte	.LVL48
+ 3722 046b D8000000 		.4byte	.LVL49
+ 3723 046f 0300     		.2byte	0x3
+ 3724 0471 09       		.byte	0x9
+ 3725 0472 86       		.byte	0x86
+ 3726 0473 9F       		.byte	0x9f
+ 3727 0474 D8000000 		.4byte	.LVL49
+ 3728 0478 E0000000 		.4byte	.LVL50
+ 3729 047c 0300     		.2byte	0x3
+ 3730 047e 09       		.byte	0x9
+ 3731 047f 87       		.byte	0x87
+ 3732 0480 9F       		.byte	0x9f
+ 3733 0481 E0000000 		.4byte	.LVL50
+ 3734 0485 E8000000 		.4byte	.LVL51
+ 3735 0489 0300     		.2byte	0x3
+ 3736 048b 09       		.byte	0x9
+ 3737 048c 85       		.byte	0x85
+ 3738 048d 9F       		.byte	0x9f
+ 3739 048e E8000000 		.4byte	.LVL51
+ 3740 0492 F0000000 		.4byte	.LVL52
+ 3741 0496 0300     		.2byte	0x3
+ 3742 0498 09       		.byte	0x9
+ 3743 0499 86       		.byte	0x86
+ 3744 049a 9F       		.byte	0x9f
+ 3745 049b F0000000 		.4byte	.LVL52
+ 3746 049f F8000000 		.4byte	.LVL53
+ 3747 04a3 0300     		.2byte	0x3
+ 3748 04a5 09       		.byte	0x9
+ 3749 04a6 82       		.byte	0x82
+ 3750 04a7 9F       		.byte	0x9f
+ 3751 04a8 14010000 		.4byte	.LVL55
+ 3752 04ac 34010000 		.4byte	.LVL59
+ 3753 04b0 0300     		.2byte	0x3
+ 3754 04b2 09       		.byte	0x9
+ 3755 04b3 87       		.byte	0x87
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 76
+
+
+ 3756 04b4 9F       		.byte	0x9f
+ 3757 04b5 34010000 		.4byte	.LVL59
+ 3758 04b9 3C010000 		.4byte	.LVL60
+ 3759 04bd 0300     		.2byte	0x3
+ 3760 04bf 09       		.byte	0x9
+ 3761 04c0 86       		.byte	0x86
+ 3762 04c1 9F       		.byte	0x9f
+ 3763 04c2 3C010000 		.4byte	.LVL60
+ 3764 04c6 44010000 		.4byte	.LVL61
+ 3765 04ca 0300     		.2byte	0x3
+ 3766 04cc 09       		.byte	0x9
+ 3767 04cd 87       		.byte	0x87
+ 3768 04ce 9F       		.byte	0x9f
+ 3769 04cf 44010000 		.4byte	.LVL61
+ 3770 04d3 4C010000 		.4byte	.LVL62
+ 3771 04d7 0300     		.2byte	0x3
+ 3772 04d9 09       		.byte	0x9
+ 3773 04da 82       		.byte	0x82
+ 3774 04db 9F       		.byte	0x9f
+ 3775 04dc 62010000 		.4byte	.LVL63
+ 3776 04e0 7E010000 		.4byte	.LVL68
+ 3777 04e4 0100     		.2byte	0x1
+ 3778 04e6 54       		.byte	0x54
+ 3779 04e7 00000000 		.4byte	0
+ 3780 04eb 00000000 		.4byte	0
+ 3781              	.LLST13:
+ 3782 04ef 00000000 		.4byte	.LVL70
+ 3783 04f3 0A000000 		.4byte	.LVL71
+ 3784 04f7 0100     		.2byte	0x1
+ 3785 04f9 50       		.byte	0x50
+ 3786 04fa 0A000000 		.4byte	.LVL71
+ 3787 04fe 2E000000 		.4byte	.LFE69
+ 3788 0502 0400     		.2byte	0x4
+ 3789 0504 F3       		.byte	0xf3
+ 3790 0505 01       		.uleb128 0x1
+ 3791 0506 50       		.byte	0x50
+ 3792 0507 9F       		.byte	0x9f
+ 3793 0508 00000000 		.4byte	0
+ 3794 050c 00000000 		.4byte	0
+ 3795              	.LLST14:
+ 3796 0510 00000000 		.4byte	.LVL70
+ 3797 0514 0D000000 		.4byte	.LVL72-1
+ 3798 0518 0100     		.2byte	0x1
+ 3799 051a 51       		.byte	0x51
+ 3800 051b 0D000000 		.4byte	.LVL72-1
+ 3801 051f 2E000000 		.4byte	.LFE69
+ 3802 0523 0100     		.2byte	0x1
+ 3803 0525 56       		.byte	0x56
+ 3804 0526 00000000 		.4byte	0
+ 3805 052a 00000000 		.4byte	0
+ 3806              	.LLST15:
+ 3807 052e 00000000 		.4byte	.LVL70
+ 3808 0532 0D000000 		.4byte	.LVL72-1
+ 3809 0536 0100     		.2byte	0x1
+ 3810 0538 52       		.byte	0x52
+ 3811 0539 0D000000 		.4byte	.LVL72-1
+ 3812 053d 2E000000 		.4byte	.LFE69
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 77
+
+
+ 3813 0541 0400     		.2byte	0x4
+ 3814 0543 F3       		.byte	0xf3
+ 3815 0544 01       		.uleb128 0x1
+ 3816 0545 52       		.byte	0x52
+ 3817 0546 9F       		.byte	0x9f
+ 3818 0547 00000000 		.4byte	0
+ 3819 054b 00000000 		.4byte	0
+ 3820              	.LLST16:
+ 3821 054f 14000000 		.4byte	.LVL73
+ 3822 0553 18000000 		.4byte	.LVL74
+ 3823 0557 0200     		.2byte	0x2
+ 3824 0559 30       		.byte	0x30
+ 3825 055a 9F       		.byte	0x9f
+ 3826 055b 18000000 		.4byte	.LVL74
+ 3827 055f 20000000 		.4byte	.LVL76
+ 3828 0563 0100     		.2byte	0x1
+ 3829 0565 54       		.byte	0x54
+ 3830 0566 22000000 		.4byte	.LVL77
+ 3831 056a 2E000000 		.4byte	.LFE69
+ 3832 056e 0100     		.2byte	0x1
+ 3833 0570 54       		.byte	0x54
+ 3834 0571 00000000 		.4byte	0
+ 3835 0575 00000000 		.4byte	0
+ 3836              	.LLST17:
+ 3837 0579 00000000 		.4byte	.LVL79
+ 3838 057d 57000000 		.4byte	.LVL90-1
+ 3839 0581 0100     		.2byte	0x1
+ 3840 0583 50       		.byte	0x50
+ 3841 0584 57000000 		.4byte	.LVL90-1
+ 3842 0588 5E000000 		.4byte	.LFE70
+ 3843 058c 0400     		.2byte	0x4
+ 3844 058e F3       		.byte	0xf3
+ 3845 058f 01       		.uleb128 0x1
+ 3846 0590 50       		.byte	0x50
+ 3847 0591 9F       		.byte	0x9f
+ 3848 0592 00000000 		.4byte	0
+ 3849 0596 00000000 		.4byte	0
+ 3850              	.LLST18:
+ 3851 059a 00000000 		.4byte	.LVL79
+ 3852 059e 1C000000 		.4byte	.LVL83
+ 3853 05a2 0100     		.2byte	0x1
+ 3854 05a4 51       		.byte	0x51
+ 3855 05a5 1C000000 		.4byte	.LVL83
+ 3856 05a9 36000000 		.4byte	.LVL85
+ 3857 05ad 0400     		.2byte	0x4
+ 3858 05af F3       		.byte	0xf3
+ 3859 05b0 01       		.uleb128 0x1
+ 3860 05b1 51       		.byte	0x51
+ 3861 05b2 9F       		.byte	0x9f
+ 3862 05b3 36000000 		.4byte	.LVL85
+ 3863 05b7 50000000 		.4byte	.LVL89
+ 3864 05bb 0100     		.2byte	0x1
+ 3865 05bd 51       		.byte	0x51
+ 3866 05be 50000000 		.4byte	.LVL89
+ 3867 05c2 5E000000 		.4byte	.LFE70
+ 3868 05c6 0400     		.2byte	0x4
+ 3869 05c8 F3       		.byte	0xf3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 78
+
+
+ 3870 05c9 01       		.uleb128 0x1
+ 3871 05ca 51       		.byte	0x51
+ 3872 05cb 9F       		.byte	0x9f
+ 3873 05cc 00000000 		.4byte	0
+ 3874 05d0 00000000 		.4byte	0
+ 3875              	.LLST19:
+ 3876 05d4 00000000 		.4byte	.LVL79
+ 3877 05d8 16000000 		.4byte	.LVL82
+ 3878 05dc 0100     		.2byte	0x1
+ 3879 05de 52       		.byte	0x52
+ 3880 05df 16000000 		.4byte	.LVL82
+ 3881 05e3 36000000 		.4byte	.LVL85
+ 3882 05e7 0400     		.2byte	0x4
+ 3883 05e9 F3       		.byte	0xf3
+ 3884 05ea 01       		.uleb128 0x1
+ 3885 05eb 52       		.byte	0x52
+ 3886 05ec 9F       		.byte	0x9f
+ 3887 05ed 36000000 		.4byte	.LVL85
+ 3888 05f1 42000000 		.4byte	.LVL87
+ 3889 05f5 0100     		.2byte	0x1
+ 3890 05f7 52       		.byte	0x52
+ 3891 05f8 42000000 		.4byte	.LVL87
+ 3892 05fc 5E000000 		.4byte	.LFE70
+ 3893 0600 0400     		.2byte	0x4
+ 3894 0602 F3       		.byte	0xf3
+ 3895 0603 01       		.uleb128 0x1
+ 3896 0604 52       		.byte	0x52
+ 3897 0605 9F       		.byte	0x9f
+ 3898 0606 00000000 		.4byte	0
+ 3899 060a 00000000 		.4byte	0
+ 3900              	.LLST20:
+ 3901 060e 06000000 		.4byte	.LVL80
+ 3902 0612 10000000 		.4byte	.LVL81
+ 3903 0616 0100     		.2byte	0x1
+ 3904 0618 53       		.byte	0x53
+ 3905 0619 10000000 		.4byte	.LVL81
+ 3906 061d 30000000 		.4byte	.LVL84
+ 3907 0621 0100     		.2byte	0x1
+ 3908 0623 52       		.byte	0x52
+ 3909 0624 30000000 		.4byte	.LVL84
+ 3910 0628 36000000 		.4byte	.LVL85
+ 3911 062c 0600     		.2byte	0x6
+ 3912 062e F3       		.byte	0xf3
+ 3913 062f 01       		.uleb128 0x1
+ 3914 0630 52       		.byte	0x52
+ 3915 0631 40       		.byte	0x40
+ 3916 0632 25       		.byte	0x25
+ 3917 0633 9F       		.byte	0x9f
+ 3918 0634 36000000 		.4byte	.LVL85
+ 3919 0638 3C000000 		.4byte	.LVL86
+ 3920 063c 0100     		.2byte	0x1
+ 3921 063e 53       		.byte	0x53
+ 3922 063f 3C000000 		.4byte	.LVL86
+ 3923 0643 4C000000 		.4byte	.LVL88
+ 3924 0647 0100     		.2byte	0x1
+ 3925 0649 52       		.byte	0x52
+ 3926 064a 4C000000 		.4byte	.LVL88
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 79
+
+
+ 3927 064e 50000000 		.4byte	.LVL89
+ 3928 0652 0600     		.2byte	0x6
+ 3929 0654 F3       		.byte	0xf3
+ 3930 0655 01       		.uleb128 0x1
+ 3931 0656 52       		.byte	0x52
+ 3932 0657 40       		.byte	0x40
+ 3933 0658 25       		.byte	0x25
+ 3934 0659 9F       		.byte	0x9f
+ 3935 065a 00000000 		.4byte	0
+ 3936 065e 00000000 		.4byte	0
+ 3937              	.LLST21:
+ 3938 0662 52000000 		.4byte	.LVL99
+ 3939 0666 5C000000 		.4byte	.LVL100
+ 3940 066a 0200     		.2byte	0x2
+ 3941 066c 30       		.byte	0x30
+ 3942 066d 9F       		.byte	0x9f
+ 3943 066e 5C000000 		.4byte	.LVL100
+ 3944 0672 82000000 		.4byte	.LVL110
+ 3945 0676 0100     		.2byte	0x1
+ 3946 0678 54       		.byte	0x54
+ 3947 0679 84000000 		.4byte	.LVL111
+ 3948 067d 9A000000 		.4byte	.LFE71
+ 3949 0681 0100     		.2byte	0x1
+ 3950 0683 54       		.byte	0x54
+ 3951 0684 00000000 		.4byte	0
+ 3952 0688 00000000 		.4byte	0
+ 3953              	.LLST22:
+ 3954 068c 52000000 		.4byte	.LVL99
+ 3955 0690 5C000000 		.4byte	.LVL100
+ 3956 0694 0300     		.2byte	0x3
+ 3957 0696 08       		.byte	0x8
+ 3958 0697 30       		.byte	0x30
+ 3959 0698 9F       		.byte	0x9f
+ 3960 0699 5C000000 		.4byte	.LVL100
+ 3961 069d 76000000 		.4byte	.LVL104
+ 3962 06a1 0100     		.2byte	0x1
+ 3963 06a3 55       		.byte	0x55
+ 3964 06a4 78000000 		.4byte	.LVL105
+ 3965 06a8 9A000000 		.4byte	.LFE71
+ 3966 06ac 0100     		.2byte	0x1
+ 3967 06ae 55       		.byte	0x55
+ 3968 06af 00000000 		.4byte	0
+ 3969 06b3 00000000 		.4byte	0
+ 3970              	.LLST23:
+ 3971 06b7 52000000 		.4byte	.LVL99
+ 3972 06bb 5C000000 		.4byte	.LVL100
+ 3973 06bf 0300     		.2byte	0x3
+ 3974 06c1 08       		.byte	0x8
+ 3975 06c2 40       		.byte	0x40
+ 3976 06c3 9F       		.byte	0x9f
+ 3977 06c4 5C000000 		.4byte	.LVL100
+ 3978 06c8 7A000000 		.4byte	.LVL106
+ 3979 06cc 0100     		.2byte	0x1
+ 3980 06ce 56       		.byte	0x56
+ 3981 06cf 7C000000 		.4byte	.LVL107
+ 3982 06d3 9A000000 		.4byte	.LFE71
+ 3983 06d7 0100     		.2byte	0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 80
+
+
+ 3984 06d9 56       		.byte	0x56
+ 3985 06da 00000000 		.4byte	0
+ 3986 06de 00000000 		.4byte	0
+ 3987              	.LLST24:
+ 3988 06e2 52000000 		.4byte	.LVL99
+ 3989 06e6 5C000000 		.4byte	.LVL100
+ 3990 06ea 0300     		.2byte	0x3
+ 3991 06ec 08       		.byte	0x8
+ 3992 06ed 50       		.byte	0x50
+ 3993 06ee 9F       		.byte	0x9f
+ 3994 06ef 5C000000 		.4byte	.LVL100
+ 3995 06f3 7E000000 		.4byte	.LVL108
+ 3996 06f7 0100     		.2byte	0x1
+ 3997 06f9 57       		.byte	0x57
+ 3998 06fa 80000000 		.4byte	.LVL109
+ 3999 06fe 9A000000 		.4byte	.LFE71
+ 4000 0702 0100     		.2byte	0x1
+ 4001 0704 57       		.byte	0x57
+ 4002 0705 00000000 		.4byte	0
+ 4003 0709 00000000 		.4byte	0
+ 4004              	.LLST25:
+ 4005 070d 00000000 		.4byte	.LVL114
+ 4006 0711 0B000000 		.4byte	.LVL115-1
+ 4007 0715 0100     		.2byte	0x1
+ 4008 0717 50       		.byte	0x50
+ 4009 0718 0B000000 		.4byte	.LVL115-1
+ 4010 071c 88000000 		.4byte	.LFE72
+ 4011 0720 0400     		.2byte	0x4
+ 4012 0722 F3       		.byte	0xf3
+ 4013 0723 01       		.uleb128 0x1
+ 4014 0724 50       		.byte	0x50
+ 4015 0725 9F       		.byte	0x9f
+ 4016 0726 00000000 		.4byte	0
+ 4017 072a 00000000 		.4byte	0
+ 4018              	.LLST26:
+ 4019 072e 00000000 		.4byte	.LVL114
+ 4020 0732 0B000000 		.4byte	.LVL115-1
+ 4021 0736 0100     		.2byte	0x1
+ 4022 0738 51       		.byte	0x51
+ 4023 0739 0B000000 		.4byte	.LVL115-1
+ 4024 073d 88000000 		.4byte	.LFE72
+ 4025 0741 0400     		.2byte	0x4
+ 4026 0743 F3       		.byte	0xf3
+ 4027 0744 01       		.uleb128 0x1
+ 4028 0745 51       		.byte	0x51
+ 4029 0746 9F       		.byte	0x9f
+ 4030 0747 00000000 		.4byte	0
+ 4031 074b 00000000 		.4byte	0
+ 4032              	.LLST27:
+ 4033 074f 00000000 		.4byte	.LVL114
+ 4034 0753 0B000000 		.4byte	.LVL115-1
+ 4035 0757 0100     		.2byte	0x1
+ 4036 0759 52       		.byte	0x52
+ 4037 075a 0B000000 		.4byte	.LVL115-1
+ 4038 075e 88000000 		.4byte	.LFE72
+ 4039 0762 0400     		.2byte	0x4
+ 4040 0764 F3       		.byte	0xf3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 81
+
+
+ 4041 0765 01       		.uleb128 0x1
+ 4042 0766 52       		.byte	0x52
+ 4043 0767 9F       		.byte	0x9f
+ 4044 0768 00000000 		.4byte	0
+ 4045 076c 00000000 		.4byte	0
+ 4046              	.LLST28:
+ 4047 0770 1A000000 		.4byte	.LVL117
+ 4048 0774 84000000 		.4byte	.LVL131
+ 4049 0778 0100     		.2byte	0x1
+ 4050 077a 54       		.byte	0x54
+ 4051 077b 84000000 		.4byte	.LVL131
+ 4052 077f 88000000 		.4byte	.LFE72
+ 4053 0783 0100     		.2byte	0x1
+ 4054 0785 50       		.byte	0x50
+ 4055 0786 00000000 		.4byte	0
+ 4056 078a 00000000 		.4byte	0
+ 4057              	.LLST29:
+ 4058 078e 00000000 		.4byte	.LVL132
+ 4059 0792 05000000 		.4byte	.LVL133-1
+ 4060 0796 0100     		.2byte	0x1
+ 4061 0798 50       		.byte	0x50
+ 4062 0799 05000000 		.4byte	.LVL133-1
+ 4063 079d 0C000000 		.4byte	.LFE73
+ 4064 07a1 0400     		.2byte	0x4
+ 4065 07a3 F3       		.byte	0xf3
+ 4066 07a4 01       		.uleb128 0x1
+ 4067 07a5 50       		.byte	0x50
+ 4068 07a6 9F       		.byte	0x9f
+ 4069 07a7 00000000 		.4byte	0
+ 4070 07ab 00000000 		.4byte	0
+ 4071              	.LLST30:
+ 4072 07af 00000000 		.4byte	.LVL132
+ 4073 07b3 05000000 		.4byte	.LVL133-1
+ 4074 07b7 0100     		.2byte	0x1
+ 4075 07b9 51       		.byte	0x51
+ 4076 07ba 05000000 		.4byte	.LVL133-1
+ 4077 07be 0C000000 		.4byte	.LFE73
+ 4078 07c2 0400     		.2byte	0x4
+ 4079 07c4 F3       		.byte	0xf3
+ 4080 07c5 01       		.uleb128 0x1
+ 4081 07c6 51       		.byte	0x51
+ 4082 07c7 9F       		.byte	0x9f
+ 4083 07c8 00000000 		.4byte	0
+ 4084 07cc 00000000 		.4byte	0
+ 4085              	.LLST31:
+ 4086 07d0 00000000 		.4byte	.LVL132
+ 4087 07d4 05000000 		.4byte	.LVL133-1
+ 4088 07d8 0100     		.2byte	0x1
+ 4089 07da 52       		.byte	0x52
+ 4090 07db 05000000 		.4byte	.LVL133-1
+ 4091 07df 0C000000 		.4byte	.LFE73
+ 4092 07e3 0400     		.2byte	0x4
+ 4093 07e5 F3       		.byte	0xf3
+ 4094 07e6 01       		.uleb128 0x1
+ 4095 07e7 52       		.byte	0x52
+ 4096 07e8 9F       		.byte	0x9f
+ 4097 07e9 00000000 		.4byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 82
+
+
+ 4098 07ed 00000000 		.4byte	0
+ 4099              	.LLST32:
+ 4100 07f1 06000000 		.4byte	.LVL133
+ 4101 07f5 0A000000 		.4byte	.LVL134
+ 4102 07f9 0100     		.2byte	0x1
+ 4103 07fb 50       		.byte	0x50
+ 4104 07fc 00000000 		.4byte	0
+ 4105 0800 00000000 		.4byte	0
+ 4106              		.section	.debug_aranges,"",%progbits
+ 4107 0000 74000000 		.4byte	0x74
+ 4108 0004 0200     		.2byte	0x2
+ 4109 0006 00000000 		.4byte	.Ldebug_info0
+ 4110 000a 04       		.byte	0x4
+ 4111 000b 00       		.byte	0
+ 4112 000c 0000     		.2byte	0
+ 4113 000e 0000     		.2byte	0
+ 4114 0010 00000000 		.4byte	.LFB63
+ 4115 0014 28000000 		.4byte	.LFE63-.LFB63
+ 4116 0018 00000000 		.4byte	.LFB64
+ 4117 001c 16000000 		.4byte	.LFE64-.LFB64
+ 4118 0020 00000000 		.4byte	.LFB65
+ 4119 0024 0A000000 		.4byte	.LFE65-.LFB65
+ 4120 0028 00000000 		.4byte	.LFB66
+ 4121 002c 24000000 		.4byte	.LFE66-.LFB66
+ 4122 0030 00000000 		.4byte	.LFB67
+ 4123 0034 20000000 		.4byte	.LFE67-.LFB67
+ 4124 0038 00000000 		.4byte	.LFB68
+ 4125 003c 8E010000 		.4byte	.LFE68-.LFB68
+ 4126 0040 00000000 		.4byte	.LFB69
+ 4127 0044 2E000000 		.4byte	.LFE69-.LFB69
+ 4128 0048 00000000 		.4byte	.LFB70
+ 4129 004c 5E000000 		.4byte	.LFE70-.LFB70
+ 4130 0050 00000000 		.4byte	.LFB71
+ 4131 0054 9A000000 		.4byte	.LFE71-.LFB71
+ 4132 0058 00000000 		.4byte	.LFB72
+ 4133 005c 88000000 		.4byte	.LFE72-.LFB72
+ 4134 0060 00000000 		.4byte	.LFB73
+ 4135 0064 0C000000 		.4byte	.LFE73-.LFB73
+ 4136 0068 00000000 		.4byte	.LFB74
+ 4137 006c 7C000000 		.4byte	.LFE74-.LFB74
+ 4138 0070 00000000 		.4byte	0
+ 4139 0074 00000000 		.4byte	0
+ 4140              		.section	.debug_ranges,"",%progbits
+ 4141              	.Ldebug_ranges0:
+ 4142 0000 00000000 		.4byte	.LFB63
+ 4143 0004 28000000 		.4byte	.LFE63
+ 4144 0008 00000000 		.4byte	.LFB64
+ 4145 000c 16000000 		.4byte	.LFE64
+ 4146 0010 00000000 		.4byte	.LFB65
+ 4147 0014 0A000000 		.4byte	.LFE65
+ 4148 0018 00000000 		.4byte	.LFB66
+ 4149 001c 24000000 		.4byte	.LFE66
+ 4150 0020 00000000 		.4byte	.LFB67
+ 4151 0024 20000000 		.4byte	.LFE67
+ 4152 0028 00000000 		.4byte	.LFB68
+ 4153 002c 8E010000 		.4byte	.LFE68
+ 4154 0030 00000000 		.4byte	.LFB69
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 83
+
+
+ 4155 0034 2E000000 		.4byte	.LFE69
+ 4156 0038 00000000 		.4byte	.LFB70
+ 4157 003c 5E000000 		.4byte	.LFE70
+ 4158 0040 00000000 		.4byte	.LFB71
+ 4159 0044 9A000000 		.4byte	.LFE71
+ 4160 0048 00000000 		.4byte	.LFB72
+ 4161 004c 88000000 		.4byte	.LFE72
+ 4162 0050 00000000 		.4byte	.LFB73
+ 4163 0054 0C000000 		.4byte	.LFE73
+ 4164 0058 00000000 		.4byte	.LFB74
+ 4165 005c 7C000000 		.4byte	.LFE74
+ 4166 0060 00000000 		.4byte	0
+ 4167 0064 00000000 		.4byte	0
+ 4168              		.section	.debug_line,"",%progbits
+ 4169              	.Ldebug_line0:
+ 4170 0000 A6030000 		.section	.debug_str,"MS",%progbits,1
+ 4170      02007001 
+ 4170      00000201 
+ 4170      FB0E0D00 
+ 4170      01010101 
+ 4171              	.LASF34:
+ 4172 0000 63616E43 		.ascii	"canClock\000"
+ 4172      6C6F636B 
+ 4172      00
+ 4173              	.LASF22:
+ 4174 0009 61646472 		.ascii	"address\000"
+ 4174      65737300 
+ 4175              	.LASF2:
+ 4176 0011 73686F72 		.ascii	"short int\000"
+ 4176      7420696E 
+ 4176      7400
+ 4177              	.LASF52:
+ 4178 001b 636C6F63 		.ascii	"clockset\000"
+ 4178      6B736574 
+ 4178      00
+ 4179              	.LASF30:
+ 4180 0024 6D637032 		.ascii	"mcp2515_setRegister\000"
+ 4180      3531355F 
+ 4180      73657452 
+ 4180      65676973 
+ 4180      74657200 
+ 4181              	.LASF21:
+ 4182 0038 73697A65 		.ascii	"sizetype\000"
+ 4182      74797065 
+ 4182      00
+ 4183              	.LASF41:
+ 4184 0041 6D63705F 		.ascii	"mcp_addr\000"
+ 4184      61646472 
+ 4184      00
+ 4185              	.LASF49:
+ 4186 004a 62656769 		.ascii	"begin\000"
+ 4186      6E00
+ 4187              	.LASF19:
+ 4188 0050 63686172 		.ascii	"char8\000"
+ 4188      3800
+ 4189              	.LASF53:
+ 4190 0056 6D61696E 		.ascii	"main\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 84
+
+
+ 4190      00
+ 4191              	.LASF28:
+ 4192 005b 6D637032 		.ascii	"mcp2515_setCANCTRL_Mode\000"
+ 4192      3531355F 
+ 4192      73657443 
+ 4192      414E4354 
+ 4192      524C5F4D 
+ 4193              	.LASF4:
+ 4194 0073 5F5F7569 		.ascii	"__uint16_t\000"
+ 4194      6E743136 
+ 4194      5F7400
+ 4195              	.LASF46:
+ 4196 007e 756C4669 		.ascii	"ulFilt\000"
+ 4196      6C7400
+ 4197              	.LASF69:
+ 4198 0085 4C43445F 		.ascii	"LCD_Char_1_Start\000"
+ 4198      43686172 
+ 4198      5F315F53 
+ 4198      74617274 
+ 4198      00
+ 4199              	.LASF31:
+ 4200 0096 76616C75 		.ascii	"value\000"
+ 4200      6500
+ 4201              	.LASF35:
+ 4202 009c 63666731 		.ascii	"cfg1\000"
+ 4202      00
+ 4203              	.LASF36:
+ 4204 00a1 63666732 		.ascii	"cfg2\000"
+ 4204      00
+ 4205              	.LASF37:
+ 4206 00a6 63666733 		.ascii	"cfg3\000"
+ 4206      00
+ 4207              	.LASF43:
+ 4208 00ab 74627566 		.ascii	"tbufdata\000"
+ 4208      64617461 
+ 4208      00
+ 4209              	.LASF51:
+ 4210 00b4 73706565 		.ascii	"speedset\000"
+ 4210      64736574 
+ 4210      00
+ 4211              	.LASF29:
+ 4212 00bd 6E65776D 		.ascii	"newmode\000"
+ 4212      6F646500 
+ 4213              	.LASF44:
+ 4214 00c5 6D637032 		.ascii	"mcp2515_initCANBuffers\000"
+ 4214      3531355F 
+ 4214      696E6974 
+ 4214      43414E42 
+ 4214      75666665 
+ 4215              	.LASF13:
+ 4216 00dc 75696E74 		.ascii	"uint8\000"
+ 4216      3800
+ 4217              	.LASF56:
+ 4218 00e2 6461746F 		.ascii	"dato_RX\000"
+ 4218      5F525800 
+ 4219              	.LASF17:
+ 4220 00ea 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 85
+
+
+ 4220      7400
+ 4221              	.LASF61:
+ 4222 00f0 6D5F6E52 		.ascii	"m_nRtr\000"
+ 4222      747200
+ 4223              	.LASF8:
+ 4224 00f7 6C6F6E67 		.ascii	"long long int\000"
+ 4224      206C6F6E 
+ 4224      6720696E 
+ 4224      7400
+ 4225              	.LASF16:
+ 4226 0105 696E7438 		.ascii	"int8\000"
+ 4226      00
+ 4227              	.LASF48:
+ 4228 010a 63616E49 		.ascii	"canIDMode\000"
+ 4228      444D6F64 
+ 4228      6500
+ 4229              	.LASF63:
+ 4230 0114 4D435043 		.ascii	"MCPCS\000"
+ 4230      5300
+ 4231              	.LASF33:
+ 4232 011a 63616E53 		.ascii	"canSpeed\000"
+ 4232      70656564 
+ 4232      00
+ 4233              	.LASF7:
+ 4234 0123 6C6F6E67 		.ascii	"long unsigned int\000"
+ 4234      20756E73 
+ 4234      69676E65 
+ 4234      6420696E 
+ 4234      7400
+ 4235              	.LASF39:
+ 4236 0135 76616C75 		.ascii	"values\000"
+ 4236      657300
+ 4237              	.LASF40:
+ 4238 013c 6D637032 		.ascii	"mcp2515_write_mf\000"
+ 4238      3531355F 
+ 4238      77726974 
+ 4238      655F6D66 
+ 4238      00
+ 4239              	.LASF62:
+ 4240 014d 6D5F6E66 		.ascii	"m_nfilhit\000"
+ 4240      696C6869 
+ 4240      7400
+ 4241              	.LASF65:
+ 4242 0157 5350494D 		.ascii	"SPIM_1_WriteTxData\000"
+ 4242      5F315F57 
+ 4242      72697465 
+ 4242      54784461 
+ 4242      746100
+ 4243              	.LASF47:
+ 4244 016a 6D637032 		.ascii	"mcp2515_init\000"
+ 4244      3531355F 
+ 4244      696E6974 
+ 4244      00
+ 4245              	.LASF64:
+ 4246 0177 6D63704D 		.ascii	"mcpMode\000"
+ 4246      6F646500 
+ 4247              	.LASF67:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 86
+
+
+ 4248 017f 43794465 		.ascii	"CyDelayUs\000"
+ 4248      6C617955 
+ 4248      7300
+ 4249              	.LASF1:
+ 4250 0189 756E7369 		.ascii	"unsigned char\000"
+ 4250      676E6564 
+ 4250      20636861 
+ 4250      7200
+ 4251              	.LASF50:
+ 4252 0197 69646D6F 		.ascii	"idmodeset\000"
+ 4252      64657365 
+ 4252      7400
+ 4253              	.LASF0:
+ 4254 01a1 7369676E 		.ascii	"signed char\000"
+ 4254      65642063 
+ 4254      68617200 
+ 4255              	.LASF12:
+ 4256 01ad 696E7433 		.ascii	"int32_t\000"
+ 4256      325F7400 
+ 4257              	.LASF9:
+ 4258 01b5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 4258      206C6F6E 
+ 4258      6720756E 
+ 4258      7369676E 
+ 4258      65642069 
+ 4259              	.LASF10:
+ 4260 01cc 756E7369 		.ascii	"unsigned int\000"
+ 4260      676E6564 
+ 4260      20696E74 
+ 4260      00
+ 4261              	.LASF75:
+ 4262 01d9 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\SPI\\CAN.cydsn\000"
+ 4262      73657273 
+ 4262      5C48656E 
+ 4262      72792041 
+ 4262      6C626572 
+ 4263              	.LASF66:
+ 4264 0206 43794465 		.ascii	"CyDelayCycles\000"
+ 4264      6C617943 
+ 4264      79636C65 
+ 4264      7300
+ 4265              	.LASF27:
+ 4266 0214 6D637032 		.ascii	"mcp2515_readRegister\000"
+ 4266      3531355F 
+ 4266      72656164 
+ 4266      52656769 
+ 4266      73746572 
+ 4267              	.LASF42:
+ 4268 0229 63616E69 		.ascii	"canid\000"
+ 4268      6400
+ 4269              	.LASF3:
+ 4270 022f 73686F72 		.ascii	"short unsigned int\000"
+ 4270      7420756E 
+ 4270      7369676E 
+ 4270      65642069 
+ 4270      6E7400
+ 4271              	.LASF72:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 87
+
+
+ 4272 0242 4C43445F 		.ascii	"LCD_Char_1_PrintInt8\000"
+ 4272      43686172 
+ 4272      5F315F50 
+ 4272      72696E74 
+ 4272      496E7438 
+ 4273              	.LASF20:
+ 4274 0257 63686172 		.ascii	"char\000"
+ 4274      00
+ 4275              	.LASF71:
+ 4276 025c 4C43445F 		.ascii	"LCD_Char_1_PrintString\000"
+ 4276      43686172 
+ 4276      5F315F50 
+ 4276      72696E74 
+ 4276      53747269 
+ 4277              	.LASF6:
+ 4278 0273 6C6F6E67 		.ascii	"long int\000"
+ 4278      20696E74 
+ 4278      00
+ 4279              	.LASF57:
+ 4280 027c 6D5F6E45 		.ascii	"m_nExtFlg\000"
+ 4280      7874466C 
+ 4280      6700
+ 4281              	.LASF76:
+ 4282 0286 5350494D 		.ascii	"SPIM_1_ReadRxData\000"
+ 4282      5F315F52 
+ 4282      65616452 
+ 4282      78446174 
+ 4282      6100
+ 4283              	.LASF24:
+ 4284 0298 64617461 		.ascii	"data\000"
+ 4284      00
+ 4285              	.LASF14:
+ 4286 029d 75696E74 		.ascii	"uint16\000"
+ 4286      313600
+ 4287              	.LASF11:
+ 4288 02a4 75696E74 		.ascii	"uint16_t\000"
+ 4288      31365F74 
+ 4288      00
+ 4289              	.LASF32:
+ 4290 02ad 6D637032 		.ascii	"mcp2515_configRate\000"
+ 4290      3531355F 
+ 4290      636F6E66 
+ 4290      69675261 
+ 4290      746500
+ 4291              	.LASF59:
+ 4292 02c0 6D5F6E44 		.ascii	"m_nDlc\000"
+ 4292      6C6300
+ 4293              	.LASF45:
+ 4294 02c7 756C4D61 		.ascii	"ulMask\000"
+ 4294      736B00
+ 4295              	.LASF70:
+ 4296 02ce 4C43445F 		.ascii	"LCD_Char_1_Position\000"
+ 4296      43686172 
+ 4296      5F315F50 
+ 4296      6F736974 
+ 4296      696F6E00 
+ 4297              	.LASF15:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 88
+
+
+ 4298 02e2 75696E74 		.ascii	"uint32\000"
+ 4298      333200
+ 4299              	.LASF38:
+ 4300 02e9 6D637032 		.ascii	"mcp2515_setRegisterS\000"
+ 4300      3531355F 
+ 4300      73657452 
+ 4300      65676973 
+ 4300      74657253 
+ 4301              	.LASF25:
+ 4302 02fe 6D637032 		.ascii	"mcp2515_modifyRegister\000"
+ 4302      3531355F 
+ 4302      6D6F6469 
+ 4302      66795265 
+ 4302      67697374 
+ 4303              	.LASF23:
+ 4304 0315 6D61736B 		.ascii	"mask\000"
+ 4304      00
+ 4305              	.LASF74:
+ 4306 031a 2E5C6D61 		.ascii	".\\main.c\000"
+ 4306      696E2E63 
+ 4306      00
+ 4307              	.LASF5:
+ 4308 0323 5F5F696E 		.ascii	"__int32_t\000"
+ 4308      7433325F 
+ 4308      7400
+ 4309              	.LASF55:
+ 4310 032d 6461746F 		.ascii	"dato_TX\000"
+ 4310      5F545800 
+ 4311              	.LASF73:
+ 4312 0335 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 4312      4320342E 
+ 4312      392E3320 
+ 4312      32303135 
+ 4312      30333033 
+ 4313 0368 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 4313      20726576 
+ 4313      6973696F 
+ 4313      6E203232 
+ 4313      31323230 
+ 4314 039b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 4314      66756E63 
+ 4314      74696F6E 
+ 4314      2D736563 
+ 4314      74696F6E 
+ 4315              	.LASF60:
+ 4316 03c3 6D5F6E44 		.ascii	"m_nDta\000"
+ 4316      746100
+ 4317              	.LASF68:
+ 4318 03ca 5350494D 		.ascii	"SPIM_1_Start\000"
+ 4318      5F315F53 
+ 4318      74617274 
+ 4318      00
+ 4319              	.LASF18:
+ 4320 03d7 646F7562 		.ascii	"double\000"
+ 4320      6C6500
+ 4321              	.LASF58:
+ 4322 03de 6D5F6E49 		.ascii	"m_nID\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc1a9QKv.s 			page 89
+
+
+ 4322      4400
+ 4323              	.LASF54:
+ 4324 03e4 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 4324      52784275 
+ 4324      66666572 
+ 4324      00
+ 4325              	.LASF77:
+ 4326 03f1 43794465 		.ascii	"CyDelay\000"
+ 4326      6C617900 
+ 4327              	.LASF26:
+ 4328 03f9 6D637032 		.ascii	"mcp2515_reset\000"
+ 4328      3531355F 
+ 4328      72657365 
+ 4328      7400
+ 4329              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

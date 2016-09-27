@@ -1,0 +1,9 @@
+C:\Users\Henry Alberto\Desktop\SPI\NODO.cydsn\NODO.cyprj|4c776f75-a019-423c-bc04-4ba30638ff60
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|5c71fa1d-1d53-4305-b150-b81ecd3baab3
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|6bbe2ac5-e579-426c-a84d-009a101488df
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|93af3362-05b1-4075-8589-f618574ac500
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|76cad1ca-4c8d-46f5-92fc-d3f31c28f738
+C:\Users\Henry Alberto\Desktop\SPI\NODO_MASTER.cydsn\NODO_MASTER.cyprj|7571c459-f3d3-434e-ae52-41522aa22ce8
+C:\Users\Henry Alberto\Desktop\SPI\NODO_SLAVE.cydsn\NODO_SLAVE.cyprj|ecfcb4ae-9c04-4d50-9012-acd90d151999
+C:\Users\Henry Alberto\Desktop\SPI\MCP_2515.cydsn\MCP_2515.cyprj|6c971a50-67b4-4a22-8faf-317e1f2ab62f
+C:\Users\Henry Alberto\Desktop\SPI\CAN.cydsn\CAN.cyprj|4b4ece3d-1776-45fc-bd0b-231caab344cb

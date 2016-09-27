@@ -1,0 +1,958 @@
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.main,"ax",%progbits
+  19              		.align	2
+  20              		.global	main
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	main, %function
+  24              	main:
+  25              	.LFB63:
+  26              		.file 1 ".\\main.c"
+   1:.\main.c      **** /* ========================================
+   2:.\main.c      ****  *
+   3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\main.c      ****  * All Rights Reserved
+   5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\main.c      ****  *
+   7:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\main.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\main.c      ****  *
+  10:.\main.c      ****  * ========================================
+  11:.\main.c      **** */
+  12:.\main.c      **** #include <project.h>
+  13:.\main.c      **** uint8 dato_recibido;
+  14:.\main.c      **** uint8 dato_enviado;
+  15:.\main.c      **** 
+  16:.\main.c      **** int main()
+  17:.\main.c      **** {
+  27              		.loc 1 17 0
+  28              		.cfi_startproc
+  29              		@ Volatile: function does not return.
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  18:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  36              		.loc 1 18 0
+  37              	@ 18 ".\main.c" 1
+  38 0002 62B6     		CPSIE   i
+  39              	@ 0 "" 2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 2
+
+
+  19:.\main.c      ****     RX_CAN_Start();
+  40              		.loc 1 19 0
+  41              		.thumb
+  42 0004 FFF7FEFF 		bl	RX_CAN_Start
+  43              	.LVL0:
+  20:.\main.c      ****     LCD_Char_1_Start();
+  44              		.loc 1 20 0
+  45 0008 FFF7FEFF 		bl	LCD_Char_1_Start
+  46              	.LVL1:
+  21:.\main.c      ****     LCD_Char_1_Position(0,0);
+  47              		.loc 1 21 0
+  48 000c 0020     		movs	r0, #0
+  49 000e 0146     		mov	r1, r0
+  50 0010 FFF7FEFF 		bl	LCD_Char_1_Position
+  51              	.LVL2:
+  22:.\main.c      ****     LCD_Char_1_PrintString("Recibiendo...");
+  52              		.loc 1 22 0
+  53 0014 0E48     		ldr	r0, .L4
+  54 0016 FFF7FEFF 		bl	LCD_Char_1_PrintString
+  55              	.LVL3:
+  56              	.L2:
+  23:.\main.c      ****     for(;;)
+  24:.\main.c      ****     {
+  25:.\main.c      ****         RX_CAN_ReceiveMsg0();
+  57              		.loc 1 25 0 discriminator 1
+  58 001a FFF7FEFF 		bl	RX_CAN_ReceiveMsg0
+  59              	.LVL4:
+  26:.\main.c      ****         CyDelay(10);
+  60              		.loc 1 26 0 discriminator 1
+  61 001e 0A20     		movs	r0, #10
+  62 0020 FFF7FEFF 		bl	CyDelay
+  63              	.LVL5:
+  27:.\main.c      ****         RX_CAN_SendMsg0();
+  64              		.loc 1 27 0 discriminator 1
+  65 0024 FFF7FEFF 		bl	RX_CAN_SendMsg0
+  66              	.LVL6:
+  28:.\main.c      ****         LCD_Char_1_Position(1,0);
+  67              		.loc 1 28 0 discriminator 1
+  68 0028 0120     		movs	r0, #1
+  69 002a 0021     		movs	r1, #0
+  70 002c FFF7FEFF 		bl	LCD_Char_1_Position
+  71              	.LVL7:
+  29:.\main.c      ****         LCD_Char_1_PrintHexUint8(dato_recibido);
+  72              		.loc 1 29 0 discriminator 1
+  73 0030 084D     		ldr	r5, .L4+4
+  74 0032 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
+  75 0034 FFF7FEFF 		bl	LCD_Char_1_PrintInt8
+  76              	.LVL8:
+  30:.\main.c      ****         LCD_Char_1_Position(1,5);
+  77              		.loc 1 30 0 discriminator 1
+  78 0038 0120     		movs	r0, #1
+  79 003a 0521     		movs	r1, #5
+  80 003c FFF7FEFF 		bl	LCD_Char_1_Position
+  81              	.LVL9:
+  31:.\main.c      ****         LCD_Char_1_PrintHexUint8(dato_enviado);   
+  82              		.loc 1 31 0 discriminator 1
+  83 0040 054C     		ldr	r4, .L4+8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 3
+
+
+  84 0042 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
+  85 0044 FFF7FEFF 		bl	LCD_Char_1_PrintInt8
+  86              	.LVL10:
+  32:.\main.c      ****         dato_enviado=dato_recibido+2;
+  87              		.loc 1 32 0 discriminator 1
+  88 0048 2B78     		ldrb	r3, [r5]	@ zero_extendqisi2
+  89 004a 0233     		adds	r3, r3, #2
+  90 004c 2370     		strb	r3, [r4]
+  33:.\main.c      ****     }
+  91              		.loc 1 33 0 discriminator 1
+  92 004e E4E7     		b	.L2
+  93              	.L5:
+  94              		.align	2
+  95              	.L4:
+  96 0050 00000000 		.word	.LC0
+  97 0054 00000000 		.word	dato_recibido
+  98 0058 00000000 		.word	dato_enviado
+  99              		.cfi_endproc
+ 100              	.LFE63:
+ 101              		.size	main, .-main
+ 102              		.comm	dato_enviado,1,1
+ 103              		.comm	dato_recibido,1,1
+ 104              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 105              		.align	2
+ 106              	.LC0:
+ 107 0000 52656369 		.ascii	"Recibiendo...\000"
+ 107      6269656E 
+ 107      646F2E2E 
+ 107      2E00
+ 108 000e 0000     		.text
+ 109              	.Letext0:
+ 110              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 111              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 112              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 113              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 114              		.file 6 "Generated_Source\\PSoC5/LCD_Char_1.h"
+ 115              		.file 7 "Generated_Source\\PSoC5/RX_CAN.h"
+ 116              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
+ 117              		.section	.debug_info,"",%progbits
+ 118              	.Ldebug_info0:
+ 119 0000 29020000 		.4byte	0x229
+ 120 0004 0400     		.2byte	0x4
+ 121 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 122 000a 04       		.byte	0x4
+ 123 000b 01       		.uleb128 0x1
+ 124 000c F6000000 		.4byte	.LASF28
+ 125 0010 01       		.byte	0x1
+ 126 0011 18000000 		.4byte	.LASF29
+ 127 0015 FD010000 		.4byte	.LASF30
+ 128 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 129 001d 00000000 		.4byte	0
+ 130 0021 00000000 		.4byte	.Ldebug_line0
+ 131 0025 02       		.uleb128 0x2
+ 132 0026 01       		.byte	0x1
+ 133 0027 06       		.byte	0x6
+ 134 0028 46020000 		.4byte	.LASF0
+ 135 002c 02       		.uleb128 0x2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 4
+
+
+ 136 002d 01       		.byte	0x1
+ 137 002e 08       		.byte	0x8
+ 138 002f A4000000 		.4byte	.LASF1
+ 139 0033 02       		.uleb128 0x2
+ 140 0034 02       		.byte	0x2
+ 141 0035 05       		.byte	0x5
+ 142 0036 E4010000 		.4byte	.LASF2
+ 143 003a 02       		.uleb128 0x2
+ 144 003b 02       		.byte	0x2
+ 145 003c 07       		.byte	0x7
+ 146 003d 77000000 		.4byte	.LASF3
+ 147 0041 03       		.uleb128 0x3
+ 148 0042 00000000 		.4byte	.LASF9
+ 149 0046 02       		.byte	0x2
+ 150 0047 3F       		.byte	0x3f
+ 151 0048 4C000000 		.4byte	0x4c
+ 152 004c 02       		.uleb128 0x2
+ 153 004d 04       		.byte	0x4
+ 154 004e 05       		.byte	0x5
+ 155 004f F4010000 		.4byte	.LASF4
+ 156 0053 02       		.uleb128 0x2
+ 157 0054 04       		.byte	0x4
+ 158 0055 07       		.byte	0x7
+ 159 0056 65000000 		.4byte	.LASF5
+ 160 005a 02       		.uleb128 0x2
+ 161 005b 08       		.byte	0x8
+ 162 005c 05       		.byte	0x5
+ 163 005d A8010000 		.4byte	.LASF6
+ 164 0061 02       		.uleb128 0x2
+ 165 0062 08       		.byte	0x8
+ 166 0063 07       		.byte	0x7
+ 167 0064 DF000000 		.4byte	.LASF7
+ 168 0068 04       		.uleb128 0x4
+ 169 0069 04       		.byte	0x4
+ 170 006a 05       		.byte	0x5
+ 171 006b 696E7400 		.ascii	"int\000"
+ 172 006f 02       		.uleb128 0x2
+ 173 0070 04       		.byte	0x4
+ 174 0071 07       		.byte	0x7
+ 175 0072 D2000000 		.4byte	.LASF8
+ 176 0076 03       		.uleb128 0x3
+ 177 0077 97010000 		.4byte	.LASF10
+ 178 007b 03       		.byte	0x3
+ 179 007c 2C       		.byte	0x2c
+ 180 007d 41000000 		.4byte	0x41
+ 181 0081 05       		.uleb128 0x5
+ 182 0082 EE010000 		.4byte	.LASF11
+ 183 0086 04       		.byte	0x4
+ 184 0087 9201     		.2byte	0x192
+ 185 0089 2C000000 		.4byte	0x2c
+ 186 008d 05       		.uleb128 0x5
+ 187 008e BE000000 		.4byte	.LASF12
+ 188 0092 04       		.byte	0x4
+ 189 0093 9401     		.2byte	0x194
+ 190 0095 53000000 		.4byte	0x53
+ 191 0099 02       		.uleb128 0x2
+ 192 009a 04       		.byte	0x4
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 5
+
+
+ 193 009b 04       		.byte	0x4
+ 194 009c 31000000 		.4byte	.LASF13
+ 195 00a0 02       		.uleb128 0x2
+ 196 00a1 08       		.byte	0x8
+ 197 00a2 04       		.byte	0x4
+ 198 00a3 B2000000 		.4byte	.LASF14
+ 199 00a7 05       		.uleb128 0x5
+ 200 00a8 5F000000 		.4byte	.LASF15
+ 201 00ac 04       		.byte	0x4
+ 202 00ad A301     		.2byte	0x1a3
+ 203 00af B3000000 		.4byte	0xb3
+ 204 00b3 02       		.uleb128 0x2
+ 205 00b4 01       		.byte	0x1
+ 206 00b5 08       		.byte	0x8
+ 207 00b6 B6010000 		.4byte	.LASF16
+ 208 00ba 02       		.uleb128 0x2
+ 209 00bb 04       		.byte	0x4
+ 210 00bc 07       		.byte	0x7
+ 211 00bd 9F010000 		.4byte	.LASF17
+ 212 00c1 06       		.uleb128 0x6
+ 213 00c2 B9000000 		.4byte	.LASF31
+ 214 00c6 01       		.byte	0x1
+ 215 00c7 10       		.byte	0x10
+ 216 00c8 68000000 		.4byte	0x68
+ 217 00cc 00000000 		.4byte	.LFB63
+ 218 00d0 5C000000 		.4byte	.LFE63-.LFB63
+ 219 00d4 01       		.uleb128 0x1
+ 220 00d5 9C       		.byte	0x9c
+ 221 00d6 83010000 		.4byte	0x183
+ 222 00da 07       		.uleb128 0x7
+ 223 00db 08000000 		.4byte	.LVL0
+ 224 00df B6010000 		.4byte	0x1b6
+ 225 00e3 07       		.uleb128 0x7
+ 226 00e4 0C000000 		.4byte	.LVL1
+ 227 00e8 C1010000 		.4byte	0x1c1
+ 228 00ec 08       		.uleb128 0x8
+ 229 00ed 14000000 		.4byte	.LVL2
+ 230 00f1 C8010000 		.4byte	0x1c8
+ 231 00f5 04010000 		.4byte	0x104
+ 232 00f9 09       		.uleb128 0x9
+ 233 00fa 01       		.uleb128 0x1
+ 234 00fb 51       		.byte	0x51
+ 235 00fc 01       		.uleb128 0x1
+ 236 00fd 30       		.byte	0x30
+ 237 00fe 09       		.uleb128 0x9
+ 238 00ff 01       		.uleb128 0x1
+ 239 0100 50       		.byte	0x50
+ 240 0101 01       		.uleb128 0x1
+ 241 0102 30       		.byte	0x30
+ 242 0103 00       		.byte	0
+ 243 0104 08       		.uleb128 0x8
+ 244 0105 1A000000 		.4byte	.LVL3
+ 245 0109 DE010000 		.4byte	0x1de
+ 246 010d 1B010000 		.4byte	0x11b
+ 247 0111 09       		.uleb128 0x9
+ 248 0112 01       		.uleb128 0x1
+ 249 0113 50       		.byte	0x50
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 6
+
+
+ 250 0114 05       		.uleb128 0x5
+ 251 0115 03       		.byte	0x3
+ 252 0116 00000000 		.4byte	.LC0
+ 253 011a 00       		.byte	0
+ 254 011b 07       		.uleb128 0x7
+ 255 011c 1E000000 		.4byte	.LVL4
+ 256 0120 FA010000 		.4byte	0x1fa
+ 257 0124 08       		.uleb128 0x8
+ 258 0125 24000000 		.4byte	.LVL5
+ 259 0129 02020000 		.4byte	0x202
+ 260 012d 37010000 		.4byte	0x137
+ 261 0131 09       		.uleb128 0x9
+ 262 0132 01       		.uleb128 0x1
+ 263 0133 50       		.byte	0x50
+ 264 0134 01       		.uleb128 0x1
+ 265 0135 3A       		.byte	0x3a
+ 266 0136 00       		.byte	0
+ 267 0137 07       		.uleb128 0x7
+ 268 0138 28000000 		.4byte	.LVL6
+ 269 013c 13020000 		.4byte	0x213
+ 270 0140 08       		.uleb128 0x8
+ 271 0141 30000000 		.4byte	.LVL7
+ 272 0145 C8010000 		.4byte	0x1c8
+ 273 0149 58010000 		.4byte	0x158
+ 274 014d 09       		.uleb128 0x9
+ 275 014e 01       		.uleb128 0x1
+ 276 014f 51       		.byte	0x51
+ 277 0150 01       		.uleb128 0x1
+ 278 0151 30       		.byte	0x30
+ 279 0152 09       		.uleb128 0x9
+ 280 0153 01       		.uleb128 0x1
+ 281 0154 50       		.byte	0x50
+ 282 0155 01       		.uleb128 0x1
+ 283 0156 31       		.byte	0x31
+ 284 0157 00       		.byte	0
+ 285 0158 07       		.uleb128 0x7
+ 286 0159 38000000 		.4byte	.LVL8
+ 287 015d 1F020000 		.4byte	0x21f
+ 288 0161 08       		.uleb128 0x8
+ 289 0162 40000000 		.4byte	.LVL9
+ 290 0166 C8010000 		.4byte	0x1c8
+ 291 016a 79010000 		.4byte	0x179
+ 292 016e 09       		.uleb128 0x9
+ 293 016f 01       		.uleb128 0x1
+ 294 0170 51       		.byte	0x51
+ 295 0171 01       		.uleb128 0x1
+ 296 0172 35       		.byte	0x35
+ 297 0173 09       		.uleb128 0x9
+ 298 0174 01       		.uleb128 0x1
+ 299 0175 50       		.byte	0x50
+ 300 0176 01       		.uleb128 0x1
+ 301 0177 31       		.byte	0x31
+ 302 0178 00       		.byte	0
+ 303 0179 07       		.uleb128 0x7
+ 304 017a 48000000 		.4byte	.LVL10
+ 305 017e 1F020000 		.4byte	0x21f
+ 306 0182 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 7
+
+
+ 307 0183 0A       		.uleb128 0xa
+ 308 0184 8A000000 		.4byte	.LASF18
+ 309 0188 05       		.byte	0x5
+ 310 0189 9606     		.2byte	0x696
+ 311 018b 8F010000 		.4byte	0x18f
+ 312 018f 0B       		.uleb128 0xb
+ 313 0190 76000000 		.4byte	0x76
+ 314 0194 0C       		.uleb128 0xc
+ 315 0195 0A000000 		.4byte	.LASF19
+ 316 0199 01       		.byte	0x1
+ 317 019a 0D       		.byte	0xd
+ 318 019b 81000000 		.4byte	0x81
+ 319 019f 05       		.uleb128 0x5
+ 320 01a0 03       		.byte	0x3
+ 321 01a1 00000000 		.4byte	dato_recibido
+ 322 01a5 0C       		.uleb128 0xc
+ 323 01a6 C5000000 		.4byte	.LASF20
+ 324 01aa 01       		.byte	0x1
+ 325 01ab 0E       		.byte	0xe
+ 326 01ac 81000000 		.4byte	0x81
+ 327 01b0 05       		.uleb128 0x5
+ 328 01b1 03       		.byte	0x3
+ 329 01b2 00000000 		.4byte	dato_enviado
+ 330 01b6 0D       		.uleb128 0xd
+ 331 01b7 97000000 		.4byte	.LASF26
+ 332 01bb 07       		.byte	0x7
+ 333 01bc C5       		.byte	0xc5
+ 334 01bd 81000000 		.4byte	0x81
+ 335 01c1 0E       		.uleb128 0xe
+ 336 01c2 37000000 		.4byte	.LASF23
+ 337 01c6 06       		.byte	0x6
+ 338 01c7 38       		.byte	0x38
+ 339 01c8 0F       		.uleb128 0xf
+ 340 01c9 BB010000 		.4byte	.LASF21
+ 341 01cd 06       		.byte	0x6
+ 342 01ce 3D       		.byte	0x3d
+ 343 01cf DE010000 		.4byte	0x1de
+ 344 01d3 10       		.uleb128 0x10
+ 345 01d4 81000000 		.4byte	0x81
+ 346 01d8 10       		.uleb128 0x10
+ 347 01d9 81000000 		.4byte	0x81
+ 348 01dd 00       		.byte	0
+ 349 01de 0F       		.uleb128 0xf
+ 350 01df 48000000 		.4byte	.LASF22
+ 351 01e3 06       		.byte	0x6
+ 352 01e4 3C       		.byte	0x3c
+ 353 01e5 EF010000 		.4byte	0x1ef
+ 354 01e9 10       		.uleb128 0x10
+ 355 01ea EF010000 		.4byte	0x1ef
+ 356 01ee 00       		.byte	0
+ 357 01ef 11       		.uleb128 0x11
+ 358 01f0 04       		.byte	0x4
+ 359 01f1 F5010000 		.4byte	0x1f5
+ 360 01f5 12       		.uleb128 0x12
+ 361 01f6 A7000000 		.4byte	0xa7
+ 362 01fa 13       		.uleb128 0x13
+ 363 01fb 84010000 		.4byte	.LASF24
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 8
+
+
+ 364 01ff 07       		.byte	0x7
+ 365 0200 3501     		.2byte	0x135
+ 366 0202 0F       		.uleb128 0xf
+ 367 0203 52020000 		.4byte	.LASF25
+ 368 0207 08       		.byte	0x8
+ 369 0208 76       		.byte	0x76
+ 370 0209 13020000 		.4byte	0x213
+ 371 020d 10       		.uleb128 0x10
+ 372 020e 8D000000 		.4byte	0x8d
+ 373 0212 00       		.byte	0
+ 374 0213 14       		.uleb128 0x14
+ 375 0214 21000000 		.4byte	.LASF27
+ 376 0218 07       		.byte	0x7
+ 377 0219 1D01     		.2byte	0x11d
+ 378 021b 81000000 		.4byte	0x81
+ 379 021f 15       		.uleb128 0x15
+ 380 0220 CF010000 		.4byte	.LASF32
+ 381 0224 06       		.byte	0x6
+ 382 0225 5D       		.byte	0x5d
+ 383 0226 10       		.uleb128 0x10
+ 384 0227 81000000 		.4byte	0x81
+ 385 022b 00       		.byte	0
+ 386 022c 00       		.byte	0
+ 387              		.section	.debug_abbrev,"",%progbits
+ 388              	.Ldebug_abbrev0:
+ 389 0000 01       		.uleb128 0x1
+ 390 0001 11       		.uleb128 0x11
+ 391 0002 01       		.byte	0x1
+ 392 0003 25       		.uleb128 0x25
+ 393 0004 0E       		.uleb128 0xe
+ 394 0005 13       		.uleb128 0x13
+ 395 0006 0B       		.uleb128 0xb
+ 396 0007 03       		.uleb128 0x3
+ 397 0008 0E       		.uleb128 0xe
+ 398 0009 1B       		.uleb128 0x1b
+ 399 000a 0E       		.uleb128 0xe
+ 400 000b 55       		.uleb128 0x55
+ 401 000c 17       		.uleb128 0x17
+ 402 000d 11       		.uleb128 0x11
+ 403 000e 01       		.uleb128 0x1
+ 404 000f 10       		.uleb128 0x10
+ 405 0010 17       		.uleb128 0x17
+ 406 0011 00       		.byte	0
+ 407 0012 00       		.byte	0
+ 408 0013 02       		.uleb128 0x2
+ 409 0014 24       		.uleb128 0x24
+ 410 0015 00       		.byte	0
+ 411 0016 0B       		.uleb128 0xb
+ 412 0017 0B       		.uleb128 0xb
+ 413 0018 3E       		.uleb128 0x3e
+ 414 0019 0B       		.uleb128 0xb
+ 415 001a 03       		.uleb128 0x3
+ 416 001b 0E       		.uleb128 0xe
+ 417 001c 00       		.byte	0
+ 418 001d 00       		.byte	0
+ 419 001e 03       		.uleb128 0x3
+ 420 001f 16       		.uleb128 0x16
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 9
+
+
+ 421 0020 00       		.byte	0
+ 422 0021 03       		.uleb128 0x3
+ 423 0022 0E       		.uleb128 0xe
+ 424 0023 3A       		.uleb128 0x3a
+ 425 0024 0B       		.uleb128 0xb
+ 426 0025 3B       		.uleb128 0x3b
+ 427 0026 0B       		.uleb128 0xb
+ 428 0027 49       		.uleb128 0x49
+ 429 0028 13       		.uleb128 0x13
+ 430 0029 00       		.byte	0
+ 431 002a 00       		.byte	0
+ 432 002b 04       		.uleb128 0x4
+ 433 002c 24       		.uleb128 0x24
+ 434 002d 00       		.byte	0
+ 435 002e 0B       		.uleb128 0xb
+ 436 002f 0B       		.uleb128 0xb
+ 437 0030 3E       		.uleb128 0x3e
+ 438 0031 0B       		.uleb128 0xb
+ 439 0032 03       		.uleb128 0x3
+ 440 0033 08       		.uleb128 0x8
+ 441 0034 00       		.byte	0
+ 442 0035 00       		.byte	0
+ 443 0036 05       		.uleb128 0x5
+ 444 0037 16       		.uleb128 0x16
+ 445 0038 00       		.byte	0
+ 446 0039 03       		.uleb128 0x3
+ 447 003a 0E       		.uleb128 0xe
+ 448 003b 3A       		.uleb128 0x3a
+ 449 003c 0B       		.uleb128 0xb
+ 450 003d 3B       		.uleb128 0x3b
+ 451 003e 05       		.uleb128 0x5
+ 452 003f 49       		.uleb128 0x49
+ 453 0040 13       		.uleb128 0x13
+ 454 0041 00       		.byte	0
+ 455 0042 00       		.byte	0
+ 456 0043 06       		.uleb128 0x6
+ 457 0044 2E       		.uleb128 0x2e
+ 458 0045 01       		.byte	0x1
+ 459 0046 3F       		.uleb128 0x3f
+ 460 0047 19       		.uleb128 0x19
+ 461 0048 03       		.uleb128 0x3
+ 462 0049 0E       		.uleb128 0xe
+ 463 004a 3A       		.uleb128 0x3a
+ 464 004b 0B       		.uleb128 0xb
+ 465 004c 3B       		.uleb128 0x3b
+ 466 004d 0B       		.uleb128 0xb
+ 467 004e 49       		.uleb128 0x49
+ 468 004f 13       		.uleb128 0x13
+ 469 0050 11       		.uleb128 0x11
+ 470 0051 01       		.uleb128 0x1
+ 471 0052 12       		.uleb128 0x12
+ 472 0053 06       		.uleb128 0x6
+ 473 0054 40       		.uleb128 0x40
+ 474 0055 18       		.uleb128 0x18
+ 475 0056 9742     		.uleb128 0x2117
+ 476 0058 19       		.uleb128 0x19
+ 477 0059 01       		.uleb128 0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 10
+
+
+ 478 005a 13       		.uleb128 0x13
+ 479 005b 00       		.byte	0
+ 480 005c 00       		.byte	0
+ 481 005d 07       		.uleb128 0x7
+ 482 005e 898201   		.uleb128 0x4109
+ 483 0061 00       		.byte	0
+ 484 0062 11       		.uleb128 0x11
+ 485 0063 01       		.uleb128 0x1
+ 486 0064 31       		.uleb128 0x31
+ 487 0065 13       		.uleb128 0x13
+ 488 0066 00       		.byte	0
+ 489 0067 00       		.byte	0
+ 490 0068 08       		.uleb128 0x8
+ 491 0069 898201   		.uleb128 0x4109
+ 492 006c 01       		.byte	0x1
+ 493 006d 11       		.uleb128 0x11
+ 494 006e 01       		.uleb128 0x1
+ 495 006f 31       		.uleb128 0x31
+ 496 0070 13       		.uleb128 0x13
+ 497 0071 01       		.uleb128 0x1
+ 498 0072 13       		.uleb128 0x13
+ 499 0073 00       		.byte	0
+ 500 0074 00       		.byte	0
+ 501 0075 09       		.uleb128 0x9
+ 502 0076 8A8201   		.uleb128 0x410a
+ 503 0079 00       		.byte	0
+ 504 007a 02       		.uleb128 0x2
+ 505 007b 18       		.uleb128 0x18
+ 506 007c 9142     		.uleb128 0x2111
+ 507 007e 18       		.uleb128 0x18
+ 508 007f 00       		.byte	0
+ 509 0080 00       		.byte	0
+ 510 0081 0A       		.uleb128 0xa
+ 511 0082 34       		.uleb128 0x34
+ 512 0083 00       		.byte	0
+ 513 0084 03       		.uleb128 0x3
+ 514 0085 0E       		.uleb128 0xe
+ 515 0086 3A       		.uleb128 0x3a
+ 516 0087 0B       		.uleb128 0xb
+ 517 0088 3B       		.uleb128 0x3b
+ 518 0089 05       		.uleb128 0x5
+ 519 008a 49       		.uleb128 0x49
+ 520 008b 13       		.uleb128 0x13
+ 521 008c 3F       		.uleb128 0x3f
+ 522 008d 19       		.uleb128 0x19
+ 523 008e 3C       		.uleb128 0x3c
+ 524 008f 19       		.uleb128 0x19
+ 525 0090 00       		.byte	0
+ 526 0091 00       		.byte	0
+ 527 0092 0B       		.uleb128 0xb
+ 528 0093 35       		.uleb128 0x35
+ 529 0094 00       		.byte	0
+ 530 0095 49       		.uleb128 0x49
+ 531 0096 13       		.uleb128 0x13
+ 532 0097 00       		.byte	0
+ 533 0098 00       		.byte	0
+ 534 0099 0C       		.uleb128 0xc
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 11
+
+
+ 535 009a 34       		.uleb128 0x34
+ 536 009b 00       		.byte	0
+ 537 009c 03       		.uleb128 0x3
+ 538 009d 0E       		.uleb128 0xe
+ 539 009e 3A       		.uleb128 0x3a
+ 540 009f 0B       		.uleb128 0xb
+ 541 00a0 3B       		.uleb128 0x3b
+ 542 00a1 0B       		.uleb128 0xb
+ 543 00a2 49       		.uleb128 0x49
+ 544 00a3 13       		.uleb128 0x13
+ 545 00a4 3F       		.uleb128 0x3f
+ 546 00a5 19       		.uleb128 0x19
+ 547 00a6 02       		.uleb128 0x2
+ 548 00a7 18       		.uleb128 0x18
+ 549 00a8 00       		.byte	0
+ 550 00a9 00       		.byte	0
+ 551 00aa 0D       		.uleb128 0xd
+ 552 00ab 2E       		.uleb128 0x2e
+ 553 00ac 00       		.byte	0
+ 554 00ad 3F       		.uleb128 0x3f
+ 555 00ae 19       		.uleb128 0x19
+ 556 00af 03       		.uleb128 0x3
+ 557 00b0 0E       		.uleb128 0xe
+ 558 00b1 3A       		.uleb128 0x3a
+ 559 00b2 0B       		.uleb128 0xb
+ 560 00b3 3B       		.uleb128 0x3b
+ 561 00b4 0B       		.uleb128 0xb
+ 562 00b5 27       		.uleb128 0x27
+ 563 00b6 19       		.uleb128 0x19
+ 564 00b7 49       		.uleb128 0x49
+ 565 00b8 13       		.uleb128 0x13
+ 566 00b9 3C       		.uleb128 0x3c
+ 567 00ba 19       		.uleb128 0x19
+ 568 00bb 00       		.byte	0
+ 569 00bc 00       		.byte	0
+ 570 00bd 0E       		.uleb128 0xe
+ 571 00be 2E       		.uleb128 0x2e
+ 572 00bf 00       		.byte	0
+ 573 00c0 3F       		.uleb128 0x3f
+ 574 00c1 19       		.uleb128 0x19
+ 575 00c2 03       		.uleb128 0x3
+ 576 00c3 0E       		.uleb128 0xe
+ 577 00c4 3A       		.uleb128 0x3a
+ 578 00c5 0B       		.uleb128 0xb
+ 579 00c6 3B       		.uleb128 0x3b
+ 580 00c7 0B       		.uleb128 0xb
+ 581 00c8 27       		.uleb128 0x27
+ 582 00c9 19       		.uleb128 0x19
+ 583 00ca 3C       		.uleb128 0x3c
+ 584 00cb 19       		.uleb128 0x19
+ 585 00cc 00       		.byte	0
+ 586 00cd 00       		.byte	0
+ 587 00ce 0F       		.uleb128 0xf
+ 588 00cf 2E       		.uleb128 0x2e
+ 589 00d0 01       		.byte	0x1
+ 590 00d1 3F       		.uleb128 0x3f
+ 591 00d2 19       		.uleb128 0x19
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 12
+
+
+ 592 00d3 03       		.uleb128 0x3
+ 593 00d4 0E       		.uleb128 0xe
+ 594 00d5 3A       		.uleb128 0x3a
+ 595 00d6 0B       		.uleb128 0xb
+ 596 00d7 3B       		.uleb128 0x3b
+ 597 00d8 0B       		.uleb128 0xb
+ 598 00d9 27       		.uleb128 0x27
+ 599 00da 19       		.uleb128 0x19
+ 600 00db 3C       		.uleb128 0x3c
+ 601 00dc 19       		.uleb128 0x19
+ 602 00dd 01       		.uleb128 0x1
+ 603 00de 13       		.uleb128 0x13
+ 604 00df 00       		.byte	0
+ 605 00e0 00       		.byte	0
+ 606 00e1 10       		.uleb128 0x10
+ 607 00e2 05       		.uleb128 0x5
+ 608 00e3 00       		.byte	0
+ 609 00e4 49       		.uleb128 0x49
+ 610 00e5 13       		.uleb128 0x13
+ 611 00e6 00       		.byte	0
+ 612 00e7 00       		.byte	0
+ 613 00e8 11       		.uleb128 0x11
+ 614 00e9 0F       		.uleb128 0xf
+ 615 00ea 00       		.byte	0
+ 616 00eb 0B       		.uleb128 0xb
+ 617 00ec 0B       		.uleb128 0xb
+ 618 00ed 49       		.uleb128 0x49
+ 619 00ee 13       		.uleb128 0x13
+ 620 00ef 00       		.byte	0
+ 621 00f0 00       		.byte	0
+ 622 00f1 12       		.uleb128 0x12
+ 623 00f2 26       		.uleb128 0x26
+ 624 00f3 00       		.byte	0
+ 625 00f4 49       		.uleb128 0x49
+ 626 00f5 13       		.uleb128 0x13
+ 627 00f6 00       		.byte	0
+ 628 00f7 00       		.byte	0
+ 629 00f8 13       		.uleb128 0x13
+ 630 00f9 2E       		.uleb128 0x2e
+ 631 00fa 00       		.byte	0
+ 632 00fb 3F       		.uleb128 0x3f
+ 633 00fc 19       		.uleb128 0x19
+ 634 00fd 03       		.uleb128 0x3
+ 635 00fe 0E       		.uleb128 0xe
+ 636 00ff 3A       		.uleb128 0x3a
+ 637 0100 0B       		.uleb128 0xb
+ 638 0101 3B       		.uleb128 0x3b
+ 639 0102 05       		.uleb128 0x5
+ 640 0103 27       		.uleb128 0x27
+ 641 0104 19       		.uleb128 0x19
+ 642 0105 3C       		.uleb128 0x3c
+ 643 0106 19       		.uleb128 0x19
+ 644 0107 00       		.byte	0
+ 645 0108 00       		.byte	0
+ 646 0109 14       		.uleb128 0x14
+ 647 010a 2E       		.uleb128 0x2e
+ 648 010b 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 13
+
+
+ 649 010c 3F       		.uleb128 0x3f
+ 650 010d 19       		.uleb128 0x19
+ 651 010e 03       		.uleb128 0x3
+ 652 010f 0E       		.uleb128 0xe
+ 653 0110 3A       		.uleb128 0x3a
+ 654 0111 0B       		.uleb128 0xb
+ 655 0112 3B       		.uleb128 0x3b
+ 656 0113 05       		.uleb128 0x5
+ 657 0114 27       		.uleb128 0x27
+ 658 0115 19       		.uleb128 0x19
+ 659 0116 49       		.uleb128 0x49
+ 660 0117 13       		.uleb128 0x13
+ 661 0118 3C       		.uleb128 0x3c
+ 662 0119 19       		.uleb128 0x19
+ 663 011a 00       		.byte	0
+ 664 011b 00       		.byte	0
+ 665 011c 15       		.uleb128 0x15
+ 666 011d 2E       		.uleb128 0x2e
+ 667 011e 01       		.byte	0x1
+ 668 011f 3F       		.uleb128 0x3f
+ 669 0120 19       		.uleb128 0x19
+ 670 0121 03       		.uleb128 0x3
+ 671 0122 0E       		.uleb128 0xe
+ 672 0123 3A       		.uleb128 0x3a
+ 673 0124 0B       		.uleb128 0xb
+ 674 0125 3B       		.uleb128 0x3b
+ 675 0126 0B       		.uleb128 0xb
+ 676 0127 27       		.uleb128 0x27
+ 677 0128 19       		.uleb128 0x19
+ 678 0129 3C       		.uleb128 0x3c
+ 679 012a 19       		.uleb128 0x19
+ 680 012b 00       		.byte	0
+ 681 012c 00       		.byte	0
+ 682 012d 00       		.byte	0
+ 683              		.section	.debug_aranges,"",%progbits
+ 684 0000 1C000000 		.4byte	0x1c
+ 685 0004 0200     		.2byte	0x2
+ 686 0006 00000000 		.4byte	.Ldebug_info0
+ 687 000a 04       		.byte	0x4
+ 688 000b 00       		.byte	0
+ 689 000c 0000     		.2byte	0
+ 690 000e 0000     		.2byte	0
+ 691 0010 00000000 		.4byte	.LFB63
+ 692 0014 5C000000 		.4byte	.LFE63-.LFB63
+ 693 0018 00000000 		.4byte	0
+ 694 001c 00000000 		.4byte	0
+ 695              		.section	.debug_ranges,"",%progbits
+ 696              	.Ldebug_ranges0:
+ 697 0000 00000000 		.4byte	.LFB63
+ 698 0004 5C000000 		.4byte	.LFE63
+ 699 0008 00000000 		.4byte	0
+ 700 000c 00000000 		.4byte	0
+ 701              		.section	.debug_line,"",%progbits
+ 702              	.Ldebug_line0:
+ 703 0000 B7010000 		.section	.debug_str,"MS",%progbits,1
+ 703      02007001 
+ 703      00000201 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 14
+
+
+ 703      FB0E0D00 
+ 703      01010101 
+ 704              	.LASF9:
+ 705 0000 5F5F696E 		.ascii	"__int32_t\000"
+ 705      7433325F 
+ 705      7400
+ 706              	.LASF19:
+ 707 000a 6461746F 		.ascii	"dato_recibido\000"
+ 707      5F726563 
+ 707      69626964 
+ 707      6F00
+ 708              	.LASF29:
+ 709 0018 2E5C6D61 		.ascii	".\\main.c\000"
+ 709      696E2E63 
+ 709      00
+ 710              	.LASF27:
+ 711 0021 52585F43 		.ascii	"RX_CAN_SendMsg0\000"
+ 711      414E5F53 
+ 711      656E644D 
+ 711      73673000 
+ 712              	.LASF13:
+ 713 0031 666C6F61 		.ascii	"float\000"
+ 713      7400
+ 714              	.LASF23:
+ 715 0037 4C43445F 		.ascii	"LCD_Char_1_Start\000"
+ 715      43686172 
+ 715      5F315F53 
+ 715      74617274 
+ 715      00
+ 716              	.LASF22:
+ 717 0048 4C43445F 		.ascii	"LCD_Char_1_PrintString\000"
+ 717      43686172 
+ 717      5F315F50 
+ 717      72696E74 
+ 717      53747269 
+ 718              	.LASF15:
+ 719 005f 63686172 		.ascii	"char8\000"
+ 719      3800
+ 720              	.LASF5:
+ 721 0065 6C6F6E67 		.ascii	"long unsigned int\000"
+ 721      20756E73 
+ 721      69676E65 
+ 721      6420696E 
+ 721      7400
+ 722              	.LASF3:
+ 723 0077 73686F72 		.ascii	"short unsigned int\000"
+ 723      7420756E 
+ 723      7369676E 
+ 723      65642069 
+ 723      6E7400
+ 724              	.LASF18:
+ 725 008a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 725      52784275 
+ 725      66666572 
+ 725      00
+ 726              	.LASF26:
+ 727 0097 52585F43 		.ascii	"RX_CAN_Start\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 15
+
+
+ 727      414E5F53 
+ 727      74617274 
+ 727      00
+ 728              	.LASF1:
+ 729 00a4 756E7369 		.ascii	"unsigned char\000"
+ 729      676E6564 
+ 729      20636861 
+ 729      7200
+ 730              	.LASF14:
+ 731 00b2 646F7562 		.ascii	"double\000"
+ 731      6C6500
+ 732              	.LASF31:
+ 733 00b9 6D61696E 		.ascii	"main\000"
+ 733      00
+ 734              	.LASF12:
+ 735 00be 75696E74 		.ascii	"uint32\000"
+ 735      333200
+ 736              	.LASF20:
+ 737 00c5 6461746F 		.ascii	"dato_enviado\000"
+ 737      5F656E76 
+ 737      6961646F 
+ 737      00
+ 738              	.LASF8:
+ 739 00d2 756E7369 		.ascii	"unsigned int\000"
+ 739      676E6564 
+ 739      20696E74 
+ 739      00
+ 740              	.LASF7:
+ 741 00df 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 741      206C6F6E 
+ 741      6720756E 
+ 741      7369676E 
+ 741      65642069 
+ 742              	.LASF28:
+ 743 00f6 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 743      4320342E 
+ 743      392E3320 
+ 743      32303135 
+ 743      30333033 
+ 744 0129 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 744      20726576 
+ 744      6973696F 
+ 744      6E203232 
+ 744      31323230 
+ 745 015c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 745      66756E63 
+ 745      74696F6E 
+ 745      2D736563 
+ 745      74696F6E 
+ 746              	.LASF24:
+ 747 0184 52585F43 		.ascii	"RX_CAN_ReceiveMsg0\000"
+ 747      414E5F52 
+ 747      65636569 
+ 747      76654D73 
+ 747      673000
+ 748              	.LASF10:
+ 749 0197 696E7433 		.ascii	"int32_t\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccNXbFtZ.s 			page 16
+
+
+ 749      325F7400 
+ 750              	.LASF17:
+ 751 019f 73697A65 		.ascii	"sizetype\000"
+ 751      74797065 
+ 751      00
+ 752              	.LASF6:
+ 753 01a8 6C6F6E67 		.ascii	"long long int\000"
+ 753      206C6F6E 
+ 753      6720696E 
+ 753      7400
+ 754              	.LASF16:
+ 755 01b6 63686172 		.ascii	"char\000"
+ 755      00
+ 756              	.LASF21:
+ 757 01bb 4C43445F 		.ascii	"LCD_Char_1_Position\000"
+ 757      43686172 
+ 757      5F315F50 
+ 757      6F736974 
+ 757      696F6E00 
+ 758              	.LASF32:
+ 759 01cf 4C43445F 		.ascii	"LCD_Char_1_PrintInt8\000"
+ 759      43686172 
+ 759      5F315F50 
+ 759      72696E74 
+ 759      496E7438 
+ 760              	.LASF2:
+ 761 01e4 73686F72 		.ascii	"short int\000"
+ 761      7420696E 
+ 761      7400
+ 762              	.LASF11:
+ 763 01ee 75696E74 		.ascii	"uint8\000"
+ 763      3800
+ 764              	.LASF4:
+ 765 01f4 6C6F6E67 		.ascii	"long int\000"
+ 765      20696E74 
+ 765      00
+ 766              	.LASF30:
+ 767 01fd 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\Protocolos\\CAN_"
+ 767      73657273 
+ 767      5C48656E 
+ 767      72792041 
+ 767      6C626572 
+ 768 022b 4E4F444F 		.ascii	"NODO_2_BIDIRECCIONAL.cydsn\000"
+ 768      5F325F42 
+ 768      49444952 
+ 768      45434349 
+ 768      4F4E414C 
+ 769              	.LASF0:
+ 770 0246 7369676E 		.ascii	"signed char\000"
+ 770      65642063 
+ 770      68617200 
+ 771              	.LASF25:
+ 772 0252 43794465 		.ascii	"CyDelay\000"
+ 772      6C617900 
+ 773              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
