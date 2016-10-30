@@ -1,0 +1,5 @@
+C:\Users\Henry Alberto\Desktop\Sensor\VCNL4010.cydsn\VCNL4010.cyprj|e61b23ab-974d-4eb3-9226-5606648909db
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|1be73c1b-1fdc-4e11-80fa-9c0c73b9bc86
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|b675ba51-aa24-4f7d-aaed-1853f7b6032b
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a0795d69-67fa-4c01-a3f6-64f05c7c398d
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|d38080fd-0082-4e6c-888f-c95705930d4d

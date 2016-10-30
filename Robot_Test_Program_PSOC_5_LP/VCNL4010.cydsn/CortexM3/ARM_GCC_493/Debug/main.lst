@@ -1,0 +1,2203 @@
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.writeVCNL,"ax",%progbits
+  19              		.align	2
+  20              		.global	writeVCNL
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	writeVCNL, %function
+  24              	writeVCNL:
+  25              	.LFB63:
+  26              		.file 1 ".\\main.c"
+   1:.\main.c      **** #include <project.h>
+   2:.\main.c      **** #define VCNL4010_ADDRESS 0x13
+   3:.\main.c      **** 
+   4:.\main.c      **** //Send Data
+   5:.\main.c      **** void writeVCNL(int address, int data){
+  27              		.loc 1 5 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 00B5     		push	{lr}
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 14, -4
+  35 0002 83B0     		sub	sp, sp, #12
+  36              		.cfi_def_cfa_offset 16
+   6:.\main.c      ****     uint8 Write_buf[2]={0};
+   7:.\main.c      ****     Write_buf[0]=address;
+  37              		.loc 1 7 0
+  38 0004 8DF80400 		strb	r0, [sp, #4]
+   8:.\main.c      ****     Write_buf[1]=data;
+  39              		.loc 1 8 0
+  40 0008 8DF80510 		strb	r1, [sp, #5]
+   9:.\main.c      ****     I2C_1_MasterWriteBuf(VCNL4010_ADDRESS,(uint8 *)Write_buf,2,I2C_1_MODE_COMPLETE_XFER);
+  41              		.loc 1 9 0
+  42 000c 1320     		movs	r0, #19
+  43              	.LVL1:
+  44 000e 01A9     		add	r1, sp, #4
+  45              	.LVL2:
+  46 0010 0222     		movs	r2, #2
+  47 0012 0023     		movs	r3, #0
+  48 0014 FFF7FEFF 		bl	I2C_1_MasterWriteBuf
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 2
+
+
+  49              	.LVL3:
+  50              	.L2:
+  10:.\main.c      ****     while((I2C_1_MasterStatus()&I2C_1_MSTAT_WR_CMPLT)==0){}
+  51              		.loc 1 10 0 discriminator 1
+  52 0018 FFF7FEFF 		bl	I2C_1_MasterStatus
+  53              	.LVL4:
+  54 001c 10F0020F 		tst	r0, #2
+  55 0020 FAD0     		beq	.L2
+  11:.\main.c      ****     return;
+  12:.\main.c      **** }
+  56              		.loc 1 12 0
+  57 0022 03B0     		add	sp, sp, #12
+  58              		.cfi_def_cfa_offset 4
+  59              		@ sp needed
+  60 0024 5DF804FB 		ldr	pc, [sp], #4
+  61              		.cfi_endproc
+  62              	.LFE63:
+  63              		.size	writeVCNL, .-writeVCNL
+  64              		.section	.text.readVCNL,"ax",%progbits
+  65              		.align	2
+  66              		.global	readVCNL
+  67              		.thumb
+  68              		.thumb_func
+  69              		.type	readVCNL, %function
+  70              	readVCNL:
+  71              	.LFB64:
+  13:.\main.c      **** //Read Data
+  14:.\main.c      **** int readVCNL(int address){
+  72              		.loc 1 14 0
+  73              		.cfi_startproc
+  74              		@ args = 0, pretend = 0, frame = 8
+  75              		@ frame_needed = 0, uses_anonymous_args = 0
+  76              	.LVL5:
+  77 0000 00B5     		push	{lr}
+  78              		.cfi_def_cfa_offset 4
+  79              		.cfi_offset 14, -4
+  80 0002 83B0     		sub	sp, sp, #12
+  81              		.cfi_def_cfa_offset 16
+  15:.\main.c      ****     uint8 Write_buf[1]={0};
+  16:.\main.c      ****     Write_buf[0]=address;
+  82              		.loc 1 16 0
+  83 0004 8DF80400 		strb	r0, [sp, #4]
+  17:.\main.c      ****     uint8 read_Buf[1]={0};
+  84              		.loc 1 17 0
+  85 0008 0023     		movs	r3, #0
+  86 000a 8DF80030 		strb	r3, [sp]
+  18:.\main.c      ****     I2C_1_MasterWriteBuf(VCNL4010_ADDRESS,(uint8 *)Write_buf,1,I2C_1_MODE_NO_STOP);
+  87              		.loc 1 18 0
+  88 000e 1320     		movs	r0, #19
+  89              	.LVL6:
+  90 0010 01A9     		add	r1, sp, #4
+  91 0012 0122     		movs	r2, #1
+  92 0014 0223     		movs	r3, #2
+  93 0016 FFF7FEFF 		bl	I2C_1_MasterWriteBuf
+  94              	.LVL7:
+  95              	.L5:
+  19:.\main.c      ****     while((I2C_1_MasterStatus()&I2C_1_MSTAT_WR_CMPLT)==0){}
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 3
+
+
+  96              		.loc 1 19 0 discriminator 1
+  97 001a FFF7FEFF 		bl	I2C_1_MasterStatus
+  98              	.LVL8:
+  99 001e 10F0020F 		tst	r0, #2
+ 100 0022 FAD0     		beq	.L5
+  20:.\main.c      ****     I2C_1_MasterReadBuf(VCNL4010_ADDRESS,(uint8 *)read_Buf,1,I2C_1_MODE_REPEAT_START);
+ 101              		.loc 1 20 0
+ 102 0024 1320     		movs	r0, #19
+ 103 0026 6946     		mov	r1, sp
+ 104 0028 0122     		movs	r2, #1
+ 105 002a 1346     		mov	r3, r2
+ 106 002c FFF7FEFF 		bl	I2C_1_MasterReadBuf
+ 107              	.LVL9:
+ 108              	.L6:
+  21:.\main.c      ****     while((I2C_1_MasterStatus()&I2C_1_MSTAT_RD_CMPLT)==0){}
+ 109              		.loc 1 21 0 discriminator 1
+ 110 0030 FFF7FEFF 		bl	I2C_1_MasterStatus
+ 111              	.LVL10:
+ 112 0034 10F0010F 		tst	r0, #1
+ 113 0038 FAD0     		beq	.L6
+  22:.\main.c      ****     return read_Buf[0];
+  23:.\main.c      **** }
+ 114              		.loc 1 23 0
+ 115 003a 9DF80000 		ldrb	r0, [sp]	@ zero_extendqisi2
+ 116 003e 03B0     		add	sp, sp, #12
+ 117              		.cfi_def_cfa_offset 4
+ 118              		@ sp needed
+ 119 0040 5DF804FB 		ldr	pc, [sp], #4
+ 120              		.cfi_endproc
+ 121              	.LFE64:
+ 122              		.size	readVCNL, .-readVCNL
+ 123              		.section	.text.initVCNL,"ax",%progbits
+ 124              		.align	2
+ 125              		.global	initVCNL
+ 126              		.thumb
+ 127              		.thumb_func
+ 128              		.type	initVCNL, %function
+ 129              	initVCNL:
+ 130              	.LFB65:
+  24:.\main.c      **** //Init Sensor
+  25:.\main.c      **** void initVCNL(){
+ 131              		.loc 1 25 0
+ 132              		.cfi_startproc
+ 133              		@ args = 0, pretend = 0, frame = 0
+ 134              		@ frame_needed = 0, uses_anonymous_args = 0
+ 135 0000 08B5     		push	{r3, lr}
+ 136              		.cfi_def_cfa_offset 8
+ 137              		.cfi_offset 3, -8
+ 138              		.cfi_offset 14, -4
+  26:.\main.c      ****   int temp = readVCNL(0x81);
+ 139              		.loc 1 26 0
+ 140 0002 8120     		movs	r0, #129
+ 141 0004 FFF7FEFF 		bl	readVCNL
+ 142              	.LVL11:
+  27:.\main.c      ****   if (temp != 0x21){  
+ 143              		.loc 1 27 0
+ 144 0008 2128     		cmp	r0, #33
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 4
+
+
+ 145 000a 07D0     		beq	.L9
+  28:.\main.c      ****     //If LCD provided
+  29:.\main.c      ****     LCD_Char_1_Position(1,0);
+ 146              		.loc 1 29 0
+ 147 000c 0120     		movs	r0, #1
+ 148              	.LVL12:
+ 149 000e 0021     		movs	r1, #0
+ 150 0010 FFF7FEFF 		bl	LCD_Char_1_Position
+ 151              	.LVL13:
+  30:.\main.c      ****     LCD_Char_1_PrintString("Fail...");
+ 152              		.loc 1 30 0
+ 153 0014 0D48     		ldr	r0, .L12
+ 154 0016 FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 155              	.LVL14:
+ 156 001a 06E0     		b	.L10
+ 157              	.LVL15:
+ 158              	.L9:
+  31:.\main.c      ****     
+  32:.\main.c      ****   }
+  33:.\main.c      ****    else{
+  34:.\main.c      ****     LCD_Char_1_Position(1,0);
+ 159              		.loc 1 34 0
+ 160 001c 0120     		movs	r0, #1
+ 161              	.LVL16:
+ 162 001e 0021     		movs	r1, #0
+ 163 0020 FFF7FEFF 		bl	LCD_Char_1_Position
+ 164              	.LVL17:
+  35:.\main.c      ****     LCD_Char_1_PrintString("Ok...");
+ 165              		.loc 1 35 0
+ 166 0024 0A48     		ldr	r0, .L12+4
+ 167 0026 FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 168              	.LVL18:
+ 169              	.L10:
+  36:.\main.c      ****   } 
+  37:.\main.c      ****   //VCNL Init Params
+  38:.\main.c      ****   writeVCNL(0x84, 0x0F); // Configures ambient light measures - Single conversion mode, 128 average
+ 170              		.loc 1 38 0
+ 171 002a 8420     		movs	r0, #132
+ 172 002c 0F21     		movs	r1, #15
+ 173 002e FFF7FEFF 		bl	writeVCNL
+ 174              	.LVL19:
+  39:.\main.c      ****   writeVCNL(0x83, 20);   // sets IR current in steps of 10mA 0-200mA --> 200mA
+ 175              		.loc 1 39 0
+ 176 0032 8320     		movs	r0, #131
+ 177 0034 1421     		movs	r1, #20
+ 178 0036 FFF7FEFF 		bl	writeVCNL
+ 179              	.LVL20:
+  40:.\main.c      ****   writeVCNL(0x89, 0);    // Proximity IR test signal freq, 0-3 - 781.25 kHz
+ 180              		.loc 1 40 0
+ 181 003a 8920     		movs	r0, #137
+ 182 003c 0021     		movs	r1, #0
+ 183 003e FFF7FEFF 		bl	writeVCNL
+ 184              	.LVL21:
+  41:.\main.c      ****   writeVCNL(0x8A, 0x81); // proximity modulator timing - 129, recommended by Vishay 
+ 185              		.loc 1 41 0
+ 186 0042 8A20     		movs	r0, #138
+ 187 0044 8121     		movs	r1, #129
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 5
+
+
+ 188 0046 FFF7FEFF 		bl	writeVCNL
+ 189              	.LVL22:
+ 190 004a 08BD     		pop	{r3, pc}
+ 191              	.L13:
+ 192              		.align	2
+ 193              	.L12:
+ 194 004c 00000000 		.word	.LC0
+ 195 0050 08000000 		.word	.LC1
+ 196              		.cfi_endproc
+ 197              	.LFE65:
+ 198              		.size	initVCNL, .-initVCNL
+ 199              		.section	.text.readProximity,"ax",%progbits
+ 200              		.align	2
+ 201              		.global	readProximity
+ 202              		.thumb
+ 203              		.thumb_func
+ 204              		.type	readProximity, %function
+ 205              	readProximity:
+ 206              	.LFB66:
+  42:.\main.c      **** }
+  43:.\main.c      **** //Read Distance Signal
+  44:.\main.c      **** unsigned int readProximity(){
+ 207              		.loc 1 44 0
+ 208              		.cfi_startproc
+ 209              		@ args = 0, pretend = 0, frame = 0
+ 210              		@ frame_needed = 0, uses_anonymous_args = 0
+ 211 0000 10B5     		push	{r4, lr}
+ 212              		.cfi_def_cfa_offset 8
+ 213              		.cfi_offset 4, -8
+ 214              		.cfi_offset 14, -4
+  45:.\main.c      ****   int temp = readVCNL(0x80);
+ 215              		.loc 1 45 0
+ 216 0002 8020     		movs	r0, #128
+ 217 0004 FFF7FEFF 		bl	readVCNL
+ 218              	.LVL23:
+  46:.\main.c      ****   writeVCNL(0x80, temp | 0x08);             // command the sensor to perform a proximity measure
+ 219              		.loc 1 46 0
+ 220 0008 40F00801 		orr	r1, r0, #8
+ 221 000c 8020     		movs	r0, #128
+ 222              	.LVL24:
+ 223 000e FFF7FEFF 		bl	writeVCNL
+ 224              	.LVL25:
+ 225              	.L15:
+  47:.\main.c      ****   while(!(readVCNL(0x80)&0x20));            // Wait for the proximity data ready bit to be set
+ 226              		.loc 1 47 0 discriminator 1
+ 227 0012 8020     		movs	r0, #128
+ 228 0014 FFF7FEFF 		bl	readVCNL
+ 229              	.LVL26:
+ 230 0018 10F0200F 		tst	r0, #32
+ 231 001c F9D0     		beq	.L15
+  48:.\main.c      ****   unsigned int data = readVCNL(0x87) << 8;
+ 232              		.loc 1 48 0
+ 233 001e 8720     		movs	r0, #135
+ 234 0020 FFF7FEFF 		bl	readVCNL
+ 235              	.LVL27:
+ 236 0024 0402     		lsls	r4, r0, #8
+ 237              	.LVL28:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 6
+
+
+  49:.\main.c      ****   data |= readVCNL(0x88);
+ 238              		.loc 1 49 0
+ 239 0026 8820     		movs	r0, #136
+ 240 0028 FFF7FEFF 		bl	readVCNL
+ 241              	.LVL29:
+  50:.\main.c      ****   return data;
+  51:.\main.c      **** }
+ 242              		.loc 1 51 0
+ 243 002c 2043     		orrs	r0, r0, r4
+ 244              	.LVL30:
+ 245 002e 10BD     		pop	{r4, pc}
+ 246              		.cfi_endproc
+ 247              	.LFE66:
+ 248              		.size	readProximity, .-readProximity
+ 249              		.section	.text.readAmbient,"ax",%progbits
+ 250              		.align	2
+ 251              		.global	readAmbient
+ 252              		.thumb
+ 253              		.thumb_func
+ 254              		.type	readAmbient, %function
+ 255              	readAmbient:
+ 256              	.LFB67:
+  52:.\main.c      **** //Read Ambient Signal
+  53:.\main.c      **** unsigned int readAmbient(){
+ 257              		.loc 1 53 0
+ 258              		.cfi_startproc
+ 259              		@ args = 0, pretend = 0, frame = 0
+ 260              		@ frame_needed = 0, uses_anonymous_args = 0
+ 261 0000 10B5     		push	{r4, lr}
+ 262              		.cfi_def_cfa_offset 8
+ 263              		.cfi_offset 4, -8
+ 264              		.cfi_offset 14, -4
+  54:.\main.c      ****   int temp = readVCNL(0x80);
+ 265              		.loc 1 54 0
+ 266 0002 8020     		movs	r0, #128
+ 267 0004 FFF7FEFF 		bl	readVCNL
+ 268              	.LVL31:
+  55:.\main.c      ****   writeVCNL(0x80, temp | 0x10);             // command the sensor to perform ambient measure
+ 269              		.loc 1 55 0
+ 270 0008 40F01001 		orr	r1, r0, #16
+ 271 000c 8020     		movs	r0, #128
+ 272              	.LVL32:
+ 273 000e FFF7FEFF 		bl	writeVCNL
+ 274              	.LVL33:
+ 275              	.L18:
+  56:.\main.c      ****   while(!(readVCNL(0x80)&0x40));            // wait for the proximity data ready bit to be set
+ 276              		.loc 1 56 0 discriminator 1
+ 277 0012 8020     		movs	r0, #128
+ 278 0014 FFF7FEFF 		bl	readVCNL
+ 279              	.LVL34:
+ 280 0018 10F0400F 		tst	r0, #64
+ 281 001c F9D0     		beq	.L18
+  57:.\main.c      ****   unsigned int data = readVCNL(0x85) << 8;  
+ 282              		.loc 1 57 0
+ 283 001e 8520     		movs	r0, #133
+ 284 0020 FFF7FEFF 		bl	readVCNL
+ 285              	.LVL35:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 7
+
+
+ 286 0024 0402     		lsls	r4, r0, #8
+ 287              	.LVL36:
+  58:.\main.c      ****   data |= readVCNL(0x86);
+ 288              		.loc 1 58 0
+ 289 0026 8620     		movs	r0, #134
+ 290 0028 FFF7FEFF 		bl	readVCNL
+ 291              	.LVL37:
+  59:.\main.c      ****   return data;
+  60:.\main.c      **** }
+ 292              		.loc 1 60 0
+ 293 002c 2043     		orrs	r0, r0, r4
+ 294              	.LVL38:
+ 295 002e 10BD     		pop	{r4, pc}
+ 296              		.cfi_endproc
+ 297              	.LFE67:
+ 298              		.size	readAmbient, .-readAmbient
+ 299              		.section	.text.main,"ax",%progbits
+ 300              		.align	2
+ 301              		.global	main
+ 302              		.thumb
+ 303              		.thumb_func
+ 304              		.type	main, %function
+ 305              	main:
+ 306              	.LFB68:
+  61:.\main.c      **** 
+  62:.\main.c      **** int main()
+  63:.\main.c      **** {
+ 307              		.loc 1 63 0
+ 308              		.cfi_startproc
+ 309              		@ Volatile: function does not return.
+ 310              		@ args = 0, pretend = 0, frame = 0
+ 311              		@ frame_needed = 0, uses_anonymous_args = 0
+ 312 0000 08B5     		push	{r3, lr}
+ 313              		.cfi_def_cfa_offset 8
+ 314              		.cfi_offset 3, -8
+ 315              		.cfi_offset 14, -4
+  64:.\main.c      ****     CyGlobalIntEnable; 
+ 316              		.loc 1 64 0
+ 317              	@ 64 ".\main.c" 1
+ 318 0002 62B6     		CPSIE   i
+ 319              	@ 0 "" 2
+  65:.\main.c      ****     LCD_Char_1_Start();
+ 320              		.loc 1 65 0
+ 321              		.thumb
+ 322 0004 FFF7FEFF 		bl	LCD_Char_1_Start
+ 323              	.LVL39:
+  66:.\main.c      ****     I2C_1_Start();
+ 324              		.loc 1 66 0
+ 325 0008 FFF7FEFF 		bl	I2C_1_Start
+ 326              	.LVL40:
+  67:.\main.c      ****     I2C_1_Enable();
+ 327              		.loc 1 67 0
+ 328 000c FFF7FEFF 		bl	I2C_1_Enable
+ 329              	.LVL41:
+  68:.\main.c      ****     LCD_Char_1_Position(0,0);
+ 330              		.loc 1 68 0
+ 331 0010 0020     		movs	r0, #0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 8
+
+
+ 332 0012 0146     		mov	r1, r0
+ 333 0014 FFF7FEFF 		bl	LCD_Char_1_Position
+ 334              	.LVL42:
+  69:.\main.c      ****     LCD_Char_1_PrintString("Sensor");
+ 335              		.loc 1 69 0
+ 336 0018 1448     		ldr	r0, .L23
+ 337 001a FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 338              	.LVL43:
+  70:.\main.c      ****     CyDelay(100);
+ 339              		.loc 1 70 0
+ 340 001e 6420     		movs	r0, #100
+ 341 0020 FFF7FEFF 		bl	CyDelay
+ 342              	.LVL44:
+  71:.\main.c      ****     initVCNL();
+ 343              		.loc 1 71 0
+ 344 0024 FFF7FEFF 		bl	initVCNL
+ 345              	.LVL45:
+ 346              	.L21:
+  72:.\main.c      ****     for(;;)
+  73:.\main.c      ****     {
+  74:.\main.c      ****         LCD_Char_1_Position(0,0);
+ 347              		.loc 1 74 0 discriminator 1
+ 348 0028 0020     		movs	r0, #0
+ 349 002a 0146     		mov	r1, r0
+ 350 002c FFF7FEFF 		bl	LCD_Char_1_Position
+ 351              	.LVL46:
+  75:.\main.c      ****         LCD_Char_1_PrintString("Amb=    ");
+ 352              		.loc 1 75 0 discriminator 1
+ 353 0030 0F48     		ldr	r0, .L23+4
+ 354 0032 FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 355              	.LVL47:
+  76:.\main.c      ****         LCD_Char_1_Position(0,8);
+ 356              		.loc 1 76 0 discriminator 1
+ 357 0036 0020     		movs	r0, #0
+ 358 0038 0821     		movs	r1, #8
+ 359 003a FFF7FEFF 		bl	LCD_Char_1_Position
+ 360              	.LVL48:
+  77:.\main.c      ****         LCD_Char_1_PrintDecUint16(readAmbient());
+ 361              		.loc 1 77 0 discriminator 1
+ 362 003e FFF7FEFF 		bl	readAmbient
+ 363              	.LVL49:
+ 364 0042 80B2     		uxth	r0, r0
+ 365 0044 FFF7FEFF 		bl	LCD_Char_1_PrintU32Number
+ 366              	.LVL50:
+  78:.\main.c      ****         LCD_Char_1_Position(1,0);
+ 367              		.loc 1 78 0 discriminator 1
+ 368 0048 0120     		movs	r0, #1
+ 369 004a 0021     		movs	r1, #0
+ 370 004c FFF7FEFF 		bl	LCD_Char_1_Position
+ 371              	.LVL51:
+  79:.\main.c      ****         LCD_Char_1_PrintString("Prox=   ");
+ 372              		.loc 1 79 0 discriminator 1
+ 373 0050 0848     		ldr	r0, .L23+8
+ 374 0052 FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 375              	.LVL52:
+  80:.\main.c      ****         LCD_Char_1_Position(1,8);
+ 376              		.loc 1 80 0 discriminator 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 9
+
+
+ 377 0056 0120     		movs	r0, #1
+ 378 0058 0821     		movs	r1, #8
+ 379 005a FFF7FEFF 		bl	LCD_Char_1_Position
+ 380              	.LVL53:
+  81:.\main.c      ****         LCD_Char_1_PrintDecUint16(readProximity());
+ 381              		.loc 1 81 0 discriminator 1
+ 382 005e FFF7FEFF 		bl	readProximity
+ 383              	.LVL54:
+ 384 0062 80B2     		uxth	r0, r0
+ 385 0064 FFF7FEFF 		bl	LCD_Char_1_PrintU32Number
+ 386              	.LVL55:
+  82:.\main.c      ****         }
+ 387              		.loc 1 82 0 discriminator 1
+ 388 0068 DEE7     		b	.L21
+ 389              	.L24:
+ 390 006a 00BF     		.align	2
+ 391              	.L23:
+ 392 006c 10000000 		.word	.LC2
+ 393 0070 18000000 		.word	.LC3
+ 394 0074 24000000 		.word	.LC4
+ 395              		.cfi_endproc
+ 396              	.LFE68:
+ 397              		.size	main, .-main
+ 398              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 399              		.align	2
+ 400              	.LC0:
+ 401 0000 4661696C 		.ascii	"Fail...\000"
+ 401      2E2E2E00 
+ 402              	.LC1:
+ 403 0008 4F6B2E2E 		.ascii	"Ok...\000"
+ 403      2E00
+ 404 000e 0000     		.space	2
+ 405              	.LC2:
+ 406 0010 53656E73 		.ascii	"Sensor\000"
+ 406      6F7200
+ 407 0017 00       		.space	1
+ 408              	.LC3:
+ 409 0018 416D623D 		.ascii	"Amb=    \000"
+ 409      20202020 
+ 409      00
+ 410 0021 000000   		.space	3
+ 411              	.LC4:
+ 412 0024 50726F78 		.ascii	"Prox=   \000"
+ 412      3D202020 
+ 412      00
+ 413 002d 000000   		.text
+ 414              	.Letext0:
+ 415              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 416              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 417              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 418              		.file 5 "Generated_Source\\PSoC5/I2C_1.h"
+ 419              		.file 6 "Generated_Source\\PSoC5/LCD_Char_1.h"
+ 420              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
+ 421              		.file 8 "Generated_Source\\PSoC5/core_cm3.h"
+ 422              		.section	.debug_info,"",%progbits
+ 423              	.Ldebug_info0:
+ 424 0000 1F060000 		.4byte	0x61f
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 10
+
+
+ 425 0004 0400     		.2byte	0x4
+ 426 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 427 000a 04       		.byte	0x4
+ 428 000b 01       		.uleb128 0x1
+ 429 000c 58010000 		.4byte	.LASF36
+ 430 0010 01       		.byte	0x1
+ 431 0011 56000000 		.4byte	.LASF37
+ 432 0015 00000000 		.4byte	.LASF38
+ 433 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 434 001d 00000000 		.4byte	0
+ 435 0021 00000000 		.4byte	.Ldebug_line0
+ 436 0025 02       		.uleb128 0x2
+ 437 0026 01       		.byte	0x1
+ 438 0027 06       		.byte	0x6
+ 439 0028 A3020000 		.4byte	.LASF0
+ 440 002c 02       		.uleb128 0x2
+ 441 002d 01       		.byte	0x1
+ 442 002e 08       		.byte	0x8
+ 443 002f 13010000 		.4byte	.LASF1
+ 444 0033 02       		.uleb128 0x2
+ 445 0034 02       		.byte	0x2
+ 446 0035 05       		.byte	0x5
+ 447 0036 66020000 		.4byte	.LASF2
+ 448 003a 02       		.uleb128 0x2
+ 449 003b 02       		.byte	0x2
+ 450 003c 07       		.byte	0x7
+ 451 003d F3000000 		.4byte	.LASF3
+ 452 0041 03       		.uleb128 0x3
+ 453 0042 5F000000 		.4byte	.LASF9
+ 454 0046 02       		.byte	0x2
+ 455 0047 3F       		.byte	0x3f
+ 456 0048 4C000000 		.4byte	0x4c
+ 457 004c 02       		.uleb128 0x2
+ 458 004d 04       		.byte	0x4
+ 459 004e 05       		.byte	0x5
+ 460 004f 76020000 		.4byte	.LASF4
+ 461 0053 02       		.uleb128 0x2
+ 462 0054 04       		.byte	0x4
+ 463 0055 07       		.byte	0x7
+ 464 0056 DC000000 		.4byte	.LASF5
+ 465 005a 02       		.uleb128 0x2
+ 466 005b 08       		.byte	0x8
+ 467 005c 05       		.byte	0x5
+ 468 005d 26020000 		.4byte	.LASF6
+ 469 0061 02       		.uleb128 0x2
+ 470 0062 08       		.byte	0x8
+ 471 0063 07       		.byte	0x7
+ 472 0064 A8000000 		.4byte	.LASF7
+ 473 0068 04       		.uleb128 0x4
+ 474 0069 04       		.byte	0x4
+ 475 006a 05       		.byte	0x5
+ 476 006b 696E7400 		.ascii	"int\000"
+ 477 006f 02       		.uleb128 0x2
+ 478 0070 04       		.byte	0x4
+ 479 0071 07       		.byte	0x7
+ 480 0072 E6010000 		.4byte	.LASF8
+ 481 0076 03       		.uleb128 0x3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 11
+
+
+ 482 0077 15020000 		.4byte	.LASF10
+ 483 007b 03       		.byte	0x3
+ 484 007c 2C       		.byte	0x2c
+ 485 007d 41000000 		.4byte	0x41
+ 486 0081 05       		.uleb128 0x5
+ 487 0082 70020000 		.4byte	.LASF11
+ 488 0086 04       		.byte	0x4
+ 489 0087 9201     		.2byte	0x192
+ 490 0089 2C000000 		.4byte	0x2c
+ 491 008d 05       		.uleb128 0x5
+ 492 008e 41010000 		.4byte	.LASF12
+ 493 0092 04       		.byte	0x4
+ 494 0093 9301     		.2byte	0x193
+ 495 0095 3A000000 		.4byte	0x3a
+ 496 0099 05       		.uleb128 0x5
+ 497 009a 51010000 		.4byte	.LASF13
+ 498 009e 04       		.byte	0x4
+ 499 009f 9401     		.2byte	0x194
+ 500 00a1 53000000 		.4byte	0x53
+ 501 00a5 02       		.uleb128 0x2
+ 502 00a6 04       		.byte	0x4
+ 503 00a7 04       		.byte	0x4
+ 504 00a8 9D000000 		.4byte	.LASF14
+ 505 00ac 02       		.uleb128 0x2
+ 506 00ad 08       		.byte	0x8
+ 507 00ae 04       		.byte	0x4
+ 508 00af 21010000 		.4byte	.LASF15
+ 509 00b3 05       		.uleb128 0x5
+ 510 00b4 D6000000 		.4byte	.LASF16
+ 511 00b8 04       		.byte	0x4
+ 512 00b9 A301     		.2byte	0x1a3
+ 513 00bb BF000000 		.4byte	0xbf
+ 514 00bf 02       		.uleb128 0x2
+ 515 00c0 01       		.byte	0x1
+ 516 00c1 08       		.byte	0x8
+ 517 00c2 34020000 		.4byte	.LASF17
+ 518 00c6 02       		.uleb128 0x2
+ 519 00c7 04       		.byte	0x4
+ 520 00c8 07       		.byte	0x7
+ 521 00c9 1D020000 		.4byte	.LASF18
+ 522 00cd 06       		.uleb128 0x6
+ 523 00ce 4C000000 		.4byte	.LASF24
+ 524 00d2 01       		.byte	0x1
+ 525 00d3 05       		.byte	0x5
+ 526 00d4 00000000 		.4byte	.LFB63
+ 527 00d8 28000000 		.4byte	.LFE63-.LFB63
+ 528 00dc 01       		.uleb128 0x1
+ 529 00dd 9C       		.byte	0x9c
+ 530 00de 3B010000 		.4byte	0x13b
+ 531 00e2 07       		.uleb128 0x7
+ 532 00e3 F3010000 		.4byte	.LASF19
+ 533 00e7 01       		.byte	0x1
+ 534 00e8 05       		.byte	0x5
+ 535 00e9 68000000 		.4byte	0x68
+ 536 00ed 00000000 		.4byte	.LLST0
+ 537 00f1 07       		.uleb128 0x7
+ 538 00f2 A3000000 		.4byte	.LASF20
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 12
+
+
+ 539 00f6 01       		.byte	0x1
+ 540 00f7 05       		.byte	0x5
+ 541 00f8 68000000 		.4byte	0x68
+ 542 00fc 21000000 		.4byte	.LLST1
+ 543 0100 08       		.uleb128 0x8
+ 544 0101 7E000000 		.4byte	.LASF21
+ 545 0105 01       		.byte	0x1
+ 546 0106 06       		.byte	0x6
+ 547 0107 3B010000 		.4byte	0x13b
+ 548 010b 02       		.uleb128 0x2
+ 549 010c 91       		.byte	0x91
+ 550 010d 74       		.sleb128 -12
+ 551 010e 09       		.uleb128 0x9
+ 552 010f 18000000 		.4byte	.LVL3
+ 553 0113 64050000 		.4byte	0x564
+ 554 0117 31010000 		.4byte	0x131
+ 555 011b 0A       		.uleb128 0xa
+ 556 011c 01       		.uleb128 0x1
+ 557 011d 53       		.byte	0x53
+ 558 011e 01       		.uleb128 0x1
+ 559 011f 30       		.byte	0x30
+ 560 0120 0A       		.uleb128 0xa
+ 561 0121 01       		.uleb128 0x1
+ 562 0122 52       		.byte	0x52
+ 563 0123 01       		.uleb128 0x1
+ 564 0124 32       		.byte	0x32
+ 565 0125 0A       		.uleb128 0xa
+ 566 0126 01       		.uleb128 0x1
+ 567 0127 51       		.byte	0x51
+ 568 0128 02       		.uleb128 0x2
+ 569 0129 91       		.byte	0x91
+ 570 012a 74       		.sleb128 -12
+ 571 012b 0A       		.uleb128 0xa
+ 572 012c 01       		.uleb128 0x1
+ 573 012d 50       		.byte	0x50
+ 574 012e 01       		.uleb128 0x1
+ 575 012f 43       		.byte	0x43
+ 576 0130 00       		.byte	0
+ 577 0131 0B       		.uleb128 0xb
+ 578 0132 1C000000 		.4byte	.LVL4
+ 579 0136 8E050000 		.4byte	0x58e
+ 580 013a 00       		.byte	0
+ 581 013b 0C       		.uleb128 0xc
+ 582 013c 81000000 		.4byte	0x81
+ 583 0140 4B010000 		.4byte	0x14b
+ 584 0144 0D       		.uleb128 0xd
+ 585 0145 C6000000 		.4byte	0xc6
+ 586 0149 01       		.byte	0x1
+ 587 014a 00       		.byte	0
+ 588 014b 0E       		.uleb128 0xe
+ 589 014c 69000000 		.4byte	.LASF39
+ 590 0150 01       		.byte	0x1
+ 591 0151 0E       		.byte	0xe
+ 592 0152 68000000 		.4byte	0x68
+ 593 0156 00000000 		.4byte	.LFB64
+ 594 015a 44000000 		.4byte	.LFE64-.LFB64
+ 595 015e 01       		.uleb128 0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 13
+
+
+ 596 015f 9C       		.byte	0x9c
+ 597 0160 E8010000 		.4byte	0x1e8
+ 598 0164 07       		.uleb128 0x7
+ 599 0165 F3010000 		.4byte	.LASF19
+ 600 0169 01       		.byte	0x1
+ 601 016a 0E       		.byte	0xe
+ 602 016b 68000000 		.4byte	0x68
+ 603 016f 42000000 		.4byte	.LLST2
+ 604 0173 08       		.uleb128 0x8
+ 605 0174 7E000000 		.4byte	.LASF21
+ 606 0178 01       		.byte	0x1
+ 607 0179 0F       		.byte	0xf
+ 608 017a E8010000 		.4byte	0x1e8
+ 609 017e 02       		.uleb128 0x2
+ 610 017f 91       		.byte	0x91
+ 611 0180 74       		.sleb128 -12
+ 612 0181 08       		.uleb128 0x8
+ 613 0182 48010000 		.4byte	.LASF22
+ 614 0186 01       		.byte	0x1
+ 615 0187 11       		.byte	0x11
+ 616 0188 E8010000 		.4byte	0x1e8
+ 617 018c 02       		.uleb128 0x2
+ 618 018d 91       		.byte	0x91
+ 619 018e 70       		.sleb128 -16
+ 620 018f 09       		.uleb128 0x9
+ 621 0190 1A000000 		.4byte	.LVL7
+ 622 0194 64050000 		.4byte	0x564
+ 623 0198 B2010000 		.4byte	0x1b2
+ 624 019c 0A       		.uleb128 0xa
+ 625 019d 01       		.uleb128 0x1
+ 626 019e 53       		.byte	0x53
+ 627 019f 01       		.uleb128 0x1
+ 628 01a0 32       		.byte	0x32
+ 629 01a1 0A       		.uleb128 0xa
+ 630 01a2 01       		.uleb128 0x1
+ 631 01a3 52       		.byte	0x52
+ 632 01a4 01       		.uleb128 0x1
+ 633 01a5 31       		.byte	0x31
+ 634 01a6 0A       		.uleb128 0xa
+ 635 01a7 01       		.uleb128 0x1
+ 636 01a8 51       		.byte	0x51
+ 637 01a9 02       		.uleb128 0x2
+ 638 01aa 91       		.byte	0x91
+ 639 01ab 74       		.sleb128 -12
+ 640 01ac 0A       		.uleb128 0xa
+ 641 01ad 01       		.uleb128 0x1
+ 642 01ae 50       		.byte	0x50
+ 643 01af 01       		.uleb128 0x1
+ 644 01b0 43       		.byte	0x43
+ 645 01b1 00       		.byte	0
+ 646 01b2 0B       		.uleb128 0xb
+ 647 01b3 1E000000 		.4byte	.LVL8
+ 648 01b7 8E050000 		.4byte	0x58e
+ 649 01bb 09       		.uleb128 0x9
+ 650 01bc 30000000 		.4byte	.LVL9
+ 651 01c0 99050000 		.4byte	0x599
+ 652 01c4 DE010000 		.4byte	0x1de
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 14
+
+
+ 653 01c8 0A       		.uleb128 0xa
+ 654 01c9 01       		.uleb128 0x1
+ 655 01ca 53       		.byte	0x53
+ 656 01cb 01       		.uleb128 0x1
+ 657 01cc 31       		.byte	0x31
+ 658 01cd 0A       		.uleb128 0xa
+ 659 01ce 01       		.uleb128 0x1
+ 660 01cf 52       		.byte	0x52
+ 661 01d0 01       		.uleb128 0x1
+ 662 01d1 31       		.byte	0x31
+ 663 01d2 0A       		.uleb128 0xa
+ 664 01d3 01       		.uleb128 0x1
+ 665 01d4 51       		.byte	0x51
+ 666 01d5 02       		.uleb128 0x2
+ 667 01d6 7D       		.byte	0x7d
+ 668 01d7 00       		.sleb128 0
+ 669 01d8 0A       		.uleb128 0xa
+ 670 01d9 01       		.uleb128 0x1
+ 671 01da 50       		.byte	0x50
+ 672 01db 01       		.uleb128 0x1
+ 673 01dc 43       		.byte	0x43
+ 674 01dd 00       		.byte	0
+ 675 01de 0B       		.uleb128 0xb
+ 676 01df 34000000 		.4byte	.LVL10
+ 677 01e3 8E050000 		.4byte	0x58e
+ 678 01e7 00       		.byte	0
+ 679 01e8 0C       		.uleb128 0xc
+ 680 01e9 81000000 		.4byte	0x81
+ 681 01ed F8010000 		.4byte	0x1f8
+ 682 01f1 0D       		.uleb128 0xd
+ 683 01f2 C6000000 		.4byte	0xc6
+ 684 01f6 00       		.byte	0
+ 685 01f7 00       		.byte	0
+ 686 01f8 0F       		.uleb128 0xf
+ 687 01f9 35000000 		.4byte	.LASF40
+ 688 01fd 01       		.byte	0x1
+ 689 01fe 19       		.byte	0x19
+ 690 01ff 00000000 		.4byte	.LFB65
+ 691 0203 54000000 		.4byte	.LFE65-.LFB65
+ 692 0207 01       		.uleb128 0x1
+ 693 0208 9C       		.byte	0x9c
+ 694 0209 F0020000 		.4byte	0x2f0
+ 695 020d 10       		.uleb128 0x10
+ 696 020e EE000000 		.4byte	.LASF23
+ 697 0212 01       		.byte	0x1
+ 698 0213 1A       		.byte	0x1a
+ 699 0214 68000000 		.4byte	0x68
+ 700 0218 63000000 		.4byte	.LLST3
+ 701 021c 09       		.uleb128 0x9
+ 702 021d 08000000 		.4byte	.LVL11
+ 703 0221 4B010000 		.4byte	0x14b
+ 704 0225 30020000 		.4byte	0x230
+ 705 0229 0A       		.uleb128 0xa
+ 706 022a 01       		.uleb128 0x1
+ 707 022b 50       		.byte	0x50
+ 708 022c 02       		.uleb128 0x2
+ 709 022d 08       		.byte	0x8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 15
+
+
+ 710 022e 81       		.byte	0x81
+ 711 022f 00       		.byte	0
+ 712 0230 09       		.uleb128 0x9
+ 713 0231 14000000 		.4byte	.LVL13
+ 714 0235 BD050000 		.4byte	0x5bd
+ 715 0239 48020000 		.4byte	0x248
+ 716 023d 0A       		.uleb128 0xa
+ 717 023e 01       		.uleb128 0x1
+ 718 023f 51       		.byte	0x51
+ 719 0240 01       		.uleb128 0x1
+ 720 0241 30       		.byte	0x30
+ 721 0242 0A       		.uleb128 0xa
+ 722 0243 01       		.uleb128 0x1
+ 723 0244 50       		.byte	0x50
+ 724 0245 01       		.uleb128 0x1
+ 725 0246 31       		.byte	0x31
+ 726 0247 00       		.byte	0
+ 727 0248 09       		.uleb128 0x9
+ 728 0249 1A000000 		.4byte	.LVL14
+ 729 024d D3050000 		.4byte	0x5d3
+ 730 0251 5F020000 		.4byte	0x25f
+ 731 0255 0A       		.uleb128 0xa
+ 732 0256 01       		.uleb128 0x1
+ 733 0257 50       		.byte	0x50
+ 734 0258 05       		.uleb128 0x5
+ 735 0259 03       		.byte	0x3
+ 736 025a 00000000 		.4byte	.LC0
+ 737 025e 00       		.byte	0
+ 738 025f 09       		.uleb128 0x9
+ 739 0260 24000000 		.4byte	.LVL17
+ 740 0264 BD050000 		.4byte	0x5bd
+ 741 0268 77020000 		.4byte	0x277
+ 742 026c 0A       		.uleb128 0xa
+ 743 026d 01       		.uleb128 0x1
+ 744 026e 51       		.byte	0x51
+ 745 026f 01       		.uleb128 0x1
+ 746 0270 30       		.byte	0x30
+ 747 0271 0A       		.uleb128 0xa
+ 748 0272 01       		.uleb128 0x1
+ 749 0273 50       		.byte	0x50
+ 750 0274 01       		.uleb128 0x1
+ 751 0275 31       		.byte	0x31
+ 752 0276 00       		.byte	0
+ 753 0277 09       		.uleb128 0x9
+ 754 0278 2A000000 		.4byte	.LVL18
+ 755 027c D3050000 		.4byte	0x5d3
+ 756 0280 8E020000 		.4byte	0x28e
+ 757 0284 0A       		.uleb128 0xa
+ 758 0285 01       		.uleb128 0x1
+ 759 0286 50       		.byte	0x50
+ 760 0287 05       		.uleb128 0x5
+ 761 0288 03       		.byte	0x3
+ 762 0289 08000000 		.4byte	.LC1
+ 763 028d 00       		.byte	0
+ 764 028e 09       		.uleb128 0x9
+ 765 028f 32000000 		.4byte	.LVL19
+ 766 0293 CD000000 		.4byte	0xcd
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 16
+
+
+ 767 0297 A7020000 		.4byte	0x2a7
+ 768 029b 0A       		.uleb128 0xa
+ 769 029c 01       		.uleb128 0x1
+ 770 029d 51       		.byte	0x51
+ 771 029e 01       		.uleb128 0x1
+ 772 029f 3F       		.byte	0x3f
+ 773 02a0 0A       		.uleb128 0xa
+ 774 02a1 01       		.uleb128 0x1
+ 775 02a2 50       		.byte	0x50
+ 776 02a3 02       		.uleb128 0x2
+ 777 02a4 08       		.byte	0x8
+ 778 02a5 84       		.byte	0x84
+ 779 02a6 00       		.byte	0
+ 780 02a7 09       		.uleb128 0x9
+ 781 02a8 3A000000 		.4byte	.LVL20
+ 782 02ac CD000000 		.4byte	0xcd
+ 783 02b0 C0020000 		.4byte	0x2c0
+ 784 02b4 0A       		.uleb128 0xa
+ 785 02b5 01       		.uleb128 0x1
+ 786 02b6 51       		.byte	0x51
+ 787 02b7 01       		.uleb128 0x1
+ 788 02b8 44       		.byte	0x44
+ 789 02b9 0A       		.uleb128 0xa
+ 790 02ba 01       		.uleb128 0x1
+ 791 02bb 50       		.byte	0x50
+ 792 02bc 02       		.uleb128 0x2
+ 793 02bd 08       		.byte	0x8
+ 794 02be 83       		.byte	0x83
+ 795 02bf 00       		.byte	0
+ 796 02c0 09       		.uleb128 0x9
+ 797 02c1 42000000 		.4byte	.LVL21
+ 798 02c5 CD000000 		.4byte	0xcd
+ 799 02c9 D9020000 		.4byte	0x2d9
+ 800 02cd 0A       		.uleb128 0xa
+ 801 02ce 01       		.uleb128 0x1
+ 802 02cf 51       		.byte	0x51
+ 803 02d0 01       		.uleb128 0x1
+ 804 02d1 30       		.byte	0x30
+ 805 02d2 0A       		.uleb128 0xa
+ 806 02d3 01       		.uleb128 0x1
+ 807 02d4 50       		.byte	0x50
+ 808 02d5 02       		.uleb128 0x2
+ 809 02d6 08       		.byte	0x8
+ 810 02d7 89       		.byte	0x89
+ 811 02d8 00       		.byte	0
+ 812 02d9 11       		.uleb128 0x11
+ 813 02da 4A000000 		.4byte	.LVL22
+ 814 02de CD000000 		.4byte	0xcd
+ 815 02e2 0A       		.uleb128 0xa
+ 816 02e3 01       		.uleb128 0x1
+ 817 02e4 51       		.byte	0x51
+ 818 02e5 02       		.uleb128 0x2
+ 819 02e6 08       		.byte	0x8
+ 820 02e7 81       		.byte	0x81
+ 821 02e8 0A       		.uleb128 0xa
+ 822 02e9 01       		.uleb128 0x1
+ 823 02ea 50       		.byte	0x50
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 17
+
+
+ 824 02eb 02       		.uleb128 0x2
+ 825 02ec 08       		.byte	0x8
+ 826 02ed 8A       		.byte	0x8a
+ 827 02ee 00       		.byte	0
+ 828 02ef 00       		.byte	0
+ 829 02f0 12       		.uleb128 0x12
+ 830 02f1 3E000000 		.4byte	.LASF25
+ 831 02f5 01       		.byte	0x1
+ 832 02f6 2C       		.byte	0x2c
+ 833 02f7 6F000000 		.4byte	0x6f
+ 834 02fb 00000000 		.4byte	.LFB66
+ 835 02ff 30000000 		.4byte	.LFE66-.LFB66
+ 836 0303 01       		.uleb128 0x1
+ 837 0304 9C       		.byte	0x9c
+ 838 0305 88030000 		.4byte	0x388
+ 839 0309 10       		.uleb128 0x10
+ 840 030a EE000000 		.4byte	.LASF23
+ 841 030e 01       		.byte	0x1
+ 842 030f 2D       		.byte	0x2d
+ 843 0310 68000000 		.4byte	0x68
+ 844 0314 81000000 		.4byte	.LLST4
+ 845 0318 10       		.uleb128 0x10
+ 846 0319 A3000000 		.4byte	.LASF20
+ 847 031d 01       		.byte	0x1
+ 848 031e 30       		.byte	0x30
+ 849 031f 6F000000 		.4byte	0x6f
+ 850 0323 94000000 		.4byte	.LLST5
+ 851 0327 09       		.uleb128 0x9
+ 852 0328 08000000 		.4byte	.LVL23
+ 853 032c 4B010000 		.4byte	0x14b
+ 854 0330 3B030000 		.4byte	0x33b
+ 855 0334 0A       		.uleb128 0xa
+ 856 0335 01       		.uleb128 0x1
+ 857 0336 50       		.byte	0x50
+ 858 0337 02       		.uleb128 0x2
+ 859 0338 08       		.byte	0x8
+ 860 0339 80       		.byte	0x80
+ 861 033a 00       		.byte	0
+ 862 033b 09       		.uleb128 0x9
+ 863 033c 12000000 		.4byte	.LVL25
+ 864 0340 CD000000 		.4byte	0xcd
+ 865 0344 4F030000 		.4byte	0x34f
+ 866 0348 0A       		.uleb128 0xa
+ 867 0349 01       		.uleb128 0x1
+ 868 034a 50       		.byte	0x50
+ 869 034b 02       		.uleb128 0x2
+ 870 034c 08       		.byte	0x8
+ 871 034d 80       		.byte	0x80
+ 872 034e 00       		.byte	0
+ 873 034f 09       		.uleb128 0x9
+ 874 0350 18000000 		.4byte	.LVL26
+ 875 0354 4B010000 		.4byte	0x14b
+ 876 0358 63030000 		.4byte	0x363
+ 877 035c 0A       		.uleb128 0xa
+ 878 035d 01       		.uleb128 0x1
+ 879 035e 50       		.byte	0x50
+ 880 035f 02       		.uleb128 0x2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 18
+
+
+ 881 0360 08       		.byte	0x8
+ 882 0361 80       		.byte	0x80
+ 883 0362 00       		.byte	0
+ 884 0363 09       		.uleb128 0x9
+ 885 0364 24000000 		.4byte	.LVL27
+ 886 0368 4B010000 		.4byte	0x14b
+ 887 036c 77030000 		.4byte	0x377
+ 888 0370 0A       		.uleb128 0xa
+ 889 0371 01       		.uleb128 0x1
+ 890 0372 50       		.byte	0x50
+ 891 0373 02       		.uleb128 0x2
+ 892 0374 08       		.byte	0x8
+ 893 0375 87       		.byte	0x87
+ 894 0376 00       		.byte	0
+ 895 0377 11       		.uleb128 0x11
+ 896 0378 2C000000 		.4byte	.LVL29
+ 897 037c 4B010000 		.4byte	0x14b
+ 898 0380 0A       		.uleb128 0xa
+ 899 0381 01       		.uleb128 0x1
+ 900 0382 50       		.byte	0x50
+ 901 0383 02       		.uleb128 0x2
+ 902 0384 08       		.byte	0x8
+ 903 0385 88       		.byte	0x88
+ 904 0386 00       		.byte	0
+ 905 0387 00       		.byte	0
+ 906 0388 12       		.uleb128 0x12
+ 907 0389 72000000 		.4byte	.LASF26
+ 908 038d 01       		.byte	0x1
+ 909 038e 35       		.byte	0x35
+ 910 038f 6F000000 		.4byte	0x6f
+ 911 0393 00000000 		.4byte	.LFB67
+ 912 0397 30000000 		.4byte	.LFE67-.LFB67
+ 913 039b 01       		.uleb128 0x1
+ 914 039c 9C       		.byte	0x9c
+ 915 039d 20040000 		.4byte	0x420
+ 916 03a1 10       		.uleb128 0x10
+ 917 03a2 EE000000 		.4byte	.LASF23
+ 918 03a6 01       		.byte	0x1
+ 919 03a7 36       		.byte	0x36
+ 920 03a8 68000000 		.4byte	0x68
+ 921 03ac C2000000 		.4byte	.LLST6
+ 922 03b0 10       		.uleb128 0x10
+ 923 03b1 A3000000 		.4byte	.LASF20
+ 924 03b5 01       		.byte	0x1
+ 925 03b6 39       		.byte	0x39
+ 926 03b7 6F000000 		.4byte	0x6f
+ 927 03bb D5000000 		.4byte	.LLST7
+ 928 03bf 09       		.uleb128 0x9
+ 929 03c0 08000000 		.4byte	.LVL31
+ 930 03c4 4B010000 		.4byte	0x14b
+ 931 03c8 D3030000 		.4byte	0x3d3
+ 932 03cc 0A       		.uleb128 0xa
+ 933 03cd 01       		.uleb128 0x1
+ 934 03ce 50       		.byte	0x50
+ 935 03cf 02       		.uleb128 0x2
+ 936 03d0 08       		.byte	0x8
+ 937 03d1 80       		.byte	0x80
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 19
+
+
+ 938 03d2 00       		.byte	0
+ 939 03d3 09       		.uleb128 0x9
+ 940 03d4 12000000 		.4byte	.LVL33
+ 941 03d8 CD000000 		.4byte	0xcd
+ 942 03dc E7030000 		.4byte	0x3e7
+ 943 03e0 0A       		.uleb128 0xa
+ 944 03e1 01       		.uleb128 0x1
+ 945 03e2 50       		.byte	0x50
+ 946 03e3 02       		.uleb128 0x2
+ 947 03e4 08       		.byte	0x8
+ 948 03e5 80       		.byte	0x80
+ 949 03e6 00       		.byte	0
+ 950 03e7 09       		.uleb128 0x9
+ 951 03e8 18000000 		.4byte	.LVL34
+ 952 03ec 4B010000 		.4byte	0x14b
+ 953 03f0 FB030000 		.4byte	0x3fb
+ 954 03f4 0A       		.uleb128 0xa
+ 955 03f5 01       		.uleb128 0x1
+ 956 03f6 50       		.byte	0x50
+ 957 03f7 02       		.uleb128 0x2
+ 958 03f8 08       		.byte	0x8
+ 959 03f9 80       		.byte	0x80
+ 960 03fa 00       		.byte	0
+ 961 03fb 09       		.uleb128 0x9
+ 962 03fc 24000000 		.4byte	.LVL35
+ 963 0400 4B010000 		.4byte	0x14b
+ 964 0404 0F040000 		.4byte	0x40f
+ 965 0408 0A       		.uleb128 0xa
+ 966 0409 01       		.uleb128 0x1
+ 967 040a 50       		.byte	0x50
+ 968 040b 02       		.uleb128 0x2
+ 969 040c 08       		.byte	0x8
+ 970 040d 85       		.byte	0x85
+ 971 040e 00       		.byte	0
+ 972 040f 11       		.uleb128 0x11
+ 973 0410 2C000000 		.4byte	.LVL37
+ 974 0414 4B010000 		.4byte	0x14b
+ 975 0418 0A       		.uleb128 0xa
+ 976 0419 01       		.uleb128 0x1
+ 977 041a 50       		.byte	0x50
+ 978 041b 02       		.uleb128 0x2
+ 979 041c 08       		.byte	0x8
+ 980 041d 86       		.byte	0x86
+ 981 041e 00       		.byte	0
+ 982 041f 00       		.byte	0
+ 983 0420 12       		.uleb128 0x12
+ 984 0421 3C010000 		.4byte	.LASF27
+ 985 0425 01       		.byte	0x1
+ 986 0426 3E       		.byte	0x3e
+ 987 0427 68000000 		.4byte	0x68
+ 988 042b 00000000 		.4byte	.LFB68
+ 989 042f 78000000 		.4byte	.LFE68-.LFB68
+ 990 0433 01       		.uleb128 0x1
+ 991 0434 9C       		.byte	0x9c
+ 992 0435 53050000 		.4byte	0x553
+ 993 0439 0B       		.uleb128 0xb
+ 994 043a 08000000 		.4byte	.LVL39
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 20
+
+
+ 995 043e EF050000 		.4byte	0x5ef
+ 996 0442 0B       		.uleb128 0xb
+ 997 0443 0C000000 		.4byte	.LVL40
+ 998 0447 F6050000 		.4byte	0x5f6
+ 999 044b 0B       		.uleb128 0xb
+ 1000 044c 10000000 		.4byte	.LVL41
+ 1001 0450 FD050000 		.4byte	0x5fd
+ 1002 0454 09       		.uleb128 0x9
+ 1003 0455 18000000 		.4byte	.LVL42
+ 1004 0459 BD050000 		.4byte	0x5bd
+ 1005 045d 6C040000 		.4byte	0x46c
+ 1006 0461 0A       		.uleb128 0xa
+ 1007 0462 01       		.uleb128 0x1
+ 1008 0463 51       		.byte	0x51
+ 1009 0464 01       		.uleb128 0x1
+ 1010 0465 30       		.byte	0x30
+ 1011 0466 0A       		.uleb128 0xa
+ 1012 0467 01       		.uleb128 0x1
+ 1013 0468 50       		.byte	0x50
+ 1014 0469 01       		.uleb128 0x1
+ 1015 046a 30       		.byte	0x30
+ 1016 046b 00       		.byte	0
+ 1017 046c 09       		.uleb128 0x9
+ 1018 046d 1E000000 		.4byte	.LVL43
+ 1019 0471 D3050000 		.4byte	0x5d3
+ 1020 0475 83040000 		.4byte	0x483
+ 1021 0479 0A       		.uleb128 0xa
+ 1022 047a 01       		.uleb128 0x1
+ 1023 047b 50       		.byte	0x50
+ 1024 047c 05       		.uleb128 0x5
+ 1025 047d 03       		.byte	0x3
+ 1026 047e 10000000 		.4byte	.LC2
+ 1027 0482 00       		.byte	0
+ 1028 0483 09       		.uleb128 0x9
+ 1029 0484 24000000 		.4byte	.LVL44
+ 1030 0488 04060000 		.4byte	0x604
+ 1031 048c 97040000 		.4byte	0x497
+ 1032 0490 0A       		.uleb128 0xa
+ 1033 0491 01       		.uleb128 0x1
+ 1034 0492 50       		.byte	0x50
+ 1035 0493 02       		.uleb128 0x2
+ 1036 0494 08       		.byte	0x8
+ 1037 0495 64       		.byte	0x64
+ 1038 0496 00       		.byte	0
+ 1039 0497 0B       		.uleb128 0xb
+ 1040 0498 28000000 		.4byte	.LVL45
+ 1041 049c F8010000 		.4byte	0x1f8
+ 1042 04a0 09       		.uleb128 0x9
+ 1043 04a1 30000000 		.4byte	.LVL46
+ 1044 04a5 BD050000 		.4byte	0x5bd
+ 1045 04a9 B8040000 		.4byte	0x4b8
+ 1046 04ad 0A       		.uleb128 0xa
+ 1047 04ae 01       		.uleb128 0x1
+ 1048 04af 51       		.byte	0x51
+ 1049 04b0 01       		.uleb128 0x1
+ 1050 04b1 30       		.byte	0x30
+ 1051 04b2 0A       		.uleb128 0xa
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 21
+
+
+ 1052 04b3 01       		.uleb128 0x1
+ 1053 04b4 50       		.byte	0x50
+ 1054 04b5 01       		.uleb128 0x1
+ 1055 04b6 30       		.byte	0x30
+ 1056 04b7 00       		.byte	0
+ 1057 04b8 09       		.uleb128 0x9
+ 1058 04b9 36000000 		.4byte	.LVL47
+ 1059 04bd D3050000 		.4byte	0x5d3
+ 1060 04c1 CF040000 		.4byte	0x4cf
+ 1061 04c5 0A       		.uleb128 0xa
+ 1062 04c6 01       		.uleb128 0x1
+ 1063 04c7 50       		.byte	0x50
+ 1064 04c8 05       		.uleb128 0x5
+ 1065 04c9 03       		.byte	0x3
+ 1066 04ca 18000000 		.4byte	.LC3
+ 1067 04ce 00       		.byte	0
+ 1068 04cf 09       		.uleb128 0x9
+ 1069 04d0 3E000000 		.4byte	.LVL48
+ 1070 04d4 BD050000 		.4byte	0x5bd
+ 1071 04d8 E7040000 		.4byte	0x4e7
+ 1072 04dc 0A       		.uleb128 0xa
+ 1073 04dd 01       		.uleb128 0x1
+ 1074 04de 51       		.byte	0x51
+ 1075 04df 01       		.uleb128 0x1
+ 1076 04e0 38       		.byte	0x38
+ 1077 04e1 0A       		.uleb128 0xa
+ 1078 04e2 01       		.uleb128 0x1
+ 1079 04e3 50       		.byte	0x50
+ 1080 04e4 01       		.uleb128 0x1
+ 1081 04e5 30       		.byte	0x30
+ 1082 04e6 00       		.byte	0
+ 1083 04e7 0B       		.uleb128 0xb
+ 1084 04e8 42000000 		.4byte	.LVL49
+ 1085 04ec 88030000 		.4byte	0x388
+ 1086 04f0 0B       		.uleb128 0xb
+ 1087 04f1 48000000 		.4byte	.LVL50
+ 1088 04f5 15060000 		.4byte	0x615
+ 1089 04f9 09       		.uleb128 0x9
+ 1090 04fa 50000000 		.4byte	.LVL51
+ 1091 04fe BD050000 		.4byte	0x5bd
+ 1092 0502 11050000 		.4byte	0x511
+ 1093 0506 0A       		.uleb128 0xa
+ 1094 0507 01       		.uleb128 0x1
+ 1095 0508 51       		.byte	0x51
+ 1096 0509 01       		.uleb128 0x1
+ 1097 050a 30       		.byte	0x30
+ 1098 050b 0A       		.uleb128 0xa
+ 1099 050c 01       		.uleb128 0x1
+ 1100 050d 50       		.byte	0x50
+ 1101 050e 01       		.uleb128 0x1
+ 1102 050f 31       		.byte	0x31
+ 1103 0510 00       		.byte	0
+ 1104 0511 09       		.uleb128 0x9
+ 1105 0512 56000000 		.4byte	.LVL52
+ 1106 0516 D3050000 		.4byte	0x5d3
+ 1107 051a 28050000 		.4byte	0x528
+ 1108 051e 0A       		.uleb128 0xa
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 22
+
+
+ 1109 051f 01       		.uleb128 0x1
+ 1110 0520 50       		.byte	0x50
+ 1111 0521 05       		.uleb128 0x5
+ 1112 0522 03       		.byte	0x3
+ 1113 0523 24000000 		.4byte	.LC4
+ 1114 0527 00       		.byte	0
+ 1115 0528 09       		.uleb128 0x9
+ 1116 0529 5E000000 		.4byte	.LVL53
+ 1117 052d BD050000 		.4byte	0x5bd
+ 1118 0531 40050000 		.4byte	0x540
+ 1119 0535 0A       		.uleb128 0xa
+ 1120 0536 01       		.uleb128 0x1
+ 1121 0537 51       		.byte	0x51
+ 1122 0538 01       		.uleb128 0x1
+ 1123 0539 38       		.byte	0x38
+ 1124 053a 0A       		.uleb128 0xa
+ 1125 053b 01       		.uleb128 0x1
+ 1126 053c 50       		.byte	0x50
+ 1127 053d 01       		.uleb128 0x1
+ 1128 053e 31       		.byte	0x31
+ 1129 053f 00       		.byte	0
+ 1130 0540 0B       		.uleb128 0xb
+ 1131 0541 62000000 		.4byte	.LVL54
+ 1132 0545 F0020000 		.4byte	0x2f0
+ 1133 0549 0B       		.uleb128 0xb
+ 1134 054a 68000000 		.4byte	.LVL55
+ 1135 054e 15060000 		.4byte	0x615
+ 1136 0552 00       		.byte	0
+ 1137 0553 13       		.uleb128 0x13
+ 1138 0554 06010000 		.4byte	.LASF41
+ 1139 0558 08       		.byte	0x8
+ 1140 0559 9606     		.2byte	0x696
+ 1141 055b 5F050000 		.4byte	0x55f
+ 1142 055f 14       		.uleb128 0x14
+ 1143 0560 76000000 		.4byte	0x76
+ 1144 0564 15       		.uleb128 0x15
+ 1145 0565 88000000 		.4byte	.LASF28
+ 1146 0569 05       		.byte	0x5
+ 1147 056a A7       		.byte	0xa7
+ 1148 056b 81000000 		.4byte	0x81
+ 1149 056f 88050000 		.4byte	0x588
+ 1150 0573 16       		.uleb128 0x16
+ 1151 0574 81000000 		.4byte	0x81
+ 1152 0578 16       		.uleb128 0x16
+ 1153 0579 88050000 		.4byte	0x588
+ 1154 057d 16       		.uleb128 0x16
+ 1155 057e 81000000 		.4byte	0x81
+ 1156 0582 16       		.uleb128 0x16
+ 1157 0583 81000000 		.4byte	0x81
+ 1158 0587 00       		.byte	0
+ 1159 0588 17       		.uleb128 0x17
+ 1160 0589 04       		.byte	0x4
+ 1161 058a 81000000 		.4byte	0x81
+ 1162 058e 18       		.uleb128 0x18
+ 1163 058f 7F020000 		.4byte	.LASF42
+ 1164 0593 05       		.byte	0x5
+ 1165 0594 A3       		.byte	0xa3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 23
+
+
+ 1166 0595 81000000 		.4byte	0x81
+ 1167 0599 15       		.uleb128 0x15
+ 1168 059a 28010000 		.4byte	.LASF29
+ 1169 059e 05       		.byte	0x5
+ 1170 059f A9       		.byte	0xa9
+ 1171 05a0 81000000 		.4byte	0x81
+ 1172 05a4 BD050000 		.4byte	0x5bd
+ 1173 05a8 16       		.uleb128 0x16
+ 1174 05a9 81000000 		.4byte	0x81
+ 1175 05ad 16       		.uleb128 0x16
+ 1176 05ae 88050000 		.4byte	0x588
+ 1177 05b2 16       		.uleb128 0x16
+ 1178 05b3 81000000 		.4byte	0x81
+ 1179 05b7 16       		.uleb128 0x16
+ 1180 05b8 81000000 		.4byte	0x81
+ 1181 05bc 00       		.byte	0
+ 1182 05bd 19       		.uleb128 0x19
+ 1183 05be 46020000 		.4byte	.LASF30
+ 1184 05c2 06       		.byte	0x6
+ 1185 05c3 3D       		.byte	0x3d
+ 1186 05c4 D3050000 		.4byte	0x5d3
+ 1187 05c8 16       		.uleb128 0x16
+ 1188 05c9 81000000 		.4byte	0x81
+ 1189 05cd 16       		.uleb128 0x16
+ 1190 05ce 81000000 		.4byte	0x81
+ 1191 05d2 00       		.byte	0
+ 1192 05d3 19       		.uleb128 0x19
+ 1193 05d4 BF000000 		.4byte	.LASF31
+ 1194 05d8 06       		.byte	0x6
+ 1195 05d9 3C       		.byte	0x3c
+ 1196 05da E4050000 		.4byte	0x5e4
+ 1197 05de 16       		.uleb128 0x16
+ 1198 05df E4050000 		.4byte	0x5e4
+ 1199 05e3 00       		.byte	0
+ 1200 05e4 17       		.uleb128 0x17
+ 1201 05e5 04       		.byte	0x4
+ 1202 05e6 EA050000 		.4byte	0x5ea
+ 1203 05ea 1A       		.uleb128 0x1a
+ 1204 05eb B3000000 		.4byte	0xb3
+ 1205 05ef 1B       		.uleb128 0x1b
+ 1206 05f0 92020000 		.4byte	.LASF32
+ 1207 05f4 06       		.byte	0x6
+ 1208 05f5 38       		.byte	0x38
+ 1209 05f6 1B       		.uleb128 0x1b
+ 1210 05f7 5A020000 		.4byte	.LASF33
+ 1211 05fb 05       		.byte	0x5
+ 1212 05fc 93       		.byte	0x93
+ 1213 05fd 1B       		.uleb128 0x1b
+ 1214 05fe 39020000 		.4byte	.LASF34
+ 1215 0602 05       		.byte	0x5
+ 1216 0603 91       		.byte	0x91
+ 1217 0604 19       		.uleb128 0x19
+ 1218 0605 AF020000 		.4byte	.LASF35
+ 1219 0609 07       		.byte	0x7
+ 1220 060a 76       		.byte	0x76
+ 1221 060b 15060000 		.4byte	0x615
+ 1222 060f 16       		.uleb128 0x16
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 24
+
+
+ 1223 0610 99000000 		.4byte	0x99
+ 1224 0614 00       		.byte	0
+ 1225 0615 1C       		.uleb128 0x1c
+ 1226 0616 FB010000 		.4byte	.LASF43
+ 1227 061a 06       		.byte	0x6
+ 1228 061b 61       		.byte	0x61
+ 1229 061c 16       		.uleb128 0x16
+ 1230 061d 99000000 		.4byte	0x99
+ 1231 0621 00       		.byte	0
+ 1232 0622 00       		.byte	0
+ 1233              		.section	.debug_abbrev,"",%progbits
+ 1234              	.Ldebug_abbrev0:
+ 1235 0000 01       		.uleb128 0x1
+ 1236 0001 11       		.uleb128 0x11
+ 1237 0002 01       		.byte	0x1
+ 1238 0003 25       		.uleb128 0x25
+ 1239 0004 0E       		.uleb128 0xe
+ 1240 0005 13       		.uleb128 0x13
+ 1241 0006 0B       		.uleb128 0xb
+ 1242 0007 03       		.uleb128 0x3
+ 1243 0008 0E       		.uleb128 0xe
+ 1244 0009 1B       		.uleb128 0x1b
+ 1245 000a 0E       		.uleb128 0xe
+ 1246 000b 55       		.uleb128 0x55
+ 1247 000c 17       		.uleb128 0x17
+ 1248 000d 11       		.uleb128 0x11
+ 1249 000e 01       		.uleb128 0x1
+ 1250 000f 10       		.uleb128 0x10
+ 1251 0010 17       		.uleb128 0x17
+ 1252 0011 00       		.byte	0
+ 1253 0012 00       		.byte	0
+ 1254 0013 02       		.uleb128 0x2
+ 1255 0014 24       		.uleb128 0x24
+ 1256 0015 00       		.byte	0
+ 1257 0016 0B       		.uleb128 0xb
+ 1258 0017 0B       		.uleb128 0xb
+ 1259 0018 3E       		.uleb128 0x3e
+ 1260 0019 0B       		.uleb128 0xb
+ 1261 001a 03       		.uleb128 0x3
+ 1262 001b 0E       		.uleb128 0xe
+ 1263 001c 00       		.byte	0
+ 1264 001d 00       		.byte	0
+ 1265 001e 03       		.uleb128 0x3
+ 1266 001f 16       		.uleb128 0x16
+ 1267 0020 00       		.byte	0
+ 1268 0021 03       		.uleb128 0x3
+ 1269 0022 0E       		.uleb128 0xe
+ 1270 0023 3A       		.uleb128 0x3a
+ 1271 0024 0B       		.uleb128 0xb
+ 1272 0025 3B       		.uleb128 0x3b
+ 1273 0026 0B       		.uleb128 0xb
+ 1274 0027 49       		.uleb128 0x49
+ 1275 0028 13       		.uleb128 0x13
+ 1276 0029 00       		.byte	0
+ 1277 002a 00       		.byte	0
+ 1278 002b 04       		.uleb128 0x4
+ 1279 002c 24       		.uleb128 0x24
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 25
+
+
+ 1280 002d 00       		.byte	0
+ 1281 002e 0B       		.uleb128 0xb
+ 1282 002f 0B       		.uleb128 0xb
+ 1283 0030 3E       		.uleb128 0x3e
+ 1284 0031 0B       		.uleb128 0xb
+ 1285 0032 03       		.uleb128 0x3
+ 1286 0033 08       		.uleb128 0x8
+ 1287 0034 00       		.byte	0
+ 1288 0035 00       		.byte	0
+ 1289 0036 05       		.uleb128 0x5
+ 1290 0037 16       		.uleb128 0x16
+ 1291 0038 00       		.byte	0
+ 1292 0039 03       		.uleb128 0x3
+ 1293 003a 0E       		.uleb128 0xe
+ 1294 003b 3A       		.uleb128 0x3a
+ 1295 003c 0B       		.uleb128 0xb
+ 1296 003d 3B       		.uleb128 0x3b
+ 1297 003e 05       		.uleb128 0x5
+ 1298 003f 49       		.uleb128 0x49
+ 1299 0040 13       		.uleb128 0x13
+ 1300 0041 00       		.byte	0
+ 1301 0042 00       		.byte	0
+ 1302 0043 06       		.uleb128 0x6
+ 1303 0044 2E       		.uleb128 0x2e
+ 1304 0045 01       		.byte	0x1
+ 1305 0046 3F       		.uleb128 0x3f
+ 1306 0047 19       		.uleb128 0x19
+ 1307 0048 03       		.uleb128 0x3
+ 1308 0049 0E       		.uleb128 0xe
+ 1309 004a 3A       		.uleb128 0x3a
+ 1310 004b 0B       		.uleb128 0xb
+ 1311 004c 3B       		.uleb128 0x3b
+ 1312 004d 0B       		.uleb128 0xb
+ 1313 004e 27       		.uleb128 0x27
+ 1314 004f 19       		.uleb128 0x19
+ 1315 0050 11       		.uleb128 0x11
+ 1316 0051 01       		.uleb128 0x1
+ 1317 0052 12       		.uleb128 0x12
+ 1318 0053 06       		.uleb128 0x6
+ 1319 0054 40       		.uleb128 0x40
+ 1320 0055 18       		.uleb128 0x18
+ 1321 0056 9742     		.uleb128 0x2117
+ 1322 0058 19       		.uleb128 0x19
+ 1323 0059 01       		.uleb128 0x1
+ 1324 005a 13       		.uleb128 0x13
+ 1325 005b 00       		.byte	0
+ 1326 005c 00       		.byte	0
+ 1327 005d 07       		.uleb128 0x7
+ 1328 005e 05       		.uleb128 0x5
+ 1329 005f 00       		.byte	0
+ 1330 0060 03       		.uleb128 0x3
+ 1331 0061 0E       		.uleb128 0xe
+ 1332 0062 3A       		.uleb128 0x3a
+ 1333 0063 0B       		.uleb128 0xb
+ 1334 0064 3B       		.uleb128 0x3b
+ 1335 0065 0B       		.uleb128 0xb
+ 1336 0066 49       		.uleb128 0x49
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 26
+
+
+ 1337 0067 13       		.uleb128 0x13
+ 1338 0068 02       		.uleb128 0x2
+ 1339 0069 17       		.uleb128 0x17
+ 1340 006a 00       		.byte	0
+ 1341 006b 00       		.byte	0
+ 1342 006c 08       		.uleb128 0x8
+ 1343 006d 34       		.uleb128 0x34
+ 1344 006e 00       		.byte	0
+ 1345 006f 03       		.uleb128 0x3
+ 1346 0070 0E       		.uleb128 0xe
+ 1347 0071 3A       		.uleb128 0x3a
+ 1348 0072 0B       		.uleb128 0xb
+ 1349 0073 3B       		.uleb128 0x3b
+ 1350 0074 0B       		.uleb128 0xb
+ 1351 0075 49       		.uleb128 0x49
+ 1352 0076 13       		.uleb128 0x13
+ 1353 0077 02       		.uleb128 0x2
+ 1354 0078 18       		.uleb128 0x18
+ 1355 0079 00       		.byte	0
+ 1356 007a 00       		.byte	0
+ 1357 007b 09       		.uleb128 0x9
+ 1358 007c 898201   		.uleb128 0x4109
+ 1359 007f 01       		.byte	0x1
+ 1360 0080 11       		.uleb128 0x11
+ 1361 0081 01       		.uleb128 0x1
+ 1362 0082 31       		.uleb128 0x31
+ 1363 0083 13       		.uleb128 0x13
+ 1364 0084 01       		.uleb128 0x1
+ 1365 0085 13       		.uleb128 0x13
+ 1366 0086 00       		.byte	0
+ 1367 0087 00       		.byte	0
+ 1368 0088 0A       		.uleb128 0xa
+ 1369 0089 8A8201   		.uleb128 0x410a
+ 1370 008c 00       		.byte	0
+ 1371 008d 02       		.uleb128 0x2
+ 1372 008e 18       		.uleb128 0x18
+ 1373 008f 9142     		.uleb128 0x2111
+ 1374 0091 18       		.uleb128 0x18
+ 1375 0092 00       		.byte	0
+ 1376 0093 00       		.byte	0
+ 1377 0094 0B       		.uleb128 0xb
+ 1378 0095 898201   		.uleb128 0x4109
+ 1379 0098 00       		.byte	0
+ 1380 0099 11       		.uleb128 0x11
+ 1381 009a 01       		.uleb128 0x1
+ 1382 009b 31       		.uleb128 0x31
+ 1383 009c 13       		.uleb128 0x13
+ 1384 009d 00       		.byte	0
+ 1385 009e 00       		.byte	0
+ 1386 009f 0C       		.uleb128 0xc
+ 1387 00a0 01       		.uleb128 0x1
+ 1388 00a1 01       		.byte	0x1
+ 1389 00a2 49       		.uleb128 0x49
+ 1390 00a3 13       		.uleb128 0x13
+ 1391 00a4 01       		.uleb128 0x1
+ 1392 00a5 13       		.uleb128 0x13
+ 1393 00a6 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 27
+
+
+ 1394 00a7 00       		.byte	0
+ 1395 00a8 0D       		.uleb128 0xd
+ 1396 00a9 21       		.uleb128 0x21
+ 1397 00aa 00       		.byte	0
+ 1398 00ab 49       		.uleb128 0x49
+ 1399 00ac 13       		.uleb128 0x13
+ 1400 00ad 2F       		.uleb128 0x2f
+ 1401 00ae 0B       		.uleb128 0xb
+ 1402 00af 00       		.byte	0
+ 1403 00b0 00       		.byte	0
+ 1404 00b1 0E       		.uleb128 0xe
+ 1405 00b2 2E       		.uleb128 0x2e
+ 1406 00b3 01       		.byte	0x1
+ 1407 00b4 3F       		.uleb128 0x3f
+ 1408 00b5 19       		.uleb128 0x19
+ 1409 00b6 03       		.uleb128 0x3
+ 1410 00b7 0E       		.uleb128 0xe
+ 1411 00b8 3A       		.uleb128 0x3a
+ 1412 00b9 0B       		.uleb128 0xb
+ 1413 00ba 3B       		.uleb128 0x3b
+ 1414 00bb 0B       		.uleb128 0xb
+ 1415 00bc 27       		.uleb128 0x27
+ 1416 00bd 19       		.uleb128 0x19
+ 1417 00be 49       		.uleb128 0x49
+ 1418 00bf 13       		.uleb128 0x13
+ 1419 00c0 11       		.uleb128 0x11
+ 1420 00c1 01       		.uleb128 0x1
+ 1421 00c2 12       		.uleb128 0x12
+ 1422 00c3 06       		.uleb128 0x6
+ 1423 00c4 40       		.uleb128 0x40
+ 1424 00c5 18       		.uleb128 0x18
+ 1425 00c6 9742     		.uleb128 0x2117
+ 1426 00c8 19       		.uleb128 0x19
+ 1427 00c9 01       		.uleb128 0x1
+ 1428 00ca 13       		.uleb128 0x13
+ 1429 00cb 00       		.byte	0
+ 1430 00cc 00       		.byte	0
+ 1431 00cd 0F       		.uleb128 0xf
+ 1432 00ce 2E       		.uleb128 0x2e
+ 1433 00cf 01       		.byte	0x1
+ 1434 00d0 3F       		.uleb128 0x3f
+ 1435 00d1 19       		.uleb128 0x19
+ 1436 00d2 03       		.uleb128 0x3
+ 1437 00d3 0E       		.uleb128 0xe
+ 1438 00d4 3A       		.uleb128 0x3a
+ 1439 00d5 0B       		.uleb128 0xb
+ 1440 00d6 3B       		.uleb128 0x3b
+ 1441 00d7 0B       		.uleb128 0xb
+ 1442 00d8 11       		.uleb128 0x11
+ 1443 00d9 01       		.uleb128 0x1
+ 1444 00da 12       		.uleb128 0x12
+ 1445 00db 06       		.uleb128 0x6
+ 1446 00dc 40       		.uleb128 0x40
+ 1447 00dd 18       		.uleb128 0x18
+ 1448 00de 9742     		.uleb128 0x2117
+ 1449 00e0 19       		.uleb128 0x19
+ 1450 00e1 01       		.uleb128 0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 28
+
+
+ 1451 00e2 13       		.uleb128 0x13
+ 1452 00e3 00       		.byte	0
+ 1453 00e4 00       		.byte	0
+ 1454 00e5 10       		.uleb128 0x10
+ 1455 00e6 34       		.uleb128 0x34
+ 1456 00e7 00       		.byte	0
+ 1457 00e8 03       		.uleb128 0x3
+ 1458 00e9 0E       		.uleb128 0xe
+ 1459 00ea 3A       		.uleb128 0x3a
+ 1460 00eb 0B       		.uleb128 0xb
+ 1461 00ec 3B       		.uleb128 0x3b
+ 1462 00ed 0B       		.uleb128 0xb
+ 1463 00ee 49       		.uleb128 0x49
+ 1464 00ef 13       		.uleb128 0x13
+ 1465 00f0 02       		.uleb128 0x2
+ 1466 00f1 17       		.uleb128 0x17
+ 1467 00f2 00       		.byte	0
+ 1468 00f3 00       		.byte	0
+ 1469 00f4 11       		.uleb128 0x11
+ 1470 00f5 898201   		.uleb128 0x4109
+ 1471 00f8 01       		.byte	0x1
+ 1472 00f9 11       		.uleb128 0x11
+ 1473 00fa 01       		.uleb128 0x1
+ 1474 00fb 31       		.uleb128 0x31
+ 1475 00fc 13       		.uleb128 0x13
+ 1476 00fd 00       		.byte	0
+ 1477 00fe 00       		.byte	0
+ 1478 00ff 12       		.uleb128 0x12
+ 1479 0100 2E       		.uleb128 0x2e
+ 1480 0101 01       		.byte	0x1
+ 1481 0102 3F       		.uleb128 0x3f
+ 1482 0103 19       		.uleb128 0x19
+ 1483 0104 03       		.uleb128 0x3
+ 1484 0105 0E       		.uleb128 0xe
+ 1485 0106 3A       		.uleb128 0x3a
+ 1486 0107 0B       		.uleb128 0xb
+ 1487 0108 3B       		.uleb128 0x3b
+ 1488 0109 0B       		.uleb128 0xb
+ 1489 010a 49       		.uleb128 0x49
+ 1490 010b 13       		.uleb128 0x13
+ 1491 010c 11       		.uleb128 0x11
+ 1492 010d 01       		.uleb128 0x1
+ 1493 010e 12       		.uleb128 0x12
+ 1494 010f 06       		.uleb128 0x6
+ 1495 0110 40       		.uleb128 0x40
+ 1496 0111 18       		.uleb128 0x18
+ 1497 0112 9742     		.uleb128 0x2117
+ 1498 0114 19       		.uleb128 0x19
+ 1499 0115 01       		.uleb128 0x1
+ 1500 0116 13       		.uleb128 0x13
+ 1501 0117 00       		.byte	0
+ 1502 0118 00       		.byte	0
+ 1503 0119 13       		.uleb128 0x13
+ 1504 011a 34       		.uleb128 0x34
+ 1505 011b 00       		.byte	0
+ 1506 011c 03       		.uleb128 0x3
+ 1507 011d 0E       		.uleb128 0xe
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 29
+
+
+ 1508 011e 3A       		.uleb128 0x3a
+ 1509 011f 0B       		.uleb128 0xb
+ 1510 0120 3B       		.uleb128 0x3b
+ 1511 0121 05       		.uleb128 0x5
+ 1512 0122 49       		.uleb128 0x49
+ 1513 0123 13       		.uleb128 0x13
+ 1514 0124 3F       		.uleb128 0x3f
+ 1515 0125 19       		.uleb128 0x19
+ 1516 0126 3C       		.uleb128 0x3c
+ 1517 0127 19       		.uleb128 0x19
+ 1518 0128 00       		.byte	0
+ 1519 0129 00       		.byte	0
+ 1520 012a 14       		.uleb128 0x14
+ 1521 012b 35       		.uleb128 0x35
+ 1522 012c 00       		.byte	0
+ 1523 012d 49       		.uleb128 0x49
+ 1524 012e 13       		.uleb128 0x13
+ 1525 012f 00       		.byte	0
+ 1526 0130 00       		.byte	0
+ 1527 0131 15       		.uleb128 0x15
+ 1528 0132 2E       		.uleb128 0x2e
+ 1529 0133 01       		.byte	0x1
+ 1530 0134 3F       		.uleb128 0x3f
+ 1531 0135 19       		.uleb128 0x19
+ 1532 0136 03       		.uleb128 0x3
+ 1533 0137 0E       		.uleb128 0xe
+ 1534 0138 3A       		.uleb128 0x3a
+ 1535 0139 0B       		.uleb128 0xb
+ 1536 013a 3B       		.uleb128 0x3b
+ 1537 013b 0B       		.uleb128 0xb
+ 1538 013c 27       		.uleb128 0x27
+ 1539 013d 19       		.uleb128 0x19
+ 1540 013e 49       		.uleb128 0x49
+ 1541 013f 13       		.uleb128 0x13
+ 1542 0140 3C       		.uleb128 0x3c
+ 1543 0141 19       		.uleb128 0x19
+ 1544 0142 01       		.uleb128 0x1
+ 1545 0143 13       		.uleb128 0x13
+ 1546 0144 00       		.byte	0
+ 1547 0145 00       		.byte	0
+ 1548 0146 16       		.uleb128 0x16
+ 1549 0147 05       		.uleb128 0x5
+ 1550 0148 00       		.byte	0
+ 1551 0149 49       		.uleb128 0x49
+ 1552 014a 13       		.uleb128 0x13
+ 1553 014b 00       		.byte	0
+ 1554 014c 00       		.byte	0
+ 1555 014d 17       		.uleb128 0x17
+ 1556 014e 0F       		.uleb128 0xf
+ 1557 014f 00       		.byte	0
+ 1558 0150 0B       		.uleb128 0xb
+ 1559 0151 0B       		.uleb128 0xb
+ 1560 0152 49       		.uleb128 0x49
+ 1561 0153 13       		.uleb128 0x13
+ 1562 0154 00       		.byte	0
+ 1563 0155 00       		.byte	0
+ 1564 0156 18       		.uleb128 0x18
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 30
+
+
+ 1565 0157 2E       		.uleb128 0x2e
+ 1566 0158 00       		.byte	0
+ 1567 0159 3F       		.uleb128 0x3f
+ 1568 015a 19       		.uleb128 0x19
+ 1569 015b 03       		.uleb128 0x3
+ 1570 015c 0E       		.uleb128 0xe
+ 1571 015d 3A       		.uleb128 0x3a
+ 1572 015e 0B       		.uleb128 0xb
+ 1573 015f 3B       		.uleb128 0x3b
+ 1574 0160 0B       		.uleb128 0xb
+ 1575 0161 27       		.uleb128 0x27
+ 1576 0162 19       		.uleb128 0x19
+ 1577 0163 49       		.uleb128 0x49
+ 1578 0164 13       		.uleb128 0x13
+ 1579 0165 3C       		.uleb128 0x3c
+ 1580 0166 19       		.uleb128 0x19
+ 1581 0167 00       		.byte	0
+ 1582 0168 00       		.byte	0
+ 1583 0169 19       		.uleb128 0x19
+ 1584 016a 2E       		.uleb128 0x2e
+ 1585 016b 01       		.byte	0x1
+ 1586 016c 3F       		.uleb128 0x3f
+ 1587 016d 19       		.uleb128 0x19
+ 1588 016e 03       		.uleb128 0x3
+ 1589 016f 0E       		.uleb128 0xe
+ 1590 0170 3A       		.uleb128 0x3a
+ 1591 0171 0B       		.uleb128 0xb
+ 1592 0172 3B       		.uleb128 0x3b
+ 1593 0173 0B       		.uleb128 0xb
+ 1594 0174 27       		.uleb128 0x27
+ 1595 0175 19       		.uleb128 0x19
+ 1596 0176 3C       		.uleb128 0x3c
+ 1597 0177 19       		.uleb128 0x19
+ 1598 0178 01       		.uleb128 0x1
+ 1599 0179 13       		.uleb128 0x13
+ 1600 017a 00       		.byte	0
+ 1601 017b 00       		.byte	0
+ 1602 017c 1A       		.uleb128 0x1a
+ 1603 017d 26       		.uleb128 0x26
+ 1604 017e 00       		.byte	0
+ 1605 017f 49       		.uleb128 0x49
+ 1606 0180 13       		.uleb128 0x13
+ 1607 0181 00       		.byte	0
+ 1608 0182 00       		.byte	0
+ 1609 0183 1B       		.uleb128 0x1b
+ 1610 0184 2E       		.uleb128 0x2e
+ 1611 0185 00       		.byte	0
+ 1612 0186 3F       		.uleb128 0x3f
+ 1613 0187 19       		.uleb128 0x19
+ 1614 0188 03       		.uleb128 0x3
+ 1615 0189 0E       		.uleb128 0xe
+ 1616 018a 3A       		.uleb128 0x3a
+ 1617 018b 0B       		.uleb128 0xb
+ 1618 018c 3B       		.uleb128 0x3b
+ 1619 018d 0B       		.uleb128 0xb
+ 1620 018e 27       		.uleb128 0x27
+ 1621 018f 19       		.uleb128 0x19
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 31
+
+
+ 1622 0190 3C       		.uleb128 0x3c
+ 1623 0191 19       		.uleb128 0x19
+ 1624 0192 00       		.byte	0
+ 1625 0193 00       		.byte	0
+ 1626 0194 1C       		.uleb128 0x1c
+ 1627 0195 2E       		.uleb128 0x2e
+ 1628 0196 01       		.byte	0x1
+ 1629 0197 3F       		.uleb128 0x3f
+ 1630 0198 19       		.uleb128 0x19
+ 1631 0199 03       		.uleb128 0x3
+ 1632 019a 0E       		.uleb128 0xe
+ 1633 019b 3A       		.uleb128 0x3a
+ 1634 019c 0B       		.uleb128 0xb
+ 1635 019d 3B       		.uleb128 0x3b
+ 1636 019e 0B       		.uleb128 0xb
+ 1637 019f 27       		.uleb128 0x27
+ 1638 01a0 19       		.uleb128 0x19
+ 1639 01a1 3C       		.uleb128 0x3c
+ 1640 01a2 19       		.uleb128 0x19
+ 1641 01a3 00       		.byte	0
+ 1642 01a4 00       		.byte	0
+ 1643 01a5 00       		.byte	0
+ 1644              		.section	.debug_loc,"",%progbits
+ 1645              	.Ldebug_loc0:
+ 1646              	.LLST0:
+ 1647 0000 00000000 		.4byte	.LVL0
+ 1648 0004 0E000000 		.4byte	.LVL1
+ 1649 0008 0100     		.2byte	0x1
+ 1650 000a 50       		.byte	0x50
+ 1651 000b 0E000000 		.4byte	.LVL1
+ 1652 000f 28000000 		.4byte	.LFE63
+ 1653 0013 0400     		.2byte	0x4
+ 1654 0015 F3       		.byte	0xf3
+ 1655 0016 01       		.uleb128 0x1
+ 1656 0017 50       		.byte	0x50
+ 1657 0018 9F       		.byte	0x9f
+ 1658 0019 00000000 		.4byte	0
+ 1659 001d 00000000 		.4byte	0
+ 1660              	.LLST1:
+ 1661 0021 00000000 		.4byte	.LVL0
+ 1662 0025 10000000 		.4byte	.LVL2
+ 1663 0029 0100     		.2byte	0x1
+ 1664 002b 51       		.byte	0x51
+ 1665 002c 10000000 		.4byte	.LVL2
+ 1666 0030 28000000 		.4byte	.LFE63
+ 1667 0034 0400     		.2byte	0x4
+ 1668 0036 F3       		.byte	0xf3
+ 1669 0037 01       		.uleb128 0x1
+ 1670 0038 51       		.byte	0x51
+ 1671 0039 9F       		.byte	0x9f
+ 1672 003a 00000000 		.4byte	0
+ 1673 003e 00000000 		.4byte	0
+ 1674              	.LLST2:
+ 1675 0042 00000000 		.4byte	.LVL5
+ 1676 0046 10000000 		.4byte	.LVL6
+ 1677 004a 0100     		.2byte	0x1
+ 1678 004c 50       		.byte	0x50
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 32
+
+
+ 1679 004d 10000000 		.4byte	.LVL6
+ 1680 0051 44000000 		.4byte	.LFE64
+ 1681 0055 0400     		.2byte	0x4
+ 1682 0057 F3       		.byte	0xf3
+ 1683 0058 01       		.uleb128 0x1
+ 1684 0059 50       		.byte	0x50
+ 1685 005a 9F       		.byte	0x9f
+ 1686 005b 00000000 		.4byte	0
+ 1687 005f 00000000 		.4byte	0
+ 1688              	.LLST3:
+ 1689 0063 08000000 		.4byte	.LVL11
+ 1690 0067 0E000000 		.4byte	.LVL12
+ 1691 006b 0100     		.2byte	0x1
+ 1692 006d 50       		.byte	0x50
+ 1693 006e 1C000000 		.4byte	.LVL15
+ 1694 0072 1E000000 		.4byte	.LVL16
+ 1695 0076 0100     		.2byte	0x1
+ 1696 0078 50       		.byte	0x50
+ 1697 0079 00000000 		.4byte	0
+ 1698 007d 00000000 		.4byte	0
+ 1699              	.LLST4:
+ 1700 0081 08000000 		.4byte	.LVL23
+ 1701 0085 0E000000 		.4byte	.LVL24
+ 1702 0089 0100     		.2byte	0x1
+ 1703 008b 50       		.byte	0x50
+ 1704 008c 00000000 		.4byte	0
+ 1705 0090 00000000 		.4byte	0
+ 1706              	.LLST5:
+ 1707 0094 26000000 		.4byte	.LVL28
+ 1708 0098 2C000000 		.4byte	.LVL29
+ 1709 009c 0100     		.2byte	0x1
+ 1710 009e 54       		.byte	0x54
+ 1711 009f 2C000000 		.4byte	.LVL29
+ 1712 00a3 2E000000 		.4byte	.LVL30
+ 1713 00a7 0600     		.2byte	0x6
+ 1714 00a9 70       		.byte	0x70
+ 1715 00aa 00       		.sleb128 0
+ 1716 00ab 74       		.byte	0x74
+ 1717 00ac 00       		.sleb128 0
+ 1718 00ad 21       		.byte	0x21
+ 1719 00ae 9F       		.byte	0x9f
+ 1720 00af 2E000000 		.4byte	.LVL30
+ 1721 00b3 30000000 		.4byte	.LFE66
+ 1722 00b7 0100     		.2byte	0x1
+ 1723 00b9 50       		.byte	0x50
+ 1724 00ba 00000000 		.4byte	0
+ 1725 00be 00000000 		.4byte	0
+ 1726              	.LLST6:
+ 1727 00c2 08000000 		.4byte	.LVL31
+ 1728 00c6 0E000000 		.4byte	.LVL32
+ 1729 00ca 0100     		.2byte	0x1
+ 1730 00cc 50       		.byte	0x50
+ 1731 00cd 00000000 		.4byte	0
+ 1732 00d1 00000000 		.4byte	0
+ 1733              	.LLST7:
+ 1734 00d5 26000000 		.4byte	.LVL36
+ 1735 00d9 2C000000 		.4byte	.LVL37
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 33
+
+
+ 1736 00dd 0100     		.2byte	0x1
+ 1737 00df 54       		.byte	0x54
+ 1738 00e0 2C000000 		.4byte	.LVL37
+ 1739 00e4 2E000000 		.4byte	.LVL38
+ 1740 00e8 0600     		.2byte	0x6
+ 1741 00ea 70       		.byte	0x70
+ 1742 00eb 00       		.sleb128 0
+ 1743 00ec 74       		.byte	0x74
+ 1744 00ed 00       		.sleb128 0
+ 1745 00ee 21       		.byte	0x21
+ 1746 00ef 9F       		.byte	0x9f
+ 1747 00f0 2E000000 		.4byte	.LVL38
+ 1748 00f4 30000000 		.4byte	.LFE67
+ 1749 00f8 0100     		.2byte	0x1
+ 1750 00fa 50       		.byte	0x50
+ 1751 00fb 00000000 		.4byte	0
+ 1752 00ff 00000000 		.4byte	0
+ 1753              		.section	.debug_aranges,"",%progbits
+ 1754 0000 44000000 		.4byte	0x44
+ 1755 0004 0200     		.2byte	0x2
+ 1756 0006 00000000 		.4byte	.Ldebug_info0
+ 1757 000a 04       		.byte	0x4
+ 1758 000b 00       		.byte	0
+ 1759 000c 0000     		.2byte	0
+ 1760 000e 0000     		.2byte	0
+ 1761 0010 00000000 		.4byte	.LFB63
+ 1762 0014 28000000 		.4byte	.LFE63-.LFB63
+ 1763 0018 00000000 		.4byte	.LFB64
+ 1764 001c 44000000 		.4byte	.LFE64-.LFB64
+ 1765 0020 00000000 		.4byte	.LFB65
+ 1766 0024 54000000 		.4byte	.LFE65-.LFB65
+ 1767 0028 00000000 		.4byte	.LFB66
+ 1768 002c 30000000 		.4byte	.LFE66-.LFB66
+ 1769 0030 00000000 		.4byte	.LFB67
+ 1770 0034 30000000 		.4byte	.LFE67-.LFB67
+ 1771 0038 00000000 		.4byte	.LFB68
+ 1772 003c 78000000 		.4byte	.LFE68-.LFB68
+ 1773 0040 00000000 		.4byte	0
+ 1774 0044 00000000 		.4byte	0
+ 1775              		.section	.debug_ranges,"",%progbits
+ 1776              	.Ldebug_ranges0:
+ 1777 0000 00000000 		.4byte	.LFB63
+ 1778 0004 28000000 		.4byte	.LFE63
+ 1779 0008 00000000 		.4byte	.LFB64
+ 1780 000c 44000000 		.4byte	.LFE64
+ 1781 0010 00000000 		.4byte	.LFB65
+ 1782 0014 54000000 		.4byte	.LFE65
+ 1783 0018 00000000 		.4byte	.LFB66
+ 1784 001c 30000000 		.4byte	.LFE66
+ 1785 0020 00000000 		.4byte	.LFB67
+ 1786 0024 30000000 		.4byte	.LFE67
+ 1787 0028 00000000 		.4byte	.LFB68
+ 1788 002c 78000000 		.4byte	.LFE68
+ 1789 0030 00000000 		.4byte	0
+ 1790 0034 00000000 		.4byte	0
+ 1791              		.section	.debug_line,"",%progbits
+ 1792              	.Ldebug_line0:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 34
+
+
+ 1793 0000 38020000 		.section	.debug_str,"MS",%progbits,1
+ 1793      02006F01 
+ 1793      00000201 
+ 1793      FB0E0D00 
+ 1793      01010101 
+ 1794              	.LASF38:
+ 1795 0000 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\Sensor\\VCNL4010"
+ 1795      73657273 
+ 1795      5C48656E 
+ 1795      72792041 
+ 1795      6C626572 
+ 1796 002e 2E637964 		.ascii	".cydsn\000"
+ 1796      736E00
+ 1797              	.LASF40:
+ 1798 0035 696E6974 		.ascii	"initVCNL\000"
+ 1798      56434E4C 
+ 1798      00
+ 1799              	.LASF25:
+ 1800 003e 72656164 		.ascii	"readProximity\000"
+ 1800      50726F78 
+ 1800      696D6974 
+ 1800      7900
+ 1801              	.LASF24:
+ 1802 004c 77726974 		.ascii	"writeVCNL\000"
+ 1802      6556434E 
+ 1802      4C00
+ 1803              	.LASF37:
+ 1804 0056 2E5C6D61 		.ascii	".\\main.c\000"
+ 1804      696E2E63 
+ 1804      00
+ 1805              	.LASF9:
+ 1806 005f 5F5F696E 		.ascii	"__int32_t\000"
+ 1806      7433325F 
+ 1806      7400
+ 1807              	.LASF39:
+ 1808 0069 72656164 		.ascii	"readVCNL\000"
+ 1808      56434E4C 
+ 1808      00
+ 1809              	.LASF26:
+ 1810 0072 72656164 		.ascii	"readAmbient\000"
+ 1810      416D6269 
+ 1810      656E7400 
+ 1811              	.LASF21:
+ 1812 007e 57726974 		.ascii	"Write_buf\000"
+ 1812      655F6275 
+ 1812      6600
+ 1813              	.LASF28:
+ 1814 0088 4932435F 		.ascii	"I2C_1_MasterWriteBuf\000"
+ 1814      315F4D61 
+ 1814      73746572 
+ 1814      57726974 
+ 1814      65427566 
+ 1815              	.LASF14:
+ 1816 009d 666C6F61 		.ascii	"float\000"
+ 1816      7400
+ 1817              	.LASF20:
+ 1818 00a3 64617461 		.ascii	"data\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 35
+
+
+ 1818      00
+ 1819              	.LASF7:
+ 1820 00a8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1820      206C6F6E 
+ 1820      6720756E 
+ 1820      7369676E 
+ 1820      65642069 
+ 1821              	.LASF31:
+ 1822 00bf 4C43445F 		.ascii	"LCD_Char_1_PrintString\000"
+ 1822      43686172 
+ 1822      5F315F50 
+ 1822      72696E74 
+ 1822      53747269 
+ 1823              	.LASF16:
+ 1824 00d6 63686172 		.ascii	"char8\000"
+ 1824      3800
+ 1825              	.LASF5:
+ 1826 00dc 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1826      20756E73 
+ 1826      69676E65 
+ 1826      6420696E 
+ 1826      7400
+ 1827              	.LASF23:
+ 1828 00ee 74656D70 		.ascii	"temp\000"
+ 1828      00
+ 1829              	.LASF3:
+ 1830 00f3 73686F72 		.ascii	"short unsigned int\000"
+ 1830      7420756E 
+ 1830      7369676E 
+ 1830      65642069 
+ 1830      6E7400
+ 1831              	.LASF41:
+ 1832 0106 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1832      52784275 
+ 1832      66666572 
+ 1832      00
+ 1833              	.LASF1:
+ 1834 0113 756E7369 		.ascii	"unsigned char\000"
+ 1834      676E6564 
+ 1834      20636861 
+ 1834      7200
+ 1835              	.LASF15:
+ 1836 0121 646F7562 		.ascii	"double\000"
+ 1836      6C6500
+ 1837              	.LASF29:
+ 1838 0128 4932435F 		.ascii	"I2C_1_MasterReadBuf\000"
+ 1838      315F4D61 
+ 1838      73746572 
+ 1838      52656164 
+ 1838      42756600 
+ 1839              	.LASF27:
+ 1840 013c 6D61696E 		.ascii	"main\000"
+ 1840      00
+ 1841              	.LASF12:
+ 1842 0141 75696E74 		.ascii	"uint16\000"
+ 1842      313600
+ 1843              	.LASF22:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 36
+
+
+ 1844 0148 72656164 		.ascii	"read_Buf\000"
+ 1844      5F427566 
+ 1844      00
+ 1845              	.LASF13:
+ 1846 0151 75696E74 		.ascii	"uint32\000"
+ 1846      333200
+ 1847              	.LASF36:
+ 1848 0158 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1848      4320342E 
+ 1848      392E3320 
+ 1848      32303135 
+ 1848      30333033 
+ 1849 018b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1849      20726576 
+ 1849      6973696F 
+ 1849      6E203232 
+ 1849      31323230 
+ 1850 01be 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1850      66756E63 
+ 1850      74696F6E 
+ 1850      2D736563 
+ 1850      74696F6E 
+ 1851              	.LASF8:
+ 1852 01e6 756E7369 		.ascii	"unsigned int\000"
+ 1852      676E6564 
+ 1852      20696E74 
+ 1852      00
+ 1853              	.LASF19:
+ 1854 01f3 61646472 		.ascii	"address\000"
+ 1854      65737300 
+ 1855              	.LASF43:
+ 1856 01fb 4C43445F 		.ascii	"LCD_Char_1_PrintU32Number\000"
+ 1856      43686172 
+ 1856      5F315F50 
+ 1856      72696E74 
+ 1856      5533324E 
+ 1857              	.LASF10:
+ 1858 0215 696E7433 		.ascii	"int32_t\000"
+ 1858      325F7400 
+ 1859              	.LASF18:
+ 1860 021d 73697A65 		.ascii	"sizetype\000"
+ 1860      74797065 
+ 1860      00
+ 1861              	.LASF6:
+ 1862 0226 6C6F6E67 		.ascii	"long long int\000"
+ 1862      206C6F6E 
+ 1862      6720696E 
+ 1862      7400
+ 1863              	.LASF17:
+ 1864 0234 63686172 		.ascii	"char\000"
+ 1864      00
+ 1865              	.LASF34:
+ 1866 0239 4932435F 		.ascii	"I2C_1_Enable\000"
+ 1866      315F456E 
+ 1866      61626C65 
+ 1866      00
+ 1867              	.LASF30:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccdZaXTJ.s 			page 37
+
+
+ 1868 0246 4C43445F 		.ascii	"LCD_Char_1_Position\000"
+ 1868      43686172 
+ 1868      5F315F50 
+ 1868      6F736974 
+ 1868      696F6E00 
+ 1869              	.LASF33:
+ 1870 025a 4932435F 		.ascii	"I2C_1_Start\000"
+ 1870      315F5374 
+ 1870      61727400 
+ 1871              	.LASF2:
+ 1872 0266 73686F72 		.ascii	"short int\000"
+ 1872      7420696E 
+ 1872      7400
+ 1873              	.LASF11:
+ 1874 0270 75696E74 		.ascii	"uint8\000"
+ 1874      3800
+ 1875              	.LASF4:
+ 1876 0276 6C6F6E67 		.ascii	"long int\000"
+ 1876      20696E74 
+ 1876      00
+ 1877              	.LASF42:
+ 1878 027f 4932435F 		.ascii	"I2C_1_MasterStatus\000"
+ 1878      315F4D61 
+ 1878      73746572 
+ 1878      53746174 
+ 1878      757300
+ 1879              	.LASF32:
+ 1880 0292 4C43445F 		.ascii	"LCD_Char_1_Start\000"
+ 1880      43686172 
+ 1880      5F315F53 
+ 1880      74617274 
+ 1880      00
+ 1881              	.LASF0:
+ 1882 02a3 7369676E 		.ascii	"signed char\000"
+ 1882      65642063 
+ 1882      68617200 
+ 1883              	.LASF35:
+ 1884 02af 43794465 		.ascii	"CyDelay\000"
+ 1884      6C617900 
+ 1885              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

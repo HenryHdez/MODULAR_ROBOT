@@ -1,1 +1,0 @@
-'C:\Users\Henry Alberto\Desktop\SPI\NODO.cydsn\main.c' -o .o -T C_FILE -I 'C:\Users\Henry Alberto\Desktop\SPI\NODO.cydsn' -I 'C:\Users\Henry Alberto\Desktop\SPI\NODO.cydsn\Generated_Source\PSoC5' -f 'C:\Users\Henry Alberto\Desktop\SPI\NODO.cydsn\CortexM3\ARM_GCC_493\Debug\.deps\C_FILE.d'
