@@ -10659,6 +10659,14 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="R25" library="rcl" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="R26" library="rcl" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="R27" library="rcl" deviceset="R-EU_" device="R0805" value="4.7k"/>
+<part name="GND_4_C2" library="testpad" deviceset="TP" device="B2,54"/>
+<part name="GND_3_C2" library="testpad" deviceset="TP" device="B2,54"/>
+<part name="VCC_3_C2" library="testpad" deviceset="TP" device="B2,54"/>
+<part name="VCC_4_C2" library="testpad" deviceset="TP" device="B2,54"/>
+<part name="CANL_4_C2" library="testpad" deviceset="TP" device="B2,54"/>
+<part name="CANL_3_C2" library="testpad" deviceset="TP" device="B2,54"/>
+<part name="CANH_4_C2" library="testpad" deviceset="TP" device="B2,54"/>
+<part name="CANH_3_C2" library="testpad" deviceset="TP" device="B2,54"/>
 </parts>
 <sheets>
 <sheet>
@@ -10783,17 +10791,17 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <instance part="CANH_3_C1" gate="G$1" x="91.44" y="-76.2" rot="R180"/>
 <instance part="CANH_4_C1" gate="G$1" x="96.52" y="-66.04"/>
 <instance part="CANH_C1" gate="G$1" x="73.66" y="-71.12" rot="R270"/>
-<instance part="VCC_2_C2" gate="G$1" x="142.24" y="-48.26"/>
+<instance part="VCC_2_C2" gate="G$1" x="137.16" y="-48.26"/>
 <instance part="VCC_1_C2" gate="G$1" x="137.16" y="-58.42" rot="R180"/>
 <instance part="VCC_C2" gate="G$1" x="132.08" y="-53.34" rot="R270"/>
-<instance part="GND_2_C2" gate="G$1" x="142.24" y="-66.04"/>
+<instance part="GND_2_C2" gate="G$1" x="137.16" y="-66.04"/>
 <instance part="GND_1_C2" gate="G$1" x="137.16" y="-76.2" rot="R180"/>
-<instance part="CANL_2_C2" gate="G$1" x="172.72" y="-48.26"/>
-<instance part="CANL_1_C2" gate="G$1" x="167.64" y="-58.42" rot="R180"/>
-<instance part="CANL_C2" gate="G$1" x="162.56" y="-53.34" rot="R270"/>
-<instance part="CANH_2_C2" gate="G$1" x="172.72" y="-66.04"/>
-<instance part="CANH_1_C2" gate="G$1" x="167.64" y="-76.2" rot="R180"/>
-<instance part="CANH_C2" gate="G$1" x="162.56" y="-71.12" rot="R270"/>
+<instance part="CANL_2_C2" gate="G$1" x="180.34" y="-48.26"/>
+<instance part="CANL_1_C2" gate="G$1" x="180.34" y="-58.42" rot="R180"/>
+<instance part="CANL_C2" gate="G$1" x="175.26" y="-53.34" rot="R270"/>
+<instance part="CANH_2_C2" gate="G$1" x="180.34" y="-66.04"/>
+<instance part="CANH_1_C2" gate="G$1" x="180.34" y="-76.2" rot="R180"/>
+<instance part="CANH_C2" gate="G$1" x="175.26" y="-71.12" rot="R270"/>
 <instance part="VCC_2_C3" gate="G$1" x="226.06" y="-50.8"/>
 <instance part="VCC_1_C3" gate="G$1" x="220.98" y="-60.96" rot="R180"/>
 <instance part="VCC_3_C3" gate="G$1" x="233.68" y="-60.96" rot="R180"/>
@@ -10828,9 +10836,9 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <instance part="CANH_1_C4" gate="G$1" x="360.68" y="-78.74" rot="R180"/>
 <instance part="CANH_3_C4" gate="G$1" x="373.38" y="-78.74" rot="R180"/>
 <instance part="CANH_4_C4" gate="G$1" x="378.46" y="-68.58"/>
-<instance part="VCC_C2_C3" gate="G$1" x="144.78" y="-53.34" rot="R90"/>
-<instance part="CANL_C2_C3" gate="G$1" x="175.26" y="-53.34" rot="R90"/>
-<instance part="CANH_C2_C3" gate="G$1" x="175.26" y="-71.12" rot="R90"/>
+<instance part="VCC_C2_C3" gate="G$1" x="157.48" y="-53.34" rot="R90"/>
+<instance part="CANL_C2_C3" gate="G$1" x="193.04" y="-53.34" rot="R90"/>
+<instance part="CANH_C2_C3" gate="G$1" x="193.04" y="-71.12" rot="R90"/>
 <instance part="MECH_LINK_1" gate="G$1" x="363.22" y="-20.32" rot="R270"/>
 <instance part="MECH_LINK_2" gate="G$1" x="363.22" y="-25.4" rot="R270"/>
 <instance part="MECH_LINK_3" gate="G$1" x="363.22" y="-30.48" rot="R270"/>
@@ -10903,6 +10911,14 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <instance part="R25" gate="G$1" x="320.04" y="60.96" rot="R270"/>
 <instance part="R26" gate="G$1" x="210.82" y="-10.16" rot="R270"/>
 <instance part="R27" gate="G$1" x="218.44" y="-10.16" rot="R270"/>
+<instance part="GND_4_C2" gate="G$1" x="149.86" y="-76.2" rot="R180"/>
+<instance part="GND_3_C2" gate="G$1" x="149.86" y="-66.04"/>
+<instance part="VCC_3_C2" gate="G$1" x="149.86" y="-48.26"/>
+<instance part="VCC_4_C2" gate="G$1" x="149.86" y="-58.42" rot="R180"/>
+<instance part="CANL_4_C2" gate="G$1" x="187.96" y="-58.42" rot="R180"/>
+<instance part="CANL_3_C2" gate="G$1" x="187.96" y="-48.26"/>
+<instance part="CANH_4_C2" gate="G$1" x="187.96" y="-76.2" rot="R180"/>
+<instance part="CANH_3_C2" gate="G$1" x="187.96" y="-66.04"/>
 </instances>
 <busses>
 </busses>
@@ -11414,9 +11430,13 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <wire x1="134.62" y1="-71.12" x2="137.16" y2="-71.12" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="-73.66" x2="137.16" y2="-71.12" width="0.1524" layer="91"/>
 <pinref part="GND_2_C2" gate="G$1" pin="TP"/>
-<wire x1="137.16" y1="-71.12" x2="142.24" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="-68.58" x2="142.24" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-68.58" x2="137.16" y2="-71.12" width="0.1524" layer="91"/>
 <label x="127" y="-71.12" size="1.778" layer="95"/>
+<pinref part="GND_4_C2" gate="G$1" pin="TP"/>
+<wire x1="149.86" y1="-73.66" x2="149.86" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="-71.12" x2="137.16" y2="-71.12" width="0.1524" layer="91"/>
+<pinref part="GND_3_C2" gate="G$1" pin="TP"/>
+<wire x1="149.86" y1="-68.58" x2="149.86" y2="-71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY4" gate="G$1" pin="GND2"/>
@@ -11797,15 +11817,18 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <pinref part="VCC_1_C2" gate="G$1" pin="TP"/>
 <wire x1="134.62" y1="-53.34" x2="137.16" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="-53.34" x2="137.16" y2="-55.88" width="0.1524" layer="91"/>
-<pinref part="VCC_2_C2" gate="G$1" pin="TP"/>
-<wire x1="142.24" y1="-50.8" x2="142.24" y2="-53.34" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="-53.34" x2="137.16" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="-53.34" x2="149.86" y2="-53.34" width="0.1524" layer="91"/>
 <junction x="134.62" y="-53.34"/>
 <junction x="137.16" y="-55.88"/>
-<junction x="142.24" y="-50.8"/>
 <junction x="137.16" y="-53.34"/>
 <pinref part="VCC_C2_C3" gate="G$1" pin="TP"/>
-<junction x="142.24" y="-53.34"/>
+<pinref part="VCC_2_C2" gate="G$1" pin="TP"/>
+<wire x1="149.86" y1="-53.34" x2="137.16" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-50.8" x2="137.16" y2="-53.34" width="0.1524" layer="91"/>
+<pinref part="VCC_4_C2" gate="G$1" pin="TP"/>
+<wire x1="149.86" y1="-55.88" x2="149.86" y2="-53.34" width="0.1524" layer="91"/>
+<pinref part="VCC_3_C2" gate="G$1" pin="TP"/>
+<wire x1="149.86" y1="-50.8" x2="149.86" y2="-53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="DINA" gate="A" pin="2"/>
@@ -11822,34 +11845,40 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <segment>
 <pinref part="CANL_C2" gate="G$1" pin="TP"/>
 <pinref part="CANL_1_C2" gate="G$1" pin="TP"/>
-<wire x1="165.1" y1="-53.34" x2="167.64" y2="-53.34" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="-53.34" x2="167.64" y2="-55.88" width="0.1524" layer="91"/>
-<pinref part="CANL_2_C2" gate="G$1" pin="TP"/>
-<wire x1="172.72" y1="-50.8" x2="172.72" y2="-53.34" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="-53.34" x2="167.64" y2="-53.34" width="0.1524" layer="91"/>
-<junction x="165.1" y="-53.34"/>
-<junction x="167.64" y="-55.88"/>
-<junction x="172.72" y="-50.8"/>
-<junction x="167.64" y="-53.34"/>
+<wire x1="177.8" y1="-53.34" x2="180.34" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="-53.34" x2="180.34" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="-53.34" x2="187.96" y2="-53.34" width="0.1524" layer="91"/>
+<junction x="177.8" y="-53.34"/>
+<junction x="180.34" y="-55.88"/>
+<junction x="180.34" y="-53.34"/>
 <pinref part="CANL_C2_C3" gate="G$1" pin="TP"/>
-<junction x="172.72" y="-53.34"/>
+<pinref part="CANL_2_C2" gate="G$1" pin="TP"/>
+<wire x1="187.96" y1="-53.34" x2="180.34" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="-50.8" x2="180.34" y2="-53.34" width="0.1524" layer="91"/>
+<pinref part="CANL_3_C2" gate="G$1" pin="TP"/>
+<wire x1="187.96" y1="-50.8" x2="187.96" y2="-53.34" width="0.1524" layer="91"/>
+<pinref part="CANL_4_C2" gate="G$1" pin="TP"/>
+<wire x1="187.96" y1="-55.88" x2="187.96" y2="-53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="CANH_C2" gate="G$1" pin="TP"/>
 <pinref part="CANH_1_C2" gate="G$1" pin="TP"/>
-<wire x1="165.1" y1="-71.12" x2="167.64" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="-73.66" x2="167.64" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="-71.12" x2="172.72" y2="-71.12" width="0.1524" layer="91"/>
-<pinref part="CANH_2_C2" gate="G$1" pin="TP"/>
-<wire x1="172.72" y1="-68.58" x2="172.72" y2="-71.12" width="0.1524" layer="91"/>
-<junction x="165.1" y="-71.12"/>
-<junction x="167.64" y="-73.66"/>
-<junction x="167.64" y="-71.12"/>
-<junction x="172.72" y="-68.58"/>
+<wire x1="177.8" y1="-71.12" x2="180.34" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="-73.66" x2="180.34" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="-71.12" x2="187.96" y2="-71.12" width="0.1524" layer="91"/>
+<junction x="177.8" y="-71.12"/>
+<junction x="180.34" y="-73.66"/>
+<junction x="180.34" y="-71.12"/>
 <pinref part="CANH_C2_C3" gate="G$1" pin="TP"/>
-<junction x="172.72" y="-71.12"/>
+<pinref part="CANH_2_C2" gate="G$1" pin="TP"/>
+<wire x1="187.96" y1="-71.12" x2="190.5" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="-68.58" x2="180.34" y2="-71.12" width="0.1524" layer="91"/>
+<pinref part="CANH_3_C2" gate="G$1" pin="TP"/>
+<wire x1="187.96" y1="-68.58" x2="187.96" y2="-71.12" width="0.1524" layer="91"/>
+<pinref part="CANH_4_C2" gate="G$1" pin="TP"/>
+<wire x1="187.96" y1="-73.66" x2="187.96" y2="-71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC_C3" class="0">
