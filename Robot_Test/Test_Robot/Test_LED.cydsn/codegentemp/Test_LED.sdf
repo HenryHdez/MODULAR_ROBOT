@@ -1,0 +1,22 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2017-01-03T19:34:11Z")
+ (DESIGN "Test_LED")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 3.3 CP3")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "Test_LED")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT LED_1\(0\)_PAD LED_1\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT LED_2\(0\)_PAD LED_2\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT LED_3\(0\)_PAD LED_3\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT LED_4\(0\)_PAD LED_4\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)

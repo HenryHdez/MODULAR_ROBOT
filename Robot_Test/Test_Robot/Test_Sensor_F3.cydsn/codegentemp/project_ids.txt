@@ -1,0 +1,7 @@
+C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Test_LED.cyprj|bce85bef-01a2-4aa6-90cc-2797cc9b47a3
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|17ddbd9f-e9a2-4a2b-a08a-4435400e7cc1
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|bfd6a061-927a-407c-8691-180402d088f9
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|2a7a42f0-e7ac-4ea2-8534-45b07df419a1
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e82ecfc1-da00-44ef-a036-d5a60f8e0469
+C:\Users\Henry Alberto\Desktop\Test_Robot\Test_Sensor_F2.cydsn\Test_Sensor_F2.cyprj|0babb553-a6fc-4538-9654-4e5d66814340
+C:\Users\Henry Alberto\Desktop\Test_Robot\Test_Sensor_F3.cydsn\Test_Sensor_F3.cyprj|17610f05-7d3f-4a0e-b722-7c1531971445
