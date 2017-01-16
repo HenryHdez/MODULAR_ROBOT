@@ -10665,6 +10665,8 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="CANL_3_C2" library="testpad" deviceset="TP" device="B2,54"/>
 <part name="CANH_4_C2" library="testpad" deviceset="TP" device="B2,54"/>
 <part name="CANH_3_C2" library="testpad" deviceset="TP" device="B2,54"/>
+<part name="VCC_REINFORCEMENT" library="testpad" deviceset="PTR1" device="TP11R"/>
+<part name="GND_REINFORCEMENT" library="testpad" deviceset="PTR1" device="TP11R"/>
 </parts>
 <sheets>
 <sheet>
@@ -10915,6 +10917,8 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <instance part="CANL_3_C2" gate="G$1" x="187.96" y="-48.26"/>
 <instance part="CANH_4_C2" gate="G$1" x="187.96" y="-76.2" rot="R180"/>
 <instance part="CANH_3_C2" gate="G$1" x="187.96" y="-66.04"/>
+<instance part="VCC_REINFORCEMENT" gate="G$1" x="337.82" y="-55.88" rot="R90"/>
+<instance part="GND_REINFORCEMENT" gate="G$1" x="337.82" y="-73.66" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -11577,6 +11581,8 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <junction x="330.2" y="-76.2"/>
 <junction x="335.28" y="-71.12"/>
 <label x="314.96" y="-73.66" size="1.778" layer="95"/>
+<pinref part="GND_REINFORCEMENT" gate="G$1" pin="TP"/>
+<junction x="335.28" y="-73.66"/>
 </segment>
 <segment>
 <pinref part="SUPPLY11" gate="G$1" pin="GND4"/>
@@ -11973,6 +11979,8 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <junction x="330.2" y="-55.88"/>
 <junction x="322.58" y="-55.88"/>
 <label x="312.42" y="-55.88" size="1.778" layer="95"/>
+<pinref part="VCC_REINFORCEMENT" gate="G$1" pin="TP"/>
+<junction x="335.28" y="-55.88"/>
 </segment>
 <segment>
 <pinref part="X2" gate="-1" pin="1"/>
