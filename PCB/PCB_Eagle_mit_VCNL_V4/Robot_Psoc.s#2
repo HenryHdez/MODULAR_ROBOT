@@ -18753,7 +18753,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <instance part="R3" gate="G$1" x="48.26" y="60.96"/>
 <instance part="R16" gate="G$1" x="147.32" y="-20.32" rot="R90"/>
 <instance part="R17" gate="G$1" x="119.38" y="-12.7" rot="R180"/>
-<instance part="DINA" gate="A" x="152.4" y="83.82" rot="R180"/>
+<instance part="DINA" gate="A" x="152.4" y="66.04" rot="R180"/>
 <instance part="R18" gate="G$1" x="109.22" y="7.62" rot="R90"/>
 <instance part="C4" gate="G$1" x="116.84" y="10.16"/>
 <instance part="C5" gate="G$1" x="129.54" y="10.16"/>
@@ -18934,7 +18934,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <instance part="CANH_3_C2" gate="G$1" x="187.96" y="-66.04"/>
 <instance part="BATTERY+" gate="G$1" x="337.82" y="-55.88" rot="R90"/>
 <instance part="BATTERY-" gate="G$1" x="337.82" y="-73.66" rot="R90"/>
-<instance part="C1" gate="G$1" x="177.8" y="81.28" rot="R180"/>
+<instance part="C1" gate="G$1" x="177.8" y="63.5" rot="R180"/>
 <instance part="U$2" gate="G$1" x="261.62" y="40.64"/>
 <instance part="VCC" gate="G$1" x="289.56" y="5.08" rot="R90"/>
 <instance part="GND" gate="G$1" x="289.56" y="0" rot="R90"/>
@@ -19415,9 +19415,9 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </segment>
 <segment>
 <pinref part="DINA" gate="A" pin="3"/>
-<label x="162.56" y="86.36" size="1.778" layer="95"/>
+<label x="162.56" y="68.58" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="-"/>
-<wire x1="154.94" y1="86.36" x2="177.8" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="68.58" x2="177.8" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND_C2" class="0">
@@ -19841,11 +19841,11 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </segment>
 <segment>
 <pinref part="DINA" gate="A" pin="2"/>
-<label x="162.56" y="83.82" size="1.778" layer="95"/>
+<label x="162.56" y="66.04" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="+"/>
-<wire x1="177.8" y1="78.74" x2="170.18" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="78.74" x2="170.18" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="83.82" x2="154.94" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="60.96" x2="170.18" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="60.96" x2="170.18" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="66.04" x2="154.94" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC_C2" class="0">
@@ -20549,8 +20549,8 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </segment>
 <segment>
 <pinref part="DINA" gate="A" pin="1"/>
-<wire x1="154.94" y1="81.28" x2="162.56" y2="81.28" width="0.1524" layer="91"/>
-<label x="162.56" y="81.28" size="1.778" layer="95"/>
+<wire x1="154.94" y1="63.5" x2="162.56" y2="63.5" width="0.1524" layer="91"/>
+<label x="162.56" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$24" class="0">

@@ -18268,6 +18268,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <rectangle x1="-1.5748" y1="4.1148" x2="-0.9652" y2="5.1816" layer="51"/>
 <rectangle x1="0.508" y1="3.2004" x2="2.0066" y2="4.1148" layer="51"/>
 <rectangle x1="0.9652" y1="4.1148" x2="1.5748" y2="5.1816" layer="51"/>
+<smd name="P$1" x="-1.27" y="2.413" dx="1.143" dy="2.54" layer="1"/>
+<smd name="P$2" x="1.27" y="2.413" dx="1.143" dy="2.54" layer="1"/>
+<smd name="P$3" x="-1.27" y="-2.413" dx="1.143" dy="2.54" layer="1"/>
+<smd name="P$4" x="1.27" y="-2.413" dx="1.143" dy="2.54" layer="1"/>
 </package>
 </packages>
 <symbols>
