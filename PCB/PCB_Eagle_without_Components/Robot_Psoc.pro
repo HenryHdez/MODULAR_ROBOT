@@ -1,15 +1,15 @@
 EAGLE AutoRouter Statistics:
 
-Job           : C:/Users/Henry Alberto/Documents/GitHub/Psoc_Modular/PCB/PCB_Eagle_mit_VCNL_V4/Robot_Psoc.brd
+Job           : C:/Users/Henry Alberto/Documents/GitHub/Psoc_Modular/PCB/PCB_Eagle_without_Components/Robot_Psoc.brd
 
-Start at      : 15:04:47 (5/05/2017)
-End at        : 15:04:51 (5/05/2017)
+Start at      : 16:01:21 (5/05/2017)
+End at        : 16:01:25 (5/05/2017)
 Elapsed time  : 00:00:02
 
-Signals       :   110   RoutingGrid: 9 mil  Layers: 2
-Connections   :   235   predefined:  235 ( 128 Vias )
+Signals       :    32   RoutingGrid: 9 mil  Layers: 2
+Connections   :    63   predefined:  63 ( 39 Vias )
 
-Router memory :   1345344
+Router memory :   1055744
 
 Passname          : TopRouter     Route Optimize1 Optimize2 Optimize3 Optimize4
 
