@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -18753,7 +18753,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <instance part="R3" gate="G$1" x="48.26" y="60.96"/>
 <instance part="R16" gate="G$1" x="147.32" y="-20.32" rot="R90"/>
 <instance part="R17" gate="G$1" x="119.38" y="-12.7" rot="R180"/>
-<instance part="DINA" gate="A" x="152.4" y="83.82" rot="R180"/>
+<instance part="DINA" gate="A" x="152.4" y="66.04" rot="R180"/>
 <instance part="R18" gate="G$1" x="109.22" y="7.62" rot="R90"/>
 <instance part="C4" gate="G$1" x="116.84" y="10.16"/>
 <instance part="C5" gate="G$1" x="129.54" y="10.16"/>
@@ -18934,7 +18934,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <instance part="CANH_3_C2" gate="G$1" x="187.96" y="-66.04"/>
 <instance part="BATTERY+" gate="G$1" x="337.82" y="-55.88" rot="R90"/>
 <instance part="BATTERY-" gate="G$1" x="337.82" y="-73.66" rot="R90"/>
-<instance part="C1" gate="G$1" x="177.8" y="81.28" rot="R180"/>
+<instance part="C1" gate="G$1" x="177.8" y="63.5" rot="R180"/>
 <instance part="U$2" gate="G$1" x="261.62" y="40.64"/>
 <instance part="VCC" gate="G$1" x="289.56" y="5.08" rot="R90"/>
 <instance part="GND" gate="G$1" x="289.56" y="0" rot="R90"/>
@@ -19415,9 +19415,9 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </segment>
 <segment>
 <pinref part="DINA" gate="A" pin="3"/>
-<label x="162.56" y="86.36" size="1.778" layer="95"/>
+<label x="162.56" y="68.58" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="-"/>
-<wire x1="154.94" y1="86.36" x2="177.8" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="68.58" x2="177.8" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND_C2" class="0">
@@ -19532,6 +19532,8 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <wire x1="218.44" y1="86.36" x2="210.82" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="86.36" x2="195.58" y2="86.36" width="0.1524" layer="91"/>
 <label x="195.58" y="83.82" size="1.778" layer="95"/>
+<junction x="210.82" y="86.36"/>
+<junction x="218.44" y="86.36"/>
 </segment>
 <segment>
 <label x="284.48" y="40.64" size="1.778" layer="95"/>
@@ -19841,11 +19843,11 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </segment>
 <segment>
 <pinref part="DINA" gate="A" pin="2"/>
-<label x="162.56" y="83.82" size="1.778" layer="95"/>
+<label x="162.56" y="66.04" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="+"/>
-<wire x1="177.8" y1="78.74" x2="170.18" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="78.74" x2="170.18" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="83.82" x2="154.94" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="60.96" x2="170.18" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="60.96" x2="170.18" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="66.04" x2="154.94" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC_C2" class="0">
@@ -20428,6 +20430,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="210.82" y1="73.66" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="76.2" x2="210.82" y2="73.66" width="0.1524" layer="91"/>
+<junction x="210.82" y="73.66"/>
 </segment>
 </net>
 <net name="SCL_S3_U" class="0">
@@ -20482,6 +20485,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <pinref part="R12" gate="G$1" pin="2"/>
 <wire x1="218.44" y1="68.58" x2="220.98" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="76.2" x2="218.44" y2="68.58" width="0.1524" layer="91"/>
+<junction x="218.44" y="68.58"/>
 </segment>
 </net>
 <net name="SDA_S3_U" class="0">
@@ -20549,8 +20553,8 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </segment>
 <segment>
 <pinref part="DINA" gate="A" pin="1"/>
-<wire x1="154.94" y1="81.28" x2="162.56" y2="81.28" width="0.1524" layer="91"/>
-<label x="162.56" y="81.28" size="1.778" layer="95"/>
+<wire x1="154.94" y1="63.5" x2="162.56" y2="63.5" width="0.1524" layer="91"/>
+<label x="162.56" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$24" class="0">
@@ -20565,6 +20569,76 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="202,1,347.98,-20.32,MECH_LINK_7,TP,,,,"/>
+<approved hash="202,1,327.66,-20.32,MECH_LINK_11,TP,,,,"/>
+<approved hash="202,1,347.98,-25.4,MECH_LINK_8,TP,,,,"/>
+<approved hash="202,1,347.98,-30.48,MECH_LINK_9,TP,,,,"/>
+<approved hash="202,1,365.76,-20.32,MECH_LINK_1,TP,,,,"/>
+<approved hash="202,1,365.76,-25.4,MECH_LINK_2,TP,,,,"/>
+<approved hash="202,1,365.76,-30.48,MECH_LINK_3,TP,,,,"/>
+<approved hash="202,1,386.08,-20.32,MECH_LINK_4,TP,,,,"/>
+<approved hash="202,1,386.08,-25.4,MECH_LINK_5,TP,,,,"/>
+<approved hash="202,1,386.08,-30.48,MECH_LINK_6,TP,,,,"/>
+<approved hash="209,1,261.62,-73.66,CANH_C3,,,,,"/>
+<approved hash="209,1,264.16,-76.2,CANH_C3,,,,,"/>
+<approved hash="209,1,269.24,-71.12,CANH_C3,,,,,"/>
+<approved hash="209,1,276.86,-76.2,CANH_C3,,,,,"/>
+<approved hash="209,1,281.94,-71.12,CANH_C3,,,,,"/>
+<approved hash="209,1,287.02,-10.16,CANH_C3,,,,,"/>
+<approved hash="209,1,360.68,-76.2,CANH_C4,,,,,"/>
+<approved hash="209,1,365.76,-71.12,CANH_C4,,,,,"/>
+<approved hash="209,1,373.38,-76.2,CANH_C4,,,,,"/>
+<approved hash="209,1,378.46,-71.12,CANH_C4,,,,,"/>
+<approved hash="209,1,383.54,53.34,CANH_C4,,,,,"/>
+<approved hash="209,1,261.62,-55.88,CANL_C3,,,,,"/>
+<approved hash="209,1,264.16,-58.42,CANL_C3,,,,,"/>
+<approved hash="209,1,269.24,-53.34,CANL_C3,,,,,"/>
+<approved hash="209,1,276.86,-58.42,CANL_C3,,,,,"/>
+<approved hash="209,1,281.94,-53.34,CANL_C3,,,,,"/>
+<approved hash="209,1,287.02,-5.08,CANL_C3,,,,,"/>
+<approved hash="209,1,360.68,-58.42,CANL_C4,,,,,"/>
+<approved hash="209,1,365.76,-53.34,CANL_C4,,,,,"/>
+<approved hash="209,1,373.38,-58.42,CANL_C4,,,,,"/>
+<approved hash="209,1,378.46,-53.34,CANL_C4,,,,,"/>
+<approved hash="209,1,383.54,58.42,CANL_C4,,,,,"/>
+<approved hash="209,1,154.94,-116.84,LED_T_S4,,,,,"/>
+<approved hash="209,1,287.02,-30.48,LED_T_S4,,,,,"/>
+<approved hash="209,1,177.8,-71.12,N$7,,,,,"/>
+<approved hash="209,1,180.34,-73.66,N$7,,,,,"/>
+<approved hash="209,1,190.5,-71.12,N$7,,,,,"/>
+<approved hash="209,1,180.34,-68.58,N$7,,,,,"/>
+<approved hash="209,1,187.96,-68.58,N$7,,,,,"/>
+<approved hash="209,1,187.96,-73.66,N$7,,,,,"/>
+<approved hash="209,1,337.82,-111.76,N$10,,,,,"/>
+<approved hash="209,1,337.82,-111.76,N$10,,,,,"/>
+<approved hash="209,1,137.16,-116.84,N$20,,,,,"/>
+<approved hash="209,1,137.16,-116.84,N$20,,,,,"/>
+<approved hash="209,1,137.16,-111.76,N$22,,,,,"/>
+<approved hash="209,1,137.16,-111.76,N$22,,,,,"/>
+<approved hash="209,1,243.84,-111.76,N$26,,,,,"/>
+<approved hash="209,1,243.84,-111.76,N$26,,,,,"/>
+<approved hash="209,1,243.84,-119.38,N$27,,,,,"/>
+<approved hash="209,1,243.84,-119.38,N$27,,,,,"/>
+<approved hash="209,1,177.8,-53.34,N$32,,,,,"/>
+<approved hash="209,1,180.34,-55.88,N$32,,,,,"/>
+<approved hash="209,1,190.5,-53.34,N$32,,,,,"/>
+<approved hash="209,1,180.34,-50.8,N$32,,,,,"/>
+<approved hash="209,1,187.96,-50.8,N$32,,,,,"/>
+<approved hash="209,1,187.96,-55.88,N$32,,,,,"/>
+<approved hash="209,1,337.82,-119.38,N$44,,,,,"/>
+<approved hash="209,1,337.82,-119.38,N$44,,,,,"/>
+<approved hash="209,1,261.62,-119.38,SCL_S4_U,,,,,"/>
+<approved hash="209,1,287.02,-20.32,SCL_S4_U,,,,,"/>
+<approved hash="209,1,355.6,-119.38,SDA_S4_U,,,,,"/>
+<approved hash="209,1,287.02,-25.4,SDA_S4_U,,,,,"/>
+<approved hash="209,1,220.98,-58.42,VCC_C3,,,,,"/>
+<approved hash="209,1,226.06,-53.34,VCC_C3,,,,,"/>
+<approved hash="209,1,233.68,-58.42,VCC_C3,,,,,"/>
+<approved hash="209,1,238.76,-53.34,VCC_C3,,,,,"/>
+<approved hash="209,1,381,5.08,VCC_C3,,,,,"/>
+<approved hash="209,1,287.02,5.08,VCC_C3,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>

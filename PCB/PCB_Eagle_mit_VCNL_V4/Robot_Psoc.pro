@@ -2,8 +2,8 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Users/Henry Alberto/Documents/GitHub/Psoc_Modular/PCB/PCB_Eagle_mit_VCNL_V4/Robot_Psoc.brd
 
-Start at      : 15:04:47 (5/05/2017)
-End at        : 15:04:51 (5/05/2017)
+Start at      : 16:32:23 (5/05/2017)
+End at        : 16:32:27 (5/05/2017)
 Elapsed time  : 00:00:02
 
 Signals       :   110   RoutingGrid: 9 mil  Layers: 2
