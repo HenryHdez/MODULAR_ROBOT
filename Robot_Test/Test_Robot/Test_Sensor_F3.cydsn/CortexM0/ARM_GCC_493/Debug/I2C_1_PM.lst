@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,172 +25,172 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
   22              		.type	I2C_1_Sleep, %function
   23              	I2C_1_Sleep:
   24              	.LFB1:
-  25              		.file 1 ".\\Generated_Source\\PSoC4\\I2C_1_PM.c"
-   1:.\Generated_Source\PSoC4/I2C_1_PM.c **** /***************************************************************************//**
-   2:.\Generated_Source\PSoC4/I2C_1_PM.c **** * \file I2C_1_PM.c
-   3:.\Generated_Source\PSoC4/I2C_1_PM.c **** * \version 3.20
-   4:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
-   5:.\Generated_Source\PSoC4/I2C_1_PM.c **** * \brief
-   6:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  This file provides the source code to the Power Management support for
-   7:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  the SCB Component.
-   8:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
-   9:.\Generated_Source\PSoC4/I2C_1_PM.c **** * Note:
-  10:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
-  11:.\Generated_Source\PSoC4/I2C_1_PM.c **** ********************************************************************************
-  12:.\Generated_Source\PSoC4/I2C_1_PM.c **** * \copyright
-  13:.\Generated_Source\PSoC4/I2C_1_PM.c **** * Copyright 2013-2016, Cypress Semiconductor Corporation.  All rights reserved.
-  14:.\Generated_Source\PSoC4/I2C_1_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
-  15:.\Generated_Source\PSoC4/I2C_1_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  16:.\Generated_Source\PSoC4/I2C_1_PM.c **** * the software package with which this file was provided.
-  17:.\Generated_Source\PSoC4/I2C_1_PM.c **** *******************************************************************************/
-  18:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  19:.\Generated_Source\PSoC4/I2C_1_PM.c **** #include "I2C_1.h"
-  20:.\Generated_Source\PSoC4/I2C_1_PM.c **** #include "I2C_1_PVT.h"
-  21:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  22:.\Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_I2C_INC)
-  23:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #include "I2C_1_I2C_PVT.h"
-  24:.\Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_I2C_INC) */
-  25:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  26:.\Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_EZI2C_INC)
-  27:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #include "I2C_1_EZI2C_PVT.h"
-  28:.\Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_EZI2C_INC) */
-  29:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  30:.\Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_SPI_INC || I2C_1_SCB_MODE_UART_INC)
-  31:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #include "I2C_1_SPI_UART_PVT.h"
-  32:.\Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_SPI_INC || I2C_1_SCB_MODE_UART_INC) */
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 2
+  25              		.file 1 "Generated_Source\\PSoC4\\I2C_1_PM.c"
+   1:Generated_Source\PSoC4/I2C_1_PM.c **** /***************************************************************************//**
+   2:Generated_Source\PSoC4/I2C_1_PM.c **** * \file I2C_1_PM.c
+   3:Generated_Source\PSoC4/I2C_1_PM.c **** * \version 3.20
+   4:Generated_Source\PSoC4/I2C_1_PM.c **** *
+   5:Generated_Source\PSoC4/I2C_1_PM.c **** * \brief
+   6:Generated_Source\PSoC4/I2C_1_PM.c **** *  This file provides the source code to the Power Management support for
+   7:Generated_Source\PSoC4/I2C_1_PM.c **** *  the SCB Component.
+   8:Generated_Source\PSoC4/I2C_1_PM.c **** *
+   9:Generated_Source\PSoC4/I2C_1_PM.c **** * Note:
+  10:Generated_Source\PSoC4/I2C_1_PM.c **** *
+  11:Generated_Source\PSoC4/I2C_1_PM.c **** ********************************************************************************
+  12:Generated_Source\PSoC4/I2C_1_PM.c **** * \copyright
+  13:Generated_Source\PSoC4/I2C_1_PM.c **** * Copyright 2013-2016, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC4/I2C_1_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC4/I2C_1_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC4/I2C_1_PM.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC4/I2C_1_PM.c **** *******************************************************************************/
+  18:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  19:Generated_Source\PSoC4/I2C_1_PM.c **** #include "I2C_1.h"
+  20:Generated_Source\PSoC4/I2C_1_PM.c **** #include "I2C_1_PVT.h"
+  21:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  22:Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_I2C_INC)
+  23:Generated_Source\PSoC4/I2C_1_PM.c ****     #include "I2C_1_I2C_PVT.h"
+  24:Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_I2C_INC) */
+  25:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  26:Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_EZI2C_INC)
+  27:Generated_Source\PSoC4/I2C_1_PM.c ****     #include "I2C_1_EZI2C_PVT.h"
+  28:Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_EZI2C_INC) */
+  29:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  30:Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_SPI_INC || I2C_1_SCB_MODE_UART_INC)
+  31:Generated_Source\PSoC4/I2C_1_PM.c ****     #include "I2C_1_SPI_UART_PVT.h"
+  32:Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_SPI_INC || I2C_1_SCB_MODE_UART_INC) */
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 2
 
 
-  33:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  34:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  35:.\Generated_Source\PSoC4/I2C_1_PM.c **** /***************************************
-  36:.\Generated_Source\PSoC4/I2C_1_PM.c **** *   Backup Structure declaration
-  37:.\Generated_Source\PSoC4/I2C_1_PM.c **** ***************************************/
-  38:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  39:.\Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_UNCONFIG_CONST_CFG || \
-  40:.\Generated_Source\PSoC4/I2C_1_PM.c ****    (I2C_1_SCB_MODE_I2C_CONST_CFG   && (!I2C_1_I2C_WAKE_ENABLE_CONST))   || \
-  41:.\Generated_Source\PSoC4/I2C_1_PM.c ****    (I2C_1_SCB_MODE_EZI2C_CONST_CFG && (!I2C_1_EZI2C_WAKE_ENABLE_CONST)) || \
-  42:.\Generated_Source\PSoC4/I2C_1_PM.c ****    (I2C_1_SCB_MODE_SPI_CONST_CFG   && (!I2C_1_SPI_WAKE_ENABLE_CONST))   || \
-  43:.\Generated_Source\PSoC4/I2C_1_PM.c ****    (I2C_1_SCB_MODE_UART_CONST_CFG  && (!I2C_1_UART_WAKE_ENABLE_CONST)))
-  44:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  45:.\Generated_Source\PSoC4/I2C_1_PM.c ****     I2C_1_BACKUP_STRUCT I2C_1_backup =
-  46:.\Generated_Source\PSoC4/I2C_1_PM.c ****     {
-  47:.\Generated_Source\PSoC4/I2C_1_PM.c ****         0u, /* enableState */
-  48:.\Generated_Source\PSoC4/I2C_1_PM.c ****     };
-  49:.\Generated_Source\PSoC4/I2C_1_PM.c **** #endif
-  50:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  51:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  52:.\Generated_Source\PSoC4/I2C_1_PM.c **** /*******************************************************************************
-  53:.\Generated_Source\PSoC4/I2C_1_PM.c **** * Function Name: I2C_1_Sleep
-  54:.\Generated_Source\PSoC4/I2C_1_PM.c **** ****************************************************************************//**
-  55:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
-  56:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  Prepares the I2C_1 component to enter Deep Sleep.
-  57:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  The “Enable wakeup from Deep Sleep Mode” selection has an influence on this 
-  58:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  function implementation:
-  59:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  - Checked: configures the component to be wakeup source from Deep Sleep.
-  60:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  - Unchecked: stores the current component state (enabled or disabled) and 
-  61:.\Generated_Source\PSoC4/I2C_1_PM.c **** *    disables the component. See SCB_Stop() function for details about component 
-  62:.\Generated_Source\PSoC4/I2C_1_PM.c **** *    disabling.
-  63:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
-  64:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  Call the I2C_1_Sleep() function before calling the 
-  65:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  CyPmSysDeepSleep() function. 
-  66:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  Refer to the PSoC Creator System Reference Guide for more information about 
-  67:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  power management functions and Low power section of this document for the 
-  68:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  selected mode.
-  69:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
-  70:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  This function should not be called before entering Sleep.
-  71:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
-  72:.\Generated_Source\PSoC4/I2C_1_PM.c **** *******************************************************************************/
-  73:.\Generated_Source\PSoC4/I2C_1_PM.c **** void I2C_1_Sleep(void)
-  74:.\Generated_Source\PSoC4/I2C_1_PM.c **** {
+  33:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  34:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  35:Generated_Source\PSoC4/I2C_1_PM.c **** /***************************************
+  36:Generated_Source\PSoC4/I2C_1_PM.c **** *   Backup Structure declaration
+  37:Generated_Source\PSoC4/I2C_1_PM.c **** ***************************************/
+  38:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  39:Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_UNCONFIG_CONST_CFG || \
+  40:Generated_Source\PSoC4/I2C_1_PM.c ****    (I2C_1_SCB_MODE_I2C_CONST_CFG   && (!I2C_1_I2C_WAKE_ENABLE_CONST))   || \
+  41:Generated_Source\PSoC4/I2C_1_PM.c ****    (I2C_1_SCB_MODE_EZI2C_CONST_CFG && (!I2C_1_EZI2C_WAKE_ENABLE_CONST)) || \
+  42:Generated_Source\PSoC4/I2C_1_PM.c ****    (I2C_1_SCB_MODE_SPI_CONST_CFG   && (!I2C_1_SPI_WAKE_ENABLE_CONST))   || \
+  43:Generated_Source\PSoC4/I2C_1_PM.c ****    (I2C_1_SCB_MODE_UART_CONST_CFG  && (!I2C_1_UART_WAKE_ENABLE_CONST)))
+  44:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  45:Generated_Source\PSoC4/I2C_1_PM.c ****     I2C_1_BACKUP_STRUCT I2C_1_backup =
+  46:Generated_Source\PSoC4/I2C_1_PM.c ****     {
+  47:Generated_Source\PSoC4/I2C_1_PM.c ****         0u, /* enableState */
+  48:Generated_Source\PSoC4/I2C_1_PM.c ****     };
+  49:Generated_Source\PSoC4/I2C_1_PM.c **** #endif
+  50:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  51:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  52:Generated_Source\PSoC4/I2C_1_PM.c **** /*******************************************************************************
+  53:Generated_Source\PSoC4/I2C_1_PM.c **** * Function Name: I2C_1_Sleep
+  54:Generated_Source\PSoC4/I2C_1_PM.c **** ****************************************************************************//**
+  55:Generated_Source\PSoC4/I2C_1_PM.c **** *
+  56:Generated_Source\PSoC4/I2C_1_PM.c **** *  Prepares the I2C_1 component to enter Deep Sleep.
+  57:Generated_Source\PSoC4/I2C_1_PM.c **** *  The “Enable wakeup from Deep Sleep Mode” selection has an influence on this 
+  58:Generated_Source\PSoC4/I2C_1_PM.c **** *  function implementation:
+  59:Generated_Source\PSoC4/I2C_1_PM.c **** *  - Checked: configures the component to be wakeup source from Deep Sleep.
+  60:Generated_Source\PSoC4/I2C_1_PM.c **** *  - Unchecked: stores the current component state (enabled or disabled) and 
+  61:Generated_Source\PSoC4/I2C_1_PM.c **** *    disables the component. See SCB_Stop() function for details about component 
+  62:Generated_Source\PSoC4/I2C_1_PM.c **** *    disabling.
+  63:Generated_Source\PSoC4/I2C_1_PM.c **** *
+  64:Generated_Source\PSoC4/I2C_1_PM.c **** *  Call the I2C_1_Sleep() function before calling the 
+  65:Generated_Source\PSoC4/I2C_1_PM.c **** *  CyPmSysDeepSleep() function. 
+  66:Generated_Source\PSoC4/I2C_1_PM.c **** *  Refer to the PSoC Creator System Reference Guide for more information about 
+  67:Generated_Source\PSoC4/I2C_1_PM.c **** *  power management functions and Low power section of this document for the 
+  68:Generated_Source\PSoC4/I2C_1_PM.c **** *  selected mode.
+  69:Generated_Source\PSoC4/I2C_1_PM.c **** *
+  70:Generated_Source\PSoC4/I2C_1_PM.c **** *  This function should not be called before entering Sleep.
+  71:Generated_Source\PSoC4/I2C_1_PM.c **** *
+  72:Generated_Source\PSoC4/I2C_1_PM.c **** *******************************************************************************/
+  73:Generated_Source\PSoC4/I2C_1_PM.c **** void I2C_1_Sleep(void)
+  74:Generated_Source\PSoC4/I2C_1_PM.c **** {
   26              		.loc 1 74 0
   27              		.cfi_startproc
   28 0000 08B5     		push	{r3, lr}
   29              		.cfi_def_cfa_offset 8
   30              		.cfi_offset 3, -8
   31              		.cfi_offset 14, -4
-  75:.\Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_UNCONFIG_CONST_CFG)
-  76:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-  77:.\Generated_Source\PSoC4/I2C_1_PM.c ****     if(I2C_1_SCB_WAKE_ENABLE_CHECK)
-  78:.\Generated_Source\PSoC4/I2C_1_PM.c ****     {
-  79:.\Generated_Source\PSoC4/I2C_1_PM.c ****         if(I2C_1_SCB_MODE_I2C_RUNTM_CFG)
-  80:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
-  81:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_I2CSaveConfig();
-  82:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
-  83:.\Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_EZI2C_RUNTM_CFG)
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 3
+  75:Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_UNCONFIG_CONST_CFG)
+  76:Generated_Source\PSoC4/I2C_1_PM.c **** 
+  77:Generated_Source\PSoC4/I2C_1_PM.c ****     if(I2C_1_SCB_WAKE_ENABLE_CHECK)
+  78:Generated_Source\PSoC4/I2C_1_PM.c ****     {
+  79:Generated_Source\PSoC4/I2C_1_PM.c ****         if(I2C_1_SCB_MODE_I2C_RUNTM_CFG)
+  80:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+  81:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_I2CSaveConfig();
+  82:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+  83:Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_EZI2C_RUNTM_CFG)
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 3
 
 
-  84:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
-  85:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_EzI2CSaveConfig();
-  86:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
-  87:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #if(!I2C_1_CY_SCBIP_V1)
-  88:.\Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_SPI_RUNTM_CFG)
-  89:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
-  90:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_SpiSaveConfig();
-  91:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
-  92:.\Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_UART_RUNTM_CFG)
-  93:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
-  94:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_UartSaveConfig();
-  95:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
-  96:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #endif /* (!I2C_1_CY_SCBIP_V1) */
-  97:.\Generated_Source\PSoC4/I2C_1_PM.c ****         else
-  98:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
-  99:.\Generated_Source\PSoC4/I2C_1_PM.c ****             /* Unknown mode */
- 100:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
- 101:.\Generated_Source\PSoC4/I2C_1_PM.c ****     }
- 102:.\Generated_Source\PSoC4/I2C_1_PM.c ****     else
- 103:.\Generated_Source\PSoC4/I2C_1_PM.c ****     {
- 104:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_backup.enableState = (uint8) I2C_1_GET_CTRL_ENABLED;
- 105:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 106:.\Generated_Source\PSoC4/I2C_1_PM.c ****         if(0u != I2C_1_backup.enableState)
- 107:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
- 108:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_Stop();
- 109:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
- 110:.\Generated_Source\PSoC4/I2C_1_PM.c ****     }
- 111:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 112:.\Generated_Source\PSoC4/I2C_1_PM.c **** #else
- 113:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 114:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #if (I2C_1_SCB_MODE_I2C_CONST_CFG && I2C_1_I2C_WAKE_ENABLE_CONST)
- 115:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_I2CSaveConfig();
- 116:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 117:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_EZI2C_CONST_CFG && I2C_1_EZI2C_WAKE_ENABLE_CONST)
- 118:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_EzI2CSaveConfig();
- 119:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 120:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_SPI_CONST_CFG && I2C_1_SPI_WAKE_ENABLE_CONST)
- 121:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_SpiSaveConfig();
- 122:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 123:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_UART_CONST_CFG && I2C_1_UART_WAKE_ENABLE_CONST)
- 124:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_UartSaveConfig();
- 125:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 126:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #else
- 127:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 128:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_backup.enableState = (uint8) I2C_1_GET_CTRL_ENABLED;
+  84:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+  85:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_EzI2CSaveConfig();
+  86:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+  87:Generated_Source\PSoC4/I2C_1_PM.c ****     #if(!I2C_1_CY_SCBIP_V1)
+  88:Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_SPI_RUNTM_CFG)
+  89:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+  90:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_SpiSaveConfig();
+  91:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+  92:Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_UART_RUNTM_CFG)
+  93:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+  94:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_UartSaveConfig();
+  95:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+  96:Generated_Source\PSoC4/I2C_1_PM.c ****     #endif /* (!I2C_1_CY_SCBIP_V1) */
+  97:Generated_Source\PSoC4/I2C_1_PM.c ****         else
+  98:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+  99:Generated_Source\PSoC4/I2C_1_PM.c ****             /* Unknown mode */
+ 100:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+ 101:Generated_Source\PSoC4/I2C_1_PM.c ****     }
+ 102:Generated_Source\PSoC4/I2C_1_PM.c ****     else
+ 103:Generated_Source\PSoC4/I2C_1_PM.c ****     {
+ 104:Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_backup.enableState = (uint8) I2C_1_GET_CTRL_ENABLED;
+ 105:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 106:Generated_Source\PSoC4/I2C_1_PM.c ****         if(0u != I2C_1_backup.enableState)
+ 107:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+ 108:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_Stop();
+ 109:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+ 110:Generated_Source\PSoC4/I2C_1_PM.c ****     }
+ 111:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 112:Generated_Source\PSoC4/I2C_1_PM.c **** #else
+ 113:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 114:Generated_Source\PSoC4/I2C_1_PM.c ****     #if (I2C_1_SCB_MODE_I2C_CONST_CFG && I2C_1_I2C_WAKE_ENABLE_CONST)
+ 115:Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_I2CSaveConfig();
+ 116:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 117:Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_EZI2C_CONST_CFG && I2C_1_EZI2C_WAKE_ENABLE_CONST)
+ 118:Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_EzI2CSaveConfig();
+ 119:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 120:Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_SPI_CONST_CFG && I2C_1_SPI_WAKE_ENABLE_CONST)
+ 121:Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_SpiSaveConfig();
+ 122:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 123:Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_UART_CONST_CFG && I2C_1_UART_WAKE_ENABLE_CONST)
+ 124:Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_UartSaveConfig();
+ 125:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 126:Generated_Source\PSoC4/I2C_1_PM.c ****     #else
+ 127:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 128:Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_backup.enableState = (uint8) I2C_1_GET_CTRL_ENABLED;
   32              		.loc 1 128 0
   33 0002 044B     		ldr	r3, .L3
   34 0004 1B68     		ldr	r3, [r3]
   35 0006 DB0F     		lsr	r3, r3, #31
   36 0008 034A     		ldr	r2, .L3+4
   37 000a 1370     		strb	r3, [r2]
- 129:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 130:.\Generated_Source\PSoC4/I2C_1_PM.c ****         if(0u != I2C_1_backup.enableState)
+ 129:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 130:Generated_Source\PSoC4/I2C_1_PM.c ****         if(0u != I2C_1_backup.enableState)
   38              		.loc 1 130 0
   39 000c 01D0     		beq	.L1
- 131:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
- 132:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_Stop();
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 4
+ 131:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+ 132:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_Stop();
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 4
 
 
   40              		.loc 1 132 0
   41 000e FFF7FEFF 		bl	I2C_1_Stop
   42              	.LVL0:
   43              	.L1:
- 133:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
- 134:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 135:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #endif /* defined (I2C_1_SCB_MODE_I2C_CONST_CFG) && (I2C_1_I2C_WAKE_ENABLE_CONST) */
- 136:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 137:.\Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_UNCONFIG_CONST_CFG) */
- 138:.\Generated_Source\PSoC4/I2C_1_PM.c **** }
+ 133:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+ 134:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 135:Generated_Source\PSoC4/I2C_1_PM.c ****     #endif /* defined (I2C_1_SCB_MODE_I2C_CONST_CFG) && (I2C_1_I2C_WAKE_ENABLE_CONST) */
+ 136:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 137:Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 138:Generated_Source\PSoC4/I2C_1_PM.c **** }
   44              		.loc 1 138 0
   45              		@ sp needed
   46 0012 08BD     		pop	{r3, pc}
@@ -210,109 +210,109 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
   60              		.type	I2C_1_Wakeup, %function
   61              	I2C_1_Wakeup:
   62              	.LFB2:
- 139:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 140:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 141:.\Generated_Source\PSoC4/I2C_1_PM.c **** /*******************************************************************************
- 142:.\Generated_Source\PSoC4/I2C_1_PM.c **** * Function Name: I2C_1_Wakeup
- 143:.\Generated_Source\PSoC4/I2C_1_PM.c **** ****************************************************************************//**
- 144:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
- 145:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  Prepares the I2C_1 component for Active mode operation after 
- 146:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  Deep Sleep.
- 147:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  The “Enable wakeup from Deep Sleep Mode” selection has influence on this 
- 148:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  function implementation:
- 149:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  - Checked: restores the component Active mode configuration.
- 150:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  - Unchecked: enables the component if it was enabled before enter Deep Sleep.
- 151:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
- 152:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  This function should not be called after exiting Sleep.
- 153:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
- 154:.\Generated_Source\PSoC4/I2C_1_PM.c **** *  \sideeffect
- 155:.\Generated_Source\PSoC4/I2C_1_PM.c **** *   Calling the I2C_1_Wakeup() function without first calling the 
- 156:.\Generated_Source\PSoC4/I2C_1_PM.c **** *   I2C_1_Sleep() function may produce unexpected behavior.
- 157:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
- 158:.\Generated_Source\PSoC4/I2C_1_PM.c **** *******************************************************************************/
- 159:.\Generated_Source\PSoC4/I2C_1_PM.c **** void I2C_1_Wakeup(void)
- 160:.\Generated_Source\PSoC4/I2C_1_PM.c **** {
+ 139:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 140:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 141:Generated_Source\PSoC4/I2C_1_PM.c **** /*******************************************************************************
+ 142:Generated_Source\PSoC4/I2C_1_PM.c **** * Function Name: I2C_1_Wakeup
+ 143:Generated_Source\PSoC4/I2C_1_PM.c **** ****************************************************************************//**
+ 144:Generated_Source\PSoC4/I2C_1_PM.c **** *
+ 145:Generated_Source\PSoC4/I2C_1_PM.c **** *  Prepares the I2C_1 component for Active mode operation after 
+ 146:Generated_Source\PSoC4/I2C_1_PM.c **** *  Deep Sleep.
+ 147:Generated_Source\PSoC4/I2C_1_PM.c **** *  The “Enable wakeup from Deep Sleep Mode” selection has influence on this 
+ 148:Generated_Source\PSoC4/I2C_1_PM.c **** *  function implementation:
+ 149:Generated_Source\PSoC4/I2C_1_PM.c **** *  - Checked: restores the component Active mode configuration.
+ 150:Generated_Source\PSoC4/I2C_1_PM.c **** *  - Unchecked: enables the component if it was enabled before enter Deep Sleep.
+ 151:Generated_Source\PSoC4/I2C_1_PM.c **** *
+ 152:Generated_Source\PSoC4/I2C_1_PM.c **** *  This function should not be called after exiting Sleep.
+ 153:Generated_Source\PSoC4/I2C_1_PM.c **** *
+ 154:Generated_Source\PSoC4/I2C_1_PM.c **** *  \sideeffect
+ 155:Generated_Source\PSoC4/I2C_1_PM.c **** *   Calling the I2C_1_Wakeup() function without first calling the 
+ 156:Generated_Source\PSoC4/I2C_1_PM.c **** *   I2C_1_Sleep() function may produce unexpected behavior.
+ 157:Generated_Source\PSoC4/I2C_1_PM.c **** *
+ 158:Generated_Source\PSoC4/I2C_1_PM.c **** *******************************************************************************/
+ 159:Generated_Source\PSoC4/I2C_1_PM.c **** void I2C_1_Wakeup(void)
+ 160:Generated_Source\PSoC4/I2C_1_PM.c **** {
   63              		.loc 1 160 0
   64              		.cfi_startproc
   65 0000 08B5     		push	{r3, lr}
   66              		.cfi_def_cfa_offset 8
   67              		.cfi_offset 3, -8
   68              		.cfi_offset 14, -4
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 5
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 5
 
 
- 161:.\Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_UNCONFIG_CONST_CFG)
- 162:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 163:.\Generated_Source\PSoC4/I2C_1_PM.c ****     if(I2C_1_SCB_WAKE_ENABLE_CHECK)
- 164:.\Generated_Source\PSoC4/I2C_1_PM.c ****     {
- 165:.\Generated_Source\PSoC4/I2C_1_PM.c ****         if(I2C_1_SCB_MODE_I2C_RUNTM_CFG)
- 166:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
- 167:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_I2CRestoreConfig();
- 168:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
- 169:.\Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_EZI2C_RUNTM_CFG)
- 170:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
- 171:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_EzI2CRestoreConfig();
- 172:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
- 173:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #if(!I2C_1_CY_SCBIP_V1)
- 174:.\Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_SPI_RUNTM_CFG)
- 175:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
- 176:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_SpiRestoreConfig();
- 177:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
- 178:.\Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_UART_RUNTM_CFG)
- 179:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
- 180:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_UartRestoreConfig();
- 181:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
- 182:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #endif /* (!I2C_1_CY_SCBIP_V1) */
- 183:.\Generated_Source\PSoC4/I2C_1_PM.c ****         else
- 184:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
- 185:.\Generated_Source\PSoC4/I2C_1_PM.c ****             /* Unknown mode */
- 186:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
- 187:.\Generated_Source\PSoC4/I2C_1_PM.c ****     }
- 188:.\Generated_Source\PSoC4/I2C_1_PM.c ****     else
- 189:.\Generated_Source\PSoC4/I2C_1_PM.c ****     {
- 190:.\Generated_Source\PSoC4/I2C_1_PM.c ****         if(0u != I2C_1_backup.enableState)
- 191:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
- 192:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_Enable();
- 193:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
- 194:.\Generated_Source\PSoC4/I2C_1_PM.c ****     }
- 195:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 196:.\Generated_Source\PSoC4/I2C_1_PM.c **** #else
- 197:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 198:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #if (I2C_1_SCB_MODE_I2C_CONST_CFG  && I2C_1_I2C_WAKE_ENABLE_CONST)
- 199:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_I2CRestoreConfig();
- 200:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 201:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_EZI2C_CONST_CFG && I2C_1_EZI2C_WAKE_ENABLE_CONST)
- 202:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_EzI2CRestoreConfig();
- 203:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 204:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_SPI_CONST_CFG && I2C_1_SPI_WAKE_ENABLE_CONST)
- 205:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_SpiRestoreConfig();
- 206:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 207:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_UART_CONST_CFG && I2C_1_UART_WAKE_ENABLE_CONST)
- 208:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_UartRestoreConfig();
- 209:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 210:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #else
- 211:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 212:.\Generated_Source\PSoC4/I2C_1_PM.c ****         if(0u != I2C_1_backup.enableState)
+ 161:Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_UNCONFIG_CONST_CFG)
+ 162:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 163:Generated_Source\PSoC4/I2C_1_PM.c ****     if(I2C_1_SCB_WAKE_ENABLE_CHECK)
+ 164:Generated_Source\PSoC4/I2C_1_PM.c ****     {
+ 165:Generated_Source\PSoC4/I2C_1_PM.c ****         if(I2C_1_SCB_MODE_I2C_RUNTM_CFG)
+ 166:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+ 167:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_I2CRestoreConfig();
+ 168:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+ 169:Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_EZI2C_RUNTM_CFG)
+ 170:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+ 171:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_EzI2CRestoreConfig();
+ 172:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+ 173:Generated_Source\PSoC4/I2C_1_PM.c ****     #if(!I2C_1_CY_SCBIP_V1)
+ 174:Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_SPI_RUNTM_CFG)
+ 175:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+ 176:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_SpiRestoreConfig();
+ 177:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+ 178:Generated_Source\PSoC4/I2C_1_PM.c ****         else if(I2C_1_SCB_MODE_UART_RUNTM_CFG)
+ 179:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+ 180:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_UartRestoreConfig();
+ 181:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+ 182:Generated_Source\PSoC4/I2C_1_PM.c ****     #endif /* (!I2C_1_CY_SCBIP_V1) */
+ 183:Generated_Source\PSoC4/I2C_1_PM.c ****         else
+ 184:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+ 185:Generated_Source\PSoC4/I2C_1_PM.c ****             /* Unknown mode */
+ 186:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+ 187:Generated_Source\PSoC4/I2C_1_PM.c ****     }
+ 188:Generated_Source\PSoC4/I2C_1_PM.c ****     else
+ 189:Generated_Source\PSoC4/I2C_1_PM.c ****     {
+ 190:Generated_Source\PSoC4/I2C_1_PM.c ****         if(0u != I2C_1_backup.enableState)
+ 191:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+ 192:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_Enable();
+ 193:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+ 194:Generated_Source\PSoC4/I2C_1_PM.c ****     }
+ 195:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 196:Generated_Source\PSoC4/I2C_1_PM.c **** #else
+ 197:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 198:Generated_Source\PSoC4/I2C_1_PM.c ****     #if (I2C_1_SCB_MODE_I2C_CONST_CFG  && I2C_1_I2C_WAKE_ENABLE_CONST)
+ 199:Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_I2CRestoreConfig();
+ 200:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 201:Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_EZI2C_CONST_CFG && I2C_1_EZI2C_WAKE_ENABLE_CONST)
+ 202:Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_EzI2CRestoreConfig();
+ 203:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 204:Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_SPI_CONST_CFG && I2C_1_SPI_WAKE_ENABLE_CONST)
+ 205:Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_SpiRestoreConfig();
+ 206:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 207:Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_UART_CONST_CFG && I2C_1_UART_WAKE_ENABLE_CONST)
+ 208:Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_UartRestoreConfig();
+ 209:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 210:Generated_Source\PSoC4/I2C_1_PM.c ****     #else
+ 211:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 212:Generated_Source\PSoC4/I2C_1_PM.c ****         if(0u != I2C_1_backup.enableState)
   69              		.loc 1 212 0
   70 0002 034B     		ldr	r3, .L7
   71 0004 1B78     		ldrb	r3, [r3]
   72 0006 002B     		cmp	r3, #0
   73 0008 01D0     		beq	.L5
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 6
 
 
- 213:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
- 214:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_Enable();
+ 213:Generated_Source\PSoC4/I2C_1_PM.c ****         {
+ 214:Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_Enable();
   74              		.loc 1 214 0
   75 000a FFF7FEFF 		bl	I2C_1_Enable
   76              	.LVL1:
   77              	.L5:
- 215:.\Generated_Source\PSoC4/I2C_1_PM.c ****         }
- 216:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 217:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #endif /* (I2C_1_I2C_WAKE_ENABLE_CONST) */
- 218:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
- 219:.\Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_UNCONFIG_CONST_CFG) */
- 220:.\Generated_Source\PSoC4/I2C_1_PM.c **** }
+ 215:Generated_Source\PSoC4/I2C_1_PM.c ****         }
+ 216:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 217:Generated_Source\PSoC4/I2C_1_PM.c ****     #endif /* (I2C_1_I2C_WAKE_ENABLE_CONST) */
+ 218:Generated_Source\PSoC4/I2C_1_PM.c **** 
+ 219:Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 220:Generated_Source\PSoC4/I2C_1_PM.c **** }
   78              		.loc 1 220 0
   79              		@ sp needed
   80 000e 08BD     		pop	{r3, pc}
@@ -334,7 +334,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
   96 0001 000000   		.text
   97              	.Letext0:
   98              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
-  99              		.file 3 ".\\Generated_Source\\PSoC4\\I2C_1.h"
+  99              		.file 3 "Generated_Source\\PSoC4\\I2C_1.h"
  100              		.section	.debug_info,"",%progbits
  101              	.Ldebug_info0:
  102 0000 2A010000 		.4byte	0x12a
@@ -342,40 +342,40 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  104 0006 00000000 		.4byte	.Ldebug_abbrev0
  105 000a 04       		.byte	0x4
  106 000b 01       		.uleb128 0x1
- 107 000c 21010000 		.4byte	.LASF21
+ 107 000c 61010000 		.4byte	.LASF21
  108 0010 01       		.byte	0x1
- 109 0011 B6000000 		.4byte	.LASF22
- 110 0015 AF010000 		.4byte	.LASF23
+ 109 0011 F5010000 		.4byte	.LASF22
+ 110 0015 A2000000 		.4byte	.LASF23
  111 0019 00000000 		.4byte	.Ldebug_ranges0+0
  112 001d 00000000 		.4byte	0
  113 0021 00000000 		.4byte	.Ldebug_line0
  114 0025 02       		.uleb128 0x2
  115 0026 01       		.byte	0x1
  116 0027 06       		.byte	0x6
- 117 0028 08010000 		.4byte	.LASF0
+ 117 0028 48010000 		.4byte	.LASF0
  118 002c 02       		.uleb128 0x2
  119 002d 01       		.byte	0x1
  120 002e 08       		.byte	0x8
- 121 002f 39000000 		.4byte	.LASF1
+ 121 002f 02010000 		.4byte	.LASF1
  122 0033 02       		.uleb128 0x2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 7
 
 
  123 0034 02       		.byte	0x2
  124 0035 05       		.byte	0x5
- 125 0036 EE010000 		.4byte	.LASF2
+ 125 0036 1E010000 		.4byte	.LASF2
  126 003a 02       		.uleb128 0x2
  127 003b 02       		.byte	0x2
  128 003c 07       		.byte	0x7
- 129 003d F5000000 		.4byte	.LASF3
+ 129 003d 35010000 		.4byte	.LASF3
  130 0041 02       		.uleb128 0x2
  131 0042 04       		.byte	0x4
  132 0043 05       		.byte	0x5
- 133 0044 DF000000 		.4byte	.LASF4
+ 133 0044 15010000 		.4byte	.LASF4
  134 0048 02       		.uleb128 0x2
  135 0049 04       		.byte	0x4
  136 004a 07       		.byte	0x7
- 137 004b 87000000 		.4byte	.LASF5
+ 137 004b 79000000 		.4byte	.LASF5
  138 004f 02       		.uleb128 0x2
  139 0050 08       		.byte	0x8
  140 0051 05       		.byte	0x5
@@ -383,7 +383,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  142 0056 02       		.uleb128 0x2
  143 0057 08       		.byte	0x8
  144 0058 07       		.byte	0x7
- 145 0059 99000000 		.4byte	.LASF7
+ 145 0059 8B000000 		.4byte	.LASF7
  146 005d 03       		.uleb128 0x3
  147 005e 04       		.byte	0x4
  148 005f 05       		.byte	0x5
@@ -393,7 +393,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  152 0066 07       		.byte	0x7
  153 0067 21000000 		.4byte	.LASF8
  154 006b 04       		.uleb128 0x4
- 155 006c 81000000 		.4byte	.LASF9
+ 155 006c 73000000 		.4byte	.LASF9
  156 0070 02       		.byte	0x2
  157 0071 9801     		.2byte	0x198
  158 0073 2C000000 		.4byte	0x2c
@@ -405,20 +405,20 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  164 0083 02       		.uleb128 0x2
  165 0084 04       		.byte	0x4
  166 0085 04       		.byte	0x4
- 167 0086 B0000000 		.4byte	.LASF11
+ 167 0086 EF010000 		.4byte	.LASF11
  168 008a 02       		.uleb128 0x2
  169 008b 08       		.byte	0x8
  170 008c 04       		.byte	0x4
- 171 008d E8000000 		.4byte	.LASF12
+ 171 008d 28010000 		.4byte	.LASF12
  172 0091 02       		.uleb128 0x2
  173 0092 01       		.byte	0x1
  174 0093 08       		.byte	0x8
- 175 0094 DA000000 		.4byte	.LASF13
+ 175 0094 10010000 		.4byte	.LASF13
  176 0098 04       		.uleb128 0x4
- 177 0099 EF000000 		.4byte	.LASF14
+ 177 0099 2F010000 		.4byte	.LASF14
  178 009d 02       		.byte	0x2
  179 009e 4402     		.2byte	0x244
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 8
 
 
  180 00a0 A4000000 		.4byte	0xa4
@@ -427,7 +427,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  183 00a9 02       		.uleb128 0x2
  184 00aa 04       		.byte	0x4
  185 00ab 07       		.byte	0x7
- 186 00ac F8010000 		.4byte	.LASF15
+ 186 00ac 17020000 		.4byte	.LASF15
  187 00b0 06       		.uleb128 0x6
  188 00b1 01       		.byte	0x1
  189 00b2 03       		.byte	0x3
@@ -441,12 +441,12 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  197 00c3 00       		.byte	0
  198 00c4 00       		.byte	0
  199 00c5 08       		.uleb128 0x8
- 200 00c6 60000000 		.4byte	.LASF16
+ 200 00c6 52000000 		.4byte	.LASF16
  201 00ca 03       		.byte	0x3
  202 00cb 5F       		.byte	0x5f
  203 00cc B0000000 		.4byte	0xb0
  204 00d0 09       		.uleb128 0x9
- 205 00d1 47000000 		.4byte	.LASF17
+ 205 00d1 39000000 		.4byte	.LASF17
  206 00d5 01       		.byte	0x1
  207 00d6 49       		.byte	0x49
  208 00d7 00000000 		.4byte	.LFB1
@@ -459,7 +459,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  215 00ea 1F010000 		.4byte	0x11f
  216 00ee 00       		.byte	0
  217 00ef 09       		.uleb128 0x9
- 218 00f0 74000000 		.4byte	.LASF18
+ 218 00f0 66000000 		.4byte	.LASF18
  219 00f4 01       		.byte	0x1
  220 00f5 9F       		.byte	0x9f
  221 00f6 00000000 		.4byte	.LFB2
@@ -472,13 +472,13 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  228 0109 26010000 		.4byte	0x126
  229 010d 00       		.byte	0
  230 010e 0B       		.uleb128 0xb
- 231 010f 14010000 		.4byte	.LASF25
+ 231 010f 54010000 		.4byte	.LASF25
  232 0113 01       		.byte	0x1
  233 0114 2D       		.byte	0x2d
  234 0115 C5000000 		.4byte	0xc5
  235 0119 05       		.uleb128 0x5
  236 011a 03       		.byte	0x3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 9
 
 
  237 011b 00000000 		.4byte	I2C_1_backup
@@ -487,7 +487,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  240 0124 03       		.byte	0x3
  241 0125 6F       		.byte	0x6f
  242 0126 0C       		.uleb128 0xc
- 243 0127 53000000 		.4byte	.LASF20
+ 243 0127 45000000 		.4byte	.LASF20
  244 012b 03       		.byte	0x3
  245 012c 6D       		.byte	0x6d
  246 012d 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  291 002a 16       		.uleb128 0x16
  292 002b 00       		.byte	0
  293 002c 03       		.uleb128 0x3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 10
 
 
  294 002d 0E       		.uleb128 0xe
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  348 0063 13       		.uleb128 0x13
  349 0064 00       		.byte	0
  350 0065 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 11
 
 
  351 0066 09       		.uleb128 0x9
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  405 009f 3F       		.uleb128 0x3f
  406 00a0 19       		.uleb128 0x19
  407 00a1 03       		.uleb128 0x3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 12
 
 
  408 00a2 0E       		.uleb128 0xe
@@ -697,8 +697,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  441 0014 00000000 		.4byte	0
  442              		.section	.debug_line,"",%progbits
  443              	.Ldebug_line0:
- 444 0000 9A000000 		.section	.debug_str,"MS",%progbits,1
- 444      02006900 
+ 444 0000 81000000 		.section	.debug_str,"MS",%progbits,1
+ 444      02005000 
  444      00000201 
  444      FB0E0D00 
  444      01010101 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  452 0021 756E7369 		.ascii	"unsigned int\000"
  452      676E6564 
  452      20696E74 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 13
 
 
  452      00
@@ -726,122 +726,123 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 1
  454 002e 4932435F 		.ascii	"I2C_1_Stop\000"
  454      315F5374 
  454      6F7000
- 455              	.LASF1:
- 456 0039 756E7369 		.ascii	"unsigned char\000"
- 456      676E6564 
- 456      20636861 
- 456      7200
- 457              	.LASF17:
- 458 0047 4932435F 		.ascii	"I2C_1_Sleep\000"
- 458      315F536C 
- 458      65657000 
- 459              	.LASF20:
- 460 0053 4932435F 		.ascii	"I2C_1_Enable\000"
- 460      315F456E 
- 460      61626C65 
- 460      00
- 461              	.LASF16:
- 462 0060 4932435F 		.ascii	"I2C_1_BACKUP_STRUCT\000"
- 462      315F4241 
- 462      434B5550 
- 462      5F535452 
- 462      55435400 
- 463              	.LASF18:
- 464 0074 4932435F 		.ascii	"I2C_1_Wakeup\000"
- 464      315F5761 
- 464      6B657570 
- 464      00
- 465              	.LASF9:
- 466 0081 75696E74 		.ascii	"uint8\000"
- 466      3800
- 467              	.LASF5:
- 468 0087 6C6F6E67 		.ascii	"long unsigned int\000"
- 468      20756E73 
- 468      69676E65 
- 468      6420696E 
- 468      7400
- 469              	.LASF7:
- 470 0099 6C6F6E67 		.ascii	"long long unsigned int\000"
- 470      206C6F6E 
- 470      6720756E 
- 470      7369676E 
- 470      65642069 
- 471              	.LASF11:
- 472 00b0 666C6F61 		.ascii	"float\000"
- 472      7400
- 473              	.LASF22:
- 474 00b6 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\I2C_1_PM.c\000"
- 474      6E657261 
- 474      7465645F 
- 474      536F7572 
- 474      63655C50 
+ 455              	.LASF17:
+ 456 0039 4932435F 		.ascii	"I2C_1_Sleep\000"
+ 456      315F536C 
+ 456      65657000 
+ 457              	.LASF20:
+ 458 0045 4932435F 		.ascii	"I2C_1_Enable\000"
+ 458      315F456E 
+ 458      61626C65 
+ 458      00
+ 459              	.LASF16:
+ 460 0052 4932435F 		.ascii	"I2C_1_BACKUP_STRUCT\000"
+ 460      315F4241 
+ 460      434B5550 
+ 460      5F535452 
+ 460      55435400 
+ 461              	.LASF18:
+ 462 0066 4932435F 		.ascii	"I2C_1_Wakeup\000"
+ 462      315F5761 
+ 462      6B657570 
+ 462      00
+ 463              	.LASF9:
+ 464 0073 75696E74 		.ascii	"uint8\000"
+ 464      3800
+ 465              	.LASF5:
+ 466 0079 6C6F6E67 		.ascii	"long unsigned int\000"
+ 466      20756E73 
+ 466      69676E65 
+ 466      6420696E 
+ 466      7400
+ 467              	.LASF7:
+ 468 008b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 468      206C6F6E 
+ 468      6720756E 
+ 468      7369676E 
+ 468      65642069 
+ 469              	.LASF23:
+ 470 00a2 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 470      73657273 
+ 470      5C48656E 
+ 470      72792041 
+ 470      6C626572 
+ 471 00d0 6F64756C 		.ascii	"odular\\Robot_Test\\Test_Robot\\Test_Sensor_F3.cyds"
+ 471      61725C52 
+ 471      6F626F74 
+ 471      5F546573 
+ 471      745C5465 
+ 472 0100 6E00     		.ascii	"n\000"
+ 473              	.LASF1:
+ 474 0102 756E7369 		.ascii	"unsigned char\000"
+ 474      676E6564 
+ 474      20636861 
+ 474      7200
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 14
+
+
  475              	.LASF13:
- 476 00da 63686172 		.ascii	"char\000"
+ 476 0110 63686172 		.ascii	"char\000"
  476      00
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 14
-
-
  477              	.LASF4:
- 478 00df 6C6F6E67 		.ascii	"long int\000"
+ 478 0115 6C6F6E67 		.ascii	"long int\000"
  478      20696E74 
  478      00
- 479              	.LASF12:
- 480 00e8 646F7562 		.ascii	"double\000"
- 480      6C6500
- 481              	.LASF14:
- 482 00ef 72656733 		.ascii	"reg32\000"
- 482      3200
- 483              	.LASF3:
- 484 00f5 73686F72 		.ascii	"short unsigned int\000"
- 484      7420756E 
- 484      7369676E 
- 484      65642069 
- 484      6E7400
- 485              	.LASF0:
- 486 0108 7369676E 		.ascii	"signed char\000"
- 486      65642063 
- 486      68617200 
- 487              	.LASF25:
- 488 0114 4932435F 		.ascii	"I2C_1_backup\000"
- 488      315F6261 
- 488      636B7570 
- 488      00
- 489              	.LASF21:
- 490 0121 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 490      4320342E 
- 490      392E3320 
- 490      32303135 
- 490      30333033 
- 491 0154 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 491      20726576 
- 491      6973696F 
- 491      6E203232 
- 491      31323230 
- 492 0187 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 492      66756E63 
- 492      74696F6E 
- 492      2D736563 
- 492      74696F6E 
- 493              	.LASF23:
- 494 01af 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\Test_Robot\\Test"
- 494      73657273 
- 494      5C48656E 
- 494      72792041 
- 494      6C626572 
- 495 01dd 5F53656E 		.ascii	"_Sensor_F3.cydsn\000"
- 495      736F725F 
- 495      46332E63 
- 495      7964736E 
- 495      00
- 496              	.LASF2:
- 497 01ee 73686F72 		.ascii	"short int\000"
- 497      7420696E 
- 497      7400
- 498              	.LASF15:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccq8K061.s 			page 15
+ 479              	.LASF2:
+ 480 011e 73686F72 		.ascii	"short int\000"
+ 480      7420696E 
+ 480      7400
+ 481              	.LASF12:
+ 482 0128 646F7562 		.ascii	"double\000"
+ 482      6C6500
+ 483              	.LASF14:
+ 484 012f 72656733 		.ascii	"reg32\000"
+ 484      3200
+ 485              	.LASF3:
+ 486 0135 73686F72 		.ascii	"short unsigned int\000"
+ 486      7420756E 
+ 486      7369676E 
+ 486      65642069 
+ 486      6E7400
+ 487              	.LASF0:
+ 488 0148 7369676E 		.ascii	"signed char\000"
+ 488      65642063 
+ 488      68617200 
+ 489              	.LASF25:
+ 490 0154 4932435F 		.ascii	"I2C_1_backup\000"
+ 490      315F6261 
+ 490      636B7570 
+ 490      00
+ 491              	.LASF21:
+ 492 0161 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 492      4320342E 
+ 492      392E3320 
+ 492      32303135 
+ 492      30333033 
+ 493 0194 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 493      20726576 
+ 493      6973696F 
+ 493      6E203232 
+ 493      31323230 
+ 494 01c7 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 494      66756E63 
+ 494      74696F6E 
+ 494      2D736563 
+ 494      74696F6E 
+ 495              	.LASF11:
+ 496 01ef 666C6F61 		.ascii	"float\000"
+ 496      7400
+ 497              	.LASF22:
+ 498 01f5 47656E65 		.ascii	"Generated_Source\\PSoC4\\I2C_1_PM.c\000"
+ 498      72617465 
+ 498      645F536F 
+ 498      75726365 
+ 498      5C50536F 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccIezEKr.s 			page 15
 
 
- 499 01f8 73697A65 		.ascii	"sizetype\000"
- 499      74797065 
- 499      00
- 500              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 499              	.LASF15:
+ 500 0217 73697A65 		.ascii	"sizetype\000"
+ 500      74797065 
+ 500      00
+ 501              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

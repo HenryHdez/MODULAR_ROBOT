@@ -102,10 +102,10 @@ int main()
     {
         P=readProximity();
         if(P<3000){
-            LED_2_Write(1);
+            LED_1_Write(1);
         }
         else{
-            LED_2_Write(0);
+            LED_1_Write(0);
         }
         }
 }

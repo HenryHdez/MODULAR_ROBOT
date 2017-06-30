@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,187 +25,187 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
   22              		.type	I2C_1_SCB_IRQ_Interrupt, %function
   23              	I2C_1_SCB_IRQ_Interrupt:
   24              	.LFB4:
-  25              		.file 1 ".\\Generated_Source\\PSoC4\\I2C_1_SCB_IRQ.c"
-   1:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * File Name: I2C_1_SCB_IRQ.c  
-   3:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Version 1.70
-   4:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-   5:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Description:
-   6:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   API for controlling the state of an interrupt.
-   7:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-   8:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-   9:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Note:
-  10:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-  11:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
-  12:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  13:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  14:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  15:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * the software package with which this file was provided.
-  16:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
-  17:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  18:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  19:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** #include <cydevice_trm.h>
-  20:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** #include <CyLib.h>
-  21:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** #include <I2C_1_SCB_IRQ.h>
-  22:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** #include "cyapicallbacks.h"
-  23:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  24:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** #if !defined(I2C_1_SCB_IRQ__REMOVED) /* Check for removal by optimization */
-  25:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  26:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
-  27:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Place your includes, defines and code here 
-  28:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************/
-  29:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /* `#START I2C_1_SCB_IRQ_intc` */
-  30:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  31:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /* `#END` */
-  32:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 2
+  25              		.file 1 "Generated_Source\\PSoC4\\I2C_1_SCB_IRQ.c"
+   1:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * File Name: I2C_1_SCB_IRQ.c  
+   3:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Version 1.70
+   4:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+   5:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Description:
+   6:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   API for controlling the state of an interrupt.
+   7:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+   8:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+   9:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Note:
+  10:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+  11:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+  12:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+  17:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  18:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  19:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** #include <cydevice_trm.h>
+  20:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** #include <CyLib.h>
+  21:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** #include <I2C_1_SCB_IRQ.h>
+  22:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** #include "cyapicallbacks.h"
+  23:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  24:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** #if !defined(I2C_1_SCB_IRQ__REMOVED) /* Check for removal by optimization */
+  25:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  26:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+  27:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Place your includes, defines and code here 
+  28:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************/
+  29:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /* `#START I2C_1_SCB_IRQ_intc` */
+  30:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  31:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /* `#END` */
+  32:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 2
 
 
-  33:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** extern cyisraddress CyRamVectors[CYINT_IRQ_BASE + CY_NUM_INTERRUPTS];
-  34:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  35:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /* Declared in startup, used to set unused interrupts to. */
-  36:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** CY_ISR_PROTO(IntDefaultHandler);
-  37:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  38:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  39:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
-  40:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_Start
-  41:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
-  42:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-  43:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
-  44:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
-  45:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  sets the default interrupt vector, sets the priority from the value in the
-  46:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
-  47:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  interrupt controller.
-  48:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-  49:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:  
-  50:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
-  51:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-  52:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
-  53:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
-  54:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-  55:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
-  56:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_Start(void)
-  57:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
-  58:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* For all we know the interrupt is active. */
-  59:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_Disable();
-  60:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  61:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Set the ISR to point to the I2C_1_SCB_IRQ Interrupt. */
-  62:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_SetVector(&I2C_1_SCB_IRQ_Interrupt);
-  63:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  64:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Set the priority. */
-  65:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_SetPriority((uint8)I2C_1_SCB_IRQ_INTC_PRIOR_NUMBER);
-  66:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  67:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Enable it. */
-  68:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_Enable();
-  69:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
-  70:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  71:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
-  72:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
-  73:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_StartEx
-  74:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
-  75:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-  76:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
-  77:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
-  78:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
-  79:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
-  80:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  the interrupt to the interrupt controller.
-  81:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  
-  82:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
-  83:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  used to provide consistent definition across compilers:
-  84:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  
-  85:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Function definition example:
-  86:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   CY_ISR(MyISR)
-  87:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   {
-  88:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   }
-  89:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Function prototype example:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 3
+  33:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** extern cyisraddress CyRamVectors[CYINT_IRQ_BASE + CY_NUM_INTERRUPTS];
+  34:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  35:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /* Declared in startup, used to set unused interrupts to. */
+  36:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** CY_ISR_PROTO(IntDefaultHandler);
+  37:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  38:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  39:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+  40:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_Start
+  41:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+  42:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+  43:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+  44:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
+  45:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  sets the default interrupt vector, sets the priority from the value in the
+  46:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
+  47:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  interrupt controller.
+  48:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+  49:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:  
+  50:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+  51:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+  52:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+  53:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+  54:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+  55:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+  56:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_Start(void)
+  57:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+  58:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* For all we know the interrupt is active. */
+  59:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_Disable();
+  60:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  61:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Set the ISR to point to the I2C_1_SCB_IRQ Interrupt. */
+  62:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_SetVector(&I2C_1_SCB_IRQ_Interrupt);
+  63:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  64:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Set the priority. */
+  65:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_SetPriority((uint8)I2C_1_SCB_IRQ_INTC_PRIOR_NUMBER);
+  66:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  67:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Enable it. */
+  68:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_Enable();
+  69:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+  70:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  71:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  72:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+  73:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_StartEx
+  74:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+  75:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+  76:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+  77:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
+  78:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
+  79:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
+  80:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  the interrupt to the interrupt controller.
+  81:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  
+  82:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+  83:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  used to provide consistent definition across compilers:
+  84:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  
+  85:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *  Function definition example:
+  86:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   CY_ISR(MyISR)
+  87:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   {
+  88:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   }
+  89:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Function prototype example:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 3
 
 
-  90:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   CY_ISR_PROTO(MyISR);
-  91:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-  92:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:  
-  93:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   address: Address of the ISR to set in the interrupt vector table.
-  94:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-  95:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
-  96:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
-  97:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-  98:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
-  99:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_StartEx(cyisraddress address)
- 100:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
- 101:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* For all we know the interrupt is active. */
- 102:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_Disable();
- 103:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 104:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Set the ISR to point to the I2C_1_SCB_IRQ Interrupt. */
- 105:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_SetVector(address);
- 106:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 107:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Set the priority. */
- 108:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_SetPriority((uint8)I2C_1_SCB_IRQ_INTC_PRIOR_NUMBER);
- 109:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 110:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Enable it. */
- 111:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_Enable();
- 112:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
- 113:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 114:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 115:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 116:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_Stop
- 117:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 118:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 119:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 120:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Disables and removes the interrupt.
- 121:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 122:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:  
- 123:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 124:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 125:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 126:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 127:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 128:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 129:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_Stop(void)
- 130:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
- 131:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Disable this interrupt. */
- 132:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_Disable();
- 133:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 134:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Set the ISR to point to the passive one. */
- 135:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_SetVector(&IntDefaultHandler);
- 136:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
- 137:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 138:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 139:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 140:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_Interrupt
- 141:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 142:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 143:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 144:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   The default Interrupt Service Routine for I2C_1_SCB_IRQ.
- 145:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 146:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Add custom code between the START and END comments to keep the next version
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 4
+  90:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   CY_ISR_PROTO(MyISR);
+  91:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+  92:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:  
+  93:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   address: Address of the ISR to set in the interrupt vector table.
+  94:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+  95:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+  96:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+  97:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+  98:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+  99:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_StartEx(cyisraddress address)
+ 100:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 101:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* For all we know the interrupt is active. */
+ 102:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_Disable();
+ 103:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 104:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Set the ISR to point to the I2C_1_SCB_IRQ Interrupt. */
+ 105:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_SetVector(address);
+ 106:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 107:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Set the priority. */
+ 108:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_SetPriority((uint8)I2C_1_SCB_IRQ_INTC_PRIOR_NUMBER);
+ 109:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 110:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Enable it. */
+ 111:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_Enable();
+ 112:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 113:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 114:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 115:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 116:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_Stop
+ 117:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 118:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 119:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 120:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Disables and removes the interrupt.
+ 121:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 122:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:  
+ 123:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 124:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 125:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 126:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 127:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 128:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 129:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_Stop(void)
+ 130:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 131:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Disable this interrupt. */
+ 132:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_Disable();
+ 133:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 134:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Set the ISR to point to the passive one. */
+ 135:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     I2C_1_SCB_IRQ_SetVector(&IntDefaultHandler);
+ 136:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 137:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 138:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 139:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 140:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_Interrupt
+ 141:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 142:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 143:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 144:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   The default Interrupt Service Routine for I2C_1_SCB_IRQ.
+ 145:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 146:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Add custom code between the START and END comments to keep the next version
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 4
 
 
- 147:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   of this file from over-writing your code.
- 148:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 149:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Note You may use either the default ISR by using this API, or you may define
- 150:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   your own separate ISR through ISR_StartEx().
- 151:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 152:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:  
- 153:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 154:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 155:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 156:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 157:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 158:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 159:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** CY_ISR(I2C_1_SCB_IRQ_Interrupt)
- 160:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 147:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   of this file from over-writing your code.
+ 148:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 149:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Note You may use either the default ISR by using this API, or you may define
+ 150:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   your own separate ISR through ISR_StartEx().
+ 151:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 152:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:  
+ 153:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 154:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 155:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 156:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 157:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 158:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 159:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** CY_ISR(I2C_1_SCB_IRQ_Interrupt)
+ 160:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
   26              		.loc 1 160 0
   27              		.cfi_startproc
- 161:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     #ifdef I2C_1_SCB_IRQ_INTERRUPT_INTERRUPT_CALLBACK
- 162:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****         I2C_1_SCB_IRQ_Interrupt_InterruptCallback();
- 163:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     #endif /* I2C_1_SCB_IRQ_INTERRUPT_INTERRUPT_CALLBACK */ 
- 164:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 165:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /*  Place your Interrupt code here. */
- 166:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* `#START I2C_1_SCB_IRQ_Interrupt` */
- 167:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 168:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* `#END` */
- 169:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 161:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     #ifdef I2C_1_SCB_IRQ_INTERRUPT_INTERRUPT_CALLBACK
+ 162:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****         I2C_1_SCB_IRQ_Interrupt_InterruptCallback();
+ 163:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     #endif /* I2C_1_SCB_IRQ_INTERRUPT_INTERRUPT_CALLBACK */ 
+ 164:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 165:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /*  Place your Interrupt code here. */
+ 166:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* `#START I2C_1_SCB_IRQ_Interrupt` */
+ 167:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 168:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* `#END` */
+ 169:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
   28              		.loc 1 169 0
   29              		@ sp needed
   30 0000 7047     		bx	lr
@@ -220,48 +220,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
   39              		.type	I2C_1_SCB_IRQ_SetVector, %function
   40              	I2C_1_SCB_IRQ_SetVector:
   41              	.LFB5:
- 170:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 171:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 172:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 173:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_SetVector
- 174:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 175:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 176:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 177:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Change the ISR vector for the Interrupt. Note calling I2C_1_SCB_IRQ_Start
- 178:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   will override any effect this method would have had. To set the vector 
- 179:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   before the component has been started use I2C_1_SCB_IRQ_StartEx instead.
- 180:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * 
- 181:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
- 182:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   used to provide consistent definition across compilers:
- 183:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 184:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Function definition example:
- 185:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   CY_ISR(MyISR)
- 186:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   {
- 187:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   }
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 5
+ 170:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 171:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 172:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 173:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_SetVector
+ 174:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 175:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 176:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 177:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Change the ISR vector for the Interrupt. Note calling I2C_1_SCB_IRQ_Start
+ 178:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   will override any effect this method would have had. To set the vector 
+ 179:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   before the component has been started use I2C_1_SCB_IRQ_StartEx instead.
+ 180:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * 
+ 181:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+ 182:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   used to provide consistent definition across compilers:
+ 183:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 184:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Function definition example:
+ 185:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   CY_ISR(MyISR)
+ 186:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   {
+ 187:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   }
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 5
 
 
- 188:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 189:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Function prototype example:
- 190:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *     CY_ISR_PROTO(MyISR);
- 191:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 192:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
- 193:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   address: Address of the ISR to set in the interrupt vector table.
- 194:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 195:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 196:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 197:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 198:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 199:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_SetVector(cyisraddress address)
- 200:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 188:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 189:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Function prototype example:
+ 190:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *     CY_ISR_PROTO(MyISR);
+ 191:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 192:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
+ 193:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 194:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 195:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 196:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 197:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 198:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 199:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_SetVector(cyisraddress address)
+ 200:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
   42              		.loc 1 200 0
   43              		.cfi_startproc
   44              	.LVL0:
- 201:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     CyRamVectors[CYINT_IRQ_BASE + I2C_1_SCB_IRQ__INTC_NUMBER] = address;
+ 201:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     CyRamVectors[CYINT_IRQ_BASE + I2C_1_SCB_IRQ__INTC_NUMBER] = address;
   45              		.loc 1 201 0
   46 0000 014B     		ldr	r3, .L3
   47 0002 1866     		str	r0, [r3, #96]
- 202:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 202:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
   48              		.loc 1 202 0
   49              		@ sp needed
   50 0004 7047     		bx	lr
@@ -280,34 +280,34 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
   63              		.type	I2C_1_SCB_IRQ_GetVector, %function
   64              	I2C_1_SCB_IRQ_GetVector:
   65              	.LFB6:
- 203:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 204:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 205:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 206:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_GetVector
- 207:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 208:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 209:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 210:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
- 211:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 212:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
- 213:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 214:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 215:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 216:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Address of the ISR in the interrupt vector table.
- 217:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 218:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 219:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** cyisraddress I2C_1_SCB_IRQ_GetVector(void)
- 220:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 6
+ 203:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 204:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 205:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 206:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_GetVector
+ 207:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 208:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 209:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 210:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
+ 211:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 212:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
+ 213:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 214:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 215:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 216:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Address of the ISR in the interrupt vector table.
+ 217:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 218:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 219:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** cyisraddress I2C_1_SCB_IRQ_GetVector(void)
+ 220:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 6
 
 
   66              		.loc 1 220 0
   67              		.cfi_startproc
- 221:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     return CyRamVectors[CYINT_IRQ_BASE + I2C_1_SCB_IRQ__INTC_NUMBER];
+ 221:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     return CyRamVectors[CYINT_IRQ_BASE + I2C_1_SCB_IRQ__INTC_NUMBER];
   68              		.loc 1 221 0
   69 0000 014B     		ldr	r3, .L6
   70 0002 186E     		ldr	r0, [r3, #96]
- 222:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 222:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
   71              		.loc 1 222 0
   72              		@ sp needed
   73 0004 7047     		bx	lr
@@ -326,39 +326,39 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
   86              		.type	I2C_1_SCB_IRQ_SetPriority, %function
   87              	I2C_1_SCB_IRQ_SetPriority:
   88              	.LFB7:
- 223:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 224:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 225:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 226:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_SetPriority
- 227:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 228:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 229:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 230:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Sets the Priority of the Interrupt. 
- 231:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 232:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Note calling I2C_1_SCB_IRQ_Start or I2C_1_SCB_IRQ_StartEx will 
- 233:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   override any effect this API would have had. This API should only be called
- 234:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   after I2C_1_SCB_IRQ_Start or I2C_1_SCB_IRQ_StartEx has been called. 
- 235:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   To set the initial priority for the component, use the Design-Wide Resources
- 236:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Interrupt Editor.
- 237:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 238:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
- 239:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 240:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
- 241:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   priority: Priority of the interrupt, 0 being the highest priority
- 242:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
- 243:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *             PSoC 4: Priority is from 0 to 3.
- 244:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 245:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 246:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 247:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 248:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 249:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_SetPriority(uint8 priority)
- 250:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 223:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 224:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 225:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 226:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_SetPriority
+ 227:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 228:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 229:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 230:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Sets the Priority of the Interrupt. 
+ 231:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 232:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Note calling I2C_1_SCB_IRQ_Start or I2C_1_SCB_IRQ_StartEx will 
+ 233:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   override any effect this API would have had. This API should only be called
+ 234:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   after I2C_1_SCB_IRQ_Start or I2C_1_SCB_IRQ_StartEx has been called. 
+ 235:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   To set the initial priority for the component, use the Design-Wide Resources
+ 236:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Interrupt Editor.
+ 237:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 238:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
+ 239:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 240:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
+ 241:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   priority: Priority of the interrupt, 0 being the highest priority
+ 242:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 243:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *             PSoC 4: Priority is from 0 to 3.
+ 244:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 245:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 246:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 247:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 248:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 249:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_SetPriority(uint8 priority)
+ 250:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
   89              		.loc 1 250 0
   90              		.cfi_startproc
   91              	.LVL1:
   92 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 7
 
 
   93              		.cfi_def_cfa_offset 8
@@ -366,31 +366,31 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
   95              		.cfi_offset 14, -4
   96 0002 041C     		mov	r4, r0
   97              	.LVL2:
- 251:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 	uint8 interruptState;
- 252:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     uint32 priorityOffset = ((I2C_1_SCB_IRQ__INTC_NUMBER % 4u) * 8u) + 6u;
- 253:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     
- 254:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 	interruptState = CyEnterCriticalSection();
+ 251:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 	uint8 interruptState;
+ 252:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     uint32 priorityOffset = ((I2C_1_SCB_IRQ__INTC_NUMBER % 4u) * 8u) + 6u;
+ 253:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     
+ 254:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 	interruptState = CyEnterCriticalSection();
   98              		.loc 1 254 0
   99 0004 FFF7FEFF 		bl	CyEnterCriticalSection
  100              	.LVL3:
- 255:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_PRIOR = (*I2C_1_SCB_IRQ_INTC_PRIOR & (uint32)(~I2C_1_SCB_IRQ__INTC_PRIOR_MA
+ 255:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_PRIOR = (*I2C_1_SCB_IRQ_INTC_PRIOR & (uint32)(~I2C_1_SCB_IRQ__INTC_PRIOR_MA
  101              		.loc 1 255 0
  102 0008 044A     		ldr	r2, .L9
  103 000a 1368     		ldr	r3, [r2]
  104 000c C021     		mov	r1, #192
  105 000e 8B43     		bic	r3, r1
- 256:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****                                     ((uint32)priority << priorityOffset);
+ 256:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****                                     ((uint32)priority << priorityOffset);
  106              		.loc 1 256 0
  107 0010 A401     		lsl	r4, r4, #6
- 255:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_PRIOR = (*I2C_1_SCB_IRQ_INTC_PRIOR & (uint32)(~I2C_1_SCB_IRQ__INTC_PRIOR_MA
+ 255:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_PRIOR = (*I2C_1_SCB_IRQ_INTC_PRIOR & (uint32)(~I2C_1_SCB_IRQ__INTC_PRIOR_MA
  108              		.loc 1 255 0
  109 0012 1C43     		orr	r4, r3
  110 0014 1460     		str	r4, [r2]
- 257:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 	CyExitCriticalSection(interruptState);
+ 257:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 	CyExitCriticalSection(interruptState);
  111              		.loc 1 257 0
  112 0016 FFF7FEFF 		bl	CyExitCriticalSection
  113              	.LVL4:
- 258:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 258:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
  114              		.loc 1 258 0
  115              		@ sp needed
  116 001a 10BD     		pop	{r4, pc}
@@ -409,47 +409,47 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  129              		.type	I2C_1_SCB_IRQ_GetPriority, %function
  130              	I2C_1_SCB_IRQ_GetPriority:
  131              	.LFB8:
- 259:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 260:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 261:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 262:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_GetPriority
- 263:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 264:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 265:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 266:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Gets the Priority of the Interrupt.
- 267:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 8
+ 259:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 260:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 261:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 262:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_GetPriority
+ 263:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 264:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 265:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 266:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Gets the Priority of the Interrupt.
+ 267:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 8
 
 
- 268:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
- 269:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 270:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 271:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 272:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Priority of the interrupt, 0 being the highest priority
- 273:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
- 274:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *    PSoC 4: Priority is from 0 to 3.
- 275:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 276:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 277:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** uint8 I2C_1_SCB_IRQ_GetPriority(void)
- 278:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 268:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
+ 269:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 270:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 271:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 272:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Priority of the interrupt, 0 being the highest priority
+ 273:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 274:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *    PSoC 4: Priority is from 0 to 3.
+ 275:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 276:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 277:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** uint8 I2C_1_SCB_IRQ_GetPriority(void)
+ 278:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
  132              		.loc 1 278 0
  133              		.cfi_startproc
  134              	.LVL5:
- 279:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     uint32 priority;
- 280:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 	uint32 priorityOffset = ((I2C_1_SCB_IRQ__INTC_NUMBER % 4u) * 8u) + 6u;
- 281:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 282:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     priority = (*I2C_1_SCB_IRQ_INTC_PRIOR & I2C_1_SCB_IRQ__INTC_PRIOR_MASK) >> priorityOffset;
+ 279:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     uint32 priority;
+ 280:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 	uint32 priorityOffset = ((I2C_1_SCB_IRQ__INTC_NUMBER % 4u) * 8u) + 6u;
+ 281:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 282:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     priority = (*I2C_1_SCB_IRQ_INTC_PRIOR & I2C_1_SCB_IRQ__INTC_PRIOR_MASK) >> priorityOffset;
  135              		.loc 1 282 0
  136 0000 024B     		ldr	r3, .L12
  137 0002 1868     		ldr	r0, [r3]
  138 0004 0006     		lsl	r0, r0, #24
  139              	.LVL6:
- 283:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 284:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     return (uint8)priority;
+ 283:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 284:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     return (uint8)priority;
  140              		.loc 1 284 0
  141 0006 800F     		lsr	r0, r0, #30
  142              	.LVL7:
- 285:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 285:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
  143              		.loc 1 285 0
  144              		@ sp needed
  145 0008 7047     		bx	lr
@@ -468,39 +468,39 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  158              		.type	I2C_1_SCB_IRQ_Enable, %function
  159              	I2C_1_SCB_IRQ_Enable:
  160              	.LFB9:
- 286:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 287:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 288:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 289:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_Enable
- 290:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 291:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 292:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 293:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
- 294:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
- 295:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   function, which sets the vector and the priority, has been called.
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 9
+ 286:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 287:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 288:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 289:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_Enable
+ 290:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 291:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 292:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 293:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
+ 294:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
+ 295:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   function, which sets the vector and the priority, has been called.
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 9
 
 
- 296:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 297:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
- 298:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 299:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 300:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 301:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 302:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 303:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 304:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_Enable(void)
- 305:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 296:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 297:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
+ 298:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 299:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 300:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 301:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 302:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 303:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 304:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_Enable(void)
+ 305:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
  161              		.loc 1 305 0
  162              		.cfi_startproc
- 306:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Enable the general interrupt. */
- 307:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_SET_EN = I2C_1_SCB_IRQ__INTC_MASK;
+ 306:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Enable the general interrupt. */
+ 307:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_SET_EN = I2C_1_SCB_IRQ__INTC_MASK;
  163              		.loc 1 307 0
  164 0000 8022     		mov	r2, #128
  165 0002 5200     		lsl	r2, r2, #1
  166 0004 014B     		ldr	r3, .L15
  167 0006 1A60     		str	r2, [r3]
- 308:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 308:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
  168              		.loc 1 308 0
  169              		@ sp needed
  170 0008 7047     		bx	lr
@@ -519,31 +519,31 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  183              		.type	I2C_1_SCB_IRQ_GetState, %function
  184              	I2C_1_SCB_IRQ_GetState:
  185              	.LFB10:
- 309:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 310:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 311:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 312:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_GetState
- 313:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 314:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 315:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 316:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Gets the state (enabled, disabled) of the Interrupt.
- 317:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 318:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
- 319:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 320:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 321:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 322:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   1 if enabled, 0 if disabled.
- 323:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 324:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 325:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** uint8 I2C_1_SCB_IRQ_GetState(void)
- 326:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 309:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 310:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 311:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 312:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_GetState
+ 313:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 314:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 315:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 316:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Gets the state (enabled, disabled) of the Interrupt.
+ 317:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 318:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
+ 319:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 320:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 321:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 322:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   1 if enabled, 0 if disabled.
+ 323:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 324:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 325:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** uint8 I2C_1_SCB_IRQ_GetState(void)
+ 326:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
  186              		.loc 1 326 0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 10
 
 
  187              		.cfi_startproc
- 327:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Get the state of the general interrupt. */
- 328:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     return ((*I2C_1_SCB_IRQ_INTC_SET_EN & (uint32)I2C_1_SCB_IRQ__INTC_MASK) != 0u) ? 1u:0u;
+ 327:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Get the state of the general interrupt. */
+ 328:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     return ((*I2C_1_SCB_IRQ_INTC_SET_EN & (uint32)I2C_1_SCB_IRQ__INTC_MASK) != 0u) ? 1u:0u;
  188              		.loc 1 328 0
  189 0000 034B     		ldr	r3, .L20
  190 0002 1B68     		ldr	r3, [r3]
@@ -554,7 +554,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  195              	.L19:
  196 000c 0020     		mov	r0, #0
  197              	.L18:
- 329:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 329:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
  198              		.loc 1 329 0 discriminator 4
  199              		@ sp needed
  200 000e 7047     		bx	lr
@@ -573,37 +573,37 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  213              		.type	I2C_1_SCB_IRQ_Disable, %function
  214              	I2C_1_SCB_IRQ_Disable:
  215              	.LFB11:
- 330:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 331:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 332:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 333:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_Disable
- 334:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 335:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 336:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 337:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Disables the Interrupt in the interrupt controller.
- 338:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 339:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
- 340:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 341:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 342:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 343:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 344:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 345:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 346:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_Disable(void)
- 347:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 330:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 331:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 332:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 333:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_Disable
+ 334:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 335:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 336:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 337:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Disables the Interrupt in the interrupt controller.
+ 338:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 339:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
+ 340:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 341:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 342:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 343:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 344:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 345:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 346:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_Disable(void)
+ 347:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
  216              		.loc 1 347 0
  217              		.cfi_startproc
- 348:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Disable the general interrupt. */
- 349:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_CLR_EN = I2C_1_SCB_IRQ__INTC_MASK;
+ 348:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Disable the general interrupt. */
+ 349:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_CLR_EN = I2C_1_SCB_IRQ__INTC_MASK;
  218              		.loc 1 349 0
  219 0000 8022     		mov	r2, #128
  220 0002 5200     		lsl	r2, r2, #1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 11
 
 
  221 0004 014B     		ldr	r3, .L23
  222 0006 1A60     		str	r2, [r3]
- 350:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 350:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
  223              		.loc 1 350 0
  224              		@ sp needed
  225 0008 7047     		bx	lr
@@ -622,32 +622,32 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  238              		.type	I2C_1_SCB_IRQ_Start, %function
  239              	I2C_1_SCB_IRQ_Start:
  240              	.LFB1:
-  57:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* For all we know the interrupt is active. */
+  57:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* For all we know the interrupt is active. */
  241              		.loc 1 57 0
  242              		.cfi_startproc
  243 0000 08B5     		push	{r3, lr}
  244              		.cfi_def_cfa_offset 8
  245              		.cfi_offset 3, -8
  246              		.cfi_offset 14, -4
-  59:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  59:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
  247              		.loc 1 59 0
  248 0002 FFF7FEFF 		bl	I2C_1_SCB_IRQ_Disable
  249              	.LVL8:
-  62:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  62:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
  250              		.loc 1 62 0
  251 0006 0448     		ldr	r0, .L26
  252 0008 FFF7FEFF 		bl	I2C_1_SCB_IRQ_SetVector
  253              	.LVL9:
-  65:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  65:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
  254              		.loc 1 65 0
  255 000c 0320     		mov	r0, #3
  256 000e FFF7FEFF 		bl	I2C_1_SCB_IRQ_SetPriority
  257              	.LVL10:
-  68:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+  68:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
  258              		.loc 1 68 0
  259 0012 FFF7FEFF 		bl	I2C_1_SCB_IRQ_Enable
  260              	.LVL11:
-  69:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+  69:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
  261              		.loc 1 69 0
  262              		@ sp needed
  263 0016 08BD     		pop	{r3, pc}
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  268              		.cfi_endproc
  269              	.LFE1:
  270              		.size	I2C_1_SCB_IRQ_Start, .-I2C_1_SCB_IRQ_Start
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 12
 
 
  271              		.section	.text.I2C_1_SCB_IRQ_StartEx,"ax",%progbits
@@ -669,7 +669,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  276              		.type	I2C_1_SCB_IRQ_StartEx, %function
  277              	I2C_1_SCB_IRQ_StartEx:
  278              	.LFB2:
- 100:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* For all we know the interrupt is active. */
+ 100:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* For all we know the interrupt is active. */
  279              		.loc 1 100 0
  280              		.cfi_startproc
  281              	.LVL12:
@@ -678,25 +678,25 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  284              		.cfi_offset 4, -8
  285              		.cfi_offset 14, -4
  286 0002 041C     		mov	r4, r0
- 102:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 102:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
  287              		.loc 1 102 0
  288 0004 FFF7FEFF 		bl	I2C_1_SCB_IRQ_Disable
  289              	.LVL13:
- 105:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 105:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
  290              		.loc 1 105 0
  291 0008 201C     		mov	r0, r4
  292 000a FFF7FEFF 		bl	I2C_1_SCB_IRQ_SetVector
  293              	.LVL14:
- 108:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 108:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
  294              		.loc 1 108 0
  295 000e 0320     		mov	r0, #3
  296 0010 FFF7FEFF 		bl	I2C_1_SCB_IRQ_SetPriority
  297              	.LVL15:
- 111:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 111:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
  298              		.loc 1 111 0
  299 0014 FFF7FEFF 		bl	I2C_1_SCB_IRQ_Enable
  300              	.LVL16:
- 112:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 112:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
  301              		.loc 1 112 0
  302              		@ sp needed
  303              	.LVL17:
@@ -712,26 +712,26 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  313              		.type	I2C_1_SCB_IRQ_Stop, %function
  314              	I2C_1_SCB_IRQ_Stop:
  315              	.LFB3:
- 130:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Disable this interrupt. */
+ 130:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     /* Disable this interrupt. */
  316              		.loc 1 130 0
  317              		.cfi_startproc
  318 0000 08B5     		push	{r3, lr}
  319              		.cfi_def_cfa_offset 8
  320              		.cfi_offset 3, -8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 13
 
 
  321              		.cfi_offset 14, -4
- 132:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 132:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
  322              		.loc 1 132 0
  323 0002 FFF7FEFF 		bl	I2C_1_SCB_IRQ_Disable
  324              	.LVL18:
- 135:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 135:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
  325              		.loc 1 135 0
  326 0006 0248     		ldr	r0, .L30
  327 0008 FFF7FEFF 		bl	I2C_1_SCB_IRQ_SetVector
  328              	.LVL19:
- 136:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 136:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
  329              		.loc 1 136 0
  330              		@ sp needed
  331 000c 08BD     		pop	{r3, pc}
@@ -750,42 +750,42 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  344              		.type	I2C_1_SCB_IRQ_SetPending, %function
  345              	I2C_1_SCB_IRQ_SetPending:
  346              	.LFB12:
- 351:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 352:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 353:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 354:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_SetPending
- 355:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 356:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 357:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 358:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Causes the Interrupt to enter the pending state, a software method of
- 359:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   generating the interrupt.
- 360:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 361:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
- 362:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 363:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 364:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 365:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 366:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 367:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Side Effects:
- 368:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
- 369:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   entered (depending on the priority of this interrupt and other pending 
- 370:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   interrupts).
- 371:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 372:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 373:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_SetPending(void)
- 374:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 351:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 352:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 353:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 354:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_SetPending
+ 355:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 356:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 357:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 358:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Causes the Interrupt to enter the pending state, a software method of
+ 359:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   generating the interrupt.
+ 360:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 361:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
+ 362:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 363:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 364:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 365:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 366:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 367:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Side Effects:
+ 368:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
+ 369:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   entered (depending on the priority of this interrupt and other pending 
+ 370:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   interrupts).
+ 371:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 372:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 373:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_SetPending(void)
+ 374:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
  347              		.loc 1 374 0
  348              		.cfi_startproc
- 375:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_SET_PD = I2C_1_SCB_IRQ__INTC_MASK;
+ 375:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_SET_PD = I2C_1_SCB_IRQ__INTC_MASK;
  349              		.loc 1 375 0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 14
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 14
 
 
  350 0000 8022     		mov	r2, #128
  351 0002 5200     		lsl	r2, r2, #1
  352 0004 014B     		ldr	r3, .L33
  353 0006 1A60     		str	r2, [r3]
- 376:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 376:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
  354              		.loc 1 376 0
  355              		@ sp needed
  356 0008 7047     		bx	lr
@@ -804,41 +804,41 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  369              		.type	I2C_1_SCB_IRQ_ClearPending, %function
  370              	I2C_1_SCB_IRQ_ClearPending:
  371              	.LFB13:
- 377:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 378:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
- 379:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
- 380:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_ClearPending
- 381:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
- 382:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 383:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
- 384:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Clears a pending interrupt in the interrupt controller.
- 385:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 386:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Note Some interrupt sources are clear-on-read and require the block 
- 387:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
- 388:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
- 389:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   pending state even though the interrupt itself is cleared using this API.
- 390:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 391:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
- 392:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 393:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 394:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
- 395:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
- 396:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
- 397:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
- 398:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_ClearPending(void)
- 399:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
+ 377:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 378:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** 
+ 379:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** /*******************************************************************************
+ 380:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Function Name: I2C_1_SCB_IRQ_ClearPending
+ 381:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** ********************************************************************************
+ 382:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 383:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Summary:
+ 384:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Clears a pending interrupt in the interrupt controller.
+ 385:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 386:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   Note Some interrupt sources are clear-on-read and require the block 
+ 387:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
+ 388:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
+ 389:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   pending state even though the interrupt itself is cleared using this API.
+ 390:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 391:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Parameters:
+ 392:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 393:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 394:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** * Return:
+ 395:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *   None
+ 396:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *
+ 397:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** *******************************************************************************/
+ 398:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** void I2C_1_SCB_IRQ_ClearPending(void)
+ 399:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** {
  372              		.loc 1 399 0
  373              		.cfi_startproc
- 400:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_CLR_PD = I2C_1_SCB_IRQ__INTC_MASK;
+ 400:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c ****     *I2C_1_SCB_IRQ_INTC_CLR_PD = I2C_1_SCB_IRQ__INTC_MASK;
  374              		.loc 1 400 0
  375 0000 8022     		mov	r2, #128
  376 0002 5200     		lsl	r2, r2, #1
  377 0004 014B     		ldr	r3, .L36
  378 0006 1A60     		str	r2, [r3]
- 401:.\Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
+ 401:Generated_Source\PSoC4/I2C_1_SCB_IRQ.c **** }
  379              		.loc 1 401 0
  380              		@ sp needed
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 15
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 15
 
 
  381 0008 7047     		bx	lr
@@ -860,17 +860,17 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  397 0006 00000000 		.4byte	.Ldebug_abbrev0
  398 000a 04       		.byte	0x4
  399 000b 01       		.uleb128 0x1
- 400 000c 27020000 		.4byte	.LASF33
+ 400 000c 85020000 		.4byte	.LASF33
  401 0010 01       		.byte	0x1
- 402 0011 74010000 		.4byte	.LASF34
- 403 0015 BF020000 		.4byte	.LASF35
+ 402 0011 2E020000 		.4byte	.LASF34
+ 403 0015 CE010000 		.4byte	.LASF35
  404 0019 00000000 		.4byte	.Ldebug_ranges0+0
  405 001d 00000000 		.4byte	0
  406 0021 00000000 		.4byte	.Ldebug_line0
  407 0025 02       		.uleb128 0x2
  408 0026 01       		.byte	0x1
  409 0027 06       		.byte	0x6
- 410 0028 29030000 		.4byte	.LASF0
+ 410 0028 48030000 		.4byte	.LASF0
  411 002c 02       		.uleb128 0x2
  412 002d 01       		.byte	0x1
  413 002e 08       		.byte	0x8
@@ -878,7 +878,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  415 0033 02       		.uleb128 0x2
  416 0034 02       		.byte	0x2
  417 0035 05       		.byte	0x5
- 418 0036 B5020000 		.4byte	.LASF2
+ 418 0036 13030000 		.4byte	.LASF2
  419 003a 02       		.uleb128 0x2
  420 003b 02       		.byte	0x2
  421 003c 07       		.byte	0x7
@@ -886,7 +886,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  423 0041 02       		.uleb128 0x2
  424 0042 04       		.byte	0x4
  425 0043 05       		.byte	0x5
- 426 0044 0D030000 		.4byte	.LASF4
+ 426 0044 2C030000 		.4byte	.LASF4
  427 0048 02       		.uleb128 0x2
  428 0049 04       		.byte	0x4
  429 004a 07       		.byte	0x7
@@ -894,11 +894,11 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  431 004f 02       		.uleb128 0x2
  432 0050 08       		.byte	0x8
  433 0051 05       		.byte	0x5
- 434 0052 00020000 		.4byte	.LASF6
+ 434 0052 5E020000 		.4byte	.LASF6
  435 0056 02       		.uleb128 0x2
  436 0057 08       		.byte	0x8
  437 0058 07       		.byte	0x7
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 16
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 16
 
 
  438 0059 8D000000 		.4byte	.LASF7
@@ -931,7 +931,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  465 0091 02       		.uleb128 0x2
  466 0092 01       		.byte	0x1
  467 0093 08       		.byte	0x8
- 468 0094 22020000 		.4byte	.LASF13
+ 468 0094 80020000 		.4byte	.LASF13
  469 0098 04       		.uleb128 0x4
  470 0099 00000000 		.4byte	.LASF14
  471 009d 02       		.byte	0x2
@@ -940,7 +940,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  474 00a4 05       		.uleb128 0x5
  475 00a5 77000000 		.4byte	0x77
  476 00a9 04       		.uleb128 0x4
- 477 00aa EA010000 		.4byte	.LASF15
+ 477 00aa C1010000 		.4byte	.LASF15
  478 00ae 02       		.byte	0x2
  479 00af 5402     		.2byte	0x254
  480 00b1 B5000000 		.4byte	0xb5
@@ -951,20 +951,20 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  485 00bc 02       		.uleb128 0x2
  486 00bd 04       		.byte	0x4
  487 00be 07       		.byte	0x7
- 488 00bf F7010000 		.4byte	.LASF16
+ 488 00bf 55020000 		.4byte	.LASF16
  489 00c3 08       		.uleb128 0x8
  490 00c4 4C000000 		.4byte	.LASF23
  491 00c8 01       		.byte	0x1
  492 00c9 9F       		.byte	0x9f
  493 00ca 00000000 		.4byte	.LFB4
  494 00ce 02000000 		.4byte	.LFE4-.LFB4
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 17
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 17
 
 
  495 00d2 01       		.uleb128 0x1
  496 00d3 9C       		.byte	0x9c
  497 00d4 09       		.uleb128 0x9
- 498 00d5 BB010000 		.4byte	.LASF17
+ 498 00d5 92010000 		.4byte	.LASF17
  499 00d9 01       		.byte	0x1
  500 00da C7       		.byte	0xc7
  501 00db 00000000 		.4byte	.LFB5
@@ -973,7 +973,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  504 00e4 9C       		.byte	0x9c
  505 00e5 F7000000 		.4byte	0xf7
  506 00e9 0A       		.uleb128 0xa
- 507 00ea 9D010000 		.4byte	.LASF19
+ 507 00ea 74010000 		.4byte	.LASF19
  508 00ee 01       		.byte	0x1
  509 00ef C7       		.byte	0xc7
  510 00f0 A9000000 		.4byte	0xa9
@@ -981,7 +981,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  512 00f5 50       		.byte	0x50
  513 00f6 00       		.byte	0
  514 00f7 0B       		.uleb128 0xb
- 515 00f8 35030000 		.4byte	.LASF25
+ 515 00f8 54030000 		.4byte	.LASF25
  516 00fc 01       		.byte	0x1
  517 00fd DB       		.byte	0xdb
  518 00fe A9000000 		.4byte	0xa9
@@ -1011,14 +1011,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  542 0137 6B000000 		.4byte	0x6b
  543 013b 21000000 		.4byte	.LLST1
  544 013f 0E       		.uleb128 0xe
- 545 0140 FE020000 		.4byte	.LASF22
+ 545 0140 1D030000 		.4byte	.LASF22
  546 0144 01       		.byte	0x1
  547 0145 FC       		.byte	0xfc
  548 0146 77000000 		.4byte	0x77
  549 014a 06       		.byte	0x6
  550 014b 0F       		.uleb128 0xf
  551 014c 08000000 		.4byte	.LVL3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 18
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 18
 
 
  552 0150 E7020000 		.4byte	0x2e7
@@ -1043,7 +1043,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  571 0180 77000000 		.4byte	0x77
  572 0184 34000000 		.4byte	.LLST2
  573 0188 12       		.uleb128 0x12
- 574 0189 FE020000 		.4byte	.LASF22
+ 574 0189 1D030000 		.4byte	.LASF22
  575 018d 01       		.byte	0x1
  576 018e 1801     		.2byte	0x118
  577 0190 77000000 		.4byte	0x77
@@ -1075,10 +1075,10 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  603 01ce 01       		.uleb128 0x1
  604 01cf 9C       		.byte	0x9c
  605 01d0 09       		.uleb128 0x9
- 606 01d1 0E020000 		.4byte	.LASF28
+ 606 01d1 6C020000 		.4byte	.LASF28
  607 01d5 01       		.byte	0x1
  608 01d6 38       		.byte	0x38
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 19
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 19
 
 
  609 01d7 00000000 		.4byte	.LFB1
@@ -1124,7 +1124,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  649 0232 9C       		.byte	0x9c
  650 0233 80020000 		.4byte	0x280
  651 0237 0C       		.uleb128 0xc
- 652 0238 9D010000 		.4byte	.LASF19
+ 652 0238 74010000 		.4byte	.LASF19
  653 023c 01       		.byte	0x1
  654 023d 63       		.byte	0x63
  655 023e A9000000 		.4byte	0xa9
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  663 0258 63020000 		.4byte	0x263
  664 025c 16       		.uleb128 0x16
  665 025d 01       		.uleb128 0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 20
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 20
 
 
  666 025e 50       		.byte	0x50
@@ -1161,7 +1161,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  683 027b 96010000 		.4byte	0x196
  684 027f 00       		.byte	0
  685 0280 09       		.uleb128 0x9
- 686 0281 16030000 		.4byte	.LASF30
+ 686 0281 35030000 		.4byte	.LASF30
  687 0285 01       		.byte	0x1
  688 0286 81       		.byte	0x81
  689 0287 00000000 		.4byte	.LFB3
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  720 02d5 18       		.uleb128 0x18
  721 02d6 BC000000 		.4byte	0xbc
  722 02da 2F       		.byte	0x2f
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 21
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 21
 
 
  723 02db 00       		.byte	0
@@ -1208,12 +1208,12 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  727 02e2 21       		.byte	0x21
  728 02e3 CC020000 		.4byte	0x2cc
  729 02e7 1A       		.uleb128 0x1a
- 730 02e8 D3010000 		.4byte	.LASF38
+ 730 02e8 AA010000 		.4byte	.LASF38
  731 02ec 03       		.byte	0x3
  732 02ed E3       		.byte	0xe3
  733 02ee 6B000000 		.4byte	0x6b
  734 02f2 1B       		.uleb128 0x1b
- 735 02f3 A5010000 		.4byte	.LASF39
+ 735 02f3 7C010000 		.4byte	.LASF39
  736 02f7 03       		.byte	0x3
  737 02f8 E4       		.byte	0xe4
  738 02f9 1C       		.uleb128 0x1c
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  777 0021 0B       		.uleb128 0xb
  778 0022 0B       		.uleb128 0xb
  779 0023 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 22
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 22
 
 
  780 0024 0B       		.uleb128 0xb
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  834 005a 11       		.uleb128 0x11
  835 005b 01       		.uleb128 0x1
  836 005c 12       		.uleb128 0x12
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 23
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 23
 
 
  837 005d 06       		.uleb128 0x6
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  891 0095 3A       		.uleb128 0x3a
  892 0096 0B       		.uleb128 0xb
  893 0097 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 24
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 24
 
 
  894 0098 0B       		.uleb128 0xb
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  948 00cf 49       		.uleb128 0x49
  949 00d0 13       		.uleb128 0x13
  950 00d1 1C       		.uleb128 0x1c
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 25
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 25
 
 
  951 00d2 0B       		.uleb128 0xb
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  1005 010b 12       		.uleb128 0x12
  1006 010c 34       		.uleb128 0x34
  1007 010d 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 26
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 26
 
 
  1008 010e 03       		.uleb128 0x3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  1062 0145 40       		.uleb128 0x40
  1063 0146 18       		.uleb128 0x18
  1064 0147 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 27
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 27
 
 
  1065 0149 19       		.uleb128 0x19
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  1119 0184 3C       		.uleb128 0x3c
  1120 0185 19       		.uleb128 0x19
  1121 0186 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 28
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 28
 
 
  1122 0187 00       		.byte	0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  1176 0013 0400     		.2byte	0x4
  1177 0015 F3       		.byte	0xf3
  1178 0016 01       		.uleb128 0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 29
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 29
 
 
  1179 0017 50       		.byte	0x50
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  1233 0018 00000000 		.4byte	.LFB5
  1234 001c 0C000000 		.4byte	.LFE5-.LFB5
  1235 0020 00000000 		.4byte	.LFB6
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 30
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 30
 
 
  1236 0024 0C000000 		.4byte	.LFE6-.LFB6
@@ -1796,9 +1796,9 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  1288 006c 00000000 		.4byte	0
  1289              		.section	.debug_line,"",%progbits
  1290              	.Ldebug_line0:
- 1291 0000 6E010000 		.section	.debug_str,"MS",%progbits,1
- 1291      02006E00 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 31
+ 1291 0000 55010000 		.section	.debug_str,"MS",%progbits,1
+ 1291      02005500 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 31
 
 
  1291      00000201 
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  1311      7200
  1312              	.LASF18:
  1313 00b2 4932435F 		.ascii	"I2C_1_SCB_IRQ_SetPriority\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 32
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 32
 
 
  1313      315F5343 
@@ -1918,116 +1918,117 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 1
  1335      425F4952 
  1335      515F456E 
  1335      61626C65 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 33
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 33
 
 
- 1336              	.LASF34:
- 1337 0174 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\I2C_1_SCB_IRQ.c\000"
- 1337      6E657261 
- 1337      7465645F 
- 1337      536F7572 
- 1337      63655C50 
- 1338              	.LASF19:
- 1339 019d 61646472 		.ascii	"address\000"
- 1339      65737300 
- 1340              	.LASF39:
- 1341 01a5 43794578 		.ascii	"CyExitCriticalSection\000"
- 1341      69744372 
- 1341      69746963 
- 1341      616C5365 
- 1341      6374696F 
- 1342              	.LASF17:
- 1343 01bb 4932435F 		.ascii	"I2C_1_SCB_IRQ_SetVector\000"
- 1343      315F5343 
- 1343      425F4952 
- 1343      515F5365 
- 1343      74566563 
- 1344              	.LASF38:
- 1345 01d3 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1345      74657243 
- 1345      72697469 
- 1345      63616C53 
- 1345      65637469 
- 1346              	.LASF15:
- 1347 01ea 63796973 		.ascii	"cyisraddress\000"
- 1347      72616464 
- 1347      72657373 
- 1347      00
- 1348              	.LASF16:
- 1349 01f7 73697A65 		.ascii	"sizetype\000"
- 1349      74797065 
- 1349      00
- 1350              	.LASF6:
- 1351 0200 6C6F6E67 		.ascii	"long long int\000"
- 1351      206C6F6E 
- 1351      6720696E 
- 1351      7400
- 1352              	.LASF28:
- 1353 020e 4932435F 		.ascii	"I2C_1_SCB_IRQ_Start\000"
- 1353      315F5343 
- 1353      425F4952 
- 1353      515F5374 
- 1353      61727400 
- 1354              	.LASF13:
- 1355 0222 63686172 		.ascii	"char\000"
- 1355      00
- 1356              	.LASF33:
- 1357 0227 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1357      4320342E 
- 1357      392E3320 
- 1357      32303135 
- 1357      30333033 
- 1358 025a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccp8YMOJ.s 			page 34
+ 1336              	.LASF19:
+ 1337 0174 61646472 		.ascii	"address\000"
+ 1337      65737300 
+ 1338              	.LASF39:
+ 1339 017c 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1339      69744372 
+ 1339      69746963 
+ 1339      616C5365 
+ 1339      6374696F 
+ 1340              	.LASF17:
+ 1341 0192 4932435F 		.ascii	"I2C_1_SCB_IRQ_SetVector\000"
+ 1341      315F5343 
+ 1341      425F4952 
+ 1341      515F5365 
+ 1341      74566563 
+ 1342              	.LASF38:
+ 1343 01aa 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1343      74657243 
+ 1343      72697469 
+ 1343      63616C53 
+ 1343      65637469 
+ 1344              	.LASF15:
+ 1345 01c1 63796973 		.ascii	"cyisraddress\000"
+ 1345      72616464 
+ 1345      72657373 
+ 1345      00
+ 1346              	.LASF35:
+ 1347 01ce 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 1347      73657273 
+ 1347      5C48656E 
+ 1347      72792041 
+ 1347      6C626572 
+ 1348 01fc 6F64756C 		.ascii	"odular\\Robot_Test\\Test_Robot\\Test_Sensor_F4.cyds"
+ 1348      61725C52 
+ 1348      6F626F74 
+ 1348      5F546573 
+ 1348      745C5465 
+ 1349 022c 6E00     		.ascii	"n\000"
+ 1350              	.LASF34:
+ 1351 022e 47656E65 		.ascii	"Generated_Source\\PSoC4\\I2C_1_SCB_IRQ.c\000"
+ 1351      72617465 
+ 1351      645F536F 
+ 1351      75726365 
+ 1351      5C50536F 
+ 1352              	.LASF16:
+ 1353 0255 73697A65 		.ascii	"sizetype\000"
+ 1353      74797065 
+ 1353      00
+ 1354              	.LASF6:
+ 1355 025e 6C6F6E67 		.ascii	"long long int\000"
+ 1355      206C6F6E 
+ 1355      6720696E 
+ 1355      7400
+ 1356              	.LASF28:
+ 1357 026c 4932435F 		.ascii	"I2C_1_SCB_IRQ_Start\000"
+ 1357      315F5343 
+ 1357      425F4952 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccx9byRB.s 			page 34
 
 
- 1358      20726576 
- 1358      6973696F 
- 1358      6E203232 
- 1358      31323230 
- 1359 028d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1359      66756E63 
- 1359      74696F6E 
- 1359      2D736563 
- 1359      74696F6E 
- 1360              	.LASF2:
- 1361 02b5 73686F72 		.ascii	"short int\000"
- 1361      7420696E 
- 1361      7400
- 1362              	.LASF35:
- 1363 02bf 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\Test_Robot\\Test"
- 1363      73657273 
- 1363      5C48656E 
- 1363      72792041 
- 1363      6C626572 
- 1364 02ed 5F53656E 		.ascii	"_Sensor_F4.cydsn\000"
- 1364      736F725F 
- 1364      46342E63 
- 1364      7964736E 
- 1364      00
- 1365              	.LASF22:
- 1366 02fe 7072696F 		.ascii	"priorityOffset\000"
- 1366      72697479 
- 1366      4F666673 
- 1366      657400
- 1367              	.LASF4:
- 1368 030d 6C6F6E67 		.ascii	"long int\000"
- 1368      20696E74 
- 1368      00
- 1369              	.LASF30:
- 1370 0316 4932435F 		.ascii	"I2C_1_SCB_IRQ_Stop\000"
- 1370      315F5343 
- 1370      425F4952 
- 1370      515F5374 
- 1370      6F7000
- 1371              	.LASF0:
- 1372 0329 7369676E 		.ascii	"signed char\000"
- 1372      65642063 
- 1372      68617200 
- 1373              	.LASF25:
- 1374 0335 4932435F 		.ascii	"I2C_1_SCB_IRQ_GetVector\000"
- 1374      315F5343 
- 1374      425F4952 
- 1374      515F4765 
- 1374      74566563 
- 1375              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1357      515F5374 
+ 1357      61727400 
+ 1358              	.LASF13:
+ 1359 0280 63686172 		.ascii	"char\000"
+ 1359      00
+ 1360              	.LASF33:
+ 1361 0285 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1361      4320342E 
+ 1361      392E3320 
+ 1361      32303135 
+ 1361      30333033 
+ 1362 02b8 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1362      20726576 
+ 1362      6973696F 
+ 1362      6E203232 
+ 1362      31323230 
+ 1363 02eb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1363      66756E63 
+ 1363      74696F6E 
+ 1363      2D736563 
+ 1363      74696F6E 
+ 1364              	.LASF2:
+ 1365 0313 73686F72 		.ascii	"short int\000"
+ 1365      7420696E 
+ 1365      7400
+ 1366              	.LASF22:
+ 1367 031d 7072696F 		.ascii	"priorityOffset\000"
+ 1367      72697479 
+ 1367      4F666673 
+ 1367      657400
+ 1368              	.LASF4:
+ 1369 032c 6C6F6E67 		.ascii	"long int\000"
+ 1369      20696E74 
+ 1369      00
+ 1370              	.LASF30:
+ 1371 0335 4932435F 		.ascii	"I2C_1_SCB_IRQ_Stop\000"
+ 1371      315F5343 
+ 1371      425F4952 
+ 1371      515F5374 
+ 1371      6F7000
+ 1372              	.LASF0:
+ 1373 0348 7369676E 		.ascii	"signed char\000"
+ 1373      65642063 
+ 1373      68617200 
+ 1374              	.LASF25:
+ 1375 0354 4932435F 		.ascii	"I2C_1_SCB_IRQ_GetVector\000"
+ 1375      315F5343 
+ 1375      425F4952 
+ 1375      515F4765 
+ 1375      74566563 
+ 1376              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

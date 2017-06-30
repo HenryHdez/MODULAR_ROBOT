@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,13 +25,13 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
   22              		.type	writeVCNL, %function
   23              	writeVCNL:
   24              	.LFB36:
-  25              		.file 1 ".\\main.c"
-   1:.\main.c      **** #include <project.h>
-   2:.\main.c      **** #define VCNL4010_ADDRESS 0x13
-   3:.\main.c      **** int i=0;
-   4:.\main.c      **** int16 P=0;
-   5:.\main.c      **** //Send Data
-   6:.\main.c      **** void writeVCNL(int address, int data){
+  25              		.file 1 "main.c"
+   1:main.c        **** #include <project.h>
+   2:main.c        **** #define VCNL4010_ADDRESS 0x13
+   3:main.c        **** int i=0;
+   4:main.c        **** int16 P=0;
+   5:main.c        **** //Send Data
+   6:main.c        **** void writeVCNL(int address, int data){
   26              		.loc 1 6 0
   27              		.cfi_startproc
   28              	.LVL0:
@@ -40,16 +40,16 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
   31              		.cfi_offset 14, -4
   32 0002 83B0     		sub	sp, sp, #12
   33              		.cfi_def_cfa_offset 16
-   7:.\main.c      ****     uint8 Write_buf[2]={0};
+   7:main.c        ****     uint8 Write_buf[2]={0};
   34              		.loc 1 7 0
   35 0004 01AB     		add	r3, sp, #4
-   8:.\main.c      ****     Write_buf[0]=address;
+   8:main.c        ****     Write_buf[0]=address;
   36              		.loc 1 8 0
   37 0006 1870     		strb	r0, [r3]
-   9:.\main.c      ****     Write_buf[1]=data;
+   9:main.c        ****     Write_buf[1]=data;
   38              		.loc 1 9 0
   39 0008 5970     		strb	r1, [r3, #1]
-  10:.\main.c      ****     I2C_1_I2CMasterWriteBuf(VCNL4010_ADDRESS,(uint8 *)Write_buf,2,I2C_1_I2C_MODE_COMPLETE_XFER);
+  10:main.c        ****     I2C_1_I2CMasterWriteBuf(VCNL4010_ADDRESS,(uint8 *)Write_buf,2,I2C_1_I2C_MODE_COMPLETE_XFER);
   40              		.loc 1 10 0
   41 000a 1320     		mov	r0, #19
   42              	.LVL1:
@@ -58,19 +58,19 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
   45 000e 0222     		mov	r2, #2
   46 0010 0023     		mov	r3, #0
   47 0012 FFF7FEFF 		bl	I2C_1_I2CMasterWriteBuf
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 2
 
 
   48              	.LVL3:
   49              	.L2:
-  11:.\main.c      ****     while((I2C_1_I2CMasterStatus()&I2C_1_I2C_MSTAT_WR_CMPLT)==0){}
+  11:main.c        ****     while((I2C_1_I2CMasterStatus()&I2C_1_I2C_MSTAT_WR_CMPLT)==0){}
   50              		.loc 1 11 0 discriminator 1
   51 0016 FFF7FEFF 		bl	I2C_1_I2CMasterStatus
   52              	.LVL4:
   53 001a 8307     		lsl	r3, r0, #30
   54 001c FBD5     		bpl	.L2
-  12:.\main.c      ****     return;
-  13:.\main.c      **** }
+  12:main.c        ****     return;
+  13:main.c        **** }
   55              		.loc 1 13 0
   56 001e 03B0     		add	sp, sp, #12
   57              		@ sp needed
@@ -86,8 +86,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
   67              		.type	readVCNL, %function
   68              	readVCNL:
   69              	.LFB37:
-  14:.\main.c      **** //Read Data
-  15:.\main.c      **** int readVCNL(int address){
+  14:main.c        **** //Read Data
+  15:main.c        **** int readVCNL(int address){
   70              		.loc 1 15 0
   71              		.cfi_startproc
   72              	.LVL5:
@@ -96,18 +96,18 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
   75              		.cfi_offset 14, -4
   76 0002 83B0     		sub	sp, sp, #12
   77              		.cfi_def_cfa_offset 16
-  16:.\main.c      ****     uint8 Write_buf[1]={0};
+  16:main.c        ****     uint8 Write_buf[1]={0};
   78              		.loc 1 16 0
   79 0004 01A9     		add	r1, sp, #4
-  17:.\main.c      ****     Write_buf[0]=address;
+  17:main.c        ****     Write_buf[0]=address;
   80              		.loc 1 17 0
   81 0006 0870     		strb	r0, [r1]
-  18:.\main.c      ****     uint8 read_Buf[1]={0};
+  18:main.c        ****     uint8 read_Buf[1]={0};
   82              		.loc 1 18 0
   83 0008 0023     		mov	r3, #0
   84 000a 6A46     		mov	r2, sp
   85 000c 1370     		strb	r3, [r2]
-  19:.\main.c      ****     I2C_1_I2CMasterWriteBuf(VCNL4010_ADDRESS,(uint8 *)Write_buf,1,I2C_1_I2C_MODE_NO_STOP);
+  19:main.c        ****     I2C_1_I2CMasterWriteBuf(VCNL4010_ADDRESS,(uint8 *)Write_buf,1,I2C_1_I2C_MODE_NO_STOP);
   86              		.loc 1 19 0
   87 000e 1320     		mov	r0, #19
   88              	.LVL6:
@@ -116,16 +116,16 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
   91 0014 FFF7FEFF 		bl	I2C_1_I2CMasterWriteBuf
   92              	.LVL7:
   93              	.L4:
-  20:.\main.c      ****     while((I2C_1_I2CMasterStatus()&I2C_1_I2C_MSTAT_WR_CMPLT)==0){}
+  20:main.c        ****     while((I2C_1_I2CMasterStatus()&I2C_1_I2C_MSTAT_WR_CMPLT)==0){}
   94              		.loc 1 20 0 discriminator 1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 3
 
 
   95 0018 FFF7FEFF 		bl	I2C_1_I2CMasterStatus
   96              	.LVL8:
   97 001c 8307     		lsl	r3, r0, #30
   98 001e FBD5     		bpl	.L4
-  21:.\main.c      ****     I2C_1_I2CMasterReadBuf(VCNL4010_ADDRESS,(uint8 *)read_Buf,1,I2C_1_I2C_MODE_REPEAT_START);
+  21:main.c        ****     I2C_1_I2CMasterReadBuf(VCNL4010_ADDRESS,(uint8 *)read_Buf,1,I2C_1_I2C_MODE_REPEAT_START);
   99              		.loc 1 21 0
  100 0020 1320     		mov	r0, #19
  101 0022 6946     		mov	r1, sp
@@ -134,17 +134,17 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  104 0028 FFF7FEFF 		bl	I2C_1_I2CMasterReadBuf
  105              	.LVL9:
  106              	.L5:
-  22:.\main.c      ****     while((I2C_1_I2CMasterStatus()&I2C_1_I2C_MSTAT_RD_CMPLT)==0){}
+  22:main.c        ****     while((I2C_1_I2CMasterStatus()&I2C_1_I2C_MSTAT_RD_CMPLT)==0){}
  107              		.loc 1 22 0 discriminator 1
  108 002c FFF7FEFF 		bl	I2C_1_I2CMasterStatus
  109              	.LVL10:
  110 0030 C307     		lsl	r3, r0, #31
  111 0032 FBD5     		bpl	.L5
-  23:.\main.c      ****     return read_Buf[0];
+  23:main.c        ****     return read_Buf[0];
  112              		.loc 1 23 0
  113 0034 6B46     		mov	r3, sp
  114 0036 1878     		ldrb	r0, [r3]
-  24:.\main.c      **** }
+  24:main.c        **** }
  115              		.loc 1 24 0
  116 0038 03B0     		add	sp, sp, #12
  117              		@ sp needed
@@ -160,74 +160,74 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  127              		.type	initVCNL, %function
  128              	initVCNL:
  129              	.LFB38:
-  25:.\main.c      **** //Init Sensor
-  26:.\main.c      **** void initVCNL(){
+  25:main.c        **** //Init Sensor
+  26:main.c        **** void initVCNL(){
  130              		.loc 1 26 0
  131              		.cfi_startproc
  132 0000 08B5     		push	{r3, lr}
  133              		.cfi_def_cfa_offset 8
  134              		.cfi_offset 3, -8
  135              		.cfi_offset 14, -4
-  27:.\main.c      ****   int temp = readVCNL(0x81);
+  27:main.c        ****   int temp = readVCNL(0x81);
  136              		.loc 1 27 0
  137 0002 8120     		mov	r0, #129
  138 0004 FFF7FEFF 		bl	readVCNL
  139              	.LVL11:
-  28:.\main.c      ****   if (temp != 0x21){  
+  28:main.c        ****   if (temp != 0x21){  
  140              		.loc 1 28 0
  141 0008 2128     		cmp	r0, #33
  142 000a 1ED0     		beq	.L7
-  29:.\main.c      ****     //Led Sequence Fail
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 4
+  29:main.c        ****     //Led Sequence Fail
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 4
 
 
-  30:.\main.c      ****     LED_1_Write(1);
+  30:main.c        ****     LED_1_Write(1);
  143              		.loc 1 30 0
  144 000c 0120     		mov	r0, #1
  145              	.LVL12:
  146 000e FFF7FEFF 		bl	LED_1_Write
  147              	.LVL13:
-  31:.\main.c      ****     LED_2_Write(1);
+  31:main.c        ****     LED_2_Write(1);
  148              		.loc 1 31 0
  149 0012 0120     		mov	r0, #1
  150 0014 FFF7FEFF 		bl	LED_2_Write
  151              	.LVL14:
-  32:.\main.c      ****     LED_3_Write(1);
+  32:main.c        ****     LED_3_Write(1);
  152              		.loc 1 32 0
  153 0018 0120     		mov	r0, #1
  154 001a FFF7FEFF 		bl	LED_3_Write
  155              	.LVL15:
-  33:.\main.c      ****     LED_4_Write(1);
+  33:main.c        ****     LED_4_Write(1);
  156              		.loc 1 33 0
  157 001e 0120     		mov	r0, #1
  158 0020 FFF7FEFF 		bl	LED_4_Write
  159              	.LVL16:
-  34:.\main.c      ****     CyDelay(200);
+  34:main.c        ****     CyDelay(200);
  160              		.loc 1 34 0
  161 0024 C820     		mov	r0, #200
  162 0026 FFF7FEFF 		bl	CyDelay
  163              	.LVL17:
-  35:.\main.c      ****     LED_1_Write(0);
+  35:main.c        ****     LED_1_Write(0);
  164              		.loc 1 35 0
  165 002a 0020     		mov	r0, #0
  166 002c FFF7FEFF 		bl	LED_1_Write
  167              	.LVL18:
-  36:.\main.c      ****     LED_2_Write(0);
+  36:main.c        ****     LED_2_Write(0);
  168              		.loc 1 36 0
  169 0030 0020     		mov	r0, #0
  170 0032 FFF7FEFF 		bl	LED_2_Write
  171              	.LVL19:
-  37:.\main.c      ****     LED_3_Write(0);
+  37:main.c        ****     LED_3_Write(0);
  172              		.loc 1 37 0
  173 0036 0020     		mov	r0, #0
  174 0038 FFF7FEFF 		bl	LED_3_Write
  175              	.LVL20:
-  38:.\main.c      ****     LED_4_Write(0);
+  38:main.c        ****     LED_4_Write(0);
  176              		.loc 1 38 0
  177 003c 0020     		mov	r0, #0
  178 003e FFF7FEFF 		bl	LED_4_Write
  179              	.LVL21:
-  39:.\main.c      ****     CyDelay(200);    
+  39:main.c        ****     CyDelay(200);    
  180              		.loc 1 39 0
  181 0042 C820     		mov	r0, #200
  182 0044 FFF7FEFF 		bl	CyDelay
@@ -235,158 +235,158 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  184 0048 41E0     		b	.L8
  185              	.LVL23:
  186              	.L7:
-  40:.\main.c      ****   }
-  41:.\main.c      ****    else{
-  42:.\main.c      ****     //Led Sequence Sucess
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 5
+  40:main.c        ****   }
+  41:main.c        ****    else{
+  42:main.c        ****     //Led Sequence Sucess
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 5
 
 
-  43:.\main.c      ****     LED_1_Write(0);
+  43:main.c        ****     LED_1_Write(0);
  187              		.loc 1 43 0
  188 004a 0020     		mov	r0, #0
  189              	.LVL24:
  190 004c FFF7FEFF 		bl	LED_1_Write
  191              	.LVL25:
-  44:.\main.c      ****     LED_2_Write(0);
+  44:main.c        ****     LED_2_Write(0);
  192              		.loc 1 44 0
  193 0050 0020     		mov	r0, #0
  194 0052 FFF7FEFF 		bl	LED_2_Write
  195              	.LVL26:
-  45:.\main.c      ****     LED_3_Write(0);
+  45:main.c        ****     LED_3_Write(0);
  196              		.loc 1 45 0
  197 0056 0020     		mov	r0, #0
  198 0058 FFF7FEFF 		bl	LED_3_Write
  199              	.LVL27:
-  46:.\main.c      ****     LED_4_Write(0);
+  46:main.c        ****     LED_4_Write(0);
  200              		.loc 1 46 0
  201 005c 0020     		mov	r0, #0
  202 005e FFF7FEFF 		bl	LED_4_Write
  203              	.LVL28:
-  47:.\main.c      ****     for(i=1;i<5;i++){
+  47:main.c        ****     for(i=1;i<5;i++){
  204              		.loc 1 47 0
  205 0062 0122     		mov	r2, #1
  206 0064 224B     		ldr	r3, .L11
  207 0066 1A60     		str	r2, [r3]
  208 0068 21E0     		b	.L9
  209              	.L10:
-  48:.\main.c      ****         LED_1_Write(1);
+  48:main.c        ****         LED_1_Write(1);
  210              		.loc 1 48 0 discriminator 3
  211 006a 0120     		mov	r0, #1
  212 006c FFF7FEFF 		bl	LED_1_Write
  213              	.LVL29:
-  49:.\main.c      ****         LED_2_Write(1);
+  49:main.c        ****         LED_2_Write(1);
  214              		.loc 1 49 0 discriminator 3
  215 0070 0120     		mov	r0, #1
  216 0072 FFF7FEFF 		bl	LED_2_Write
  217              	.LVL30:
-  50:.\main.c      ****         LED_3_Write(0);
+  50:main.c        ****         LED_3_Write(0);
  218              		.loc 1 50 0 discriminator 3
  219 0076 0020     		mov	r0, #0
  220 0078 FFF7FEFF 		bl	LED_3_Write
  221              	.LVL31:
-  51:.\main.c      ****         LED_4_Write(0);
+  51:main.c        ****         LED_4_Write(0);
  222              		.loc 1 51 0 discriminator 3
  223 007c 0020     		mov	r0, #0
  224 007e FFF7FEFF 		bl	LED_4_Write
  225              	.LVL32:
-  52:.\main.c      ****         CyDelay(200);
+  52:main.c        ****         CyDelay(200);
  226              		.loc 1 52 0 discriminator 3
  227 0082 C820     		mov	r0, #200
  228 0084 FFF7FEFF 		bl	CyDelay
  229              	.LVL33:
-  53:.\main.c      ****         LED_1_Write(0);
+  53:main.c        ****         LED_1_Write(0);
  230              		.loc 1 53 0 discriminator 3
  231 0088 0020     		mov	r0, #0
  232 008a FFF7FEFF 		bl	LED_1_Write
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 6
 
 
  233              	.LVL34:
-  54:.\main.c      ****         LED_2_Write(0);
+  54:main.c        ****         LED_2_Write(0);
  234              		.loc 1 54 0 discriminator 3
  235 008e 0020     		mov	r0, #0
  236 0090 FFF7FEFF 		bl	LED_2_Write
  237              	.LVL35:
-  55:.\main.c      ****         LED_3_Write(1);
+  55:main.c        ****         LED_3_Write(1);
  238              		.loc 1 55 0 discriminator 3
  239 0094 0120     		mov	r0, #1
  240 0096 FFF7FEFF 		bl	LED_3_Write
  241              	.LVL36:
-  56:.\main.c      ****         LED_4_Write(1);
+  56:main.c        ****         LED_4_Write(1);
  242              		.loc 1 56 0 discriminator 3
  243 009a 0120     		mov	r0, #1
  244 009c FFF7FEFF 		bl	LED_4_Write
  245              	.LVL37:
-  57:.\main.c      ****         CyDelay(200); 
+  57:main.c        ****         CyDelay(200); 
  246              		.loc 1 57 0 discriminator 3
  247 00a0 C820     		mov	r0, #200
  248 00a2 FFF7FEFF 		bl	CyDelay
  249              	.LVL38:
-  47:.\main.c      ****         LED_1_Write(1);
+  47:main.c        ****         LED_1_Write(1);
  250              		.loc 1 47 0 discriminator 3
  251 00a6 124A     		ldr	r2, .L11
  252 00a8 1368     		ldr	r3, [r2]
  253 00aa 0133     		add	r3, r3, #1
  254 00ac 1360     		str	r3, [r2]
  255              	.L9:
-  47:.\main.c      ****         LED_1_Write(1);
+  47:main.c        ****         LED_1_Write(1);
  256              		.loc 1 47 0 is_stmt 0 discriminator 1
  257 00ae 104B     		ldr	r3, .L11
  258 00b0 1B68     		ldr	r3, [r3]
  259 00b2 042B     		cmp	r3, #4
  260 00b4 D9DD     		ble	.L10
-  58:.\main.c      ****         }
-  59:.\main.c      ****     LED_1_Write(0);
+  58:main.c        ****         }
+  59:main.c        ****     LED_1_Write(0);
  261              		.loc 1 59 0 is_stmt 1
  262 00b6 0020     		mov	r0, #0
  263 00b8 FFF7FEFF 		bl	LED_1_Write
  264              	.LVL39:
-  60:.\main.c      ****     LED_2_Write(0);
+  60:main.c        ****     LED_2_Write(0);
  265              		.loc 1 60 0
  266 00bc 0020     		mov	r0, #0
  267 00be FFF7FEFF 		bl	LED_2_Write
  268              	.LVL40:
-  61:.\main.c      ****     LED_3_Write(0);
+  61:main.c        ****     LED_3_Write(0);
  269              		.loc 1 61 0
  270 00c2 0020     		mov	r0, #0
  271 00c4 FFF7FEFF 		bl	LED_3_Write
  272              	.LVL41:
-  62:.\main.c      ****     LED_4_Write(0);
+  62:main.c        ****     LED_4_Write(0);
  273              		.loc 1 62 0
  274 00c8 0020     		mov	r0, #0
  275 00ca FFF7FEFF 		bl	LED_4_Write
  276              	.LVL42:
  277              	.L8:
-  63:.\main.c      ****   } 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 7
+  63:main.c        ****   } 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 7
 
 
-  64:.\main.c      ****   //VCNL Init Params
-  65:.\main.c      ****   writeVCNL(0x84, 0x0F); // Configures ambient light measures - Single conversion mode, 128 average
+  64:main.c        ****   //VCNL Init Params
+  65:main.c        ****   writeVCNL(0x84, 0x0F); // Configures ambient light measures - Single conversion mode, 128 average
  278              		.loc 1 65 0
  279 00ce 8420     		mov	r0, #132
  280 00d0 0F21     		mov	r1, #15
  281 00d2 FFF7FEFF 		bl	writeVCNL
  282              	.LVL43:
-  66:.\main.c      ****   writeVCNL(0x83, 20);   // sets IR current in steps of 10mA 0-200mA --> 200mA
+  66:main.c        ****   writeVCNL(0x83, 20);   // sets IR current in steps of 10mA 0-200mA --> 200mA
  283              		.loc 1 66 0
  284 00d6 8320     		mov	r0, #131
  285 00d8 1421     		mov	r1, #20
  286 00da FFF7FEFF 		bl	writeVCNL
  287              	.LVL44:
-  67:.\main.c      ****   writeVCNL(0x89, 0);    // Proximity IR test signal freq, 0-3 - 781.25 kHz
+  67:main.c        ****   writeVCNL(0x89, 0);    // Proximity IR test signal freq, 0-3 - 781.25 kHz
  288              		.loc 1 67 0
  289 00de 8920     		mov	r0, #137
  290 00e0 0021     		mov	r1, #0
  291 00e2 FFF7FEFF 		bl	writeVCNL
  292              	.LVL45:
-  68:.\main.c      ****   writeVCNL(0x8A, 0x81); // proximity modulator timing - 129, recommended by Vishay 
+  68:main.c        ****   writeVCNL(0x8A, 0x81); // proximity modulator timing - 129, recommended by Vishay 
  293              		.loc 1 68 0
  294 00e6 8A20     		mov	r0, #138
  295 00e8 8121     		mov	r1, #129
  296 00ea FFF7FEFF 		bl	writeVCNL
  297              	.LVL46:
-  69:.\main.c      **** }
+  69:main.c        **** }
  298              		.loc 1 69 0
  299              		@ sp needed
  300 00ee 08BD     		pop	{r3, pc}
@@ -405,23 +405,23 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  313              		.type	readProximity, %function
  314              	readProximity:
  315              	.LFB39:
-  70:.\main.c      **** //Read Distance Signal
-  71:.\main.c      **** unsigned int readProximity(){
+  70:main.c        **** //Read Distance Signal
+  71:main.c        **** unsigned int readProximity(){
  316              		.loc 1 71 0
  317              		.cfi_startproc
  318 0000 10B5     		push	{r4, lr}
  319              		.cfi_def_cfa_offset 8
  320              		.cfi_offset 4, -8
  321              		.cfi_offset 14, -4
-  72:.\main.c      ****   int temp = readVCNL(0x80);
+  72:main.c        ****   int temp = readVCNL(0x80);
  322              		.loc 1 72 0
  323 0002 8020     		mov	r0, #128
  324 0004 FFF7FEFF 		bl	readVCNL
  325              	.LVL47:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 8
 
 
-  73:.\main.c      ****   writeVCNL(0x80, temp | 0x08);             // command the sensor to perform a proximity measure
+  73:main.c        ****   writeVCNL(0x80, temp | 0x08);             // command the sensor to perform a proximity measure
  326              		.loc 1 73 0
  327 0008 0823     		mov	r3, #8
  328 000a 011C     		mov	r1, r0
@@ -431,29 +431,29 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  332 0010 FFF7FEFF 		bl	writeVCNL
  333              	.LVL49:
  334              	.L14:
-  74:.\main.c      ****   while(!(readVCNL(0x80)&0x20));            // Wait for the proximity data ready bit to be set
+  74:main.c        ****   while(!(readVCNL(0x80)&0x20));            // Wait for the proximity data ready bit to be set
  335              		.loc 1 74 0 discriminator 1
  336 0014 8020     		mov	r0, #128
  337 0016 FFF7FEFF 		bl	readVCNL
  338              	.LVL50:
  339 001a 8306     		lsl	r3, r0, #26
  340 001c FAD5     		bpl	.L14
-  75:.\main.c      ****   unsigned int data = readVCNL(0x87) << 8;
+  75:main.c        ****   unsigned int data = readVCNL(0x87) << 8;
  341              		.loc 1 75 0
  342 001e 8720     		mov	r0, #135
  343 0020 FFF7FEFF 		bl	readVCNL
  344              	.LVL51:
  345 0024 0402     		lsl	r4, r0, #8
  346              	.LVL52:
-  76:.\main.c      ****   data |= readVCNL(0x88);
+  76:main.c        ****   data |= readVCNL(0x88);
  347              		.loc 1 76 0
  348 0026 8820     		mov	r0, #136
  349 0028 FFF7FEFF 		bl	readVCNL
  350              	.LVL53:
  351 002c 2043     		orr	r0, r4
  352              	.LVL54:
-  77:.\main.c      ****   return data;
-  78:.\main.c      **** }
+  77:main.c        ****   return data;
+  78:main.c        **** }
  353              		.loc 1 78 0
  354              		@ sp needed
  355 002e 10BD     		pop	{r4, pc}
@@ -468,23 +468,23 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  364              		.type	readAmbient, %function
  365              	readAmbient:
  366              	.LFB40:
-  79:.\main.c      **** //Read Ambient Signal
-  80:.\main.c      **** unsigned int readAmbient(){
+  79:main.c        **** //Read Ambient Signal
+  80:main.c        **** unsigned int readAmbient(){
  367              		.loc 1 80 0
  368              		.cfi_startproc
  369 0000 10B5     		push	{r4, lr}
  370              		.cfi_def_cfa_offset 8
  371              		.cfi_offset 4, -8
  372              		.cfi_offset 14, -4
-  81:.\main.c      ****   int temp = readVCNL(0x80);
+  81:main.c        ****   int temp = readVCNL(0x80);
  373              		.loc 1 81 0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 9
 
 
  374 0002 8020     		mov	r0, #128
  375 0004 FFF7FEFF 		bl	readVCNL
  376              	.LVL55:
-  82:.\main.c      ****   writeVCNL(0x80, temp | 0x10);             // command the sensor to perform ambient measure
+  82:main.c        ****   writeVCNL(0x80, temp | 0x10);             // command the sensor to perform ambient measure
  377              		.loc 1 82 0
  378 0008 1023     		mov	r3, #16
  379 000a 011C     		mov	r1, r0
@@ -494,29 +494,29 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  383 0010 FFF7FEFF 		bl	writeVCNL
  384              	.LVL57:
  385              	.L16:
-  83:.\main.c      ****   while(!(readVCNL(0x80)&0x40));            // wait for the proximity data ready bit to be set
+  83:main.c        ****   while(!(readVCNL(0x80)&0x40));            // wait for the proximity data ready bit to be set
  386              		.loc 1 83 0 discriminator 1
  387 0014 8020     		mov	r0, #128
  388 0016 FFF7FEFF 		bl	readVCNL
  389              	.LVL58:
  390 001a 4306     		lsl	r3, r0, #25
  391 001c FAD5     		bpl	.L16
-  84:.\main.c      ****   unsigned int data = readVCNL(0x85) << 8;  
+  84:main.c        ****   unsigned int data = readVCNL(0x85) << 8;  
  392              		.loc 1 84 0
  393 001e 8520     		mov	r0, #133
  394 0020 FFF7FEFF 		bl	readVCNL
  395              	.LVL59:
  396 0024 0402     		lsl	r4, r0, #8
  397              	.LVL60:
-  85:.\main.c      ****   data |= readVCNL(0x86);
+  85:main.c        ****   data |= readVCNL(0x86);
  398              		.loc 1 85 0
  399 0026 8620     		mov	r0, #134
  400 0028 FFF7FEFF 		bl	readVCNL
  401              	.LVL61:
  402 002c 2043     		orr	r0, r4
  403              	.LVL62:
-  86:.\main.c      ****   return data;
-  87:.\main.c      **** }
+  86:main.c        ****   return data;
+  87:main.c        **** }
  404              		.loc 1 87 0
  405              		@ sp needed
  406 002e 10BD     		pop	{r4, pc}
@@ -531,74 +531,74 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  415              		.type	main, %function
  416              	main:
  417              	.LFB41:
-  88:.\main.c      **** 
-  89:.\main.c      **** 
-  90:.\main.c      **** int main()
-  91:.\main.c      **** {
+  88:main.c        **** 
+  89:main.c        **** 
+  90:main.c        **** int main()
+  91:main.c        **** {
  418              		.loc 1 91 0
  419              		.cfi_startproc
  420 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 10
 
 
  421              		.cfi_def_cfa_offset 8
  422              		.cfi_offset 3, -8
  423              		.cfi_offset 14, -4
-  92:.\main.c      ****     CyGlobalIntEnable; 
+  92:main.c        ****     CyGlobalIntEnable; 
  424              		.loc 1 92 0
- 425              	@ 92 ".\main.c" 1
+ 425              	@ 92 "main.c" 1
  426 0002 62B6     		CPSIE   i
  427              	@ 0 "" 2
-  93:.\main.c      ****     LED_1_Write(0);
+  93:main.c        ****     LED_1_Write(0);
  428              		.loc 1 93 0
  429              		.code	16
  430 0004 0020     		mov	r0, #0
  431 0006 FFF7FEFF 		bl	LED_1_Write
  432              	.LVL63:
-  94:.\main.c      ****     LED_2_Write(0);
+  94:main.c        ****     LED_2_Write(0);
  433              		.loc 1 94 0
  434 000a 0020     		mov	r0, #0
  435 000c FFF7FEFF 		bl	LED_2_Write
  436              	.LVL64:
-  95:.\main.c      ****     LED_3_Write(0);
+  95:main.c        ****     LED_3_Write(0);
  437              		.loc 1 95 0
  438 0010 0020     		mov	r0, #0
  439 0012 FFF7FEFF 		bl	LED_3_Write
  440              	.LVL65:
-  96:.\main.c      ****     LED_4_Write(0);
+  96:main.c        ****     LED_4_Write(0);
  441              		.loc 1 96 0
  442 0016 0020     		mov	r0, #0
  443 0018 FFF7FEFF 		bl	LED_4_Write
  444              	.LVL66:
-  97:.\main.c      ****     I2C_1_Start();
+  97:main.c        ****     I2C_1_Start();
  445              		.loc 1 97 0
  446 001c FFF7FEFF 		bl	I2C_1_Start
  447              	.LVL67:
-  98:.\main.c      ****     I2C_1_Enable();
+  98:main.c        ****     I2C_1_Enable();
  448              		.loc 1 98 0
  449 0020 FFF7FEFF 		bl	I2C_1_Enable
  450              	.LVL68:
-  99:.\main.c      ****     CyDelay(100);
+  99:main.c        ****     CyDelay(100);
  451              		.loc 1 99 0
  452 0024 6420     		mov	r0, #100
  453 0026 FFF7FEFF 		bl	CyDelay
  454              	.LVL69:
- 100:.\main.c      ****     initVCNL();
+ 100:main.c        ****     initVCNL();
  455              		.loc 1 100 0
  456 002a FFF7FEFF 		bl	initVCNL
  457              	.LVL70:
  458              	.L18:
- 101:.\main.c      ****     for(;;)
- 102:.\main.c      ****     {
- 103:.\main.c      ****         P=readProximity();
+ 101:main.c        ****     for(;;)
+ 102:main.c        ****     {
+ 103:main.c        ****         P=readProximity();
  459              		.loc 1 103 0
  460 002e FFF7FEFF 		bl	readProximity
  461              	.LVL71:
  462 0032 80B2     		uxth	r0, r0
  463 0034 064B     		ldr	r3, .L21
  464 0036 9880     		strh	r0, [r3, #4]
- 104:.\main.c      ****         if(P<3000){
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 11
+ 104:main.c        ****         if(P<3000){
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 11
 
 
  465              		.loc 1 104 0
@@ -606,16 +606,16 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  467 003a 064B     		ldr	r3, .L21+4
  468 003c 9842     		cmp	r0, r3
  469 003e 03DC     		bgt	.L19
- 105:.\main.c      ****             LED_2_Write(1);
+ 105:main.c        ****             LED_2_Write(1);
  470              		.loc 1 105 0
  471 0040 0120     		mov	r0, #1
  472 0042 FFF7FEFF 		bl	LED_2_Write
  473              	.LVL72:
  474 0046 F2E7     		b	.L18
  475              	.L19:
- 106:.\main.c      ****         }
- 107:.\main.c      ****         else{
- 108:.\main.c      ****             LED_2_Write(0);
+ 106:main.c        ****         }
+ 107:main.c        ****         else{
+ 108:main.c        ****             LED_2_Write(0);
  476              		.loc 1 108 0
  477 0048 0020     		mov	r0, #0
  478 004a FFF7FEFF 		bl	LED_2_Write
@@ -658,21 +658,21 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  515 0004 0400     		.2byte	0x4
  516 0006 00000000 		.4byte	.Ldebug_abbrev0
  517 000a 04       		.byte	0x4
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 12
 
 
  518 000b 01       		.uleb128 0x1
- 519 000c 89010000 		.4byte	.LASF35
+ 519 000c A8010000 		.4byte	.LASF35
  520 0010 01       		.byte	0x1
- 521 0011 03010000 		.4byte	.LASF36
- 522 0015 C4000000 		.4byte	.LASF37
+ 521 0011 8F010000 		.4byte	.LASF36
+ 522 0015 BD000000 		.4byte	.LASF37
  523 0019 00000000 		.4byte	.Ldebug_ranges0+0
  524 001d 00000000 		.4byte	0
  525 0021 00000000 		.4byte	.Ldebug_line0
  526 0025 02       		.uleb128 0x2
  527 0026 01       		.byte	0x1
  528 0027 06       		.byte	0x6
- 529 0028 4D020000 		.4byte	.LASF0
+ 529 0028 6C020000 		.4byte	.LASF0
  530 002c 02       		.uleb128 0x2
  531 002d 01       		.byte	0x1
  532 002e 08       		.byte	0x8
@@ -680,7 +680,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  534 0033 02       		.uleb128 0x2
  535 0034 02       		.byte	0x2
  536 0035 05       		.byte	0x5
- 537 0036 3A020000 		.4byte	.LASF2
+ 537 0036 59020000 		.4byte	.LASF2
  538 003a 02       		.uleb128 0x2
  539 003b 02       		.byte	0x2
  540 003c 07       		.byte	0x7
@@ -688,7 +688,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  542 0041 02       		.uleb128 0x2
  543 0042 04       		.byte	0x4
  544 0043 05       		.byte	0x5
- 545 0044 44020000 		.4byte	.LASF4
+ 545 0044 63020000 		.4byte	.LASF4
  546 0048 02       		.uleb128 0x2
  547 0049 04       		.byte	0x4
  548 004a 07       		.byte	0x7
@@ -696,11 +696,11 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  550 004f 02       		.uleb128 0x2
  551 0050 08       		.byte	0x8
  552 0051 05       		.byte	0x5
- 553 0052 69010000 		.4byte	.LASF6
+ 553 0052 81010000 		.4byte	.LASF6
  554 0056 02       		.uleb128 0x2
  555 0057 08       		.byte	0x8
  556 0058 07       		.byte	0x7
- 557 0059 3D010000 		.4byte	.LASF7
+ 557 0059 55010000 		.4byte	.LASF7
  558 005d 03       		.uleb128 0x3
  559 005e 04       		.byte	0x4
  560 005f 05       		.byte	0x5
@@ -708,22 +708,22 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  562 0064 02       		.uleb128 0x2
  563 0065 04       		.byte	0x4
  564 0066 07       		.byte	0x7
- 565 0067 28010000 		.4byte	.LASF8
+ 565 0067 40010000 		.4byte	.LASF8
  566 006b 04       		.uleb128 0x4
  567 006c B7000000 		.4byte	.LASF9
  568 0070 02       		.byte	0x2
  569 0071 9801     		.2byte	0x198
  570 0073 2C000000 		.4byte	0x2c
  571 0077 04       		.uleb128 0x4
- 572 0078 0C010000 		.4byte	.LASF10
+ 572 0078 29010000 		.4byte	.LASF10
  573 007c 02       		.byte	0x2
  574 007d 9901     		.2byte	0x199
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 13
 
 
  575 007f 3A000000 		.4byte	0x3a
  576 0083 04       		.uleb128 0x4
- 577 0084 1C010000 		.4byte	.LASF11
+ 577 0084 39010000 		.4byte	.LASF11
  578 0088 02       		.byte	0x2
  579 0089 9A01     		.2byte	0x19a
  580 008b 48000000 		.4byte	0x48
@@ -739,15 +739,15 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  590 00a2 02       		.uleb128 0x2
  591 00a3 08       		.byte	0x8
  592 00a4 04       		.byte	0x4
- 593 00a5 BD000000 		.4byte	.LASF14
+ 593 00a5 1D010000 		.4byte	.LASF14
  594 00a9 02       		.uleb128 0x2
  595 00aa 01       		.byte	0x1
  596 00ab 08       		.byte	0x8
- 597 00ac 77010000 		.4byte	.LASF15
+ 597 00ac 96010000 		.4byte	.LASF15
  598 00b0 02       		.uleb128 0x2
  599 00b1 04       		.byte	0x4
  600 00b2 07       		.byte	0x7
- 601 00b3 60010000 		.4byte	.LASF16
+ 601 00b3 78010000 		.4byte	.LASF16
  602 00b7 05       		.uleb128 0x5
  603 00b8 23000000 		.4byte	.LASF22
  604 00bc 01       		.byte	0x1
@@ -758,7 +758,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  609 00c7 9C       		.byte	0x9c
  610 00c8 25010000 		.4byte	0x125
  611 00cc 06       		.uleb128 0x6
- 612 00cd 35010000 		.4byte	.LASF17
+ 612 00cd 4D010000 		.4byte	.LASF17
  613 00d1 01       		.byte	0x1
  614 00d2 06       		.byte	0x6
  615 00d3 5D000000 		.4byte	0x5d
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  629 00f6 91       		.byte	0x91
  630 00f7 74       		.sleb128 -12
  631 00f8 08       		.uleb128 0x8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 14
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 14
 
 
  632 00f9 16000000 		.4byte	.LVL3
@@ -828,7 +828,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  676 0149 9C       		.byte	0x9c
  677 014a D2010000 		.4byte	0x1d2
  678 014e 06       		.uleb128 0x6
- 679 014f 35010000 		.4byte	.LASF17
+ 679 014f 4D010000 		.4byte	.LASF17
  680 0153 01       		.byte	0x1
  681 0154 0F       		.byte	0xf
  682 0155 5D000000 		.4byte	0x5d
@@ -838,14 +838,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  686 0162 01       		.byte	0x1
  687 0163 10       		.byte	0x10
  688 0164 D2010000 		.4byte	0x1d2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 15
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 15
 
 
  689 0168 02       		.uleb128 0x2
  690 0169 91       		.byte	0x91
  691 016a 74       		.sleb128 -12
  692 016b 07       		.uleb128 0x7
- 693 016c 13010000 		.4byte	.LASF20
+ 693 016c 30010000 		.4byte	.LASF20
  694 0170 01       		.byte	0x1
  695 0171 12       		.byte	0x12
  696 0172 D2010000 		.4byte	0x1d2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  743 01bc 09       		.uleb128 0x9
  744 01bd 01       		.uleb128 0x1
  745 01be 51       		.byte	0x51
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 16
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 16
 
 
  746 01bf 02       		.uleb128 0x2
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  800 022b 31       		.byte	0x31
  801 022c 00       		.byte	0
  802 022d 08       		.uleb128 0x8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 17
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 17
 
 
  803 022e 18000000 		.4byte	.LVL14
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  857 029a 09       		.uleb128 0x9
  858 029b 01       		.uleb128 0x1
  859 029c 50       		.byte	0x50
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 18
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 18
 
 
  860 029d 01       		.uleb128 0x1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  914 0300 08       		.uleb128 0x8
  915 0301 5C000000 		.4byte	.LVL27
  916 0305 20070000 		.4byte	0x720
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 19
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 19
 
 
  917 0309 13030000 		.4byte	0x313
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  971 036f 01       		.uleb128 0x1
  972 0370 30       		.byte	0x30
  973 0371 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 20
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 20
 
 
  974 0372 08       		.uleb128 0x8
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1028 03db E6030000 		.4byte	0x3e6
  1029 03df 09       		.uleb128 0x9
  1030 03e0 01       		.uleb128 0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 21
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 21
 
 
  1031 03e1 50       		.byte	0x50
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1085 0444 09       		.uleb128 0x9
  1086 0445 01       		.uleb128 0x1
  1087 0446 50       		.byte	0x50
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 22
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 22
 
 
  1088 0447 02       		.uleb128 0x2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1142 0495 15000000 		.4byte	.LASF23
  1143 0499 01       		.byte	0x1
  1144 049a 47       		.byte	0x47
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 23
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 23
 
 
  1145 049b 64000000 		.4byte	0x64
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1199 0510 1B050000 		.4byte	0x51b
  1200 0514 09       		.uleb128 0x9
  1201 0515 01       		.uleb128 0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 24
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 24
 
 
  1202 0516 50       		.byte	0x50
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1256 0585 01       		.uleb128 0x1
  1257 0586 50       		.byte	0x50
  1258 0587 02       		.uleb128 0x2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 25
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 25
 
 
  1259 0588 08       		.byte	0x8
@@ -1478,7 +1478,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1293 05c2 00       		.byte	0
  1294 05c3 00       		.byte	0
  1295 05c4 11       		.uleb128 0x11
- 1296 05c5 23010000 		.4byte	.LASF25
+ 1296 05c5 24010000 		.4byte	.LASF25
  1297 05c9 01       		.byte	0x1
  1298 05ca 5A       		.byte	0x5a
  1299 05cb 5D000000 		.4byte	0x5d
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1313 05ee 30       		.byte	0x30
  1314 05ef 00       		.byte	0
  1315 05f0 08       		.uleb128 0x8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 26
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 26
 
 
  1316 05f1 10000000 		.4byte	.LVL64
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1370 0666 0F070000 		.4byte	0x70f
  1371 066a 74060000 		.4byte	0x674
  1372 066e 09       		.uleb128 0x9
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 27
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 27
 
 
  1373 066f 01       		.uleb128 0x1
@@ -1593,7 +1593,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1402 069d 03       		.byte	0x3
  1403 069e 00000000 		.4byte	P
  1404 06a2 13       		.uleb128 0x13
- 1405 06a3 6D020000 		.4byte	.LASF26
+ 1405 06a3 8C020000 		.4byte	.LASF26
  1406 06a7 03       		.byte	0x3
  1407 06a8 1301     		.2byte	0x113
  1408 06aa 83000000 		.4byte	0x83
@@ -1616,9 +1616,9 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1425 06d3 0F01     		.2byte	0x10f
  1426 06d5 83000000 		.4byte	0x83
  1427 06d9 13       		.uleb128 0x13
- 1428 06da 17020000 		.4byte	.LASF27
+ 1428 06da 36020000 		.4byte	.LASF27
  1429 06de 03       		.byte	0x3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 28
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 28
 
 
  1430 06df 1401     		.2byte	0x114
@@ -1634,7 +1634,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1440 06f9 83000000 		.4byte	0x83
  1441 06fd 00       		.byte	0
  1442 06fe 17       		.uleb128 0x17
- 1443 06ff 59020000 		.4byte	.LASF28
+ 1443 06ff 78020000 		.4byte	.LASF28
  1444 0703 04       		.byte	0x4
  1445 0704 33       		.byte	0x33
  1446 0705 0F070000 		.4byte	0x70f
@@ -1658,7 +1658,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1464 072c 6B000000 		.4byte	0x6b
  1465 0730 00       		.byte	0
  1466 0731 17       		.uleb128 0x17
- 1467 0732 54010000 		.4byte	.LASF31
+ 1467 0732 6C010000 		.4byte	.LASF31
  1468 0736 07       		.byte	0x7
  1469 0737 33       		.byte	0x33
  1470 0738 42070000 		.4byte	0x742
@@ -1666,7 +1666,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1472 073d 6B000000 		.4byte	0x6b
  1473 0741 00       		.byte	0
  1474 0742 17       		.uleb128 0x17
- 1475 0743 65020000 		.4byte	.LASF32
+ 1475 0743 84020000 		.4byte	.LASF32
  1476 0747 08       		.byte	0x8
  1477 0748 D7       		.byte	0xd7
  1478 0749 53070000 		.4byte	0x753
@@ -1674,14 +1674,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1480 074e 83000000 		.4byte	0x83
  1481 0752 00       		.byte	0
  1482 0753 18       		.uleb128 0x18
- 1483 0754 2E020000 		.4byte	.LASF33
+ 1483 0754 4D020000 		.4byte	.LASF33
  1484 0758 09       		.byte	0x9
  1485 0759 6E       		.byte	0x6e
  1486 075a 18       		.uleb128 0x18
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 29
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 29
 
 
- 1487 075b 7C010000 		.4byte	.LASF34
+ 1487 075b 9B010000 		.4byte	.LASF34
  1488 075f 09       		.byte	0x9
  1489 0760 6D       		.byte	0x6d
  1490 0761 00       		.byte	0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1541 0030 3B       		.uleb128 0x3b
  1542 0031 05       		.uleb128 0x5
  1543 0032 49       		.uleb128 0x49
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 30
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 30
 
 
  1544 0033 13       		.uleb128 0x13
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1598 006a 02       		.uleb128 0x2
  1599 006b 18       		.uleb128 0x18
  1600 006c 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 31
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 31
 
 
  1601 006d 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1655 00aa 0E       		.uleb128 0xe
  1656 00ab 3A       		.uleb128 0x3a
  1657 00ac 0B       		.uleb128 0xb
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 32
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 32
 
 
  1658 00ad 3B       		.uleb128 0x3b
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1712 00e5 00       		.byte	0
  1713 00e6 00       		.byte	0
  1714 00e7 10       		.uleb128 0x10
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 33
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 33
 
 
  1715 00e8 898201   		.uleb128 0x4109
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1769 0121 19       		.uleb128 0x19
  1770 0122 03       		.uleb128 0x3
  1771 0123 0E       		.uleb128 0xe
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 34
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 34
 
 
  1772 0124 3A       		.uleb128 0x3a
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1826 015a 03       		.uleb128 0x3
  1827 015b 0E       		.uleb128 0xe
  1828 015c 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 35
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 35
 
 
  1829 015d 0B       		.uleb128 0xb
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1883 0037 01       		.uleb128 0x1
  1884 0038 51       		.byte	0x51
  1885 0039 9F       		.byte	0x9f
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 36
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 36
 
 
  1886 003a 00000000 		.4byte	0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1940 00c9 2E000000 		.4byte	.LVL62
  1941 00cd 0100     		.2byte	0x1
  1942 00cf 54       		.byte	0x54
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 37
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 37
 
 
  1943 00d0 2E000000 		.4byte	.LVL62
@@ -2207,8 +2207,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1986 0034 00000000 		.4byte	0
  1987              		.section	.debug_line,"",%progbits
  1988              	.Ldebug_line0:
- 1989 0000 8D010000 		.section	.debug_str,"MS",%progbits,1
- 1989      02009400 
+ 1989 0000 8B010000 		.section	.debug_str,"MS",%progbits,1
+ 1989      02009200 
  1989      00000201 
  1989      FB0E0D00 
  1989      01010101 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  1991      69746500 
  1992              	.LASF39:
  1993 000c 696E6974 		.ascii	"initVCNL\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 38
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 38
 
 
  1993      56434E4C 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  2019 00a0 6C6F6E67 		.ascii	"long unsigned int\000"
  2019      20756E73 
  2019      69676E65 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 39
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 39
 
 
  2019      6420696E 
@@ -2289,127 +2289,127 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 1
  2022              	.LASF9:
  2023 00b7 75696E74 		.ascii	"uint8\000"
  2023      3800
- 2024              	.LASF14:
- 2025 00bd 646F7562 		.ascii	"double\000"
- 2025      6C6500
- 2026              	.LASF37:
- 2027 00c4 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\Test_Robot\\Test"
- 2027      73657273 
- 2027      5C48656E 
- 2027      72792041 
- 2027      6C626572 
- 2028 00f2 5F53656E 		.ascii	"_Sensor_F1.cydsn\000"
- 2028      736F725F 
- 2028      46312E63 
- 2028      7964736E 
- 2028      00
- 2029              	.LASF36:
- 2030 0103 2E5C6D61 		.ascii	".\\main.c\000"
- 2030      696E2E63 
- 2030      00
- 2031              	.LASF10:
- 2032 010c 75696E74 		.ascii	"uint16\000"
- 2032      313600
- 2033              	.LASF20:
- 2034 0113 72656164 		.ascii	"read_Buf\000"
- 2034      5F427566 
- 2034      00
- 2035              	.LASF11:
- 2036 011c 75696E74 		.ascii	"uint32\000"
- 2036      333200
- 2037              	.LASF25:
- 2038 0123 6D61696E 		.ascii	"main\000"
- 2038      00
- 2039              	.LASF8:
- 2040 0128 756E7369 		.ascii	"unsigned int\000"
- 2040      676E6564 
- 2040      20696E74 
- 2040      00
- 2041              	.LASF17:
- 2042 0135 61646472 		.ascii	"address\000"
- 2042      65737300 
- 2043              	.LASF7:
- 2044 013d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2044      206C6F6E 
- 2044      6720756E 
- 2044      7369676E 
- 2044      65642069 
- 2045              	.LASF31:
- 2046 0154 4C45445F 		.ascii	"LED_4_Write\000"
- 2046      345F5772 
- 2046      69746500 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 40
+ 2024              	.LASF37:
+ 2025 00bd 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 2025      73657273 
+ 2025      5C48656E 
+ 2025      72792041 
+ 2025      6C626572 
+ 2026 00eb 6F64756C 		.ascii	"odular\\Robot_Test\\Test_Robot\\Test_Sensor_F1.cyds"
+ 2026      61725C52 
+ 2026      6F626F74 
+ 2026      5F546573 
+ 2026      745C5465 
+ 2027 011b 6E00     		.ascii	"n\000"
+ 2028              	.LASF14:
+ 2029 011d 646F7562 		.ascii	"double\000"
+ 2029      6C6500
+ 2030              	.LASF25:
+ 2031 0124 6D61696E 		.ascii	"main\000"
+ 2031      00
+ 2032              	.LASF10:
+ 2033 0129 75696E74 		.ascii	"uint16\000"
+ 2033      313600
+ 2034              	.LASF20:
+ 2035 0130 72656164 		.ascii	"read_Buf\000"
+ 2035      5F427566 
+ 2035      00
+ 2036              	.LASF11:
+ 2037 0139 75696E74 		.ascii	"uint32\000"
+ 2037      333200
+ 2038              	.LASF8:
+ 2039 0140 756E7369 		.ascii	"unsigned int\000"
+ 2039      676E6564 
+ 2039      20696E74 
+ 2039      00
+ 2040              	.LASF17:
+ 2041 014d 61646472 		.ascii	"address\000"
+ 2041      65737300 
+ 2042              	.LASF7:
+ 2043 0155 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2043      206C6F6E 
+ 2043      6720756E 
+ 2043      7369676E 
+ 2043      65642069 
+ 2044              	.LASF31:
+ 2045 016c 4C45445F 		.ascii	"LED_4_Write\000"
+ 2045      345F5772 
+ 2045      69746500 
+ 2046              	.LASF16:
+ 2047 0178 73697A65 		.ascii	"sizetype\000"
+ 2047      74797065 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 40
 
 
- 2047              	.LASF16:
- 2048 0160 73697A65 		.ascii	"sizetype\000"
- 2048      74797065 
- 2048      00
- 2049              	.LASF6:
- 2050 0169 6C6F6E67 		.ascii	"long long int\000"
- 2050      206C6F6E 
- 2050      6720696E 
- 2050      7400
- 2051              	.LASF15:
- 2052 0177 63686172 		.ascii	"char\000"
- 2052      00
- 2053              	.LASF34:
- 2054 017c 4932435F 		.ascii	"I2C_1_Enable\000"
- 2054      315F456E 
- 2054      61626C65 
- 2054      00
- 2055              	.LASF35:
- 2056 0189 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 2056      4320342E 
- 2056      392E3320 
- 2056      32303135 
- 2056      30333033 
- 2057 01bc 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 2057      20726576 
- 2057      6973696F 
- 2057      6E203232 
- 2057      31323230 
- 2058 01ef 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2058      66756E63 
- 2058      74696F6E 
- 2058      2D736563 
- 2058      74696F6E 
- 2059              	.LASF27:
- 2060 0217 4932435F 		.ascii	"I2C_1_I2CMasterReadBuf\000"
- 2060      315F4932 
- 2060      434D6173 
- 2060      74657252 
- 2060      65616442 
- 2061              	.LASF33:
- 2062 022e 4932435F 		.ascii	"I2C_1_Start\000"
- 2062      315F5374 
- 2062      61727400 
- 2063              	.LASF2:
- 2064 023a 73686F72 		.ascii	"short int\000"
- 2064      7420696E 
- 2064      7400
- 2065              	.LASF4:
- 2066 0244 6C6F6E67 		.ascii	"long int\000"
- 2066      20696E74 
- 2066      00
- 2067              	.LASF0:
- 2068 024d 7369676E 		.ascii	"signed char\000"
- 2068      65642063 
- 2068      68617200 
- 2069              	.LASF28:
- 2070 0259 4C45445F 		.ascii	"LED_1_Write\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbtzf9D.s 			page 41
+ 2047      00
+ 2048              	.LASF6:
+ 2049 0181 6C6F6E67 		.ascii	"long long int\000"
+ 2049      206C6F6E 
+ 2049      6720696E 
+ 2049      7400
+ 2050              	.LASF36:
+ 2051 018f 6D61696E 		.ascii	"main.c\000"
+ 2051      2E6300
+ 2052              	.LASF15:
+ 2053 0196 63686172 		.ascii	"char\000"
+ 2053      00
+ 2054              	.LASF34:
+ 2055 019b 4932435F 		.ascii	"I2C_1_Enable\000"
+ 2055      315F456E 
+ 2055      61626C65 
+ 2055      00
+ 2056              	.LASF35:
+ 2057 01a8 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2057      4320342E 
+ 2057      392E3320 
+ 2057      32303135 
+ 2057      30333033 
+ 2058 01db 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 2058      20726576 
+ 2058      6973696F 
+ 2058      6E203232 
+ 2058      31323230 
+ 2059 020e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2059      66756E63 
+ 2059      74696F6E 
+ 2059      2D736563 
+ 2059      74696F6E 
+ 2060              	.LASF27:
+ 2061 0236 4932435F 		.ascii	"I2C_1_I2CMasterReadBuf\000"
+ 2061      315F4932 
+ 2061      434D6173 
+ 2061      74657252 
+ 2061      65616442 
+ 2062              	.LASF33:
+ 2063 024d 4932435F 		.ascii	"I2C_1_Start\000"
+ 2063      315F5374 
+ 2063      61727400 
+ 2064              	.LASF2:
+ 2065 0259 73686F72 		.ascii	"short int\000"
+ 2065      7420696E 
+ 2065      7400
+ 2066              	.LASF4:
+ 2067 0263 6C6F6E67 		.ascii	"long int\000"
+ 2067      20696E74 
+ 2067      00
+ 2068              	.LASF0:
+ 2069 026c 7369676E 		.ascii	"signed char\000"
+ 2069      65642063 
+ 2069      68617200 
+ 2070              	.LASF28:
+ 2071 0278 4C45445F 		.ascii	"LED_1_Write\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFUJGwb.s 			page 41
 
 
- 2070      315F5772 
- 2070      69746500 
- 2071              	.LASF32:
- 2072 0265 43794465 		.ascii	"CyDelay\000"
- 2072      6C617900 
- 2073              	.LASF26:
- 2074 026d 4932435F 		.ascii	"I2C_1_I2CMasterWriteBuf\000"
- 2074      315F4932 
- 2074      434D6173 
- 2074      74657257 
- 2074      72697465 
- 2075              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 2071      315F5772 
+ 2071      69746500 
+ 2072              	.LASF32:
+ 2073 0284 43794465 		.ascii	"CyDelay\000"
+ 2073      6C617900 
+ 2074              	.LASF26:
+ 2075 028c 4932435F 		.ascii	"I2C_1_I2CMasterWriteBuf\000"
+ 2075      315F4932 
+ 2075      434D6173 
+ 2075      74657257 
+ 2075      72697465 
+ 2076              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -1,6 +1,6 @@
 -- Project:   Test_Sensor_F2
--- Generated: 01/04/2017 18:35:59
--- PSoC Creator  3.3 CP3
+-- Generated: 06/24/2017 17:38:31
+-- PSoC Creator  4.0 Update 1
 
 ENTITY Test_Sensor_F2 IS
     PORT(
@@ -814,7 +814,8 @@ BEGIN
 
     \I2C_1:SCB_IRQ\:interrupt
         GENERIC MAP(
-            int_type => "10")
+            int_type => "10",
+            is_nmi => 0)
         PORT MAP(
             interrupt => Net_27,
             clock => ClockBlock_HFCLK);

@@ -1,9 +1,9 @@
 -- ======================================================================
 -- Test_Sensor_F4.ctl generated from Test_Sensor_F4
--- 01/04/2017 at 20:39
+-- 06/26/2017 at 20:17
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 
--- M0S8 Clock Editor
+-- PSoC Clock Editor
 -- Directives Editor
 -- Analog Device Editor

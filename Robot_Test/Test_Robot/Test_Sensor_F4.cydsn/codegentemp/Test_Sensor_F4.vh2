@@ -2,7 +2,7 @@
 --	Conversion of Test_Sensor_F4.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Jan 04 20:39:18 2017
+--	Mon Jun 26 20:17:53 2017
 --
 
 USE cypress.cypress.all;
@@ -69,6 +69,8 @@ SIGNAL \I2C_1:miso_s_wire\ : bit;
 SIGNAL Net_30 : bit;
 SIGNAL Net_29 : bit;
 SIGNAL \I2C_1:Net_1028\ : bit;
+SIGNAL Net_25 : bit;
+SIGNAL Net_26 : bit;
 SIGNAL Net_35 : bit;
 SIGNAL Net_36 : bit;
 SIGNAL Net_37 : bit;
@@ -76,8 +78,6 @@ SIGNAL Net_38 : bit;
 SIGNAL Net_39 : bit;
 SIGNAL Net_40 : bit;
 SIGNAL Net_41 : bit;
-SIGNAL Net_25 : bit;
-SIGNAL Net_26 : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -515,7 +515,8 @@ LED_4:cy_psoc3_pins_v1_10
 		out_reset=>zero,
 		interrupt=>\I2C_1:tmpINTERRUPT_0__scl_net_0\);
 \I2C_1:SCB_IRQ\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_27);
 \I2C_1:SCB\:cy_m0s8_scb_v2_0
 	GENERIC MAP(cy_registers=>"",
