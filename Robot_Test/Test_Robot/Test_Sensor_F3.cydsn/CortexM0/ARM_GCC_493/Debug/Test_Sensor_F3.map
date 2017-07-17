@@ -866,24 +866,24 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x41e7
+.debug_info     0x00000000     0x41e8
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x762 .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_info    0x00000762       0xfe .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
- .debug_info    0x00000860      0x38c .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_info    0x00000bec      0x2af .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(cyfitter_cfg.o)
- .debug_info    0x00000e9b      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(LED_1.o)
- .debug_info    0x00001038      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(LED_2.o)
- .debug_info    0x000011d5      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(LED_3.o)
- .debug_info    0x00001372      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(LED_4.o)
- .debug_info    0x0000150f      0xcf4 .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(CyLib.o)
- .debug_info    0x00002203     0x1056 .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(CyLFClk.o)
- .debug_info    0x00003259      0x297 .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(I2C_1.o)
- .debug_info    0x000034f0      0x1ab .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(I2C_1_I2C.o)
- .debug_info    0x0000369b      0x5a3 .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(I2C_1_I2C_MASTER.o)
- .debug_info    0x00003c3e       0xae .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(CyBootAsmGnu.o)
- .debug_info    0x00003cec      0x36e .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(CyFlash.o)
- .debug_info    0x0000405a      0x18d .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(I2C_1_I2C_INT.o)
+ .debug_info    0x00000000      0x763 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_info    0x00000763       0xfe .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x00000861      0x38c .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_info    0x00000bed      0x2af .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(cyfitter_cfg.o)
+ .debug_info    0x00000e9c      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(LED_1.o)
+ .debug_info    0x00001039      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(LED_2.o)
+ .debug_info    0x000011d6      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(LED_3.o)
+ .debug_info    0x00001373      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(LED_4.o)
+ .debug_info    0x00001510      0xcf4 .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(CyLib.o)
+ .debug_info    0x00002204     0x1056 .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(CyLFClk.o)
+ .debug_info    0x0000325a      0x297 .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(I2C_1.o)
+ .debug_info    0x000034f1      0x1ab .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(I2C_1_I2C.o)
+ .debug_info    0x0000369c      0x5a3 .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(I2C_1_I2C_MASTER.o)
+ .debug_info    0x00003c3f       0xae .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(CyBootAsmGnu.o)
+ .debug_info    0x00003ced      0x36e .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(CyFlash.o)
+ .debug_info    0x0000405b      0x18d .\CortexM0\ARM_GCC_493\Debug\Test_Sensor_F3.a(I2C_1_I2C_INT.o)
 
 .debug_abbrev   0x00000000     0x137a
  *(.debug_abbrev)

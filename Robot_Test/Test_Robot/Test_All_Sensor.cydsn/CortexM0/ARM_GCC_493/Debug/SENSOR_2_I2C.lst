@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,358 +25,358 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
   22              		.type	SENSOR_2_I2CInit, %function
   23              	SENSOR_2_I2CInit:
   24              	.LFB1:
-  25              		.file 1 ".\\Generated_Source\\PSoC4\\SENSOR_2_I2C.c"
-   1:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** /***************************************************************************//**
-   2:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** * \file SENSOR_2_I2C.c
-   3:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** * \version 3.20
-   4:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *
-   5:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** * \brief
-   6:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *  This file provides the source code to the API for the SCB Component in
-   7:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *  I2C mode.
-   8:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *
-   9:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** * Note:
-  10:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *
-  11:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *******************************************************************************
-  12:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** * \copyright
-  13:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** * Copyright 2013-2016, Cypress Semiconductor Corporation.  All rights reserved.
-  14:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** * You may use this file only in accordance with the license, terms, conditions,
-  15:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  16:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** * the software package with which this file was provided.
-  17:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *******************************************************************************/
-  18:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  19:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** #include "SENSOR_2_PVT.h"
-  20:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** #include "SENSOR_2_I2C_PVT.h"
-  21:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  22:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  23:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** /***************************************
-  24:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *      I2C Private Vars
-  25:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** ***************************************/
-  26:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  27:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** volatile uint8 SENSOR_2_state;  /* Current state of I2C FSM */
-  28:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  29:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** #if(SENSOR_2_SCB_MODE_UNCONFIG_CONST_CFG)
-  30:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  31:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     /***************************************
-  32:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  Configuration Structure Initialization
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 2
+  25              		.file 1 "Generated_Source\\PSoC4\\SENSOR_2_I2C.c"
+   1:Generated_Source\PSoC4/SENSOR_2_I2C.c **** /***************************************************************************//**
+   2:Generated_Source\PSoC4/SENSOR_2_I2C.c **** * \file SENSOR_2_I2C.c
+   3:Generated_Source\PSoC4/SENSOR_2_I2C.c **** * \version 3.20
+   4:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *
+   5:Generated_Source\PSoC4/SENSOR_2_I2C.c **** * \brief
+   6:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *  This file provides the source code to the API for the SCB Component in
+   7:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *  I2C mode.
+   8:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *
+   9:Generated_Source\PSoC4/SENSOR_2_I2C.c **** * Note:
+  10:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *
+  11:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *******************************************************************************
+  12:Generated_Source\PSoC4/SENSOR_2_I2C.c **** * \copyright
+  13:Generated_Source\PSoC4/SENSOR_2_I2C.c **** * Copyright 2013-2016, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC4/SENSOR_2_I2C.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC4/SENSOR_2_I2C.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC4/SENSOR_2_I2C.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *******************************************************************************/
+  18:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  19:Generated_Source\PSoC4/SENSOR_2_I2C.c **** #include "SENSOR_2_PVT.h"
+  20:Generated_Source\PSoC4/SENSOR_2_I2C.c **** #include "SENSOR_2_I2C_PVT.h"
+  21:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  22:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  23:Generated_Source\PSoC4/SENSOR_2_I2C.c **** /***************************************
+  24:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *      I2C Private Vars
+  25:Generated_Source\PSoC4/SENSOR_2_I2C.c **** ***************************************/
+  26:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  27:Generated_Source\PSoC4/SENSOR_2_I2C.c **** volatile uint8 SENSOR_2_state;  /* Current state of I2C FSM */
+  28:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  29:Generated_Source\PSoC4/SENSOR_2_I2C.c **** #if(SENSOR_2_SCB_MODE_UNCONFIG_CONST_CFG)
+  30:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  31:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     /***************************************
+  32:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  Configuration Structure Initialization
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 2
 
 
-  33:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     ***************************************/
-  34:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  35:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     /* Constant configuration of I2C */
-  36:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     const SENSOR_2_I2C_INIT_STRUCT SENSOR_2_configI2C =
-  37:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     {
-  38:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_MODE,
-  39:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_OVS_FACTOR_LOW,
-  40:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_OVS_FACTOR_HIGH,
-  41:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_MEDIAN_FILTER_ENABLE,
-  42:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_SLAVE_ADDRESS,
-  43:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_SLAVE_ADDRESS_MASK,
-  44:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_ACCEPT_ADDRESS,
-  45:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_WAKE_ENABLE,
-  46:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_BYTE_MODE_ENABLE,
-  47:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_DATA_RATE,
-  48:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_ACCEPT_GENERAL_CALL,
-  49:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     };
-  50:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  51:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     /*******************************************************************************
-  52:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     * Function Name: SENSOR_2_I2CInit
-  53:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     ****************************************************************************//**
-  54:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
-  55:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
-  56:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  Configures the SENSOR_2 for I2C operation.
-  57:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
-  58:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  This function is intended specifically to be used when the SENSOR_2 
-  59:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  configuration is set to “Unconfigured SENSOR_2” in the customizer. 
-  60:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  After initializing the SENSOR_2 in I2C mode using this function, 
-  61:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  the component can be enabled using the SENSOR_2_Start() or 
-  62:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     * SENSOR_2_Enable() function.
-  63:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  This function uses a pointer to a structure that provides the configuration 
-  64:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  settings. This structure contains the same information that would otherwise 
-  65:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  be provided by the customizer settings.
-  66:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
-  67:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  \param config: pointer to a structure that contains the following list of 
-  68:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *   fields. These fields match the selections available in the customizer. 
-  69:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *   Refer to the customizer for further description of the settings.
-  70:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
-  71:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *******************************************************************************/
-  72:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     void SENSOR_2_I2CInit(const SENSOR_2_I2C_INIT_STRUCT *config)
-  73:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     {
-  74:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         uint32 medianFilter;
-  75:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         uint32 locEnableWake;
-  76:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  77:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         if(NULL == config)
-  78:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         {
-  79:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             CYASSERT(0u != 0u); /* Halt execution due to bad function parameter */
-  80:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         }
-  81:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         else
-  82:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         {
-  83:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure pins */
-  84:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_SetPins(SENSOR_2_SCB_MODE_I2C, SENSOR_2_DUMMY_PARAM,
-  85:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                      SENSOR_2_DUMMY_PARAM);
-  86:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  87:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Store internal configuration */
-  88:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_scbMode       = (uint8) SENSOR_2_SCB_MODE_I2C;
-  89:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_scbEnableWake = (uint8) config->enableWake;
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 3
+  33:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     ***************************************/
+  34:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  35:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     /* Constant configuration of I2C */
+  36:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     const SENSOR_2_I2C_INIT_STRUCT SENSOR_2_configI2C =
+  37:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     {
+  38:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_MODE,
+  39:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_OVS_FACTOR_LOW,
+  40:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_OVS_FACTOR_HIGH,
+  41:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_MEDIAN_FILTER_ENABLE,
+  42:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_SLAVE_ADDRESS,
+  43:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_SLAVE_ADDRESS_MASK,
+  44:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_ACCEPT_ADDRESS,
+  45:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_WAKE_ENABLE,
+  46:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_BYTE_MODE_ENABLE,
+  47:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_DATA_RATE,
+  48:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_ACCEPT_GENERAL_CALL,
+  49:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     };
+  50:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  51:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     /*******************************************************************************
+  52:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     * Function Name: SENSOR_2_I2CInit
+  53:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     ****************************************************************************//**
+  54:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
+  55:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
+  56:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  Configures the SENSOR_2 for I2C operation.
+  57:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
+  58:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  This function is intended specifically to be used when the SENSOR_2 
+  59:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  configuration is set to “Unconfigured SENSOR_2” in the customizer. 
+  60:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  After initializing the SENSOR_2 in I2C mode using this function, 
+  61:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  the component can be enabled using the SENSOR_2_Start() or 
+  62:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     * SENSOR_2_Enable() function.
+  63:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  This function uses a pointer to a structure that provides the configuration 
+  64:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  settings. This structure contains the same information that would otherwise 
+  65:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  be provided by the customizer settings.
+  66:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
+  67:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  \param config: pointer to a structure that contains the following list of 
+  68:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *   fields. These fields match the selections available in the customizer. 
+  69:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *   Refer to the customizer for further description of the settings.
+  70:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
+  71:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *******************************************************************************/
+  72:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     void SENSOR_2_I2CInit(const SENSOR_2_I2C_INIT_STRUCT *config)
+  73:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     {
+  74:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         uint32 medianFilter;
+  75:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         uint32 locEnableWake;
+  76:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  77:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         if(NULL == config)
+  78:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         {
+  79:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             CYASSERT(0u != 0u); /* Halt execution due to bad function parameter */
+  80:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         }
+  81:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         else
+  82:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         {
+  83:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure pins */
+  84:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_SetPins(SENSOR_2_SCB_MODE_I2C, SENSOR_2_DUMMY_PARAM,
+  85:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                      SENSOR_2_DUMMY_PARAM);
+  86:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  87:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Store internal configuration */
+  88:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_scbMode       = (uint8) SENSOR_2_SCB_MODE_I2C;
+  89:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_scbEnableWake = (uint8) config->enableWake;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 3
 
 
-  90:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_scbEnableIntr = (uint8) SENSOR_2_SCB_IRQ_INTERNAL;
-  91:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  92:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_mode          = (uint8) config->mode;
-  93:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_acceptAddr    = (uint8) config->acceptAddr;
-  94:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-  95:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #if (SENSOR_2_CY_SCBIP_V0)
-  96:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Adjust SDA filter settings. Ticket ID#150521 */
-  97:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_SET_I2C_CFG_SDA_FILT_TRIM(SENSOR_2_EC_AM_I2C_CFG_SDA_FILT_TRIM);
-  98:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #endif /* (SENSOR_2_CY_SCBIP_V0) */
-  99:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 100:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Adjust AF and DF filter settings. Ticket ID#176179 */
- 101:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             if (((SENSOR_2_I2C_MODE_SLAVE != config->mode) &&
- 102:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                  (config->dataRate <= SENSOR_2_I2C_DATA_RATE_FS_MODE_MAX)) ||
- 103:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                  (SENSOR_2_I2C_MODE_SLAVE == config->mode))
- 104:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             {
- 105:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 /* AF = 1, DF = 0 */
- 106:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 SENSOR_2_I2C_CFG_ANALOG_FITER_ENABLE;
- 107:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 medianFilter = SENSOR_2_DIGITAL_FILTER_DISABLE;
- 108:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             }
- 109:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             else
- 110:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             {
- 111:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 /* AF = 0, DF = 1 */
- 112:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 SENSOR_2_I2C_CFG_ANALOG_FITER_DISABLE;
- 113:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 medianFilter = SENSOR_2_DIGITAL_FILTER_ENABLE;
- 114:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             }
- 115:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 116:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #if (!SENSOR_2_CY_SCBIP_V0)
- 117:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             locEnableWake = (SENSOR_2_I2C_MULTI_MASTER_SLAVE) ? (0u) : (config->enableWake);
- 118:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #else
- 119:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             locEnableWake = config->enableWake;
- 120:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #endif /* (!SENSOR_2_CY_SCBIP_V0) */
- 121:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 122:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure I2C interface */
- 123:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_CTRL_REG     = SENSOR_2_GET_CTRL_BYTE_MODE  (config->enableByteMode) |
- 124:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                             SENSOR_2_GET_CTRL_ADDR_ACCEPT(config->acceptAddr)     |
- 125:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                             SENSOR_2_GET_CTRL_EC_AM_MODE (locEnableWake);
- 126:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 127:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_I2C_CTRL_REG = SENSOR_2_GET_I2C_CTRL_HIGH_PHASE_OVS(config->oversampleHigh) |
- 128:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                     SENSOR_2_GET_I2C_CTRL_LOW_PHASE_OVS (config->oversampleLow)                    
- 129:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                     SENSOR_2_GET_I2C_CTRL_S_GENERAL_IGNORE((uint32)(0u == config->acceptGeneralAddr
- 130:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                     SENSOR_2_GET_I2C_CTRL_SL_MSTR_MODE  (config->mode);
- 131:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 132:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure RX direction */
- 133:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_RX_CTRL_REG      = SENSOR_2_GET_RX_CTRL_MEDIAN(medianFilter) |
- 134:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                 SENSOR_2_I2C_RX_CTRL;
- 135:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_RX_FIFO_CTRL_REG = SENSOR_2_CLEAR_REG;
- 136:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 137:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Set default address and mask */
- 138:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_RX_MATCH_REG    = ((SENSOR_2_I2C_SLAVE) ?
- 139:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                 (SENSOR_2_GET_I2C_8BIT_ADDRESS(config->slaveAddr) |
- 140:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                  SENSOR_2_GET_RX_MATCH_MASK(config->slaveAddrMask))
- 141:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                 (SENSOR_2_CLEAR_REG));
- 142:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 143:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 144:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure TX direction */
- 145:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_TX_CTRL_REG      = SENSOR_2_I2C_TX_CTRL;
- 146:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_TX_FIFO_CTRL_REG = SENSOR_2_CLEAR_REG;
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 4
+  90:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_scbEnableIntr = (uint8) SENSOR_2_SCB_IRQ_INTERNAL;
+  91:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  92:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_mode          = (uint8) config->mode;
+  93:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_acceptAddr    = (uint8) config->acceptAddr;
+  94:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+  95:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #if (SENSOR_2_CY_SCBIP_V0)
+  96:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Adjust SDA filter settings. Ticket ID#150521 */
+  97:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_SET_I2C_CFG_SDA_FILT_TRIM(SENSOR_2_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+  98:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #endif /* (SENSOR_2_CY_SCBIP_V0) */
+  99:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 100:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Adjust AF and DF filter settings. Ticket ID#176179 */
+ 101:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             if (((SENSOR_2_I2C_MODE_SLAVE != config->mode) &&
+ 102:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                  (config->dataRate <= SENSOR_2_I2C_DATA_RATE_FS_MODE_MAX)) ||
+ 103:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                  (SENSOR_2_I2C_MODE_SLAVE == config->mode))
+ 104:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             {
+ 105:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 /* AF = 1, DF = 0 */
+ 106:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 SENSOR_2_I2C_CFG_ANALOG_FITER_ENABLE;
+ 107:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 medianFilter = SENSOR_2_DIGITAL_FILTER_DISABLE;
+ 108:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             }
+ 109:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             else
+ 110:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             {
+ 111:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 /* AF = 0, DF = 1 */
+ 112:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 SENSOR_2_I2C_CFG_ANALOG_FITER_DISABLE;
+ 113:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                 medianFilter = SENSOR_2_DIGITAL_FILTER_ENABLE;
+ 114:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             }
+ 115:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 116:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #if (!SENSOR_2_CY_SCBIP_V0)
+ 117:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             locEnableWake = (SENSOR_2_I2C_MULTI_MASTER_SLAVE) ? (0u) : (config->enableWake);
+ 118:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #else
+ 119:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             locEnableWake = config->enableWake;
+ 120:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #endif /* (!SENSOR_2_CY_SCBIP_V0) */
+ 121:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 122:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure I2C interface */
+ 123:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_CTRL_REG     = SENSOR_2_GET_CTRL_BYTE_MODE  (config->enableByteMode) |
+ 124:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                             SENSOR_2_GET_CTRL_ADDR_ACCEPT(config->acceptAddr)     |
+ 125:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                             SENSOR_2_GET_CTRL_EC_AM_MODE (locEnableWake);
+ 126:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 127:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_I2C_CTRL_REG = SENSOR_2_GET_I2C_CTRL_HIGH_PHASE_OVS(config->oversampleHigh) |
+ 128:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                     SENSOR_2_GET_I2C_CTRL_LOW_PHASE_OVS (config->oversampleLow)                    
+ 129:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                     SENSOR_2_GET_I2C_CTRL_S_GENERAL_IGNORE((uint32)(0u == config->acceptGeneralAddr
+ 130:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                     SENSOR_2_GET_I2C_CTRL_SL_MSTR_MODE  (config->mode);
+ 131:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 132:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure RX direction */
+ 133:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_RX_CTRL_REG      = SENSOR_2_GET_RX_CTRL_MEDIAN(medianFilter) |
+ 134:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                 SENSOR_2_I2C_RX_CTRL;
+ 135:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_RX_FIFO_CTRL_REG = SENSOR_2_CLEAR_REG;
+ 136:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 137:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Set default address and mask */
+ 138:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_RX_MATCH_REG    = ((SENSOR_2_I2C_SLAVE) ?
+ 139:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                 (SENSOR_2_GET_I2C_8BIT_ADDRESS(config->slaveAddr) |
+ 140:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                  SENSOR_2_GET_RX_MATCH_MASK(config->slaveAddrMask))
+ 141:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                 (SENSOR_2_CLEAR_REG));
+ 142:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 143:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 144:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure TX direction */
+ 145:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_TX_CTRL_REG      = SENSOR_2_I2C_TX_CTRL;
+ 146:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_TX_FIFO_CTRL_REG = SENSOR_2_CLEAR_REG;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 4
 
 
- 147:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 148:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure interrupt with I2C handler but do not enable it */
- 149:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             CyIntDisable    (SENSOR_2_ISR_NUMBER);
- 150:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             CyIntSetPriority(SENSOR_2_ISR_NUMBER, SENSOR_2_ISR_PRIORITY);
- 151:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             (void) CyIntSetVector(SENSOR_2_ISR_NUMBER, &SENSOR_2_I2C_ISR);
- 152:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 153:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure interrupt sources */
- 154:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #if(!SENSOR_2_CY_SCBIP_V1)
- 155:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_SPI_EC_MASK_REG = SENSOR_2_NO_INTR_SOURCES;
- 156:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #endif /* (!SENSOR_2_CY_SCBIP_V1) */
- 157:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 158:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_I2C_EC_MASK_REG = SENSOR_2_NO_INTR_SOURCES;
- 159:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_RX_MASK_REG     = SENSOR_2_NO_INTR_SOURCES;
- 160:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_TX_MASK_REG     = SENSOR_2_NO_INTR_SOURCES;
- 161:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 162:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_SLAVE_MASK_REG  = ((SENSOR_2_I2C_SLAVE) ?
- 163:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                             (SENSOR_2_GET_INTR_SLAVE_I2C_GENERAL(config->acceptGeneralAddr) |
- 164:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                              SENSOR_2_I2C_INTR_SLAVE_MASK) : (SENSOR_2_CLEAR_REG));
- 165:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 166:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_MASTER_MASK_REG = ((SENSOR_2_I2C_MASTER) ?
- 167:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                      (SENSOR_2_I2C_INTR_MASTER_MASK) :
- 168:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                      (SENSOR_2_CLEAR_REG));
- 169:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 170:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure global variables */
- 171:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_state = SENSOR_2_I2C_FSM_IDLE;
- 172:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 173:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Internal slave variables */
- 174:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_slStatus        = 0u;
- 175:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_slRdBufIndex    = 0u;
- 176:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_slWrBufIndex    = 0u;
- 177:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_slOverFlowCount = 0u;
- 178:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 179:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Internal master variables */
- 180:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_mstrStatus     = 0u;
- 181:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_mstrRdBufIndex = 0u;
- 182:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_mstrWrBufIndex = 0u;
- 183:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         }
- 184:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     }
- 185:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 186:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** #else
- 187:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 188:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     /*******************************************************************************
- 189:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     * Function Name: SENSOR_2_I2CInit
- 190:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     ****************************************************************************//**
- 191:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
- 192:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  Configures the SCB for the I2C operation.
- 193:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
- 194:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *******************************************************************************/
- 195:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     void SENSOR_2_I2CInit(void)
- 196:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     {
+ 147:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 148:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure interrupt with I2C handler but do not enable it */
+ 149:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             CyIntDisable    (SENSOR_2_ISR_NUMBER);
+ 150:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             CyIntSetPriority(SENSOR_2_ISR_NUMBER, SENSOR_2_ISR_PRIORITY);
+ 151:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             (void) CyIntSetVector(SENSOR_2_ISR_NUMBER, &SENSOR_2_I2C_ISR);
+ 152:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 153:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure interrupt sources */
+ 154:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #if(!SENSOR_2_CY_SCBIP_V1)
+ 155:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_SPI_EC_MASK_REG = SENSOR_2_NO_INTR_SOURCES;
+ 156:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         #endif /* (!SENSOR_2_CY_SCBIP_V1) */
+ 157:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 158:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_I2C_EC_MASK_REG = SENSOR_2_NO_INTR_SOURCES;
+ 159:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_RX_MASK_REG     = SENSOR_2_NO_INTR_SOURCES;
+ 160:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_TX_MASK_REG     = SENSOR_2_NO_INTR_SOURCES;
+ 161:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 162:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_SLAVE_MASK_REG  = ((SENSOR_2_I2C_SLAVE) ?
+ 163:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                             (SENSOR_2_GET_INTR_SLAVE_I2C_GENERAL(config->acceptGeneralAddr) |
+ 164:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                              SENSOR_2_I2C_INTR_SLAVE_MASK) : (SENSOR_2_CLEAR_REG));
+ 165:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 166:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_INTR_MASTER_MASK_REG = ((SENSOR_2_I2C_MASTER) ?
+ 167:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                      (SENSOR_2_I2C_INTR_MASTER_MASK) :
+ 168:Generated_Source\PSoC4/SENSOR_2_I2C.c ****                                                      (SENSOR_2_CLEAR_REG));
+ 169:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 170:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Configure global variables */
+ 171:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_state = SENSOR_2_I2C_FSM_IDLE;
+ 172:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 173:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Internal slave variables */
+ 174:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_slStatus        = 0u;
+ 175:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_slRdBufIndex    = 0u;
+ 176:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_slWrBufIndex    = 0u;
+ 177:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_slOverFlowCount = 0u;
+ 178:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 179:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             /* Internal master variables */
+ 180:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_mstrStatus     = 0u;
+ 181:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_mstrRdBufIndex = 0u;
+ 182:Generated_Source\PSoC4/SENSOR_2_I2C.c ****             SENSOR_2_mstrWrBufIndex = 0u;
+ 183:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         }
+ 184:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     }
+ 185:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 186:Generated_Source\PSoC4/SENSOR_2_I2C.c **** #else
+ 187:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 188:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     /*******************************************************************************
+ 189:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     * Function Name: SENSOR_2_I2CInit
+ 190:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     ****************************************************************************//**
+ 191:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
+ 192:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *  Configures the SCB for the I2C operation.
+ 193:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *
+ 194:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     *******************************************************************************/
+ 195:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     void SENSOR_2_I2CInit(void)
+ 196:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     {
   26              		.loc 1 196 0
   27              		.cfi_startproc
   28 0000 10B5     		push	{r4, lr}
   29              		.cfi_def_cfa_offset 8
   30              		.cfi_offset 4, -8
   31              		.cfi_offset 14, -4
- 197:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #if(SENSOR_2_CY_SCBIP_V0)
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 5
+ 197:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #if(SENSOR_2_CY_SCBIP_V0)
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 5
 
 
- 198:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Adjust SDA filter settings. Ticket ID#150521 */
- 199:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_SET_I2C_CFG_SDA_FILT_TRIM(SENSOR_2_EC_AM_I2C_CFG_SDA_FILT_TRIM);
- 200:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #endif /* (SENSOR_2_CY_SCBIP_V0) */
- 201:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 202:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Adjust AF and DF filter settings. Ticket ID#176179 */
- 203:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_CFG_ANALOG_FITER_ENABLE_ADJ;
- 204:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 205:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure I2C interface */
- 206:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_CTRL_REG     = SENSOR_2_I2C_DEFAULT_CTRL;
+ 198:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Adjust SDA filter settings. Ticket ID#150521 */
+ 199:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_SET_I2C_CFG_SDA_FILT_TRIM(SENSOR_2_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+ 200:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #endif /* (SENSOR_2_CY_SCBIP_V0) */
+ 201:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 202:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Adjust AF and DF filter settings. Ticket ID#176179 */
+ 203:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_CFG_ANALOG_FITER_ENABLE_ADJ;
+ 204:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 205:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure I2C interface */
+ 206:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_CTRL_REG     = SENSOR_2_I2C_DEFAULT_CTRL;
   32              		.loc 1 206 0
   33 0002 0024     		mov	r4, #0
   34 0004 194B     		ldr	r3, .L2
   35 0006 1C60     		str	r4, [r3]
- 207:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_CTRL_REG = SENSOR_2_I2C_DEFAULT_I2C_CTRL;
+ 207:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_I2C_CTRL_REG = SENSOR_2_I2C_DEFAULT_I2C_CTRL;
   36              		.loc 1 207 0
   37 0008 194A     		ldr	r2, .L2+4
   38 000a 1A4B     		ldr	r3, .L2+8
   39 000c 1A60     		str	r2, [r3]
- 208:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 209:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure RX direction */
- 210:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_RX_CTRL_REG      = SENSOR_2_I2C_DEFAULT_RX_CTRL;
+ 208:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 209:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure RX direction */
+ 210:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_RX_CTRL_REG      = SENSOR_2_I2C_DEFAULT_RX_CTRL;
   40              		.loc 1 210 0
   41 000e 1A4B     		ldr	r3, .L2+12
   42 0010 1A4A     		ldr	r2, .L2+16
   43 0012 1360     		str	r3, [r2]
- 211:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_RX_FIFO_CTRL_REG = SENSOR_2_I2C_DEFAULT_RX_FIFO_CTRL;
+ 211:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_RX_FIFO_CTRL_REG = SENSOR_2_I2C_DEFAULT_RX_FIFO_CTRL;
   44              		.loc 1 211 0
   45 0014 1A4A     		ldr	r2, .L2+20
   46 0016 1460     		str	r4, [r2]
- 212:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 213:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Set default address and mask */
- 214:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_RX_MATCH_REG     = SENSOR_2_I2C_DEFAULT_RX_MATCH;
+ 212:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 213:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Set default address and mask */
+ 214:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_RX_MATCH_REG     = SENSOR_2_I2C_DEFAULT_RX_MATCH;
   47              		.loc 1 214 0
   48 0018 1A4A     		ldr	r2, .L2+24
   49 001a 1460     		str	r4, [r2]
- 215:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 216:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure TX direction */
- 217:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_TX_CTRL_REG      = SENSOR_2_I2C_DEFAULT_TX_CTRL;
+ 215:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 216:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure TX direction */
+ 217:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_TX_CTRL_REG      = SENSOR_2_I2C_DEFAULT_TX_CTRL;
   50              		.loc 1 217 0
   51 001c 1A4A     		ldr	r2, .L2+28
   52 001e 1360     		str	r3, [r2]
- 218:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_TX_FIFO_CTRL_REG = SENSOR_2_I2C_DEFAULT_TX_FIFO_CTRL;
+ 218:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_TX_FIFO_CTRL_REG = SENSOR_2_I2C_DEFAULT_TX_FIFO_CTRL;
   53              		.loc 1 218 0
   54 0020 1A4B     		ldr	r3, .L2+32
   55 0022 1C60     		str	r4, [r3]
- 219:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 220:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure interrupt with I2C handler but do not enable it */
- 221:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         CyIntDisable    (SENSOR_2_ISR_NUMBER);
+ 219:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 220:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure interrupt with I2C handler but do not enable it */
+ 221:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         CyIntDisable    (SENSOR_2_ISR_NUMBER);
   56              		.loc 1 221 0
   57 0024 0A20     		mov	r0, #10
   58 0026 FFF7FEFF 		bl	CyIntDisable
   59              	.LVL0:
- 222:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         CyIntSetPriority(SENSOR_2_ISR_NUMBER, SENSOR_2_ISR_PRIORITY);
+ 222:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         CyIntSetPriority(SENSOR_2_ISR_NUMBER, SENSOR_2_ISR_PRIORITY);
   60              		.loc 1 222 0
   61 002a 0A20     		mov	r0, #10
   62 002c 0321     		mov	r1, #3
   63 002e FFF7FEFF 		bl	CyIntSetPriority
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 6
 
 
   64              	.LVL1:
- 223:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #if(!SENSOR_2_I2C_EXTERN_INTR_HANDLER)
- 224:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         (void) CyIntSetVector(SENSOR_2_ISR_NUMBER, &SENSOR_2_I2C_ISR);
+ 223:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #if(!SENSOR_2_I2C_EXTERN_INTR_HANDLER)
+ 224:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         (void) CyIntSetVector(SENSOR_2_ISR_NUMBER, &SENSOR_2_I2C_ISR);
   65              		.loc 1 224 0
   66 0032 0A20     		mov	r0, #10
   67 0034 1649     		ldr	r1, .L2+36
   68 0036 FFF7FEFF 		bl	CyIntSetVector
   69              	.LVL2:
- 225:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #endif /* (SENSOR_2_I2C_EXTERN_INTR_HANDLER) */
- 226:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 227:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure interrupt sources */
- 228:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #if(!SENSOR_2_CY_SCBIP_V1)
- 229:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_SPI_EC_MASK_REG = SENSOR_2_I2C_DEFAULT_INTR_SPI_EC_MASK;
+ 225:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #endif /* (SENSOR_2_I2C_EXTERN_INTR_HANDLER) */
+ 226:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 227:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure interrupt sources */
+ 228:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #if(!SENSOR_2_CY_SCBIP_V1)
+ 229:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_SPI_EC_MASK_REG = SENSOR_2_I2C_DEFAULT_INTR_SPI_EC_MASK;
   70              		.loc 1 229 0
   71 003a 164B     		ldr	r3, .L2+40
   72 003c 1C60     		str	r4, [r3]
- 230:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #endif /* (!SENSOR_2_CY_SCBIP_V1) */
- 231:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 232:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_I2C_EC_MASK_REG = SENSOR_2_I2C_DEFAULT_INTR_I2C_EC_MASK;
+ 230:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #endif /* (!SENSOR_2_CY_SCBIP_V1) */
+ 231:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 232:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_I2C_EC_MASK_REG = SENSOR_2_I2C_DEFAULT_INTR_I2C_EC_MASK;
   73              		.loc 1 232 0
   74 003e 164B     		ldr	r3, .L2+44
   75 0040 1C60     		str	r4, [r3]
- 233:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_SLAVE_MASK_REG  = SENSOR_2_I2C_DEFAULT_INTR_SLAVE_MASK;
+ 233:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_SLAVE_MASK_REG  = SENSOR_2_I2C_DEFAULT_INTR_SLAVE_MASK;
   76              		.loc 1 233 0
   77 0042 164B     		ldr	r3, .L2+48
   78 0044 1C60     		str	r4, [r3]
- 234:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_MASTER_MASK_REG = SENSOR_2_I2C_DEFAULT_INTR_MASTER_MASK;
+ 234:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_MASTER_MASK_REG = SENSOR_2_I2C_DEFAULT_INTR_MASTER_MASK;
   79              		.loc 1 234 0
   80 0046 1422     		mov	r2, #20
   81 0048 FF32     		add	r2, r2, #255
   82 004a 154B     		ldr	r3, .L2+52
   83 004c 1A60     		str	r2, [r3]
- 235:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_RX_MASK_REG     = SENSOR_2_I2C_DEFAULT_INTR_RX_MASK;
+ 235:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_RX_MASK_REG     = SENSOR_2_I2C_DEFAULT_INTR_RX_MASK;
   84              		.loc 1 235 0
   85 004e 154B     		ldr	r3, .L2+56
   86 0050 1C60     		str	r4, [r3]
- 236:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_TX_MASK_REG     = SENSOR_2_I2C_DEFAULT_INTR_TX_MASK;
+ 236:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_INTR_TX_MASK_REG     = SENSOR_2_I2C_DEFAULT_INTR_TX_MASK;
   87              		.loc 1 236 0
   88 0052 154B     		ldr	r3, .L2+60
   89 0054 1C60     		str	r4, [r3]
- 237:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 238:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure global variables */
- 239:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_state = SENSOR_2_I2C_FSM_IDLE;
+ 237:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 238:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Configure global variables */
+ 239:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_state = SENSOR_2_I2C_FSM_IDLE;
   90              		.loc 1 239 0
   91 0056 043A     		sub	r2, r2, #4
   92 0058 FF3A     		sub	r2, r2, #255
   93 005a 144B     		ldr	r3, .L2+64
   94 005c 1A70     		strb	r2, [r3]
- 240:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 241:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #if(SENSOR_2_I2C_SLAVE)
- 242:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Internal slave variable */
- 243:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_slStatus        = 0u;
- 244:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_slRdBufIndex    = 0u;
- 245:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_slWrBufIndex    = 0u;
- 246:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_slOverFlowCount = 0u;
- 247:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #endif /* (SENSOR_2_I2C_SLAVE) */
- 248:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 7
+ 240:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 241:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #if(SENSOR_2_I2C_SLAVE)
+ 242:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         /* Internal slave variable */
+ 243:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_slStatus        = 0u;
+ 244:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_slRdBufIndex    = 0u;
+ 245:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_slWrBufIndex    = 0u;
+ 246:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_slOverFlowCount = 0u;
+ 247:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #endif /* (SENSOR_2_I2C_SLAVE) */
+ 248:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 7
 
 
- 249:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #if(SENSOR_2_I2C_MASTER)
- 250:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     /* Internal master variable */
- 251:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_mstrStatus     = 0u;
+ 249:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #if(SENSOR_2_I2C_MASTER)
+ 250:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     /* Internal master variable */
+ 251:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_mstrStatus     = 0u;
   95              		.loc 1 251 0
   96 005e 144B     		ldr	r3, .L2+68
   97 0060 1C80     		strh	r4, [r3]
- 252:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_mstrRdBufIndex = 0u;
+ 252:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_mstrRdBufIndex = 0u;
   98              		.loc 1 252 0
   99 0062 144B     		ldr	r3, .L2+72
  100 0064 1C60     		str	r4, [r3]
- 253:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_mstrWrBufIndex = 0u;
+ 253:Generated_Source\PSoC4/SENSOR_2_I2C.c ****         SENSOR_2_mstrWrBufIndex = 0u;
  101              		.loc 1 253 0
  102 0066 144B     		ldr	r3, .L2+76
  103 0068 1C60     		str	r4, [r3]
- 254:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #endif /* (SENSOR_2_I2C_MASTER) */
- 255:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     }
+ 254:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     #endif /* (SENSOR_2_I2C_MASTER) */
+ 255:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     }
  104              		.loc 1 255 0
  105              		@ sp needed
  106 006a 10BD     		pop	{r4, pc}
@@ -414,29 +414,29 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  138              		.type	SENSOR_2_I2CStop, %function
  139              	SENSOR_2_I2CStop:
  140              	.LFB2:
- 256:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** #endif /* (SENSOR_2_SCB_MODE_UNCONFIG_CONST_CFG) */
- 257:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 258:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
- 259:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** /*******************************************************************************
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 8
+ 256:Generated_Source\PSoC4/SENSOR_2_I2C.c **** #endif /* (SENSOR_2_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 257:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 258:Generated_Source\PSoC4/SENSOR_2_I2C.c **** 
+ 259:Generated_Source\PSoC4/SENSOR_2_I2C.c **** /*******************************************************************************
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 8
 
 
- 260:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** * Function Name: SENSOR_2_I2CStop
- 261:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** ****************************************************************************//**
- 262:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *
- 263:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *  Resets the I2C FSM into the default state.
- 264:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *
- 265:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** *******************************************************************************/
- 266:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** void SENSOR_2_I2CStop(void)
- 267:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** {
+ 260:Generated_Source\PSoC4/SENSOR_2_I2C.c **** * Function Name: SENSOR_2_I2CStop
+ 261:Generated_Source\PSoC4/SENSOR_2_I2C.c **** ****************************************************************************//**
+ 262:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *
+ 263:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *  Resets the I2C FSM into the default state.
+ 264:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *
+ 265:Generated_Source\PSoC4/SENSOR_2_I2C.c **** *******************************************************************************/
+ 266:Generated_Source\PSoC4/SENSOR_2_I2C.c **** void SENSOR_2_I2CStop(void)
+ 267:Generated_Source\PSoC4/SENSOR_2_I2C.c **** {
  141              		.loc 1 267 0
  142              		.cfi_startproc
- 268:.\Generated_Source\PSoC4/SENSOR_2_I2C.c ****     SENSOR_2_state = SENSOR_2_I2C_FSM_IDLE;
+ 268:Generated_Source\PSoC4/SENSOR_2_I2C.c ****     SENSOR_2_state = SENSOR_2_I2C_FSM_IDLE;
  143              		.loc 1 268 0
  144 0000 1022     		mov	r2, #16
  145 0002 014B     		ldr	r3, .L5
  146 0004 1A70     		strb	r2, [r3]
- 269:.\Generated_Source\PSoC4/SENSOR_2_I2C.c **** }
+ 269:Generated_Source\PSoC4/SENSOR_2_I2C.c **** }
  147              		.loc 1 269 0
  148              		@ sp needed
  149 0006 7047     		bx	lr
@@ -451,7 +451,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  158              		.text
  159              	.Letext0:
  160              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
- 161              		.file 3 ".\\Generated_Source\\PSoC4\\SENSOR_2_I2C_PVT.h"
+ 161              		.file 3 "Generated_Source\\PSoC4\\SENSOR_2_I2C_PVT.h"
  162              		.file 4 "Generated_Source\\PSoC4/CyLib.h"
  163              		.section	.debug_info,"",%progbits
  164              	.Ldebug_info0:
@@ -460,48 +460,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  167 0006 00000000 		.4byte	.Ldebug_abbrev0
  168 000a 04       		.byte	0x4
  169 000b 01       		.uleb128 0x1
- 170 000c 70010000 		.4byte	.LASF25
+ 170 000c 8F010000 		.4byte	.LASF25
  171 0010 01       		.byte	0x1
- 172 0011 CB000000 		.4byte	.LASF26
- 173 0015 00000000 		.4byte	.LASF27
+ 172 0011 69010000 		.4byte	.LASF26
+ 173 0015 EC000000 		.4byte	.LASF27
  174 0019 00000000 		.4byte	.Ldebug_ranges0+0
  175 001d 00000000 		.4byte	0
  176 0021 00000000 		.4byte	.Ldebug_line0
  177 0025 02       		.uleb128 0x2
  178 0026 01       		.byte	0x1
  179 0027 06       		.byte	0x6
- 180 0028 3E020000 		.4byte	.LASF0
+ 180 0028 5D020000 		.4byte	.LASF0
  181 002c 02       		.uleb128 0x2
  182 002d 01       		.byte	0x1
  183 002e 08       		.byte	0x8
- 184 002f 86000000 		.4byte	.LASF1
+ 184 002f 46000000 		.4byte	.LASF1
  185 0033 02       		.uleb128 0x2
  186 0034 02       		.byte	0x2
  187 0035 05       		.byte	0x5
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 9
 
 
- 188 0036 0B020000 		.4byte	.LASF2
+ 188 0036 2A020000 		.4byte	.LASF2
  189 003a 02       		.uleb128 0x2
  190 003b 02       		.byte	0x2
  191 003c 07       		.byte	0x7
- 192 003d 6D000000 		.4byte	.LASF3
+ 192 003d 2D000000 		.4byte	.LASF3
  193 0041 02       		.uleb128 0x2
  194 0042 04       		.byte	0x4
  195 0043 05       		.byte	0x5
- 196 0044 24020000 		.4byte	.LASF4
+ 196 0044 43020000 		.4byte	.LASF4
  197 0048 02       		.uleb128 0x2
  198 0049 04       		.byte	0x4
  199 004a 07       		.byte	0x7
- 200 004b 94000000 		.4byte	.LASF5
+ 200 004b 54000000 		.4byte	.LASF5
  201 004f 02       		.uleb128 0x2
  202 0050 08       		.byte	0x8
  203 0051 05       		.byte	0x5
- 204 0052 5D010000 		.4byte	.LASF6
+ 204 0052 56010000 		.4byte	.LASF6
  205 0056 02       		.uleb128 0x2
  206 0057 08       		.byte	0x8
  207 0058 07       		.byte	0x7
- 208 0059 1F010000 		.4byte	.LASF7
+ 208 0059 B7000000 		.4byte	.LASF7
  209 005d 03       		.uleb128 0x3
  210 005e 04       		.byte	0x4
  211 005f 05       		.byte	0x5
@@ -509,50 +509,50 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  213 0064 02       		.uleb128 0x2
  214 0065 04       		.byte	0x4
  215 0066 07       		.byte	0x7
- 216 0067 12010000 		.4byte	.LASF8
+ 216 0067 AA000000 		.4byte	.LASF8
  217 006b 04       		.uleb128 0x4
- 218 006c A6000000 		.4byte	.LASF9
+ 218 006c 66000000 		.4byte	.LASF9
  219 0070 02       		.byte	0x2
  220 0071 9801     		.2byte	0x198
  221 0073 2C000000 		.4byte	0x2c
  222 0077 04       		.uleb128 0x4
- 223 0078 F3000000 		.4byte	.LASF10
+ 223 0078 8B000000 		.4byte	.LASF10
  224 007c 02       		.byte	0x2
  225 007d 9901     		.2byte	0x199
  226 007f 3A000000 		.4byte	0x3a
  227 0083 04       		.uleb128 0x4
- 228 0084 FA000000 		.4byte	.LASF11
+ 228 0084 92000000 		.4byte	.LASF11
  229 0088 02       		.byte	0x2
  230 0089 9A01     		.2byte	0x19a
  231 008b 48000000 		.4byte	0x48
  232 008f 02       		.uleb128 0x2
  233 0090 04       		.byte	0x4
  234 0091 04       		.byte	0x4
- 235 0092 80000000 		.4byte	.LASF12
+ 235 0092 40000000 		.4byte	.LASF12
  236 0096 02       		.uleb128 0x2
  237 0097 08       		.byte	0x8
  238 0098 04       		.byte	0x4
- 239 0099 C4000000 		.4byte	.LASF13
+ 239 0099 84000000 		.4byte	.LASF13
  240 009d 02       		.uleb128 0x2
  241 009e 01       		.byte	0x1
  242 009f 08       		.byte	0x8
- 243 00a0 6B010000 		.4byte	.LASF14
+ 243 00a0 64010000 		.4byte	.LASF14
  244 00a4 05       		.uleb128 0x5
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 10
 
 
  245 00a5 6B000000 		.4byte	0x6b
  246 00a9 05       		.uleb128 0x5
  247 00aa 77000000 		.4byte	0x77
  248 00ae 04       		.uleb128 0x4
- 249 00af 40000000 		.4byte	.LASF15
+ 249 00af 00000000 		.4byte	.LASF15
  250 00b3 02       		.byte	0x2
  251 00b4 4402     		.2byte	0x244
  252 00b6 BA000000 		.4byte	0xba
  253 00ba 05       		.uleb128 0x5
  254 00bb 83000000 		.4byte	0x83
  255 00bf 04       		.uleb128 0x4
- 256 00c0 47010000 		.4byte	.LASF16
+ 256 00c0 DF000000 		.4byte	.LASF16
  257 00c4 02       		.byte	0x2
  258 00c5 5402     		.2byte	0x254
  259 00c7 CB000000 		.4byte	0xcb
@@ -563,9 +563,9 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  264 00d2 02       		.uleb128 0x2
  265 00d3 04       		.byte	0x4
  266 00d4 07       		.byte	0x7
- 267 00d5 54010000 		.4byte	.LASF17
+ 267 00d5 4D010000 		.4byte	.LASF17
  268 00d9 08       		.uleb128 0x8
- 269 00da 01010000 		.4byte	.LASF28
+ 269 00da 99000000 		.4byte	.LASF28
  270 00de 01       		.byte	0x1
  271 00df C3       		.byte	0xc3
  272 00e0 00000000 		.4byte	.LFB1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  299 0116 01       		.uleb128 0x1
  300 0117 3A       		.byte	0x3a
  301 0118 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 11
 
 
  302 0119 0B       		.uleb128 0xb
@@ -612,7 +612,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  310 0127 00       		.byte	0
  311 0128 00       		.byte	0
  312 0129 0C       		.uleb128 0xc
- 313 012a 2D020000 		.4byte	.LASF29
+ 313 012a 4C020000 		.4byte	.LASF29
  314 012e 01       		.byte	0x1
  315 012f 0A01     		.2byte	0x10a
  316 0131 00000000 		.4byte	.LFB2
@@ -620,7 +620,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  318 0139 01       		.uleb128 0x1
  319 013a 9C       		.byte	0x9c
  320 013b 0D       		.uleb128 0xd
- 321 013c 15020000 		.4byte	.LASF18
+ 321 013c 34020000 		.4byte	.LASF18
  322 0140 01       		.byte	0x1
  323 0141 1B       		.byte	0x1b
  324 0142 A4000000 		.4byte	0xa4
@@ -628,22 +628,22 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  326 0147 03       		.byte	0x3
  327 0148 00000000 		.4byte	SENSOR_2_state
  328 014c 0E       		.uleb128 0xe
- 329 014d 4A020000 		.4byte	.LASF19
+ 329 014d 69020000 		.4byte	.LASF19
  330 0151 03       		.byte	0x3
  331 0152 31       		.byte	0x31
  332 0153 A9000000 		.4byte	0xa9
  333 0157 0E       		.uleb128 0xe
- 334 0158 AC000000 		.4byte	.LASF20
+ 334 0158 6C000000 		.4byte	.LASF20
  335 015c 03       		.byte	0x3
  336 015d 37       		.byte	0x37
  337 015e BA000000 		.4byte	0xba
  338 0162 0E       		.uleb128 0xe
- 339 0163 55000000 		.4byte	.LASF21
+ 339 0163 15000000 		.4byte	.LASF21
  340 0167 03       		.byte	0x3
  341 0168 3C       		.byte	0x3c
  342 0169 BA000000 		.4byte	0xba
  343 016d 0F       		.uleb128 0xf
- 344 016e FE010000 		.4byte	.LASF22
+ 344 016e 1D020000 		.4byte	.LASF22
  345 0172 04       		.byte	0x4
  346 0173 C3       		.byte	0xc3
  347 0174 7E010000 		.4byte	0x17e
@@ -651,20 +651,20 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  349 0179 6B000000 		.4byte	0x6b
  350 017d 00       		.byte	0
  351 017e 0F       		.uleb128 0xf
- 352 017f 36010000 		.4byte	.LASF23
+ 352 017f CE000000 		.4byte	.LASF23
  353 0183 04       		.byte	0x4
  354 0184 BE       		.byte	0xbe
  355 0185 94010000 		.4byte	0x194
  356 0189 10       		.uleb128 0x10
  357 018a 6B000000 		.4byte	0x6b
  358 018e 10       		.uleb128 0x10
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 12
 
 
  359 018f 6B000000 		.4byte	0x6b
  360 0193 00       		.byte	0
  361 0194 11       		.uleb128 0x11
- 362 0195 46000000 		.4byte	.LASF24
+ 362 0195 06000000 		.4byte	.LASF24
  363 0199 04       		.byte	0x4
  364 019a BB       		.byte	0xbb
  365 019b BF000000 		.4byte	0xbf
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  413 0027 00       		.byte	0
  414 0028 00       		.byte	0
  415 0029 04       		.uleb128 0x4
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 13
 
 
  416 002a 16       		.uleb128 0x16
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  470 0060 9742     		.uleb128 0x2117
  471 0062 19       		.uleb128 0x19
  472 0063 01       		.uleb128 0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 14
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 14
 
 
  473 0064 13       		.uleb128 0x13
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  527 00a2 00       		.byte	0
  528 00a3 0D       		.uleb128 0xd
  529 00a4 34       		.uleb128 0x34
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 15
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 15
 
 
  530 00a5 00       		.byte	0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  584 00db 49       		.uleb128 0x49
  585 00dc 13       		.uleb128 0x13
  586 00dd 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 16
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 16
 
 
  587 00de 00       		.byte	0
@@ -946,177 +946,178 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 1
  629 0014 00000000 		.4byte	0
  630              		.section	.debug_line,"",%progbits
  631              	.Ldebug_line0:
- 632 0000 C4000000 		.section	.debug_str,"MS",%progbits,1
- 632      02008300 
+ 632 0000 AB000000 		.section	.debug_str,"MS",%progbits,1
+ 632      02006A00 
  632      00000201 
  632      FB0E0D00 
  632      01010101 
- 633              	.LASF27:
- 634 0000 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\Test_Robot\\Test"
- 634      73657273 
- 634      5C48656E 
- 634      72792041 
- 634      6C626572 
- 635 002e 5F416C6C 		.ascii	"_All_Sensor.cydsn\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 17
+ 633              	.LASF15:
+ 634 0000 72656733 		.ascii	"reg32\000"
+ 634      3200
+ 635              	.LASF24:
+ 636 0006 4379496E 		.ascii	"CyIntSetVector\000"
+ 636      74536574 
+ 636      56656374 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 17
 
 
- 635      5F53656E 
- 635      736F722E 
- 635      63796473 
- 635      6E00
- 636              	.LASF15:
- 637 0040 72656733 		.ascii	"reg32\000"
- 637      3200
- 638              	.LASF24:
- 639 0046 4379496E 		.ascii	"CyIntSetVector\000"
- 639      74536574 
- 639      56656374 
- 639      6F7200
- 640              	.LASF21:
- 641 0055 53454E53 		.ascii	"SENSOR_2_mstrWrBufIndex\000"
- 641      4F525F32 
- 641      5F6D7374 
- 641      72577242 
- 641      7566496E 
- 642              	.LASF3:
- 643 006d 73686F72 		.ascii	"short unsigned int\000"
- 643      7420756E 
- 643      7369676E 
- 643      65642069 
- 643      6E7400
- 644              	.LASF12:
- 645 0080 666C6F61 		.ascii	"float\000"
- 645      7400
- 646              	.LASF1:
- 647 0086 756E7369 		.ascii	"unsigned char\000"
- 647      676E6564 
- 647      20636861 
- 647      7200
- 648              	.LASF5:
- 649 0094 6C6F6E67 		.ascii	"long unsigned int\000"
- 649      20756E73 
- 649      69676E65 
- 649      6420696E 
- 649      7400
- 650              	.LASF9:
- 651 00a6 75696E74 		.ascii	"uint8\000"
- 651      3800
- 652              	.LASF20:
- 653 00ac 53454E53 		.ascii	"SENSOR_2_mstrRdBufIndex\000"
- 653      4F525F32 
- 653      5F6D7374 
- 653      72526442 
- 653      7566496E 
- 654              	.LASF13:
- 655 00c4 646F7562 		.ascii	"double\000"
- 655      6C6500
- 656              	.LASF26:
- 657 00cb 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\SENSOR_2_I2C.c\000"
- 657      6E657261 
- 657      7465645F 
- 657      536F7572 
- 657      63655C50 
- 658              	.LASF10:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 18
+ 636      6F7200
+ 637              	.LASF21:
+ 638 0015 53454E53 		.ascii	"SENSOR_2_mstrWrBufIndex\000"
+ 638      4F525F32 
+ 638      5F6D7374 
+ 638      72577242 
+ 638      7566496E 
+ 639              	.LASF3:
+ 640 002d 73686F72 		.ascii	"short unsigned int\000"
+ 640      7420756E 
+ 640      7369676E 
+ 640      65642069 
+ 640      6E7400
+ 641              	.LASF12:
+ 642 0040 666C6F61 		.ascii	"float\000"
+ 642      7400
+ 643              	.LASF1:
+ 644 0046 756E7369 		.ascii	"unsigned char\000"
+ 644      676E6564 
+ 644      20636861 
+ 644      7200
+ 645              	.LASF5:
+ 646 0054 6C6F6E67 		.ascii	"long unsigned int\000"
+ 646      20756E73 
+ 646      69676E65 
+ 646      6420696E 
+ 646      7400
+ 647              	.LASF9:
+ 648 0066 75696E74 		.ascii	"uint8\000"
+ 648      3800
+ 649              	.LASF20:
+ 650 006c 53454E53 		.ascii	"SENSOR_2_mstrRdBufIndex\000"
+ 650      4F525F32 
+ 650      5F6D7374 
+ 650      72526442 
+ 650      7566496E 
+ 651              	.LASF13:
+ 652 0084 646F7562 		.ascii	"double\000"
+ 652      6C6500
+ 653              	.LASF10:
+ 654 008b 75696E74 		.ascii	"uint16\000"
+ 654      313600
+ 655              	.LASF11:
+ 656 0092 75696E74 		.ascii	"uint32\000"
+ 656      333200
+ 657              	.LASF28:
+ 658 0099 53454E53 		.ascii	"SENSOR_2_I2CInit\000"
+ 658      4F525F32 
+ 658      5F493243 
+ 658      496E6974 
+ 658      00
+ 659              	.LASF8:
+ 660 00aa 756E7369 		.ascii	"unsigned int\000"
+ 660      676E6564 
+ 660      20696E74 
+ 660      00
+ 661              	.LASF7:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 18
 
 
- 659 00f3 75696E74 		.ascii	"uint16\000"
- 659      313600
- 660              	.LASF11:
- 661 00fa 75696E74 		.ascii	"uint32\000"
- 661      333200
- 662              	.LASF28:
- 663 0101 53454E53 		.ascii	"SENSOR_2_I2CInit\000"
- 663      4F525F32 
- 663      5F493243 
- 663      496E6974 
- 663      00
- 664              	.LASF8:
- 665 0112 756E7369 		.ascii	"unsigned int\000"
- 665      676E6564 
- 665      20696E74 
- 665      00
- 666              	.LASF7:
- 667 011f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 667      206C6F6E 
- 667      6720756E 
- 667      7369676E 
- 667      65642069 
- 668              	.LASF23:
- 669 0136 4379496E 		.ascii	"CyIntSetPriority\000"
- 669      74536574 
- 669      5072696F 
- 669      72697479 
- 669      00
- 670              	.LASF16:
- 671 0147 63796973 		.ascii	"cyisraddress\000"
- 671      72616464 
- 671      72657373 
- 671      00
- 672              	.LASF17:
- 673 0154 73697A65 		.ascii	"sizetype\000"
- 673      74797065 
- 673      00
- 674              	.LASF6:
- 675 015d 6C6F6E67 		.ascii	"long long int\000"
- 675      206C6F6E 
- 675      6720696E 
- 675      7400
- 676              	.LASF14:
- 677 016b 63686172 		.ascii	"char\000"
- 677      00
- 678              	.LASF25:
- 679 0170 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 679      4320342E 
- 679      392E3320 
- 679      32303135 
- 679      30333033 
- 680 01a3 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 680      20726576 
- 680      6973696F 
- 680      6E203232 
- 680      31323230 
- 681 01d6 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccKTkYPa.s 			page 19
+ 662 00b7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 662      206C6F6E 
+ 662      6720756E 
+ 662      7369676E 
+ 662      65642069 
+ 663              	.LASF23:
+ 664 00ce 4379496E 		.ascii	"CyIntSetPriority\000"
+ 664      74536574 
+ 664      5072696F 
+ 664      72697479 
+ 664      00
+ 665              	.LASF16:
+ 666 00df 63796973 		.ascii	"cyisraddress\000"
+ 666      72616464 
+ 666      72657373 
+ 666      00
+ 667              	.LASF27:
+ 668 00ec 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 668      73657273 
+ 668      5C48656E 
+ 668      72792041 
+ 668      6C626572 
+ 669 011a 6F64756C 		.ascii	"odular\\Robot_Test\\Test_Robot\\Test_All_Sensor.cyd"
+ 669      61725C52 
+ 669      6F626F74 
+ 669      5F546573 
+ 669      745C5465 
+ 670 014a 736E00   		.ascii	"sn\000"
+ 671              	.LASF17:
+ 672 014d 73697A65 		.ascii	"sizetype\000"
+ 672      74797065 
+ 672      00
+ 673              	.LASF6:
+ 674 0156 6C6F6E67 		.ascii	"long long int\000"
+ 674      206C6F6E 
+ 674      6720696E 
+ 674      7400
+ 675              	.LASF14:
+ 676 0164 63686172 		.ascii	"char\000"
+ 676      00
+ 677              	.LASF26:
+ 678 0169 47656E65 		.ascii	"Generated_Source\\PSoC4\\SENSOR_2_I2C.c\000"
+ 678      72617465 
+ 678      645F536F 
+ 678      75726365 
+ 678      5C50536F 
+ 679              	.LASF25:
+ 680 018f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 680      4320342E 
+ 680      392E3320 
+ 680      32303135 
+ 680      30333033 
+ 681 01c2 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 681      20726576 
+ 681      6973696F 
+ 681      6E203232 
+ 681      31323230 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchLpp6H.s 			page 19
 
 
- 681      66756E63 
- 681      74696F6E 
- 681      2D736563 
- 681      74696F6E 
- 682              	.LASF22:
- 683 01fe 4379496E 		.ascii	"CyIntDisable\000"
- 683      74446973 
- 683      61626C65 
- 683      00
- 684              	.LASF2:
- 685 020b 73686F72 		.ascii	"short int\000"
- 685      7420696E 
- 685      7400
- 686              	.LASF18:
- 687 0215 53454E53 		.ascii	"SENSOR_2_state\000"
- 687      4F525F32 
- 687      5F737461 
- 687      746500
- 688              	.LASF4:
- 689 0224 6C6F6E67 		.ascii	"long int\000"
- 689      20696E74 
- 689      00
- 690              	.LASF29:
- 691 022d 53454E53 		.ascii	"SENSOR_2_I2CStop\000"
- 691      4F525F32 
- 691      5F493243 
- 691      53746F70 
- 691      00
- 692              	.LASF0:
- 693 023e 7369676E 		.ascii	"signed char\000"
- 693      65642063 
- 693      68617200 
- 694              	.LASF19:
- 695 024a 53454E53 		.ascii	"SENSOR_2_mstrStatus\000"
- 695      4F525F32 
- 695      5F6D7374 
- 695      72537461 
- 695      74757300 
- 696              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 682 01f5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 682      66756E63 
+ 682      74696F6E 
+ 682      2D736563 
+ 682      74696F6E 
+ 683              	.LASF22:
+ 684 021d 4379496E 		.ascii	"CyIntDisable\000"
+ 684      74446973 
+ 684      61626C65 
+ 684      00
+ 685              	.LASF2:
+ 686 022a 73686F72 		.ascii	"short int\000"
+ 686      7420696E 
+ 686      7400
+ 687              	.LASF18:
+ 688 0234 53454E53 		.ascii	"SENSOR_2_state\000"
+ 688      4F525F32 
+ 688      5F737461 
+ 688      746500
+ 689              	.LASF4:
+ 690 0243 6C6F6E67 		.ascii	"long int\000"
+ 690      20696E74 
+ 690      00
+ 691              	.LASF29:
+ 692 024c 53454E53 		.ascii	"SENSOR_2_I2CStop\000"
+ 692      4F525F32 
+ 692      5F493243 
+ 692      53746F70 
+ 692      00
+ 693              	.LASF0:
+ 694 025d 7369676E 		.ascii	"signed char\000"
+ 694      65642063 
+ 694      68617200 
+ 695              	.LASF19:
+ 696 0269 53454E53 		.ascii	"SENSOR_2_mstrStatus\000"
+ 696      4F525F32 
+ 696      5F6D7374 
+ 696      72537461 
+ 696      74757300 
+ 697              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

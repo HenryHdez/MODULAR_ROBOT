@@ -1,6 +1,6 @@
--- Project:   C:\Users\Henry Alberto\Desktop\Test_Robot\Test_All_Sensor.cydsn\Test_All_Sensor.cyprj
--- Generated: 01/04/2017 20:58:28
--- PSoC Creator  3.3 CP3
+-- Project:   C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_All_Sensor.cydsn\Test_All_Sensor.cyprj
+-- Generated: 07/13/2017 18:27:47
+-- PSoC Creator  4.0 Update 1
 
 ENTITY Test_All_Sensor IS
     PORT(
@@ -1456,7 +1456,8 @@ BEGIN
 
     \SENSOR_1:SCB_IRQ\:interrupt
         GENERIC MAP(
-            int_type => "10")
+            int_type => "10",
+            is_nmi => 0)
         PORT MAP(
             interrupt => Net_27,
             clock => ClockBlock_HFCLK);
@@ -1490,7 +1491,8 @@ BEGIN
 
     \SENSOR_2:SCB_IRQ\:interrupt
         GENERIC MAP(
-            int_type => "10")
+            int_type => "10",
+            is_nmi => 0)
         PORT MAP(
             interrupt => Net_103,
             clock => ClockBlock_HFCLK);
@@ -1524,7 +1526,8 @@ BEGIN
 
     \SENSOR_3:SCB_IRQ\:interrupt
         GENERIC MAP(
-            int_type => "10")
+            int_type => "10",
+            is_nmi => 0)
         PORT MAP(
             interrupt => Net_122,
             clock => ClockBlock_HFCLK);
@@ -1558,7 +1561,8 @@ BEGIN
 
     \SENSOR_4:SCB_IRQ\:interrupt
         GENERIC MAP(
-            int_type => "10")
+            int_type => "10",
+            is_nmi => 0)
         PORT MAP(
             interrupt => Net_141,
             clock => ClockBlock_HFCLK);

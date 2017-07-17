@@ -63,8 +63,8 @@ void initVCNL(){
   } 
   //VCNL Init Params
   writeVCNL(0x84, 0x0F); // Configures ambient light measures - Single conversion mode, 128 averages
-  writeVCNL(0x83, 20);   // sets IR current in steps of 10mA 0-200mA --> 200mA
-  writeVCNL(0x89, 0);    // Proximity IR test signal freq, 0-3 - 781.25 kHz
+  writeVCNL(0x83, 0x32);   // sets IR current in steps of 10mA 0-200mA --> 200mA
+  writeVCNL(0x89, 1);    // Proximity IR test signal freq, 0-3 - 781.25 kHz
   writeVCNL(0x8A, 0x81); // proximity modulator timing - 129, recommended by Vishay 
 }
 //Read Distance Signal
@@ -101,7 +101,7 @@ int main()
     for(;;)
     {
         P=readProximity();
-        if(P<3000){
+        if(P>10000){
             LED_1_Write(1);
         }
         else{

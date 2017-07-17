@@ -1,4 +1,4 @@
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
 
 
    1              	/***************************************************************************//**
@@ -25,7 +25,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
    1              	/*******************************************************************************
    2              	* File Name: cydevicegnu_trm.inc
    3              	* 
-   4              	* PSoC Creator  3.3 CP3
+   4              	* PSoC Creator  4.0 Update 1
    5              	*
    6              	* Description:
    7              	* This file provides all of the address values for the entire PSoC device.
@@ -58,7 +58,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
   34              	.set CYREG_SFLASH_PROT_ROW9, 0x0ffff009
   35              	.set CYREG_SFLASH_PROT_ROW10, 0x0ffff00a
   36              	.set CYREG_SFLASH_PROT_ROW11, 0x0ffff00b
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 2
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 2
 
 
   37              	.set CYREG_SFLASH_PROT_ROW12, 0x0ffff00c
@@ -118,7 +118,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
   91              	.set CYFLD_SFLASH_PROT_LEVEL__SIZE, 0x00000002
   92              	.set CYVAL_SFLASH_PROT_LEVEL_VIRGIN, 0x00000001
   93              	.set CYVAL_SFLASH_PROT_LEVEL_OPEN, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 3
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 3
 
 
   94              	.set CYVAL_SFLASH_PROT_LEVEL_PROTECTED, 0x00000002
@@ -178,7 +178,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  148              	.set CYREG_SFLASH_AV_PAIRS_8B52, 0x0ffff0b4
  149              	.set CYREG_SFLASH_AV_PAIRS_8B53, 0x0ffff0b5
  150              	.set CYREG_SFLASH_AV_PAIRS_8B54, 0x0ffff0b6
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 4
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 4
 
 
  151              	.set CYREG_SFLASH_AV_PAIRS_8B55, 0x0ffff0b7
@@ -238,7 +238,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  205              	.set CYREG_SFLASH_AV_PAIRS_8B103, 0x0ffff0e7
  206              	.set CYREG_SFLASH_AV_PAIRS_8B104, 0x0ffff0e8
  207              	.set CYREG_SFLASH_AV_PAIRS_8B105, 0x0ffff0e9
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 5
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 5
 
 
  208              	.set CYREG_SFLASH_AV_PAIRS_8B106, 0x0ffff0ea
@@ -298,7 +298,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  262              	.set CYFLD_SFLASH_SROM_PROT_LIMIT__OFFSET, 0x00000000
  263              	.set CYFLD_SFLASH_SROM_PROT_LIMIT__SIZE, 0x0000000a
  264              	.set CYREG_SFLASH_HIB_KEY_DELAY, 0x0ffff150
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 6
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 6
 
 
  265              	.set CYFLD_SFLASH_WAKEUP_HOLDOFF__OFFSET, 0x00000000
@@ -358,7 +358,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  319              	.set CYREG_SFLASH_DIE_SORT, 0x0ffff17e
  320              	.set CYFLD_SFLASH_S1_PASS__OFFSET, 0x00000000
  321              	.set CYFLD_SFLASH_S1_PASS__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 7
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 7
 
 
  322              	.set CYFLD_SFLASH_S2_PASS__OFFSET, 0x00000001
@@ -418,7 +418,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  376              	.set CYREG_SFLASH_EA_E, 0x0ffff1ac
  377              	.set CYREG_SFLASH_EA_P, 0x0ffff1b0
  378              	.set CYREG_SFLASH_ES_E, 0x0ffff1b4
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 8
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 8
 
 
  379              	.set CYREG_SFLASH_ES_P_EO, 0x0ffff1b8
@@ -478,7 +478,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  433              	.set CYREG_SFLASH_IMO_TRIM19, 0x0ffff1e3
  434              	.set CYREG_SFLASH_IMO_TRIM20, 0x0ffff1e4
  435              	.set CYREG_SFLASH_IMO_TRIM21, 0x0ffff1e5
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 9
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 9
 
 
  436              	.set CYREG_SFLASH_IMO_TRIM22, 0x0ffff1e6
@@ -538,7 +538,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  490              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH25, 0x0ffff219
  491              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH26, 0x0ffff21a
  492              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH27, 0x0ffff21b
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 10
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 10
 
 
  493              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH28, 0x0ffff21c
@@ -598,7 +598,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  547              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH82, 0x0ffff252
  548              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH83, 0x0ffff253
  549              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH84, 0x0ffff254
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 11
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 11
 
 
  550              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH85, 0x0ffff255
@@ -658,7 +658,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  604              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH139, 0x0ffff28b
  605              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH140, 0x0ffff28c
  606              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH141, 0x0ffff28d
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 12
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 12
 
 
  607              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH142, 0x0ffff28e
@@ -718,7 +718,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  661              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH196, 0x0ffff2c4
  662              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH197, 0x0ffff2c5
  663              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH198, 0x0ffff2c6
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 13
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 13
 
 
  664              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH199, 0x0ffff2c7
@@ -778,7 +778,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  718              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH253, 0x0ffff2fd
  719              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH254, 0x0ffff2fe
  720              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH255, 0x0ffff2ff
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 14
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 14
 
 
  721              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH256, 0x0ffff300
@@ -838,7 +838,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  775              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH310, 0x0ffff336
  776              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH311, 0x0ffff337
  777              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH312, 0x0ffff338
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 15
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 15
 
 
  778              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH313, 0x0ffff339
@@ -898,7 +898,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  832              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH367, 0x0ffff36f
  833              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH368, 0x0ffff370
  834              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH369, 0x0ffff371
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 16
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 16
 
 
  835              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH370, 0x0ffff372
@@ -958,7 +958,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  889              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH424, 0x0ffff3a8
  890              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH425, 0x0ffff3a9
  891              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH426, 0x0ffff3aa
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 17
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 17
 
 
  892              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH427, 0x0ffff3ab
@@ -1018,7 +1018,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  946              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH481, 0x0ffff3e1
  947              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH482, 0x0ffff3e2
  948              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH483, 0x0ffff3e3
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 18
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 18
 
 
  949              	.set CYREG_SFLASH_MACRO_0_FREE_SFLASH484, 0x0ffff3e4
@@ -1078,7 +1078,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1003              	.set CYREG_SFLASH_ALT_PROT_ROW26, 0x0ffff41a
  1004              	.set CYREG_SFLASH_ALT_PROT_ROW27, 0x0ffff41b
  1005              	.set CYREG_SFLASH_ALT_PROT_ROW28, 0x0ffff41c
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 19
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 19
 
 
  1006              	.set CYREG_SFLASH_ALT_PROT_ROW29, 0x0ffff41d
@@ -1138,7 +1138,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1060              	.set CYREG_SFLASH_ALT_PROT_ROW83, 0x0ffff453
  1061              	.set CYREG_SFLASH_ALT_PROT_ROW84, 0x0ffff454
  1062              	.set CYREG_SFLASH_ALT_PROT_ROW85, 0x0ffff455
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 20
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 20
 
 
  1063              	.set CYREG_SFLASH_ALT_PROT_ROW86, 0x0ffff456
@@ -1198,7 +1198,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1117              	.set CYREG_SFLASH_ALT_PROT_ROW140, 0x0ffff48c
  1118              	.set CYREG_SFLASH_ALT_PROT_ROW141, 0x0ffff48d
  1119              	.set CYREG_SFLASH_ALT_PROT_ROW142, 0x0ffff48e
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 21
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 21
 
 
  1120              	.set CYREG_SFLASH_ALT_PROT_ROW143, 0x0ffff48f
@@ -1258,7 +1258,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1174              	.set CYREG_SFLASH_ALT_PROT_ROW197, 0x0ffff4c5
  1175              	.set CYREG_SFLASH_ALT_PROT_ROW198, 0x0ffff4c6
  1176              	.set CYREG_SFLASH_ALT_PROT_ROW199, 0x0ffff4c7
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 22
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 22
 
 
  1177              	.set CYREG_SFLASH_ALT_PROT_ROW200, 0x0ffff4c8
@@ -1318,7 +1318,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1231              	.set CYREG_SFLASH_ALT_PROT_ROW254, 0x0ffff4fe
  1232              	.set CYREG_SFLASH_ALT_PROT_ROW255, 0x0ffff4ff
  1233              	.set CYREG_SFLASH_ALT_PP, 0x0ffff5a0
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 23
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 23
 
 
  1234              	.set CYREG_SFLASH_ALT_E, 0x0ffff5a4
@@ -1378,7 +1378,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1288              	.set CYREG_PERI_PCLK_CTL23, 0x4001015c
  1289              	.set CYREG_PERI_DIV_16_CTL0, 0x40010300
  1290              	.set CYFLD_PERI_EN__OFFSET, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 24
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 24
 
 
  1291              	.set CYFLD_PERI_EN__SIZE, 0x00000001
@@ -1438,7 +1438,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1345              	.set CYVAL_HSIOM_IO0_SEL_DSI_DSI, 0x00000002
  1346              	.set CYVAL_HSIOM_IO0_SEL_DSI_GPIO, 0x00000003
  1347              	.set CYVAL_HSIOM_IO0_SEL_CSD_SENSE, 0x00000004
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 25
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 25
 
 
  1348              	.set CYVAL_HSIOM_IO0_SEL_CSD_SHIELD, 0x00000005
@@ -1498,7 +1498,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1402              	.set CYFLD_TST_ADFT_MUX_SEL_0A__OFFSET, 0x00000000
  1403              	.set CYFLD_TST_ADFT_MUX_SEL_0A__SIZE, 0x00000003
  1404              	.set CYVAL_TST_ADFT_MUX_SEL_0A_NC0, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 26
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 26
 
 
  1405              	.set CYVAL_TST_ADFT_MUX_SEL_0A_IN1, 0x00000001
@@ -1558,7 +1558,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1459              	.set CYREG_GPIO_PRT0_PS, 0x40040004
  1460              	.set CYFLD_GPIO_PRT_FLT_DATA__OFFSET, 0x00000008
  1461              	.set CYFLD_GPIO_PRT_FLT_DATA__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 27
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 27
 
 
  1462              	.set CYREG_GPIO_PRT0_PC, 0x40040008
@@ -1618,7 +1618,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1516              	.set CYVAL_GPIO_PRT_FLT_EDGE_SEL_DISABLE, 0x00000000
  1517              	.set CYVAL_GPIO_PRT_FLT_EDGE_SEL_RISING, 0x00000001
  1518              	.set CYVAL_GPIO_PRT_FLT_EDGE_SEL_FALLING, 0x00000002
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 28
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 28
 
 
  1519              	.set CYVAL_GPIO_PRT_FLT_EDGE_SEL_BOTH, 0x00000003
@@ -1678,7 +1678,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1573              	.set CYREG_GPIO_PRT1_DR_INV, 0x40040148
  1574              	.set CYDEV_GPIO_PRT2_BASE, 0x40040200
  1575              	.set CYDEV_GPIO_PRT2_SIZE, 0x00000100
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 29
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 29
 
 
  1576              	.set CYREG_GPIO_PRT2_DR, 0x40040200
@@ -1738,7 +1738,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1630              	.set CYVAL_GPIO_PRT_PORT_SLEW_CTL_PORT_SLEW_CTL_3, 0x00000003
  1631              	.set CYREG_GPIO_PRT6_INTR_CFG, 0x4004060c
  1632              	.set CYREG_GPIO_PRT6_INTR, 0x40040610
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 30
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 30
 
 
  1633              	.set CYREG_GPIO_PRT6_PC2, 0x40040618
@@ -1798,7 +1798,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1687              	.set CYFLD__WAKEUP_HOLDOFF__SIZE, 0x0000000a
  1688              	.set CYREG_PWR_PWRSYS_CONFIG, 0x400b0010
  1689              	.set CYFLD__HIB_TEST_EN__OFFSET, 0x00000008
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 31
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 31
 
 
  1690              	.set CYFLD__HIB_TEST_EN__SIZE, 0x00000001
@@ -1858,7 +1858,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1744              	.set CYFLD__DEEPSLEEP_OPEN__OFFSET, 0x00000012
  1745              	.set CYFLD__DEEPSLEEP_OPEN__SIZE, 0x00000001
  1746              	.set CYFLD__QUIET_OPEN__OFFSET, 0x00000013
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 32
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 32
 
 
  1747              	.set CYFLD__QUIET_OPEN__SIZE, 0x00000001
@@ -1918,7 +1918,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1801              	.set CYFLD__DIRECT_SEL__OFFSET, 0x00000000
  1802              	.set CYFLD__DIRECT_SEL__SIZE, 0x00000003
  1803              	.set CYVAL__DIRECT_SEL_IMO, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 33
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 33
 
 
  1804              	.set CYVAL__DIRECT_SEL_EXTCLK, 0x00000001
@@ -1978,7 +1978,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1858              	.set CYFLD__SYSCLK_DIV__SIZE, 0x00000003
  1859              	.set CYVAL__SYSCLK_DIV_NO_DIV, 0x00000000
  1860              	.set CYVAL__SYSCLK_DIV_DIV_BY_2, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 34
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 34
 
 
  1861              	.set CYVAL__SYSCLK_DIV_DIV_BY_4, 0x00000002
@@ -2038,7 +2038,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1915              	.set CYVAL__SS_MODE_TRIANGLE, 0x00000001
  1916              	.set CYVAL__SS_MODE_LFSR, 0x00000002
  1917              	.set CYVAL__SS_MODE_DSI, 0x00000003
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 35
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 35
 
 
  1918              	.set CYREG_CLK_DFT_SELECT, 0x400b0110
@@ -2098,7 +2098,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1972              	.set CYREG_WDT_CTRHIGH, 0x400b0204
  1973              	.set CYFLD__WDT_CTR2__OFFSET, 0x00000000
  1974              	.set CYFLD__WDT_CTR2__SIZE, 0x00000020
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 36
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 36
 
 
  1975              	.set CYREG_WDT_MATCH, 0x400b0208
@@ -2158,7 +2158,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2029              	.set CYFLD__WDT_ENABLED2__SIZE, 0x00000001
  2030              	.set CYFLD__WDT_INT2__OFFSET, 0x00000012
  2031              	.set CYFLD__WDT_INT2__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 37
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 37
 
 
  2032              	.set CYFLD__WDT_RESET2__OFFSET, 0x00000013
@@ -2218,7 +2218,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2086              	.set CYFLD__INL_CROSS_MAIN__OFFSET, 0x00000003
  2087              	.set CYFLD__INL_CROSS_MAIN__SIZE, 0x00000004
  2088              	.set CYREG_PWR_BG_TRIM2, 0x400bff14
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 38
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 38
 
 
  2089              	.set CYFLD__VCTAT_SLOPE__OFFSET, 0x00000000
@@ -2278,7 +2278,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2143              	.set CYREG_UDB_W8_A11, 0x400f0011
  2144              	.set CYREG_UDB_W8_A12, 0x400f0012
  2145              	.set CYREG_UDB_W8_A13, 0x400f0013
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 39
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 39
 
 
  2146              	.set CYREG_UDB_W8_D00, 0x400f0020
@@ -2338,7 +2338,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2200              	.set CYVAL_UDB_W8_FIFO0_LVL_MID, 0x00000001
  2201              	.set CYFLD_UDB_W8_FIFO1_LVL__OFFSET, 0x00000003
  2202              	.set CYFLD_UDB_W8_FIFO1_LVL__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 40
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 40
 
 
  2203              	.set CYVAL_UDB_W8_FIFO1_LVL_NORMAL, 0x00000000
@@ -2398,7 +2398,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2257              	.set CYREG_UDB_CAT16_CTL_ST3, 0x400f10c6
  2258              	.set CYREG_UDB_CAT16_ACTL_MSK0, 0x400f1100
  2259              	.set CYFLD_UDB_CAT16_MSK__OFFSET, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 41
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 41
 
 
  2260              	.set CYFLD_UDB_CAT16_MSK__SIZE, 0x00000008
@@ -2458,7 +2458,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2314              	.set CYFLD_UDB_W16_D0_LS__SIZE, 0x00000008
  2315              	.set CYFLD_UDB_W16_D0_MS__OFFSET, 0x00000008
  2316              	.set CYFLD_UDB_W16_D0_MS__SIZE, 0x00000008
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 42
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 42
 
 
  2317              	.set CYREG_UDB_W16_D01, 0x400f1042
@@ -2518,7 +2518,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2371              	.set CYFLD_UDB_W16_FIFO0_LVL_LS__SIZE, 0x00000001
  2372              	.set CYVAL_UDB_W16_FIFO0_LVL_LS_NORMAL, 0x00000000
  2373              	.set CYVAL_UDB_W16_FIFO0_LVL_LS_MID, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 43
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 43
 
 
  2374              	.set CYFLD_UDB_W16_FIFO1_LVL_LS__OFFSET, 0x00000003
@@ -2578,7 +2578,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2428              	.set CYFLD_UDB_W32_A0_1__OFFSET, 0x00000008
  2429              	.set CYFLD_UDB_W32_A0_1__SIZE, 0x00000008
  2430              	.set CYFLD_UDB_W32_A0_2__OFFSET, 0x00000010
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 44
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 44
 
 
  2431              	.set CYFLD_UDB_W32_A0_2__SIZE, 0x00000008
@@ -2638,7 +2638,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2485              	.set CYFLD_UDB_W32_ST_2__SIZE, 0x00000008
  2486              	.set CYFLD_UDB_W32_ST_3__OFFSET, 0x00000018
  2487              	.set CYFLD_UDB_W32_ST_3__SIZE, 0x00000008
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 45
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 45
 
 
  2488              	.set CYREG_UDB_W32_CTL, 0x400f21c0
@@ -2698,7 +2698,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2542              	.set CYVAL_UDB_W32_FIFO0_LVL_1_MID, 0x00000001
  2543              	.set CYFLD_UDB_W32_FIFO1_LVL_1__OFFSET, 0x0000000b
  2544              	.set CYFLD_UDB_W32_FIFO1_LVL_1__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 46
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 46
 
 
  2545              	.set CYVAL_UDB_W32_FIFO1_LVL_1_NORMAL, 0x00000000
@@ -2758,7 +2758,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2599              	.set CYFLD_UDB_W32_CNT_START_3__OFFSET, 0x0000001d
  2600              	.set CYFLD_UDB_W32_CNT_START_3__SIZE, 0x00000001
  2601              	.set CYVAL_UDB_W32_CNT_START_3_DISABLE, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 47
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 47
 
 
  2602              	.set CYVAL_UDB_W32_CNT_START_3_ENABLE, 0x00000001
@@ -2818,7 +2818,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2656              	.set CYFLD_UDB_P_U_PLD1_ITxC_7__SIZE, 0x00000001
  2657              	.set CYFLD_UDB_P_U_PLD0_ITxT_0__OFFSET, 0x00000010
  2658              	.set CYFLD_UDB_P_U_PLD0_ITxT_0__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 48
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 48
 
 
  2659              	.set CYFLD_UDB_P_U_PLD0_ITxT_1__OFFSET, 0x00000011
@@ -2878,7 +2878,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2713              	.set CYFLD_UDB_P_U_PLD0_ORT_PTx_6__OFFSET, 0x00000006
  2714              	.set CYFLD_UDB_P_U_PLD0_ORT_PTx_6__SIZE, 0x00000001
  2715              	.set CYFLD_UDB_P_U_PLD0_ORT_PTx_7__OFFSET, 0x00000007
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 49
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 49
 
 
  2716              	.set CYFLD_UDB_P_U_PLD0_ORT_PTx_7__SIZE, 0x00000001
@@ -2938,7 +2938,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2770              	.set CYFLD_UDB_P_U_PLD1_MC0_CEN__SIZE, 0x00000001
  2771              	.set CYVAL_UDB_P_U_PLD1_MC0_CEN_DISABLE, 0x00000000
  2772              	.set CYVAL_UDB_P_U_PLD1_MC0_CEN_ENABLE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 50
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 50
 
 
  2773              	.set CYFLD_UDB_P_U_PLD1_MC0_DFF_C__OFFSET, 0x00000009
@@ -2998,7 +2998,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2827              	.set CYFLD_UDB_P_U_PLD1_MC0_XORFB__SIZE, 0x00000002
  2828              	.set CYVAL_UDB_P_U_PLD1_MC0_XORFB_DFF, 0x00000000
  2829              	.set CYVAL_UDB_P_U_PLD1_MC0_XORFB_CARRY, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 51
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 51
 
 
  2830              	.set CYVAL_UDB_P_U_PLD1_MC0_XORFB_TFF_H, 0x00000002
@@ -3058,7 +3058,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2884              	.set CYFLD_UDB_P_U_PLD1_MC0_SET_SEL__SIZE, 0x00000001
  2885              	.set CYVAL_UDB_P_U_PLD1_MC0_SET_SEL_DISABLE, 0x00000000
  2886              	.set CYVAL_UDB_P_U_PLD1_MC0_SET_SEL_ENABLE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 52
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 52
 
 
  2887              	.set CYFLD_UDB_P_U_PLD1_MC0_RESET_SEL__OFFSET, 0x00000009
@@ -3118,7 +3118,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2941              	.set CYFLD_UDB_P_U_PLD1_MC0_BYPASS__SIZE, 0x00000001
  2942              	.set CYVAL_UDB_P_U_PLD1_MC0_BYPASS_REGISTER, 0x00000000
  2943              	.set CYVAL_UDB_P_U_PLD1_MC0_BYPASS_COMBINATIONAL, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 53
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 53
 
 
  2944              	.set CYFLD_UDB_P_U_NC9__OFFSET, 0x00000009
@@ -3178,7 +3178,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  2998              	.set CYVAL_UDB_P_U_DP_RTE_BYPASS0_DP_IN0_ROUTE, 0x00000000
  2999              	.set CYVAL_UDB_P_U_DP_RTE_BYPASS0_DP_IN0_BYPASS, 0x00000001
  3000              	.set CYFLD_UDB_P_U_DP_RTE_BYPASS1__OFFSET, 0x00000004
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 54
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 54
 
 
  3001              	.set CYFLD_UDB_P_U_DP_RTE_BYPASS1__SIZE, 0x00000001
@@ -3238,7 +3238,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3055              	.set CYVAL_UDB_P_U_D1_LD_DP_IN0, 0x00000001
  3056              	.set CYVAL_UDB_P_U_D1_LD_DP_IN1, 0x00000002
  3057              	.set CYVAL_UDB_P_U_D1_LD_DP_IN2, 0x00000003
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 55
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 55
 
 
  3058              	.set CYVAL_UDB_P_U_D1_LD_DP_IN3, 0x00000004
@@ -3298,7 +3298,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3112              	.set CYVAL_UDB_P_U_OUT1_OV_MSB, 0x00000008
  3113              	.set CYVAL_UDB_P_U_OUT1_CO_MSB, 0x00000009
  3114              	.set CYVAL_UDB_P_U_OUT1_CMSBO, 0x0000000a
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 56
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 56
 
 
  3115              	.set CYVAL_UDB_P_U_OUT1_SO, 0x0000000b
@@ -3358,7 +3358,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3169              	.set CYVAL_UDB_P_U_OUT4_CO_MSB, 0x00000009
  3170              	.set CYVAL_UDB_P_U_OUT4_CMSBO, 0x0000000a
  3171              	.set CYVAL_UDB_P_U_OUT4_SO, 0x0000000b
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 57
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 57
 
 
  3172              	.set CYVAL_UDB_P_U_OUT4_F0_BLK_STAT, 0x0000000c
@@ -3418,7 +3418,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3226              	.set CYFLD_UDB_P_U_AMASK_EN__SIZE, 0x00000001
  3227              	.set CYVAL_UDB_P_U_AMASK_EN_DISABLE, 0x00000000
  3228              	.set CYVAL_UDB_P_U_AMASK_EN_ENABLE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 58
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 58
 
 
  3229              	.set CYFLD_UDB_P_U_CMASK0_EN__OFFSET, 0x00000006
@@ -3478,7 +3478,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3283              	.set CYVAL_UDB_P_U_MSB_SEL_BIT2, 0x00000002
  3284              	.set CYVAL_UDB_P_U_MSB_SEL_BIT3, 0x00000003
  3285              	.set CYVAL_UDB_P_U_MSB_SEL_BIT4, 0x00000004
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 59
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 59
 
 
  3286              	.set CYVAL_UDB_P_U_MSB_SEL_BIT5, 0x00000005
@@ -3538,7 +3538,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3340              	.set CYFLD_UDB_P_U_FIFO_CAP__SIZE, 0x00000001
  3341              	.set CYVAL_UDB_P_U_FIFO_CAP_DISABLE, 0x00000000
  3342              	.set CYVAL_UDB_P_U_FIFO_CAP_ENABLE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 60
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 60
 
 
  3343              	.set CYFLD_UDB_P_U_FIFO_FAST__OFFSET, 0x00000005
@@ -3598,7 +3598,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3397              	.set CYFLD_UDB_P_U_SC_INT_MD__OFFSET, 0x00000002
  3398              	.set CYFLD_UDB_P_U_SC_INT_MD__SIZE, 0x00000001
  3399              	.set CYVAL_UDB_P_U_SC_INT_MD_NORMAL, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 61
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 61
 
 
  3400              	.set CYVAL_UDB_P_U_SC_INT_MD_INT_MODE, 0x00000001
@@ -3658,7 +3658,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3454              	.set CYVAL_UDB_P_U_RC_INV_INVERT, 0x00000001
  3455              	.set CYFLD_UDB_P_U_RC_RES_SEL0_OR_FRES__OFFSET, 0x00000006
  3456              	.set CYFLD_UDB_P_U_RC_RES_SEL0_OR_FRES__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 62
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 62
 
 
  3457              	.set CYFLD_UDB_P_U_RC_RES_SEL1__OFFSET, 0x00000007
@@ -3718,7 +3718,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3511              	.set CYVAL_UDB_P_U_SC_CK_SEL_SYSCLK, 0x00000009
  3512              	.set CYREG_UDB_P0_U0_CFG30, 0x400f305e
  3513              	.set CYFLD_UDB_P_U_RES_SEL__OFFSET, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 63
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 63
 
 
  3514              	.set CYFLD_UDB_P_U_RES_SEL__SIZE, 0x00000002
@@ -3778,7 +3778,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3568              	.set CYVAL_UDB_P_U_PLD1_RES_POL_NOINV, 0x00000000
  3569              	.set CYVAL_UDB_P_U_PLD1_RES_POL_INVERT, 0x00000001
  3570              	.set CYREG_UDB_P0_U0_DCFG0, 0x400f3060
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 64
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 64
 
 
  3571              	.set CYFLD_UDB_P_U_CMP_SEL__OFFSET, 0x00000000
@@ -3838,7 +3838,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3625              	.set CYREG_UDB_P0_U0_DCFG1, 0x400f3062
  3626              	.set CYREG_UDB_P0_U0_DCFG2, 0x400f3064
  3627              	.set CYREG_UDB_P0_U0_DCFG3, 0x400f3066
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 65
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 65
 
 
  3628              	.set CYREG_UDB_P0_U0_DCFG4, 0x400f3068
@@ -3898,7 +3898,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3682              	.set CYREG_UDB_P0_U1_CFG28, 0x400f30dc
  3683              	.set CYREG_UDB_P0_U1_CFG29, 0x400f30dd
  3684              	.set CYREG_UDB_P0_U1_CFG30, 0x400f30de
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 66
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 66
 
 
  3685              	.set CYREG_UDB_P0_U1_CFG31, 0x400f30df
@@ -3958,7 +3958,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3739              	.set CYREG_UDB_P0_ROUTE_HC41, 0x400f3129
  3740              	.set CYREG_UDB_P0_ROUTE_HC42, 0x400f312a
  3741              	.set CYREG_UDB_P0_ROUTE_HC43, 0x400f312b
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 67
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 67
 
 
  3742              	.set CYREG_UDB_P0_ROUTE_HC44, 0x400f312c
@@ -4018,7 +4018,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3796              	.set CYREG_UDB_P0_ROUTE_HC98, 0x400f3162
  3797              	.set CYREG_UDB_P0_ROUTE_HC99, 0x400f3163
  3798              	.set CYREG_UDB_P0_ROUTE_HC100, 0x400f3164
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 68
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 68
 
 
  3799              	.set CYREG_UDB_P0_ROUTE_HC101, 0x400f3165
@@ -4078,7 +4078,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3853              	.set CYREG_UDB_P0_ROUTE_HS7, 0x400f3197
  3854              	.set CYREG_UDB_P0_ROUTE_HS8, 0x400f3198
  3855              	.set CYREG_UDB_P0_ROUTE_HS9, 0x400f3199
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 69
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 69
 
 
  3856              	.set CYREG_UDB_P0_ROUTE_HS10, 0x400f319a
@@ -4138,7 +4138,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3910              	.set CYREG_UDB_P0_ROUTE_VS1, 0x400f31e2
  3911              	.set CYREG_UDB_P0_ROUTE_VS2, 0x400f31e4
  3912              	.set CYREG_UDB_P0_ROUTE_VS3, 0x400f31e6
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 70
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 70
 
 
  3913              	.set CYREG_UDB_P0_ROUTE_VS4, 0x400f31e8
@@ -4198,7 +4198,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  3967              	.set CYREG_UDB_P1_U0_CFG26, 0x400f325a
  3968              	.set CYREG_UDB_P1_U0_CFG27, 0x400f325b
  3969              	.set CYREG_UDB_P1_U0_CFG28, 0x400f325c
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 71
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 71
 
 
  3970              	.set CYREG_UDB_P1_U0_CFG29, 0x400f325d
@@ -4258,7 +4258,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4024              	.set CYREG_UDB_P1_U1_CFG21, 0x400f32d5
  4025              	.set CYREG_UDB_P1_U1_CFG22, 0x400f32d6
  4026              	.set CYREG_UDB_P1_U1_CFG23, 0x400f32d7
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 72
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 72
 
 
  4027              	.set CYREG_UDB_P1_U1_CFG24, 0x400f32d8
@@ -4318,7 +4318,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4081              	.set CYREG_UDB_P1_ROUTE_HC36, 0x400f3324
  4082              	.set CYREG_UDB_P1_ROUTE_HC37, 0x400f3325
  4083              	.set CYREG_UDB_P1_ROUTE_HC38, 0x400f3326
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 73
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 73
 
 
  4084              	.set CYREG_UDB_P1_ROUTE_HC39, 0x400f3327
@@ -4378,7 +4378,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4138              	.set CYREG_UDB_P1_ROUTE_HC93, 0x400f335d
  4139              	.set CYREG_UDB_P1_ROUTE_HC94, 0x400f335e
  4140              	.set CYREG_UDB_P1_ROUTE_HC95, 0x400f335f
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 74
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 74
 
 
  4141              	.set CYREG_UDB_P1_ROUTE_HC96, 0x400f3360
@@ -4438,7 +4438,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4195              	.set CYREG_UDB_P1_ROUTE_HS6, 0x400f3396
  4196              	.set CYREG_UDB_P1_ROUTE_HS7, 0x400f3397
  4197              	.set CYREG_UDB_P1_ROUTE_HS8, 0x400f3398
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 75
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 75
 
 
  4198              	.set CYREG_UDB_P1_ROUTE_HS9, 0x400f3399
@@ -4498,7 +4498,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4252              	.set CYFLD_UDB_DSI_HC_BYTE__SIZE, 0x00000008
  4253              	.set CYREG_UDB_DSI0_HC1, 0x400f4001
  4254              	.set CYREG_UDB_DSI0_HC2, 0x400f4002
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 76
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 76
 
 
  4255              	.set CYREG_UDB_DSI0_HC3, 0x400f4003
@@ -4558,7 +4558,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4309              	.set CYREG_UDB_DSI0_HC57, 0x400f4039
  4310              	.set CYREG_UDB_DSI0_HC58, 0x400f403a
  4311              	.set CYREG_UDB_DSI0_HC59, 0x400f403b
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 77
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 77
 
 
  4312              	.set CYREG_UDB_DSI0_HC60, 0x400f403c
@@ -4618,7 +4618,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4366              	.set CYREG_UDB_DSI0_HC114, 0x400f4072
  4367              	.set CYREG_UDB_DSI0_HC115, 0x400f4073
  4368              	.set CYREG_UDB_DSI0_HC116, 0x400f4074
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 78
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 78
 
 
  4369              	.set CYREG_UDB_DSI0_HC117, 0x400f4075
@@ -4678,7 +4678,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4423              	.set CYREG_UDB_DSI0_HS23, 0x400f40a7
  4424              	.set CYREG_UDB_DSI0_HV_R0, 0x400f40a8
  4425              	.set CYREG_UDB_DSI0_HV_R1, 0x400f40a9
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 79
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 79
 
 
  4426              	.set CYREG_UDB_DSI0_HV_R2, 0x400f40aa
@@ -4738,7 +4738,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4480              	.set CYREG_UDB_DSI1_HC6, 0x400f4106
  4481              	.set CYREG_UDB_DSI1_HC7, 0x400f4107
  4482              	.set CYREG_UDB_DSI1_HC8, 0x400f4108
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 80
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 80
 
 
  4483              	.set CYREG_UDB_DSI1_HC9, 0x400f4109
@@ -4798,7 +4798,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4537              	.set CYREG_UDB_DSI1_HC63, 0x400f413f
  4538              	.set CYREG_UDB_DSI1_HC64, 0x400f4140
  4539              	.set CYREG_UDB_DSI1_HC65, 0x400f4141
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 81
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 81
 
 
  4540              	.set CYREG_UDB_DSI1_HC66, 0x400f4142
@@ -4858,7 +4858,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4594              	.set CYREG_UDB_DSI1_HC120, 0x400f4178
  4595              	.set CYREG_UDB_DSI1_HC121, 0x400f4179
  4596              	.set CYREG_UDB_DSI1_HC122, 0x400f417a
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 82
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 82
 
 
  4597              	.set CYREG_UDB_DSI1_HC123, 0x400f417b
@@ -4918,7 +4918,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4651              	.set CYREG_UDB_DSI1_HV_R9, 0x400f41b1
  4652              	.set CYREG_UDB_DSI1_HV_R10, 0x400f41b2
  4653              	.set CYREG_UDB_DSI1_HV_R11, 0x400f41b3
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 83
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 83
 
 
  4654              	.set CYREG_UDB_DSI1_HV_R12, 0x400f41b4
@@ -4978,7 +4978,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4708              	.set CYREG_UDB_DSI2_HC24, 0x400f4218
  4709              	.set CYREG_UDB_DSI2_HC25, 0x400f4219
  4710              	.set CYREG_UDB_DSI2_HC26, 0x400f421a
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 84
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 84
 
 
  4711              	.set CYREG_UDB_DSI2_HC27, 0x400f421b
@@ -5038,7 +5038,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4765              	.set CYREG_UDB_DSI2_HC81, 0x400f4251
  4766              	.set CYREG_UDB_DSI2_HC82, 0x400f4252
  4767              	.set CYREG_UDB_DSI2_HC83, 0x400f4253
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 85
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 85
 
 
  4768              	.set CYREG_UDB_DSI2_HC84, 0x400f4254
@@ -5098,7 +5098,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4822              	.set CYREG_UDB_DSI2_HV_L10, 0x400f428a
  4823              	.set CYREG_UDB_DSI2_HV_L11, 0x400f428b
  4824              	.set CYREG_UDB_DSI2_HV_L12, 0x400f428c
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 86
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 86
 
 
  4825              	.set CYREG_UDB_DSI2_HV_L13, 0x400f428d
@@ -5158,7 +5158,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4879              	.set CYREG_UDB_DSI2_DSIOUTT1, 0x400f42d6
  4880              	.set CYREG_UDB_DSI2_DSIOUTT2, 0x400f42d8
  4881              	.set CYREG_UDB_DSI2_DSIOUTT3, 0x400f42da
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 87
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 87
 
 
  4882              	.set CYREG_UDB_DSI2_DSIOUTT4, 0x400f42dc
@@ -5218,7 +5218,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4936              	.set CYREG_UDB_DSI3_HC42, 0x400f432a
  4937              	.set CYREG_UDB_DSI3_HC43, 0x400f432b
  4938              	.set CYREG_UDB_DSI3_HC44, 0x400f432c
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 88
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 88
 
 
  4939              	.set CYREG_UDB_DSI3_HC45, 0x400f432d
@@ -5278,7 +5278,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  4993              	.set CYREG_UDB_DSI3_HC99, 0x400f4363
  4994              	.set CYREG_UDB_DSI3_HC100, 0x400f4364
  4995              	.set CYREG_UDB_DSI3_HC101, 0x400f4365
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 89
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 89
 
 
  4996              	.set CYREG_UDB_DSI3_HC102, 0x400f4366
@@ -5338,7 +5338,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5050              	.set CYREG_UDB_DSI3_HS12, 0x400f439c
  5051              	.set CYREG_UDB_DSI3_HS13, 0x400f439d
  5052              	.set CYREG_UDB_DSI3_HS14, 0x400f439e
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 90
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 90
 
 
  5053              	.set CYREG_UDB_DSI3_HS15, 0x400f439f
@@ -5398,7 +5398,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5107              	.set CYVAL_UDB_PA_CLKIN_EN_SEL_PIN_RC, 0x00000000
  5108              	.set CYVAL_UDB_PA_CLKIN_EN_SEL_DSI_RC_0, 0x00000001
  5109              	.set CYVAL_UDB_PA_CLKIN_EN_SEL_DSI_RC_1, 0x00000002
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 91
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 91
 
 
  5110              	.set CYVAL_UDB_PA_CLKIN_EN_SEL_DSI_RC_2, 0x00000003
@@ -5458,7 +5458,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5164              	.set CYFLD_UDB_PA_CLKOUT_SEL__OFFSET, 0x00000004
  5165              	.set CYFLD_UDB_PA_CLKOUT_SEL__SIZE, 0x00000004
  5166              	.set CYVAL_UDB_PA_CLKOUT_SEL_GCLK0, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 92
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 92
 
 
  5167              	.set CYVAL_UDB_PA_CLKOUT_SEL_GCLK1, 0x00000001
@@ -5518,7 +5518,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5221              	.set CYFLD_UDB_PA_PIN_SEL__SIZE, 0x00000001
  5222              	.set CYVAL_UDB_PA_PIN_SEL_PIN0, 0x00000000
  5223              	.set CYVAL_UDB_PA_PIN_SEL_PIN1, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 93
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 93
 
 
  5224              	.set CYVAL_UDB_PA_PIN_SEL_PIN2, 0x00000002
@@ -5578,7 +5578,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5278              	.set CYVAL_UDB_PA_IN_SYNC7_DOUBLESYNC, 0x00000002
  5279              	.set CYVAL_UDB_PA_IN_SYNC7_RSVD, 0x00000003
  5280              	.set CYREG_UDB_PA0_CFG8, 0x400f5008
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 94
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 94
 
 
  5281              	.set CYFLD_UDB_PA_OUT_SYNC0__OFFSET, 0x00000000
@@ -5638,7 +5638,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5335              	.set CYVAL_UDB_PA_DATA_SEL0_DSI_OUTPUT2, 0x00000002
  5336              	.set CYVAL_UDB_PA_DATA_SEL0_DSI_OUTPUT3, 0x00000003
  5337              	.set CYFLD_UDB_PA_DATA_SEL1__OFFSET, 0x00000002
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 95
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 95
 
 
  5338              	.set CYFLD_UDB_PA_DATA_SEL1__SIZE, 0x00000002
@@ -5698,7 +5698,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5392              	.set CYVAL_UDB_PA_OE_SEL1_DSI_OE_OUT3, 0x00000003
  5393              	.set CYFLD_UDB_PA_OE_SEL2__OFFSET, 0x00000004
  5394              	.set CYFLD_UDB_PA_OE_SEL2__SIZE, 0x00000002
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 96
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 96
 
 
  5395              	.set CYVAL_UDB_PA_OE_SEL2_DSI_OE_OUT0, 0x00000000
@@ -5758,7 +5758,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5449              	.set CYFLD_UDB_PA_OE_SYNC3__OFFSET, 0x00000006
  5450              	.set CYFLD_UDB_PA_OE_SYNC3__SIZE, 0x00000002
  5451              	.set CYVAL_UDB_PA_OE_SYNC3_TRANSPARENT, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 97
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 97
 
 
  5452              	.set CYVAL_UDB_PA_OE_SYNC3_SINGLESYNC, 0x00000001
@@ -5818,7 +5818,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5506              	.set CYDEV_UDB_BCTL0_BASE, 0x400f6000
  5507              	.set CYDEV_UDB_BCTL0_SIZE, 0x00001000
  5508              	.set CYREG_UDB_BCTL0_DRV, 0x400f6000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 98
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 98
 
 
  5509              	.set CYFLD_UDB_BCTL0_DRV__OFFSET, 0x00000000
@@ -5878,7 +5878,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5563              	.set CYVAL_UDB_BCTL0_CLK_SEL6_EDGE_ENABLES, 0x00000000
  5564              	.set CYVAL_UDB_BCTL0_CLK_SEL6_PORT_INPUT, 0x00000001
  5565              	.set CYVAL_UDB_BCTL0_CLK_SEL6_DSI_OUTPUT, 0x00000002
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 99
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 99
 
 
  5566              	.set CYVAL_UDB_BCTL0_CLK_SEL6_SYNC_DSI_OUTPUT, 0x00000003
@@ -5938,7 +5938,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5620              	.set CYFLD_UDB_UDBIF_ROUTE_EN__OFFSET, 0x00000001
  5621              	.set CYFLD_UDB_UDBIF_ROUTE_EN__SIZE, 0x00000001
  5622              	.set CYVAL_UDB_UDBIF_ROUTE_EN_DISABLE, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 100
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 100
 
 
  5623              	.set CYVAL_UDB_UDBIF_ROUTE_EN_ENABLE, 0x00000001
@@ -5998,7 +5998,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5677              	.set CYFLD_CPUSS_VECT_IN_RAM__SIZE, 0x00000001
  5678              	.set CYREG_CPUSS_SYSREQ, 0x40100004
  5679              	.set CYFLD_CPUSS_SYSCALL_COMMAND__OFFSET, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 101
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 101
 
 
  5680              	.set CYFLD_CPUSS_SYSCALL_COMMAND__SIZE, 0x00000010
@@ -6058,7 +6058,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5734              	.set CYFLD_CPUSS_ROM_WS__OFFSET, 0x00000000
  5735              	.set CYFLD_CPUSS_ROM_WS__SIZE, 0x00000001
  5736              	.set CYREG_CPUSS_RAM_CTL, 0x40100038
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 102
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 102
 
 
  5737              	.set CYREG_CPUSS_DMAC_CTL, 0x4010003c
@@ -6118,7 +6118,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5791              	.set CYFLD_DMAC_DESCR_DST_ADDR_INCR__OFFSET, 0x00000015
  5792              	.set CYFLD_DMAC_DESCR_DST_ADDR_INCR__SIZE, 0x00000001
  5793              	.set CYFLD_DMAC_DESCR_SRC_TRANSFER_SIZE__OFFSET, 0x00000016
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 103
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 103
 
 
  5794              	.set CYFLD_DMAC_DESCR_SRC_TRANSFER_SIZE__SIZE, 0x00000001
@@ -6178,7 +6178,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5848              	.set CYREG_DMAC_DESCR3_PONG_CTL, 0x40101878
  5849              	.set CYREG_DMAC_DESCR3_PONG_STATUS, 0x4010187c
  5850              	.set CYDEV_DMAC_DESCR4_BASE, 0x40101880
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 104
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 104
 
 
  5851              	.set CYDEV_DMAC_DESCR4_SIZE, 0x00000020
@@ -6238,7 +6238,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5905              	.set CYREG_SPCIF_NVL_WR_DATA, 0x4011001c
  5906              	.set CYFLD_SPCIF_DATA__OFFSET, 0x00000000
  5907              	.set CYFLD_SPCIF_DATA__SIZE, 0x00000008
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 105
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 105
 
 
  5908              	.set CYREG_SPCIF_INTR, 0x401107f0
@@ -6298,7 +6298,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  5962              	.set CYVAL_TCPWM_CNT_QUADRATURE_MODE_X1, 0x00000000
  5963              	.set CYVAL_TCPWM_CNT_QUADRATURE_MODE_X2, 0x00000001
  5964              	.set CYVAL_TCPWM_CNT_QUADRATURE_MODE_X4, 0x00000002
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 106
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 106
 
 
  5965              	.set CYVAL_TCPWM_CNT_QUADRATURE_MODE_INV_OUT, 0x00000001
@@ -6358,7 +6358,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6019              	.set CYVAL_TCPWM_CNT_RELOAD_EDGE_BOTH_EDGES, 0x00000002
  6020              	.set CYVAL_TCPWM_CNT_RELOAD_EDGE_NO_EDGE_DET, 0x00000003
  6021              	.set CYFLD_TCPWM_CNT_STOP_EDGE__OFFSET, 0x00000006
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 107
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 107
 
 
  6022              	.set CYFLD_TCPWM_CNT_STOP_EDGE__SIZE, 0x00000002
@@ -6418,7 +6418,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6076              	.set CYDEV_TCPWM_CNT2_BASE, 0x40200180
  6077              	.set CYDEV_TCPWM_CNT2_SIZE, 0x00000040
  6078              	.set CYREG_TCPWM_CNT2_CTRL, 0x40200180
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 108
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 108
 
 
  6079              	.set CYREG_TCPWM_CNT2_STATUS, 0x40200184
@@ -6478,7 +6478,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6133              	.set CYREG_TCPWM_CNT5_TR_CTRL0, 0x40200260
  6134              	.set CYREG_TCPWM_CNT5_TR_CTRL1, 0x40200264
  6135              	.set CYREG_TCPWM_CNT5_TR_CTRL2, 0x40200268
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 109
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 109
 
 
  6136              	.set CYREG_TCPWM_CNT5_INTR, 0x40200270
@@ -6538,7 +6538,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6190              	.set CYREG_WCO_DPLL, 0x40220008
  6191              	.set CYFLD_WCO_DPLL_MULT__OFFSET, 0x00000000
  6192              	.set CYFLD_WCO_DPLL_MULT__SIZE, 0x0000000b
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 110
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 110
 
 
  6193              	.set CYFLD_WCO_DPLL_LF_IGAIN__OFFSET, 0x00000010
@@ -6598,7 +6598,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6247              	.set CYFLD_SCB_SCLK_CONTINUOUS__SIZE, 0x00000001
  6248              	.set CYFLD_SCB_SSEL_POLARITY0__OFFSET, 0x00000008
  6249              	.set CYFLD_SCB_SSEL_POLARITY0__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 111
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 111
 
 
  6250              	.set CYFLD_SCB_SSEL_POLARITY1__OFFSET, 0x00000009
@@ -6658,7 +6658,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6304              	.set CYFLD_SCB_CTS_POLARITY__OFFSET, 0x00000018
  6305              	.set CYFLD_SCB_CTS_POLARITY__SIZE, 0x00000001
  6306              	.set CYFLD_SCB_CTS_ENABLED__OFFSET, 0x00000019
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 112
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 112
 
 
  6307              	.set CYFLD_SCB_CTS_ENABLED__SIZE, 0x00000001
@@ -6718,7 +6718,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6361              	.set CYFLD_SCB_SDA_OUT_FILT0_TRIM__OFFSET, 0x00000010
  6362              	.set CYFLD_SCB_SDA_OUT_FILT0_TRIM__SIZE, 0x00000002
  6363              	.set CYFLD_SCB_SDA_OUT_FILT1_TRIM__OFFSET, 0x00000012
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 113
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 113
 
 
  6364              	.set CYFLD_SCB_SDA_OUT_FILT1_TRIM__SIZE, 0x00000002
@@ -6778,7 +6778,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6418              	.set CYREG_SCB0_EZ_DATA13, 0x40240434
  6419              	.set CYREG_SCB0_EZ_DATA14, 0x40240438
  6420              	.set CYREG_SCB0_EZ_DATA15, 0x4024043c
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 114
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 114
 
 
  6421              	.set CYREG_SCB0_EZ_DATA16, 0x40240440
@@ -6838,7 +6838,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6475              	.set CYFLD_SCB_SPI_DONE__OFFSET, 0x00000009
  6476              	.set CYFLD_SCB_SPI_DONE__SIZE, 0x00000001
  6477              	.set CYREG_SCB0_INTR_M_SET, 0x40240f04
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 115
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 115
 
 
  6478              	.set CYREG_SCB0_INTR_M_MASK, 0x40240f08
@@ -6898,7 +6898,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6532              	.set CYFLD_SCB_BREAK_DETECT__SIZE, 0x00000001
  6533              	.set CYREG_SCB0_INTR_RX_SET, 0x40240fc4
  6534              	.set CYREG_SCB0_INTR_RX_MASK, 0x40240fc8
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 116
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 116
 
 
  6535              	.set CYREG_SCB0_INTR_RX_MASKED, 0x40240fcc
@@ -6958,7 +6958,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6589              	.set CYREG_SCB1_EZ_DATA27, 0x4025046c
  6590              	.set CYREG_SCB1_EZ_DATA28, 0x40250470
  6591              	.set CYREG_SCB1_EZ_DATA29, 0x40250474
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 117
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 117
 
 
  6592              	.set CYREG_SCB1_EZ_DATA30, 0x40250478
@@ -7018,7 +7018,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6646              	.set CYREG_SCB2_EZ_DATA3, 0x4026040c
  6647              	.set CYREG_SCB2_EZ_DATA4, 0x40260410
  6648              	.set CYREG_SCB2_EZ_DATA5, 0x40260414
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 118
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 118
 
 
  6649              	.set CYREG_SCB2_EZ_DATA6, 0x40260418
@@ -7078,7 +7078,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6703              	.set CYREG_SCB3_SPI_STATUS, 0x40270024
  6704              	.set CYREG_SCB3_UART_CTRL, 0x40270040
  6705              	.set CYREG_SCB3_UART_TX_CTRL, 0x40270044
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 119
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 119
 
 
  6706              	.set CYREG_SCB3_UART_RX_CTRL, 0x40270048
@@ -7138,7 +7138,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6760              	.set CYREG_SCB3_INTR_SPI_EC, 0x40270ec0
  6761              	.set CYREG_SCB3_INTR_SPI_EC_MASK, 0x40270ec8
  6762              	.set CYREG_SCB3_INTR_SPI_EC_MASKED, 0x40270ecc
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 120
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 120
 
 
  6763              	.set CYREG_SCB3_INTR_M, 0x40270f00
@@ -7198,7 +7198,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6817              	.set CYVAL_CSD_SHIELD_DELAY_OFF, 0x00000000
  6818              	.set CYVAL_CSD_SHIELD_DELAY_50NS, 0x00000002
  6819              	.set CYVAL_CSD_SHIELD_DELAY_10NS, 0x00000003
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 121
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 121
 
 
  6820              	.set CYFLD_CSD_SENSE_COMP_BW__OFFSET, 0x0000000b
@@ -7258,7 +7258,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6874              	.set CYFLD_CSD_DDFTCOMP__SIZE, 0x00000001
  6875              	.set CYVAL_CSD_DDFTCOMP_REFBUFCOMP, 0x00000000
  6876              	.set CYVAL_CSD_DDFTCOMP_SENSECOMP, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 122
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 122
 
 
  6877              	.set CYFLD_CSD_ENABLE__OFFSET, 0x0000001f
@@ -7318,7 +7318,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6931              	.set CYREG_CSD0_INTR_SET, 0x40280018
  6932              	.set CYREG_CSD0_PWM, 0x4028001c
  6933              	.set CYFLD_CSD_PWM_COUNT__OFFSET, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 123
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 123
 
 
  6934              	.set CYFLD_CSD_PWM_COUNT__SIZE, 0x00000004
@@ -7378,7 +7378,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  6988              	.set CYFLD_LCD_OP_MODE__SIZE, 0x00000001
  6989              	.set CYVAL_LCD_OP_MODE_PWM, 0x00000000
  6990              	.set CYVAL_LCD_OP_MODE_CORRELATION, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 124
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 124
 
 
  6991              	.set CYFLD_LCD_BIAS__OFFSET, 0x00000005
@@ -7438,7 +7438,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7045              	.set CYFLD_LPCOMP_ENABLE1__SIZE, 0x00000001
  7046              	.set CYFLD_LPCOMP_MODE2__OFFSET, 0x00000008
  7047              	.set CYFLD_LPCOMP_MODE2__SIZE, 0x00000002
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 125
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 125
 
 
  7048              	.set CYVAL_LPCOMP_MODE2_SLOW, 0x00000000
@@ -7498,7 +7498,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7102              	.set CYFLD_LPCOMP_COMP2_TRIMA__SIZE, 0x00000005
  7103              	.set CYREG_LPCOMP_TRIM4, 0x402bff0c
  7104              	.set CYFLD_LPCOMP_COMP2_TRIMB__OFFSET, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 126
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 126
 
 
  7105              	.set CYFLD_LPCOMP_COMP2_TRIMB__SIZE, 0x00000005
@@ -7558,7 +7558,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7159              	.set CYFLD_CAN_RX_MSG_ENBl__SIZE, 0x00000001
  7160              	.set CYFLD_CAN_RTR_MSG_ENBL__OFFSET, 0x0000000d
  7161              	.set CYFLD_CAN_RTR_MSG_ENBL__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 127
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 127
 
 
  7162              	.set CYFLD_CAN_STUCK_AT_0_ENBL__OFFSET, 0x0000000e
@@ -7618,7 +7618,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7216              	.set CYFLD_CAN_TX_ERR_CNT__OFFSET, 0x00000000
  7217              	.set CYFLD_CAN_TX_ERR_CNT__SIZE, 0x00000008
  7218              	.set CYFLD_CAN_RX_ERR_CNT__OFFSET, 0x00000008
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 128
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 128
 
 
  7219              	.set CYFLD_CAN_RX_ERR_CNT__SIZE, 0x00000008
@@ -7678,7 +7678,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7273              	.set CYFLD_CAN_Field__OFFSET, 0x0000000c
  7274              	.set CYFLD_CAN_Field__SIZE, 0x00000005
  7275              	.set CYDEV_CAN0_CAN_TX0_BASE, 0x402e0020
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 129
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 129
 
 
  7276              	.set CYDEV_CAN0_CAN_TX0_SIZE, 0x00000010
@@ -7738,7 +7738,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7330              	.set CYREG_CAN0_CAN_TX5_DATA_LOW, 0x402e007c
  7331              	.set CYDEV_CAN0_CAN_TX6_BASE, 0x402e0080
  7332              	.set CYDEV_CAN0_CAN_TX6_SIZE, 0x00000010
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 130
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 130
 
 
  7333              	.set CYREG_CAN0_CAN_TX6_CONTROL, 0x402e0080
@@ -7798,7 +7798,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7387              	.set CYDEV_CAN0_CAN_RX1_BASE, 0x402e00c0
  7388              	.set CYDEV_CAN0_CAN_RX1_SIZE, 0x00000020
  7389              	.set CYREG_CAN0_CAN_RX1_CONTROL, 0x402e00c0
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 131
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 131
 
 
  7390              	.set CYREG_CAN0_CAN_RX1_ID, 0x402e00c4
@@ -7858,7 +7858,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7444              	.set CYREG_CAN0_CAN_RX6_ACR, 0x402e0174
  7445              	.set CYREG_CAN0_CAN_RX6_AMR_DATA, 0x402e0178
  7446              	.set CYREG_CAN0_CAN_RX6_ACR_DATA, 0x402e017c
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 132
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 132
 
 
  7447              	.set CYDEV_CAN0_CAN_RX7_BASE, 0x402e0180
@@ -7918,7 +7918,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7501              	.set CYREG_CAN0_CAN_RX12_DATA_HIGH, 0x402e0228
  7502              	.set CYREG_CAN0_CAN_RX12_DATA_LOW, 0x402e022c
  7503              	.set CYREG_CAN0_CAN_RX12_AMR, 0x402e0230
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 133
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 133
 
 
  7504              	.set CYREG_CAN0_CAN_RX12_ACR, 0x402e0234
@@ -7978,7 +7978,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7558              	.set CYFLD_CAN_TT_CAPTURE__SIZE, 0x00000001
  7559              	.set CYREG_CAN0_INTR_CAN_SET, 0x402e0418
  7560              	.set CYREG_CAN0_INTR_CAN_MASK, 0x402e041c
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 134
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 134
 
 
  7561              	.set CYREG_CAN0_INTR_CAN_MASKED, 0x402e0420
@@ -8038,7 +8038,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7615              	.set CYREG_CAN1_CAN_TX7_CONTROL, 0x402f0090
  7616              	.set CYREG_CAN1_CAN_TX7_ID, 0x402f0094
  7617              	.set CYREG_CAN1_CAN_TX7_DATA_HIGH, 0x402f0098
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 135
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 135
 
 
  7618              	.set CYREG_CAN1_CAN_TX7_DATA_LOW, 0x402f009c
@@ -8098,7 +8098,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7672              	.set CYREG_CAN1_CAN_RX5_ID, 0x402f0144
  7673              	.set CYREG_CAN1_CAN_RX5_DATA_HIGH, 0x402f0148
  7674              	.set CYREG_CAN1_CAN_RX5_DATA_LOW, 0x402f014c
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 136
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 136
 
 
  7675              	.set CYREG_CAN1_CAN_RX5_AMR, 0x402f0150
@@ -8158,7 +8158,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7729              	.set CYDEV_CAN1_CAN_RX11_BASE, 0x402f0200
  7730              	.set CYDEV_CAN1_CAN_RX11_SIZE, 0x00000020
  7731              	.set CYREG_CAN1_CAN_RX11_CONTROL, 0x402f0200
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 137
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 137
 
 
  7732              	.set CYREG_CAN1_CAN_RX11_ID, 0x402f0204
@@ -8218,7 +8218,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7786              	.set CYREG_CAN1_INTR_CAN_MASK, 0x402f041c
  7787              	.set CYREG_CAN1_INTR_CAN_MASKED, 0x402f0420
  7788              	.set CYDEV_CTBM0_BASE, 0x40300000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 138
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 138
 
 
  7789              	.set CYDEV_CTBM0_SIZE, 0x00010000
@@ -8278,7 +8278,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7843              	.set CYFLD_CTBM_COMP0__OFFSET, 0x00000000
  7844              	.set CYFLD_CTBM_COMP0__SIZE, 0x00000001
  7845              	.set CYFLD_CTBM_COMP1__OFFSET, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 139
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 139
 
 
  7846              	.set CYFLD_CTBM_COMP1__SIZE, 0x00000001
@@ -8338,7 +8338,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7900              	.set CYREG_CTBM0_OA1_SW_CLEAR, 0x4030008c
  7901              	.set CYREG_CTBM0_CTB_SW_HW_CTRL, 0x403000c0
  7902              	.set CYFLD_CTBM_P2_HW_CTRL__OFFSET, 0x00000002
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 140
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 140
 
 
  7903              	.set CYFLD_CTBM_P2_HW_CTRL__SIZE, 0x00000001
@@ -8398,7 +8398,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  7957              	.set CYFLD_SAR_VREF_SEL__OFFSET, 0x00000004
  7958              	.set CYFLD_SAR_VREF_SEL__SIZE, 0x00000003
  7959              	.set CYVAL_SAR_VREF_SEL_VREF0, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 141
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 141
 
 
  7960              	.set CYVAL_SAR_VREF_SEL_VREF1, 0x00000001
@@ -8458,7 +8458,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8014              	.set CYFLD_SAR_SINGLE_ENDED_SIGNED__OFFSET, 0x00000002
  8015              	.set CYFLD_SAR_SINGLE_ENDED_SIGNED__SIZE, 0x00000001
  8016              	.set CYVAL_SAR_SINGLE_ENDED_SIGNED_UNSIGNED, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 142
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 142
 
 
  8017              	.set CYVAL_SAR_SINGLE_ENDED_SIGNED_SIGNED, 0x00000001
@@ -8518,7 +8518,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8071              	.set CYFLD_SAR_DFT_OUTC__OFFSET, 0x00000014
  8072              	.set CYFLD_SAR_DFT_OUTC__SIZE, 0x00000003
  8073              	.set CYFLD_SAR_SEL_CSEL_DFT__OFFSET, 0x00000018
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 143
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 143
 
 
  8074              	.set CYFLD_SAR_SEL_CSEL_DFT__SIZE, 0x00000004
@@ -8578,7 +8578,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8128              	.set CYREG_SAR_CHAN_WORK3, 0x403a010c
  8129              	.set CYREG_SAR_CHAN_WORK4, 0x403a0110
  8130              	.set CYREG_SAR_CHAN_WORK5, 0x403a0114
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 144
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 144
 
 
  8131              	.set CYREG_SAR_CHAN_WORK6, 0x403a0118
@@ -8638,7 +8638,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8185              	.set CYFLD_SAR_EOS_INTR__SIZE, 0x00000001
  8186              	.set CYFLD_SAR_OVERFLOW_INTR__OFFSET, 0x00000001
  8187              	.set CYFLD_SAR_OVERFLOW_INTR__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 145
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 145
 
 
  8188              	.set CYFLD_SAR_FW_COLLISION_INTR__OFFSET, 0x00000002
@@ -8698,7 +8698,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8242              	.set CYFLD_SAR_DSI_COLLISION_MASKED__SIZE, 0x00000001
  8243              	.set CYFLD_SAR_INJ_EOC_MASKED__OFFSET, 0x00000004
  8244              	.set CYFLD_SAR_INJ_EOC_MASKED__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 146
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 146
 
 
  8245              	.set CYFLD_SAR_INJ_SATURATE_MASKED__OFFSET, 0x00000005
@@ -8758,7 +8758,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8299              	.set CYFLD_SAR_INJ_PORT_ADDR__OFFSET, 0x00000004
  8300              	.set CYFLD_SAR_INJ_PORT_ADDR__SIZE, 0x00000003
  8301              	.set CYVAL_SAR_INJ_PORT_ADDR_SARMUX, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 147
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 147
 
 
  8302              	.set CYVAL_SAR_INJ_PORT_ADDR_CTB0, 0x00000001
@@ -8818,7 +8818,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8356              	.set CYFLD_SAR_MUX_FW_P3_VMINUS__OFFSET, 0x0000000b
  8357              	.set CYFLD_SAR_MUX_FW_P3_VMINUS__SIZE, 0x00000001
  8358              	.set CYFLD_SAR_MUX_FW_P4_VMINUS__OFFSET, 0x0000000c
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 148
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 148
 
 
  8359              	.set CYFLD_SAR_MUX_FW_P4_VMINUS__SIZE, 0x00000001
@@ -8878,7 +8878,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8413              	.set CYFLD_SAR_MUX_HW_CTRL_P3__SIZE, 0x00000001
  8414              	.set CYFLD_SAR_MUX_HW_CTRL_P4__OFFSET, 0x00000004
  8415              	.set CYFLD_SAR_MUX_HW_CTRL_P4__SIZE, 0x00000001
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 149
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 149
 
 
  8416              	.set CYFLD_SAR_MUX_HW_CTRL_P5__OFFSET, 0x00000005
@@ -8938,7 +8938,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8470              	.set CYFLD_PASS_DSAB_EN_DFT__OFFSET, 0x00000000
  8471              	.set CYFLD_PASS_DSAB_EN_DFT__SIZE, 0x00000004
  8472              	.set CYREG_PASS_DSAB_TRIM, 0x403f0f00
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 150
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 150
 
 
  8473              	.set CYFLD_PASS_IBIAS_TRIM__OFFSET, 0x00000000
@@ -8998,7 +8998,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8527              	.set CYFLD_CM0_SETPEND__SIZE, 0x00000020
  8528              	.set CYREG_CM0_ICPR, 0xe000e280
  8529              	.set CYFLD_CM0_CLRPEND__OFFSET, 0x00000000
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 151
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 151
 
 
  8530              	.set CYFLD_CM0_CLRPEND__SIZE, 0x00000020
@@ -9058,7 +9058,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8584              	.set CYFLD_CM0_VECTKEY__OFFSET, 0x00000010
  8585              	.set CYFLD_CM0_VECTKEY__SIZE, 0x00000010
  8586              	.set CYREG_CM0_SCR, 0xe000ed10
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 152
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 152
 
 
  8587              	.set CYFLD_CM0_SLEEPONEXIT__OFFSET, 0x00000001
@@ -9118,7 +9118,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8641              	.set CYREG_ROMTABLE_DID, 0xf0000fcc
  8642              	.set CYFLD_ROMTABLE_VALUE__OFFSET, 0x00000000
  8643              	.set CYFLD_ROMTABLE_VALUE__SIZE, 0x00000020
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 153
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 153
 
 
  8644              	.set CYREG_ROMTABLE_PID4, 0xf0000fd0
@@ -9178,7 +9178,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8698              	.set CYREG_SFLASH_AV_PAIRS_8B012, CYREG_SFLASH_AV_PAIRS_8B12
  8699              	.set CYREG_SFLASH_AV_PAIRS_8B013, CYREG_SFLASH_AV_PAIRS_8B13
  8700              	.set CYREG_SFLASH_AV_PAIRS_8B014, CYREG_SFLASH_AV_PAIRS_8B14
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 154
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 154
 
 
  8701              	.set CYREG_SFLASH_AV_PAIRS_8B015, CYREG_SFLASH_AV_PAIRS_8B15
@@ -9238,7 +9238,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8755              	.set CYREG_SFLASH_AV_PAIRS_8B069, CYREG_SFLASH_AV_PAIRS_8B69
  8756              	.set CYREG_SFLASH_AV_PAIRS_8B070, CYREG_SFLASH_AV_PAIRS_8B70
  8757              	.set CYREG_SFLASH_AV_PAIRS_8B071, CYREG_SFLASH_AV_PAIRS_8B71
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 155
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 155
 
 
  8758              	.set CYREG_SFLASH_AV_PAIRS_8B072, CYREG_SFLASH_AV_PAIRS_8B72
@@ -9298,7 +9298,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8812              	.set CYREG_SFLASH_IMO_TRIM06, CYREG_SFLASH_IMO_TRIM6
  8813              	.set CYREG_SFLASH_IMO_TRIM07, CYREG_SFLASH_IMO_TRIM7
  8814              	.set CYREG_SFLASH_IMO_TRIM08, CYREG_SFLASH_IMO_TRIM8
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 156
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 156
 
 
  8815              	.set CYREG_SFLASH_IMO_TRIM09, CYREG_SFLASH_IMO_TRIM9
@@ -9358,7 +9358,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8869              	.set CYREG_SFLASH_ALT_PROT_ROW053, CYREG_SFLASH_ALT_PROT_ROW53
  8870              	.set CYREG_SFLASH_ALT_PROT_ROW054, CYREG_SFLASH_ALT_PROT_ROW54
  8871              	.set CYREG_SFLASH_ALT_PROT_ROW055, CYREG_SFLASH_ALT_PROT_ROW55
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 157
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 157
 
 
  8872              	.set CYREG_SFLASH_ALT_PROT_ROW056, CYREG_SFLASH_ALT_PROT_ROW56
@@ -9418,7 +9418,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8926              	.set CYREG_PERI_DIV_16_CTL00, CYREG_PERI_DIV_16_CTL0
  8927              	.set CYREG_PERI_DIV_16_CTL01, CYREG_PERI_DIV_16_CTL1
  8928              	.set CYREG_PERI_DIV_16_CTL02, CYREG_PERI_DIV_16_CTL2
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 158
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 158
 
 
  8929              	.set CYREG_PERI_DIV_16_CTL03, CYREG_PERI_DIV_16_CTL3
@@ -9478,7 +9478,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  8983              	.set CYREG_UDB_W8_MSK_03, CYREG_UDB_W8_MSK3
  8984              	.set CYREG_UDB_W8_ACTL_00, CYREG_UDB_W8_ACTL0
  8985              	.set CYREG_UDB_W8_ACTL_01, CYREG_UDB_W8_ACTL1
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 159
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 159
 
 
  8986              	.set CYREG_UDB_W8_ACTL_02, CYREG_UDB_W8_ACTL2
@@ -9538,7 +9538,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  9040              	.set CYREG_UDB_W16_MSK_00, CYREG_UDB_W16_MSK0
  9041              	.set CYREG_UDB_W16_MSK_01, CYREG_UDB_W16_MSK1
  9042              	.set CYREG_UDB_W16_MSK_02, CYREG_UDB_W16_MSK2
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 160
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 160
 
 
  9043              	.set CYREG_UDB_W16_ACTL_00, CYREG_UDB_W16_ACTL0
@@ -9598,7 +9598,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  9097              	.set CYREG_SCB0_EZ_DATA012, CYREG_SCB0_EZ_DATA12
  9098              	.set CYREG_SCB0_EZ_DATA013, CYREG_SCB0_EZ_DATA13
  9099              	.set CYREG_SCB0_EZ_DATA014, CYREG_SCB0_EZ_DATA14
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 161
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 161
 
 
  9100              	.set CYREG_SCB0_EZ_DATA015, CYREG_SCB0_EZ_DATA15
@@ -9658,7 +9658,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  9154              	.set CYREG_SCB1_EZ_DATA027, CYREG_SCB1_EZ_DATA27
  9155              	.set CYREG_SCB1_EZ_DATA028, CYREG_SCB1_EZ_DATA28
  9156              	.set CYREG_SCB1_EZ_DATA029, CYREG_SCB1_EZ_DATA29
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 162
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 162
 
 
  9157              	.set CYREG_SCB1_EZ_DATA030, CYREG_SCB1_EZ_DATA30
@@ -9718,7 +9718,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  9211              	.set CYREG_SCB3_EZ_DATA000, CYREG_SCB3_EZ_DATA0
  9212              	.set CYREG_SCB3_EZ_DATA001, CYREG_SCB3_EZ_DATA1
  9213              	.set CYREG_SCB3_EZ_DATA002, CYREG_SCB3_EZ_DATA2
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 163
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 163
 
 
  9214              	.set CYREG_SCB3_EZ_DATA003, CYREG_SCB3_EZ_DATA3
@@ -9778,7 +9778,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  9268              	.set CYREG_CAN0_CAN_RX03_ID, CYREG_CAN0_CAN_RX3_ID
  9269              	.set CYREG_CAN0_CAN_RX03_DATA_HIGH, CYREG_CAN0_CAN_RX3_DATA_HIGH
  9270              	.set CYREG_CAN0_CAN_RX03_DATA_LOW, CYREG_CAN0_CAN_RX3_DATA_LOW
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 164
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 164
 
 
  9271              	.set CYREG_CAN0_CAN_RX03_AMR, CYREG_CAN0_CAN_RX3_AMR
@@ -9838,7 +9838,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  9325              	.set CYREG_CAN1_CAN_RX00_DATA_HIGH, CYREG_CAN1_CAN_RX0_DATA_HIGH
  9326              	.set CYREG_CAN1_CAN_RX00_DATA_LOW, CYREG_CAN1_CAN_RX0_DATA_LOW
  9327              	.set CYREG_CAN1_CAN_RX00_AMR, CYREG_CAN1_CAN_RX0_AMR
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 165
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 165
 
 
  9328              	.set CYREG_CAN1_CAN_RX00_ACR, CYREG_CAN1_CAN_RX0_ACR
@@ -9898,7 +9898,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  9382              	.set CYREG_CAN1_CAN_RX07_DATA_LOW, CYREG_CAN1_CAN_RX7_DATA_LOW
  9383              	.set CYREG_CAN1_CAN_RX07_AMR, CYREG_CAN1_CAN_RX7_AMR
  9384              	.set CYREG_CAN1_CAN_RX07_ACR, CYREG_CAN1_CAN_RX7_ACR
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 166
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 166
 
 
  9385              	.set CYREG_CAN1_CAN_RX07_AMR_DATA, CYREG_CAN1_CAN_RX7_AMR_DATA
@@ -9958,7 +9958,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
   10              	.set LED_1__0__HSIOM, CYREG_HSIOM_PORT_SEL2
   11              	.set LED_1__0__HSIOM_MASK, 0x00000F00
   12              	.set LED_1__0__HSIOM_SHIFT, 8
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 167
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 167
 
 
   13              	.set LED_1__0__INTCFG, CYREG_GPIO_PRT2_INTR_CFG
@@ -10018,7 +10018,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
   67              	
   68              	/* LED_2 */
   69              	.set LED_2__0__DR, CYREG_GPIO_PRT2_DR
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 168
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 168
 
 
   70              	.set LED_2__0__DR_CLR, CYREG_GPIO_PRT2_DR_CLR
@@ -10078,7 +10078,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  124              	.set LED_2__PA__CFG9, CYREG_UDB_PA2_CFG9
  125              	.set LED_2__PC, CYREG_GPIO_PRT2_PC
  126              	.set LED_2__PC2, CYREG_GPIO_PRT2_PC2
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 169
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 169
 
 
  127              	.set LED_2__PORT, 2
@@ -10138,7 +10138,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  181              	.set LED_3__PA__CFG3, CYREG_UDB_PA2_CFG3
  182              	.set LED_3__PA__CFG4, CYREG_UDB_PA2_CFG4
  183              	.set LED_3__PA__CFG5, CYREG_UDB_PA2_CFG5
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 170
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 170
 
 
  184              	.set LED_3__PA__CFG6, CYREG_UDB_PA2_CFG6
@@ -10198,7 +10198,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  238              	.set LED_4__PA__CFG10, CYREG_UDB_PA2_CFG10
  239              	.set LED_4__PA__CFG11, CYREG_UDB_PA2_CFG11
  240              	.set LED_4__PA__CFG12, CYREG_UDB_PA2_CFG12
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 171
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 171
 
 
  241              	.set LED_4__PA__CFG13, CYREG_UDB_PA2_CFG13
@@ -10258,7 +10258,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  295              	.set SENSOR_1_SCB__I2C_STATUS, CYREG_SCB1_I2C_STATUS
  296              	.set SENSOR_1_SCB__INTR_CAUSE, CYREG_SCB1_INTR_CAUSE
  297              	.set SENSOR_1_SCB__INTR_I2C_EC, CYREG_SCB1_INTR_I2C_EC
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 172
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 172
 
 
  298              	.set SENSOR_1_SCB__INTR_I2C_EC_MASK, CYREG_SCB1_INTR_I2C_EC_MASK
@@ -10318,7 +10318,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  352              	
  353              	/* SENSOR_1_SCBCLK */
  354              	.set SENSOR_1_SCBCLK__CTRL_REGISTER, CYREG_PERI_PCLK_CTL3
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 173
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 173
 
 
  355              	.set SENSOR_1_SCBCLK__DIV_ID, 0x00000042
@@ -10378,7 +10378,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  409              	.set SENSOR_1_scl__PA__CFG11, CYREG_UDB_PA2_CFG11
  410              	.set SENSOR_1_scl__PA__CFG12, CYREG_UDB_PA2_CFG12
  411              	.set SENSOR_1_scl__PA__CFG13, CYREG_UDB_PA2_CFG13
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 174
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 174
 
 
  412              	.set SENSOR_1_scl__PA__CFG14, CYREG_UDB_PA2_CFG14
@@ -10438,7 +10438,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  466              	.set SENSOR_1_sda__DR_CLR, CYREG_GPIO_PRT2_DR_CLR
  467              	.set SENSOR_1_sda__DR_INV, CYREG_GPIO_PRT2_DR_INV
  468              	.set SENSOR_1_sda__DR_SET, CYREG_GPIO_PRT2_DR_SET
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 175
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 175
 
 
  469              	.set SENSOR_1_sda__INTCFG, CYREG_GPIO_PRT2_INTR_CFG
@@ -10498,7 +10498,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  523              	.set SENSOR_2_SCB__EZ_DATA4, CYREG_SCB2_EZ_DATA4
  524              	.set SENSOR_2_SCB__EZ_DATA5, CYREG_SCB2_EZ_DATA5
  525              	.set SENSOR_2_SCB__EZ_DATA6, CYREG_SCB2_EZ_DATA6
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 176
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 176
 
 
  526              	.set SENSOR_2_SCB__EZ_DATA7, CYREG_SCB2_EZ_DATA7
@@ -10558,7 +10558,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  580              	/* SENSOR_2_SCB_IRQ */
  581              	.set SENSOR_2_SCB_IRQ__INTC_CLR_EN_REG, CYREG_CM0_ICER
  582              	.set SENSOR_2_SCB_IRQ__INTC_CLR_PD_REG, CYREG_CM0_ICPR
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 177
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 177
 
 
  583              	.set SENSOR_2_SCB_IRQ__INTC_MASK, 0x400
@@ -10618,7 +10618,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  637              	/* SENSOR_2_sda */
  638              	.set SENSOR_2_sda__0__DR, CYREG_GPIO_PRT5_DR
  639              	.set SENSOR_2_sda__0__DR_CLR, CYREG_GPIO_PRT5_DR_CLR
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 178
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 178
 
 
  640              	.set SENSOR_2_sda__0__DR_INV, CYREG_GPIO_PRT5_DR_INV
@@ -10678,7 +10678,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  694              	.set SENSOR_3_SCB__EZ_DATA22, CYREG_SCB3_EZ_DATA22
  695              	.set SENSOR_3_SCB__EZ_DATA23, CYREG_SCB3_EZ_DATA23
  696              	.set SENSOR_3_SCB__EZ_DATA24, CYREG_SCB3_EZ_DATA24
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 179
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 179
 
 
  697              	.set SENSOR_3_SCB__EZ_DATA25, CYREG_SCB3_EZ_DATA25
@@ -10738,7 +10738,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  751              	.set SENSOR_3_SCB__STATUS, CYREG_SCB3_STATUS
  752              	.set SENSOR_3_SCB__TX_CTRL, CYREG_SCB3_TX_CTRL
  753              	.set SENSOR_3_SCB__TX_FIFO_CTRL, CYREG_SCB3_TX_FIFO_CTRL
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 180
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 180
 
 
  754              	.set SENSOR_3_SCB__TX_FIFO_STATUS, CYREG_SCB3_TX_FIFO_STATUS
@@ -10798,7 +10798,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  808              	.set SENSOR_3_scl__INTCFG, CYREG_GPIO_PRT6_INTR_CFG
  809              	.set SENSOR_3_scl__INTR, CYREG_GPIO_PRT6_INTR
  810              	.set SENSOR_3_scl__INTR_CFG, CYREG_GPIO_PRT6_INTR_CFG
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 181
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 181
 
 
  811              	.set SENSOR_3_scl__INTSTAT, CYREG_GPIO_PRT6_INTR
@@ -10858,7 +10858,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  865              	.set SENSOR_4_SCB__EZ_DATA12, CYREG_SCB0_EZ_DATA12
  866              	.set SENSOR_4_SCB__EZ_DATA13, CYREG_SCB0_EZ_DATA13
  867              	.set SENSOR_4_SCB__EZ_DATA14, CYREG_SCB0_EZ_DATA14
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 182
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 182
 
 
  868              	.set SENSOR_4_SCB__EZ_DATA15, CYREG_SCB0_EZ_DATA15
@@ -10918,7 +10918,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  922              	.set SENSOR_4_SCB__RX_FIFO_CTRL, CYREG_SCB0_RX_FIFO_CTRL
  923              	.set SENSOR_4_SCB__RX_FIFO_RD, CYREG_SCB0_RX_FIFO_RD
  924              	.set SENSOR_4_SCB__RX_FIFO_RD_SILENT, CYREG_SCB0_RX_FIFO_RD_SILENT
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 183
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 183
 
 
  925              	.set SENSOR_4_SCB__RX_FIFO_STATUS, CYREG_SCB0_RX_FIFO_STATUS
@@ -10978,7 +10978,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  979              	.set SENSOR_4_scl__0__INTSTAT, CYREG_GPIO_PRT1_INTR
  980              	.set SENSOR_4_scl__0__MASK, 0x01
  981              	.set SENSOR_4_scl__0__PA__CFG0, CYREG_UDB_PA1_CFG0
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 184
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 184
 
 
  982              	.set SENSOR_4_scl__0__PA__CFG1, CYREG_UDB_PA1_CFG1
@@ -11038,7 +11038,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1036              	.set SENSOR_4_sda__0__HSIOM, CYREG_HSIOM_PORT_SEL1
  1037              	.set SENSOR_4_sda__0__HSIOM_GPIO, 0
  1038              	.set SENSOR_4_sda__0__HSIOM_I2C, 14
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 185
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 185
 
 
  1039              	.set SENSOR_4_sda__0__HSIOM_I2C_SDA, 14
@@ -11098,7 +11098,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1093              	.set SENSOR_4_sda__PA__CFG8, CYREG_UDB_PA1_CFG8
  1094              	.set SENSOR_4_sda__PA__CFG9, CYREG_UDB_PA1_CFG9
  1095              	.set SENSOR_4_sda__PC, CYREG_GPIO_PRT1_PC
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 186
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 186
 
 
  1096              	.set SENSOR_4_sda__PC2, CYREG_GPIO_PRT1_PC2
@@ -11114,153 +11114,173 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1106              	.set CYDEV_BCLK__SYSCLK__KHZ, 48000
  1107              	.set CYDEV_BCLK__SYSCLK__MHZ, 48
  1108              	.set CYDEV_CHIP_DIE_LEOPARD, 1
- 1109              	.set CYDEV_CHIP_DIE_PANTHER, 19
- 1110              	.set CYDEV_CHIP_DIE_PSOC4A, 11
- 1111              	.set CYDEV_CHIP_DIE_PSOC5LP, 18
+ 1109              	.set CYDEV_CHIP_DIE_PSOC4A, 12
+ 1110              	.set CYDEV_CHIP_DIE_PSOC5LP, 19
+ 1111              	.set CYDEV_CHIP_DIE_PSOC5TM, 20
  1112              	.set CYDEV_CHIP_DIE_TMA4, 2
  1113              	.set CYDEV_CHIP_DIE_UNKNOWN, 0
- 1114              	.set CYDEV_CHIP_FAMILY_PSOC3, 1
- 1115              	.set CYDEV_CHIP_FAMILY_PSOC4, 2
- 1116              	.set CYDEV_CHIP_FAMILY_PSOC5, 3
- 1117              	.set CYDEV_CHIP_FAMILY_UNKNOWN, 0
- 1118              	.set CYDEV_CHIP_FAMILY_USED, CYDEV_CHIP_FAMILY_PSOC4
- 1119              	.set CYDEV_CHIP_JTAG_ID, 0x112D11A1
- 1120              	.set CYDEV_CHIP_MEMBER_3A, 1
- 1121              	.set CYDEV_CHIP_MEMBER_4A, 11
- 1122              	.set CYDEV_CHIP_MEMBER_4C, 16
- 1123              	.set CYDEV_CHIP_MEMBER_4D, 7
- 1124              	.set CYDEV_CHIP_MEMBER_4E, 4
- 1125              	.set CYDEV_CHIP_MEMBER_4F, 12
- 1126              	.set CYDEV_CHIP_MEMBER_4G, 2
- 1127              	.set CYDEV_CHIP_MEMBER_4H, 10
- 1128              	.set CYDEV_CHIP_MEMBER_4I, 15
- 1129              	.set CYDEV_CHIP_MEMBER_4J, 8
- 1130              	.set CYDEV_CHIP_MEMBER_4K, 9
- 1131              	.set CYDEV_CHIP_MEMBER_4L, 14
- 1132              	.set CYDEV_CHIP_MEMBER_4M, 13
- 1133              	.set CYDEV_CHIP_MEMBER_4N, 6
- 1134              	.set CYDEV_CHIP_MEMBER_4O, 5
- 1135              	.set CYDEV_CHIP_MEMBER_4U, 3
- 1136              	.set CYDEV_CHIP_MEMBER_5A, 18
- 1137              	.set CYDEV_CHIP_MEMBER_5B, 17
- 1138              	.set CYDEV_CHIP_MEMBER_UNKNOWN, 0
- 1139              	.set CYDEV_CHIP_MEMBER_USED, CYDEV_CHIP_MEMBER_4M
- 1140              	.set CYDEV_CHIP_DIE_EXPECT, CYDEV_CHIP_MEMBER_USED
- 1141              	.set CYDEV_CHIP_DIE_ACTUAL, CYDEV_CHIP_DIE_EXPECT
- 1142              	.set CYDEV_CHIP_REV_LEOPARD_ES1, 0
- 1143              	.set CYDEV_CHIP_REV_LEOPARD_ES2, 1
- 1144              	.set CYDEV_CHIP_REV_LEOPARD_ES3, 3
- 1145              	.set CYDEV_CHIP_REV_LEOPARD_PRODUCTION, 3
- 1146              	.set CYDEV_CHIP_REV_PANTHER_ES0, 0
- 1147              	.set CYDEV_CHIP_REV_PANTHER_ES1, 1
- 1148              	.set CYDEV_CHIP_REV_PANTHER_PRODUCTION, 1
- 1149              	.set CYDEV_CHIP_REV_PSOC4A_ES0, 17
- 1150              	.set CYDEV_CHIP_REV_PSOC4A_PRODUCTION, 17
- 1151              	.set CYDEV_CHIP_REV_PSOC5LP_ES0, 0
- 1152              	.set CYDEV_CHIP_REV_PSOC5LP_PRODUCTION, 0
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 187
+ 1114              	.set CYDEV_CHIP_FAMILY_FM0P, 4
+ 1115              	.set CYDEV_CHIP_FAMILY_FM3, 5
+ 1116              	.set CYDEV_CHIP_FAMILY_FM4, 6
+ 1117              	.set CYDEV_CHIP_FAMILY_PSOC3, 1
+ 1118              	.set CYDEV_CHIP_FAMILY_PSOC4, 2
+ 1119              	.set CYDEV_CHIP_FAMILY_PSOC5, 3
+ 1120              	.set CYDEV_CHIP_FAMILY_UNKNOWN, 0
+ 1121              	.set CYDEV_CHIP_FAMILY_USED, CYDEV_CHIP_FAMILY_PSOC4
+ 1122              	.set CYDEV_CHIP_JTAG_ID, 0x112D11A1
+ 1123              	.set CYDEV_CHIP_MEMBER_3A, 1
+ 1124              	.set CYDEV_CHIP_MEMBER_4A, 12
+ 1125              	.set CYDEV_CHIP_MEMBER_4C, 18
+ 1126              	.set CYDEV_CHIP_MEMBER_4D, 8
+ 1127              	.set CYDEV_CHIP_MEMBER_4E, 4
+ 1128              	.set CYDEV_CHIP_MEMBER_4F, 13
+ 1129              	.set CYDEV_CHIP_MEMBER_4G, 2
+ 1130              	.set CYDEV_CHIP_MEMBER_4H, 11
+ 1131              	.set CYDEV_CHIP_MEMBER_4I, 17
+ 1132              	.set CYDEV_CHIP_MEMBER_4J, 9
+ 1133              	.set CYDEV_CHIP_MEMBER_4K, 10
+ 1134              	.set CYDEV_CHIP_MEMBER_4L, 16
+ 1135              	.set CYDEV_CHIP_MEMBER_4M, 15
+ 1136              	.set CYDEV_CHIP_MEMBER_4N, 6
+ 1137              	.set CYDEV_CHIP_MEMBER_4O, 5
+ 1138              	.set CYDEV_CHIP_MEMBER_4P, 14
+ 1139              	.set CYDEV_CHIP_MEMBER_4Q, 7
+ 1140              	.set CYDEV_CHIP_MEMBER_4U, 3
+ 1141              	.set CYDEV_CHIP_MEMBER_5A, 20
+ 1142              	.set CYDEV_CHIP_MEMBER_5B, 19
+ 1143              	.set CYDEV_CHIP_MEMBER_FM3, 24
+ 1144              	.set CYDEV_CHIP_MEMBER_FM4, 25
+ 1145              	.set CYDEV_CHIP_MEMBER_PDL_FM0P_TYPE1, 21
+ 1146              	.set CYDEV_CHIP_MEMBER_PDL_FM0P_TYPE2, 22
+ 1147              	.set CYDEV_CHIP_MEMBER_PDL_FM0P_TYPE3, 23
+ 1148              	.set CYDEV_CHIP_MEMBER_UNKNOWN, 0
+ 1149              	.set CYDEV_CHIP_MEMBER_USED, CYDEV_CHIP_MEMBER_4M
+ 1150              	.set CYDEV_CHIP_DIE_EXPECT, CYDEV_CHIP_MEMBER_USED
+ 1151              	.set CYDEV_CHIP_DIE_ACTUAL, CYDEV_CHIP_DIE_EXPECT
+ 1152              	.set CYDEV_CHIP_REV_LEOPARD_ES1, 0
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 187
 
 
- 1153              	.set CYDEV_CHIP_REV_TMA4_ES, 17
- 1154              	.set CYDEV_CHIP_REV_TMA4_ES2, 33
- 1155              	.set CYDEV_CHIP_REV_TMA4_PRODUCTION, 17
- 1156              	.set CYDEV_CHIP_REVISION_3A_ES1, 0
- 1157              	.set CYDEV_CHIP_REVISION_3A_ES2, 1
- 1158              	.set CYDEV_CHIP_REVISION_3A_ES3, 3
- 1159              	.set CYDEV_CHIP_REVISION_3A_PRODUCTION, 3
- 1160              	.set CYDEV_CHIP_REVISION_4A_ES0, 17
- 1161              	.set CYDEV_CHIP_REVISION_4A_PRODUCTION, 17
- 1162              	.set CYDEV_CHIP_REVISION_4C_PRODUCTION, 0
- 1163              	.set CYDEV_CHIP_REVISION_4D_PRODUCTION, 0
- 1164              	.set CYDEV_CHIP_REVISION_4E_PRODUCTION, 0
- 1165              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION, 0
- 1166              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION_256DMA, 0
- 1167              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION_256K, 0
- 1168              	.set CYDEV_CHIP_REVISION_4G_ES, 17
- 1169              	.set CYDEV_CHIP_REVISION_4G_ES2, 33
- 1170              	.set CYDEV_CHIP_REVISION_4G_PRODUCTION, 17
- 1171              	.set CYDEV_CHIP_REVISION_4H_PRODUCTION, 0
- 1172              	.set CYDEV_CHIP_REVISION_4I_PRODUCTION, 0
- 1173              	.set CYDEV_CHIP_REVISION_4J_PRODUCTION, 0
- 1174              	.set CYDEV_CHIP_REVISION_4K_PRODUCTION, 0
- 1175              	.set CYDEV_CHIP_REVISION_4L_PRODUCTION, 0
- 1176              	.set CYDEV_CHIP_REVISION_4M_PRODUCTION, 0
- 1177              	.set CYDEV_CHIP_REVISION_4N_PRODUCTION, 0
- 1178              	.set CYDEV_CHIP_REVISION_4O_PRODUCTION, 0
- 1179              	.set CYDEV_CHIP_REVISION_4U_PRODUCTION, 0
- 1180              	.set CYDEV_CHIP_REVISION_5A_ES0, 0
- 1181              	.set CYDEV_CHIP_REVISION_5A_ES1, 1
- 1182              	.set CYDEV_CHIP_REVISION_5A_PRODUCTION, 1
- 1183              	.set CYDEV_CHIP_REVISION_5B_ES0, 0
- 1184              	.set CYDEV_CHIP_REVISION_5B_PRODUCTION, 0
- 1185              	.set CYDEV_CHIP_REVISION_USED, CYDEV_CHIP_REVISION_4M_PRODUCTION
- 1186              	.set CYDEV_CHIP_REV_EXPECT, CYDEV_CHIP_REVISION_USED
- 1187              	.set CYDEV_CONFIG_READ_ACCELERATOR, 1
- 1188              	.set CYDEV_CONFIG_UNUSED_IO_AllowButWarn, 0
- 1189              	.set CYDEV_CONFIG_UNUSED_IO, CYDEV_CONFIG_UNUSED_IO_AllowButWarn
- 1190              	.set CYDEV_CONFIG_UNUSED_IO_AllowWithInfo, 1
- 1191              	.set CYDEV_CONFIG_UNUSED_IO_Disallowed, 2
- 1192              	.set CYDEV_CONFIGURATION_COMPRESSED, 1
- 1193              	.set CYDEV_CONFIGURATION_MODE_COMPRESSED, 0
- 1194              	.set CYDEV_CONFIGURATION_MODE, CYDEV_CONFIGURATION_MODE_COMPRESSED
- 1195              	.set CYDEV_CONFIGURATION_MODE_DMA, 2
- 1196              	.set CYDEV_CONFIGURATION_MODE_UNCOMPRESSED, 1
- 1197              	.set CYDEV_DEBUG_PROTECT_KILL, 4
- 1198              	.set CYDEV_DEBUG_PROTECT_OPEN, 1
- 1199              	.set CYDEV_DEBUG_PROTECT, CYDEV_DEBUG_PROTECT_OPEN
- 1200              	.set CYDEV_DEBUG_PROTECT_PROTECTED, 2
- 1201              	.set CYDEV_DEBUGGING_DPS_Disable, 3
- 1202              	.set CYDEV_DEBUGGING_DPS_SWD, 2
- 1203              	.set CYDEV_DEBUGGING_DPS, CYDEV_DEBUGGING_DPS_SWD
- 1204              	.set CYDEV_DEBUGGING_ENABLE, 1
- 1205              	.set CYDEV_DFT_SELECT_CLK0, 10
- 1206              	.set CYDEV_DFT_SELECT_CLK1, 11
- 1207              	.set CYDEV_DMA_CHANNELS_AVAILABLE, 8
- 1208              	.set CYDEV_HEAP_SIZE, 0x80
- 1209              	.set CYDEV_IMO_TRIMMED_BY_USB, 0
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 188
+ 1153              	.set CYDEV_CHIP_REV_LEOPARD_ES2, 1
+ 1154              	.set CYDEV_CHIP_REV_LEOPARD_ES3, 3
+ 1155              	.set CYDEV_CHIP_REV_LEOPARD_PRODUCTION, 3
+ 1156              	.set CYDEV_CHIP_REV_PSOC4A_ES0, 17
+ 1157              	.set CYDEV_CHIP_REV_PSOC4A_PRODUCTION, 17
+ 1158              	.set CYDEV_CHIP_REV_PSOC5LP_ES0, 0
+ 1159              	.set CYDEV_CHIP_REV_PSOC5LP_PRODUCTION, 0
+ 1160              	.set CYDEV_CHIP_REV_PSOC5TM_ES0, 0
+ 1161              	.set CYDEV_CHIP_REV_PSOC5TM_ES1, 1
+ 1162              	.set CYDEV_CHIP_REV_PSOC5TM_PRODUCTION, 1
+ 1163              	.set CYDEV_CHIP_REV_TMA4_ES, 17
+ 1164              	.set CYDEV_CHIP_REV_TMA4_ES2, 33
+ 1165              	.set CYDEV_CHIP_REV_TMA4_PRODUCTION, 17
+ 1166              	.set CYDEV_CHIP_REVISION_3A_ES1, 0
+ 1167              	.set CYDEV_CHIP_REVISION_3A_ES2, 1
+ 1168              	.set CYDEV_CHIP_REVISION_3A_ES3, 3
+ 1169              	.set CYDEV_CHIP_REVISION_3A_PRODUCTION, 3
+ 1170              	.set CYDEV_CHIP_REVISION_4A_ES0, 17
+ 1171              	.set CYDEV_CHIP_REVISION_4A_PRODUCTION, 17
+ 1172              	.set CYDEV_CHIP_REVISION_4C_PRODUCTION, 0
+ 1173              	.set CYDEV_CHIP_REVISION_4D_PRODUCTION, 0
+ 1174              	.set CYDEV_CHIP_REVISION_4E_PRODUCTION, 0
+ 1175              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION, 0
+ 1176              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION_256DMA, 0
+ 1177              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION_256K, 0
+ 1178              	.set CYDEV_CHIP_REVISION_4G_ES, 17
+ 1179              	.set CYDEV_CHIP_REVISION_4G_ES2, 33
+ 1180              	.set CYDEV_CHIP_REVISION_4G_PRODUCTION, 17
+ 1181              	.set CYDEV_CHIP_REVISION_4H_PRODUCTION, 0
+ 1182              	.set CYDEV_CHIP_REVISION_4I_PRODUCTION, 0
+ 1183              	.set CYDEV_CHIP_REVISION_4J_PRODUCTION, 0
+ 1184              	.set CYDEV_CHIP_REVISION_4K_PRODUCTION, 0
+ 1185              	.set CYDEV_CHIP_REVISION_4L_PRODUCTION, 0
+ 1186              	.set CYDEV_CHIP_REVISION_4M_PRODUCTION, 0
+ 1187              	.set CYDEV_CHIP_REVISION_4N_PRODUCTION, 0
+ 1188              	.set CYDEV_CHIP_REVISION_4O_PRODUCTION, 0
+ 1189              	.set CYDEV_CHIP_REVISION_4P_PRODUCTION, 0
+ 1190              	.set CYDEV_CHIP_REVISION_4Q_PRODUCTION, 0
+ 1191              	.set CYDEV_CHIP_REVISION_4U_PRODUCTION, 0
+ 1192              	.set CYDEV_CHIP_REVISION_5A_ES0, 0
+ 1193              	.set CYDEV_CHIP_REVISION_5A_ES1, 1
+ 1194              	.set CYDEV_CHIP_REVISION_5A_PRODUCTION, 1
+ 1195              	.set CYDEV_CHIP_REVISION_5B_ES0, 0
+ 1196              	.set CYDEV_CHIP_REVISION_5B_PRODUCTION, 0
+ 1197              	.set CYDEV_CHIP_REVISION_FM3_PRODUCTION, 0
+ 1198              	.set CYDEV_CHIP_REVISION_FM4_PRODUCTION, 0
+ 1199              	.set CYDEV_CHIP_REVISION_PDL_FM0P_TYPE1_PRODUCTION, 0
+ 1200              	.set CYDEV_CHIP_REVISION_PDL_FM0P_TYPE2_PRODUCTION, 0
+ 1201              	.set CYDEV_CHIP_REVISION_PDL_FM0P_TYPE3_PRODUCTION, 0
+ 1202              	.set CYDEV_CHIP_REVISION_USED, CYDEV_CHIP_REVISION_4M_PRODUCTION
+ 1203              	.set CYDEV_CHIP_REV_EXPECT, CYDEV_CHIP_REVISION_USED
+ 1204              	.set CYDEV_CONFIG_READ_ACCELERATOR, 1
+ 1205              	.set CYDEV_CONFIG_UNUSED_IO_AllowButWarn, 0
+ 1206              	.set CYDEV_CONFIG_UNUSED_IO, CYDEV_CONFIG_UNUSED_IO_AllowButWarn
+ 1207              	.set CYDEV_CONFIG_UNUSED_IO_AllowWithInfo, 1
+ 1208              	.set CYDEV_CONFIG_UNUSED_IO_Disallowed, 2
+ 1209              	.set CYDEV_CONFIGURATION_COMPRESSED, 1
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 188
 
 
- 1210              	.set CYDEV_IMO_TRIMMED_BY_WCO, 0
- 1211              	.set CYDEV_INTR_NUMBER_DMA, 13
- 1212              	.set CYDEV_IS_EXPORTING_CODE, 0
- 1213              	.set CYDEV_IS_IMPORTING_CODE, 0
- 1214              	.set CYDEV_PROJ_TYPE, 0
- 1215              	.set CYDEV_PROJ_TYPE_BOOTLOADER, 1
- 1216              	.set CYDEV_PROJ_TYPE_LAUNCHER, 5
- 1217              	.set CYDEV_PROJ_TYPE_LOADABLE, 2
- 1218              	.set CYDEV_PROJ_TYPE_LOADABLEANDBOOTLOADER, 4
- 1219              	.set CYDEV_PROJ_TYPE_MULTIAPPBOOTLOADER, 3
- 1220              	.set CYDEV_PROJ_TYPE_STANDARD, 0
- 1221              	.set CYDEV_STACK_SIZE, 0x0800
- 1222              	.set CYDEV_USE_BUNDLED_CMSIS, 1
- 1223              	.set CYDEV_VARIABLE_VDDA, 1
- 1224              	.set CYDEV_VDDA_MV, 3300
- 1225              	.set CYDEV_VDDD_MV, 3300
- 1226              	.set CYDEV_VDDIO_MV, 3300
- 1227              	.set CYDEV_WDT_GENERATE_ISR, 1
- 1228              	.set CYIPBLOCK_m0s8can_VERSION, 1
- 1229              	.set CYIPBLOCK_m0s8cpussv2_VERSION, 1
- 1230              	.set CYIPBLOCK_m0s8csd_VERSION, 1
- 1231              	.set CYIPBLOCK_m0s8ioss_VERSION, 1
- 1232              	.set CYIPBLOCK_m0s8lcd_VERSION, 2
- 1233              	.set CYIPBLOCK_m0s8lpcomp_VERSION, 2
- 1234              	.set CYIPBLOCK_m0s8peri_VERSION, 1
- 1235              	.set CYIPBLOCK_m0s8scb_VERSION, 2
- 1236              	.set CYIPBLOCK_m0s8srssv2_VERSION, 1
- 1237              	.set CYIPBLOCK_m0s8tcpwm_VERSION, 2
- 1238              	.set CYIPBLOCK_m0s8udbif_VERSION, 1
- 1239              	.set CYIPBLOCK_m0s8wco_VERSION, 1
- 1240              	.set CYIPBLOCK_s8pass4al_VERSION, 1
- 1241              	.set DMA_CHANNELS_USED__MASK, 0
- 1242              	.set CYDEV_BOOTLOADER_ENABLE, 0
- 1243              	.endif
+ 1210              	.set CYDEV_CONFIGURATION_MODE_COMPRESSED, 0
+ 1211              	.set CYDEV_CONFIGURATION_MODE, CYDEV_CONFIGURATION_MODE_COMPRESSED
+ 1212              	.set CYDEV_CONFIGURATION_MODE_DMA, 2
+ 1213              	.set CYDEV_CONFIGURATION_MODE_UNCOMPRESSED, 1
+ 1214              	.set CYDEV_DEBUG_PROTECT_KILL, 4
+ 1215              	.set CYDEV_DEBUG_PROTECT_OPEN, 1
+ 1216              	.set CYDEV_DEBUG_PROTECT, CYDEV_DEBUG_PROTECT_OPEN
+ 1217              	.set CYDEV_DEBUG_PROTECT_PROTECTED, 2
+ 1218              	.set CYDEV_DEBUGGING_DPS_Disable, 3
+ 1219              	.set CYDEV_DEBUGGING_DPS_SWD, 2
+ 1220              	.set CYDEV_DEBUGGING_DPS, CYDEV_DEBUGGING_DPS_SWD
+ 1221              	.set CYDEV_DEBUGGING_ENABLE, 1
+ 1222              	.set CYDEV_DFT_SELECT_CLK0, 10
+ 1223              	.set CYDEV_DFT_SELECT_CLK1, 11
+ 1224              	.set CYDEV_DMA_CHANNELS_AVAILABLE, 8
+ 1225              	.set CYDEV_HEAP_SIZE, 0x80
+ 1226              	.set CYDEV_IMO_TRIMMED_BY_USB, 0
+ 1227              	.set CYDEV_IMO_TRIMMED_BY_WCO, 0
+ 1228              	.set CYDEV_INTR_NUMBER_DMA, 13
+ 1229              	.set CYDEV_IS_EXPORTING_CODE, 0
+ 1230              	.set CYDEV_IS_IMPORTING_CODE, 0
+ 1231              	.set CYDEV_PROJ_TYPE, 0
+ 1232              	.set CYDEV_PROJ_TYPE_BOOTLOADER, 1
+ 1233              	.set CYDEV_PROJ_TYPE_LAUNCHER, 5
+ 1234              	.set CYDEV_PROJ_TYPE_LOADABLE, 2
+ 1235              	.set CYDEV_PROJ_TYPE_LOADABLEANDBOOTLOADER, 4
+ 1236              	.set CYDEV_PROJ_TYPE_MULTIAPPBOOTLOADER, 3
+ 1237              	.set CYDEV_PROJ_TYPE_STANDARD, 0
+ 1238              	.set CYDEV_STACK_SIZE, 0x0800
+ 1239              	.set CYDEV_USE_BUNDLED_CMSIS, 1
+ 1240              	.set CYDEV_VARIABLE_VDDA, 1
+ 1241              	.set CYDEV_VDDA_MV, 3300
+ 1242              	.set CYDEV_VDDD_MV, 3300
+ 1243              	.set CYDEV_VDDIO_MV, 3300
+ 1244              	.set CYDEV_WDT_GENERATE_ISR, 1
+ 1245              	.set CYIPBLOCK_m0s8can_VERSION, 1
+ 1246              	.set CYIPBLOCK_m0s8cpussv2_VERSION, 1
+ 1247              	.set CYIPBLOCK_m0s8csd_VERSION, 1
+ 1248              	.set CYIPBLOCK_m0s8ioss_VERSION, 1
+ 1249              	.set CYIPBLOCK_m0s8lcd_VERSION, 2
+ 1250              	.set CYIPBLOCK_m0s8lpcomp_VERSION, 2
+ 1251              	.set CYIPBLOCK_m0s8peri_VERSION, 1
+ 1252              	.set CYIPBLOCK_m0s8scb_VERSION, 2
+ 1253              	.set CYIPBLOCK_m0s8srssv2_VERSION, 1
+ 1254              	.set CYIPBLOCK_m0s8tcpwm_VERSION, 2
+ 1255              	.set CYIPBLOCK_m0s8udbif_VERSION, 1
+ 1256              	.set CYIPBLOCK_m0s8wco_VERSION, 1
+ 1257              	.set CYIPBLOCK_s8pass4al_VERSION, 1
+ 1258              	.set DMA_CHANNELS_USED__MASK, 0
+ 1259              	.set CYDEV_BOOTLOADER_ENABLE, 0
+ 1260              	.endif
   19              	
   20              	
   21              	/*******************************************************************************
   22              	* Function Name: CyDelayCycles
   23              	****************************************************************************//**
   24              	*
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 189
+
+
   25              	*  Delays for the specified number of cycles.
   26              	*
   27              	*  \param uint32 cycles: number of cycles to delay.
@@ -11278,9 +11298,6 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
   39              	CyDelayCycles:              /* cycles bytes */
   40 0000 0230     	    ADDS r0, r0, #2         /*    1    2    Round to nearest multiple of 4 */
   41 0002 8008     	    LSRS r0, r0, #2         /*    1    2    Divide by 4 and set flags */
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 189
-
-
   42 0004 03D0     	    BEQ CyDelayCycles_done  /*    2    2    Skip if 0 */
   43              	.IFDEF CYIPBLOCK_m0s8cpuss_VERSION
   44              	    NOP                     /*    1    2    Loop alignment padding */
@@ -11321,6 +11338,9 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
   79              	*
   80              	*  Note Implementation of CyEnterCriticalSection manipulates the IRQ enable bit
   81              	*  with interrupts still enabled. The test and set of the interrupt bits is not
+ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 190
+
+
   82              	*  atomic; this is true for both PSoC 3 and PSoC 5. Therefore, to avoid a
   83              	*  corrupting processor state, it must be the policy that all interrupt routines
   84              	*  restore the interrupt enable bits as they were found on entry.
@@ -11338,9 +11358,6 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
   96              	.thumb_func
   97              	CyEnterCriticalSection:
   98 0012 EFF31080 	    MRS r0, PRIMASK         /* Save and return interrupt state */
-ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 190
-
-
   99 0016 72B6     	    CPSID I                 /* Disable interrupts */
  100 0018 7047     	    BX lr
  101              	.endfunc

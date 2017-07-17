@@ -2,7 +2,7 @@
 --	Conversion of Test_All_Sensor.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Jan 04 20:58:23 2017
+--	Thu Jul 13 18:27:42 2017
 --
 
 USE cypress.cypress.all;
@@ -69,6 +69,8 @@ SIGNAL \SENSOR_1:miso_s_wire\ : bit;
 SIGNAL Net_30 : bit;
 SIGNAL Net_29 : bit;
 SIGNAL \SENSOR_1:Net_1028\ : bit;
+SIGNAL Net_25 : bit;
+SIGNAL Net_26 : bit;
 SIGNAL Net_35 : bit;
 SIGNAL Net_36 : bit;
 SIGNAL Net_37 : bit;
@@ -76,8 +78,6 @@ SIGNAL Net_38 : bit;
 SIGNAL Net_39 : bit;
 SIGNAL Net_40 : bit;
 SIGNAL Net_41 : bit;
-SIGNAL Net_25 : bit;
-SIGNAL Net_26 : bit;
 SIGNAL \SENSOR_2:Net_847\ : bit;
 SIGNAL \SENSOR_2:select_s_wire\ : bit;
 SIGNAL \SENSOR_2:rx_wire\ : bit;
@@ -113,6 +113,8 @@ SIGNAL \SENSOR_2:miso_s_wire\ : bit;
 SIGNAL Net_106 : bit;
 SIGNAL Net_105 : bit;
 SIGNAL \SENSOR_2:Net_1028\ : bit;
+SIGNAL Net_101 : bit;
+SIGNAL Net_102 : bit;
 SIGNAL Net_111 : bit;
 SIGNAL Net_112 : bit;
 SIGNAL Net_113 : bit;
@@ -120,8 +122,6 @@ SIGNAL Net_114 : bit;
 SIGNAL Net_115 : bit;
 SIGNAL Net_116 : bit;
 SIGNAL Net_117 : bit;
-SIGNAL Net_101 : bit;
-SIGNAL Net_102 : bit;
 SIGNAL \SENSOR_3:Net_847\ : bit;
 SIGNAL \SENSOR_3:select_s_wire\ : bit;
 SIGNAL \SENSOR_3:rx_wire\ : bit;
@@ -157,6 +157,8 @@ SIGNAL \SENSOR_3:miso_s_wire\ : bit;
 SIGNAL Net_125 : bit;
 SIGNAL Net_124 : bit;
 SIGNAL \SENSOR_3:Net_1028\ : bit;
+SIGNAL Net_120 : bit;
+SIGNAL Net_121 : bit;
 SIGNAL Net_130 : bit;
 SIGNAL Net_131 : bit;
 SIGNAL Net_132 : bit;
@@ -164,8 +166,6 @@ SIGNAL Net_133 : bit;
 SIGNAL Net_134 : bit;
 SIGNAL Net_135 : bit;
 SIGNAL Net_136 : bit;
-SIGNAL Net_120 : bit;
-SIGNAL Net_121 : bit;
 SIGNAL \SENSOR_4:Net_847\ : bit;
 SIGNAL \SENSOR_4:select_s_wire\ : bit;
 SIGNAL \SENSOR_4:rx_wire\ : bit;
@@ -201,6 +201,8 @@ SIGNAL \SENSOR_4:miso_s_wire\ : bit;
 SIGNAL Net_144 : bit;
 SIGNAL Net_143 : bit;
 SIGNAL \SENSOR_4:Net_1028\ : bit;
+SIGNAL Net_139 : bit;
+SIGNAL Net_140 : bit;
 SIGNAL Net_149 : bit;
 SIGNAL Net_150 : bit;
 SIGNAL Net_151 : bit;
@@ -208,8 +210,6 @@ SIGNAL Net_152 : bit;
 SIGNAL Net_153 : bit;
 SIGNAL Net_154 : bit;
 SIGNAL Net_155 : bit;
-SIGNAL Net_139 : bit;
-SIGNAL Net_140 : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -647,7 +647,8 @@ LED_4:cy_psoc3_pins_v1_10
 		out_reset=>zero,
 		interrupt=>\SENSOR_1:tmpINTERRUPT_0__scl_net_0\);
 \SENSOR_1:SCB_IRQ\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_27);
 \SENSOR_1:SCB\:cy_m0s8_scb_v2_0
 	GENERIC MAP(cy_registers=>"",
@@ -821,7 +822,8 @@ LED_4:cy_psoc3_pins_v1_10
 		out_reset=>zero,
 		interrupt=>\SENSOR_2:tmpINTERRUPT_0__scl_net_0\);
 \SENSOR_2:SCB_IRQ\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_103);
 \SENSOR_2:SCB\:cy_m0s8_scb_v2_0
 	GENERIC MAP(cy_registers=>"",
@@ -995,7 +997,8 @@ LED_4:cy_psoc3_pins_v1_10
 		out_reset=>zero,
 		interrupt=>\SENSOR_3:tmpINTERRUPT_0__scl_net_0\);
 \SENSOR_3:SCB_IRQ\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_122);
 \SENSOR_3:SCB\:cy_m0s8_scb_v2_0
 	GENERIC MAP(cy_registers=>"",
@@ -1169,7 +1172,8 @@ LED_4:cy_psoc3_pins_v1_10
 		out_reset=>zero,
 		interrupt=>\SENSOR_4:tmpINTERRUPT_0__scl_net_0\);
 \SENSOR_4:SCB_IRQ\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_141);
 \SENSOR_4:SCB\:cy_m0s8_scb_v2_0
 	GENERIC MAP(cy_registers=>"",

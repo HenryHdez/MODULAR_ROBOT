@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,87 +25,87 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
   22              		.type	SENSOR_2_sda_SetDriveMode, %function
   23              	SENSOR_2_sda_SetDriveMode:
   24              	.LFB0:
-  25              		.file 1 ".\\Generated_Source\\PSoC4\\SENSOR_2_sda.c"
-   1:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * File Name: SENSOR_2_sda.c  
-   3:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * Version 2.20
-   4:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
-   5:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * Description:
-   6:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  This file contains API to enable firmware control of a Pins component.
-   7:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
-   8:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** ********************************************************************************
-   9:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  10:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  11:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  12:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * the software package with which this file was provided.
-  13:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
-  14:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
-  15:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** #include "cytypes.h"
-  16:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** #include "SENSOR_2_sda.h"
-  17:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
-  18:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
-  19:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** #if defined(SENSOR_2_sda__PC)
-  20:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     #define SENSOR_2_sda_SetP4PinDriveMode(shift, mode)  \
-  21:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     do { \
-  22:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****         SENSOR_2_sda_PC =   (SENSOR_2_sda_PC & \
-  23:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****                                 (uint32)(~(uint32)(SENSOR_2_sda_DRIVE_MODE_IND_MASK << \
-  24:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****                                 (SENSOR_2_sda_DRIVE_MODE_BITS * (shift))))) | \
-  25:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****                                 (uint32)((uint32)(mode) << \
-  26:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****                                 (SENSOR_2_sda_DRIVE_MODE_BITS * (shift))); \
-  27:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     } while (0)
-  28:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** #else
-  29:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     #if (CY_PSOC4_4200L)
-  30:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****         #define SENSOR_2_sda_SetP4PinDriveMode(shift, mode)  \
-  31:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****         do { \
-  32:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****             SENSOR_2_sda_USBIO_CTRL_REG = (SENSOR_2_sda_USBIO_CTRL_REG & \
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 2
+  25              		.file 1 "Generated_Source\\PSoC4\\SENSOR_2_sda.c"
+   1:Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/SENSOR_2_sda.c **** * File Name: SENSOR_2_sda.c  
+   3:Generated_Source\PSoC4/SENSOR_2_sda.c **** * Version 2.20
+   4:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+   5:Generated_Source\PSoC4/SENSOR_2_sda.c **** * Description:
+   6:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+   8:Generated_Source\PSoC4/SENSOR_2_sda.c **** ********************************************************************************
+   9:Generated_Source\PSoC4/SENSOR_2_sda.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  10:Generated_Source\PSoC4/SENSOR_2_sda.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  11:Generated_Source\PSoC4/SENSOR_2_sda.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  12:Generated_Source\PSoC4/SENSOR_2_sda.c **** * the software package with which this file was provided.
+  13:Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
+  14:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+  15:Generated_Source\PSoC4/SENSOR_2_sda.c **** #include "cytypes.h"
+  16:Generated_Source\PSoC4/SENSOR_2_sda.c **** #include "SENSOR_2_sda.h"
+  17:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+  18:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+  19:Generated_Source\PSoC4/SENSOR_2_sda.c **** #if defined(SENSOR_2_sda__PC)
+  20:Generated_Source\PSoC4/SENSOR_2_sda.c ****     #define SENSOR_2_sda_SetP4PinDriveMode(shift, mode)  \
+  21:Generated_Source\PSoC4/SENSOR_2_sda.c ****     do { \
+  22:Generated_Source\PSoC4/SENSOR_2_sda.c ****         SENSOR_2_sda_PC =   (SENSOR_2_sda_PC & \
+  23:Generated_Source\PSoC4/SENSOR_2_sda.c ****                                 (uint32)(~(uint32)(SENSOR_2_sda_DRIVE_MODE_IND_MASK << \
+  24:Generated_Source\PSoC4/SENSOR_2_sda.c ****                                 (SENSOR_2_sda_DRIVE_MODE_BITS * (shift))))) | \
+  25:Generated_Source\PSoC4/SENSOR_2_sda.c ****                                 (uint32)((uint32)(mode) << \
+  26:Generated_Source\PSoC4/SENSOR_2_sda.c ****                                 (SENSOR_2_sda_DRIVE_MODE_BITS * (shift))); \
+  27:Generated_Source\PSoC4/SENSOR_2_sda.c ****     } while (0)
+  28:Generated_Source\PSoC4/SENSOR_2_sda.c **** #else
+  29:Generated_Source\PSoC4/SENSOR_2_sda.c ****     #if (CY_PSOC4_4200L)
+  30:Generated_Source\PSoC4/SENSOR_2_sda.c ****         #define SENSOR_2_sda_SetP4PinDriveMode(shift, mode)  \
+  31:Generated_Source\PSoC4/SENSOR_2_sda.c ****         do { \
+  32:Generated_Source\PSoC4/SENSOR_2_sda.c ****             SENSOR_2_sda_USBIO_CTRL_REG = (SENSOR_2_sda_USBIO_CTRL_REG & \
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 2
 
 
-  33:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****                                     (uint32)(~(uint32)(SENSOR_2_sda_DRIVE_MODE_IND_MASK << \
-  34:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****                                     (SENSOR_2_sda_DRIVE_MODE_BITS * (shift))))) | \
-  35:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****                                     (uint32)((uint32)(mode) << \
-  36:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****                                     (SENSOR_2_sda_DRIVE_MODE_BITS * (shift))); \
-  37:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****         } while (0)
-  38:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     #endif
-  39:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** #endif
-  40:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****   
-  41:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
-  42:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** #if defined(SENSOR_2_sda__PC) || (CY_PSOC4_4200L) 
-  43:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     /*******************************************************************************
-  44:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * Function Name: SENSOR_2_sda_SetDriveMode
-  45:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     ****************************************************************************//**
-  46:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
-  47:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * \brief Sets the drive mode for each of the Pins component's pins.
-  48:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * 
-  49:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * <b>Note</b> This affects all pins in the Pins component instance. Use the
-  50:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * Per-Pin APIs if you wish to control individual pin's drive modes.
-  51:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
-  52:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * <b>Note</b> USBIOs have limited drive functionality. Refer to the Drive Mode
-  53:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * parameter for more information.
-  54:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
-  55:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * \param mode
-  56:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  Mode for the selected signals. Valid options are documented in 
-  57:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  \ref driveMode.
-  58:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
-  59:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * \return
-  60:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  None
-  61:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
-  62:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * \sideeffect
-  63:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  If you use read-modify-write operations that are not atomic, the ISR can
-  64:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  cause corruption of this function. An ISR that interrupts this function 
-  65:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  and performs writes to the Pins component Drive Mode registers can cause 
-  66:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  corrupted port data. To avoid this issue, you should either use the Per-Pin
-  67:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  APIs (primary method) or disable interrupts around this function.
-  68:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
-  69:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     * \funcusage
-  70:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_SetDriveMode
-  71:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     *******************************************************************************/
-  72:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     void SENSOR_2_sda_SetDriveMode(uint8 mode)
-  73:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     {
+  33:Generated_Source\PSoC4/SENSOR_2_sda.c ****                                     (uint32)(~(uint32)(SENSOR_2_sda_DRIVE_MODE_IND_MASK << \
+  34:Generated_Source\PSoC4/SENSOR_2_sda.c ****                                     (SENSOR_2_sda_DRIVE_MODE_BITS * (shift))))) | \
+  35:Generated_Source\PSoC4/SENSOR_2_sda.c ****                                     (uint32)((uint32)(mode) << \
+  36:Generated_Source\PSoC4/SENSOR_2_sda.c ****                                     (SENSOR_2_sda_DRIVE_MODE_BITS * (shift))); \
+  37:Generated_Source\PSoC4/SENSOR_2_sda.c ****         } while (0)
+  38:Generated_Source\PSoC4/SENSOR_2_sda.c ****     #endif
+  39:Generated_Source\PSoC4/SENSOR_2_sda.c **** #endif
+  40:Generated_Source\PSoC4/SENSOR_2_sda.c ****   
+  41:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+  42:Generated_Source\PSoC4/SENSOR_2_sda.c **** #if defined(SENSOR_2_sda__PC) || (CY_PSOC4_4200L) 
+  43:Generated_Source\PSoC4/SENSOR_2_sda.c ****     /*******************************************************************************
+  44:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * Function Name: SENSOR_2_sda_SetDriveMode
+  45:Generated_Source\PSoC4/SENSOR_2_sda.c ****     ****************************************************************************//**
+  46:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
+  47:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * \brief Sets the drive mode for each of the Pins component's pins.
+  48:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * 
+  49:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * <b>Note</b> This affects all pins in the Pins component instance. Use the
+  50:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * Per-Pin APIs if you wish to control individual pin's drive modes.
+  51:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
+  52:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * <b>Note</b> USBIOs have limited drive functionality. Refer to the Drive Mode
+  53:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * parameter for more information.
+  54:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
+  55:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * \param mode
+  56:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  Mode for the selected signals. Valid options are documented in 
+  57:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  \ref driveMode.
+  58:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
+  59:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * \return
+  60:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  None
+  61:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
+  62:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * \sideeffect
+  63:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  If you use read-modify-write operations that are not atomic, the ISR can
+  64:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  cause corruption of this function. An ISR that interrupts this function 
+  65:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  and performs writes to the Pins component Drive Mode registers can cause 
+  66:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  corrupted port data. To avoid this issue, you should either use the Per-Pin
+  67:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  APIs (primary method) or disable interrupts around this function.
+  68:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *
+  69:Generated_Source\PSoC4/SENSOR_2_sda.c ****     * \funcusage
+  70:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_SetDriveMode
+  71:Generated_Source\PSoC4/SENSOR_2_sda.c ****     *******************************************************************************/
+  72:Generated_Source\PSoC4/SENSOR_2_sda.c ****     void SENSOR_2_sda_SetDriveMode(uint8 mode)
+  73:Generated_Source\PSoC4/SENSOR_2_sda.c ****     {
   26              		.loc 1 73 0
   27              		.cfi_startproc
   28              	.LVL0:
-  74:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 		SENSOR_2_sda_SetP4PinDriveMode(SENSOR_2_sda__0__SHIFT, mode);
+  74:Generated_Source\PSoC4/SENSOR_2_sda.c **** 		SENSOR_2_sda_SetP4PinDriveMode(SENSOR_2_sda__0__SHIFT, mode);
   29              		.loc 1 74 0
   30 0000 034A     		ldr	r2, .L2
   31 0002 1368     		ldr	r3, [r2]
@@ -115,10 +115,10 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
   35              	.LVL1:
   36 000a 1843     		orr	r0, r3
   37 000c 1060     		str	r0, [r2]
-  75:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     }
+  75:Generated_Source\PSoC4/SENSOR_2_sda.c ****     }
   38              		.loc 1 75 0
   39              		@ sp needed
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 3
 
 
   40 000e 7047     		bx	lr
@@ -137,48 +137,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
   53              		.type	SENSOR_2_sda_Write, %function
   54              	SENSOR_2_sda_Write:
   55              	.LFB1:
-  76:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** #endif
-  77:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
-  78:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
-  79:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
-  80:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * Function Name: SENSOR_2_sda_Write
-  81:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** ****************************************************************************//**
-  82:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
-  83:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \brief Writes the value to the physical port (data output register), masking
-  84:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  and shifting the bits appropriately. 
-  85:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
-  86:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * The data output register controls the signal applied to the physical pin in 
-  87:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * conjunction with the drive mode parameter. This function avoids changing 
-  88:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * other bits in the port by using the appropriate method (read-modify-write or
-  89:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * bit banding).
-  90:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
-  91:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
-  92:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * as it is driven by the hardware signal attached to it.
-  93:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
-  94:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \param value
-  95:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  Value to write to the component instance.
-  96:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
-  97:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \return 
-  98:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  None 
-  99:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 100:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \sideeffect
- 101:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
- 102:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
- 103:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  interrupts this function and performs writes to the Pins component data 
- 104:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  register can cause corrupted port data. To avoid this issue, you should 
- 105:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
- 106:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  this function.
- 107:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 108:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \funcusage
- 109:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_Write
- 110:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
- 111:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** void SENSOR_2_sda_Write(uint8 value)
- 112:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** {
+  76:Generated_Source\PSoC4/SENSOR_2_sda.c **** #endif
+  77:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+  78:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+  79:Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
+  80:Generated_Source\PSoC4/SENSOR_2_sda.c **** * Function Name: SENSOR_2_sda_Write
+  81:Generated_Source\PSoC4/SENSOR_2_sda.c **** ****************************************************************************//**
+  82:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+  83:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \brief Writes the value to the physical port (data output register), masking
+  84:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  and shifting the bits appropriately. 
+  85:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+  86:Generated_Source\PSoC4/SENSOR_2_sda.c **** * The data output register controls the signal applied to the physical pin in 
+  87:Generated_Source\PSoC4/SENSOR_2_sda.c **** * conjunction with the drive mode parameter. This function avoids changing 
+  88:Generated_Source\PSoC4/SENSOR_2_sda.c **** * other bits in the port by using the appropriate method (read-modify-write or
+  89:Generated_Source\PSoC4/SENSOR_2_sda.c **** * bit banding).
+  90:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+  91:Generated_Source\PSoC4/SENSOR_2_sda.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
+  92:Generated_Source\PSoC4/SENSOR_2_sda.c **** * as it is driven by the hardware signal attached to it.
+  93:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+  94:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \param value
+  95:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  Value to write to the component instance.
+  96:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+  97:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \return 
+  98:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  None 
+  99:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 100:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \sideeffect
+ 101:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
+ 102:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
+ 103:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  interrupts this function and performs writes to the Pins component data 
+ 104:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  register can cause corrupted port data. To avoid this issue, you should 
+ 105:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
+ 106:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  this function.
+ 107:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 108:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \funcusage
+ 109:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_Write
+ 110:Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
+ 111:Generated_Source\PSoC4/SENSOR_2_sda.c **** void SENSOR_2_sda_Write(uint8 value)
+ 112:Generated_Source\PSoC4/SENSOR_2_sda.c **** {
   56              		.loc 1 112 0
   57              		.cfi_startproc
   58              	.LVL2:
- 113:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     uint8 drVal = (uint8)(SENSOR_2_sda_DR & (uint8)(~SENSOR_2_sda_MASK));
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 4
+ 113:Generated_Source\PSoC4/SENSOR_2_sda.c ****     uint8 drVal = (uint8)(SENSOR_2_sda_DR & (uint8)(~SENSOR_2_sda_MASK));
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 4
 
 
   59              		.loc 1 113 0
@@ -187,7 +187,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
   62 0004 FD23     		mov	r3, #253
   63 0006 1A40     		and	r2, r3
   64              	.LVL3:
- 114:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     drVal = (drVal | ((uint8)(value << SENSOR_2_sda_SHIFT) & SENSOR_2_sda_MASK));
+ 114:Generated_Source\PSoC4/SENSOR_2_sda.c ****     drVal = (drVal | ((uint8)(value << SENSOR_2_sda_SHIFT) & SENSOR_2_sda_MASK));
   65              		.loc 1 114 0
   66 0008 4000     		lsl	r0, r0, #1
   67              	.LVL4:
@@ -195,10 +195,10 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
   69 000c 1840     		and	r0, r3
   70 000e 1043     		orr	r0, r2
   71              	.LVL5:
- 115:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     SENSOR_2_sda_DR = (uint32)drVal;
+ 115:Generated_Source\PSoC4/SENSOR_2_sda.c ****     SENSOR_2_sda_DR = (uint32)drVal;
   72              		.loc 1 115 0
   73 0010 0860     		str	r0, [r1]
- 116:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** }
+ 116:Generated_Source\PSoC4/SENSOR_2_sda.c **** }
   74              		.loc 1 116 0
   75              		@ sp needed
   76 0012 7047     		bx	lr
@@ -217,39 +217,39 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
   89              		.type	SENSOR_2_sda_Read, %function
   90              	SENSOR_2_sda_Read:
   91              	.LFB2:
- 117:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
- 118:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
- 119:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
- 120:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * Function Name: SENSOR_2_sda_Read
- 121:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** ****************************************************************************//**
- 122:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 123:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \brief Reads the associated physical port (pin status register) and masks 
- 124:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  the required bits according to the width and bit position of the component
- 125:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  instance. 
- 126:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 127:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * The pin's status register returns the current logic level present on the 
- 128:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * physical pin.
- 129:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 130:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \return 
- 131:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  The current value for the pins in the component as a right justified number.
- 132:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 133:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \funcusage
- 134:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_Read  
- 135:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
- 136:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** uint8 SENSOR_2_sda_Read(void)
- 137:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** {
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 5
+ 117:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+ 118:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+ 119:Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
+ 120:Generated_Source\PSoC4/SENSOR_2_sda.c **** * Function Name: SENSOR_2_sda_Read
+ 121:Generated_Source\PSoC4/SENSOR_2_sda.c **** ****************************************************************************//**
+ 122:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 123:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \brief Reads the associated physical port (pin status register) and masks 
+ 124:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  the required bits according to the width and bit position of the component
+ 125:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  instance. 
+ 126:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 127:Generated_Source\PSoC4/SENSOR_2_sda.c **** * The pin's status register returns the current logic level present on the 
+ 128:Generated_Source\PSoC4/SENSOR_2_sda.c **** * physical pin.
+ 129:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 130:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \return 
+ 131:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  The current value for the pins in the component as a right justified number.
+ 132:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 133:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \funcusage
+ 134:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_Read  
+ 135:Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
+ 136:Generated_Source\PSoC4/SENSOR_2_sda.c **** uint8 SENSOR_2_sda_Read(void)
+ 137:Generated_Source\PSoC4/SENSOR_2_sda.c **** {
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 5
 
 
   92              		.loc 1 137 0
   93              		.cfi_startproc
- 138:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     return (uint8)((SENSOR_2_sda_PS & SENSOR_2_sda_MASK) >> SENSOR_2_sda_SHIFT);
+ 138:Generated_Source\PSoC4/SENSOR_2_sda.c ****     return (uint8)((SENSOR_2_sda_PS & SENSOR_2_sda_MASK) >> SENSOR_2_sda_SHIFT);
   94              		.loc 1 138 0
   95 0000 024B     		ldr	r3, .L8
   96 0002 1868     		ldr	r0, [r3]
   97 0004 8007     		lsl	r0, r0, #30
   98 0006 C00F     		lsr	r0, r0, #31
- 139:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** }
+ 139:Generated_Source\PSoC4/SENSOR_2_sda.c **** }
   99              		.loc 1 139 0
  100              		@ sp needed
  101 0008 7047     		bx	lr
@@ -268,44 +268,44 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  114              		.type	SENSOR_2_sda_ReadDataReg, %function
  115              	SENSOR_2_sda_ReadDataReg:
  116              	.LFB3:
- 140:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
- 141:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
- 142:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
- 143:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * Function Name: SENSOR_2_sda_ReadDataReg
- 144:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** ****************************************************************************//**
- 145:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 146:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \brief Reads the associated physical port's data output register and masks 
- 147:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  the correct bits according to the width and bit position of the component 
- 148:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  instance. 
- 149:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 150:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * The data output register controls the signal applied to the physical pin in 
- 151:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * conjunction with the drive mode parameter. This is not the same as the 
- 152:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * preferred SENSOR_2_sda_Read() API because the 
- 153:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * SENSOR_2_sda_ReadDataReg() reads the data register instead of the status 
- 154:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * register. For output pins this is a useful function to determine the value 
- 155:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * just written to the pin.
- 156:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 157:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \return 
- 158:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  The current value of the data register masked and shifted into a right 
- 159:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  justified number for the component instance.
- 160:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 161:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \funcusage
- 162:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_ReadDataReg 
- 163:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
- 164:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** uint8 SENSOR_2_sda_ReadDataReg(void)
- 165:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** {
+ 140:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+ 141:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+ 142:Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
+ 143:Generated_Source\PSoC4/SENSOR_2_sda.c **** * Function Name: SENSOR_2_sda_ReadDataReg
+ 144:Generated_Source\PSoC4/SENSOR_2_sda.c **** ****************************************************************************//**
+ 145:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 146:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \brief Reads the associated physical port's data output register and masks 
+ 147:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  the correct bits according to the width and bit position of the component 
+ 148:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  instance. 
+ 149:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 150:Generated_Source\PSoC4/SENSOR_2_sda.c **** * The data output register controls the signal applied to the physical pin in 
+ 151:Generated_Source\PSoC4/SENSOR_2_sda.c **** * conjunction with the drive mode parameter. This is not the same as the 
+ 152:Generated_Source\PSoC4/SENSOR_2_sda.c **** * preferred SENSOR_2_sda_Read() API because the 
+ 153:Generated_Source\PSoC4/SENSOR_2_sda.c **** * SENSOR_2_sda_ReadDataReg() reads the data register instead of the status 
+ 154:Generated_Source\PSoC4/SENSOR_2_sda.c **** * register. For output pins this is a useful function to determine the value 
+ 155:Generated_Source\PSoC4/SENSOR_2_sda.c **** * just written to the pin.
+ 156:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 157:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \return 
+ 158:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  The current value of the data register masked and shifted into a right 
+ 159:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  justified number for the component instance.
+ 160:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 161:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \funcusage
+ 162:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_ReadDataReg 
+ 163:Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
+ 164:Generated_Source\PSoC4/SENSOR_2_sda.c **** uint8 SENSOR_2_sda_ReadDataReg(void)
+ 165:Generated_Source\PSoC4/SENSOR_2_sda.c **** {
  117              		.loc 1 165 0
  118              		.cfi_startproc
- 166:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     return (uint8)((SENSOR_2_sda_DR & SENSOR_2_sda_MASK) >> SENSOR_2_sda_SHIFT);
+ 166:Generated_Source\PSoC4/SENSOR_2_sda.c ****     return (uint8)((SENSOR_2_sda_DR & SENSOR_2_sda_MASK) >> SENSOR_2_sda_SHIFT);
  119              		.loc 1 166 0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 6
 
 
  120 0000 024B     		ldr	r3, .L11
  121 0002 1868     		ldr	r0, [r3]
  122 0004 8007     		lsl	r0, r0, #30
  123 0006 C00F     		lsr	r0, r0, #31
- 167:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** }
+ 167:Generated_Source\PSoC4/SENSOR_2_sda.c **** }
  124              		.loc 1 167 0
  125              		@ sp needed
  126 0008 7047     		bx	lr
@@ -324,68 +324,68 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  139              		.type	SENSOR_2_sda_SetInterruptMode, %function
  140              	SENSOR_2_sda_SetInterruptMode:
  141              	.LFB4:
- 168:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
- 169:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
- 170:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
- 171:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * Function Name: SENSOR_2_sda_SetInterruptMode
- 172:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** ****************************************************************************//**
- 173:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 174:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \brief Configures the interrupt mode for each of the Pins component's
- 175:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  pins. Alternatively you may set the interrupt mode for all the pins
- 176:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  specified in the Pins component.
- 177:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 178:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  <b>Note</b> The interrupt is port-wide and therefore any enabled pin
- 179:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  interrupt may trigger it.
- 180:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 181:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \param position
- 182:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  The pin position as listed in the Pins component. You may OR these to be 
- 183:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  able to configure the interrupt mode of multiple pins within a Pins 
- 184:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  component. Or you may use SENSOR_2_sda_INTR_ALL to configure the
- 185:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  interrupt mode of all the pins in the Pins component.       
- 186:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  - SENSOR_2_sda_0_INTR       (First pin in the list)
- 187:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  - SENSOR_2_sda_1_INTR       (Second pin in the list)
- 188:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  - ...
- 189:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  - SENSOR_2_sda_INTR_ALL     (All pins in Pins component)
- 190:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 191:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \param mode
- 192:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  Interrupt mode for the selected pins. Valid options are documented in
- 193:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \ref intrMode.
- 194:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 195:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \return 
- 196:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  None
- 197:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  
- 198:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \sideeffect
- 199:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  It is recommended that the interrupt be disabled before calling this 
- 200:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  function to avoid unintended interrupt requests. Note that the interrupt
- 201:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  type is port wide, and therefore will trigger for any enabled pin on the 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 7
+ 168:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+ 169:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+ 170:Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
+ 171:Generated_Source\PSoC4/SENSOR_2_sda.c **** * Function Name: SENSOR_2_sda_SetInterruptMode
+ 172:Generated_Source\PSoC4/SENSOR_2_sda.c **** ****************************************************************************//**
+ 173:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 174:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \brief Configures the interrupt mode for each of the Pins component's
+ 175:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  pins. Alternatively you may set the interrupt mode for all the pins
+ 176:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  specified in the Pins component.
+ 177:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 178:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  <b>Note</b> The interrupt is port-wide and therefore any enabled pin
+ 179:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  interrupt may trigger it.
+ 180:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 181:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \param position
+ 182:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  The pin position as listed in the Pins component. You may OR these to be 
+ 183:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  able to configure the interrupt mode of multiple pins within a Pins 
+ 184:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  component. Or you may use SENSOR_2_sda_INTR_ALL to configure the
+ 185:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  interrupt mode of all the pins in the Pins component.       
+ 186:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  - SENSOR_2_sda_0_INTR       (First pin in the list)
+ 187:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  - SENSOR_2_sda_1_INTR       (Second pin in the list)
+ 188:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  - ...
+ 189:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  - SENSOR_2_sda_INTR_ALL     (All pins in Pins component)
+ 190:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 191:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \param mode
+ 192:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  Interrupt mode for the selected pins. Valid options are documented in
+ 193:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \ref intrMode.
+ 194:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 195:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \return 
+ 196:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  None
+ 197:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  
+ 198:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \sideeffect
+ 199:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  It is recommended that the interrupt be disabled before calling this 
+ 200:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  function to avoid unintended interrupt requests. Note that the interrupt
+ 201:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  type is port wide, and therefore will trigger for any enabled pin on the 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 7
 
 
- 202:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  port.
- 203:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 204:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \funcusage
- 205:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_SetInterruptMode
- 206:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
- 207:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** void SENSOR_2_sda_SetInterruptMode(uint16 position, uint16 mode)
- 208:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** {
+ 202:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  port.
+ 203:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 204:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \funcusage
+ 205:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_SetInterruptMode
+ 206:Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
+ 207:Generated_Source\PSoC4/SENSOR_2_sda.c **** void SENSOR_2_sda_SetInterruptMode(uint16 position, uint16 mode)
+ 208:Generated_Source\PSoC4/SENSOR_2_sda.c **** {
  142              		.loc 1 208 0
  143              		.cfi_startproc
  144              	.LVL6:
- 209:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     uint32 intrCfg;
- 210:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     
- 211:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     intrCfg =  SENSOR_2_sda_INTCFG & (uint32)(~(uint32)position);
+ 209:Generated_Source\PSoC4/SENSOR_2_sda.c ****     uint32 intrCfg;
+ 210:Generated_Source\PSoC4/SENSOR_2_sda.c ****     
+ 211:Generated_Source\PSoC4/SENSOR_2_sda.c ****     intrCfg =  SENSOR_2_sda_INTCFG & (uint32)(~(uint32)position);
  145              		.loc 1 211 0
  146 0000 034A     		ldr	r2, .L14
  147 0002 1368     		ldr	r3, [r2]
  148 0004 8343     		bic	r3, r0
  149              	.LVL7:
- 212:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     SENSOR_2_sda_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
+ 212:Generated_Source\PSoC4/SENSOR_2_sda.c ****     SENSOR_2_sda_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
  150              		.loc 1 212 0
  151 0006 0140     		and	r1, r0
  152              	.LVL8:
  153 0008 1943     		orr	r1, r3
  154 000a 1160     		str	r1, [r2]
- 213:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** }
+ 213:Generated_Source\PSoC4/SENSOR_2_sda.c **** }
  155              		.loc 1 213 0
  156              		@ sp needed
  157 000c 7047     		bx	lr
@@ -404,51 +404,51 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  170              		.type	SENSOR_2_sda_ClearInterrupt, %function
  171              	SENSOR_2_sda_ClearInterrupt:
  172              	.LFB5:
- 214:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
- 215:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 
- 216:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
- 217:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * Function Name: SENSOR_2_sda_ClearInterrupt
- 218:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** ****************************************************************************//**
- 219:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 220:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \brief Clears any active interrupts attached with the component and returns 
- 221:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  the value of the interrupt status register allowing determination of which
- 222:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  pins generated an interrupt event.
- 223:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 224:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \return 
- 225:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  The right-shifted current value of the interrupt status register. Each pin 
- 226:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  has one bit set if it generated an interrupt event. For example, bit 0 is 
- 227:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  for pin 0 and bit 1 is for pin 1 of the Pins component.
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 8
+ 214:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+ 215:Generated_Source\PSoC4/SENSOR_2_sda.c **** 
+ 216:Generated_Source\PSoC4/SENSOR_2_sda.c **** /*******************************************************************************
+ 217:Generated_Source\PSoC4/SENSOR_2_sda.c **** * Function Name: SENSOR_2_sda_ClearInterrupt
+ 218:Generated_Source\PSoC4/SENSOR_2_sda.c **** ****************************************************************************//**
+ 219:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 220:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \brief Clears any active interrupts attached with the component and returns 
+ 221:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  the value of the interrupt status register allowing determination of which
+ 222:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  pins generated an interrupt event.
+ 223:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 224:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \return 
+ 225:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  The right-shifted current value of the interrupt status register. Each pin 
+ 226:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  has one bit set if it generated an interrupt event. For example, bit 0 is 
+ 227:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  for pin 0 and bit 1 is for pin 1 of the Pins component.
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 8
 
 
- 228:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  
- 229:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \sideeffect
- 230:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  Clears all bits of the physical port's interrupt status register, not just
- 231:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  those associated with the Pins component.
- 232:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *
- 233:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** * \funcusage
- 234:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_ClearInterrupt
- 235:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
- 236:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** uint8 SENSOR_2_sda_ClearInterrupt(void)
- 237:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** {
+ 228:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  
+ 229:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \sideeffect
+ 230:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  Clears all bits of the physical port's interrupt status register, not just
+ 231:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  those associated with the Pins component.
+ 232:Generated_Source\PSoC4/SENSOR_2_sda.c **** *
+ 233:Generated_Source\PSoC4/SENSOR_2_sda.c **** * \funcusage
+ 234:Generated_Source\PSoC4/SENSOR_2_sda.c **** *  \snippet SENSOR_2_sda_SUT.c usage_SENSOR_2_sda_ClearInterrupt
+ 235:Generated_Source\PSoC4/SENSOR_2_sda.c **** *******************************************************************************/
+ 236:Generated_Source\PSoC4/SENSOR_2_sda.c **** uint8 SENSOR_2_sda_ClearInterrupt(void)
+ 237:Generated_Source\PSoC4/SENSOR_2_sda.c **** {
  173              		.loc 1 237 0
  174              		.cfi_startproc
- 238:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 	uint8 maskedStatus = (uint8)(SENSOR_2_sda_INTSTAT & SENSOR_2_sda_MASK);
+ 238:Generated_Source\PSoC4/SENSOR_2_sda.c **** 	uint8 maskedStatus = (uint8)(SENSOR_2_sda_INTSTAT & SENSOR_2_sda_MASK);
  175              		.loc 1 238 0
  176 0000 034A     		ldr	r2, .L17
  177 0002 1068     		ldr	r0, [r2]
  178 0004 0223     		mov	r3, #2
  179 0006 1840     		and	r0, r3
  180              	.LVL9:
- 239:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** 	SENSOR_2_sda_INTSTAT = maskedStatus;
+ 239:Generated_Source\PSoC4/SENSOR_2_sda.c **** 	SENSOR_2_sda_INTSTAT = maskedStatus;
  181              		.loc 1 239 0
  182 0008 1060     		str	r0, [r2]
- 240:.\Generated_Source\PSoC4/SENSOR_2_sda.c ****     return maskedStatus >> SENSOR_2_sda_SHIFT;
+ 240:Generated_Source\PSoC4/SENSOR_2_sda.c ****     return maskedStatus >> SENSOR_2_sda_SHIFT;
  183              		.loc 1 240 0
  184 000a 4008     		lsr	r0, r0, #1
  185              	.LVL10:
  186 000c C0B2     		uxtb	r0, r0
- 241:.\Generated_Source\PSoC4/SENSOR_2_sda.c **** }
+ 241:Generated_Source\PSoC4/SENSOR_2_sda.c **** }
  187              		.loc 1 241 0
  188              		@ sp needed
  189 000e 7047     		bx	lr
@@ -461,7 +461,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  196              		.size	SENSOR_2_sda_ClearInterrupt, .-SENSOR_2_sda_ClearInterrupt
  197              		.text
  198              	.Letext0:
- 199              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 199              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
  200              		.section	.debug_info,"",%progbits
  201              	.Ldebug_info0:
  202 0000 99010000 		.4byte	0x199
@@ -469,48 +469,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  204 0006 00000000 		.4byte	.Ldebug_abbrev0
  205 000a 04       		.byte	0x4
  206 000b 01       		.uleb128 0x1
- 207 000c 5C010000 		.4byte	.LASF28
+ 207 000c 45010000 		.4byte	.LASF28
  208 0010 01       		.byte	0x1
- 209 0011 EA010000 		.4byte	.LASF29
- 210 0015 C4000000 		.4byte	.LASF30
+ 209 0011 00000000 		.4byte	.LASF29
+ 210 0015 01020000 		.4byte	.LASF30
  211 0019 00000000 		.4byte	.Ldebug_ranges0+0
  212 001d 00000000 		.4byte	0
  213 0021 00000000 		.4byte	.Ldebug_line0
  214 0025 02       		.uleb128 0x2
  215 0026 01       		.byte	0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 9
 
 
  216 0027 06       		.byte	0x6
- 217 0028 49020000 		.4byte	.LASF0
+ 217 0028 68020000 		.4byte	.LASF0
  218 002c 02       		.uleb128 0x2
  219 002d 01       		.byte	0x1
  220 002e 08       		.byte	0x8
- 221 002f 4B000000 		.4byte	.LASF1
+ 221 002f 67000000 		.4byte	.LASF1
  222 0033 02       		.uleb128 0x2
  223 0034 02       		.byte	0x2
  224 0035 05       		.byte	0x5
- 225 0036 12020000 		.4byte	.LASF2
+ 225 0036 D3010000 		.4byte	.LASF2
  226 003a 02       		.uleb128 0x2
  227 003b 02       		.byte	0x2
  228 003c 07       		.byte	0x7
- 229 003d 71000000 		.4byte	.LASF3
+ 229 003d 8D000000 		.4byte	.LASF3
  230 0041 02       		.uleb128 0x2
  231 0042 04       		.byte	0x4
  232 0043 05       		.byte	0x5
- 233 0044 40020000 		.4byte	.LASF4
+ 233 0044 3F000000 		.4byte	.LASF4
  234 0048 02       		.uleb128 0x2
  235 0049 04       		.byte	0x4
  236 004a 07       		.byte	0x7
- 237 004b 5F000000 		.4byte	.LASF5
+ 237 004b 7B000000 		.4byte	.LASF5
  238 004f 02       		.uleb128 0x2
  239 0050 08       		.byte	0x8
  240 0051 05       		.byte	0x5
- 241 0052 3C010000 		.4byte	.LASF6
+ 241 0052 25010000 		.4byte	.LASF6
  242 0056 02       		.uleb128 0x2
  243 0057 08       		.byte	0x8
  244 0058 07       		.byte	0x7
- 245 0059 04010000 		.4byte	.LASF7
+ 245 0059 ED000000 		.4byte	.LASF7
  246 005d 03       		.uleb128 0x3
  247 005e 04       		.byte	0x4
  248 005f 05       		.byte	0x5
@@ -518,46 +518,46 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  250 0064 02       		.uleb128 0x2
  251 0065 04       		.byte	0x4
  252 0066 07       		.byte	0x7
- 253 0067 1F000000 		.4byte	.LASF8
+ 253 0067 E0000000 		.4byte	.LASF8
  254 006b 04       		.uleb128 0x4
- 255 006c 1C020000 		.4byte	.LASF9
+ 255 006c DD010000 		.4byte	.LASF9
  256 0070 02       		.byte	0x2
  257 0071 9801     		.2byte	0x198
  258 0073 2C000000 		.4byte	0x2c
  259 0077 04       		.uleb128 0x4
- 260 0078 8B000000 		.4byte	.LASF10
+ 260 0078 A7000000 		.4byte	.LASF10
  261 007c 02       		.byte	0x2
  262 007d 9901     		.2byte	0x199
  263 007f 3A000000 		.4byte	0x3a
  264 0083 04       		.uleb128 0x4
- 265 0084 B5000000 		.4byte	.LASF11
+ 265 0084 D1000000 		.4byte	.LASF11
  266 0088 02       		.byte	0x2
  267 0089 9A01     		.2byte	0x19a
  268 008b 48000000 		.4byte	0x48
  269 008f 02       		.uleb128 0x2
  270 0090 04       		.byte	0x4
  271 0091 04       		.byte	0x4
- 272 0092 45000000 		.4byte	.LASF12
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 10
+ 272 0092 61000000 		.4byte	.LASF12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 10
 
 
  273 0096 02       		.uleb128 0x2
  274 0097 08       		.byte	0x8
  275 0098 04       		.byte	0x4
- 276 0099 84000000 		.4byte	.LASF13
+ 276 0099 A0000000 		.4byte	.LASF13
  277 009d 02       		.uleb128 0x2
  278 009e 01       		.byte	0x1
  279 009f 08       		.byte	0x8
- 280 00a0 57010000 		.4byte	.LASF14
+ 280 00a0 40010000 		.4byte	.LASF14
  281 00a4 04       		.uleb128 0x4
- 282 00a5 00000000 		.4byte	.LASF15
+ 282 00a5 62020000 		.4byte	.LASF15
  283 00a9 02       		.byte	0x2
  284 00aa 4402     		.2byte	0x244
  285 00ac B0000000 		.4byte	0xb0
  286 00b0 05       		.uleb128 0x5
  287 00b1 83000000 		.4byte	0x83
  288 00b5 06       		.uleb128 0x6
- 289 00b6 92000000 		.4byte	.LASF16
+ 289 00b6 AE000000 		.4byte	.LASF16
  290 00ba 01       		.byte	0x1
  291 00bb 48       		.byte	0x48
  292 00bc 00000000 		.4byte	.LFB0
@@ -566,14 +566,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  295 00c5 9C       		.byte	0x9c
  296 00c6 DA000000 		.4byte	0xda
  297 00ca 07       		.uleb128 0x7
- 298 00cb 1B010000 		.4byte	.LASF18
+ 298 00cb 04010000 		.4byte	.LASF18
  299 00cf 01       		.byte	0x1
  300 00d0 48       		.byte	0x48
  301 00d1 6B000000 		.4byte	0x6b
  302 00d5 00000000 		.4byte	.LLST0
  303 00d9 00       		.byte	0
  304 00da 06       		.uleb128 0x6
- 305 00db 06000000 		.4byte	.LASF17
+ 305 00db 26000000 		.4byte	.LASF17
  306 00df 01       		.byte	0x1
  307 00e0 6F       		.byte	0x6f
  308 00e1 00000000 		.4byte	.LFB1
@@ -582,23 +582,23 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  311 00ea 9C       		.byte	0x9c
  312 00eb 0E010000 		.4byte	0x10e
  313 00ef 07       		.uleb128 0x7
- 314 00f0 19000000 		.4byte	.LASF19
+ 314 00f0 39000000 		.4byte	.LASF19
  315 00f4 01       		.byte	0x1
  316 00f5 6F       		.byte	0x6f
  317 00f6 6B000000 		.4byte	0x6b
  318 00fa 21000000 		.4byte	.LLST1
  319 00fe 08       		.uleb128 0x8
- 320 00ff 59000000 		.4byte	.LASF24
+ 320 00ff 75000000 		.4byte	.LASF24
  321 0103 01       		.byte	0x1
  322 0104 71       		.byte	0x71
  323 0105 6B000000 		.4byte	0x6b
  324 0109 42000000 		.4byte	.LLST2
  325 010d 00       		.byte	0
  326 010e 09       		.uleb128 0x9
- 327 010f 55020000 		.4byte	.LASF20
+ 327 010f 74020000 		.4byte	.LASF20
  328 0113 01       		.byte	0x1
  329 0114 88       		.byte	0x88
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 11
 
 
  330 0115 6B000000 		.4byte	0x6b
@@ -607,7 +607,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  333 0121 01       		.uleb128 0x1
  334 0122 9C       		.byte	0x9c
  335 0123 09       		.uleb128 0x9
- 336 0124 2C000000 		.4byte	.LASF21
+ 336 0124 48000000 		.4byte	.LASF21
  337 0128 01       		.byte	0x1
  338 0129 A4       		.byte	0xa4
  339 012a 6B000000 		.4byte	0x6b
@@ -616,7 +616,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  342 0136 01       		.uleb128 0x1
  343 0137 9C       		.byte	0x9c
  344 0138 06       		.uleb128 0x6
- 345 0139 22020000 		.4byte	.LASF22
+ 345 0139 E3010000 		.4byte	.LASF22
  346 013d 01       		.byte	0x1
  347 013e CF       		.byte	0xcf
  348 013f 00000000 		.4byte	.LFB4
@@ -625,20 +625,20 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  351 0148 9C       		.byte	0x9c
  352 0149 77010000 		.4byte	0x177
  353 014d 0A       		.uleb128 0xa
- 354 014e AC000000 		.4byte	.LASF23
+ 354 014e C8000000 		.4byte	.LASF23
  355 0152 01       		.byte	0x1
  356 0153 CF       		.byte	0xcf
  357 0154 77000000 		.4byte	0x77
  358 0158 01       		.uleb128 0x1
  359 0159 50       		.byte	0x50
  360 015a 07       		.uleb128 0x7
- 361 015b 1B010000 		.4byte	.LASF18
+ 361 015b 04010000 		.4byte	.LASF18
  362 015f 01       		.byte	0x1
  363 0160 CF       		.byte	0xcf
  364 0161 77000000 		.4byte	0x77
  365 0165 60000000 		.4byte	.LLST3
  366 0169 0B       		.uleb128 0xb
- 367 016a BC000000 		.4byte	.LASF25
+ 367 016a D8000000 		.4byte	.LASF25
  368 016e 01       		.byte	0x1
  369 016f D1       		.byte	0xd1
  370 0170 83000000 		.4byte	0x83
@@ -646,7 +646,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  372 0175 53       		.byte	0x53
  373 0176 00       		.byte	0
  374 0177 0C       		.uleb128 0xc
- 375 0178 20010000 		.4byte	.LASF26
+ 375 0178 09010000 		.4byte	.LASF26
  376 017c 01       		.byte	0x1
  377 017d EC       		.byte	0xec
  378 017e 6B000000 		.4byte	0x6b
@@ -655,10 +655,10 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  381 018a 01       		.uleb128 0x1
  382 018b 9C       		.byte	0x9c
  383 018c 08       		.uleb128 0x8
- 384 018d 4A010000 		.4byte	.LASF27
+ 384 018d 33010000 		.4byte	.LASF27
  385 0191 01       		.byte	0x1
  386 0192 EE       		.byte	0xee
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 12
 
 
  387 0193 6B000000 		.4byte	0x6b
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  441 0030 3B       		.uleb128 0x3b
  442 0031 05       		.uleb128 0x5
  443 0032 49       		.uleb128 0x49
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 13
 
 
  444 0033 13       		.uleb128 0x13
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  498 006a 0E       		.uleb128 0xe
  499 006b 3A       		.uleb128 0x3a
  500 006c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 14
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 14
 
 
  501 006d 3B       		.uleb128 0x3b
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  555 00a4 0B       		.uleb128 0xb
  556 00a5 3B       		.uleb128 0x3b
  557 00a6 0B       		.uleb128 0xb
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 15
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 15
 
 
  558 00a7 49       		.uleb128 0x49
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  612 0030 18000000 		.4byte	.LFE1
  613 0034 0400     		.2byte	0x4
  614 0036 F3       		.byte	0xf3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 16
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 16
 
 
  615 0037 01       		.uleb128 0x1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  669 0018 00000000 		.4byte	.LFB1
  670 001c 18000000 		.4byte	.LFE1-.LFB1
  671 0020 00000000 		.4byte	.LFB2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 17
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 17
 
 
  672 0024 10000000 		.4byte	.LFE2-.LFB2
@@ -988,174 +988,175 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 1
  696 0034 00000000 		.4byte	0
  697              		.section	.debug_line,"",%progbits
  698              	.Ldebug_line0:
- 699 0000 C2000000 		.section	.debug_str,"MS",%progbits,1
- 699      02004B00 
+ 699 0000 C0000000 		.section	.debug_str,"MS",%progbits,1
+ 699      02004900 
  699      00000201 
  699      FB0E0D00 
  699      01010101 
- 700              	.LASF15:
- 701 0000 72656733 		.ascii	"reg32\000"
- 701      3200
+ 700              	.LASF29:
+ 701 0000 47656E65 		.ascii	"Generated_Source\\PSoC4\\SENSOR_2_sda.c\000"
+ 701      72617465 
+ 701      645F536F 
+ 701      75726365 
+ 701      5C50536F 
  702              	.LASF17:
- 703 0006 53454E53 		.ascii	"SENSOR_2_sda_Write\000"
+ 703 0026 53454E53 		.ascii	"SENSOR_2_sda_Write\000"
  703      4F525F32 
  703      5F736461 
  703      5F577269 
  703      746500
  704              	.LASF19:
- 705 0019 76616C75 		.ascii	"value\000"
+ 705 0039 76616C75 		.ascii	"value\000"
  705      6500
- 706              	.LASF8:
- 707 001f 756E7369 		.ascii	"unsigned int\000"
- 707      676E6564 
+ 706              	.LASF4:
+ 707 003f 6C6F6E67 		.ascii	"long int\000"
  707      20696E74 
  707      00
  708              	.LASF21:
- 709 002c 53454E53 		.ascii	"SENSOR_2_sda_ReadDataReg\000"
+ 709 0048 53454E53 		.ascii	"SENSOR_2_sda_ReadDataReg\000"
  709      4F525F32 
  709      5F736461 
  709      5F526561 
  709      64446174 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 18
+
+
  710              	.LASF12:
- 711 0045 666C6F61 		.ascii	"float\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 18
-
-
+ 711 0061 666C6F61 		.ascii	"float\000"
  711      7400
  712              	.LASF1:
- 713 004b 756E7369 		.ascii	"unsigned char\000"
+ 713 0067 756E7369 		.ascii	"unsigned char\000"
  713      676E6564 
  713      20636861 
  713      7200
  714              	.LASF24:
- 715 0059 64725661 		.ascii	"drVal\000"
+ 715 0075 64725661 		.ascii	"drVal\000"
  715      6C00
  716              	.LASF5:
- 717 005f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 717 007b 6C6F6E67 		.ascii	"long unsigned int\000"
  717      20756E73 
  717      69676E65 
  717      6420696E 
  717      7400
  718              	.LASF3:
- 719 0071 73686F72 		.ascii	"short unsigned int\000"
+ 719 008d 73686F72 		.ascii	"short unsigned int\000"
  719      7420756E 
  719      7369676E 
  719      65642069 
  719      6E7400
  720              	.LASF13:
- 721 0084 646F7562 		.ascii	"double\000"
+ 721 00a0 646F7562 		.ascii	"double\000"
  721      6C6500
  722              	.LASF10:
- 723 008b 75696E74 		.ascii	"uint16\000"
+ 723 00a7 75696E74 		.ascii	"uint16\000"
  723      313600
  724              	.LASF16:
- 725 0092 53454E53 		.ascii	"SENSOR_2_sda_SetDriveMode\000"
+ 725 00ae 53454E53 		.ascii	"SENSOR_2_sda_SetDriveMode\000"
  725      4F525F32 
  725      5F736461 
  725      5F536574 
  725      44726976 
  726              	.LASF23:
- 727 00ac 706F7369 		.ascii	"position\000"
+ 727 00c8 706F7369 		.ascii	"position\000"
  727      74696F6E 
  727      00
  728              	.LASF11:
- 729 00b5 75696E74 		.ascii	"uint32\000"
+ 729 00d1 75696E74 		.ascii	"uint32\000"
  729      333200
  730              	.LASF25:
- 731 00bc 696E7472 		.ascii	"intrCfg\000"
+ 731 00d8 696E7472 		.ascii	"intrCfg\000"
  731      43666700 
- 732              	.LASF30:
- 733 00c4 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\Test_Robot\\Test"
- 733      73657273 
- 733      5C48656E 
- 733      72792041 
- 733      6C626572 
- 734 00f2 5F416C6C 		.ascii	"_All_Sensor.cydsn\000"
- 734      5F53656E 
- 734      736F722E 
- 734      63796473 
- 734      6E00
- 735              	.LASF7:
- 736 0104 6C6F6E67 		.ascii	"long long unsigned int\000"
- 736      206C6F6E 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 19
+ 732              	.LASF8:
+ 733 00e0 756E7369 		.ascii	"unsigned int\000"
+ 733      676E6564 
+ 733      20696E74 
+ 733      00
+ 734              	.LASF7:
+ 735 00ed 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 735      206C6F6E 
+ 735      6720756E 
+ 735      7369676E 
+ 735      65642069 
+ 736              	.LASF18:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 19
 
 
- 736      6720756E 
- 736      7369676E 
- 736      65642069 
- 737              	.LASF18:
- 738 011b 6D6F6465 		.ascii	"mode\000"
- 738      00
- 739              	.LASF26:
- 740 0120 53454E53 		.ascii	"SENSOR_2_sda_ClearInterrupt\000"
- 740      4F525F32 
- 740      5F736461 
- 740      5F436C65 
- 740      6172496E 
- 741              	.LASF6:
- 742 013c 6C6F6E67 		.ascii	"long long int\000"
- 742      206C6F6E 
- 742      6720696E 
- 742      7400
- 743              	.LASF27:
- 744 014a 6D61736B 		.ascii	"maskedStatus\000"
- 744      65645374 
- 744      61747573 
- 744      00
- 745              	.LASF14:
- 746 0157 63686172 		.ascii	"char\000"
- 746      00
- 747              	.LASF28:
- 748 015c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 748      4320342E 
- 748      392E3320 
- 748      32303135 
- 748      30333033 
- 749 018f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 749      20726576 
- 749      6973696F 
- 749      6E203232 
- 749      31323230 
- 750 01c2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 750      66756E63 
- 750      74696F6E 
- 750      2D736563 
- 750      74696F6E 
- 751              	.LASF29:
- 752 01ea 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\SENSOR_2_sda.c\000"
- 752      6E657261 
- 752      7465645F 
- 752      536F7572 
- 752      63655C50 
- 753              	.LASF2:
- 754 0212 73686F72 		.ascii	"short int\000"
- 754      7420696E 
- 754      7400
- 755              	.LASF9:
- 756 021c 75696E74 		.ascii	"uint8\000"
- 756      3800
- 757              	.LASF22:
- 758 0222 53454E53 		.ascii	"SENSOR_2_sda_SetInterruptMode\000"
- 758      4F525F32 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccFB84XE.s 			page 20
+ 737 0104 6D6F6465 		.ascii	"mode\000"
+ 737      00
+ 738              	.LASF26:
+ 739 0109 53454E53 		.ascii	"SENSOR_2_sda_ClearInterrupt\000"
+ 739      4F525F32 
+ 739      5F736461 
+ 739      5F436C65 
+ 739      6172496E 
+ 740              	.LASF6:
+ 741 0125 6C6F6E67 		.ascii	"long long int\000"
+ 741      206C6F6E 
+ 741      6720696E 
+ 741      7400
+ 742              	.LASF27:
+ 743 0133 6D61736B 		.ascii	"maskedStatus\000"
+ 743      65645374 
+ 743      61747573 
+ 743      00
+ 744              	.LASF14:
+ 745 0140 63686172 		.ascii	"char\000"
+ 745      00
+ 746              	.LASF28:
+ 747 0145 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 747      4320342E 
+ 747      392E3320 
+ 747      32303135 
+ 747      30333033 
+ 748 0178 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 748      20726576 
+ 748      6973696F 
+ 748      6E203232 
+ 748      31323230 
+ 749 01ab 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 749      66756E63 
+ 749      74696F6E 
+ 749      2D736563 
+ 749      74696F6E 
+ 750              	.LASF2:
+ 751 01d3 73686F72 		.ascii	"short int\000"
+ 751      7420696E 
+ 751      7400
+ 752              	.LASF9:
+ 753 01dd 75696E74 		.ascii	"uint8\000"
+ 753      3800
+ 754              	.LASF22:
+ 755 01e3 53454E53 		.ascii	"SENSOR_2_sda_SetInterruptMode\000"
+ 755      4F525F32 
+ 755      5F736461 
+ 755      5F536574 
+ 755      496E7465 
+ 756              	.LASF30:
+ 757 0201 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 757      73657273 
+ 757      5C48656E 
+ 757      72792041 
+ 757      6C626572 
+ 758 022f 6F64756C 		.ascii	"odular\\Robot_Test\\Test_Robot\\Test_All_Sensor.cyd"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccSwe2gi.s 			page 20
 
 
- 758      5F736461 
- 758      5F536574 
- 758      496E7465 
- 759              	.LASF4:
- 760 0240 6C6F6E67 		.ascii	"long int\000"
- 760      20696E74 
- 760      00
- 761              	.LASF0:
- 762 0249 7369676E 		.ascii	"signed char\000"
- 762      65642063 
- 762      68617200 
- 763              	.LASF20:
- 764 0255 53454E53 		.ascii	"SENSOR_2_sda_Read\000"
- 764      4F525F32 
- 764      5F736461 
- 764      5F526561 
- 764      6400
- 765              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 758      61725C52 
+ 758      6F626F74 
+ 758      5F546573 
+ 758      745C5465 
+ 759 025f 736E00   		.ascii	"sn\000"
+ 760              	.LASF15:
+ 761 0262 72656733 		.ascii	"reg32\000"
+ 761      3200
+ 762              	.LASF0:
+ 763 0268 7369676E 		.ascii	"signed char\000"
+ 763      65642063 
+ 763      68617200 
+ 764              	.LASF20:
+ 765 0274 53454E53 		.ascii	"SENSOR_2_sda_Read\000"
+ 765      4F525F32 
+ 765      5F736461 
+ 765      5F526561 
+ 765      6400
+ 766              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

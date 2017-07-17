@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,79 +25,79 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
   22              		.type	SENSOR_3_SCBCLK_StartEx, %function
   23              	SENSOR_3_SCBCLK_StartEx:
   24              	.LFB0:
-  25              		.file 1 ".\\Generated_Source\\PSoC4\\SENSOR_3_SCBCLK.c"
-   1:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * File Name: SENSOR_3_SCBCLK.c
-   3:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Version 2.20
-   4:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-   5:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Description:
-   6:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *   Provides system API for the clocking, interrupts and watchdog timer.
-   7:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-   8:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Note:
-   9:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *   Documentation of the API's in this file is located in the
-  10:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *   System Reference Guide provided with PSoC Creator.
-  11:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  12:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
-  13:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
-  14:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * You may use this file only in accordance with the license, terms, conditions,
-  15:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  16:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * the software package with which this file was provided.
-  17:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
-  18:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
-  19:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #include <cydevice_trm.h>
-  20:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #include "SENSOR_3_SCBCLK.h"
-  21:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
-  22:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #if defined CYREG_PERI_DIV_CMD
-  23:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
-  24:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
-  25:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_StartEx
-  26:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
-  27:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  28:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
-  29:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Starts the clock, aligned to the specified running clock.
-  30:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  31:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
-  32:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 2
+  25              		.file 1 "Generated_Source\\PSoC4\\SENSOR_3_SCBCLK.c"
+   1:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * File Name: SENSOR_3_SCBCLK.c
+   3:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Version 2.20
+   4:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+   5:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Description:
+   6:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *   Provides system API for the clocking, interrupts and watchdog timer.
+   7:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+   8:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Note:
+   9:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *   Documentation of the API's in this file is located in the
+  10:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *   System Reference Guide provided with PSoC Creator.
+  11:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  12:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
+  13:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
+  18:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+  19:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #include <cydevice_trm.h>
+  20:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #include "SENSOR_3_SCBCLK.h"
+  21:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+  22:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #if defined CYREG_PERI_DIV_CMD
+  23:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+  24:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
+  25:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_StartEx
+  26:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
+  27:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  28:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
+  29:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Starts the clock, aligned to the specified running clock.
+  30:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  31:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
+  32:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 2
 
 
-  33:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *    clock is started.
-  34:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  35:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
-  36:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
-  37:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  38:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
-  39:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** void SENSOR_3_SCBCLK_StartEx(uint32 alignClkDiv)
-  40:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
+  33:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *    clock is started.
+  34:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  35:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
+  36:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
+  37:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  38:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
+  39:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** void SENSOR_3_SCBCLK_StartEx(uint32 alignClkDiv)
+  40:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
   26              		.loc 1 40 0
   27              		.cfi_startproc
   28              	.LVL0:
   29              	.L2:
-  41:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Make sure any previous start command has finished. */
-  42:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     while((SENSOR_3_SCBCLK_CMD_REG & SENSOR_3_SCBCLK_CMD_ENABLE_MASK) != 0u)
+  41:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Make sure any previous start command has finished. */
+  42:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     while((SENSOR_3_SCBCLK_CMD_REG & SENSOR_3_SCBCLK_CMD_ENABLE_MASK) != 0u)
   30              		.loc 1 42 0 discriminator 1
   31 0000 044B     		ldr	r3, .L3
   32 0002 1B68     		ldr	r3, [r3]
   33 0004 002B     		cmp	r3, #0
   34 0006 FBDB     		blt	.L2
-  43:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     {
-  44:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     }
-  45:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
-  46:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Specify the target divider and it's alignment divider, and enable. */
-  47:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     SENSOR_3_SCBCLK_CMD_REG =
-  48:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)SENSOR_3_SCBCLK__DIV_ID << SENSOR_3_SCBCLK_CMD_DIV_SHIFT)|
-  49:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         (alignClkDiv << SENSOR_3_SCBCLK_CMD_PA_DIV_SHIFT) |
+  43:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     {
+  44:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     }
+  45:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
+  46:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Specify the target divider and it's alignment divider, and enable. */
+  47:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     SENSOR_3_SCBCLK_CMD_REG =
+  48:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)SENSOR_3_SCBCLK__DIV_ID << SENSOR_3_SCBCLK_CMD_DIV_SHIFT)|
+  49:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         (alignClkDiv << SENSOR_3_SCBCLK_CMD_PA_DIV_SHIFT) |
   35              		.loc 1 49 0
   36 0008 0002     		lsl	r0, r0, #8
   37              	.LVL1:
   38 000a 034B     		ldr	r3, .L3+4
   39 000c 1843     		orr	r0, r3
-  47:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)SENSOR_3_SCBCLK__DIV_ID << SENSOR_3_SCBCLK_CMD_DIV_SHIFT)|
+  47:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)SENSOR_3_SCBCLK__DIV_ID << SENSOR_3_SCBCLK_CMD_DIV_SHIFT)|
   40              		.loc 1 47 0
   41 000e 014B     		ldr	r3, .L3
   42 0010 1860     		str	r0, [r3]
-  50:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         (uint32)SENSOR_3_SCBCLK_CMD_ENABLE_MASK;
-  51:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
+  50:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         (uint32)SENSOR_3_SCBCLK_CMD_ENABLE_MASK;
+  51:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
   43              		.loc 1 51 0
   44              		@ sp needed
   45 0012 7047     		bx	lr
@@ -117,88 +117,88 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
   59              		.type	SENSOR_3_SCBCLK_Stop, %function
   60              	SENSOR_3_SCBCLK_Stop:
   61              	.LFB1:
-  52:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 3
+  52:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 3
 
 
-  53:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #else
-  54:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
-  55:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
-  56:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_Start
-  57:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
-  58:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  59:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
-  60:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Starts the clock.
-  61:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  62:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
-  63:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
-  64:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  65:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
-  66:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
-  67:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  68:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
-  69:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
-  70:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** void SENSOR_3_SCBCLK_Start(void)
-  71:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
-  72:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Set the bit to enable the clock. */
-  73:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     SENSOR_3_SCBCLK_ENABLE_REG |= SENSOR_3_SCBCLK__ENABLE_MASK;
-  74:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
-  75:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
-  76:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #endif /* CYREG_PERI_DIV_CMD */
-  77:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
-  78:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
-  79:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
-  80:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_Stop
-  81:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
-  82:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  83:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
-  84:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Stops the clock and returns immediately. This API does not require the
-  85:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  source clock to be running but may return before the hardware is actually
-  86:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  disabled.
-  87:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  88:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
-  89:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
-  90:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  91:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
-  92:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
-  93:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
-  94:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
-  95:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** void SENSOR_3_SCBCLK_Stop(void)
-  96:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
+  53:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #else
+  54:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+  55:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
+  56:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_Start
+  57:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
+  58:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  59:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
+  60:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Starts the clock.
+  61:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  62:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
+  63:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
+  64:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  65:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
+  66:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
+  67:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  68:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
+  69:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+  70:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** void SENSOR_3_SCBCLK_Start(void)
+  71:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
+  72:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Set the bit to enable the clock. */
+  73:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     SENSOR_3_SCBCLK_ENABLE_REG |= SENSOR_3_SCBCLK__ENABLE_MASK;
+  74:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
+  75:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+  76:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #endif /* CYREG_PERI_DIV_CMD */
+  77:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+  78:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+  79:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
+  80:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_Stop
+  81:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
+  82:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  83:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
+  84:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Stops the clock and returns immediately. This API does not require the
+  85:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  source clock to be running but may return before the hardware is actually
+  86:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  disabled.
+  87:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  88:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
+  89:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
+  90:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  91:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
+  92:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
+  93:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+  94:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
+  95:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** void SENSOR_3_SCBCLK_Stop(void)
+  96:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
   62              		.loc 1 96 0
   63              		.cfi_startproc
   64              	.L6:
-  97:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #if defined CYREG_PERI_DIV_CMD
-  98:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
-  99:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Make sure any previous start command has finished. */
- 100:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     while((SENSOR_3_SCBCLK_CMD_REG & SENSOR_3_SCBCLK_CMD_ENABLE_MASK) != 0u)
+  97:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #if defined CYREG_PERI_DIV_CMD
+  98:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+  99:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Make sure any previous start command has finished. */
+ 100:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     while((SENSOR_3_SCBCLK_CMD_REG & SENSOR_3_SCBCLK_CMD_ENABLE_MASK) != 0u)
   65              		.loc 1 100 0 discriminator 1
   66 0000 034B     		ldr	r3, .L7
   67 0002 1B68     		ldr	r3, [r3]
   68 0004 002B     		cmp	r3, #0
   69 0006 FBDB     		blt	.L6
- 101:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     {
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 4
+ 101:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     {
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 4
 
 
- 102:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     }
- 103:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
- 104:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Specify the target divider and it's alignment divider, and disable. */
- 105:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     SENSOR_3_SCBCLK_CMD_REG =
+ 102:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     }
+ 103:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
+ 104:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Specify the target divider and it's alignment divider, and disable. */
+ 105:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     SENSOR_3_SCBCLK_CMD_REG =
   70              		.loc 1 105 0
   71 0008 024A     		ldr	r2, .L7+4
   72 000a 014B     		ldr	r3, .L7
   73 000c 1A60     		str	r2, [r3]
- 106:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)SENSOR_3_SCBCLK__DIV_ID << SENSOR_3_SCBCLK_CMD_DIV_SHIFT)|
- 107:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)SENSOR_3_SCBCLK_CMD_DISABLE_MASK);
- 108:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
- 109:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #else
- 110:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
- 111:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Clear the bit to disable the clock. */
- 112:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     SENSOR_3_SCBCLK_ENABLE_REG &= (uint32)(~SENSOR_3_SCBCLK__ENABLE_MASK);
- 113:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
- 114:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #endif /* CYREG_PERI_DIV_CMD */
- 115:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
+ 106:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)SENSOR_3_SCBCLK__DIV_ID << SENSOR_3_SCBCLK_CMD_DIV_SHIFT)|
+ 107:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)SENSOR_3_SCBCLK_CMD_DISABLE_MASK);
+ 108:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+ 109:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #else
+ 110:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+ 111:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* Clear the bit to disable the clock. */
+ 112:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     SENSOR_3_SCBCLK_ENABLE_REG &= (uint32)(~SENSOR_3_SCBCLK__ENABLE_MASK);
+ 113:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
+ 114:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #endif /* CYREG_PERI_DIV_CMD */
+ 115:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
   74              		.loc 1 115 0
   75              		@ sp needed
   76 000e 7047     		bx	lr
@@ -218,27 +218,27 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
   90              		.type	SENSOR_3_SCBCLK_SetFractionalDividerRegister, %function
   91              	SENSOR_3_SCBCLK_SetFractionalDividerRegister:
   92              	.LFB2:
- 116:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
- 117:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
- 118:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
- 119:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_SetFractionalDividerRegister
- 120:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
- 121:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 122:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
- 123:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Modifies the clock divider and the fractional divider.
- 124:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 125:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
- 126:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  clkDivider:  Divider register value (0-65535). This value is NOT the
- 127:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *    divider; the clock hardware divides by clkDivider plus one. For example,
- 128:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *    to divide the clock by 2, this parameter should be set to 1.
- 129:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  fracDivider:  Fractional Divider register value (0-31).
- 130:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
- 131:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
- 132:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 133:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
- 134:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** void SENSOR_3_SCBCLK_SetFractionalDividerRegister(uint16 clkDivider, uint8 clkFractional)
- 135:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 5
+ 116:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+ 117:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+ 118:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
+ 119:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_SetFractionalDividerRegister
+ 120:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
+ 121:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 122:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
+ 123:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Modifies the clock divider and the fractional divider.
+ 124:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 125:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
+ 126:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  clkDivider:  Divider register value (0-65535). This value is NOT the
+ 127:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *    divider; the clock hardware divides by clkDivider plus one. For example,
+ 128:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *    to divide the clock by 2, this parameter should be set to 1.
+ 129:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  fracDivider:  Fractional Divider register value (0-31).
+ 130:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
+ 131:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
+ 132:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 133:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
+ 134:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** void SENSOR_3_SCBCLK_SetFractionalDividerRegister(uint16 clkDivider, uint8 clkFractional)
+ 135:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 5
 
 
   93              		.loc 1 135 0
@@ -248,57 +248,57 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
   97              		.cfi_def_cfa_offset 8
   98              		.cfi_offset 4, -8
   99              		.cfi_offset 14, -4
- 136:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     uint32 maskVal;
- 137:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     uint32 regVal;
- 138:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
- 139:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #if defined (SENSOR_3_SCBCLK__FRAC_MASK) || defined (CYREG_PERI_DIV_CMD)
- 140:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
- 141:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 	/* get all but divider bits */
- 142:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     maskVal = SENSOR_3_SCBCLK_DIV_REG & 
+ 136:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     uint32 maskVal;
+ 137:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     uint32 regVal;
+ 138:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
+ 139:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #if defined (SENSOR_3_SCBCLK__FRAC_MASK) || defined (CYREG_PERI_DIV_CMD)
+ 140:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
+ 141:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 	/* get all but divider bits */
+ 142:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     maskVal = SENSOR_3_SCBCLK_DIV_REG & 
  100              		.loc 1 142 0
  101 0002 064A     		ldr	r2, .L10
  102 0004 1368     		ldr	r3, [r2]
  103 0006 0724     		mov	r4, #7
  104 0008 2340     		and	r3, r4
  105              	.LVL3:
- 143:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****                     (uint32)(~(uint32)(SENSOR_3_SCBCLK_DIV_INT_MASK | SENSOR_3_SCBCLK_DIV_FRAC_MASK
- 144:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 	/* combine mask and new divider vals into 32-bit value */
- 145:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     regVal = maskVal |
- 146:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)((uint32)clkDivider <<  SENSOR_3_SCBCLK_DIV_INT_SHIFT) & SENSOR_3_SCBCLK_DIV_INT_M
+ 143:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****                     (uint32)(~(uint32)(SENSOR_3_SCBCLK_DIV_INT_MASK | SENSOR_3_SCBCLK_DIV_FRAC_MASK
+ 144:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 	/* combine mask and new divider vals into 32-bit value */
+ 145:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     regVal = maskVal |
+ 146:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)((uint32)clkDivider <<  SENSOR_3_SCBCLK_DIV_INT_SHIFT) & SENSOR_3_SCBCLK_DIV_INT_M
  106              		.loc 1 146 0
  107 000a 0002     		lsl	r0, r0, #8
  108              	.LVL4:
- 145:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)((uint32)clkDivider <<  SENSOR_3_SCBCLK_DIV_INT_SHIFT) & SENSOR_3_SCBCLK_DIV_INT_M
+ 145:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)((uint32)clkDivider <<  SENSOR_3_SCBCLK_DIV_INT_SHIFT) & SENSOR_3_SCBCLK_DIV_INT_M
  109              		.loc 1 145 0
  110 000c 1843     		orr	r0, r3
- 147:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)((uint32)clkFractional << SENSOR_3_SCBCLK_DIV_FRAC_SHIFT) & SENSOR_3_SCBCLK_DIV_FR
+ 147:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)((uint32)clkFractional << SENSOR_3_SCBCLK_DIV_FRAC_SHIFT) & SENSOR_3_SCBCLK_DIV_FR
  111              		.loc 1 147 0
  112 000e CB00     		lsl	r3, r1, #3
  113              	.LVL5:
  114 0010 FF21     		mov	r1, #255
  115              	.LVL6:
  116 0012 1940     		and	r1, r3
- 145:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)((uint32)clkDivider <<  SENSOR_3_SCBCLK_DIV_INT_SHIFT) & SENSOR_3_SCBCLK_DIV_INT_M
+ 145:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         ((uint32)((uint32)clkDivider <<  SENSOR_3_SCBCLK_DIV_INT_SHIFT) & SENSOR_3_SCBCLK_DIV_INT_M
  117              		.loc 1 145 0
  118 0014 0143     		orr	r1, r0
  119              	.LVL7:
- 148:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
- 149:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #else
- 150:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* get all but integer divider bits */
- 151:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     maskVal = SENSOR_3_SCBCLK_DIV_REG & (uint32)(~(uint32)SENSOR_3_SCBCLK__DIVIDER_MASK);
- 152:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* combine mask and new divider val into 32-bit value */
- 153:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     regVal = clkDivider | maskVal;
- 154:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
- 155:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #endif /* SENSOR_3_SCBCLK__FRAC_MASK || CYREG_PERI_DIV_CMD */
- 156:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
- 157:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     SENSOR_3_SCBCLK_DIV_REG = regVal;
+ 148:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
+ 149:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #else
+ 150:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* get all but integer divider bits */
+ 151:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     maskVal = SENSOR_3_SCBCLK_DIV_REG & (uint32)(~(uint32)SENSOR_3_SCBCLK__DIVIDER_MASK);
+ 152:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* combine mask and new divider val into 32-bit value */
+ 153:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     regVal = clkDivider | maskVal;
+ 154:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     
+ 155:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #endif /* SENSOR_3_SCBCLK__FRAC_MASK || CYREG_PERI_DIV_CMD */
+ 156:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+ 157:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     SENSOR_3_SCBCLK_DIV_REG = regVal;
  120              		.loc 1 157 0
  121 0016 1160     		str	r1, [r2]
- 158:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
+ 158:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
  122              		.loc 1 158 0
  123              		@ sp needed
  124 0018 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 6
 
 
  125              	.L11:
@@ -316,38 +316,38 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  137              		.type	SENSOR_3_SCBCLK_GetDividerRegister, %function
  138              	SENSOR_3_SCBCLK_GetDividerRegister:
  139              	.LFB3:
- 159:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
- 160:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
- 161:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
- 162:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_GetDividerRegister
- 163:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
- 164:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 165:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
- 166:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Gets the clock divider register value.
- 167:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 168:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
- 169:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
- 170:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 171:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
- 172:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Divide value of the clock minus 1. For example, if the clock is set to
- 173:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  divide by 2, the return value will be 1.
- 174:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 175:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
- 176:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** uint16 SENSOR_3_SCBCLK_GetDividerRegister(void)
- 177:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
+ 159:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+ 160:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+ 161:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
+ 162:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_GetDividerRegister
+ 163:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
+ 164:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 165:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
+ 166:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Gets the clock divider register value.
+ 167:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 168:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
+ 169:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
+ 170:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 171:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
+ 172:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Divide value of the clock minus 1. For example, if the clock is set to
+ 173:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  divide by 2, the return value will be 1.
+ 174:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 175:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
+ 176:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** uint16 SENSOR_3_SCBCLK_GetDividerRegister(void)
+ 177:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
  140              		.loc 1 177 0
  141              		.cfi_startproc
- 178:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     return (uint16)((SENSOR_3_SCBCLK_DIV_REG & SENSOR_3_SCBCLK_DIV_INT_MASK)
+ 178:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     return (uint16)((SENSOR_3_SCBCLK_DIV_REG & SENSOR_3_SCBCLK_DIV_INT_MASK)
  142              		.loc 1 178 0
  143 0000 024B     		ldr	r3, .L13
  144 0002 1868     		ldr	r0, [r3]
- 179:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         >> SENSOR_3_SCBCLK_DIV_INT_SHIFT);
+ 179:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         >> SENSOR_3_SCBCLK_DIV_INT_SHIFT);
  145              		.loc 1 179 0
  146 0004 000A     		lsr	r0, r0, #8
- 178:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     return (uint16)((SENSOR_3_SCBCLK_DIV_REG & SENSOR_3_SCBCLK_DIV_INT_MASK)
+ 178:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     return (uint16)((SENSOR_3_SCBCLK_DIV_REG & SENSOR_3_SCBCLK_DIV_INT_MASK)
  147              		.loc 1 178 0
  148 0006 80B2     		uxth	r0, r0
- 180:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
+ 180:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
  149              		.loc 1 180 0
  150              		@ sp needed
  151 0008 7047     		bx	lr
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  156              		.cfi_endproc
  157              	.LFE3:
  158              		.size	SENSOR_3_SCBCLK_GetDividerRegister, .-SENSOR_3_SCBCLK_GetDividerRegister
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 7
 
 
  159              		.section	.text.SENSOR_3_SCBCLK_GetFractionalDividerRegister,"ax",%progbits
@@ -369,35 +369,35 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  164              		.type	SENSOR_3_SCBCLK_GetFractionalDividerRegister, %function
  165              	SENSOR_3_SCBCLK_GetFractionalDividerRegister:
  166              	.LFB4:
- 181:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
- 182:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
- 183:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
- 184:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_GetFractionalDividerRegister
- 185:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
- 186:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 187:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
- 188:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Gets the clock fractional divider register value.
- 189:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 190:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
- 191:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
- 192:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 193:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
- 194:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Fractional Divide value of the clock
- 195:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  0 if the fractional divider is not in use.
- 196:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
- 197:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
- 198:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** uint8 SENSOR_3_SCBCLK_GetFractionalDividerRegister(void)
- 199:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
+ 181:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+ 182:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** 
+ 183:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** /*******************************************************************************
+ 184:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Function Name: SENSOR_3_SCBCLK_GetFractionalDividerRegister
+ 185:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** ********************************************************************************
+ 186:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 187:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Summary:
+ 188:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Gets the clock fractional divider register value.
+ 189:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 190:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Parameters:
+ 191:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  None
+ 192:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 193:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** * Returns:
+ 194:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  Fractional Divide value of the clock
+ 195:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *  0 if the fractional divider is not in use.
+ 196:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *
+ 197:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** *******************************************************************************/
+ 198:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** uint8 SENSOR_3_SCBCLK_GetFractionalDividerRegister(void)
+ 199:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** {
  167              		.loc 1 199 0
  168              		.cfi_startproc
- 200:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #if defined (SENSOR_3_SCBCLK__FRAC_MASK)
- 201:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* return fractional divider bits */
- 202:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     return (uint8)((SENSOR_3_SCBCLK_DIV_REG & SENSOR_3_SCBCLK_DIV_FRAC_MASK)
- 203:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         >> SENSOR_3_SCBCLK_DIV_FRAC_SHIFT);
- 204:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #else
- 205:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     return 0u;
- 206:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #endif /* SENSOR_3_SCBCLK__FRAC_MASK */
- 207:.\Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
+ 200:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #if defined (SENSOR_3_SCBCLK__FRAC_MASK)
+ 201:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     /* return fractional divider bits */
+ 202:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     return (uint8)((SENSOR_3_SCBCLK_DIV_REG & SENSOR_3_SCBCLK_DIV_FRAC_MASK)
+ 203:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****         >> SENSOR_3_SCBCLK_DIV_FRAC_SHIFT);
+ 204:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #else
+ 205:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c ****     return 0u;
+ 206:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** #endif /* SENSOR_3_SCBCLK__FRAC_MASK */
+ 207:Generated_Source\PSoC4/SENSOR_3_SCBCLK.c **** }
  169              		.loc 1 207 0
  170 0000 0020     		mov	r0, #0
  171              		@ sp needed
@@ -415,48 +415,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  183 0006 00000000 		.4byte	.Ldebug_abbrev0
  184 000a 04       		.byte	0x4
  185 000b 01       		.uleb128 0x1
- 186 000c BC010000 		.4byte	.LASF25
+ 186 000c 83010000 		.4byte	.LASF25
  187 0010 01       		.byte	0x1
- 188 0011 5B010000 		.4byte	.LASF26
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 8
+ 188 0011 E0000000 		.4byte	.LASF26
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 8
 
 
- 189 0015 D7000000 		.4byte	.LASF27
+ 189 0015 39020000 		.4byte	.LASF27
  190 0019 00000000 		.4byte	.Ldebug_ranges0+0
  191 001d 00000000 		.4byte	0
  192 0021 00000000 		.4byte	.Ldebug_line0
  193 0025 02       		.uleb128 0x2
  194 0026 01       		.byte	0x1
  195 0027 06       		.byte	0x6
- 196 0028 7B020000 		.4byte	.LASF0
+ 196 0028 9A020000 		.4byte	.LASF0
  197 002c 02       		.uleb128 0x2
  198 002d 01       		.byte	0x1
  199 002e 08       		.byte	0x8
- 200 002f 36000000 		.4byte	.LASF1
+ 200 002f 32000000 		.4byte	.LASF1
  201 0033 02       		.uleb128 0x2
  202 0034 02       		.byte	0x2
  203 0035 05       		.byte	0x5
- 204 0036 4A020000 		.4byte	.LASF2
+ 204 0036 11020000 		.4byte	.LASF2
  205 003a 02       		.uleb128 0x2
  206 003b 02       		.byte	0x2
  207 003c 07       		.byte	0x7
- 208 003d 83000000 		.4byte	.LASF3
+ 208 003d 7F000000 		.4byte	.LASF3
  209 0041 02       		.uleb128 0x2
  210 0042 04       		.byte	0x4
  211 0043 05       		.byte	0x5
- 212 0044 72020000 		.4byte	.LASF4
+ 212 0044 23000000 		.4byte	.LASF4
  213 0048 02       		.uleb128 0x2
  214 0049 04       		.byte	0x4
  215 004a 07       		.byte	0x7
- 216 004b 71000000 		.4byte	.LASF5
+ 216 004b 6D000000 		.4byte	.LASF5
  217 004f 02       		.uleb128 0x2
  218 0050 08       		.byte	0x8
  219 0051 05       		.byte	0x5
- 220 0052 86010000 		.4byte	.LASF6
+ 220 0052 4D010000 		.4byte	.LASF6
  221 0056 02       		.uleb128 0x2
  222 0057 08       		.byte	0x8
  223 0058 07       		.byte	0x7
- 224 0059 17010000 		.4byte	.LASF7
+ 224 0059 09010000 		.4byte	.LASF7
  225 005d 03       		.uleb128 0x3
  226 005e 04       		.byte	0x4
  227 005f 05       		.byte	0x5
@@ -464,21 +464,21 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  229 0064 02       		.uleb128 0x2
  230 0065 04       		.byte	0x4
  231 0066 07       		.byte	0x7
- 232 0067 23000000 		.4byte	.LASF8
+ 232 0067 D3000000 		.4byte	.LASF8
  233 006b 04       		.uleb128 0x4
- 234 006c 54020000 		.4byte	.LASF9
+ 234 006c 1B020000 		.4byte	.LASF9
  235 0070 02       		.byte	0x2
  236 0071 9801     		.2byte	0x198
  237 0073 2C000000 		.4byte	0x2c
  238 0077 04       		.uleb128 0x4
- 239 0078 C9000000 		.4byte	.LASF10
+ 239 0078 C5000000 		.4byte	.LASF10
  240 007c 02       		.byte	0x2
  241 007d 9901     		.2byte	0x199
  242 007f 3A000000 		.4byte	0x3a
  243 0083 04       		.uleb128 0x4
- 244 0084 D0000000 		.4byte	.LASF11
+ 244 0084 CC000000 		.4byte	.LASF11
  245 0088 02       		.byte	0x2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 9
 
 
  246 0089 9A01     		.2byte	0x19a
@@ -486,15 +486,15 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  248 008f 02       		.uleb128 0x2
  249 0090 04       		.byte	0x4
  250 0091 04       		.byte	0x4
- 251 0092 30000000 		.4byte	.LASF12
+ 251 0092 2C000000 		.4byte	.LASF12
  252 0096 02       		.uleb128 0x2
  253 0097 08       		.byte	0x8
  254 0098 04       		.byte	0x4
- 255 0099 A1000000 		.4byte	.LASF13
+ 255 0099 9D000000 		.4byte	.LASF13
  256 009d 02       		.uleb128 0x2
  257 009e 01       		.byte	0x1
  258 009f 08       		.byte	0x8
- 259 00a0 B7010000 		.4byte	.LASF14
+ 259 00a0 7E010000 		.4byte	.LASF14
  260 00a4 04       		.uleb128 0x4
  261 00a5 15000000 		.4byte	.LASF15
  262 00a9 02       		.byte	0x2
@@ -503,7 +503,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  265 00b0 05       		.uleb128 0x5
  266 00b1 83000000 		.4byte	0x83
  267 00b5 06       		.uleb128 0x6
- 268 00b6 5A020000 		.4byte	.LASF16
+ 268 00b6 21020000 		.4byte	.LASF16
  269 00ba 01       		.byte	0x1
  270 00bb 27       		.byte	0x27
  271 00bc 00000000 		.4byte	.LFB0
@@ -512,7 +512,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  274 00c5 9C       		.byte	0x9c
  275 00c6 DA000000 		.4byte	0xda
  276 00ca 07       		.uleb128 0x7
- 277 00cb AF000000 		.4byte	.LASF18
+ 277 00cb AB000000 		.4byte	.LASF18
  278 00cf 01       		.byte	0x1
  279 00d0 27       		.byte	0x27
  280 00d1 83000000 		.4byte	0x83
@@ -527,7 +527,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  289 00e9 01       		.uleb128 0x1
  290 00ea 9C       		.byte	0x9c
  291 00eb 06       		.uleb128 0x6
- 292 00ec 2E010000 		.4byte	.LASF17
+ 292 00ec 20010000 		.4byte	.LASF17
  293 00f0 01       		.byte	0x1
  294 00f1 86       		.byte	0x86
  295 00f2 00000000 		.4byte	.LFB2
@@ -536,16 +536,16 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  298 00fb 9C       		.byte	0x9c
  299 00fc 3B010000 		.4byte	0x13b
  300 0100 07       		.uleb128 0x7
- 301 0101 96000000 		.4byte	.LASF19
+ 301 0101 92000000 		.4byte	.LASF19
  302 0105 01       		.byte	0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 10
 
 
  303 0106 86       		.byte	0x86
  304 0107 77000000 		.4byte	0x77
  305 010b 21000000 		.4byte	.LLST1
  306 010f 07       		.uleb128 0x7
- 307 0110 BB000000 		.4byte	.LASF20
+ 307 0110 B7000000 		.4byte	.LASF20
  308 0114 01       		.byte	0x1
  309 0115 86       		.byte	0x86
  310 0116 6B000000 		.4byte	0x6b
@@ -557,7 +557,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  316 0125 83000000 		.4byte	0x83
  317 0129 63000000 		.4byte	.LLST3
  318 012d 0A       		.uleb128 0xa
- 319 012e A8000000 		.4byte	.LASF22
+ 319 012e A4000000 		.4byte	.LASF22
  320 0132 01       		.byte	0x1
  321 0133 89       		.byte	0x89
  322 0134 83000000 		.4byte	0x83
@@ -565,7 +565,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  324 0139 51       		.byte	0x51
  325 013a 00       		.byte	0
  326 013b 0B       		.uleb128 0xb
- 327 013c 94010000 		.4byte	.LASF23
+ 327 013c 5B010000 		.4byte	.LASF23
  328 0140 01       		.byte	0x1
  329 0141 B0       		.byte	0xb0
  330 0142 77000000 		.4byte	0x77
@@ -574,7 +574,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  333 014e 01       		.uleb128 0x1
  334 014f 9C       		.byte	0x9c
  335 0150 0B       		.uleb128 0xb
- 336 0151 44000000 		.4byte	.LASF24
+ 336 0151 40000000 		.4byte	.LASF24
  337 0155 01       		.byte	0x1
  338 0156 C6       		.byte	0xc6
  339 0157 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  357 000a 0E       		.uleb128 0xe
  358 000b 55       		.uleb128 0x55
  359 000c 17       		.uleb128 0x17
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 11
 
 
  360 000d 11       		.uleb128 0x11
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  414 0043 0E       		.uleb128 0xe
  415 0044 3A       		.uleb128 0x3a
  416 0045 0B       		.uleb128 0xb
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 12
 
 
  417 0046 3B       		.uleb128 0x3b
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  471 007e 09       		.uleb128 0x9
  472 007f 34       		.uleb128 0x34
  473 0080 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 13
 
 
  474 0081 03       		.uleb128 0x3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  528              	.Ldebug_loc0:
  529              	.LLST0:
  530 0000 00000000 		.4byte	.LVL0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 14
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 14
 
 
  531 0004 0A000000 		.4byte	.LVL1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  585 000e 0000     		.2byte	0
  586 0010 00000000 		.4byte	.LFB0
  587 0014 1C000000 		.4byte	.LFE0-.LFB0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 15
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 15
 
 
  588 0018 00000000 		.4byte	.LFB1
@@ -867,8 +867,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  611 002c 00000000 		.4byte	0
  612              		.section	.debug_line,"",%progbits
  613              	.Ldebug_line0:
- 614 0000 D9000000 		.section	.debug_str,"MS",%progbits,1
- 614      02006500 
+ 614 0000 C0000000 		.section	.debug_str,"MS",%progbits,1
+ 614      02004C00 
  614      00000201 
  614      FB0E0D00 
  614      01010101 
@@ -884,149 +884,150 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 1
  619              	.LASF21:
  620 001b 6D61736B 		.ascii	"maskVal\000"
  620      56616C00 
- 621              	.LASF8:
- 622 0023 756E7369 		.ascii	"unsigned int\000"
- 622      676E6564 
+ 621              	.LASF4:
+ 622 0023 6C6F6E67 		.ascii	"long int\000"
  622      20696E74 
  622      00
  623              	.LASF12:
- 624 0030 666C6F61 		.ascii	"float\000"
+ 624 002c 666C6F61 		.ascii	"float\000"
  624      7400
  625              	.LASF1:
- 626 0036 756E7369 		.ascii	"unsigned char\000"
+ 626 0032 756E7369 		.ascii	"unsigned char\000"
  626      676E6564 
  626      20636861 
  626      7200
  627              	.LASF24:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 16
+ 628 0040 53454E53 		.ascii	"SENSOR_3_SCBCLK_GetFractionalDividerRegister\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 16
 
 
- 628 0044 53454E53 		.ascii	"SENSOR_3_SCBCLK_GetFractionalDividerRegister\000"
  628      4F525F33 
  628      5F534342 
  628      434C4B5F 
  628      47657446 
  629              	.LASF5:
- 630 0071 6C6F6E67 		.ascii	"long unsigned int\000"
+ 630 006d 6C6F6E67 		.ascii	"long unsigned int\000"
  630      20756E73 
  630      69676E65 
  630      6420696E 
  630      7400
  631              	.LASF3:
- 632 0083 73686F72 		.ascii	"short unsigned int\000"
+ 632 007f 73686F72 		.ascii	"short unsigned int\000"
  632      7420756E 
  632      7369676E 
  632      65642069 
  632      6E7400
  633              	.LASF19:
- 634 0096 636C6B44 		.ascii	"clkDivider\000"
+ 634 0092 636C6B44 		.ascii	"clkDivider\000"
  634      69766964 
  634      657200
  635              	.LASF13:
- 636 00a1 646F7562 		.ascii	"double\000"
+ 636 009d 646F7562 		.ascii	"double\000"
  636      6C6500
  637              	.LASF22:
- 638 00a8 72656756 		.ascii	"regVal\000"
+ 638 00a4 72656756 		.ascii	"regVal\000"
  638      616C00
  639              	.LASF18:
- 640 00af 616C6967 		.ascii	"alignClkDiv\000"
+ 640 00ab 616C6967 		.ascii	"alignClkDiv\000"
  640      6E436C6B 
  640      44697600 
  641              	.LASF20:
- 642 00bb 636C6B46 		.ascii	"clkFractional\000"
+ 642 00b7 636C6B46 		.ascii	"clkFractional\000"
  642      72616374 
  642      696F6E61 
  642      6C00
  643              	.LASF10:
- 644 00c9 75696E74 		.ascii	"uint16\000"
+ 644 00c5 75696E74 		.ascii	"uint16\000"
  644      313600
  645              	.LASF11:
- 646 00d0 75696E74 		.ascii	"uint32\000"
+ 646 00cc 75696E74 		.ascii	"uint32\000"
  646      333200
- 647              	.LASF27:
- 648 00d7 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\Test_Robot\\Test"
- 648      73657273 
- 648      5C48656E 
- 648      72792041 
- 648      6C626572 
- 649 0105 5F416C6C 		.ascii	"_All_Sensor.cydsn\000"
- 649      5F53656E 
- 649      736F722E 
- 649      63796473 
- 649      6E00
- 650              	.LASF7:
- 651 0117 6C6F6E67 		.ascii	"long long unsigned int\000"
- 651      206C6F6E 
- 651      6720756E 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 17
+ 647              	.LASF8:
+ 648 00d3 756E7369 		.ascii	"unsigned int\000"
+ 648      676E6564 
+ 648      20696E74 
+ 648      00
+ 649              	.LASF26:
+ 650 00e0 47656E65 		.ascii	"Generated_Source\\PSoC4\\SENSOR_3_SCBCLK.c\000"
+ 650      72617465 
+ 650      645F536F 
+ 650      75726365 
+ 650      5C50536F 
+ 651              	.LASF7:
+ 652 0109 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 652      206C6F6E 
+ 652      6720756E 
+ 652      7369676E 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 17
 
 
- 651      7369676E 
- 651      65642069 
- 652              	.LASF17:
- 653 012e 53454E53 		.ascii	"SENSOR_3_SCBCLK_SetFractionalDividerRegister\000"
- 653      4F525F33 
- 653      5F534342 
- 653      434C4B5F 
- 653      53657446 
- 654              	.LASF26:
- 655 015b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\SENSOR_3_SCBCLK.c\000"
- 655      6E657261 
- 655      7465645F 
- 655      536F7572 
- 655      63655C50 
- 656              	.LASF6:
- 657 0186 6C6F6E67 		.ascii	"long long int\000"
- 657      206C6F6E 
- 657      6720696E 
- 657      7400
- 658              	.LASF23:
- 659 0194 53454E53 		.ascii	"SENSOR_3_SCBCLK_GetDividerRegister\000"
- 659      4F525F33 
- 659      5F534342 
- 659      434C4B5F 
- 659      47657444 
- 660              	.LASF14:
- 661 01b7 63686172 		.ascii	"char\000"
- 661      00
- 662              	.LASF25:
- 663 01bc 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 663      4320342E 
- 663      392E3320 
- 663      32303135 
- 663      30333033 
- 664 01ef 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 664      20726576 
- 664      6973696F 
- 664      6E203232 
- 664      31323230 
- 665 0222 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 665      66756E63 
- 665      74696F6E 
- 665      2D736563 
- 665      74696F6E 
- 666              	.LASF2:
- 667 024a 73686F72 		.ascii	"short int\000"
- 667      7420696E 
- 667      7400
- 668              	.LASF9:
- 669 0254 75696E74 		.ascii	"uint8\000"
- 669      3800
- 670              	.LASF16:
- 671 025a 53454E53 		.ascii	"SENSOR_3_SCBCLK_StartEx\000"
- 671      4F525F33 
- 671      5F534342 
- 671      434C4B5F 
- 671      53746172 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccO7todA.s 			page 18
+ 652      65642069 
+ 653              	.LASF17:
+ 654 0120 53454E53 		.ascii	"SENSOR_3_SCBCLK_SetFractionalDividerRegister\000"
+ 654      4F525F33 
+ 654      5F534342 
+ 654      434C4B5F 
+ 654      53657446 
+ 655              	.LASF6:
+ 656 014d 6C6F6E67 		.ascii	"long long int\000"
+ 656      206C6F6E 
+ 656      6720696E 
+ 656      7400
+ 657              	.LASF23:
+ 658 015b 53454E53 		.ascii	"SENSOR_3_SCBCLK_GetDividerRegister\000"
+ 658      4F525F33 
+ 658      5F534342 
+ 658      434C4B5F 
+ 658      47657444 
+ 659              	.LASF14:
+ 660 017e 63686172 		.ascii	"char\000"
+ 660      00
+ 661              	.LASF25:
+ 662 0183 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 662      4320342E 
+ 662      392E3320 
+ 662      32303135 
+ 662      30333033 
+ 663 01b6 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 663      20726576 
+ 663      6973696F 
+ 663      6E203232 
+ 663      31323230 
+ 664 01e9 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 664      66756E63 
+ 664      74696F6E 
+ 664      2D736563 
+ 664      74696F6E 
+ 665              	.LASF2:
+ 666 0211 73686F72 		.ascii	"short int\000"
+ 666      7420696E 
+ 666      7400
+ 667              	.LASF9:
+ 668 021b 75696E74 		.ascii	"uint8\000"
+ 668      3800
+ 669              	.LASF16:
+ 670 0221 53454E53 		.ascii	"SENSOR_3_SCBCLK_StartEx\000"
+ 670      4F525F33 
+ 670      5F534342 
+ 670      434C4B5F 
+ 670      53746172 
+ 671              	.LASF27:
+ 672 0239 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 672      73657273 
+ 672      5C48656E 
+ 672      72792041 
+ 672      6C626572 
+ 673 0267 6F64756C 		.ascii	"odular\\Robot_Test\\Test_Robot\\Test_All_Sensor.cyd"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccRn53qr.s 			page 18
 
 
- 672              	.LASF4:
- 673 0272 6C6F6E67 		.ascii	"long int\000"
- 673      20696E74 
- 673      00
- 674              	.LASF0:
- 675 027b 7369676E 		.ascii	"signed char\000"
- 675      65642063 
- 675      68617200 
- 676              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 673      61725C52 
+ 673      6F626F74 
+ 673      5F546573 
+ 673      745C5465 
+ 674 0297 736E00   		.ascii	"sn\000"
+ 675              	.LASF0:
+ 676 029a 7369676E 		.ascii	"signed char\000"
+ 676      65642063 
+ 676      68617200 
+ 677              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
