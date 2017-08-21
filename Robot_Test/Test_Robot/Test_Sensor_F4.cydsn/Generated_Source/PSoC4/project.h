@@ -32,6 +32,8 @@
 #include "I2C_1_I2C_PVT.h"
 #include "I2C_1_PVT.h"
 #include "I2C_1_BOOT.h"
+#include "Bootloader_1.h"
+#include "Bootloader_1_PVT.h"
 #include "I2C_1_SCBCLK.h"
 #include "I2C_1_sda.h"
 #include "I2C_1_sda_aliases.h"

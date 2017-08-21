@@ -3,7 +3,7 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="Test_Robot" persistent="Test_Robot.cywrk" platform="NOT_USED">
-<current_project name=".\Test_Sensor_F3.cydsn\Test_Sensor_F3.cyprj" />
+<current_project name=".\Test_CAN_Module_2.cydsn\Test_CAN_Module_2.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>

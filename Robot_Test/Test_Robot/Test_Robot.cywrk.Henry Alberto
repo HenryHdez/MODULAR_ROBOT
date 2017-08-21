@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Test_Robot\Test_Sensor_F3">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Test_Robot\Test_CAN_Module_1\TopDesign">
 <ExpandedNodeIds>
 <v>Test_Robot</v>
 <v>Test_Robot\CAN_Psoc_kit\TopDesign</v>
@@ -286,6 +286,7 @@
 <v>Test_Robot\Test_All_Sensor\Generated_Source\PSoC4\cyfitterrv.inc</v>
 <v>Test_Robot\Test_All_Sensor\Generated_Source\PSoC4\cymetadata.c</v>
 <v>Test_Robot\Test_All_Sensor\Generated_Source\PSoC4\project.h</v>
+<v>Test_Robot\Test_CAN_Module_1</v>
 <v>Test_Robot\Test_CAN_Module_1\TopDesign</v>
 <v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.cydwr</v>
 <v>Test_Robot\Test_CAN_Module_1\Header Files\cyapicallbacks.h</v>
@@ -1161,7 +1162,6 @@
 <v>Test_Robot\Test_Sensor_F3\Generated_Source\PSoC4\cyfitterrv.inc</v>
 <v>Test_Robot\Test_Sensor_F3\Generated_Source\PSoC4\cymetadata.c</v>
 <v>Test_Robot\Test_Sensor_F3\Generated_Source\PSoC4\project.h</v>
-<v>Test_Robot\Test_Sensor_F4</v>
 <v>Test_Robot\Test_Sensor_F4\TopDesign</v>
 <v>Test_Robot\Test_Sensor_F4\Test_Sensor_F4.cydwr</v>
 <v>Test_Robot\Test_Sensor_F4\Header Files</v>
@@ -1267,36 +1267,25 @@
 <v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Test_Robot\Test_Motor</v>
-<v>Test_Robot\Test_Sensor_F1</v>
-<v>Test_Robot\Test_Sensor_F2</v>
-<v>Test_Robot\Test_Sensor_F3</v>
-<v>Test_Robot\Test_Sensor_F4</v>
-<v>Test_Robot\Test_Sensor_F4\TopDesign</v>
-<v>Test_Robot\Test_Sensor_F4\Test_Sensor_F4.cydwr</v>
-<v>Test_Robot\Test_Sensor_F4\Test_Sensor_F4.cydwr\Pins</v>
-<v>Test_Robot\Test_Sensor_F4\Test_Sensor_F4.cydwr\Analog</v>
-<v>Test_Robot\Test_Sensor_F4\Test_Sensor_F4.cydwr\DMA</v>
-<v>Test_Robot\Test_Sensor_F4\Test_Sensor_F4.cydwr\Clocks</v>
-<v>Test_Robot\Test_Sensor_F4\Test_Sensor_F4.cydwr\Interrupts</v>
-<v>Test_Robot\Test_Sensor_F4\Test_Sensor_F4.cydwr\System</v>
-<v>Test_Robot\Test_Sensor_F4\Test_Sensor_F4.cydwr\Directives</v>
-<v>Test_Robot\Test_Sensor_F4\Test_Sensor_F4.cydwr\Flash Security</v>
-<v>Test_Robot\Test_Sensor_F4\Header Files</v>
-<v>Test_Robot\Test_Sensor_F4\Header Files\cyapicallbacks.h</v>
-<v>Test_Robot\Test_Sensor_F4\Source Files</v>
-<v>Test_Robot\Test_Sensor_F4\Source Files\main.c</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4\cy_boot</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4\cy_boot\cmsis_armcc.h</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4\cy_boot\cmsis_gcc.h</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
-<v>Test_Robot\Test_Sensor_F4\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
+<v>Test_Robot</v>
+<v>Test_Robot\CAN_Psoc_kit</v>
+<v>Test_Robot\Test_All_Sensor</v>
+<v>Test_Robot\Test_CAN_Module_1</v>
+<v>Test_Robot\Test_CAN_Module_1\TopDesign</v>
+<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.cydwr</v>
+<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Pins</v>
+<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Analog</v>
+<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\DMA</v>
+<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Clocks</v>
+<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Interrupts</v>
+<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\System</v>
+<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Directives</v>
+<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Flash Security</v>
+<v>Test_Robot\Test_CAN_Module_1\Header Files</v>
+<v>Test_Robot\Test_CAN_Module_1\Source Files</v>
+<v>Test_Robot\Test_CAN_Module_1\Source Files\main.c</v>
+<v>Test_Robot\Test_CAN_Module_1\Generated_Source</v>
+<v>Test_Robot\Test_CAN_Module_1\Generated_Source\PSoC4</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -1356,17 +1345,6 @@
 <v>Test_Robot\Test_Module</v>
 <v>Test_Robot\Test_Module\TopDesign</v>
 <v>Test_Robot\Test_Module\TopDesign\TopDesign.cysch</v>
-<v>Test_Robot\Test_Motor</v>
-<v>Test_Robot\Test_Motor\TopDesign</v>
-<v>Test_Robot\Test_Motor\TopDesign\TopDesign.cysch</v>
-<v>Test_Robot\Test_Sensor_F1</v>
-<v>Test_Robot\Test_Sensor_F1\TopDesign</v>
-<v>Test_Robot\Test_Sensor_F1\TopDesign\TopDesign.cysch</v>
-<v>Test_Robot\Test_Sensor_F2</v>
-<v>Test_Robot\Test_Sensor_F2\TopDesign</v>
-<v>Test_Robot\Test_Sensor_F2\TopDesign\TopDesign.cysch</v>
-<v>Test_Robot\Test_Sensor_F3</v>
-<v>Test_Robot\Test_Sensor_F3\TopDesign</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -1526,6 +1504,42 @@
 <v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.rpt</v>
 <v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1_timing.html</v>
 <v>Test_Robot\Test_CAN_Module_2</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN_HFCLK.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN_INT.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN_isr.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN_PM.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN_TX_RX_func.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\Cm0Start.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CyDMA.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLFClk.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_1.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_1_PM.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_2.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_2_PM.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_3.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_3_PM.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_4.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_4_PM.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\RX_1.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\RX_1_PM.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\TX_1.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Listing Files\TX_1_PM.lst</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_2.elf</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_2.hex</v>
+<v>Test_Robot\Test_CAN_Module_2\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_2.map</v>
 <v>Test_Robot\Test_CAN_Module_2\Test_CAN_Module_2.gpdsc</v>
 <v>Test_Robot\Test_CAN_Module_2\Test_CAN_Module_2.rpt</v>
 <v>Test_Robot\Test_CAN_Module_2\Test_CAN_Module_2_timing.html</v>
@@ -1884,17 +1898,6 @@
 <v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_Char_1.lst</v>
 <v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_Char_1_LCDPort.lst</v>
 <v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_Char_1_PM.lst</v>
-<v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_1.lst</v>
-<v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_CAN.lst</v>
-<v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_CAN_INT.lst</v>
-<v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_CAN_PM.lst</v>
-<v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_CAN_TX_RX_func.lst</v>
-<v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\Listing Files\TX_1.lst</v>
-<v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\CAN_Psoc_kit.elf</v>
-<v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\CAN_Psoc_kit.hex</v>
-<v>Test_Robot\CAN_Psoc_kit\CortexM3\ARM_GCC_493\Debug\CAN_Psoc_kit.map</v>
-<v>Test_Robot\CAN_Psoc_kit\CAN_Psoc_kit.gpdsc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -2014,6 +2017,7 @@
 <v>Test_Robot\Test_Sensor_F4\System Reference Guides\cy_boot_v5_40</v>
 <v>Test_Robot\Test_Sensor_F4\System Reference Guides\cy_dmac_v1_10</v>
 <v>Test_Robot\Test_Sensor_F4\System Reference Guides\cy_lfclk_v1_10</v>
+<v>Test_Robot\Test_Sensor_F4\Bootloader_v1_50.pdf</v>
 <v>Test_Robot\Test_Sensor_F4\cy_pins_v2_20</v>
 <v>Test_Robot\Test_Sensor_F4\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Test_Robot\Test_Sensor_F4\SCB_P4_v3_20.pdf</v>
@@ -2038,17 +2042,6 @@
 <v>Test_Robot\Test_All_Sensor\System Reference Guides\cy_lfclk_v1_10</v>
 <v>Test_Robot\Test_All_Sensor\cy_pins_v2_20</v>
 <v>Test_Robot\Test_All_Sensor\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Test_Robot\Test_All_Sensor\SCB_P4_v3_20</v>
-<v>Test_Robot\Test_All_Sensor\SCB_P4_v3_20\SCB_P4_v3_20.pdf</v>
-<v>Test_Robot\Test_CAN_Module_1</v>
-<v>Test_Robot\Test_CAN_Module_1\PSoC 4 Architecture TRM</v>
-<v>Test_Robot\Test_CAN_Module_1\PSoC 4200M Family Datasheet</v>
-<v>Test_Robot\Test_CAN_Module_1\System Reference Guides</v>
-<v>Test_Robot\Test_CAN_Module_1\System Reference Guides\cy_boot_v5_40</v>
-<v>Test_Robot\Test_CAN_Module_1\System Reference Guides\cy_dmac_v1_10</v>
-<v>Test_Robot\Test_CAN_Module_1\System Reference Guides\cy_lfclk_v1_10</v>
-<v>Test_Robot\Test_CAN_Module_1\CAN_v3_0.pdf</v>
-<v>Test_Robot\Test_CAN_Module_1\cy_pins_v2_20</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -2063,11 +2056,9 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Test_Sensor_F1.cydsn\main.c" />
-<name v=".\Test_Sensor_F2.cydsn\main.c" />
-<name v=".\Test_Sensor_F3.cydsn\main.c" />
-<name v=".\Test_Sensor_F4.cydsn\main.c" />
-<name v=".\Test_Sensor_F4.cydsn\Generated_Source\PSoC4\CyLib.c" />
+<name v=".\Test_Sensor_F4.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Test_CAN_Module_1.cydsn\main.c" />
+<name v=".\Test_CAN_Module_1.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -2075,7 +2066,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="766, 399" SelectedTabbedMdiWindow="2006bbef-3432-4cd7-9ea7-6e0b85b29142"><DocumentWindow Key="e0ec1f81-0782-4b75-b0ee-ae6bee8730c6" Guid="fd17c686-9855-48aa-b4e6-e6097878e95a" /><DocumentWindow Key="b9ccf576-8bf7-4c51-84f9-60741bd38875" Guid="a11f3795-d2dc-4c56-b9b1-ea6a4e21e0ca" /><DocumentWindow Key="7eb03658-75b8-40c4-8aab-c3e53351cba4" Guid="ce1a6983-2637-4747-90e3-902bf8eb008d" /><DocumentWindow Key="579622c3-511e-44cf-9043-c77f26c14a82" Guid="2006bbef-3432-4cd7-9ea7-6e0b85b29142" /><DocumentWindow Key="473b7023-70b9-44d9-ad3b-bf0d0a3efde2" Guid="080dd8ec-e223-4bb3-b610-3bb56a3efc3f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="822, 399" SelectedTabbedMdiWindow="a5d49fd8-4349-40af-8ea8-9242b9513890"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="43850630-c835-437f-9fe3-2e8d4db89471" /><DocumentWindow Key="85227bc6-4ff3-4143-996f-b80c2f049881" Guid="69f09bda-aa4d-4a20-8b7f-429d68bae30d" /><DocumentWindow Key="91c495f7-5ec1-41a7-bfbe-67cbf4056289" Guid="f30e986e-7c84-47e0-9f81-593838a88b54" /><DocumentWindow Key="c2615f71-c4cd-482c-8d4c-f397e867b698" Guid="a5d49fd8-4349-40af-8ea8-9242b9513890" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

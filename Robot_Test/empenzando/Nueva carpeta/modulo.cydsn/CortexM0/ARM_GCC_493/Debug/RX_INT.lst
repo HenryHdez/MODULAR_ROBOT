@@ -1,0 +1,845 @@
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"RX_INT.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.RX_RXISR,"ax",%progbits
+  18              		.align	2
+  19              		.global	RX_RXISR
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	RX_RXISR, %function
+  23              	RX_RXISR:
+  24              	.LFB1:
+  25              		.file 1 "Generated_Source\\PSoC4\\RX_INT.c"
+   1:Generated_Source\PSoC4/RX_INT.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/RX_INT.c **** * File Name: RXINT.c
+   3:Generated_Source\PSoC4/RX_INT.c **** * Version 2.50
+   4:Generated_Source\PSoC4/RX_INT.c **** *
+   5:Generated_Source\PSoC4/RX_INT.c **** * Description:
+   6:Generated_Source\PSoC4/RX_INT.c **** *  This file provides all Interrupt Service functionality of the UART component
+   7:Generated_Source\PSoC4/RX_INT.c **** *
+   8:Generated_Source\PSoC4/RX_INT.c **** ********************************************************************************
+   9:Generated_Source\PSoC4/RX_INT.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  10:Generated_Source\PSoC4/RX_INT.c **** * You may use this file only in accordance with the license, terms, conditions,
+  11:Generated_Source\PSoC4/RX_INT.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  12:Generated_Source\PSoC4/RX_INT.c **** * the software package with which this file was provided.
+  13:Generated_Source\PSoC4/RX_INT.c **** *******************************************************************************/
+  14:Generated_Source\PSoC4/RX_INT.c **** 
+  15:Generated_Source\PSoC4/RX_INT.c **** #include "RX.h"
+  16:Generated_Source\PSoC4/RX_INT.c **** #include "cyapicallbacks.h"
+  17:Generated_Source\PSoC4/RX_INT.c **** 
+  18:Generated_Source\PSoC4/RX_INT.c **** 
+  19:Generated_Source\PSoC4/RX_INT.c **** /***************************************
+  20:Generated_Source\PSoC4/RX_INT.c **** * Custom Declarations
+  21:Generated_Source\PSoC4/RX_INT.c **** ***************************************/
+  22:Generated_Source\PSoC4/RX_INT.c **** /* `#START CUSTOM_DECLARATIONS` Place your declaration here */
+  23:Generated_Source\PSoC4/RX_INT.c **** 
+  24:Generated_Source\PSoC4/RX_INT.c **** /* `#END` */
+  25:Generated_Source\PSoC4/RX_INT.c **** 
+  26:Generated_Source\PSoC4/RX_INT.c **** #if (RX_RX_INTERRUPT_ENABLED && (RX_RX_ENABLED || RX_HD_ENABLED))
+  27:Generated_Source\PSoC4/RX_INT.c ****     /*******************************************************************************
+  28:Generated_Source\PSoC4/RX_INT.c ****     * Function Name: RX_RXISR
+  29:Generated_Source\PSoC4/RX_INT.c ****     ********************************************************************************
+  30:Generated_Source\PSoC4/RX_INT.c ****     *
+  31:Generated_Source\PSoC4/RX_INT.c ****     * Summary:
+  32:Generated_Source\PSoC4/RX_INT.c ****     *  Interrupt Service Routine for RX portion of the UART
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 2
+
+
+  33:Generated_Source\PSoC4/RX_INT.c ****     *
+  34:Generated_Source\PSoC4/RX_INT.c ****     * Parameters:
+  35:Generated_Source\PSoC4/RX_INT.c ****     *  None.
+  36:Generated_Source\PSoC4/RX_INT.c ****     *
+  37:Generated_Source\PSoC4/RX_INT.c ****     * Return:
+  38:Generated_Source\PSoC4/RX_INT.c ****     *  None.
+  39:Generated_Source\PSoC4/RX_INT.c ****     *
+  40:Generated_Source\PSoC4/RX_INT.c ****     * Global Variables:
+  41:Generated_Source\PSoC4/RX_INT.c ****     *  RX_rxBuffer - RAM buffer pointer for save received data.
+  42:Generated_Source\PSoC4/RX_INT.c ****     *  RX_rxBufferWrite - cyclic index for write to rxBuffer,
+  43:Generated_Source\PSoC4/RX_INT.c ****     *     increments after each byte saved to buffer.
+  44:Generated_Source\PSoC4/RX_INT.c ****     *  RX_rxBufferRead - cyclic index for read from rxBuffer,
+  45:Generated_Source\PSoC4/RX_INT.c ****     *     checked to detect overflow condition.
+  46:Generated_Source\PSoC4/RX_INT.c ****     *  RX_rxBufferOverflow - software overflow flag. Set to one
+  47:Generated_Source\PSoC4/RX_INT.c ****     *     when RX_rxBufferWrite index overtakes
+  48:Generated_Source\PSoC4/RX_INT.c ****     *     RX_rxBufferRead index.
+  49:Generated_Source\PSoC4/RX_INT.c ****     *  RX_rxBufferLoopDetect - additional variable to detect overflow.
+  50:Generated_Source\PSoC4/RX_INT.c ****     *     Set to one when RX_rxBufferWrite is equal to
+  51:Generated_Source\PSoC4/RX_INT.c ****     *    RX_rxBufferRead
+  52:Generated_Source\PSoC4/RX_INT.c ****     *  RX_rxAddressMode - this variable contains the Address mode,
+  53:Generated_Source\PSoC4/RX_INT.c ****     *     selected in customizer or set by UART_SetRxAddressMode() API.
+  54:Generated_Source\PSoC4/RX_INT.c ****     *  RX_rxAddressDetected - set to 1 when correct address received,
+  55:Generated_Source\PSoC4/RX_INT.c ****     *     and analysed to store following addressed data bytes to the buffer.
+  56:Generated_Source\PSoC4/RX_INT.c ****     *     When not correct address received, set to 0 to skip following data bytes.
+  57:Generated_Source\PSoC4/RX_INT.c ****     *
+  58:Generated_Source\PSoC4/RX_INT.c ****     *******************************************************************************/
+  59:Generated_Source\PSoC4/RX_INT.c ****     CY_ISR(RX_RXISR)
+  60:Generated_Source\PSoC4/RX_INT.c ****     {
+  26              		.loc 1 60 0
+  27              		.cfi_startproc
+  28              	.L6:
+  61:Generated_Source\PSoC4/RX_INT.c ****         uint8 readData;
+  62:Generated_Source\PSoC4/RX_INT.c ****         uint8 readStatus;
+  63:Generated_Source\PSoC4/RX_INT.c ****         uint8 increment_pointer = 0u;
+  64:Generated_Source\PSoC4/RX_INT.c **** 
+  65:Generated_Source\PSoC4/RX_INT.c ****     #if(CY_PSOC3)
+  66:Generated_Source\PSoC4/RX_INT.c ****         uint8 int_en;
+  67:Generated_Source\PSoC4/RX_INT.c ****     #endif /* (CY_PSOC3) */
+  68:Generated_Source\PSoC4/RX_INT.c **** 
+  69:Generated_Source\PSoC4/RX_INT.c ****     #ifdef RX_RXISR_ENTRY_CALLBACK
+  70:Generated_Source\PSoC4/RX_INT.c ****         RX_RXISR_EntryCallback();
+  71:Generated_Source\PSoC4/RX_INT.c ****     #endif /* RX_RXISR_ENTRY_CALLBACK */
+  72:Generated_Source\PSoC4/RX_INT.c **** 
+  73:Generated_Source\PSoC4/RX_INT.c ****         /* User code required at start of ISR */
+  74:Generated_Source\PSoC4/RX_INT.c ****         /* `#START RX_RXISR_START` */
+  75:Generated_Source\PSoC4/RX_INT.c **** 
+  76:Generated_Source\PSoC4/RX_INT.c ****         /* `#END` */
+  77:Generated_Source\PSoC4/RX_INT.c **** 
+  78:Generated_Source\PSoC4/RX_INT.c ****     #if(CY_PSOC3)   /* Make sure nested interrupt is enabled */
+  79:Generated_Source\PSoC4/RX_INT.c ****         int_en = EA;
+  80:Generated_Source\PSoC4/RX_INT.c ****         CyGlobalIntEnable;
+  81:Generated_Source\PSoC4/RX_INT.c ****     #endif /* (CY_PSOC3) */
+  82:Generated_Source\PSoC4/RX_INT.c **** 
+  83:Generated_Source\PSoC4/RX_INT.c ****         do
+  84:Generated_Source\PSoC4/RX_INT.c ****         {
+  85:Generated_Source\PSoC4/RX_INT.c ****             /* Read receiver status register */
+  86:Generated_Source\PSoC4/RX_INT.c ****             readStatus = RX_RXSTATUS_REG;
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 3
+
+
+  29              		.loc 1 86 0
+  30 0000 1A4B     		ldr	r3, .L7
+  31 0002 1B78     		ldrb	r3, [r3]
+  32 0004 DBB2     		uxtb	r3, r3
+  33              	.LVL0:
+  87:Generated_Source\PSoC4/RX_INT.c ****             /* Copy the same status to readData variable for backward compatibility support 
+  88:Generated_Source\PSoC4/RX_INT.c ****             *  of the user code in RX_RXISR_ERROR` section. 
+  89:Generated_Source\PSoC4/RX_INT.c ****             */
+  90:Generated_Source\PSoC4/RX_INT.c ****             readData = readStatus;
+  91:Generated_Source\PSoC4/RX_INT.c **** 
+  92:Generated_Source\PSoC4/RX_INT.c ****             if((readStatus & (RX_RX_STS_BREAK | 
+  34              		.loc 1 92 0
+  35 0006 1E22     		mov	r2, #30
+  36 0008 1A42     		tst	r2, r3
+  37 000a 04D0     		beq	.L2
+  93:Generated_Source\PSoC4/RX_INT.c ****                             RX_RX_STS_PAR_ERROR |
+  94:Generated_Source\PSoC4/RX_INT.c ****                             RX_RX_STS_STOP_ERROR | 
+  95:Generated_Source\PSoC4/RX_INT.c ****                             RX_RX_STS_OVERRUN)) != 0u)
+  96:Generated_Source\PSoC4/RX_INT.c ****             {
+  97:Generated_Source\PSoC4/RX_INT.c ****                 /* ERROR handling. */
+  98:Generated_Source\PSoC4/RX_INT.c ****                 RX_errorStatus |= readStatus & ( RX_RX_STS_BREAK | 
+  38              		.loc 1 98 0
+  39 000c 1848     		ldr	r0, .L7+4
+  40 000e 1A40     		and	r2, r3
+  41 0010 0178     		ldrb	r1, [r0]
+  42 0012 0A43     		orr	r2, r1
+  43 0014 0270     		strb	r2, [r0]
+  44              	.L2:
+  99:Generated_Source\PSoC4/RX_INT.c ****                                                             RX_RX_STS_PAR_ERROR | 
+ 100:Generated_Source\PSoC4/RX_INT.c ****                                                             RX_RX_STS_STOP_ERROR | 
+ 101:Generated_Source\PSoC4/RX_INT.c ****                                                             RX_RX_STS_OVERRUN);
+ 102:Generated_Source\PSoC4/RX_INT.c ****                 /* `#START RX_RXISR_ERROR` */
+ 103:Generated_Source\PSoC4/RX_INT.c **** 
+ 104:Generated_Source\PSoC4/RX_INT.c ****                 /* `#END` */
+ 105:Generated_Source\PSoC4/RX_INT.c ****                 
+ 106:Generated_Source\PSoC4/RX_INT.c ****             #ifdef RX_RXISR_ERROR_CALLBACK
+ 107:Generated_Source\PSoC4/RX_INT.c ****                 RX_RXISR_ERROR_Callback();
+ 108:Generated_Source\PSoC4/RX_INT.c ****             #endif /* RX_RXISR_ERROR_CALLBACK */
+ 109:Generated_Source\PSoC4/RX_INT.c ****             }
+ 110:Generated_Source\PSoC4/RX_INT.c ****             
+ 111:Generated_Source\PSoC4/RX_INT.c ****             if((readStatus & RX_RX_STS_FIFO_NOTEMPTY) != 0u)
+  45              		.loc 1 111 0
+  46 0016 2022     		mov	r2, #32
+  47 0018 1340     		and	r3, r2
+  48              	.LVL1:
+  49 001a 24D0     		beq	.L3
+ 112:Generated_Source\PSoC4/RX_INT.c ****             {
+ 113:Generated_Source\PSoC4/RX_INT.c ****                 /* Read data from the RX data register */
+ 114:Generated_Source\PSoC4/RX_INT.c ****                 readData = RX_RXDATA_REG;
+  50              		.loc 1 114 0
+  51 001c 154A     		ldr	r2, .L7+8
+  52 001e 1178     		ldrb	r1, [r2]
+  53 0020 C9B2     		uxtb	r1, r1
+  54              	.LVL2:
+ 115:Generated_Source\PSoC4/RX_INT.c ****             #if (RX_RXHW_ADDRESS_ENABLED)
+ 116:Generated_Source\PSoC4/RX_INT.c ****                 if(RX_rxAddressMode == (uint8)RX__B_UART__AM_SW_DETECT_TO_BUFFER)
+ 117:Generated_Source\PSoC4/RX_INT.c ****                 {
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 4
+
+
+ 118:Generated_Source\PSoC4/RX_INT.c ****                     if((readStatus & RX_RX_STS_MRKSPC) != 0u)
+ 119:Generated_Source\PSoC4/RX_INT.c ****                     {
+ 120:Generated_Source\PSoC4/RX_INT.c ****                         if ((readStatus & RX_RX_STS_ADDR_MATCH) != 0u)
+ 121:Generated_Source\PSoC4/RX_INT.c ****                         {
+ 122:Generated_Source\PSoC4/RX_INT.c ****                             RX_rxAddressDetected = 1u;
+ 123:Generated_Source\PSoC4/RX_INT.c ****                         }
+ 124:Generated_Source\PSoC4/RX_INT.c ****                         else
+ 125:Generated_Source\PSoC4/RX_INT.c ****                         {
+ 126:Generated_Source\PSoC4/RX_INT.c ****                             RX_rxAddressDetected = 0u;
+ 127:Generated_Source\PSoC4/RX_INT.c ****                         }
+ 128:Generated_Source\PSoC4/RX_INT.c ****                     }
+ 129:Generated_Source\PSoC4/RX_INT.c ****                     if(RX_rxAddressDetected != 0u)
+ 130:Generated_Source\PSoC4/RX_INT.c ****                     {   /* Store only addressed data */
+ 131:Generated_Source\PSoC4/RX_INT.c ****                         RX_rxBuffer[RX_rxBufferWrite] = readData;
+ 132:Generated_Source\PSoC4/RX_INT.c ****                         increment_pointer = 1u;
+ 133:Generated_Source\PSoC4/RX_INT.c ****                     }
+ 134:Generated_Source\PSoC4/RX_INT.c ****                 }
+ 135:Generated_Source\PSoC4/RX_INT.c ****                 else /* Without software addressing */
+ 136:Generated_Source\PSoC4/RX_INT.c ****                 {
+ 137:Generated_Source\PSoC4/RX_INT.c ****                     RX_rxBuffer[RX_rxBufferWrite] = readData;
+ 138:Generated_Source\PSoC4/RX_INT.c ****                     increment_pointer = 1u;
+ 139:Generated_Source\PSoC4/RX_INT.c ****                 }
+ 140:Generated_Source\PSoC4/RX_INT.c ****             #else  /* Without addressing */
+ 141:Generated_Source\PSoC4/RX_INT.c ****                 RX_rxBuffer[RX_rxBufferWrite] = readData;
+  55              		.loc 1 141 0
+  56 0022 154A     		ldr	r2, .L7+12
+  57 0024 1278     		ldrb	r2, [r2]
+  58 0026 D2B2     		uxtb	r2, r2
+  59 0028 1448     		ldr	r0, .L7+16
+  60 002a 8154     		strb	r1, [r0, r2]
+  61              	.LVL3:
+ 142:Generated_Source\PSoC4/RX_INT.c ****                 increment_pointer = 1u;
+ 143:Generated_Source\PSoC4/RX_INT.c ****             #endif /* (RX_RXHW_ADDRESS_ENABLED) */
+ 144:Generated_Source\PSoC4/RX_INT.c **** 
+ 145:Generated_Source\PSoC4/RX_INT.c ****                 /* Do not increment buffer pointer when skip not addressed data */
+ 146:Generated_Source\PSoC4/RX_INT.c ****                 if(increment_pointer != 0u)
+ 147:Generated_Source\PSoC4/RX_INT.c ****                 {
+ 148:Generated_Source\PSoC4/RX_INT.c ****                     if(RX_rxBufferLoopDetect != 0u)
+  62              		.loc 1 148 0
+  63 002c 144A     		ldr	r2, .L7+20
+  64 002e 1278     		ldrb	r2, [r2]
+  65 0030 002A     		cmp	r2, #0
+  66 0032 02D0     		beq	.L4
+ 149:Generated_Source\PSoC4/RX_INT.c ****                     {   /* Set Software Buffer status Overflow */
+ 150:Generated_Source\PSoC4/RX_INT.c ****                         RX_rxBufferOverflow = 1u;
+  67              		.loc 1 150 0
+  68 0034 0121     		mov	r1, #1
+  69              	.LVL4:
+  70 0036 134A     		ldr	r2, .L7+24
+  71 0038 1170     		strb	r1, [r2]
+  72              	.L4:
+ 151:Generated_Source\PSoC4/RX_INT.c ****                     }
+ 152:Generated_Source\PSoC4/RX_INT.c ****                     /* Set next pointer. */
+ 153:Generated_Source\PSoC4/RX_INT.c ****                     RX_rxBufferWrite++;
+  73              		.loc 1 153 0
+  74 003a 0F49     		ldr	r1, .L7+12
+  75 003c 0A78     		ldrb	r2, [r1]
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 5
+
+
+  76 003e 0132     		add	r2, r2, #1
+  77 0040 D2B2     		uxtb	r2, r2
+  78 0042 0A70     		strb	r2, [r1]
+ 154:Generated_Source\PSoC4/RX_INT.c **** 
+ 155:Generated_Source\PSoC4/RX_INT.c ****                     /* Check pointer for a loop condition */
+ 156:Generated_Source\PSoC4/RX_INT.c ****                     if(RX_rxBufferWrite >= RX_RX_BUFFER_SIZE)
+  79              		.loc 1 156 0
+  80 0044 0A78     		ldrb	r2, [r1]
+  81 0046 D2B2     		uxtb	r2, r2
+  82 0048 0F2A     		cmp	r2, #15
+  83 004a 02D9     		bls	.L5
+ 157:Generated_Source\PSoC4/RX_INT.c ****                     {
+ 158:Generated_Source\PSoC4/RX_INT.c ****                         RX_rxBufferWrite = 0u;
+  84              		.loc 1 158 0
+  85 004c 0021     		mov	r1, #0
+  86 004e 0A4A     		ldr	r2, .L7+12
+  87 0050 1170     		strb	r1, [r2]
+  88              	.L5:
+ 159:Generated_Source\PSoC4/RX_INT.c ****                     }
+ 160:Generated_Source\PSoC4/RX_INT.c **** 
+ 161:Generated_Source\PSoC4/RX_INT.c ****                     /* Detect pre-overload condition and set flag */
+ 162:Generated_Source\PSoC4/RX_INT.c ****                     if(RX_rxBufferWrite == RX_rxBufferRead)
+  89              		.loc 1 162 0
+  90 0052 094A     		ldr	r2, .L7+12
+  91 0054 1278     		ldrb	r2, [r2]
+  92 0056 0C49     		ldr	r1, .L7+28
+  93 0058 0978     		ldrb	r1, [r1]
+  94 005a D2B2     		uxtb	r2, r2
+  95 005c 8A42     		cmp	r2, r1
+  96 005e 02D1     		bne	.L3
+ 163:Generated_Source\PSoC4/RX_INT.c ****                     {
+ 164:Generated_Source\PSoC4/RX_INT.c ****                         RX_rxBufferLoopDetect = 1u;
+  97              		.loc 1 164 0
+  98 0060 0121     		mov	r1, #1
+  99 0062 074A     		ldr	r2, .L7+20
+ 100 0064 1170     		strb	r1, [r2]
+ 101              	.LVL5:
+ 102              	.L3:
+ 165:Generated_Source\PSoC4/RX_INT.c ****                         /* When Hardware Flow Control selected */
+ 166:Generated_Source\PSoC4/RX_INT.c ****                         #if (RX_FLOW_CONTROL != 0u)
+ 167:Generated_Source\PSoC4/RX_INT.c ****                             /* Disable RX interrupt mask, it is enabled when user read data from th
+ 168:Generated_Source\PSoC4/RX_INT.c ****                             RX_RXSTATUS_MASK_REG  &= (uint8)~RX_RX_STS_FIFO_NOTEMPTY;
+ 169:Generated_Source\PSoC4/RX_INT.c ****                             CyIntClearPending(RX_RX_VECT_NUM);
+ 170:Generated_Source\PSoC4/RX_INT.c ****                             break; /* Break the reading of the FIFO loop, leave the data there for 
+ 171:Generated_Source\PSoC4/RX_INT.c ****                         #endif /* (RX_FLOW_CONTROL != 0u) */
+ 172:Generated_Source\PSoC4/RX_INT.c ****                     }
+ 173:Generated_Source\PSoC4/RX_INT.c ****                 }
+ 174:Generated_Source\PSoC4/RX_INT.c ****             }
+ 175:Generated_Source\PSoC4/RX_INT.c ****         }while((readStatus & RX_RX_STS_FIFO_NOTEMPTY) != 0u);
+ 103              		.loc 1 175 0
+ 104 0066 002B     		cmp	r3, #0
+ 105 0068 CAD1     		bne	.L6
+ 176:Generated_Source\PSoC4/RX_INT.c **** 
+ 177:Generated_Source\PSoC4/RX_INT.c ****         /* User code required at end of ISR (Optional) */
+ 178:Generated_Source\PSoC4/RX_INT.c ****         /* `#START RX_RXISR_END` */
+ 179:Generated_Source\PSoC4/RX_INT.c **** 
+ 180:Generated_Source\PSoC4/RX_INT.c ****         /* `#END` */
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 6
+
+
+ 181:Generated_Source\PSoC4/RX_INT.c **** 
+ 182:Generated_Source\PSoC4/RX_INT.c ****     #ifdef RX_RXISR_EXIT_CALLBACK
+ 183:Generated_Source\PSoC4/RX_INT.c ****         RX_RXISR_ExitCallback();
+ 184:Generated_Source\PSoC4/RX_INT.c ****     #endif /* RX_RXISR_EXIT_CALLBACK */
+ 185:Generated_Source\PSoC4/RX_INT.c **** 
+ 186:Generated_Source\PSoC4/RX_INT.c ****     #if(CY_PSOC3)
+ 187:Generated_Source\PSoC4/RX_INT.c ****         EA = int_en;
+ 188:Generated_Source\PSoC4/RX_INT.c ****     #endif /* (CY_PSOC3) */
+ 189:Generated_Source\PSoC4/RX_INT.c ****     }
+ 106              		.loc 1 189 0
+ 107              		@ sp needed
+ 108 006a 7047     		bx	lr
+ 109              	.L8:
+ 110              		.align	2
+ 111              	.L7:
+ 112 006c 63000F40 		.word	1074724963
+ 113 0070 00000000 		.word	RX_errorStatus
+ 114 0074 42000F40 		.word	1074724930
+ 115 0078 00000000 		.word	RX_rxBufferWrite
+ 116 007c 00000000 		.word	RX_rxBuffer
+ 117 0080 00000000 		.word	RX_rxBufferLoopDetect
+ 118 0084 00000000 		.word	RX_rxBufferOverflow
+ 119 0088 00000000 		.word	RX_rxBufferRead
+ 120              		.cfi_endproc
+ 121              	.LFE1:
+ 122              		.size	RX_RXISR, .-RX_RXISR
+ 123              		.text
+ 124              	.Letext0:
+ 125              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 126              		.file 3 "Generated_Source\\PSoC4\\RX.h"
+ 127              		.section	.debug_info,"",%progbits
+ 128              	.Ldebug_info0:
+ 129 0000 41010000 		.4byte	0x141
+ 130 0004 0400     		.2byte	0x4
+ 131 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 132 000a 04       		.byte	0x4
+ 133 000b 01       		.uleb128 0x1
+ 134 000c 97000000 		.4byte	.LASF24
+ 135 0010 01       		.byte	0x1
+ 136 0011 3D000000 		.4byte	.LASF25
+ 137 0015 68010000 		.4byte	.LASF26
+ 138 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 139 001d 00000000 		.4byte	0
+ 140 0021 00000000 		.4byte	.Ldebug_line0
+ 141 0025 02       		.uleb128 0x2
+ 142 0026 01       		.byte	0x1
+ 143 0027 06       		.byte	0x6
+ 144 0028 9D010000 		.4byte	.LASF0
+ 145 002c 02       		.uleb128 0x2
+ 146 002d 01       		.byte	0x1
+ 147 002e 08       		.byte	0x8
+ 148 002f 34010000 		.4byte	.LASF1
+ 149 0033 02       		.uleb128 0x2
+ 150 0034 02       		.byte	0x2
+ 151 0035 05       		.byte	0x5
+ 152 0036 DD010000 		.4byte	.LASF2
+ 153 003a 02       		.uleb128 0x2
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 7
+
+
+ 154 003b 02       		.byte	0x2
+ 155 003c 07       		.byte	0x7
+ 156 003d 8A010000 		.4byte	.LASF3
+ 157 0041 02       		.uleb128 0x2
+ 158 0042 04       		.byte	0x4
+ 159 0043 05       		.byte	0x5
+ 160 0044 58010000 		.4byte	.LASF4
+ 161 0048 02       		.uleb128 0x2
+ 162 0049 04       		.byte	0x4
+ 163 004a 07       		.byte	0x7
+ 164 004b 68000000 		.4byte	.LASF5
+ 165 004f 02       		.uleb128 0x2
+ 166 0050 08       		.byte	0x8
+ 167 0051 05       		.byte	0x5
+ 168 0052 00000000 		.4byte	.LASF6
+ 169 0056 02       		.uleb128 0x2
+ 170 0057 08       		.byte	0x8
+ 171 0058 07       		.byte	0x7
+ 172 0059 7A000000 		.4byte	.LASF7
+ 173 005d 03       		.uleb128 0x3
+ 174 005e 04       		.byte	0x4
+ 175 005f 05       		.byte	0x5
+ 176 0060 696E7400 		.ascii	"int\000"
+ 177 0064 02       		.uleb128 0x2
+ 178 0065 04       		.byte	0x4
+ 179 0066 07       		.byte	0x7
+ 180 0067 1E000000 		.4byte	.LASF8
+ 181 006b 04       		.uleb128 0x4
+ 182 006c 62000000 		.4byte	.LASF12
+ 183 0070 02       		.byte	0x2
+ 184 0071 9801     		.2byte	0x198
+ 185 0073 2C000000 		.4byte	0x2c
+ 186 0077 02       		.uleb128 0x2
+ 187 0078 04       		.byte	0x4
+ 188 0079 04       		.byte	0x4
+ 189 007a 91000000 		.4byte	.LASF9
+ 190 007e 02       		.uleb128 0x2
+ 191 007f 08       		.byte	0x8
+ 192 0080 04       		.byte	0x4
+ 193 0081 61010000 		.4byte	.LASF10
+ 194 0085 02       		.uleb128 0x2
+ 195 0086 01       		.byte	0x1
+ 196 0087 08       		.byte	0x8
+ 197 0088 42010000 		.4byte	.LASF11
+ 198 008c 04       		.uleb128 0x4
+ 199 008d 5D000000 		.4byte	.LASF13
+ 200 0091 02       		.byte	0x2
+ 201 0092 4202     		.2byte	0x242
+ 202 0094 98000000 		.4byte	0x98
+ 203 0098 05       		.uleb128 0x5
+ 204 0099 6B000000 		.4byte	0x6b
+ 205 009d 02       		.uleb128 0x2
+ 206 009e 04       		.byte	0x4
+ 207 009f 07       		.byte	0x7
+ 208 00a0 C0010000 		.4byte	.LASF14
+ 209 00a4 06       		.uleb128 0x6
+ 210 00a5 E7010000 		.4byte	.LASF27
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 8
+
+
+ 211 00a9 01       		.byte	0x1
+ 212 00aa 3B       		.byte	0x3b
+ 213 00ab 00000000 		.4byte	.LFB1
+ 214 00af 8C000000 		.4byte	.LFE1-.LFB1
+ 215 00b3 01       		.uleb128 0x1
+ 216 00b4 9C       		.byte	0x9c
+ 217 00b5 E7000000 		.4byte	0xe7
+ 218 00b9 07       		.uleb128 0x7
+ 219 00ba F0010000 		.4byte	.LASF15
+ 220 00be 01       		.byte	0x1
+ 221 00bf 3D       		.byte	0x3d
+ 222 00c0 6B000000 		.4byte	0x6b
+ 223 00c4 00000000 		.4byte	.LLST0
+ 224 00c8 07       		.uleb128 0x7
+ 225 00c9 B5010000 		.4byte	.LASF16
+ 226 00cd 01       		.byte	0x1
+ 227 00ce 3E       		.byte	0x3e
+ 228 00cf 6B000000 		.4byte	0x6b
+ 229 00d3 1E000000 		.4byte	.LLST1
+ 230 00d7 07       		.uleb128 0x7
+ 231 00d8 2B000000 		.4byte	.LASF17
+ 232 00dc 01       		.byte	0x1
+ 233 00dd 3F       		.byte	0x3f
+ 234 00de 6B000000 		.4byte	0x6b
+ 235 00e2 31000000 		.4byte	.LLST2
+ 236 00e6 00       		.byte	0
+ 237 00e7 08       		.uleb128 0x8
+ 238 00e8 25010000 		.4byte	.LASF18
+ 239 00ec 03       		.byte	0x3
+ 240 00ed 3D01     		.2byte	0x13d
+ 241 00ef 6B000000 		.4byte	0x6b
+ 242 00f3 09       		.uleb128 0x9
+ 243 00f4 6B000000 		.4byte	0x6b
+ 244 00f8 03010000 		.4byte	0x103
+ 245 00fc 0A       		.uleb128 0xa
+ 246 00fd 9D000000 		.4byte	0x9d
+ 247 0101 0F       		.byte	0xf
+ 248 0102 00       		.byte	0
+ 249 0103 08       		.uleb128 0x8
+ 250 0104 A9010000 		.4byte	.LASF19
+ 251 0108 03       		.byte	0x3
+ 252 0109 3E01     		.2byte	0x13e
+ 253 010b 0F010000 		.4byte	0x10f
+ 254 010f 05       		.uleb128 0x5
+ 255 0110 F3000000 		.4byte	0xf3
+ 256 0114 08       		.uleb128 0x8
+ 257 0115 0E000000 		.4byte	.LASF20
+ 258 0119 03       		.byte	0x3
+ 259 011a 3F01     		.2byte	0x13f
+ 260 011c 98000000 		.4byte	0x98
+ 261 0120 08       		.uleb128 0x8
+ 262 0121 47010000 		.4byte	.LASF21
+ 263 0125 03       		.byte	0x3
+ 264 0126 4001     		.2byte	0x140
+ 265 0128 98000000 		.4byte	0x98
+ 266 012c 08       		.uleb128 0x8
+ 267 012d F9010000 		.4byte	.LASF22
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 9
+
+
+ 268 0131 03       		.byte	0x3
+ 269 0132 4101     		.2byte	0x141
+ 270 0134 98000000 		.4byte	0x98
+ 271 0138 08       		.uleb128 0x8
+ 272 0139 C9010000 		.4byte	.LASF23
+ 273 013d 03       		.byte	0x3
+ 274 013e 4201     		.2byte	0x142
+ 275 0140 98000000 		.4byte	0x98
+ 276 0144 00       		.byte	0
+ 277              		.section	.debug_abbrev,"",%progbits
+ 278              	.Ldebug_abbrev0:
+ 279 0000 01       		.uleb128 0x1
+ 280 0001 11       		.uleb128 0x11
+ 281 0002 01       		.byte	0x1
+ 282 0003 25       		.uleb128 0x25
+ 283 0004 0E       		.uleb128 0xe
+ 284 0005 13       		.uleb128 0x13
+ 285 0006 0B       		.uleb128 0xb
+ 286 0007 03       		.uleb128 0x3
+ 287 0008 0E       		.uleb128 0xe
+ 288 0009 1B       		.uleb128 0x1b
+ 289 000a 0E       		.uleb128 0xe
+ 290 000b 55       		.uleb128 0x55
+ 291 000c 17       		.uleb128 0x17
+ 292 000d 11       		.uleb128 0x11
+ 293 000e 01       		.uleb128 0x1
+ 294 000f 10       		.uleb128 0x10
+ 295 0010 17       		.uleb128 0x17
+ 296 0011 00       		.byte	0
+ 297 0012 00       		.byte	0
+ 298 0013 02       		.uleb128 0x2
+ 299 0014 24       		.uleb128 0x24
+ 300 0015 00       		.byte	0
+ 301 0016 0B       		.uleb128 0xb
+ 302 0017 0B       		.uleb128 0xb
+ 303 0018 3E       		.uleb128 0x3e
+ 304 0019 0B       		.uleb128 0xb
+ 305 001a 03       		.uleb128 0x3
+ 306 001b 0E       		.uleb128 0xe
+ 307 001c 00       		.byte	0
+ 308 001d 00       		.byte	0
+ 309 001e 03       		.uleb128 0x3
+ 310 001f 24       		.uleb128 0x24
+ 311 0020 00       		.byte	0
+ 312 0021 0B       		.uleb128 0xb
+ 313 0022 0B       		.uleb128 0xb
+ 314 0023 3E       		.uleb128 0x3e
+ 315 0024 0B       		.uleb128 0xb
+ 316 0025 03       		.uleb128 0x3
+ 317 0026 08       		.uleb128 0x8
+ 318 0027 00       		.byte	0
+ 319 0028 00       		.byte	0
+ 320 0029 04       		.uleb128 0x4
+ 321 002a 16       		.uleb128 0x16
+ 322 002b 00       		.byte	0
+ 323 002c 03       		.uleb128 0x3
+ 324 002d 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 10
+
+
+ 325 002e 3A       		.uleb128 0x3a
+ 326 002f 0B       		.uleb128 0xb
+ 327 0030 3B       		.uleb128 0x3b
+ 328 0031 05       		.uleb128 0x5
+ 329 0032 49       		.uleb128 0x49
+ 330 0033 13       		.uleb128 0x13
+ 331 0034 00       		.byte	0
+ 332 0035 00       		.byte	0
+ 333 0036 05       		.uleb128 0x5
+ 334 0037 35       		.uleb128 0x35
+ 335 0038 00       		.byte	0
+ 336 0039 49       		.uleb128 0x49
+ 337 003a 13       		.uleb128 0x13
+ 338 003b 00       		.byte	0
+ 339 003c 00       		.byte	0
+ 340 003d 06       		.uleb128 0x6
+ 341 003e 2E       		.uleb128 0x2e
+ 342 003f 01       		.byte	0x1
+ 343 0040 3F       		.uleb128 0x3f
+ 344 0041 19       		.uleb128 0x19
+ 345 0042 03       		.uleb128 0x3
+ 346 0043 0E       		.uleb128 0xe
+ 347 0044 3A       		.uleb128 0x3a
+ 348 0045 0B       		.uleb128 0xb
+ 349 0046 3B       		.uleb128 0x3b
+ 350 0047 0B       		.uleb128 0xb
+ 351 0048 27       		.uleb128 0x27
+ 352 0049 19       		.uleb128 0x19
+ 353 004a 11       		.uleb128 0x11
+ 354 004b 01       		.uleb128 0x1
+ 355 004c 12       		.uleb128 0x12
+ 356 004d 06       		.uleb128 0x6
+ 357 004e 40       		.uleb128 0x40
+ 358 004f 18       		.uleb128 0x18
+ 359 0050 9742     		.uleb128 0x2117
+ 360 0052 19       		.uleb128 0x19
+ 361 0053 01       		.uleb128 0x1
+ 362 0054 13       		.uleb128 0x13
+ 363 0055 00       		.byte	0
+ 364 0056 00       		.byte	0
+ 365 0057 07       		.uleb128 0x7
+ 366 0058 34       		.uleb128 0x34
+ 367 0059 00       		.byte	0
+ 368 005a 03       		.uleb128 0x3
+ 369 005b 0E       		.uleb128 0xe
+ 370 005c 3A       		.uleb128 0x3a
+ 371 005d 0B       		.uleb128 0xb
+ 372 005e 3B       		.uleb128 0x3b
+ 373 005f 0B       		.uleb128 0xb
+ 374 0060 49       		.uleb128 0x49
+ 375 0061 13       		.uleb128 0x13
+ 376 0062 02       		.uleb128 0x2
+ 377 0063 17       		.uleb128 0x17
+ 378 0064 00       		.byte	0
+ 379 0065 00       		.byte	0
+ 380 0066 08       		.uleb128 0x8
+ 381 0067 34       		.uleb128 0x34
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 11
+
+
+ 382 0068 00       		.byte	0
+ 383 0069 03       		.uleb128 0x3
+ 384 006a 0E       		.uleb128 0xe
+ 385 006b 3A       		.uleb128 0x3a
+ 386 006c 0B       		.uleb128 0xb
+ 387 006d 3B       		.uleb128 0x3b
+ 388 006e 05       		.uleb128 0x5
+ 389 006f 49       		.uleb128 0x49
+ 390 0070 13       		.uleb128 0x13
+ 391 0071 3F       		.uleb128 0x3f
+ 392 0072 19       		.uleb128 0x19
+ 393 0073 3C       		.uleb128 0x3c
+ 394 0074 19       		.uleb128 0x19
+ 395 0075 00       		.byte	0
+ 396 0076 00       		.byte	0
+ 397 0077 09       		.uleb128 0x9
+ 398 0078 01       		.uleb128 0x1
+ 399 0079 01       		.byte	0x1
+ 400 007a 49       		.uleb128 0x49
+ 401 007b 13       		.uleb128 0x13
+ 402 007c 01       		.uleb128 0x1
+ 403 007d 13       		.uleb128 0x13
+ 404 007e 00       		.byte	0
+ 405 007f 00       		.byte	0
+ 406 0080 0A       		.uleb128 0xa
+ 407 0081 21       		.uleb128 0x21
+ 408 0082 00       		.byte	0
+ 409 0083 49       		.uleb128 0x49
+ 410 0084 13       		.uleb128 0x13
+ 411 0085 2F       		.uleb128 0x2f
+ 412 0086 0B       		.uleb128 0xb
+ 413 0087 00       		.byte	0
+ 414 0088 00       		.byte	0
+ 415 0089 00       		.byte	0
+ 416              		.section	.debug_loc,"",%progbits
+ 417              	.Ldebug_loc0:
+ 418              	.LLST0:
+ 419 0000 06000000 		.4byte	.LVL0
+ 420 0004 1A000000 		.4byte	.LVL1
+ 421 0008 0100     		.2byte	0x1
+ 422 000a 53       		.byte	0x53
+ 423 000b 22000000 		.4byte	.LVL2
+ 424 000f 36000000 		.4byte	.LVL4
+ 425 0013 0100     		.2byte	0x1
+ 426 0015 51       		.byte	0x51
+ 427 0016 00000000 		.4byte	0
+ 428 001a 00000000 		.4byte	0
+ 429              	.LLST1:
+ 430 001e 06000000 		.4byte	.LVL0
+ 431 0022 1A000000 		.4byte	.LVL1
+ 432 0026 0100     		.2byte	0x1
+ 433 0028 53       		.byte	0x53
+ 434 0029 00000000 		.4byte	0
+ 435 002d 00000000 		.4byte	0
+ 436              	.LLST2:
+ 437 0031 2C000000 		.4byte	.LVL3
+ 438 0035 66000000 		.4byte	.LVL5
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 12
+
+
+ 439 0039 0200     		.2byte	0x2
+ 440 003b 31       		.byte	0x31
+ 441 003c 9F       		.byte	0x9f
+ 442 003d 00000000 		.4byte	0
+ 443 0041 00000000 		.4byte	0
+ 444              		.section	.debug_aranges,"",%progbits
+ 445 0000 1C000000 		.4byte	0x1c
+ 446 0004 0200     		.2byte	0x2
+ 447 0006 00000000 		.4byte	.Ldebug_info0
+ 448 000a 04       		.byte	0x4
+ 449 000b 00       		.byte	0
+ 450 000c 0000     		.2byte	0
+ 451 000e 0000     		.2byte	0
+ 452 0010 00000000 		.4byte	.LFB1
+ 453 0014 8C000000 		.4byte	.LFE1-.LFB1
+ 454 0018 00000000 		.4byte	0
+ 455 001c 00000000 		.4byte	0
+ 456              		.section	.debug_ranges,"",%progbits
+ 457              	.Ldebug_ranges0:
+ 458 0000 00000000 		.4byte	.LFB1
+ 459 0004 8C000000 		.4byte	.LFE1
+ 460 0008 00000000 		.4byte	0
+ 461 000c 00000000 		.4byte	0
+ 462              		.section	.debug_line,"",%progbits
+ 463              	.Ldebug_line0:
+ 464 0000 78000000 		.section	.debug_str,"MS",%progbits,1
+ 464      02004B00 
+ 464      00000201 
+ 464      FB0E0D00 
+ 464      01010101 
+ 465              	.LASF6:
+ 466 0000 6C6F6E67 		.ascii	"long long int\000"
+ 466      206C6F6E 
+ 466      6720696E 
+ 466      7400
+ 467              	.LASF20:
+ 468 000e 52585F72 		.ascii	"RX_rxBufferRead\000"
+ 468      78427566 
+ 468      66657252 
+ 468      65616400 
+ 469              	.LASF8:
+ 470 001e 756E7369 		.ascii	"unsigned int\000"
+ 470      676E6564 
+ 470      20696E74 
+ 470      00
+ 471              	.LASF17:
+ 472 002b 696E6372 		.ascii	"increment_pointer\000"
+ 472      656D656E 
+ 472      745F706F 
+ 472      696E7465 
+ 472      7200
+ 473              	.LASF25:
+ 474 003d 47656E65 		.ascii	"Generated_Source\\PSoC4\\RX_INT.c\000"
+ 474      72617465 
+ 474      645F536F 
+ 474      75726365 
+ 474      5C50536F 
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 13
+
+
+ 475              	.LASF13:
+ 476 005d 72656738 		.ascii	"reg8\000"
+ 476      00
+ 477              	.LASF12:
+ 478 0062 75696E74 		.ascii	"uint8\000"
+ 478      3800
+ 479              	.LASF5:
+ 480 0068 6C6F6E67 		.ascii	"long unsigned int\000"
+ 480      20756E73 
+ 480      69676E65 
+ 480      6420696E 
+ 480      7400
+ 481              	.LASF7:
+ 482 007a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 482      206C6F6E 
+ 482      6720756E 
+ 482      7369676E 
+ 482      65642069 
+ 483              	.LASF9:
+ 484 0091 666C6F61 		.ascii	"float\000"
+ 484      7400
+ 485              	.LASF24:
+ 486 0097 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 486      4320342E 
+ 486      392E3320 
+ 486      32303135 
+ 486      30333033 
+ 487 00ca 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 487      20726576 
+ 487      6973696F 
+ 487      6E203232 
+ 487      31323230 
+ 488 00fd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 488      66756E63 
+ 488      74696F6E 
+ 488      2D736563 
+ 488      74696F6E 
+ 489              	.LASF18:
+ 490 0125 52585F65 		.ascii	"RX_errorStatus\000"
+ 490      72726F72 
+ 490      53746174 
+ 490      757300
+ 491              	.LASF1:
+ 492 0134 756E7369 		.ascii	"unsigned char\000"
+ 492      676E6564 
+ 492      20636861 
+ 492      7200
+ 493              	.LASF11:
+ 494 0142 63686172 		.ascii	"char\000"
+ 494      00
+ 495              	.LASF21:
+ 496 0147 52585F72 		.ascii	"RX_rxBufferWrite\000"
+ 496      78427566 
+ 496      66657257 
+ 496      72697465 
+ 496      00
+ 497              	.LASF4:
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 14
+
+
+ 498 0158 6C6F6E67 		.ascii	"long int\000"
+ 498      20696E74 
+ 498      00
+ 499              	.LASF10:
+ 500 0161 646F7562 		.ascii	"double\000"
+ 500      6C6500
+ 501              	.LASF26:
+ 502 0168 443A5C68 		.ascii	"D:\\henrry\\empenzando\\modulo.cydsn\000"
+ 502      656E7272 
+ 502      795C656D 
+ 502      70656E7A 
+ 502      616E646F 
+ 503              	.LASF3:
+ 504 018a 73686F72 		.ascii	"short unsigned int\000"
+ 504      7420756E 
+ 504      7369676E 
+ 504      65642069 
+ 504      6E7400
+ 505              	.LASF0:
+ 506 019d 7369676E 		.ascii	"signed char\000"
+ 506      65642063 
+ 506      68617200 
+ 507              	.LASF19:
+ 508 01a9 52585F72 		.ascii	"RX_rxBuffer\000"
+ 508      78427566 
+ 508      66657200 
+ 509              	.LASF16:
+ 510 01b5 72656164 		.ascii	"readStatus\000"
+ 510      53746174 
+ 510      757300
+ 511              	.LASF14:
+ 512 01c0 73697A65 		.ascii	"sizetype\000"
+ 512      74797065 
+ 512      00
+ 513              	.LASF23:
+ 514 01c9 52585F72 		.ascii	"RX_rxBufferOverflow\000"
+ 514      78427566 
+ 514      6665724F 
+ 514      76657266 
+ 514      6C6F7700 
+ 515              	.LASF2:
+ 516 01dd 73686F72 		.ascii	"short int\000"
+ 516      7420696E 
+ 516      7400
+ 517              	.LASF27:
+ 518 01e7 52585F52 		.ascii	"RX_RXISR\000"
+ 518      58495352 
+ 518      00
+ 519              	.LASF15:
+ 520 01f0 72656164 		.ascii	"readData\000"
+ 520      44617461 
+ 520      00
+ 521              	.LASF22:
+ 522 01f9 52585F72 		.ascii	"RX_rxBufferLoopDetect\000"
+ 522      78427566 
+ 522      6665724C 
+ 522      6F6F7044 
+ARM GAS  C:\Users\Andres\AppData\Local\Temp\cc6dYddt.s 			page 15
+
+
+ 522      65746563 
+ 523              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

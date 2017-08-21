@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,79 +25,79 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
   22              		.type	CAN_HFCLK_StartEx, %function
   23              	CAN_HFCLK_StartEx:
   24              	.LFB0:
-  25              		.file 1 ".\\Generated_Source\\PSoC4\\CAN_HFCLK.c"
-   1:.\Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * File Name: CAN_HFCLK.c
-   3:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Version 2.20
-   4:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-   5:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  Description:
-   6:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *   Provides system API for the clocking, interrupts and watchdog timer.
-   7:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-   8:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  Note:
-   9:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *   Documentation of the API's in this file is located in the
-  10:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *   System Reference Guide provided with PSoC Creator.
-  11:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  12:.\Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
-  13:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
-  14:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * You may use this file only in accordance with the license, terms, conditions,
-  15:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  16:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * the software package with which this file was provided.
-  17:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
-  18:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
-  19:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #include <cydevice_trm.h>
-  20:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #include "CAN_HFCLK.h"
-  21:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
-  22:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #if defined CYREG_PERI_DIV_CMD
-  23:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
-  24:.\Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
-  25:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_StartEx
-  26:.\Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
-  27:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  28:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
-  29:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  Starts the clock, aligned to the specified running clock.
-  30:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  31:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
-  32:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 2
+  25              		.file 1 "Generated_Source\\PSoC4\\CAN_HFCLK.c"
+   1:Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/CAN_HFCLK.c **** * File Name: CAN_HFCLK.c
+   3:Generated_Source\PSoC4/CAN_HFCLK.c **** * Version 2.20
+   4:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+   5:Generated_Source\PSoC4/CAN_HFCLK.c **** *  Description:
+   6:Generated_Source\PSoC4/CAN_HFCLK.c **** *   Provides system API for the clocking, interrupts and watchdog timer.
+   7:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+   8:Generated_Source\PSoC4/CAN_HFCLK.c **** *  Note:
+   9:Generated_Source\PSoC4/CAN_HFCLK.c **** *   Documentation of the API's in this file is located in the
+  10:Generated_Source\PSoC4/CAN_HFCLK.c **** *   System Reference Guide provided with PSoC Creator.
+  11:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  12:Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
+  13:Generated_Source\PSoC4/CAN_HFCLK.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC4/CAN_HFCLK.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC4/CAN_HFCLK.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC4/CAN_HFCLK.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
+  18:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+  19:Generated_Source\PSoC4/CAN_HFCLK.c **** #include <cydevice_trm.h>
+  20:Generated_Source\PSoC4/CAN_HFCLK.c **** #include "CAN_HFCLK.h"
+  21:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+  22:Generated_Source\PSoC4/CAN_HFCLK.c **** #if defined CYREG_PERI_DIV_CMD
+  23:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+  24:Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
+  25:Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_StartEx
+  26:Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
+  27:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  28:Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
+  29:Generated_Source\PSoC4/CAN_HFCLK.c **** *  Starts the clock, aligned to the specified running clock.
+  30:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  31:Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
+  32:Generated_Source\PSoC4/CAN_HFCLK.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 2
 
 
-  33:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *    clock is started.
-  34:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  35:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
-  36:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
-  37:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  38:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
-  39:.\Generated_Source\PSoC4/CAN_HFCLK.c **** void CAN_HFCLK_StartEx(uint32 alignClkDiv)
-  40:.\Generated_Source\PSoC4/CAN_HFCLK.c **** {
+  33:Generated_Source\PSoC4/CAN_HFCLK.c **** *    clock is started.
+  34:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  35:Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
+  36:Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
+  37:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  38:Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
+  39:Generated_Source\PSoC4/CAN_HFCLK.c **** void CAN_HFCLK_StartEx(uint32 alignClkDiv)
+  40:Generated_Source\PSoC4/CAN_HFCLK.c **** {
   26              		.loc 1 40 0
   27              		.cfi_startproc
   28              	.LVL0:
   29              	.L2:
-  41:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Make sure any previous start command has finished. */
-  42:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     while((CAN_HFCLK_CMD_REG & CAN_HFCLK_CMD_ENABLE_MASK) != 0u)
+  41:Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Make sure any previous start command has finished. */
+  42:Generated_Source\PSoC4/CAN_HFCLK.c ****     while((CAN_HFCLK_CMD_REG & CAN_HFCLK_CMD_ENABLE_MASK) != 0u)
   30              		.loc 1 42 0 discriminator 1
   31 0000 044B     		ldr	r3, .L3
   32 0002 1B68     		ldr	r3, [r3]
   33 0004 002B     		cmp	r3, #0
   34 0006 FBDB     		blt	.L2
-  43:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     {
-  44:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     }
-  45:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     
-  46:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Specify the target divider and it's alignment divider, and enable. */
-  47:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     CAN_HFCLK_CMD_REG =
-  48:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)CAN_HFCLK__DIV_ID << CAN_HFCLK_CMD_DIV_SHIFT)|
-  49:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         (alignClkDiv << CAN_HFCLK_CMD_PA_DIV_SHIFT) |
+  43:Generated_Source\PSoC4/CAN_HFCLK.c ****     {
+  44:Generated_Source\PSoC4/CAN_HFCLK.c ****     }
+  45:Generated_Source\PSoC4/CAN_HFCLK.c ****     
+  46:Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Specify the target divider and it's alignment divider, and enable. */
+  47:Generated_Source\PSoC4/CAN_HFCLK.c ****     CAN_HFCLK_CMD_REG =
+  48:Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)CAN_HFCLK__DIV_ID << CAN_HFCLK_CMD_DIV_SHIFT)|
+  49:Generated_Source\PSoC4/CAN_HFCLK.c ****         (alignClkDiv << CAN_HFCLK_CMD_PA_DIV_SHIFT) |
   35              		.loc 1 49 0
   36 0008 0002     		lsl	r0, r0, #8
   37              	.LVL1:
   38 000a 034B     		ldr	r3, .L3+4
   39 000c 1843     		orr	r0, r3
-  47:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)CAN_HFCLK__DIV_ID << CAN_HFCLK_CMD_DIV_SHIFT)|
+  47:Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)CAN_HFCLK__DIV_ID << CAN_HFCLK_CMD_DIV_SHIFT)|
   40              		.loc 1 47 0
   41 000e 014B     		ldr	r3, .L3
   42 0010 1860     		str	r0, [r3]
-  50:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         (uint32)CAN_HFCLK_CMD_ENABLE_MASK;
-  51:.\Generated_Source\PSoC4/CAN_HFCLK.c **** }
+  50:Generated_Source\PSoC4/CAN_HFCLK.c ****         (uint32)CAN_HFCLK_CMD_ENABLE_MASK;
+  51:Generated_Source\PSoC4/CAN_HFCLK.c **** }
   43              		.loc 1 51 0
   44              		@ sp needed
   45 0012 7047     		bx	lr
@@ -117,88 +117,88 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
   59              		.type	CAN_HFCLK_Stop, %function
   60              	CAN_HFCLK_Stop:
   61              	.LFB1:
-  52:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 3
+  52:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 3
 
 
-  53:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #else
-  54:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
-  55:.\Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
-  56:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_Start
-  57:.\Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
-  58:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  59:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
-  60:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  Starts the clock.
-  61:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  62:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
-  63:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
-  64:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  65:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
-  66:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
-  67:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  68:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
-  69:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
-  70:.\Generated_Source\PSoC4/CAN_HFCLK.c **** void CAN_HFCLK_Start(void)
-  71:.\Generated_Source\PSoC4/CAN_HFCLK.c **** {
-  72:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Set the bit to enable the clock. */
-  73:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     CAN_HFCLK_ENABLE_REG |= CAN_HFCLK__ENABLE_MASK;
-  74:.\Generated_Source\PSoC4/CAN_HFCLK.c **** }
-  75:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
-  76:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #endif /* CYREG_PERI_DIV_CMD */
-  77:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
-  78:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
-  79:.\Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
-  80:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_Stop
-  81:.\Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
-  82:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  83:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
-  84:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  Stops the clock and returns immediately. This API does not require the
-  85:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  source clock to be running but may return before the hardware is actually
-  86:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  disabled.
-  87:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  88:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
-  89:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
-  90:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  91:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
-  92:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
-  93:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
-  94:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
-  95:.\Generated_Source\PSoC4/CAN_HFCLK.c **** void CAN_HFCLK_Stop(void)
-  96:.\Generated_Source\PSoC4/CAN_HFCLK.c **** {
+  53:Generated_Source\PSoC4/CAN_HFCLK.c **** #else
+  54:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+  55:Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
+  56:Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_Start
+  57:Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
+  58:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  59:Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
+  60:Generated_Source\PSoC4/CAN_HFCLK.c **** *  Starts the clock.
+  61:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  62:Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
+  63:Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
+  64:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  65:Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
+  66:Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
+  67:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  68:Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
+  69:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+  70:Generated_Source\PSoC4/CAN_HFCLK.c **** void CAN_HFCLK_Start(void)
+  71:Generated_Source\PSoC4/CAN_HFCLK.c **** {
+  72:Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Set the bit to enable the clock. */
+  73:Generated_Source\PSoC4/CAN_HFCLK.c ****     CAN_HFCLK_ENABLE_REG |= CAN_HFCLK__ENABLE_MASK;
+  74:Generated_Source\PSoC4/CAN_HFCLK.c **** }
+  75:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+  76:Generated_Source\PSoC4/CAN_HFCLK.c **** #endif /* CYREG_PERI_DIV_CMD */
+  77:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+  78:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+  79:Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
+  80:Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_Stop
+  81:Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
+  82:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  83:Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
+  84:Generated_Source\PSoC4/CAN_HFCLK.c **** *  Stops the clock and returns immediately. This API does not require the
+  85:Generated_Source\PSoC4/CAN_HFCLK.c **** *  source clock to be running but may return before the hardware is actually
+  86:Generated_Source\PSoC4/CAN_HFCLK.c **** *  disabled.
+  87:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  88:Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
+  89:Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
+  90:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  91:Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
+  92:Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
+  93:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+  94:Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
+  95:Generated_Source\PSoC4/CAN_HFCLK.c **** void CAN_HFCLK_Stop(void)
+  96:Generated_Source\PSoC4/CAN_HFCLK.c **** {
   62              		.loc 1 96 0
   63              		.cfi_startproc
   64              	.L6:
-  97:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #if defined CYREG_PERI_DIV_CMD
-  98:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
-  99:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Make sure any previous start command has finished. */
- 100:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     while((CAN_HFCLK_CMD_REG & CAN_HFCLK_CMD_ENABLE_MASK) != 0u)
+  97:Generated_Source\PSoC4/CAN_HFCLK.c **** #if defined CYREG_PERI_DIV_CMD
+  98:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+  99:Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Make sure any previous start command has finished. */
+ 100:Generated_Source\PSoC4/CAN_HFCLK.c ****     while((CAN_HFCLK_CMD_REG & CAN_HFCLK_CMD_ENABLE_MASK) != 0u)
   65              		.loc 1 100 0 discriminator 1
   66 0000 034B     		ldr	r3, .L7
   67 0002 1B68     		ldr	r3, [r3]
   68 0004 002B     		cmp	r3, #0
   69 0006 FBDB     		blt	.L6
- 101:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     {
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 4
+ 101:Generated_Source\PSoC4/CAN_HFCLK.c ****     {
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 4
 
 
- 102:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     }
- 103:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     
- 104:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Specify the target divider and it's alignment divider, and disable. */
- 105:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     CAN_HFCLK_CMD_REG =
+ 102:Generated_Source\PSoC4/CAN_HFCLK.c ****     }
+ 103:Generated_Source\PSoC4/CAN_HFCLK.c ****     
+ 104:Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Specify the target divider and it's alignment divider, and disable. */
+ 105:Generated_Source\PSoC4/CAN_HFCLK.c ****     CAN_HFCLK_CMD_REG =
   70              		.loc 1 105 0
   71 0008 024A     		ldr	r2, .L7+4
   72 000a 014B     		ldr	r3, .L7
   73 000c 1A60     		str	r2, [r3]
- 106:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)CAN_HFCLK__DIV_ID << CAN_HFCLK_CMD_DIV_SHIFT)|
- 107:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)CAN_HFCLK_CMD_DISABLE_MASK);
- 108:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
- 109:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #else
- 110:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
- 111:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Clear the bit to disable the clock. */
- 112:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     CAN_HFCLK_ENABLE_REG &= (uint32)(~CAN_HFCLK__ENABLE_MASK);
- 113:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     
- 114:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #endif /* CYREG_PERI_DIV_CMD */
- 115:.\Generated_Source\PSoC4/CAN_HFCLK.c **** }
+ 106:Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)CAN_HFCLK__DIV_ID << CAN_HFCLK_CMD_DIV_SHIFT)|
+ 107:Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)CAN_HFCLK_CMD_DISABLE_MASK);
+ 108:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+ 109:Generated_Source\PSoC4/CAN_HFCLK.c **** #else
+ 110:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+ 111:Generated_Source\PSoC4/CAN_HFCLK.c ****     /* Clear the bit to disable the clock. */
+ 112:Generated_Source\PSoC4/CAN_HFCLK.c ****     CAN_HFCLK_ENABLE_REG &= (uint32)(~CAN_HFCLK__ENABLE_MASK);
+ 113:Generated_Source\PSoC4/CAN_HFCLK.c ****     
+ 114:Generated_Source\PSoC4/CAN_HFCLK.c **** #endif /* CYREG_PERI_DIV_CMD */
+ 115:Generated_Source\PSoC4/CAN_HFCLK.c **** }
   74              		.loc 1 115 0
   75              		@ sp needed
   76 000e 7047     		bx	lr
@@ -218,27 +218,27 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
   90              		.type	CAN_HFCLK_SetFractionalDividerRegister, %function
   91              	CAN_HFCLK_SetFractionalDividerRegister:
   92              	.LFB2:
- 116:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
- 117:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
- 118:.\Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
- 119:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_SetFractionalDividerRegister
- 120:.\Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
- 121:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 122:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
- 123:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  Modifies the clock divider and the fractional divider.
- 124:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 125:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
- 126:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  clkDivider:  Divider register value (0-65535). This value is NOT the
- 127:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *    divider; the clock hardware divides by clkDivider plus one. For example,
- 128:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *    to divide the clock by 2, this parameter should be set to 1.
- 129:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  fracDivider:  Fractional Divider register value (0-31).
- 130:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
- 131:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
- 132:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 133:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
- 134:.\Generated_Source\PSoC4/CAN_HFCLK.c **** void CAN_HFCLK_SetFractionalDividerRegister(uint16 clkDivider, uint8 clkFractional)
- 135:.\Generated_Source\PSoC4/CAN_HFCLK.c **** {
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 5
+ 116:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+ 117:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+ 118:Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
+ 119:Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_SetFractionalDividerRegister
+ 120:Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
+ 121:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 122:Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
+ 123:Generated_Source\PSoC4/CAN_HFCLK.c **** *  Modifies the clock divider and the fractional divider.
+ 124:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 125:Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
+ 126:Generated_Source\PSoC4/CAN_HFCLK.c **** *  clkDivider:  Divider register value (0-65535). This value is NOT the
+ 127:Generated_Source\PSoC4/CAN_HFCLK.c **** *    divider; the clock hardware divides by clkDivider plus one. For example,
+ 128:Generated_Source\PSoC4/CAN_HFCLK.c **** *    to divide the clock by 2, this parameter should be set to 1.
+ 129:Generated_Source\PSoC4/CAN_HFCLK.c **** *  fracDivider:  Fractional Divider register value (0-31).
+ 130:Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
+ 131:Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
+ 132:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 133:Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
+ 134:Generated_Source\PSoC4/CAN_HFCLK.c **** void CAN_HFCLK_SetFractionalDividerRegister(uint16 clkDivider, uint8 clkFractional)
+ 135:Generated_Source\PSoC4/CAN_HFCLK.c **** {
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 5
 
 
   93              		.loc 1 135 0
@@ -248,57 +248,57 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
   97              		.cfi_def_cfa_offset 8
   98              		.cfi_offset 4, -8
   99              		.cfi_offset 14, -4
- 136:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     uint32 maskVal;
- 137:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     uint32 regVal;
- 138:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     
- 139:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #if defined (CAN_HFCLK__FRAC_MASK) || defined (CYREG_PERI_DIV_CMD)
- 140:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     
- 141:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 	/* get all but divider bits */
- 142:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     maskVal = CAN_HFCLK_DIV_REG & 
+ 136:Generated_Source\PSoC4/CAN_HFCLK.c ****     uint32 maskVal;
+ 137:Generated_Source\PSoC4/CAN_HFCLK.c ****     uint32 regVal;
+ 138:Generated_Source\PSoC4/CAN_HFCLK.c ****     
+ 139:Generated_Source\PSoC4/CAN_HFCLK.c **** #if defined (CAN_HFCLK__FRAC_MASK) || defined (CYREG_PERI_DIV_CMD)
+ 140:Generated_Source\PSoC4/CAN_HFCLK.c ****     
+ 141:Generated_Source\PSoC4/CAN_HFCLK.c **** 	/* get all but divider bits */
+ 142:Generated_Source\PSoC4/CAN_HFCLK.c ****     maskVal = CAN_HFCLK_DIV_REG & 
  100              		.loc 1 142 0
  101 0002 064A     		ldr	r2, .L10
  102 0004 1368     		ldr	r3, [r2]
  103 0006 0724     		mov	r4, #7
  104 0008 2340     		and	r3, r4
  105              	.LVL3:
- 143:.\Generated_Source\PSoC4/CAN_HFCLK.c ****                     (uint32)(~(uint32)(CAN_HFCLK_DIV_INT_MASK | CAN_HFCLK_DIV_FRAC_MASK)); 
- 144:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 	/* combine mask and new divider vals into 32-bit value */
- 145:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     regVal = maskVal |
- 146:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)((uint32)clkDivider <<  CAN_HFCLK_DIV_INT_SHIFT) & CAN_HFCLK_DIV_INT_MASK) |
+ 143:Generated_Source\PSoC4/CAN_HFCLK.c ****                     (uint32)(~(uint32)(CAN_HFCLK_DIV_INT_MASK | CAN_HFCLK_DIV_FRAC_MASK)); 
+ 144:Generated_Source\PSoC4/CAN_HFCLK.c **** 	/* combine mask and new divider vals into 32-bit value */
+ 145:Generated_Source\PSoC4/CAN_HFCLK.c ****     regVal = maskVal |
+ 146:Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)((uint32)clkDivider <<  CAN_HFCLK_DIV_INT_SHIFT) & CAN_HFCLK_DIV_INT_MASK) |
  106              		.loc 1 146 0
  107 000a 0002     		lsl	r0, r0, #8
  108              	.LVL4:
- 145:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)((uint32)clkDivider <<  CAN_HFCLK_DIV_INT_SHIFT) & CAN_HFCLK_DIV_INT_MASK) |
+ 145:Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)((uint32)clkDivider <<  CAN_HFCLK_DIV_INT_SHIFT) & CAN_HFCLK_DIV_INT_MASK) |
  109              		.loc 1 145 0
  110 000c 1843     		orr	r0, r3
- 147:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)((uint32)clkFractional << CAN_HFCLK_DIV_FRAC_SHIFT) & CAN_HFCLK_DIV_FRAC_MASK);
+ 147:Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)((uint32)clkFractional << CAN_HFCLK_DIV_FRAC_SHIFT) & CAN_HFCLK_DIV_FRAC_MASK);
  111              		.loc 1 147 0
  112 000e CB00     		lsl	r3, r1, #3
  113              	.LVL5:
  114 0010 FF21     		mov	r1, #255
  115              	.LVL6:
  116 0012 1940     		and	r1, r3
- 145:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)((uint32)clkDivider <<  CAN_HFCLK_DIV_INT_SHIFT) & CAN_HFCLK_DIV_INT_MASK) |
+ 145:Generated_Source\PSoC4/CAN_HFCLK.c ****         ((uint32)((uint32)clkDivider <<  CAN_HFCLK_DIV_INT_SHIFT) & CAN_HFCLK_DIV_INT_MASK) |
  117              		.loc 1 145 0
  118 0014 0143     		orr	r1, r0
  119              	.LVL7:
- 148:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     
- 149:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #else
- 150:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     /* get all but integer divider bits */
- 151:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     maskVal = CAN_HFCLK_DIV_REG & (uint32)(~(uint32)CAN_HFCLK__DIVIDER_MASK);
- 152:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     /* combine mask and new divider val into 32-bit value */
- 153:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     regVal = clkDivider | maskVal;
- 154:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     
- 155:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #endif /* CAN_HFCLK__FRAC_MASK || CYREG_PERI_DIV_CMD */
- 156:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
- 157:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     CAN_HFCLK_DIV_REG = regVal;
+ 148:Generated_Source\PSoC4/CAN_HFCLK.c ****     
+ 149:Generated_Source\PSoC4/CAN_HFCLK.c **** #else
+ 150:Generated_Source\PSoC4/CAN_HFCLK.c ****     /* get all but integer divider bits */
+ 151:Generated_Source\PSoC4/CAN_HFCLK.c ****     maskVal = CAN_HFCLK_DIV_REG & (uint32)(~(uint32)CAN_HFCLK__DIVIDER_MASK);
+ 152:Generated_Source\PSoC4/CAN_HFCLK.c ****     /* combine mask and new divider val into 32-bit value */
+ 153:Generated_Source\PSoC4/CAN_HFCLK.c ****     regVal = clkDivider | maskVal;
+ 154:Generated_Source\PSoC4/CAN_HFCLK.c ****     
+ 155:Generated_Source\PSoC4/CAN_HFCLK.c **** #endif /* CAN_HFCLK__FRAC_MASK || CYREG_PERI_DIV_CMD */
+ 156:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+ 157:Generated_Source\PSoC4/CAN_HFCLK.c ****     CAN_HFCLK_DIV_REG = regVal;
  120              		.loc 1 157 0
  121 0016 1160     		str	r1, [r2]
- 158:.\Generated_Source\PSoC4/CAN_HFCLK.c **** }
+ 158:Generated_Source\PSoC4/CAN_HFCLK.c **** }
  122              		.loc 1 158 0
  123              		@ sp needed
  124 0018 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 6
 
 
  125              	.L11:
@@ -316,38 +316,38 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  137              		.type	CAN_HFCLK_GetDividerRegister, %function
  138              	CAN_HFCLK_GetDividerRegister:
  139              	.LFB3:
- 159:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
- 160:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
- 161:.\Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
- 162:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_GetDividerRegister
- 163:.\Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
- 164:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 165:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
- 166:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  Gets the clock divider register value.
- 167:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 168:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
- 169:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
- 170:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 171:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
- 172:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  Divide value of the clock minus 1. For example, if the clock is set to
- 173:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  divide by 2, the return value will be 1.
- 174:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 175:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
- 176:.\Generated_Source\PSoC4/CAN_HFCLK.c **** uint16 CAN_HFCLK_GetDividerRegister(void)
- 177:.\Generated_Source\PSoC4/CAN_HFCLK.c **** {
+ 159:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+ 160:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+ 161:Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
+ 162:Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_GetDividerRegister
+ 163:Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
+ 164:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 165:Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
+ 166:Generated_Source\PSoC4/CAN_HFCLK.c **** *  Gets the clock divider register value.
+ 167:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 168:Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
+ 169:Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
+ 170:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 171:Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
+ 172:Generated_Source\PSoC4/CAN_HFCLK.c **** *  Divide value of the clock minus 1. For example, if the clock is set to
+ 173:Generated_Source\PSoC4/CAN_HFCLK.c **** *  divide by 2, the return value will be 1.
+ 174:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 175:Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
+ 176:Generated_Source\PSoC4/CAN_HFCLK.c **** uint16 CAN_HFCLK_GetDividerRegister(void)
+ 177:Generated_Source\PSoC4/CAN_HFCLK.c **** {
  140              		.loc 1 177 0
  141              		.cfi_startproc
- 178:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     return (uint16)((CAN_HFCLK_DIV_REG & CAN_HFCLK_DIV_INT_MASK)
+ 178:Generated_Source\PSoC4/CAN_HFCLK.c ****     return (uint16)((CAN_HFCLK_DIV_REG & CAN_HFCLK_DIV_INT_MASK)
  142              		.loc 1 178 0
  143 0000 024B     		ldr	r3, .L13
  144 0002 1868     		ldr	r0, [r3]
- 179:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         >> CAN_HFCLK_DIV_INT_SHIFT);
+ 179:Generated_Source\PSoC4/CAN_HFCLK.c ****         >> CAN_HFCLK_DIV_INT_SHIFT);
  145              		.loc 1 179 0
  146 0004 000A     		lsr	r0, r0, #8
- 178:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     return (uint16)((CAN_HFCLK_DIV_REG & CAN_HFCLK_DIV_INT_MASK)
+ 178:Generated_Source\PSoC4/CAN_HFCLK.c ****     return (uint16)((CAN_HFCLK_DIV_REG & CAN_HFCLK_DIV_INT_MASK)
  147              		.loc 1 178 0
  148 0006 80B2     		uxth	r0, r0
- 180:.\Generated_Source\PSoC4/CAN_HFCLK.c **** }
+ 180:Generated_Source\PSoC4/CAN_HFCLK.c **** }
  149              		.loc 1 180 0
  150              		@ sp needed
  151 0008 7047     		bx	lr
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  156              		.cfi_endproc
  157              	.LFE3:
  158              		.size	CAN_HFCLK_GetDividerRegister, .-CAN_HFCLK_GetDividerRegister
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 7
 
 
  159              		.section	.text.CAN_HFCLK_GetFractionalDividerRegister,"ax",%progbits
@@ -369,35 +369,35 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  164              		.type	CAN_HFCLK_GetFractionalDividerRegister, %function
  165              	CAN_HFCLK_GetFractionalDividerRegister:
  166              	.LFB4:
- 181:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
- 182:.\Generated_Source\PSoC4/CAN_HFCLK.c **** 
- 183:.\Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
- 184:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_GetFractionalDividerRegister
- 185:.\Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
- 186:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 187:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
- 188:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  Gets the clock fractional divider register value.
- 189:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 190:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
- 191:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
- 192:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 193:.\Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
- 194:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  Fractional Divide value of the clock
- 195:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *  0 if the fractional divider is not in use.
- 196:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *
- 197:.\Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
- 198:.\Generated_Source\PSoC4/CAN_HFCLK.c **** uint8 CAN_HFCLK_GetFractionalDividerRegister(void)
- 199:.\Generated_Source\PSoC4/CAN_HFCLK.c **** {
+ 181:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+ 182:Generated_Source\PSoC4/CAN_HFCLK.c **** 
+ 183:Generated_Source\PSoC4/CAN_HFCLK.c **** /*******************************************************************************
+ 184:Generated_Source\PSoC4/CAN_HFCLK.c **** * Function Name: CAN_HFCLK_GetFractionalDividerRegister
+ 185:Generated_Source\PSoC4/CAN_HFCLK.c **** ********************************************************************************
+ 186:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 187:Generated_Source\PSoC4/CAN_HFCLK.c **** * Summary:
+ 188:Generated_Source\PSoC4/CAN_HFCLK.c **** *  Gets the clock fractional divider register value.
+ 189:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 190:Generated_Source\PSoC4/CAN_HFCLK.c **** * Parameters:
+ 191:Generated_Source\PSoC4/CAN_HFCLK.c **** *  None
+ 192:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 193:Generated_Source\PSoC4/CAN_HFCLK.c **** * Returns:
+ 194:Generated_Source\PSoC4/CAN_HFCLK.c **** *  Fractional Divide value of the clock
+ 195:Generated_Source\PSoC4/CAN_HFCLK.c **** *  0 if the fractional divider is not in use.
+ 196:Generated_Source\PSoC4/CAN_HFCLK.c **** *
+ 197:Generated_Source\PSoC4/CAN_HFCLK.c **** *******************************************************************************/
+ 198:Generated_Source\PSoC4/CAN_HFCLK.c **** uint8 CAN_HFCLK_GetFractionalDividerRegister(void)
+ 199:Generated_Source\PSoC4/CAN_HFCLK.c **** {
  167              		.loc 1 199 0
  168              		.cfi_startproc
- 200:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #if defined (CAN_HFCLK__FRAC_MASK)
- 201:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     /* return fractional divider bits */
- 202:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     return (uint8)((CAN_HFCLK_DIV_REG & CAN_HFCLK_DIV_FRAC_MASK)
- 203:.\Generated_Source\PSoC4/CAN_HFCLK.c ****         >> CAN_HFCLK_DIV_FRAC_SHIFT);
- 204:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #else
- 205:.\Generated_Source\PSoC4/CAN_HFCLK.c ****     return 0u;
- 206:.\Generated_Source\PSoC4/CAN_HFCLK.c **** #endif /* CAN_HFCLK__FRAC_MASK */
- 207:.\Generated_Source\PSoC4/CAN_HFCLK.c **** }
+ 200:Generated_Source\PSoC4/CAN_HFCLK.c **** #if defined (CAN_HFCLK__FRAC_MASK)
+ 201:Generated_Source\PSoC4/CAN_HFCLK.c ****     /* return fractional divider bits */
+ 202:Generated_Source\PSoC4/CAN_HFCLK.c ****     return (uint8)((CAN_HFCLK_DIV_REG & CAN_HFCLK_DIV_FRAC_MASK)
+ 203:Generated_Source\PSoC4/CAN_HFCLK.c ****         >> CAN_HFCLK_DIV_FRAC_SHIFT);
+ 204:Generated_Source\PSoC4/CAN_HFCLK.c **** #else
+ 205:Generated_Source\PSoC4/CAN_HFCLK.c ****     return 0u;
+ 206:Generated_Source\PSoC4/CAN_HFCLK.c **** #endif /* CAN_HFCLK__FRAC_MASK */
+ 207:Generated_Source\PSoC4/CAN_HFCLK.c **** }
  169              		.loc 1 207 0
  170 0000 0020     		mov	r0, #0
  171              		@ sp needed
@@ -415,48 +415,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  183 0006 00000000 		.4byte	.Ldebug_abbrev0
  184 000a 04       		.byte	0x4
  185 000b 01       		.uleb128 0x1
- 186 000c 65010000 		.4byte	.LASF25
+ 186 000c B2010000 		.4byte	.LASF25
  187 0010 01       		.byte	0x1
- 188 0011 3F020000 		.4byte	.LASF26
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 8
+ 188 0011 26000000 		.4byte	.LASF26
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 8
 
 
- 189 0015 CD000000 		.4byte	.LASF27
+ 189 0015 34010000 		.4byte	.LASF27
  190 0019 00000000 		.4byte	.Ldebug_ranges0+0
  191 001d 00000000 		.4byte	0
  192 0021 00000000 		.4byte	.Ldebug_line0
  193 0025 02       		.uleb128 0x2
  194 0026 01       		.byte	0x1
  195 0027 06       		.byte	0x6
- 196 0028 0C020000 		.4byte	.LASF0
+ 196 0028 59020000 		.4byte	.LASF0
  197 002c 02       		.uleb128 0x2
  198 002d 01       		.byte	0x1
  199 002e 08       		.byte	0x8
- 200 002f 26000000 		.4byte	.LASF1
+ 200 002f 49000000 		.4byte	.LASF1
  201 0033 02       		.uleb128 0x2
  202 0034 02       		.byte	0x2
  203 0035 05       		.byte	0x5
- 204 0036 F3010000 		.4byte	.LASF2
+ 204 0036 40020000 		.4byte	.LASF2
  205 003a 02       		.uleb128 0x2
  206 003b 02       		.byte	0x2
  207 003c 07       		.byte	0x7
- 208 003d 46000000 		.4byte	.LASF3
+ 208 003d 69000000 		.4byte	.LASF3
  209 0041 02       		.uleb128 0x2
  210 0042 04       		.byte	0x4
  211 0043 05       		.byte	0x5
- 212 0044 03020000 		.4byte	.LASF4
+ 212 0044 50020000 		.4byte	.LASF4
  213 0048 02       		.uleb128 0x2
  214 0049 04       		.byte	0x4
  215 004a 07       		.byte	0x7
- 216 004b 34000000 		.4byte	.LASF5
+ 216 004b 57000000 		.4byte	.LASF5
  217 004f 02       		.uleb128 0x2
  218 0050 08       		.byte	0x8
  219 0051 05       		.byte	0x5
- 220 0052 52010000 		.4byte	.LASF6
+ 220 0052 9F010000 		.4byte	.LASF6
  221 0056 02       		.uleb128 0x2
  222 0057 08       		.byte	0x8
  223 0058 07       		.byte	0x7
- 224 0059 B6000000 		.4byte	.LASF7
+ 224 0059 D9000000 		.4byte	.LASF7
  225 005d 03       		.uleb128 0x3
  226 005e 04       		.byte	0x4
  227 005f 05       		.byte	0x5
@@ -464,21 +464,21 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  229 0064 02       		.uleb128 0x2
  230 0065 04       		.byte	0x4
  231 0066 07       		.byte	0x7
- 232 0067 A9000000 		.4byte	.LASF8
+ 232 0067 CC000000 		.4byte	.LASF8
  233 006b 04       		.uleb128 0x4
- 234 006c FD010000 		.4byte	.LASF9
+ 234 006c 4A020000 		.4byte	.LASF9
  235 0070 02       		.byte	0x2
  236 0071 9801     		.2byte	0x198
  237 0073 2C000000 		.4byte	0x2c
  238 0077 04       		.uleb128 0x4
- 239 0078 8C000000 		.4byte	.LASF10
+ 239 0078 AF000000 		.4byte	.LASF10
  240 007c 02       		.byte	0x2
  241 007d 9901     		.2byte	0x199
  242 007f 3A000000 		.4byte	0x3a
  243 0083 04       		.uleb128 0x4
- 244 0084 93000000 		.4byte	.LASF11
+ 244 0084 B6000000 		.4byte	.LASF11
  245 0088 02       		.byte	0x2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 9
 
 
  246 0089 9A01     		.2byte	0x19a
@@ -486,15 +486,15 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  248 008f 02       		.uleb128 0x2
  249 0090 04       		.byte	0x4
  250 0091 04       		.byte	0x4
- 251 0092 20000000 		.4byte	.LASF12
+ 251 0092 06000000 		.4byte	.LASF12
  252 0096 02       		.uleb128 0x2
  253 0097 08       		.byte	0x8
  254 0098 04       		.byte	0x4
- 255 0099 64000000 		.4byte	.LASF13
+ 255 0099 87000000 		.4byte	.LASF13
  256 009d 02       		.uleb128 0x2
  257 009e 01       		.byte	0x1
  258 009f 08       		.byte	0x8
- 259 00a0 60010000 		.4byte	.LASF14
+ 259 00a0 AD010000 		.4byte	.LASF14
  260 00a4 04       		.uleb128 0x4
  261 00a5 00000000 		.4byte	.LASF15
  262 00a9 02       		.byte	0x2
@@ -503,7 +503,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  265 00b0 05       		.uleb128 0x5
  266 00b1 83000000 		.4byte	0x83
  267 00b5 06       		.uleb128 0x6
- 268 00b6 0E000000 		.4byte	.LASF16
+ 268 00b6 14000000 		.4byte	.LASF16
  269 00ba 01       		.byte	0x1
  270 00bb 27       		.byte	0x27
  271 00bc 00000000 		.4byte	.LFB0
@@ -512,14 +512,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  274 00c5 9C       		.byte	0x9c
  275 00c6 DA000000 		.4byte	0xda
  276 00ca 07       		.uleb128 0x7
- 277 00cb 72000000 		.4byte	.LASF18
+ 277 00cb 95000000 		.4byte	.LASF18
  278 00cf 01       		.byte	0x1
  279 00d0 27       		.byte	0x27
  280 00d1 83000000 		.4byte	0x83
  281 00d5 00000000 		.4byte	.LLST0
  282 00d9 00       		.byte	0
  283 00da 08       		.uleb128 0x8
- 284 00db 9A000000 		.4byte	.LASF28
+ 284 00db BD000000 		.4byte	.LASF28
  285 00df 01       		.byte	0x1
  286 00e0 5F       		.byte	0x5f
  287 00e1 00000000 		.4byte	.LFB1
@@ -527,7 +527,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  289 00e9 01       		.uleb128 0x1
  290 00ea 9C       		.byte	0x9c
  291 00eb 06       		.uleb128 0x6
- 292 00ec 18020000 		.4byte	.LASF17
+ 292 00ec 65020000 		.4byte	.LASF17
  293 00f0 01       		.byte	0x1
  294 00f1 86       		.byte	0x86
  295 00f2 00000000 		.4byte	.LFB2
@@ -536,28 +536,28 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  298 00fb 9C       		.byte	0x9c
  299 00fc 3B010000 		.4byte	0x13b
  300 0100 07       		.uleb128 0x7
- 301 0101 59000000 		.4byte	.LASF19
+ 301 0101 7C000000 		.4byte	.LASF19
  302 0105 01       		.byte	0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 10
 
 
  303 0106 86       		.byte	0x86
  304 0107 77000000 		.4byte	0x77
  305 010b 21000000 		.4byte	.LLST1
  306 010f 07       		.uleb128 0x7
- 307 0110 7E000000 		.4byte	.LASF20
+ 307 0110 A1000000 		.4byte	.LASF20
  308 0114 01       		.byte	0x1
  309 0115 86       		.byte	0x86
  310 0116 6B000000 		.4byte	0x6b
  311 011a 42000000 		.4byte	.LLST2
  312 011e 09       		.uleb128 0x9
- 313 011f 06000000 		.4byte	.LASF21
+ 313 011f 0C000000 		.4byte	.LASF21
  314 0123 01       		.byte	0x1
  315 0124 88       		.byte	0x88
  316 0125 83000000 		.4byte	0x83
  317 0129 63000000 		.4byte	.LLST3
  318 012d 0A       		.uleb128 0xa
- 319 012e 6B000000 		.4byte	.LASF22
+ 319 012e 8E000000 		.4byte	.LASF22
  320 0132 01       		.byte	0x1
  321 0133 89       		.byte	0x89
  322 0134 83000000 		.4byte	0x83
@@ -565,7 +565,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  324 0139 51       		.byte	0x51
  325 013a 00       		.byte	0
  326 013b 0B       		.uleb128 0xb
- 327 013c 35010000 		.4byte	.LASF23
+ 327 013c 17010000 		.4byte	.LASF23
  328 0140 01       		.byte	0x1
  329 0141 B0       		.byte	0xb0
  330 0142 77000000 		.4byte	0x77
@@ -574,7 +574,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  333 014e 01       		.uleb128 0x1
  334 014f 9C       		.byte	0x9c
  335 0150 0B       		.uleb128 0xb
- 336 0151 0E010000 		.4byte	.LASF24
+ 336 0151 F0000000 		.4byte	.LASF24
  337 0155 01       		.byte	0x1
  338 0156 C6       		.byte	0xc6
  339 0157 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  357 000a 0E       		.uleb128 0xe
  358 000b 55       		.uleb128 0x55
  359 000c 17       		.uleb128 0x17
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 11
 
 
  360 000d 11       		.uleb128 0x11
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  414 0043 0E       		.uleb128 0xe
  415 0044 3A       		.uleb128 0x3a
  416 0045 0B       		.uleb128 0xb
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 12
 
 
  417 0046 3B       		.uleb128 0x3b
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  471 007e 09       		.uleb128 0x9
  472 007f 34       		.uleb128 0x34
  473 0080 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 13
 
 
  474 0081 03       		.uleb128 0x3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  528              	.Ldebug_loc0:
  529              	.LLST0:
  530 0000 00000000 		.4byte	.LVL0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 14
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 14
 
 
  531 0004 0A000000 		.4byte	.LVL1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  585 000e 0000     		.2byte	0
  586 0010 00000000 		.4byte	.LFB0
  587 0014 1C000000 		.4byte	.LFE0-.LFB0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 15
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 15
 
 
  588 0018 00000000 		.4byte	.LFB1
@@ -867,165 +867,169 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 1
  611 002c 00000000 		.4byte	0
  612              		.section	.debug_line,"",%progbits
  613              	.Ldebug_line0:
- 614 0000 D3000000 		.section	.debug_str,"MS",%progbits,1
- 614      02005F00 
+ 614 0000 BA000000 		.section	.debug_str,"MS",%progbits,1
+ 614      02004600 
  614      00000201 
  614      FB0E0D00 
  614      01010101 
  615              	.LASF15:
  616 0000 72656733 		.ascii	"reg32\000"
  616      3200
- 617              	.LASF21:
- 618 0006 6D61736B 		.ascii	"maskVal\000"
- 618      56616C00 
- 619              	.LASF16:
- 620 000e 43414E5F 		.ascii	"CAN_HFCLK_StartEx\000"
- 620      4846434C 
- 620      4B5F5374 
- 620      61727445 
- 620      7800
- 621              	.LASF12:
- 622 0020 666C6F61 		.ascii	"float\000"
- 622      7400
- 623              	.LASF1:
- 624 0026 756E7369 		.ascii	"unsigned char\000"
- 624      676E6564 
- 624      20636861 
- 624      7200
- 625              	.LASF5:
- 626 0034 6C6F6E67 		.ascii	"long unsigned int\000"
- 626      20756E73 
- 626      69676E65 
- 626      6420696E 
- 626      7400
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 16
+ 617              	.LASF12:
+ 618 0006 666C6F61 		.ascii	"float\000"
+ 618      7400
+ 619              	.LASF21:
+ 620 000c 6D61736B 		.ascii	"maskVal\000"
+ 620      56616C00 
+ 621              	.LASF16:
+ 622 0014 43414E5F 		.ascii	"CAN_HFCLK_StartEx\000"
+ 622      4846434C 
+ 622      4B5F5374 
+ 622      61727445 
+ 622      7800
+ 623              	.LASF26:
+ 624 0026 47656E65 		.ascii	"Generated_Source\\PSoC4\\CAN_HFCLK.c\000"
+ 624      72617465 
+ 624      645F536F 
+ 624      75726365 
+ 624      5C50536F 
+ 625              	.LASF1:
+ 626 0049 756E7369 		.ascii	"unsigned char\000"
+ 626      676E6564 
+ 626      20636861 
+ 626      7200
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 16
 
 
- 627              	.LASF3:
- 628 0046 73686F72 		.ascii	"short unsigned int\000"
- 628      7420756E 
- 628      7369676E 
- 628      65642069 
- 628      6E7400
- 629              	.LASF19:
- 630 0059 636C6B44 		.ascii	"clkDivider\000"
- 630      69766964 
- 630      657200
- 631              	.LASF13:
- 632 0064 646F7562 		.ascii	"double\000"
- 632      6C6500
- 633              	.LASF22:
- 634 006b 72656756 		.ascii	"regVal\000"
- 634      616C00
- 635              	.LASF18:
- 636 0072 616C6967 		.ascii	"alignClkDiv\000"
- 636      6E436C6B 
- 636      44697600 
- 637              	.LASF20:
- 638 007e 636C6B46 		.ascii	"clkFractional\000"
- 638      72616374 
- 638      696F6E61 
- 638      6C00
- 639              	.LASF10:
- 640 008c 75696E74 		.ascii	"uint16\000"
- 640      313600
- 641              	.LASF11:
- 642 0093 75696E74 		.ascii	"uint32\000"
- 642      333200
- 643              	.LASF28:
- 644 009a 43414E5F 		.ascii	"CAN_HFCLK_Stop\000"
- 644      4846434C 
- 644      4B5F5374 
- 644      6F7000
- 645              	.LASF8:
- 646 00a9 756E7369 		.ascii	"unsigned int\000"
- 646      676E6564 
- 646      20696E74 
- 646      00
- 647              	.LASF7:
- 648 00b6 6C6F6E67 		.ascii	"long long unsigned int\000"
- 648      206C6F6E 
- 648      6720756E 
- 648      7369676E 
- 648      65642069 
- 649              	.LASF27:
- 650 00cd 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\CAN_ROBOT\\Test_"
- 650      73657273 
- 650      5C48656E 
- 650      72792041 
- 650      6C626572 
- 651 00fb 43414E5F 		.ascii	"CAN_Module_2.cydsn\000"
- 651      4D6F6475 
- 651      6C655F32 
- 651      2E637964 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 17
+ 627              	.LASF5:
+ 628 0057 6C6F6E67 		.ascii	"long unsigned int\000"
+ 628      20756E73 
+ 628      69676E65 
+ 628      6420696E 
+ 628      7400
+ 629              	.LASF3:
+ 630 0069 73686F72 		.ascii	"short unsigned int\000"
+ 630      7420756E 
+ 630      7369676E 
+ 630      65642069 
+ 630      6E7400
+ 631              	.LASF19:
+ 632 007c 636C6B44 		.ascii	"clkDivider\000"
+ 632      69766964 
+ 632      657200
+ 633              	.LASF13:
+ 634 0087 646F7562 		.ascii	"double\000"
+ 634      6C6500
+ 635              	.LASF22:
+ 636 008e 72656756 		.ascii	"regVal\000"
+ 636      616C00
+ 637              	.LASF18:
+ 638 0095 616C6967 		.ascii	"alignClkDiv\000"
+ 638      6E436C6B 
+ 638      44697600 
+ 639              	.LASF20:
+ 640 00a1 636C6B46 		.ascii	"clkFractional\000"
+ 640      72616374 
+ 640      696F6E61 
+ 640      6C00
+ 641              	.LASF10:
+ 642 00af 75696E74 		.ascii	"uint16\000"
+ 642      313600
+ 643              	.LASF11:
+ 644 00b6 75696E74 		.ascii	"uint32\000"
+ 644      333200
+ 645              	.LASF28:
+ 646 00bd 43414E5F 		.ascii	"CAN_HFCLK_Stop\000"
+ 646      4846434C 
+ 646      4B5F5374 
+ 646      6F7000
+ 647              	.LASF8:
+ 648 00cc 756E7369 		.ascii	"unsigned int\000"
+ 648      676E6564 
+ 648      20696E74 
+ 648      00
+ 649              	.LASF7:
+ 650 00d9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 650      206C6F6E 
+ 650      6720756E 
+ 650      7369676E 
+ 650      65642069 
+ 651              	.LASF24:
+ 652 00f0 43414E5F 		.ascii	"CAN_HFCLK_GetFractionalDividerRegister\000"
+ 652      4846434C 
+ 652      4B5F4765 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 17
 
 
- 651      736E00
- 652              	.LASF24:
- 653 010e 43414E5F 		.ascii	"CAN_HFCLK_GetFractionalDividerRegister\000"
- 653      4846434C 
- 653      4B5F4765 
- 653      74467261 
- 653      6374696F 
- 654              	.LASF23:
- 655 0135 43414E5F 		.ascii	"CAN_HFCLK_GetDividerRegister\000"
- 655      4846434C 
- 655      4B5F4765 
- 655      74446976 
- 655      69646572 
- 656              	.LASF6:
- 657 0152 6C6F6E67 		.ascii	"long long int\000"
- 657      206C6F6E 
- 657      6720696E 
- 657      7400
- 658              	.LASF14:
- 659 0160 63686172 		.ascii	"char\000"
- 659      00
- 660              	.LASF25:
- 661 0165 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 661      4320342E 
- 661      392E3320 
- 661      32303135 
- 661      30333033 
- 662 0198 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 662      20726576 
- 662      6973696F 
- 662      6E203232 
- 662      31323230 
- 663 01cb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 663      66756E63 
- 663      74696F6E 
- 663      2D736563 
- 663      74696F6E 
- 664              	.LASF2:
- 665 01f3 73686F72 		.ascii	"short int\000"
- 665      7420696E 
- 665      7400
- 666              	.LASF9:
- 667 01fd 75696E74 		.ascii	"uint8\000"
- 667      3800
- 668              	.LASF4:
- 669 0203 6C6F6E67 		.ascii	"long int\000"
- 669      20696E74 
- 669      00
- 670              	.LASF0:
- 671 020c 7369676E 		.ascii	"signed char\000"
- 671      65642063 
- 671      68617200 
- 672              	.LASF17:
- 673 0218 43414E5F 		.ascii	"CAN_HFCLK_SetFractionalDividerRegister\000"
- 673      4846434C 
- 673      4B5F5365 
- 673      74467261 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnvpn5d.s 			page 18
+ 652      74467261 
+ 652      6374696F 
+ 653              	.LASF23:
+ 654 0117 43414E5F 		.ascii	"CAN_HFCLK_GetDividerRegister\000"
+ 654      4846434C 
+ 654      4B5F4765 
+ 654      74446976 
+ 654      69646572 
+ 655              	.LASF27:
+ 656 0134 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 656      73657273 
+ 656      5C48656E 
+ 656      72792041 
+ 656      6C626572 
+ 657 0162 6F64756C 		.ascii	"odular\\Robot_Test\\Test_CAN_6_Modules\\Test_CAN_Mo"
+ 657      61725C52 
+ 657      6F626F74 
+ 657      5F546573 
+ 657      745C5465 
+ 658 0192 64756C65 		.ascii	"dule_2.cydsn\000"
+ 658      5F322E63 
+ 658      7964736E 
+ 658      00
+ 659              	.LASF6:
+ 660 019f 6C6F6E67 		.ascii	"long long int\000"
+ 660      206C6F6E 
+ 660      6720696E 
+ 660      7400
+ 661              	.LASF14:
+ 662 01ad 63686172 		.ascii	"char\000"
+ 662      00
+ 663              	.LASF25:
+ 664 01b2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 664      4320342E 
+ 664      392E3320 
+ 664      32303135 
+ 664      30333033 
+ 665 01e5 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 665      20726576 
+ 665      6973696F 
+ 665      6E203232 
+ 665      31323230 
+ 666 0218 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 666      66756E63 
+ 666      74696F6E 
+ 666      2D736563 
+ 666      74696F6E 
+ 667              	.LASF2:
+ 668 0240 73686F72 		.ascii	"short int\000"
+ 668      7420696E 
+ 668      7400
+ 669              	.LASF9:
+ 670 024a 75696E74 		.ascii	"uint8\000"
+ 670      3800
+ 671              	.LASF4:
+ 672 0250 6C6F6E67 		.ascii	"long int\000"
+ 672      20696E74 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccmRajvI.s 			page 18
 
 
- 673      6374696F 
- 674              	.LASF26:
- 675 023f 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CAN_HFCLK.c\000"
- 675      6E657261 
- 675      7465645F 
- 675      536F7572 
- 675      63655C50 
- 676              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 672      00
+ 673              	.LASF0:
+ 674 0259 7369676E 		.ascii	"signed char\000"
+ 674      65642063 
+ 674      68617200 
+ 675              	.LASF17:
+ 676 0265 43414E5F 		.ascii	"CAN_HFCLK_SetFractionalDividerRegister\000"
+ 676      4846434C 
+ 676      4B5F5365 
+ 676      74467261 
+ 676      6374696F 
+ 677              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

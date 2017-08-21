@@ -1,6 +1,6 @@
--- Project:   C:\Users\Henry Alberto\Desktop\Test_Robot\Test_CAN_Module_1.cydsn\Test_CAN_Module_1.cyprj
--- Generated: 01/05/2017 17:27:10
--- PSoC Creator  3.3 CP3
+-- Project:   C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_CAN_Module_1.cydsn\Test_CAN_Module_1.cyprj
+-- Generated: 08/11/2017 20:35:10
+-- PSoC Creator  4.0 Update 1
 
 ENTITY Test_CAN_Module_1 IS
     PORT(
@@ -793,7 +793,8 @@ BEGIN
 
     \CAN:isr\:interrupt
         GENERIC MAP(
-            int_type => "10")
+            int_type => "10",
+            is_nmi => 0)
         PORT MAP(
             interrupt => Net_74,
             clock => ClockBlock_HFCLK);

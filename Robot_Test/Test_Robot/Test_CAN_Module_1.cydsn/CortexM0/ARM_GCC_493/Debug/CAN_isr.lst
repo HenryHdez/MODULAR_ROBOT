@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,187 +25,187 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
   22              		.type	CAN_isr_Interrupt, %function
   23              	CAN_isr_Interrupt:
   24              	.LFB4:
-  25              		.file 1 ".\\Generated_Source\\PSoC4\\CAN_isr.c"
-   1:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC4/CAN_isr.c **** * File Name: CAN_isr.c  
-   3:.\Generated_Source\PSoC4/CAN_isr.c **** * Version 1.70
-   4:.\Generated_Source\PSoC4/CAN_isr.c **** *
-   5:.\Generated_Source\PSoC4/CAN_isr.c **** *  Description:
-   6:.\Generated_Source\PSoC4/CAN_isr.c **** *   API for controlling the state of an interrupt.
-   7:.\Generated_Source\PSoC4/CAN_isr.c **** *
-   8:.\Generated_Source\PSoC4/CAN_isr.c **** *
-   9:.\Generated_Source\PSoC4/CAN_isr.c **** *  Note:
-  10:.\Generated_Source\PSoC4/CAN_isr.c **** *
-  11:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
-  12:.\Generated_Source\PSoC4/CAN_isr.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  13:.\Generated_Source\PSoC4/CAN_isr.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  14:.\Generated_Source\PSoC4/CAN_isr.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  15:.\Generated_Source\PSoC4/CAN_isr.c **** * the software package with which this file was provided.
-  16:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
-  17:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  18:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  19:.\Generated_Source\PSoC4/CAN_isr.c **** #include <cydevice_trm.h>
-  20:.\Generated_Source\PSoC4/CAN_isr.c **** #include <CyLib.h>
-  21:.\Generated_Source\PSoC4/CAN_isr.c **** #include <CAN_isr.h>
-  22:.\Generated_Source\PSoC4/CAN_isr.c **** #include "cyapicallbacks.h"
-  23:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  24:.\Generated_Source\PSoC4/CAN_isr.c **** #if !defined(CAN_isr__REMOVED) /* Check for removal by optimization */
-  25:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  26:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
-  27:.\Generated_Source\PSoC4/CAN_isr.c **** *  Place your includes, defines and code here 
-  28:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************/
-  29:.\Generated_Source\PSoC4/CAN_isr.c **** /* `#START CAN_isr_intc` */
-  30:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  31:.\Generated_Source\PSoC4/CAN_isr.c **** /* `#END` */
-  32:.\Generated_Source\PSoC4/CAN_isr.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 2
+  25              		.file 1 "Generated_Source\\PSoC4\\CAN_isr.c"
+   1:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/CAN_isr.c **** * File Name: CAN_isr.c  
+   3:Generated_Source\PSoC4/CAN_isr.c **** * Version 1.70
+   4:Generated_Source\PSoC4/CAN_isr.c **** *
+   5:Generated_Source\PSoC4/CAN_isr.c **** *  Description:
+   6:Generated_Source\PSoC4/CAN_isr.c **** *   API for controlling the state of an interrupt.
+   7:Generated_Source\PSoC4/CAN_isr.c **** *
+   8:Generated_Source\PSoC4/CAN_isr.c **** *
+   9:Generated_Source\PSoC4/CAN_isr.c **** *  Note:
+  10:Generated_Source\PSoC4/CAN_isr.c **** *
+  11:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+  12:Generated_Source\PSoC4/CAN_isr.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC4/CAN_isr.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:Generated_Source\PSoC4/CAN_isr.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:Generated_Source\PSoC4/CAN_isr.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+  17:Generated_Source\PSoC4/CAN_isr.c **** 
+  18:Generated_Source\PSoC4/CAN_isr.c **** 
+  19:Generated_Source\PSoC4/CAN_isr.c **** #include <cydevice_trm.h>
+  20:Generated_Source\PSoC4/CAN_isr.c **** #include <CyLib.h>
+  21:Generated_Source\PSoC4/CAN_isr.c **** #include <CAN_isr.h>
+  22:Generated_Source\PSoC4/CAN_isr.c **** #include "cyapicallbacks.h"
+  23:Generated_Source\PSoC4/CAN_isr.c **** 
+  24:Generated_Source\PSoC4/CAN_isr.c **** #if !defined(CAN_isr__REMOVED) /* Check for removal by optimization */
+  25:Generated_Source\PSoC4/CAN_isr.c **** 
+  26:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+  27:Generated_Source\PSoC4/CAN_isr.c **** *  Place your includes, defines and code here 
+  28:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************/
+  29:Generated_Source\PSoC4/CAN_isr.c **** /* `#START CAN_isr_intc` */
+  30:Generated_Source\PSoC4/CAN_isr.c **** 
+  31:Generated_Source\PSoC4/CAN_isr.c **** /* `#END` */
+  32:Generated_Source\PSoC4/CAN_isr.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 2
 
 
-  33:.\Generated_Source\PSoC4/CAN_isr.c **** extern cyisraddress CyRamVectors[CYINT_IRQ_BASE + CY_NUM_INTERRUPTS];
-  34:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  35:.\Generated_Source\PSoC4/CAN_isr.c **** /* Declared in startup, used to set unused interrupts to. */
-  36:.\Generated_Source\PSoC4/CAN_isr.c **** CY_ISR_PROTO(IntDefaultHandler);
-  37:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  38:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  39:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
-  40:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_Start
-  41:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
-  42:.\Generated_Source\PSoC4/CAN_isr.c **** *
-  43:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
-  44:.\Generated_Source\PSoC4/CAN_isr.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
-  45:.\Generated_Source\PSoC4/CAN_isr.c **** *  sets the default interrupt vector, sets the priority from the value in the
-  46:.\Generated_Source\PSoC4/CAN_isr.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
-  47:.\Generated_Source\PSoC4/CAN_isr.c **** *  interrupt controller.
-  48:.\Generated_Source\PSoC4/CAN_isr.c **** *
-  49:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:  
-  50:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
-  51:.\Generated_Source\PSoC4/CAN_isr.c **** *
-  52:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
-  53:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
-  54:.\Generated_Source\PSoC4/CAN_isr.c **** *
-  55:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
-  56:.\Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_Start(void)
-  57:.\Generated_Source\PSoC4/CAN_isr.c **** {
-  58:.\Generated_Source\PSoC4/CAN_isr.c ****     /* For all we know the interrupt is active. */
-  59:.\Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_Disable();
-  60:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  61:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Set the ISR to point to the CAN_isr Interrupt. */
-  62:.\Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_SetVector(&CAN_isr_Interrupt);
-  63:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  64:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Set the priority. */
-  65:.\Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_SetPriority((uint8)CAN_isr_INTC_PRIOR_NUMBER);
-  66:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  67:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Enable it. */
-  68:.\Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_Enable();
-  69:.\Generated_Source\PSoC4/CAN_isr.c **** }
-  70:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  71:.\Generated_Source\PSoC4/CAN_isr.c **** 
-  72:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
-  73:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_StartEx
-  74:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
-  75:.\Generated_Source\PSoC4/CAN_isr.c **** *
-  76:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
-  77:.\Generated_Source\PSoC4/CAN_isr.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
-  78:.\Generated_Source\PSoC4/CAN_isr.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
-  79:.\Generated_Source\PSoC4/CAN_isr.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
-  80:.\Generated_Source\PSoC4/CAN_isr.c **** *  the interrupt to the interrupt controller.
-  81:.\Generated_Source\PSoC4/CAN_isr.c **** *  
-  82:.\Generated_Source\PSoC4/CAN_isr.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
-  83:.\Generated_Source\PSoC4/CAN_isr.c **** *  used to provide consistent definition across compilers:
-  84:.\Generated_Source\PSoC4/CAN_isr.c **** *  
-  85:.\Generated_Source\PSoC4/CAN_isr.c **** *  Function definition example:
-  86:.\Generated_Source\PSoC4/CAN_isr.c **** *   CY_ISR(MyISR)
-  87:.\Generated_Source\PSoC4/CAN_isr.c **** *   {
-  88:.\Generated_Source\PSoC4/CAN_isr.c **** *   }
-  89:.\Generated_Source\PSoC4/CAN_isr.c **** *   Function prototype example:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 3
+  33:Generated_Source\PSoC4/CAN_isr.c **** extern cyisraddress CyRamVectors[CYINT_IRQ_BASE + CY_NUM_INTERRUPTS];
+  34:Generated_Source\PSoC4/CAN_isr.c **** 
+  35:Generated_Source\PSoC4/CAN_isr.c **** /* Declared in startup, used to set unused interrupts to. */
+  36:Generated_Source\PSoC4/CAN_isr.c **** CY_ISR_PROTO(IntDefaultHandler);
+  37:Generated_Source\PSoC4/CAN_isr.c **** 
+  38:Generated_Source\PSoC4/CAN_isr.c **** 
+  39:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+  40:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_Start
+  41:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+  42:Generated_Source\PSoC4/CAN_isr.c **** *
+  43:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+  44:Generated_Source\PSoC4/CAN_isr.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
+  45:Generated_Source\PSoC4/CAN_isr.c **** *  sets the default interrupt vector, sets the priority from the value in the
+  46:Generated_Source\PSoC4/CAN_isr.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
+  47:Generated_Source\PSoC4/CAN_isr.c **** *  interrupt controller.
+  48:Generated_Source\PSoC4/CAN_isr.c **** *
+  49:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:  
+  50:Generated_Source\PSoC4/CAN_isr.c **** *   None
+  51:Generated_Source\PSoC4/CAN_isr.c **** *
+  52:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+  53:Generated_Source\PSoC4/CAN_isr.c **** *   None
+  54:Generated_Source\PSoC4/CAN_isr.c **** *
+  55:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+  56:Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_Start(void)
+  57:Generated_Source\PSoC4/CAN_isr.c **** {
+  58:Generated_Source\PSoC4/CAN_isr.c ****     /* For all we know the interrupt is active. */
+  59:Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_Disable();
+  60:Generated_Source\PSoC4/CAN_isr.c **** 
+  61:Generated_Source\PSoC4/CAN_isr.c ****     /* Set the ISR to point to the CAN_isr Interrupt. */
+  62:Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_SetVector(&CAN_isr_Interrupt);
+  63:Generated_Source\PSoC4/CAN_isr.c **** 
+  64:Generated_Source\PSoC4/CAN_isr.c ****     /* Set the priority. */
+  65:Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_SetPriority((uint8)CAN_isr_INTC_PRIOR_NUMBER);
+  66:Generated_Source\PSoC4/CAN_isr.c **** 
+  67:Generated_Source\PSoC4/CAN_isr.c ****     /* Enable it. */
+  68:Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_Enable();
+  69:Generated_Source\PSoC4/CAN_isr.c **** }
+  70:Generated_Source\PSoC4/CAN_isr.c **** 
+  71:Generated_Source\PSoC4/CAN_isr.c **** 
+  72:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+  73:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_StartEx
+  74:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+  75:Generated_Source\PSoC4/CAN_isr.c **** *
+  76:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+  77:Generated_Source\PSoC4/CAN_isr.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
+  78:Generated_Source\PSoC4/CAN_isr.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
+  79:Generated_Source\PSoC4/CAN_isr.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
+  80:Generated_Source\PSoC4/CAN_isr.c **** *  the interrupt to the interrupt controller.
+  81:Generated_Source\PSoC4/CAN_isr.c **** *  
+  82:Generated_Source\PSoC4/CAN_isr.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+  83:Generated_Source\PSoC4/CAN_isr.c **** *  used to provide consistent definition across compilers:
+  84:Generated_Source\PSoC4/CAN_isr.c **** *  
+  85:Generated_Source\PSoC4/CAN_isr.c **** *  Function definition example:
+  86:Generated_Source\PSoC4/CAN_isr.c **** *   CY_ISR(MyISR)
+  87:Generated_Source\PSoC4/CAN_isr.c **** *   {
+  88:Generated_Source\PSoC4/CAN_isr.c **** *   }
+  89:Generated_Source\PSoC4/CAN_isr.c **** *   Function prototype example:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 3
 
 
-  90:.\Generated_Source\PSoC4/CAN_isr.c **** *   CY_ISR_PROTO(MyISR);
-  91:.\Generated_Source\PSoC4/CAN_isr.c **** *
-  92:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:  
-  93:.\Generated_Source\PSoC4/CAN_isr.c **** *   address: Address of the ISR to set in the interrupt vector table.
-  94:.\Generated_Source\PSoC4/CAN_isr.c **** *
-  95:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
-  96:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
-  97:.\Generated_Source\PSoC4/CAN_isr.c **** *
-  98:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
-  99:.\Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_StartEx(cyisraddress address)
- 100:.\Generated_Source\PSoC4/CAN_isr.c **** {
- 101:.\Generated_Source\PSoC4/CAN_isr.c ****     /* For all we know the interrupt is active. */
- 102:.\Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_Disable();
- 103:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 104:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Set the ISR to point to the CAN_isr Interrupt. */
- 105:.\Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_SetVector(address);
- 106:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 107:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Set the priority. */
- 108:.\Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_SetPriority((uint8)CAN_isr_INTC_PRIOR_NUMBER);
- 109:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 110:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Enable it. */
- 111:.\Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_Enable();
- 112:.\Generated_Source\PSoC4/CAN_isr.c **** }
- 113:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 114:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 115:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 116:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_Stop
- 117:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 118:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 119:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
- 120:.\Generated_Source\PSoC4/CAN_isr.c **** *   Disables and removes the interrupt.
- 121:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 122:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:  
- 123:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 124:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 125:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 126:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 127:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 128:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 129:.\Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_Stop(void)
- 130:.\Generated_Source\PSoC4/CAN_isr.c **** {
- 131:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Disable this interrupt. */
- 132:.\Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_Disable();
- 133:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 134:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Set the ISR to point to the passive one. */
- 135:.\Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_SetVector(&IntDefaultHandler);
- 136:.\Generated_Source\PSoC4/CAN_isr.c **** }
- 137:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 138:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 139:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 140:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_Interrupt
- 141:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 142:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 143:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
- 144:.\Generated_Source\PSoC4/CAN_isr.c **** *   The default Interrupt Service Routine for CAN_isr.
- 145:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 146:.\Generated_Source\PSoC4/CAN_isr.c **** *   Add custom code between the START and END comments to keep the next version
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 4
+  90:Generated_Source\PSoC4/CAN_isr.c **** *   CY_ISR_PROTO(MyISR);
+  91:Generated_Source\PSoC4/CAN_isr.c **** *
+  92:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:  
+  93:Generated_Source\PSoC4/CAN_isr.c **** *   address: Address of the ISR to set in the interrupt vector table.
+  94:Generated_Source\PSoC4/CAN_isr.c **** *
+  95:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+  96:Generated_Source\PSoC4/CAN_isr.c **** *   None
+  97:Generated_Source\PSoC4/CAN_isr.c **** *
+  98:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+  99:Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_StartEx(cyisraddress address)
+ 100:Generated_Source\PSoC4/CAN_isr.c **** {
+ 101:Generated_Source\PSoC4/CAN_isr.c ****     /* For all we know the interrupt is active. */
+ 102:Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_Disable();
+ 103:Generated_Source\PSoC4/CAN_isr.c **** 
+ 104:Generated_Source\PSoC4/CAN_isr.c ****     /* Set the ISR to point to the CAN_isr Interrupt. */
+ 105:Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_SetVector(address);
+ 106:Generated_Source\PSoC4/CAN_isr.c **** 
+ 107:Generated_Source\PSoC4/CAN_isr.c ****     /* Set the priority. */
+ 108:Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_SetPriority((uint8)CAN_isr_INTC_PRIOR_NUMBER);
+ 109:Generated_Source\PSoC4/CAN_isr.c **** 
+ 110:Generated_Source\PSoC4/CAN_isr.c ****     /* Enable it. */
+ 111:Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_Enable();
+ 112:Generated_Source\PSoC4/CAN_isr.c **** }
+ 113:Generated_Source\PSoC4/CAN_isr.c **** 
+ 114:Generated_Source\PSoC4/CAN_isr.c **** 
+ 115:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 116:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_Stop
+ 117:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 118:Generated_Source\PSoC4/CAN_isr.c **** *
+ 119:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ 120:Generated_Source\PSoC4/CAN_isr.c **** *   Disables and removes the interrupt.
+ 121:Generated_Source\PSoC4/CAN_isr.c **** *
+ 122:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:  
+ 123:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 124:Generated_Source\PSoC4/CAN_isr.c **** *
+ 125:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 126:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 127:Generated_Source\PSoC4/CAN_isr.c **** *
+ 128:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 129:Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_Stop(void)
+ 130:Generated_Source\PSoC4/CAN_isr.c **** {
+ 131:Generated_Source\PSoC4/CAN_isr.c ****     /* Disable this interrupt. */
+ 132:Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_Disable();
+ 133:Generated_Source\PSoC4/CAN_isr.c **** 
+ 134:Generated_Source\PSoC4/CAN_isr.c ****     /* Set the ISR to point to the passive one. */
+ 135:Generated_Source\PSoC4/CAN_isr.c ****     CAN_isr_SetVector(&IntDefaultHandler);
+ 136:Generated_Source\PSoC4/CAN_isr.c **** }
+ 137:Generated_Source\PSoC4/CAN_isr.c **** 
+ 138:Generated_Source\PSoC4/CAN_isr.c **** 
+ 139:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 140:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_Interrupt
+ 141:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 142:Generated_Source\PSoC4/CAN_isr.c **** *
+ 143:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ 144:Generated_Source\PSoC4/CAN_isr.c **** *   The default Interrupt Service Routine for CAN_isr.
+ 145:Generated_Source\PSoC4/CAN_isr.c **** *
+ 146:Generated_Source\PSoC4/CAN_isr.c **** *   Add custom code between the START and END comments to keep the next version
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 4
 
 
- 147:.\Generated_Source\PSoC4/CAN_isr.c **** *   of this file from over-writing your code.
- 148:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 149:.\Generated_Source\PSoC4/CAN_isr.c **** *   Note You may use either the default ISR by using this API, or you may define
- 150:.\Generated_Source\PSoC4/CAN_isr.c **** *   your own separate ISR through ISR_StartEx().
- 151:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 152:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:  
- 153:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 154:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 155:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 156:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 157:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 158:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 159:.\Generated_Source\PSoC4/CAN_isr.c **** CY_ISR(CAN_isr_Interrupt)
- 160:.\Generated_Source\PSoC4/CAN_isr.c **** {
+ 147:Generated_Source\PSoC4/CAN_isr.c **** *   of this file from over-writing your code.
+ 148:Generated_Source\PSoC4/CAN_isr.c **** *
+ 149:Generated_Source\PSoC4/CAN_isr.c **** *   Note You may use either the default ISR by using this API, or you may define
+ 150:Generated_Source\PSoC4/CAN_isr.c **** *   your own separate ISR through ISR_StartEx().
+ 151:Generated_Source\PSoC4/CAN_isr.c **** *
+ 152:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:  
+ 153:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 154:Generated_Source\PSoC4/CAN_isr.c **** *
+ 155:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 156:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 157:Generated_Source\PSoC4/CAN_isr.c **** *
+ 158:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 159:Generated_Source\PSoC4/CAN_isr.c **** CY_ISR(CAN_isr_Interrupt)
+ 160:Generated_Source\PSoC4/CAN_isr.c **** {
   26              		.loc 1 160 0
   27              		.cfi_startproc
- 161:.\Generated_Source\PSoC4/CAN_isr.c ****     #ifdef CAN_isr_INTERRUPT_INTERRUPT_CALLBACK
- 162:.\Generated_Source\PSoC4/CAN_isr.c ****         CAN_isr_Interrupt_InterruptCallback();
- 163:.\Generated_Source\PSoC4/CAN_isr.c ****     #endif /* CAN_isr_INTERRUPT_INTERRUPT_CALLBACK */ 
- 164:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 165:.\Generated_Source\PSoC4/CAN_isr.c ****     /*  Place your Interrupt code here. */
- 166:.\Generated_Source\PSoC4/CAN_isr.c ****     /* `#START CAN_isr_Interrupt` */
- 167:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 168:.\Generated_Source\PSoC4/CAN_isr.c ****     /* `#END` */
- 169:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 161:Generated_Source\PSoC4/CAN_isr.c ****     #ifdef CAN_isr_INTERRUPT_INTERRUPT_CALLBACK
+ 162:Generated_Source\PSoC4/CAN_isr.c ****         CAN_isr_Interrupt_InterruptCallback();
+ 163:Generated_Source\PSoC4/CAN_isr.c ****     #endif /* CAN_isr_INTERRUPT_INTERRUPT_CALLBACK */ 
+ 164:Generated_Source\PSoC4/CAN_isr.c **** 
+ 165:Generated_Source\PSoC4/CAN_isr.c ****     /*  Place your Interrupt code here. */
+ 166:Generated_Source\PSoC4/CAN_isr.c ****     /* `#START CAN_isr_Interrupt` */
+ 167:Generated_Source\PSoC4/CAN_isr.c **** 
+ 168:Generated_Source\PSoC4/CAN_isr.c ****     /* `#END` */
+ 169:Generated_Source\PSoC4/CAN_isr.c **** }
   28              		.loc 1 169 0
   29              		@ sp needed
   30 0000 7047     		bx	lr
@@ -220,49 +220,49 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
   39              		.type	CAN_isr_SetVector, %function
   40              	CAN_isr_SetVector:
   41              	.LFB5:
- 170:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 171:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 172:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 173:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_SetVector
- 174:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 175:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 176:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
- 177:.\Generated_Source\PSoC4/CAN_isr.c **** *   Change the ISR vector for the Interrupt. Note calling CAN_isr_Start
- 178:.\Generated_Source\PSoC4/CAN_isr.c **** *   will override any effect this method would have had. To set the vector 
- 179:.\Generated_Source\PSoC4/CAN_isr.c **** *   before the component has been started use CAN_isr_StartEx instead.
- 180:.\Generated_Source\PSoC4/CAN_isr.c **** * 
- 181:.\Generated_Source\PSoC4/CAN_isr.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
- 182:.\Generated_Source\PSoC4/CAN_isr.c **** *   used to provide consistent definition across compilers:
- 183:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 184:.\Generated_Source\PSoC4/CAN_isr.c **** *   Function definition example:
- 185:.\Generated_Source\PSoC4/CAN_isr.c **** *   CY_ISR(MyISR)
- 186:.\Generated_Source\PSoC4/CAN_isr.c **** *   {
- 187:.\Generated_Source\PSoC4/CAN_isr.c **** *   }
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 5
+ 170:Generated_Source\PSoC4/CAN_isr.c **** 
+ 171:Generated_Source\PSoC4/CAN_isr.c **** 
+ 172:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 173:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_SetVector
+ 174:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 175:Generated_Source\PSoC4/CAN_isr.c **** *
+ 176:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ 177:Generated_Source\PSoC4/CAN_isr.c **** *   Change the ISR vector for the Interrupt. Note calling CAN_isr_Start
+ 178:Generated_Source\PSoC4/CAN_isr.c **** *   will override any effect this method would have had. To set the vector 
+ 179:Generated_Source\PSoC4/CAN_isr.c **** *   before the component has been started use CAN_isr_StartEx instead.
+ 180:Generated_Source\PSoC4/CAN_isr.c **** * 
+ 181:Generated_Source\PSoC4/CAN_isr.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+ 182:Generated_Source\PSoC4/CAN_isr.c **** *   used to provide consistent definition across compilers:
+ 183:Generated_Source\PSoC4/CAN_isr.c **** *
+ 184:Generated_Source\PSoC4/CAN_isr.c **** *   Function definition example:
+ 185:Generated_Source\PSoC4/CAN_isr.c **** *   CY_ISR(MyISR)
+ 186:Generated_Source\PSoC4/CAN_isr.c **** *   {
+ 187:Generated_Source\PSoC4/CAN_isr.c **** *   }
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 5
 
 
- 188:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 189:.\Generated_Source\PSoC4/CAN_isr.c **** *   Function prototype example:
- 190:.\Generated_Source\PSoC4/CAN_isr.c **** *     CY_ISR_PROTO(MyISR);
- 191:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 192:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
- 193:.\Generated_Source\PSoC4/CAN_isr.c **** *   address: Address of the ISR to set in the interrupt vector table.
- 194:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 195:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 196:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 197:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 198:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 199:.\Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_SetVector(cyisraddress address)
- 200:.\Generated_Source\PSoC4/CAN_isr.c **** {
+ 188:Generated_Source\PSoC4/CAN_isr.c **** *
+ 189:Generated_Source\PSoC4/CAN_isr.c **** *   Function prototype example:
+ 190:Generated_Source\PSoC4/CAN_isr.c **** *     CY_ISR_PROTO(MyISR);
+ 191:Generated_Source\PSoC4/CAN_isr.c **** *
+ 192:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
+ 193:Generated_Source\PSoC4/CAN_isr.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 194:Generated_Source\PSoC4/CAN_isr.c **** *
+ 195:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 196:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 197:Generated_Source\PSoC4/CAN_isr.c **** *
+ 198:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 199:Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_SetVector(cyisraddress address)
+ 200:Generated_Source\PSoC4/CAN_isr.c **** {
   42              		.loc 1 200 0
   43              		.cfi_startproc
   44              	.LVL0:
- 201:.\Generated_Source\PSoC4/CAN_isr.c ****     CyRamVectors[CYINT_IRQ_BASE + CAN_isr__INTC_NUMBER] = address;
+ 201:Generated_Source\PSoC4/CAN_isr.c ****     CyRamVectors[CYINT_IRQ_BASE + CAN_isr__INTC_NUMBER] = address;
   45              		.loc 1 201 0
   46 0000 AC23     		mov	r3, #172
   47 0002 014A     		ldr	r2, .L3
   48 0004 D050     		str	r0, [r2, r3]
- 202:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 202:Generated_Source\PSoC4/CAN_isr.c **** }
   49              		.loc 1 202 0
   50              		@ sp needed
   51 0006 7047     		bx	lr
@@ -281,35 +281,35 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
   64              		.type	CAN_isr_GetVector, %function
   65              	CAN_isr_GetVector:
   66              	.LFB6:
- 203:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 204:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 205:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 206:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_GetVector
- 207:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 208:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 209:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
- 210:.\Generated_Source\PSoC4/CAN_isr.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
- 211:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 212:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
- 213:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 214:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 215:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 216:.\Generated_Source\PSoC4/CAN_isr.c **** *   Address of the ISR in the interrupt vector table.
- 217:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 218:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 219:.\Generated_Source\PSoC4/CAN_isr.c **** cyisraddress CAN_isr_GetVector(void)
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 6
+ 203:Generated_Source\PSoC4/CAN_isr.c **** 
+ 204:Generated_Source\PSoC4/CAN_isr.c **** 
+ 205:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 206:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_GetVector
+ 207:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 208:Generated_Source\PSoC4/CAN_isr.c **** *
+ 209:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ 210:Generated_Source\PSoC4/CAN_isr.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
+ 211:Generated_Source\PSoC4/CAN_isr.c **** *
+ 212:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
+ 213:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 214:Generated_Source\PSoC4/CAN_isr.c **** *
+ 215:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 216:Generated_Source\PSoC4/CAN_isr.c **** *   Address of the ISR in the interrupt vector table.
+ 217:Generated_Source\PSoC4/CAN_isr.c **** *
+ 218:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 219:Generated_Source\PSoC4/CAN_isr.c **** cyisraddress CAN_isr_GetVector(void)
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 6
 
 
- 220:.\Generated_Source\PSoC4/CAN_isr.c **** {
+ 220:Generated_Source\PSoC4/CAN_isr.c **** {
   67              		.loc 1 220 0
   68              		.cfi_startproc
- 221:.\Generated_Source\PSoC4/CAN_isr.c ****     return CyRamVectors[CYINT_IRQ_BASE + CAN_isr__INTC_NUMBER];
+ 221:Generated_Source\PSoC4/CAN_isr.c ****     return CyRamVectors[CYINT_IRQ_BASE + CAN_isr__INTC_NUMBER];
   69              		.loc 1 221 0
   70 0000 AC23     		mov	r3, #172
   71 0002 014A     		ldr	r2, .L6
   72 0004 D058     		ldr	r0, [r2, r3]
- 222:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 222:Generated_Source\PSoC4/CAN_isr.c **** }
   73              		.loc 1 222 0
   74              		@ sp needed
   75 0006 7047     		bx	lr
@@ -328,37 +328,37 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
   88              		.type	CAN_isr_SetPriority, %function
   89              	CAN_isr_SetPriority:
   90              	.LFB7:
- 223:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 224:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 225:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 226:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_SetPriority
- 227:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 228:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 229:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
- 230:.\Generated_Source\PSoC4/CAN_isr.c **** *   Sets the Priority of the Interrupt. 
- 231:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 232:.\Generated_Source\PSoC4/CAN_isr.c **** *   Note calling CAN_isr_Start or CAN_isr_StartEx will 
- 233:.\Generated_Source\PSoC4/CAN_isr.c **** *   override any effect this API would have had. This API should only be called
- 234:.\Generated_Source\PSoC4/CAN_isr.c **** *   after CAN_isr_Start or CAN_isr_StartEx has been called. 
- 235:.\Generated_Source\PSoC4/CAN_isr.c **** *   To set the initial priority for the component, use the Design-Wide Resources
- 236:.\Generated_Source\PSoC4/CAN_isr.c **** *   Interrupt Editor.
- 237:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 238:.\Generated_Source\PSoC4/CAN_isr.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
- 239:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 240:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
- 241:.\Generated_Source\PSoC4/CAN_isr.c **** *   priority: Priority of the interrupt, 0 being the highest priority
- 242:.\Generated_Source\PSoC4/CAN_isr.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
- 243:.\Generated_Source\PSoC4/CAN_isr.c **** *             PSoC 4: Priority is from 0 to 3.
- 244:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 245:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 246:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 247:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 248:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 249:.\Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_SetPriority(uint8 priority)
- 250:.\Generated_Source\PSoC4/CAN_isr.c **** {
+ 223:Generated_Source\PSoC4/CAN_isr.c **** 
+ 224:Generated_Source\PSoC4/CAN_isr.c **** 
+ 225:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 226:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_SetPriority
+ 227:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 228:Generated_Source\PSoC4/CAN_isr.c **** *
+ 229:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ 230:Generated_Source\PSoC4/CAN_isr.c **** *   Sets the Priority of the Interrupt. 
+ 231:Generated_Source\PSoC4/CAN_isr.c **** *
+ 232:Generated_Source\PSoC4/CAN_isr.c **** *   Note calling CAN_isr_Start or CAN_isr_StartEx will 
+ 233:Generated_Source\PSoC4/CAN_isr.c **** *   override any effect this API would have had. This API should only be called
+ 234:Generated_Source\PSoC4/CAN_isr.c **** *   after CAN_isr_Start or CAN_isr_StartEx has been called. 
+ 235:Generated_Source\PSoC4/CAN_isr.c **** *   To set the initial priority for the component, use the Design-Wide Resources
+ 236:Generated_Source\PSoC4/CAN_isr.c **** *   Interrupt Editor.
+ 237:Generated_Source\PSoC4/CAN_isr.c **** *
+ 238:Generated_Source\PSoC4/CAN_isr.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
+ 239:Generated_Source\PSoC4/CAN_isr.c **** *
+ 240:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
+ 241:Generated_Source\PSoC4/CAN_isr.c **** *   priority: Priority of the interrupt, 0 being the highest priority
+ 242:Generated_Source\PSoC4/CAN_isr.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 243:Generated_Source\PSoC4/CAN_isr.c **** *             PSoC 4: Priority is from 0 to 3.
+ 244:Generated_Source\PSoC4/CAN_isr.c **** *
+ 245:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 246:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 247:Generated_Source\PSoC4/CAN_isr.c **** *
+ 248:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 249:Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_SetPriority(uint8 priority)
+ 250:Generated_Source\PSoC4/CAN_isr.c **** {
   91              		.loc 1 250 0
   92              		.cfi_startproc
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 7
 
 
   93              	.LVL1:
@@ -368,31 +368,31 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
   97              		.cfi_offset 14, -4
   98 0002 041C     		mov	r4, r0
   99              	.LVL2:
- 251:.\Generated_Source\PSoC4/CAN_isr.c **** 	uint8 interruptState;
- 252:.\Generated_Source\PSoC4/CAN_isr.c ****     uint32 priorityOffset = ((CAN_isr__INTC_NUMBER % 4u) * 8u) + 6u;
- 253:.\Generated_Source\PSoC4/CAN_isr.c ****     
- 254:.\Generated_Source\PSoC4/CAN_isr.c **** 	interruptState = CyEnterCriticalSection();
+ 251:Generated_Source\PSoC4/CAN_isr.c **** 	uint8 interruptState;
+ 252:Generated_Source\PSoC4/CAN_isr.c ****     uint32 priorityOffset = ((CAN_isr__INTC_NUMBER % 4u) * 8u) + 6u;
+ 253:Generated_Source\PSoC4/CAN_isr.c ****     
+ 254:Generated_Source\PSoC4/CAN_isr.c **** 	interruptState = CyEnterCriticalSection();
  100              		.loc 1 254 0
  101 0004 FFF7FEFF 		bl	CyEnterCriticalSection
  102              	.LVL3:
- 255:.\Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_PRIOR = (*CAN_isr_INTC_PRIOR & (uint32)(~CAN_isr__INTC_PRIOR_MASK)) |
+ 255:Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_PRIOR = (*CAN_isr_INTC_PRIOR & (uint32)(~CAN_isr__INTC_PRIOR_MASK)) |
  103              		.loc 1 255 0
  104 0008 044A     		ldr	r2, .L9
  105 000a 1368     		ldr	r3, [r2]
  106 000c 9B00     		lsl	r3, r3, #2
  107 000e 9B08     		lsr	r3, r3, #2
- 256:.\Generated_Source\PSoC4/CAN_isr.c ****                                     ((uint32)priority << priorityOffset);
+ 256:Generated_Source\PSoC4/CAN_isr.c ****                                     ((uint32)priority << priorityOffset);
  108              		.loc 1 256 0
  109 0010 A407     		lsl	r4, r4, #30
- 255:.\Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_PRIOR = (*CAN_isr_INTC_PRIOR & (uint32)(~CAN_isr__INTC_PRIOR_MASK)) |
+ 255:Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_PRIOR = (*CAN_isr_INTC_PRIOR & (uint32)(~CAN_isr__INTC_PRIOR_MASK)) |
  110              		.loc 1 255 0
  111 0012 1C43     		orr	r4, r3
  112 0014 1460     		str	r4, [r2]
- 257:.\Generated_Source\PSoC4/CAN_isr.c **** 	CyExitCriticalSection(interruptState);
+ 257:Generated_Source\PSoC4/CAN_isr.c **** 	CyExitCriticalSection(interruptState);
  113              		.loc 1 257 0
  114 0016 FFF7FEFF 		bl	CyExitCriticalSection
  115              	.LVL4:
- 258:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 258:Generated_Source\PSoC4/CAN_isr.c **** }
  116              		.loc 1 258 0
  117              		@ sp needed
  118 001a 10BD     		pop	{r4, pc}
@@ -411,46 +411,46 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  131              		.type	CAN_isr_GetPriority, %function
  132              	CAN_isr_GetPriority:
  133              	.LFB8:
- 259:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 260:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 261:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 262:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_GetPriority
- 263:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 264:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 265:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 8
+ 259:Generated_Source\PSoC4/CAN_isr.c **** 
+ 260:Generated_Source\PSoC4/CAN_isr.c **** 
+ 261:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 262:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_GetPriority
+ 263:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 264:Generated_Source\PSoC4/CAN_isr.c **** *
+ 265:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 8
 
 
- 266:.\Generated_Source\PSoC4/CAN_isr.c **** *   Gets the Priority of the Interrupt.
- 267:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 268:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
- 269:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 270:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 271:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 272:.\Generated_Source\PSoC4/CAN_isr.c **** *   Priority of the interrupt, 0 being the highest priority
- 273:.\Generated_Source\PSoC4/CAN_isr.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
- 274:.\Generated_Source\PSoC4/CAN_isr.c **** *    PSoC 4: Priority is from 0 to 3.
- 275:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 276:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 277:.\Generated_Source\PSoC4/CAN_isr.c **** uint8 CAN_isr_GetPriority(void)
- 278:.\Generated_Source\PSoC4/CAN_isr.c **** {
+ 266:Generated_Source\PSoC4/CAN_isr.c **** *   Gets the Priority of the Interrupt.
+ 267:Generated_Source\PSoC4/CAN_isr.c **** *
+ 268:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
+ 269:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 270:Generated_Source\PSoC4/CAN_isr.c **** *
+ 271:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 272:Generated_Source\PSoC4/CAN_isr.c **** *   Priority of the interrupt, 0 being the highest priority
+ 273:Generated_Source\PSoC4/CAN_isr.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 274:Generated_Source\PSoC4/CAN_isr.c **** *    PSoC 4: Priority is from 0 to 3.
+ 275:Generated_Source\PSoC4/CAN_isr.c **** *
+ 276:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 277:Generated_Source\PSoC4/CAN_isr.c **** uint8 CAN_isr_GetPriority(void)
+ 278:Generated_Source\PSoC4/CAN_isr.c **** {
  134              		.loc 1 278 0
  135              		.cfi_startproc
  136              	.LVL5:
- 279:.\Generated_Source\PSoC4/CAN_isr.c ****     uint32 priority;
- 280:.\Generated_Source\PSoC4/CAN_isr.c **** 	uint32 priorityOffset = ((CAN_isr__INTC_NUMBER % 4u) * 8u) + 6u;
- 281:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 282:.\Generated_Source\PSoC4/CAN_isr.c ****     priority = (*CAN_isr_INTC_PRIOR & CAN_isr__INTC_PRIOR_MASK) >> priorityOffset;
+ 279:Generated_Source\PSoC4/CAN_isr.c ****     uint32 priority;
+ 280:Generated_Source\PSoC4/CAN_isr.c **** 	uint32 priorityOffset = ((CAN_isr__INTC_NUMBER % 4u) * 8u) + 6u;
+ 281:Generated_Source\PSoC4/CAN_isr.c **** 
+ 282:Generated_Source\PSoC4/CAN_isr.c ****     priority = (*CAN_isr_INTC_PRIOR & CAN_isr__INTC_PRIOR_MASK) >> priorityOffset;
  137              		.loc 1 282 0
  138 0000 014B     		ldr	r3, .L12
  139 0002 1868     		ldr	r0, [r3]
  140              	.LVL6:
- 283:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 284:.\Generated_Source\PSoC4/CAN_isr.c ****     return (uint8)priority;
+ 283:Generated_Source\PSoC4/CAN_isr.c **** 
+ 284:Generated_Source\PSoC4/CAN_isr.c ****     return (uint8)priority;
  141              		.loc 1 284 0
  142 0004 800F     		lsr	r0, r0, #30
  143              	.LVL7:
- 285:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 285:Generated_Source\PSoC4/CAN_isr.c **** }
  144              		.loc 1 285 0
  145              		@ sp needed
  146 0006 7047     		bx	lr
@@ -469,39 +469,39 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  159              		.type	CAN_isr_Enable, %function
  160              	CAN_isr_Enable:
  161              	.LFB9:
- 286:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 287:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 288:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 289:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_Enable
- 290:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 291:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 292:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
- 293:.\Generated_Source\PSoC4/CAN_isr.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
- 294:.\Generated_Source\PSoC4/CAN_isr.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 9
+ 286:Generated_Source\PSoC4/CAN_isr.c **** 
+ 287:Generated_Source\PSoC4/CAN_isr.c **** 
+ 288:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 289:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_Enable
+ 290:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 291:Generated_Source\PSoC4/CAN_isr.c **** *
+ 292:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ 293:Generated_Source\PSoC4/CAN_isr.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
+ 294:Generated_Source\PSoC4/CAN_isr.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 9
 
 
- 295:.\Generated_Source\PSoC4/CAN_isr.c **** *   function, which sets the vector and the priority, has been called.
- 296:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 297:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
- 298:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 299:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 300:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 301:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 302:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 303:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 304:.\Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_Enable(void)
- 305:.\Generated_Source\PSoC4/CAN_isr.c **** {
+ 295:Generated_Source\PSoC4/CAN_isr.c **** *   function, which sets the vector and the priority, has been called.
+ 296:Generated_Source\PSoC4/CAN_isr.c **** *
+ 297:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
+ 298:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 299:Generated_Source\PSoC4/CAN_isr.c **** *
+ 300:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 301:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 302:Generated_Source\PSoC4/CAN_isr.c **** *
+ 303:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 304:Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_Enable(void)
+ 305:Generated_Source\PSoC4/CAN_isr.c **** {
  162              		.loc 1 305 0
  163              		.cfi_startproc
- 306:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Enable the general interrupt. */
- 307:.\Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_SET_EN = CAN_isr__INTC_MASK;
+ 306:Generated_Source\PSoC4/CAN_isr.c ****     /* Enable the general interrupt. */
+ 307:Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_SET_EN = CAN_isr__INTC_MASK;
  164              		.loc 1 307 0
  165 0000 8022     		mov	r2, #128
  166 0002 1205     		lsl	r2, r2, #20
  167 0004 014B     		ldr	r3, .L15
  168 0006 1A60     		str	r2, [r3]
- 308:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 308:Generated_Source\PSoC4/CAN_isr.c **** }
  169              		.loc 1 308 0
  170              		@ sp needed
  171 0008 7047     		bx	lr
@@ -520,31 +520,31 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  184              		.type	CAN_isr_GetState, %function
  185              	CAN_isr_GetState:
  186              	.LFB10:
- 309:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 310:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 311:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 312:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_GetState
- 313:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 314:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 315:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
- 316:.\Generated_Source\PSoC4/CAN_isr.c **** *   Gets the state (enabled, disabled) of the Interrupt.
- 317:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 318:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
- 319:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 320:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 321:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 322:.\Generated_Source\PSoC4/CAN_isr.c **** *   1 if enabled, 0 if disabled.
- 323:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 324:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 325:.\Generated_Source\PSoC4/CAN_isr.c **** uint8 CAN_isr_GetState(void)
- 326:.\Generated_Source\PSoC4/CAN_isr.c **** {
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 10
+ 309:Generated_Source\PSoC4/CAN_isr.c **** 
+ 310:Generated_Source\PSoC4/CAN_isr.c **** 
+ 311:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 312:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_GetState
+ 313:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 314:Generated_Source\PSoC4/CAN_isr.c **** *
+ 315:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ 316:Generated_Source\PSoC4/CAN_isr.c **** *   Gets the state (enabled, disabled) of the Interrupt.
+ 317:Generated_Source\PSoC4/CAN_isr.c **** *
+ 318:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
+ 319:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 320:Generated_Source\PSoC4/CAN_isr.c **** *
+ 321:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 322:Generated_Source\PSoC4/CAN_isr.c **** *   1 if enabled, 0 if disabled.
+ 323:Generated_Source\PSoC4/CAN_isr.c **** *
+ 324:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 325:Generated_Source\PSoC4/CAN_isr.c **** uint8 CAN_isr_GetState(void)
+ 326:Generated_Source\PSoC4/CAN_isr.c **** {
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 10
 
 
  187              		.loc 1 326 0
  188              		.cfi_startproc
- 327:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Get the state of the general interrupt. */
- 328:.\Generated_Source\PSoC4/CAN_isr.c ****     return ((*CAN_isr_INTC_SET_EN & (uint32)CAN_isr__INTC_MASK) != 0u) ? 1u:0u;
+ 327:Generated_Source\PSoC4/CAN_isr.c ****     /* Get the state of the general interrupt. */
+ 328:Generated_Source\PSoC4/CAN_isr.c ****     return ((*CAN_isr_INTC_SET_EN & (uint32)CAN_isr__INTC_MASK) != 0u) ? 1u:0u;
  189              		.loc 1 328 0
  190 0000 034B     		ldr	r3, .L20
  191 0002 1B68     		ldr	r3, [r3]
@@ -555,7 +555,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  196              	.L19:
  197 000c 0020     		mov	r0, #0
  198              	.L18:
- 329:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 329:Generated_Source\PSoC4/CAN_isr.c **** }
  199              		.loc 1 329 0 discriminator 4
  200              		@ sp needed
  201 000e 7047     		bx	lr
@@ -574,37 +574,37 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  214              		.type	CAN_isr_Disable, %function
  215              	CAN_isr_Disable:
  216              	.LFB11:
- 330:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 331:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 332:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 333:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_Disable
- 334:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 335:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 336:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
- 337:.\Generated_Source\PSoC4/CAN_isr.c **** *   Disables the Interrupt in the interrupt controller.
- 338:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 339:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
- 340:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 341:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 342:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 343:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 344:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 345:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 346:.\Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_Disable(void)
- 347:.\Generated_Source\PSoC4/CAN_isr.c **** {
+ 330:Generated_Source\PSoC4/CAN_isr.c **** 
+ 331:Generated_Source\PSoC4/CAN_isr.c **** 
+ 332:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 333:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_Disable
+ 334:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 335:Generated_Source\PSoC4/CAN_isr.c **** *
+ 336:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ 337:Generated_Source\PSoC4/CAN_isr.c **** *   Disables the Interrupt in the interrupt controller.
+ 338:Generated_Source\PSoC4/CAN_isr.c **** *
+ 339:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
+ 340:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 341:Generated_Source\PSoC4/CAN_isr.c **** *
+ 342:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 343:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 344:Generated_Source\PSoC4/CAN_isr.c **** *
+ 345:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 346:Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_Disable(void)
+ 347:Generated_Source\PSoC4/CAN_isr.c **** {
  217              		.loc 1 347 0
  218              		.cfi_startproc
- 348:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Disable the general interrupt. */
- 349:.\Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_CLR_EN = CAN_isr__INTC_MASK;
+ 348:Generated_Source\PSoC4/CAN_isr.c ****     /* Disable the general interrupt. */
+ 349:Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_CLR_EN = CAN_isr__INTC_MASK;
  219              		.loc 1 349 0
  220 0000 8022     		mov	r2, #128
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 11
 
 
  221 0002 1205     		lsl	r2, r2, #20
  222 0004 014B     		ldr	r3, .L23
  223 0006 1A60     		str	r2, [r3]
- 350:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 350:Generated_Source\PSoC4/CAN_isr.c **** }
  224              		.loc 1 350 0
  225              		@ sp needed
  226 0008 7047     		bx	lr
@@ -623,32 +623,32 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  239              		.type	CAN_isr_Start, %function
  240              	CAN_isr_Start:
  241              	.LFB1:
-  57:.\Generated_Source\PSoC4/CAN_isr.c ****     /* For all we know the interrupt is active. */
+  57:Generated_Source\PSoC4/CAN_isr.c ****     /* For all we know the interrupt is active. */
  242              		.loc 1 57 0
  243              		.cfi_startproc
  244 0000 08B5     		push	{r3, lr}
  245              		.cfi_def_cfa_offset 8
  246              		.cfi_offset 3, -8
  247              		.cfi_offset 14, -4
-  59:.\Generated_Source\PSoC4/CAN_isr.c **** 
+  59:Generated_Source\PSoC4/CAN_isr.c **** 
  248              		.loc 1 59 0
  249 0002 FFF7FEFF 		bl	CAN_isr_Disable
  250              	.LVL8:
-  62:.\Generated_Source\PSoC4/CAN_isr.c **** 
+  62:Generated_Source\PSoC4/CAN_isr.c **** 
  251              		.loc 1 62 0
  252 0006 0448     		ldr	r0, .L26
  253 0008 FFF7FEFF 		bl	CAN_isr_SetVector
  254              	.LVL9:
-  65:.\Generated_Source\PSoC4/CAN_isr.c **** 
+  65:Generated_Source\PSoC4/CAN_isr.c **** 
  255              		.loc 1 65 0
  256 000c 0320     		mov	r0, #3
  257 000e FFF7FEFF 		bl	CAN_isr_SetPriority
  258              	.LVL10:
-  68:.\Generated_Source\PSoC4/CAN_isr.c **** }
+  68:Generated_Source\PSoC4/CAN_isr.c **** }
  259              		.loc 1 68 0
  260 0012 FFF7FEFF 		bl	CAN_isr_Enable
  261              	.LVL11:
-  69:.\Generated_Source\PSoC4/CAN_isr.c **** 
+  69:Generated_Source\PSoC4/CAN_isr.c **** 
  262              		.loc 1 69 0
  263              		@ sp needed
  264 0016 08BD     		pop	{r3, pc}
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  268 0018 00000000 		.word	CAN_isr_Interrupt
  269              		.cfi_endproc
  270              	.LFE1:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 12
 
 
  271              		.size	CAN_isr_Start, .-CAN_isr_Start
@@ -670,7 +670,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  277              		.type	CAN_isr_StartEx, %function
  278              	CAN_isr_StartEx:
  279              	.LFB2:
- 100:.\Generated_Source\PSoC4/CAN_isr.c ****     /* For all we know the interrupt is active. */
+ 100:Generated_Source\PSoC4/CAN_isr.c ****     /* For all we know the interrupt is active. */
  280              		.loc 1 100 0
  281              		.cfi_startproc
  282              	.LVL12:
@@ -679,25 +679,25 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  285              		.cfi_offset 4, -8
  286              		.cfi_offset 14, -4
  287 0002 041C     		mov	r4, r0
- 102:.\Generated_Source\PSoC4/CAN_isr.c **** 
+ 102:Generated_Source\PSoC4/CAN_isr.c **** 
  288              		.loc 1 102 0
  289 0004 FFF7FEFF 		bl	CAN_isr_Disable
  290              	.LVL13:
- 105:.\Generated_Source\PSoC4/CAN_isr.c **** 
+ 105:Generated_Source\PSoC4/CAN_isr.c **** 
  291              		.loc 1 105 0
  292 0008 201C     		mov	r0, r4
  293 000a FFF7FEFF 		bl	CAN_isr_SetVector
  294              	.LVL14:
- 108:.\Generated_Source\PSoC4/CAN_isr.c **** 
+ 108:Generated_Source\PSoC4/CAN_isr.c **** 
  295              		.loc 1 108 0
  296 000e 0320     		mov	r0, #3
  297 0010 FFF7FEFF 		bl	CAN_isr_SetPriority
  298              	.LVL15:
- 111:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 111:Generated_Source\PSoC4/CAN_isr.c **** }
  299              		.loc 1 111 0
  300 0014 FFF7FEFF 		bl	CAN_isr_Enable
  301              	.LVL16:
- 112:.\Generated_Source\PSoC4/CAN_isr.c **** 
+ 112:Generated_Source\PSoC4/CAN_isr.c **** 
  302              		.loc 1 112 0
  303              		@ sp needed
  304              	.LVL17:
@@ -713,26 +713,26 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  314              		.type	CAN_isr_Stop, %function
  315              	CAN_isr_Stop:
  316              	.LFB3:
- 130:.\Generated_Source\PSoC4/CAN_isr.c ****     /* Disable this interrupt. */
+ 130:Generated_Source\PSoC4/CAN_isr.c ****     /* Disable this interrupt. */
  317              		.loc 1 130 0
  318              		.cfi_startproc
  319 0000 08B5     		push	{r3, lr}
  320              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 13
 
 
  321              		.cfi_offset 3, -8
  322              		.cfi_offset 14, -4
- 132:.\Generated_Source\PSoC4/CAN_isr.c **** 
+ 132:Generated_Source\PSoC4/CAN_isr.c **** 
  323              		.loc 1 132 0
  324 0002 FFF7FEFF 		bl	CAN_isr_Disable
  325              	.LVL18:
- 135:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 135:Generated_Source\PSoC4/CAN_isr.c **** }
  326              		.loc 1 135 0
  327 0006 0248     		ldr	r0, .L30
  328 0008 FFF7FEFF 		bl	CAN_isr_SetVector
  329              	.LVL19:
- 136:.\Generated_Source\PSoC4/CAN_isr.c **** 
+ 136:Generated_Source\PSoC4/CAN_isr.c **** 
  330              		.loc 1 136 0
  331              		@ sp needed
  332 000c 08BD     		pop	{r3, pc}
@@ -751,34 +751,34 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  345              		.type	CAN_isr_SetPending, %function
  346              	CAN_isr_SetPending:
  347              	.LFB12:
- 351:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 352:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 353:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 354:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_SetPending
- 355:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 356:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 357:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
- 358:.\Generated_Source\PSoC4/CAN_isr.c **** *   Causes the Interrupt to enter the pending state, a software method of
- 359:.\Generated_Source\PSoC4/CAN_isr.c **** *   generating the interrupt.
- 360:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 361:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
- 362:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 363:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 364:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 365:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 366:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 367:.\Generated_Source\PSoC4/CAN_isr.c **** * Side Effects:
- 368:.\Generated_Source\PSoC4/CAN_isr.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
- 369:.\Generated_Source\PSoC4/CAN_isr.c **** *   entered (depending on the priority of this interrupt and other pending 
- 370:.\Generated_Source\PSoC4/CAN_isr.c **** *   interrupts).
- 371:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 372:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 373:.\Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_SetPending(void)
- 374:.\Generated_Source\PSoC4/CAN_isr.c **** {
+ 351:Generated_Source\PSoC4/CAN_isr.c **** 
+ 352:Generated_Source\PSoC4/CAN_isr.c **** 
+ 353:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 354:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_SetPending
+ 355:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 356:Generated_Source\PSoC4/CAN_isr.c **** *
+ 357:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ 358:Generated_Source\PSoC4/CAN_isr.c **** *   Causes the Interrupt to enter the pending state, a software method of
+ 359:Generated_Source\PSoC4/CAN_isr.c **** *   generating the interrupt.
+ 360:Generated_Source\PSoC4/CAN_isr.c **** *
+ 361:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
+ 362:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 363:Generated_Source\PSoC4/CAN_isr.c **** *
+ 364:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 365:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 366:Generated_Source\PSoC4/CAN_isr.c **** *
+ 367:Generated_Source\PSoC4/CAN_isr.c **** * Side Effects:
+ 368:Generated_Source\PSoC4/CAN_isr.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
+ 369:Generated_Source\PSoC4/CAN_isr.c **** *   entered (depending on the priority of this interrupt and other pending 
+ 370:Generated_Source\PSoC4/CAN_isr.c **** *   interrupts).
+ 371:Generated_Source\PSoC4/CAN_isr.c **** *
+ 372:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 373:Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_SetPending(void)
+ 374:Generated_Source\PSoC4/CAN_isr.c **** {
  348              		.loc 1 374 0
  349              		.cfi_startproc
- 375:.\Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_SET_PD = CAN_isr__INTC_MASK;
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 14
+ 375:Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_SET_PD = CAN_isr__INTC_MASK;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 14
 
 
  350              		.loc 1 375 0
@@ -786,7 +786,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  352 0002 1205     		lsl	r2, r2, #20
  353 0004 014B     		ldr	r3, .L33
  354 0006 1A60     		str	r2, [r3]
- 376:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 376:Generated_Source\PSoC4/CAN_isr.c **** }
  355              		.loc 1 376 0
  356              		@ sp needed
  357 0008 7047     		bx	lr
@@ -805,40 +805,40 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  370              		.type	CAN_isr_ClearPending, %function
  371              	CAN_isr_ClearPending:
  372              	.LFB13:
- 377:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 378:.\Generated_Source\PSoC4/CAN_isr.c **** 
- 379:.\Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
- 380:.\Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_ClearPending
- 381:.\Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
- 382:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 383:.\Generated_Source\PSoC4/CAN_isr.c **** * Summary:
- 384:.\Generated_Source\PSoC4/CAN_isr.c **** *   Clears a pending interrupt in the interrupt controller.
- 385:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 386:.\Generated_Source\PSoC4/CAN_isr.c **** *   Note Some interrupt sources are clear-on-read and require the block 
- 387:.\Generated_Source\PSoC4/CAN_isr.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
- 388:.\Generated_Source\PSoC4/CAN_isr.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
- 389:.\Generated_Source\PSoC4/CAN_isr.c **** *   pending state even though the interrupt itself is cleared using this API.
- 390:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 391:.\Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
- 392:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 393:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 394:.\Generated_Source\PSoC4/CAN_isr.c **** * Return:
- 395:.\Generated_Source\PSoC4/CAN_isr.c **** *   None
- 396:.\Generated_Source\PSoC4/CAN_isr.c **** *
- 397:.\Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
- 398:.\Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_ClearPending(void)
- 399:.\Generated_Source\PSoC4/CAN_isr.c **** {
+ 377:Generated_Source\PSoC4/CAN_isr.c **** 
+ 378:Generated_Source\PSoC4/CAN_isr.c **** 
+ 379:Generated_Source\PSoC4/CAN_isr.c **** /*******************************************************************************
+ 380:Generated_Source\PSoC4/CAN_isr.c **** * Function Name: CAN_isr_ClearPending
+ 381:Generated_Source\PSoC4/CAN_isr.c **** ********************************************************************************
+ 382:Generated_Source\PSoC4/CAN_isr.c **** *
+ 383:Generated_Source\PSoC4/CAN_isr.c **** * Summary:
+ 384:Generated_Source\PSoC4/CAN_isr.c **** *   Clears a pending interrupt in the interrupt controller.
+ 385:Generated_Source\PSoC4/CAN_isr.c **** *
+ 386:Generated_Source\PSoC4/CAN_isr.c **** *   Note Some interrupt sources are clear-on-read and require the block 
+ 387:Generated_Source\PSoC4/CAN_isr.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
+ 388:Generated_Source\PSoC4/CAN_isr.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
+ 389:Generated_Source\PSoC4/CAN_isr.c **** *   pending state even though the interrupt itself is cleared using this API.
+ 390:Generated_Source\PSoC4/CAN_isr.c **** *
+ 391:Generated_Source\PSoC4/CAN_isr.c **** * Parameters:
+ 392:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 393:Generated_Source\PSoC4/CAN_isr.c **** *
+ 394:Generated_Source\PSoC4/CAN_isr.c **** * Return:
+ 395:Generated_Source\PSoC4/CAN_isr.c **** *   None
+ 396:Generated_Source\PSoC4/CAN_isr.c **** *
+ 397:Generated_Source\PSoC4/CAN_isr.c **** *******************************************************************************/
+ 398:Generated_Source\PSoC4/CAN_isr.c **** void CAN_isr_ClearPending(void)
+ 399:Generated_Source\PSoC4/CAN_isr.c **** {
  373              		.loc 1 399 0
  374              		.cfi_startproc
- 400:.\Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_CLR_PD = CAN_isr__INTC_MASK;
+ 400:Generated_Source\PSoC4/CAN_isr.c ****     *CAN_isr_INTC_CLR_PD = CAN_isr__INTC_MASK;
  375              		.loc 1 400 0
  376 0000 8022     		mov	r2, #128
  377 0002 1205     		lsl	r2, r2, #20
  378 0004 014B     		ldr	r3, .L36
  379 0006 1A60     		str	r2, [r3]
- 401:.\Generated_Source\PSoC4/CAN_isr.c **** }
+ 401:Generated_Source\PSoC4/CAN_isr.c **** }
  380              		.loc 1 401 0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 15
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 15
 
 
  381              		@ sp needed
@@ -861,48 +861,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  398 0006 00000000 		.4byte	.Ldebug_abbrev0
  399 000a 04       		.byte	0x4
  400 000b 01       		.uleb128 0x1
- 401 000c EC010000 		.4byte	.LASF33
+ 401 000c 0B020000 		.4byte	.LASF33
  402 0010 01       		.byte	0x1
- 403 0011 46000000 		.4byte	.LASF34
- 404 0015 AA010000 		.4byte	.LASF35
+ 403 0011 84000000 		.4byte	.LASF34
+ 404 0015 06000000 		.4byte	.LASF35
  405 0019 00000000 		.4byte	.Ldebug_ranges0+0
  406 001d 00000000 		.4byte	0
  407 0021 00000000 		.4byte	.Ldebug_line0
  408 0025 02       		.uleb128 0x2
  409 0026 01       		.byte	0x1
  410 0027 06       		.byte	0x6
- 411 0028 BE020000 		.4byte	.LASF0
+ 411 0028 DD020000 		.4byte	.LASF0
  412 002c 02       		.uleb128 0x2
  413 002d 01       		.byte	0x1
  414 002e 08       		.byte	0x8
- 415 002f AC000000 		.4byte	.LASF1
+ 415 002f 0D010000 		.4byte	.LASF1
  416 0033 02       		.uleb128 0x2
  417 0034 02       		.byte	0x2
  418 0035 05       		.byte	0x5
- 419 0036 8C020000 		.4byte	.LASF2
+ 419 0036 AB020000 		.4byte	.LASF2
  420 003a 02       		.uleb128 0x2
  421 003b 02       		.byte	0x2
  422 003c 07       		.byte	0x7
- 423 003d 21000000 		.4byte	.LASF3
+ 423 003d A5000000 		.4byte	.LASF3
  424 0041 02       		.uleb128 0x2
  425 0042 04       		.byte	0x4
  426 0043 05       		.byte	0x5
- 427 0044 B5020000 		.4byte	.LASF4
+ 427 0044 D4020000 		.4byte	.LASF4
  428 0048 02       		.uleb128 0x2
  429 0049 04       		.byte	0x4
  430 004a 07       		.byte	0x7
- 431 004b DE000000 		.4byte	.LASF5
+ 431 004b 3F010000 		.4byte	.LASF5
  432 004f 02       		.uleb128 0x2
  433 0050 08       		.byte	0x8
  434 0051 05       		.byte	0x5
- 435 0052 97010000 		.4byte	.LASF6
+ 435 0052 F8010000 		.4byte	.LASF6
  436 0056 02       		.uleb128 0x2
  437 0057 08       		.byte	0x8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 16
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 16
 
 
  438 0058 07       		.byte	0x7
- 439 0059 95000000 		.4byte	.LASF7
+ 439 0059 F6000000 		.4byte	.LASF7
  440 005d 03       		.uleb128 0x3
  441 005e 04       		.byte	0x4
  442 005f 05       		.byte	0x5
@@ -910,29 +910,29 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  444 0064 02       		.uleb128 0x2
  445 0065 04       		.byte	0x4
  446 0066 07       		.byte	0x7
- 447 0067 49010000 		.4byte	.LASF8
+ 447 0067 AA010000 		.4byte	.LASF8
  448 006b 04       		.uleb128 0x4
- 449 006c F0000000 		.4byte	.LASF9
+ 449 006c 51010000 		.4byte	.LASF9
  450 0070 02       		.byte	0x2
  451 0071 9801     		.2byte	0x198
  452 0073 2C000000 		.4byte	0x2c
  453 0077 04       		.uleb128 0x4
- 454 0078 2B010000 		.4byte	.LASF10
+ 454 0078 8C010000 		.4byte	.LASF10
  455 007c 02       		.byte	0x2
  456 007d 9A01     		.2byte	0x19a
  457 007f 48000000 		.4byte	0x48
  458 0083 02       		.uleb128 0x2
  459 0084 04       		.byte	0x4
  460 0085 04       		.byte	0x4
- 461 0086 8F000000 		.4byte	.LASF11
+ 461 0086 F0000000 		.4byte	.LASF11
  462 008a 02       		.uleb128 0x2
  463 008b 08       		.byte	0x8
  464 008c 04       		.byte	0x4
- 465 008d FF000000 		.4byte	.LASF12
+ 465 008d 60010000 		.4byte	.LASF12
  466 0091 02       		.uleb128 0x2
  467 0092 01       		.byte	0x1
  468 0093 08       		.byte	0x8
- 469 0094 A5010000 		.4byte	.LASF13
+ 469 0094 06020000 		.4byte	.LASF13
  470 0098 04       		.uleb128 0x4
  471 0099 00000000 		.4byte	.LASF14
  472 009d 02       		.byte	0x2
@@ -941,7 +941,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  475 00a4 05       		.uleb128 0x5
  476 00a5 77000000 		.4byte	0x77
  477 00a9 04       		.uleb128 0x4
- 478 00aa 81010000 		.4byte	.LASF15
+ 478 00aa E2010000 		.4byte	.LASF15
  479 00ae 02       		.byte	0x2
  480 00af 5402     		.2byte	0x254
  481 00b1 B5000000 		.4byte	0xb5
@@ -952,20 +952,20 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  486 00bc 02       		.uleb128 0x2
  487 00bd 04       		.byte	0x4
  488 00be 07       		.byte	0x7
- 489 00bf 8E010000 		.4byte	.LASF16
+ 489 00bf EF010000 		.4byte	.LASF16
  490 00c3 08       		.uleb128 0x8
- 491 00c4 69000000 		.4byte	.LASF23
+ 491 00c4 CA000000 		.4byte	.LASF23
  492 00c8 01       		.byte	0x1
  493 00c9 9F       		.byte	0x9f
  494 00ca 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 17
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 17
 
 
  495 00ce 02000000 		.4byte	.LFE4-.LFB4
  496 00d2 01       		.uleb128 0x1
  497 00d3 9C       		.byte	0x9c
  498 00d4 09       		.uleb128 0x9
- 499 00d5 7A020000 		.4byte	.LASF17
+ 499 00d5 99020000 		.4byte	.LASF17
  500 00d9 01       		.byte	0x1
  501 00da C7       		.byte	0xc7
  502 00db 00000000 		.4byte	.LFB5
@@ -974,7 +974,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  505 00e4 9C       		.byte	0x9c
  506 00e5 F7000000 		.4byte	0xf7
  507 00e9 0A       		.uleb128 0xa
- 508 00ea 63010000 		.4byte	.LASF19
+ 508 00ea C4010000 		.4byte	.LASF19
  509 00ee 01       		.byte	0x1
  510 00ef C7       		.byte	0xc7
  511 00f0 A9000000 		.4byte	0xa9
@@ -982,7 +982,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  513 00f5 50       		.byte	0x50
  514 00f6 00       		.byte	0
  515 00f7 0B       		.uleb128 0xb
- 516 00f8 34000000 		.4byte	.LASF25
+ 516 00f8 B8000000 		.4byte	.LASF25
  517 00fc 01       		.byte	0x1
  518 00fd DB       		.byte	0xdb
  519 00fe A9000000 		.4byte	0xa9
@@ -991,7 +991,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  522 010a 01       		.uleb128 0x1
  523 010b 9C       		.byte	0x9c
  524 010c 09       		.uleb128 0x9
- 525 010d 06010000 		.4byte	.LASF18
+ 525 010d 67010000 		.4byte	.LASF18
  526 0111 01       		.byte	0x1
  527 0112 F9       		.byte	0xf9
  528 0113 00000000 		.4byte	.LFB7
@@ -1000,25 +1000,25 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  531 011c 9C       		.byte	0x9c
  532 011d 5E010000 		.4byte	0x15e
  533 0121 0C       		.uleb128 0xc
- 534 0122 F6000000 		.4byte	.LASF20
+ 534 0122 57010000 		.4byte	.LASF20
  535 0126 01       		.byte	0x1
  536 0127 F9       		.byte	0xf9
  537 0128 6B000000 		.4byte	0x6b
  538 012c 00000000 		.4byte	.LLST0
  539 0130 0D       		.uleb128 0xd
- 540 0131 CF000000 		.4byte	.LASF21
+ 540 0131 30010000 		.4byte	.LASF21
  541 0135 01       		.byte	0x1
  542 0136 FB       		.byte	0xfb
  543 0137 6B000000 		.4byte	0x6b
  544 013b 21000000 		.4byte	.LLST1
  545 013f 0E       		.uleb128 0xe
- 546 0140 A6020000 		.4byte	.LASF22
+ 546 0140 C5020000 		.4byte	.LASF22
  547 0144 01       		.byte	0x1
  548 0145 FC       		.byte	0xfc
  549 0146 77000000 		.4byte	0x77
  550 014a 1E       		.byte	0x1e
  551 014b 0F       		.uleb128 0xf
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 18
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 18
 
 
  552 014c 08000000 		.4byte	.LVL3
@@ -1028,7 +1028,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  556 0159 F2020000 		.4byte	0x2f2
  557 015d 00       		.byte	0
  558 015e 10       		.uleb128 0x10
- 559 015f 7B000000 		.4byte	.LASF36
+ 559 015f DC000000 		.4byte	.LASF36
  560 0163 01       		.byte	0x1
  561 0164 1501     		.2byte	0x115
  562 0166 6B000000 		.4byte	0x6b
@@ -1038,20 +1038,20 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  566 0173 9C       		.byte	0x9c
  567 0174 96010000 		.4byte	0x196
  568 0178 11       		.uleb128 0x11
- 569 0179 F6000000 		.4byte	.LASF20
+ 569 0179 57010000 		.4byte	.LASF20
  570 017d 01       		.byte	0x1
  571 017e 1701     		.2byte	0x117
  572 0180 77000000 		.4byte	0x77
  573 0184 34000000 		.4byte	.LLST2
  574 0188 12       		.uleb128 0x12
- 575 0189 A6020000 		.4byte	.LASF22
+ 575 0189 C5020000 		.4byte	.LASF22
  576 018d 01       		.byte	0x1
  577 018e 1801     		.2byte	0x118
  578 0190 77000000 		.4byte	0x77
  579 0194 1E       		.byte	0x1e
  580 0195 00       		.byte	0
  581 0196 13       		.uleb128 0x13
- 582 0197 ED020000 		.4byte	.LASF24
+ 582 0197 0C030000 		.4byte	.LASF24
  583 019b 01       		.byte	0x1
  584 019c 3001     		.2byte	0x130
  585 019e 00000000 		.4byte	.LFB9
@@ -1059,7 +1059,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  587 01a6 01       		.uleb128 0x1
  588 01a7 9C       		.byte	0x9c
  589 01a8 14       		.uleb128 0x14
- 590 01a9 1A010000 		.4byte	.LASF26
+ 590 01a9 7B010000 		.4byte	.LASF26
  591 01ad 01       		.byte	0x1
  592 01ae 4501     		.2byte	0x145
  593 01b0 6B000000 		.4byte	0x6b
@@ -1068,7 +1068,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  596 01bc 01       		.uleb128 0x1
  597 01bd 9C       		.byte	0x9c
  598 01be 13       		.uleb128 0x13
- 599 01bf DD020000 		.4byte	.LASF27
+ 599 01bf FC020000 		.4byte	.LASF27
  600 01c3 01       		.byte	0x1
  601 01c4 5A01     		.2byte	0x15a
  602 01c6 00000000 		.4byte	.LFB11
@@ -1076,9 +1076,9 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  604 01ce 01       		.uleb128 0x1
  605 01cf 9C       		.byte	0x9c
  606 01d0 09       		.uleb128 0x9
- 607 01d1 13000000 		.4byte	.LASF28
+ 607 01d1 76000000 		.4byte	.LASF28
  608 01d5 01       		.byte	0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 19
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 19
 
 
  609 01d6 38       		.byte	0x38
@@ -1116,7 +1116,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  641 021d 96010000 		.4byte	0x196
  642 0221 00       		.byte	0
  643 0222 09       		.uleb128 0x9
- 644 0223 96020000 		.4byte	.LASF29
+ 644 0223 B5020000 		.4byte	.LASF29
  645 0227 01       		.byte	0x1
  646 0228 63       		.byte	0x63
  647 0229 00000000 		.4byte	.LFB2
@@ -1125,7 +1125,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  650 0232 9C       		.byte	0x9c
  651 0233 80020000 		.4byte	0x280
  652 0237 0C       		.uleb128 0xc
- 653 0238 63010000 		.4byte	.LASF19
+ 653 0238 C4010000 		.4byte	.LASF19
  654 023c 01       		.byte	0x1
  655 023d 63       		.byte	0x63
  656 023e A9000000 		.4byte	0xa9
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  663 0254 D4000000 		.4byte	0xd4
  664 0258 63020000 		.4byte	0x263
  665 025c 16       		.uleb128 0x16
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 20
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 20
 
 
  666 025d 01       		.uleb128 0x1
@@ -1162,7 +1162,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  684 027b 96010000 		.4byte	0x196
  685 027f 00       		.byte	0
  686 0280 09       		.uleb128 0x9
- 687 0281 56010000 		.4byte	.LASF30
+ 687 0281 B7010000 		.4byte	.LASF30
  688 0285 01       		.byte	0x1
  689 0286 81       		.byte	0x81
  690 0287 00000000 		.4byte	.LFB3
@@ -1178,7 +1178,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  700 02a3 D4000000 		.4byte	0xd4
  701 02a7 00       		.byte	0
  702 02a8 13       		.uleb128 0x13
- 703 02a9 CA020000 		.4byte	.LASF31
+ 703 02a9 E9020000 		.4byte	.LASF31
  704 02ad 01       		.byte	0x1
  705 02ae 7501     		.2byte	0x175
  706 02b0 00000000 		.4byte	.LFB12
@@ -1186,7 +1186,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  708 02b8 01       		.uleb128 0x1
  709 02b9 9C       		.byte	0x9c
  710 02ba 13       		.uleb128 0x13
- 711 02bb BA000000 		.4byte	.LASF32
+ 711 02bb 1B010000 		.4byte	.LASF32
  712 02bf 01       		.byte	0x1
  713 02c0 8E01     		.2byte	0x18e
  714 02c2 00000000 		.4byte	.LFB13
@@ -1198,23 +1198,23 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  720 02d1 DC020000 		.4byte	0x2dc
  721 02d5 18       		.uleb128 0x18
  722 02d6 BC000000 		.4byte	0xbc
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 21
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 21
 
 
  723 02da 2F       		.byte	0x2f
  724 02db 00       		.byte	0
  725 02dc 19       		.uleb128 0x19
- 726 02dd 06000000 		.4byte	.LASF37
+ 726 02dd 69000000 		.4byte	.LASF37
  727 02e1 01       		.byte	0x1
  728 02e2 21       		.byte	0x21
  729 02e3 CC020000 		.4byte	0x2cc
  730 02e7 1A       		.uleb128 0x1a
- 731 02e8 32010000 		.4byte	.LASF38
+ 731 02e8 93010000 		.4byte	.LASF38
  732 02ec 03       		.byte	0x3
  733 02ed E3       		.byte	0xe3
  734 02ee 6B000000 		.4byte	0x6b
  735 02f2 1B       		.uleb128 0x1b
- 736 02f3 6B010000 		.4byte	.LASF39
+ 736 02f3 CC010000 		.4byte	.LASF39
  737 02f7 03       		.byte	0x3
  738 02f8 E4       		.byte	0xe4
  739 02f9 1C       		.uleb128 0x1c
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  777 0020 00       		.byte	0
  778 0021 0B       		.uleb128 0xb
  779 0022 0B       		.uleb128 0xb
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 22
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 22
 
 
  780 0023 3E       		.uleb128 0x3e
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  834 0059 19       		.uleb128 0x19
  835 005a 11       		.uleb128 0x11
  836 005b 01       		.uleb128 0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 23
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 23
 
 
  837 005c 12       		.uleb128 0x12
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  891 0094 0E       		.uleb128 0xe
  892 0095 3A       		.uleb128 0x3a
  893 0096 0B       		.uleb128 0xb
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 24
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 24
 
 
  894 0097 3B       		.uleb128 0x3b
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  948 00ce 0B       		.uleb128 0xb
  949 00cf 49       		.uleb128 0x49
  950 00d0 13       		.uleb128 0x13
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 25
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 25
 
 
  951 00d1 1C       		.uleb128 0x1c
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  1005 010a 00       		.byte	0
  1006 010b 12       		.uleb128 0x12
  1007 010c 34       		.uleb128 0x34
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 26
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 26
 
 
  1008 010d 00       		.byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  1062 0144 06       		.uleb128 0x6
  1063 0145 40       		.uleb128 0x40
  1064 0146 18       		.uleb128 0x18
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 27
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 27
 
 
  1065 0147 9742     		.uleb128 0x2117
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  1119 0183 19       		.uleb128 0x19
  1120 0184 3C       		.uleb128 0x3c
  1121 0185 19       		.uleb128 0x19
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 28
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 28
 
 
  1122 0186 00       		.byte	0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  1176 000f 20000000 		.4byte	.LFE7
  1177 0013 0400     		.2byte	0x4
  1178 0015 F3       		.byte	0xf3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 29
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 29
 
 
  1179 0016 01       		.uleb128 0x1
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  1233 0014 02000000 		.4byte	.LFE4-.LFB4
  1234 0018 00000000 		.4byte	.LFB5
  1235 001c 0C000000 		.4byte	.LFE5-.LFB5
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 30
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 30
 
 
  1236 0020 00000000 		.4byte	.LFB6
@@ -1797,233 +1797,235 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 1
  1289 006c 00000000 		.4byte	0
  1290              		.section	.debug_line,"",%progbits
  1291              	.Ldebug_line0:
- 1292 0000 68010000 		.section	.debug_str,"MS",%progbits,1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 31
+ 1292 0000 4F010000 		.section	.debug_str,"MS",%progbits,1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 31
 
 
- 1292      02006800 
+ 1292      02004F00 
  1292      00000201 
  1292      FB0E0D00 
  1292      01010101 
  1293              	.LASF14:
  1294 0000 72656733 		.ascii	"reg32\000"
  1294      3200
- 1295              	.LASF37:
- 1296 0006 43795261 		.ascii	"CyRamVectors\000"
- 1296      6D566563 
- 1296      746F7273 
- 1296      00
- 1297              	.LASF28:
- 1298 0013 43414E5F 		.ascii	"CAN_isr_Start\000"
- 1298      6973725F 
- 1298      53746172 
- 1298      7400
- 1299              	.LASF3:
- 1300 0021 73686F72 		.ascii	"short unsigned int\000"
- 1300      7420756E 
- 1300      7369676E 
- 1300      65642069 
- 1300      6E7400
- 1301              	.LASF25:
- 1302 0034 43414E5F 		.ascii	"CAN_isr_GetVector\000"
+ 1295              	.LASF35:
+ 1296 0006 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 1296      73657273 
+ 1296      5C48656E 
+ 1296      72792041 
+ 1296      6C626572 
+ 1297 0034 6F64756C 		.ascii	"odular\\Robot_Test\\Test_Robot\\Test_CAN_Module_1.c"
+ 1297      61725C52 
+ 1297      6F626F74 
+ 1297      5F546573 
+ 1297      745C5465 
+ 1298 0064 7964736E 		.ascii	"ydsn\000"
+ 1298      00
+ 1299              	.LASF37:
+ 1300 0069 43795261 		.ascii	"CyRamVectors\000"
+ 1300      6D566563 
+ 1300      746F7273 
+ 1300      00
+ 1301              	.LASF28:
+ 1302 0076 43414E5F 		.ascii	"CAN_isr_Start\000"
  1302      6973725F 
- 1302      47657456 
- 1302      6563746F 
- 1302      7200
+ 1302      53746172 
+ 1302      7400
  1303              	.LASF34:
- 1304 0046 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CAN_isr.c\000"
- 1304      6E657261 
- 1304      7465645F 
- 1304      536F7572 
- 1304      63655C50 
- 1305              	.LASF23:
- 1306 0069 43414E5F 		.ascii	"CAN_isr_Interrupt\000"
- 1306      6973725F 
- 1306      496E7465 
- 1306      72727570 
- 1306      7400
- 1307              	.LASF36:
- 1308 007b 43414E5F 		.ascii	"CAN_isr_GetPriority\000"
+ 1304 0084 47656E65 		.ascii	"Generated_Source\\PSoC4\\CAN_isr.c\000"
+ 1304      72617465 
+ 1304      645F536F 
+ 1304      75726365 
+ 1304      5C50536F 
+ 1305              	.LASF3:
+ 1306 00a5 73686F72 		.ascii	"short unsigned int\000"
+ 1306      7420756E 
+ 1306      7369676E 
+ 1306      65642069 
+ 1306      6E7400
+ 1307              	.LASF25:
+ 1308 00b8 43414E5F 		.ascii	"CAN_isr_GetVector\000"
  1308      6973725F 
- 1308      47657450 
- 1308      72696F72 
- 1308      69747900 
- 1309              	.LASF11:
- 1310 008f 666C6F61 		.ascii	"float\000"
+ 1308      47657456 
+ 1308      6563746F 
+ 1308      7200
+ 1309              	.LASF23:
+ 1310 00ca 43414E5F 		.ascii	"CAN_isr_Interrupt\000"
+ 1310      6973725F 
+ 1310      496E7465 
+ 1310      72727570 
  1310      7400
- 1311              	.LASF7:
- 1312 0095 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1312      206C6F6E 
- 1312      6720756E 
- 1312      7369676E 
- 1312      65642069 
- 1313              	.LASF1:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 32
+ 1311              	.LASF36:
+ 1312 00dc 43414E5F 		.ascii	"CAN_isr_GetPriority\000"
+ 1312      6973725F 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 32
 
 
- 1314 00ac 756E7369 		.ascii	"unsigned char\000"
- 1314      676E6564 
- 1314      20636861 
- 1314      7200
- 1315              	.LASF32:
- 1316 00ba 43414E5F 		.ascii	"CAN_isr_ClearPending\000"
- 1316      6973725F 
- 1316      436C6561 
- 1316      7250656E 
- 1316      64696E67 
- 1317              	.LASF21:
- 1318 00cf 696E7465 		.ascii	"interruptState\000"
- 1318      72727570 
- 1318      74537461 
- 1318      746500
- 1319              	.LASF5:
- 1320 00de 6C6F6E67 		.ascii	"long unsigned int\000"
- 1320      20756E73 
- 1320      69676E65 
- 1320      6420696E 
- 1320      7400
- 1321              	.LASF9:
- 1322 00f0 75696E74 		.ascii	"uint8\000"
- 1322      3800
- 1323              	.LASF20:
- 1324 00f6 7072696F 		.ascii	"priority\000"
- 1324      72697479 
- 1324      00
- 1325              	.LASF12:
- 1326 00ff 646F7562 		.ascii	"double\000"
- 1326      6C6500
- 1327              	.LASF18:
- 1328 0106 43414E5F 		.ascii	"CAN_isr_SetPriority\000"
- 1328      6973725F 
- 1328      53657450 
- 1328      72696F72 
- 1328      69747900 
- 1329              	.LASF26:
- 1330 011a 43414E5F 		.ascii	"CAN_isr_GetState\000"
- 1330      6973725F 
- 1330      47657453 
- 1330      74617465 
- 1330      00
- 1331              	.LASF10:
- 1332 012b 75696E74 		.ascii	"uint32\000"
- 1332      333200
- 1333              	.LASF38:
- 1334 0132 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1334      74657243 
- 1334      72697469 
- 1334      63616C53 
- 1334      65637469 
- 1335              	.LASF8:
- 1336 0149 756E7369 		.ascii	"unsigned int\000"
- 1336      676E6564 
- 1336      20696E74 
- 1336      00
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 33
+ 1312      47657450 
+ 1312      72696F72 
+ 1312      69747900 
+ 1313              	.LASF11:
+ 1314 00f0 666C6F61 		.ascii	"float\000"
+ 1314      7400
+ 1315              	.LASF7:
+ 1316 00f6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1316      206C6F6E 
+ 1316      6720756E 
+ 1316      7369676E 
+ 1316      65642069 
+ 1317              	.LASF1:
+ 1318 010d 756E7369 		.ascii	"unsigned char\000"
+ 1318      676E6564 
+ 1318      20636861 
+ 1318      7200
+ 1319              	.LASF32:
+ 1320 011b 43414E5F 		.ascii	"CAN_isr_ClearPending\000"
+ 1320      6973725F 
+ 1320      436C6561 
+ 1320      7250656E 
+ 1320      64696E67 
+ 1321              	.LASF21:
+ 1322 0130 696E7465 		.ascii	"interruptState\000"
+ 1322      72727570 
+ 1322      74537461 
+ 1322      746500
+ 1323              	.LASF5:
+ 1324 013f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1324      20756E73 
+ 1324      69676E65 
+ 1324      6420696E 
+ 1324      7400
+ 1325              	.LASF9:
+ 1326 0151 75696E74 		.ascii	"uint8\000"
+ 1326      3800
+ 1327              	.LASF20:
+ 1328 0157 7072696F 		.ascii	"priority\000"
+ 1328      72697479 
+ 1328      00
+ 1329              	.LASF12:
+ 1330 0160 646F7562 		.ascii	"double\000"
+ 1330      6C6500
+ 1331              	.LASF18:
+ 1332 0167 43414E5F 		.ascii	"CAN_isr_SetPriority\000"
+ 1332      6973725F 
+ 1332      53657450 
+ 1332      72696F72 
+ 1332      69747900 
+ 1333              	.LASF26:
+ 1334 017b 43414E5F 		.ascii	"CAN_isr_GetState\000"
+ 1334      6973725F 
+ 1334      47657453 
+ 1334      74617465 
+ 1334      00
+ 1335              	.LASF10:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 33
 
 
- 1337              	.LASF30:
- 1338 0156 43414E5F 		.ascii	"CAN_isr_Stop\000"
- 1338      6973725F 
- 1338      53746F70 
- 1338      00
- 1339              	.LASF19:
- 1340 0163 61646472 		.ascii	"address\000"
- 1340      65737300 
- 1341              	.LASF39:
- 1342 016b 43794578 		.ascii	"CyExitCriticalSection\000"
- 1342      69744372 
- 1342      69746963 
- 1342      616C5365 
- 1342      6374696F 
- 1343              	.LASF15:
- 1344 0181 63796973 		.ascii	"cyisraddress\000"
- 1344      72616464 
- 1344      72657373 
- 1344      00
- 1345              	.LASF16:
- 1346 018e 73697A65 		.ascii	"sizetype\000"
- 1346      74797065 
- 1346      00
- 1347              	.LASF6:
- 1348 0197 6C6F6E67 		.ascii	"long long int\000"
- 1348      206C6F6E 
- 1348      6720696E 
- 1348      7400
- 1349              	.LASF13:
- 1350 01a5 63686172 		.ascii	"char\000"
+ 1336 018c 75696E74 		.ascii	"uint32\000"
+ 1336      333200
+ 1337              	.LASF38:
+ 1338 0193 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1338      74657243 
+ 1338      72697469 
+ 1338      63616C53 
+ 1338      65637469 
+ 1339              	.LASF8:
+ 1340 01aa 756E7369 		.ascii	"unsigned int\000"
+ 1340      676E6564 
+ 1340      20696E74 
+ 1340      00
+ 1341              	.LASF30:
+ 1342 01b7 43414E5F 		.ascii	"CAN_isr_Stop\000"
+ 1342      6973725F 
+ 1342      53746F70 
+ 1342      00
+ 1343              	.LASF19:
+ 1344 01c4 61646472 		.ascii	"address\000"
+ 1344      65737300 
+ 1345              	.LASF39:
+ 1346 01cc 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1346      69744372 
+ 1346      69746963 
+ 1346      616C5365 
+ 1346      6374696F 
+ 1347              	.LASF15:
+ 1348 01e2 63796973 		.ascii	"cyisraddress\000"
+ 1348      72616464 
+ 1348      72657373 
+ 1348      00
+ 1349              	.LASF16:
+ 1350 01ef 73697A65 		.ascii	"sizetype\000"
+ 1350      74797065 
  1350      00
- 1351              	.LASF35:
- 1352 01aa 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\Test_Robot\\Test"
- 1352      73657273 
- 1352      5C48656E 
- 1352      72792041 
- 1352      6C626572 
- 1353 01d8 5F43414E 		.ascii	"_CAN_Module_1.cydsn\000"
- 1353      5F4D6F64 
- 1353      756C655F 
- 1353      312E6379 
- 1353      64736E00 
- 1354              	.LASF33:
- 1355 01ec 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1355      4320342E 
- 1355      392E3320 
- 1355      32303135 
- 1355      30333033 
- 1356 021f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 1356      20726576 
- 1356      6973696F 
- 1356      6E203232 
- 1356      31323230 
- 1357 0252 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1357      66756E63 
- 1357      74696F6E 
- 1357      2D736563 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cci10OLA.s 			page 34
+ 1351              	.LASF6:
+ 1352 01f8 6C6F6E67 		.ascii	"long long int\000"
+ 1352      206C6F6E 
+ 1352      6720696E 
+ 1352      7400
+ 1353              	.LASF13:
+ 1354 0206 63686172 		.ascii	"char\000"
+ 1354      00
+ 1355              	.LASF33:
+ 1356 020b 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1356      4320342E 
+ 1356      392E3320 
+ 1356      32303135 
+ 1356      30333033 
+ 1357 023e 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1357      20726576 
+ 1357      6973696F 
+ 1357      6E203232 
+ 1357      31323230 
+ 1358 0271 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1358      66756E63 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccBukGgG.s 			page 34
 
 
- 1357      74696F6E 
- 1358              	.LASF17:
- 1359 027a 43414E5F 		.ascii	"CAN_isr_SetVector\000"
- 1359      6973725F 
- 1359      53657456 
- 1359      6563746F 
- 1359      7200
- 1360              	.LASF2:
- 1361 028c 73686F72 		.ascii	"short int\000"
- 1361      7420696E 
- 1361      7400
- 1362              	.LASF29:
- 1363 0296 43414E5F 		.ascii	"CAN_isr_StartEx\000"
- 1363      6973725F 
- 1363      53746172 
- 1363      74457800 
- 1364              	.LASF22:
- 1365 02a6 7072696F 		.ascii	"priorityOffset\000"
- 1365      72697479 
- 1365      4F666673 
- 1365      657400
- 1366              	.LASF4:
- 1367 02b5 6C6F6E67 		.ascii	"long int\000"
- 1367      20696E74 
- 1367      00
- 1368              	.LASF0:
- 1369 02be 7369676E 		.ascii	"signed char\000"
- 1369      65642063 
- 1369      68617200 
- 1370              	.LASF31:
- 1371 02ca 43414E5F 		.ascii	"CAN_isr_SetPending\000"
- 1371      6973725F 
- 1371      53657450 
- 1371      656E6469 
- 1371      6E6700
- 1372              	.LASF27:
- 1373 02dd 43414E5F 		.ascii	"CAN_isr_Disable\000"
- 1373      6973725F 
- 1373      44697361 
- 1373      626C6500 
- 1374              	.LASF24:
- 1375 02ed 43414E5F 		.ascii	"CAN_isr_Enable\000"
- 1375      6973725F 
- 1375      456E6162 
- 1375      6C6500
- 1376              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1358      74696F6E 
+ 1358      2D736563 
+ 1358      74696F6E 
+ 1359              	.LASF17:
+ 1360 0299 43414E5F 		.ascii	"CAN_isr_SetVector\000"
+ 1360      6973725F 
+ 1360      53657456 
+ 1360      6563746F 
+ 1360      7200
+ 1361              	.LASF2:
+ 1362 02ab 73686F72 		.ascii	"short int\000"
+ 1362      7420696E 
+ 1362      7400
+ 1363              	.LASF29:
+ 1364 02b5 43414E5F 		.ascii	"CAN_isr_StartEx\000"
+ 1364      6973725F 
+ 1364      53746172 
+ 1364      74457800 
+ 1365              	.LASF22:
+ 1366 02c5 7072696F 		.ascii	"priorityOffset\000"
+ 1366      72697479 
+ 1366      4F666673 
+ 1366      657400
+ 1367              	.LASF4:
+ 1368 02d4 6C6F6E67 		.ascii	"long int\000"
+ 1368      20696E74 
+ 1368      00
+ 1369              	.LASF0:
+ 1370 02dd 7369676E 		.ascii	"signed char\000"
+ 1370      65642063 
+ 1370      68617200 
+ 1371              	.LASF31:
+ 1372 02e9 43414E5F 		.ascii	"CAN_isr_SetPending\000"
+ 1372      6973725F 
+ 1372      53657450 
+ 1372      656E6469 
+ 1372      6E6700
+ 1373              	.LASF27:
+ 1374 02fc 43414E5F 		.ascii	"CAN_isr_Disable\000"
+ 1374      6973725F 
+ 1374      44697361 
+ 1374      626C6500 
+ 1375              	.LASF24:
+ 1376 030c 43414E5F 		.ascii	"CAN_isr_Enable\000"
+ 1376      6973725F 
+ 1376      456E6162 
+ 1376      6C6500
+ 1377              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -14,7 +14,7 @@
       <Tool Name="prebuild" Command="" Options="" />
       <Tool Name="assembler" Command="armasm.exe" Options="--cpu=Cortex-M0 --diag_style=gnu --thumb -i. -iGenerated_Source\PSoC4 -g --list=${OutputDir}/${CompileFile}.lst" />
       <Tool Name="compiler" Command="armcc.exe" Options="--cpu=Cortex-M0 --diag_style=gnu -I. -IGenerated_Source\PSoC4 --list --signed_chars -g -D DEBUG -O0 --split_sections" />
-      <Tool Name="linker" Command="armlink.exe" Options="--cpu=Cortex-M0 --diag_style=gnu --no_startup --library_type=microlib --map --list ${OutputDir}/${ProjectShortName}.map --scatter &quot;C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn\Generated_Source\PSoC4\Cm0RealView.scat&quot;" />
+      <Tool Name="linker" Command="armlink.exe" Options="--cpu=Cortex-M0 --diag_style=gnu --no_startup --library_type=microlib --map --list ${OutputDir}/${ProjectShortName}.map --scatter &quot;C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn\Generated_Source\PSoC4\Cm0RealView.scat&quot; --keep=Bootloader_1_Checksum --keep=Bootloader_1_SizeBytes" />
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
     <Toolchain Name="ARM IAR Generic" Selected="False">
@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Test_Sensor_F4" Path="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn" Version="5.40" Type="Normal">
+  <Project Name="Test_Sensor_F4" Path="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn" Version="5.40" Type="Bootloader">
     <CMSIS_SVD_File>Test_Sensor_F4.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -125,6 +125,9 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_scl_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_SCB_IRQ.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_SCB_IRQ.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Bootloader_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Bootloader_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Bootloader_1_PVT.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn\Export\ARM_GCC_Generic">

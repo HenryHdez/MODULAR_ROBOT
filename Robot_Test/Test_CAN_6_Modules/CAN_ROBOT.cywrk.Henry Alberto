@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CAN_ROBOT\Test_CAN_Module_6">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CAN_ROBOT\Test_CAN_Module_1\Source Files\main.c">
 <ExpandedNodeIds>
 <v>CAN_ROBOT</v>
 <v>CAN_ROBOT\CAN_Psoc_kit\TopDesign</v>
@@ -91,6 +91,7 @@
 <v>CAN_ROBOT\CAN_Psoc_kit\Generated_Source\PSoC5\cyfitterrv.inc</v>
 <v>CAN_ROBOT\CAN_Psoc_kit\Generated_Source\PSoC5\cymetadata.c</v>
 <v>CAN_ROBOT\CAN_Psoc_kit\Generated_Source\PSoC5\project.h</v>
+<v>CAN_ROBOT\Test_CAN_Module_1</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\TopDesign</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\Test_CAN_Module_1.cydwr</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\Header Files</v>
@@ -139,26 +140,6 @@
 <v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\cy_lfclk</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\cy_lfclk\CyLFClk.c</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\cy_lfclk\CyLFClk.h</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_1</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_1\LED_1.c</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_1\LED_1.h</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_1\LED_1_aliases.h</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_1\LED_1_PM.c</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_2</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_2\LED_2.c</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_2\LED_2.h</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_2\LED_2_aliases.h</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_2\LED_2_PM.c</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_3</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_3\LED_3.c</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_3\LED_3.h</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_3\LED_3_aliases.h</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_3\LED_3_PM.c</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_4</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_4\LED_4.c</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_4\LED_4.h</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_4\LED_4_aliases.h</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\LED_4\LED_4_PM.c</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\RX_1</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\RX_1\RX_1.c</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\RX_1\RX_1.h</v>
@@ -185,6 +166,7 @@
 <v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\cyfitterrv.inc</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\cymetadata.c</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source\PSoC4\project.h</v>
+<v>CAN_ROBOT\Test_CAN_Module_2</v>
 <v>CAN_ROBOT\Test_CAN_Module_2\TopDesign</v>
 <v>CAN_ROBOT\Test_CAN_Module_2\Test_CAN_Module_2.cydwr</v>
 <v>CAN_ROBOT\Test_CAN_Module_2\Header Files</v>
@@ -661,11 +643,33 @@
 <v>CAN_ROBOT</v>
 <v>CAN_ROBOT\CAN_Psoc_kit</v>
 <v>CAN_ROBOT\Test_CAN_Module_1</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\TopDesign</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Test_CAN_Module_1.cydwr</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Pins</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Analog</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\DMA</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Clocks</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Interrupts</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\System</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Directives</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Test_CAN_Module_1.cydwr\Flash Security</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Header Files</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Header Files\cyapicallbacks.h</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Source Files</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Source Files\main.c</v>
+<v>CAN_ROBOT\Test_CAN_Module_1\Generated_Source</v>
 <v>CAN_ROBOT\Test_CAN_Module_2</v>
-<v>CAN_ROBOT\Test_CAN_Module_3</v>
-<v>CAN_ROBOT\Test_CAN_Module_4</v>
-<v>CAN_ROBOT\Test_CAN_Module_5</v>
-<v>CAN_ROBOT\Test_CAN_Module_6</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\TopDesign</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\Test_CAN_Module_2.cydwr</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\Test_CAN_Module_2.cydwr\Pins</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\Test_CAN_Module_2.cydwr\Analog</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\Test_CAN_Module_2.cydwr\DMA</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\Test_CAN_Module_2.cydwr\Clocks</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\Test_CAN_Module_2.cydwr\Interrupts</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\Test_CAN_Module_2.cydwr\System</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\Test_CAN_Module_2.cydwr\Directives</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\Test_CAN_Module_2.cydwr\Flash Security</v>
+<v>CAN_ROBOT\Test_CAN_Module_2\Header Files</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -773,14 +777,6 @@
 <v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_1.lst</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_1_PM.lst</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_2.lst</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_2_PM.lst</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_3.lst</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_3_PM.lst</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_4.lst</v>
-<v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_4_PM.lst</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\RX_1.lst</v>
 <v>CAN_ROBOT\Test_CAN_Module_1\CortexM0\ARM_GCC_493\Debug\Listing Files\RX_1_PM.lst</v>
@@ -1149,10 +1145,8 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Test_CAN_Module_3.cydsn\main.c" />
-<name v=".\Test_CAN_Module_4.cydsn\main.c" />
-<name v=".\Test_CAN_Module_5.cydsn\main.c" />
-<name v=".\Test_CAN_Module_6.cydsn\main.c" />
+<name v=".\Test_CAN_Module_1.cydsn\main.c" />
+<name v=".\Test_CAN_Module_1.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -1160,7 +1154,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="829, 399" SelectedTabbedMdiWindow="5bb99728-e8a9-4f1f-bf6b-d91f2654a9a9"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="43850630-c835-437f-9fe3-2e8d4db89471" /><DocumentWindow Key="a6bf97b5-b356-4774-90be-1a1b3e61cede" Guid="d4c90580-ca84-4146-96e2-479ab1f97c7d" /><DocumentWindow Key="999bc442-8f4c-48b0-98e3-d6d90095fc64" Guid="a7560321-9186-4d3b-ae2a-e989dcc4a460" /><DocumentWindow Key="d21484ee-f725-4523-a53b-75a10b115de7" Guid="aa624549-16b0-4d9d-ae8d-444869c19626" /><DocumentWindow Key="0006df53-0f3f-4a51-933c-0faaf403194e" Guid="5bb99728-e8a9-4f1f-bf6b-d91f2654a9a9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="766, 399" SelectedTabbedMdiWindow="36bed01e-2a31-4081-8f55-a142d9b1b825"><DocumentWindow Key="c1338b02-103e-4978-a57f-9d8361fe3edb" Guid="36bed01e-2a31-4081-8f55-a142d9b1b825" /><DocumentWindow Key="a60a4141-d0f0-4881-9097-66d0cdf76a30" Guid="fca39787-586b-4bde-a200-6a4867334281" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

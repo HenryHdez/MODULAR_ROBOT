@@ -1,0 +1,2091 @@
+Archive member included because of file (symbol)
+
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o (cyfitter_cfg)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (LED_1_Write)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (LED_2_Write)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (LED_3_Write)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (LED_4_Write)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o) (CyIntEnable)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o) (CySysClkWcoStart)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (MOTOR_Start)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o) (MOTOR_IntClock_StartEx)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (CAN_GlobalIntEnable)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o) (CAN_ISR)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (CAN_SendMsg0)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (TXC_Write)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (RX_Start)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o) (RX_RXISR)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o) (RX_IntClock_StartEx)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (SENSOR_1_Enable)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o) (SENSOR_1_I2CInit)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o) (SENSOR_1_mstrRdBufIndex)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (SENSOR_2_Enable)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o) (SENSOR_2_I2CInit)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o) (SENSOR_2_mstrRdBufIndex)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (SENSOR_3_Enable)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o) (SENSOR_3_I2CInit)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o) (SENSOR_3_mstrRdBufIndex)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+                              .\CortexM0\ARM_GCC_493\Debug\main.o (SENSOR_4_Enable)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o) (SENSOR_4_I2CInit)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o) (SENSOR_4_mstrRdBufIndex)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyBootAsmGnu.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o) (CyDelayCycles)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o) (CySysFlashSetWaitCycles)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o) (SENSOR_1_I2C_ISR)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o) (SENSOR_2_I2C_ISR)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o) (SENSOR_3_I2C_ISR)
+.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o) (SENSOR_4_I2C_ISR)
+d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o) (__aeabi_uidiv)
+d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o) (__aeabi_idiv)
+d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                              d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o (__errno)
+d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+                              d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (exit)
+d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+                              d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
+d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                              d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (__libc_init_array)
+d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
+                              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o) (memcpy)
+d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                              d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+SENSOR_4_mstrControl
+                    0x1               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+SENSOR_2_mstrControl
+                    0x1               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+posicion            0x4               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_2_mstrWrBufIndex
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+Position_Low_Byte   0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+Checksum            0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_4_mstrWrBufSize
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+SENSOR_1_mstrWrBufIndex
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+SENSOR_2_state      0x1               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+Incoming_Byte2      0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_1_mstrWrBufSize
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+SENSOR_1_state      0x1               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+SENSOR_3_mstrRdBufIndex
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+SENSOR_2_mstrStatus
+                    0x2               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+SENSOR_4_mstrStatus
+                    0x2               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+SENSOR_3_mstrStatus
+                    0x2               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+SENSOR_1_mstrWrBufIndexTmp
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+SENSOR_4_mstrRdBufPtr
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+SENSOR_2_mstrWrBufSize
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+SENSOR_3_state      0x1               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+SENSOR_1_mstrRdBufPtr
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+SENSOR_2_mstrWrBufIndexTmp
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+dato_recibido       0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_4_mstrWrBufIndex
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+posicionh           0x4               .\CortexM0\ARM_GCC_493\Debug\main.o
+Incoming_Byte       0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+Error_Byte          0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_3_mstrWrBufSize
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+SENSOR_2_mstrRdBufSize
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+SENSOR_2_mstrRdBufPtr
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+tem                 0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+Position_High_Byte  0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_3_mstrRdBufSize
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+SENSOR_3_mstrWrBufIndexTmp
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+dato_enviado        0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_1_mstrStatus
+                    0x2               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+Position_Long_Byte  0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_3_mstrRdBufPtr
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+dir                 0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+RX_rxBuffer         0x10              .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+Time_Counter        0x4               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_2_mstrRdBufIndex
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+tes                 0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+error               0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_3_mstrWrBufPtr
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+posicionl           0x4               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_1_mstrWrBufPtr
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+SENSOR_4_mstrRdBufIndex
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+SENSOR_2_mstrWrBufPtr
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+SENSOR_4_state      0x1               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+SENSOR_3_mstrWrBufIndex
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+SENSOR_4_mstrWrBufIndexTmp
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+SENSOR_4_mstrRdBufSize
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+SENSOR_1_mstrRdBufIndex
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+SENSOR_1_mstrRdBufSize
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+SENSOR_4_mstrWrBufPtr
+                    0x4               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+SENSOR_1_mstrControl
+                    0x1               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+Temperature_Byte    0x1               .\CortexM0\ARM_GCC_493\Debug\main.o
+SENSOR_3_mstrControl
+                    0x1               .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+ .data          0x00000000        0x4 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .text          0x00000000       0x78 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.extab     0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.readProximity_1
+                0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.readAmbient_1
+                0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.readProximity_2
+                0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.readAmbient_2
+                0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.readProximity_3
+                0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.readAmbient_3
+                0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.readProximity_4
+                0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.readAmbient_4
+                0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.error_data
+                0x00000000       0xa0 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.readtemperature
+                0x00000000       0xfc .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.setID    0x00000000       0x64 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.ping     0x00000000       0x54 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.reset    0x00000000       0x58 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.LED      0x00000000       0x64 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.Move     0x00000000       0x70 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.setEndless
+                0x00000000       0xc0 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.torqueStatus
+                0x00000000       0x64 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.MoveSpeed
+                0x00000000       0x94 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.moveRW   0x00000000       0x70 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.action   0x00000000       0x44 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.turn     0x00000000       0xe0 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.readPosition
+                0x00000000      0x128 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.setAngleLimit
+                0x00000000       0x9c .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .data          0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .text._exit    0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .text._sbrk    0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .text.LED_1_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .text.LED_1_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .text.LED_1_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .text.LED_1_SetInterruptMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .text.LED_1_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .text.LED_2_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .text.LED_2_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .text.LED_2_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .text.LED_2_SetInterruptMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .text.LED_2_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .text.LED_3_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .text.LED_3_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .text.LED_3_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .text.LED_3_SetInterruptMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .text.LED_3_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .text.LED_4_SetDriveMode
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .text.LED_4_Read
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .text.LED_4_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .text.LED_4_SetInterruptMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .text.LED_4_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .bss           0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysClkImoStop
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysClkWriteHfclkDirect
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysClkGetSysclkSource
+                0x00000000       0x1c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysClkWriteSysclkDiv
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysLvdDisable
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysLvdGetInterruptSource
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysLvdClearInterrupt
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysGetResetReason
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyDisableInts
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyEnableInts
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyIntGetState
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyIntSetPending
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyIntClearPending
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyIntSetSysVector
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyIntGetSysVector
+                0x00000000       0x1c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyIntGetVector
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyIntGetPriority
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySoftwareReset
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysClkImoStart
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyDelayUs
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysLvdEnable
+                0x00000000       0x44 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyDelayFreq
+                0x00000000       0x4c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickStop
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickEnableInterrupt
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickEnable
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickDisableInterrupt
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickSetReload
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickGetReload
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickGetValue
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickSetClockSource
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickGetCountFlag
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickServiceCallbacks
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickClear
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickInit
+                0x00000000       0x4c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickStart
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickSetCallback
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysTickGetCallback
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CyGetUniqueId
+                0x00000000       0x70 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysSetRamAccessArbPriority
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysSetFlashAccessArbPriority
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysSetDmacAccessArbPriority
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text.CySysSetPeripheralAccessArbPriority
+                0x00000000       0x68 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkIloEnabled
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkGetLfclkSource
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkIloStart
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkIloStartMeasurement
+                0x00000000       0x5c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkIloStopMeasurement
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkIloCompensate
+                0x00000000      0x108 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkIloUpdateTrimReg
+                0x00000000       0xa4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkIloTrim
+                0x00000000       0xd8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkIloRestoreFactoryTrim
+                0x00000000       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkWcoSetPowerMode
+                0x00000000       0x4c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkWcoClockOutSelect
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtGetEnabledStatus
+                0x00000000       0x24 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtSetMode
+                0x00000000       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkLfclkPosedgeRestore
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtGetMode
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtSetClearOnMatch
+                0x00000000       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtGetClearOnMatch
+                0x00000000       0x24 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtEnable
+                0x00000000       0x3c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtDisable
+                0x00000000       0x44 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtSetCascade
+                0x00000000       0x34 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtGetCascade
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtSetMatch
+                0x00000000       0x58 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtSetToggleBit
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtGetToggleBit
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtGetMatch
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtGetCount
+                0x00000000       0x3c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkLfclkPosedgeCatch
+                0x00000000       0x74 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkIloStop
+                0x00000000       0x4c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkSetLfclkSource
+                0x00000000       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkWcoStop
+                0x00000000       0x48 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtGetInterruptSource
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtResetCounters
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtSetInterruptCallback
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtGetInterruptCallback
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtEnableCounterIsr
+                0x00000000       0x34 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWdtDisableCounterIsr
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysWatchdogFeed
+                0x00000000       0x60 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysTimerDelayUntilMatch
+                0x00000000       0x6c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysTimerDelay
+                0x00000000       0x3c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .rodata        0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_Stop
+                0x00000000       0x24 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_ReadControlRegister
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_WriteControlRegister
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_SetTxInterruptMode
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_WriteTxData
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_ReadTxStatus
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_PutChar
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_PutString
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_PutArray
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_PutCRLF
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_GetTxBufferSize
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_ClearTxBuffer
+                0x00000000       0x24 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_SendBreak
+                0x00000000       0x5c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text.MOTOR_SetTxAddressMode
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .text.MOTOR_IntClock_Stop
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .text.MOTOR_IntClock_SetFractionalDividerRegister
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .text.MOTOR_IntClock_GetDividerRegister
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .text.MOTOR_IntClock_GetFractionalDividerRegister
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_GlobalIntDisable
+                0x00000000       0x1c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_RXRegisterInit
+                0x00000000       0x64 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_GetTXErrorFlag
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_GetRXErrorFlag
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_GetTXErrorCount
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_GetRXErrorCount
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_GetErrorState
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_SetOpMode
+                0x00000000       0x60 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_SetErrorCaptureRegisterMode
+                0x00000000       0x40 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_ReadErrorCaptureRegister
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text.CAN_ArmErrorCaptureRegister
+                0x00000000       0x1c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .text.CAN_SendMsg
+                0x00000000      0x158 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .text.CAN_TxCancel
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .text.TXC_Read
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_Stop  0x00000000       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_ReadControlRegister
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_WriteControlRegister
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_SetRxInterruptMode
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_ReadRxData
+                0x00000000       0x5c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_ReadRxStatus
+                0x00000000       0x24 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_GetChar
+                0x00000000       0x78 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_GetByte
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_GetRxBufferSize
+                0x00000000       0x58 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_ClearRxBuffer
+                0x00000000       0x40 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_SetRxAddressMode
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_SetRxAddress1
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text.RX_SetRxAddress2
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .text.RX_IntClock_Stop
+                0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .text.RX_IntClock_SetFractionalDividerRegister
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .text.RX_IntClock_GetDividerRegister
+                0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .text.RX_IntClock_GetFractionalDividerRegister
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .text.SENSOR_1_ScbModeStop
+                0x00000000        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .text.SENSOR_1_Stop
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .text.SENSOR_1_SetRxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .text.SENSOR_1_SetTxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .text.SENSOR_1_SetCustomInterruptHandler
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .text.SENSOR_1_I2CStop
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text.SENSOR_1_I2CMasterSendStart
+                0x00000000       0xd8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text.SENSOR_1_I2CMasterSendStop
+                0x00000000       0x8c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text.SENSOR_1_I2CMasterWriteByte
+                0x00000000       0x98 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text.SENSOR_1_I2CMasterReadByte
+                0x00000000       0x84 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text.SENSOR_1_I2CMasterGetReadBufSize
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text.SENSOR_1_I2CMasterGetWriteBufSize
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text.SENSOR_1_I2CMasterClearReadBuf
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text.SENSOR_1_I2CMasterClearWriteBuf
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text.SENSOR_1_I2CMasterClearStatus
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text.SENSOR_1_I2CMasterSendRestart
+                0x00000000       0xc4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .text.SENSOR_2_ScbModeStop
+                0x00000000        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .text.SENSOR_2_Stop
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .text.SENSOR_2_SetRxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .text.SENSOR_2_SetTxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .text.SENSOR_2_SetCustomInterruptHandler
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .text.SENSOR_2_I2CStop
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text.SENSOR_2_I2CMasterSendStart
+                0x00000000       0xd8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text.SENSOR_2_I2CMasterSendStop
+                0x00000000       0x8c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text.SENSOR_2_I2CMasterWriteByte
+                0x00000000       0x98 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text.SENSOR_2_I2CMasterReadByte
+                0x00000000       0x84 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text.SENSOR_2_I2CMasterGetReadBufSize
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text.SENSOR_2_I2CMasterGetWriteBufSize
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text.SENSOR_2_I2CMasterClearReadBuf
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text.SENSOR_2_I2CMasterClearWriteBuf
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text.SENSOR_2_I2CMasterClearStatus
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text.SENSOR_2_I2CMasterSendRestart
+                0x00000000       0xc4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .text.SENSOR_3_ScbModeStop
+                0x00000000        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .text.SENSOR_3_Stop
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .text.SENSOR_3_SetRxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .text.SENSOR_3_SetTxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .text.SENSOR_3_SetCustomInterruptHandler
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .text.SENSOR_3_I2CStop
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text.SENSOR_3_I2CMasterSendStart
+                0x00000000       0xd8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text.SENSOR_3_I2CMasterSendStop
+                0x00000000       0x8c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text.SENSOR_3_I2CMasterWriteByte
+                0x00000000       0x98 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text.SENSOR_3_I2CMasterReadByte
+                0x00000000       0x84 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text.SENSOR_3_I2CMasterGetReadBufSize
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text.SENSOR_3_I2CMasterGetWriteBufSize
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text.SENSOR_3_I2CMasterClearReadBuf
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text.SENSOR_3_I2CMasterClearWriteBuf
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text.SENSOR_3_I2CMasterClearStatus
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text.SENSOR_3_I2CMasterSendRestart
+                0x00000000       0xc4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .text.SENSOR_4_ScbModeStop
+                0x00000000        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .text.SENSOR_4_Stop
+                0x00000000       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .text.SENSOR_4_SetRxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .text.SENSOR_4_SetTxFifoLevel
+                0x00000000       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .text.SENSOR_4_SetCustomInterruptHandler
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .text.SENSOR_4_I2CStop
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .text.SENSOR_4_I2CMasterSendStart
+                0x00000000       0xd8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .text.SENSOR_4_I2CMasterSendStop
+                0x00000000       0x8c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .text.SENSOR_4_I2CMasterWriteByte
+                0x00000000       0x98 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .text.SENSOR_4_I2CMasterReadByte
+                0x00000000       0x84 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .text.SENSOR_4_I2CMasterGetReadBufSize
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .text.SENSOR_4_I2CMasterGetWriteBufSize
+                0x00000000        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .text.SENSOR_4_I2CMasterClearReadBuf
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .text.SENSOR_4_I2CMasterClearWriteBuf
+                0x00000000       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .text.SENSOR_4_I2CMasterClearStatus
+                0x00000000       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .text.SENSOR_4_I2CMasterSendRestart
+                0x00000000       0xc4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyBootAsmGnu.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyBootAsmGnu.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .text.CySysFlashClockBackup
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .text.CySysFlashClockRestore
+                0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .text.CySysFlashWriteRow
+                0x00000000      0x100 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .text.CySysSFlashWriteUserRow
+                0x00000000       0xf4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+ .text          0x00000000      0x120 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+ .text          0x00000000      0x1e0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+ .text          0x00000000        0x4 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .text.__errno  0x00000000        0xc d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x2c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .data.impure_data
+                0x00000000       0x60 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .rodata.str1.1
+                0x00000000        0x2 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x00000000        0x4 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00020000         xr
+ram              0x20000000         0x00004000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+START GROUP
+LOAD .\CortexM0\ARM_GCC_493\Debug\main.o
+LOAD .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+LOAD .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+LOAD .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a
+LOAD D:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_493\Debug\CyComponentLibrary.a
+END GROUP
+START GROUP
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a
+END GROUP
+START GROUP
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a
+END GROUP
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+START GROUP
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libc.a
+LOAD d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libnosys.a
+END GROUP
+                0x00000000                CY_APPL_ORIGIN = 0x0
+                0x00000080                CY_FLASH_ROW_SIZE = 0x80
+                0x00000001                CY_APPL_NUM = 0x1
+                0x00000001                CY_APPL_MAX = 0x1
+                0x00000040                CY_METADATA_SIZE = 0x40
+                0x00000000                CY_APPL_LOADABLE = 0x0
+                0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
+                0x00000000                CY_APP_FOR_STACK_AND_COPIER = 0x0
+                0x20000238                PROVIDE (__cy_heap_start, _end)
+                0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
+                0x20004000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x4000))
+                0x20003800                PROVIDE (__cy_heap_end, (__cy_stack - 0x800))
+
+.cybootloader   0x00000000        0x0
+ *(.cybootloader)
+                0x00000000                appl1_start = CY_APPL_ORIGIN?CY_APPL_ORIGIN:ALIGN (CY_FLASH_ROW_SIZE)
+                0x0000ff80                appl2_start = (appl1_start + ALIGN ((((0x20000 - appl1_start) - (0x2 * CY_FLASH_ROW_SIZE)) / 0x2), CY_FLASH_ROW_SIZE))
+                0x00000000                appl_start = (CY_APPL_NUM == 0x1)?appl1_start:appl2_start
+                0x00000001                cy_project_type_bootloader = (appl_start == 0x0)?0x1:0x0
+                0x00000000                cy_project_type_app_for_stack_and_copier = (CY_APP_FOR_STACK_AND_COPIER == 0x1)?0x1:0x0
+
+.text           0x00000000     0x3092
+ CREATE_OBJECT_SYMBOLS
+                0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
+ *(.romvectors)
+ .romvectors    0x00000000       0x10 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000000                RomVectors
+                0x00000001                ASSERT ((. != __cy_interrupt_vector), No interrupt vector)
+                0x00000001                ASSERT (CY_APPL_ORIGIN?(SIZEOF (.cybootloader) <= CY_APPL_ORIGIN):0x1, Wrong image location)
+                0x00000010                PROVIDE (__cy_reset, Reset)
+ *(.text.Reset)
+ .text.Reset    0x00000010        0x8 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000010                Reset
+                0x00000001                ASSERT ((. != __cy_reset), No reset code)
+ *(.psocinit)
+ .psocinit      0x00000018      0x2dc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+                0x00000140                cyfitter_cfg
+                0x000002f4                . = MAX (., 0x100)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x000002f4       0x60 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .text.writeVCNL_1
+                0x00000354       0x24 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000354                writeVCNL_1
+ .text.readVCNL_1
+                0x00000378       0x3c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000378                readVCNL_1
+ .text.initVCNL_1
+                0x000003b4       0x8c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x000003b4                initVCNL_1
+ .text.writeVCNL_2
+                0x00000440       0x24 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000440                writeVCNL_2
+ .text.readVCNL_2
+                0x00000464       0x3c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000464                readVCNL_2
+ .text.initVCNL_2
+                0x000004a0       0x8c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x000004a0                initVCNL_2
+ .text.writeVCNL_3
+                0x0000052c       0x24 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x0000052c                writeVCNL_3
+ .text.readVCNL_3
+                0x00000550       0x3c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000550                readVCNL_3
+ .text.initVCNL_3
+                0x0000058c       0x8c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x0000058c                initVCNL_3
+ .text.writeVCNL_4
+                0x00000618       0x24 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000618                writeVCNL_4
+ .text.readVCNL_4
+                0x0000063c       0x3c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x0000063c                readVCNL_4
+ .text.initVCNL_4
+                0x00000678       0x8c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000678                initVCNL_4
+ .text.main     0x00000704       0xe0 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000704                main
+ .text.IntDefaultHandler
+                0x000007e4        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x000007e4                IntDefaultHandler
+ .text.Start_c  0x000007e8       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x000007e8                Start_c
+ .text.initialize_psoc
+                0x00000830       0x54 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000830                initialize_psoc
+ .text.cfg_write_bytes32
+                0x00000884       0x34 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .text.AnalogSetDefault
+                0x000008b8       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .text.CYMEMZERO
+                0x000008d8        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .text.CYCONFIGCPYCODE
+                0x000008e4        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .text.LED_1_Write
+                0x000008ec       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+                0x000008ec                LED_1_Write
+ .text.LED_2_Write
+                0x00000904       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+                0x00000904                LED_2_Write
+ .text.LED_3_Write
+                0x0000091c       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+                0x0000091c                LED_3_Write
+ .text.LED_4_Write
+                0x00000934       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+                0x00000934                LED_4_Write
+ .text.CySysClkImoDisableWcoLock
+                0x0000094c       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x0000094c                CySysClkImoDisableWcoLock
+ .text.CySysClkImoGetWcoLock
+                0x00000960       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x00000960                CySysClkImoGetWcoLock
+ .text.CyIntEnable
+                0x00000974       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x00000974                CyIntEnable
+ .text.CyIntDisable
+                0x00000988       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x00000988                CyIntDisable
+ .text.CyHalt   0x0000099c        0x4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x0000099c                CyHalt
+ .text.CyIntSetVector
+                0x000009a0       0x24 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x000009a0                CyIntSetVector
+ .text.CyIntSetPriority
+                0x000009c4       0x4c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x000009c4                CyIntSetPriority
+ .text.CyDelay  0x00000a10       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x00000a10                CyDelay
+ .text.CySysClkImoEnableWcoLock
+                0x00000a40       0xe8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x00000a40                CySysClkImoEnableWcoLock
+ .text.CySysClkWriteImoFreq
+                0x00000b28       0x80 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x00000b28                CySysClkWriteImoFreq
+ .text.CySysWdtLocked
+                0x00000ba8       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .text.CySysClkWcoStart
+                0x00000bbc       0x40 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+                0x00000bbc                CySysClkWcoStart
+ .text.CySysClkWcoEnabled
+                0x00000bfc       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+                0x00000bfc                CySysClkWcoEnabled
+ .text.CySysWdtLock
+                0x00000c10       0x1c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+                0x00000c10                CySysWdtLock
+ .text.CySysWdtUnlock
+                0x00000c2c       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+                0x00000c2c                CySysWdtUnlock
+ .text.CySysWdtClearInterrupt
+                0x00000c5c       0x4c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+                0x00000c5c                CySysWdtClearInterrupt
+ .text.CySysWdtIsr
+                0x00000ca8       0xa4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+                0x00000ca8                CySysWdtIsr
+ .text.MOTOR_Init
+                0x00000d4c       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+                0x00000d4c                MOTOR_Init
+ .text.MOTOR_Enable
+                0x00000d6c       0x24 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+                0x00000d6c                MOTOR_Enable
+ .text.MOTOR_Start
+                0x00000d90       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+                0x00000d90                MOTOR_Start
+ .text.MOTOR_IntClock_StartEx
+                0x00000db0       0x1c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+                0x00000db0                MOTOR_IntClock_StartEx
+ .text.CAN_Stop
+                0x00000dcc       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00000dcc                CAN_Stop
+ .text.CAN_GlobalIntEnable
+                0x00000e04       0x1c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00000e04                CAN_GlobalIntEnable
+ .text.CAN_Enable
+                0x00000e20       0x48 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00000e20                CAN_Enable
+ .text.CAN_SetPreScaler
+                0x00000e68       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00000e68                CAN_SetPreScaler
+ .text.CAN_SetArbiter
+                0x00000ea0       0x40 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00000ea0                CAN_SetArbiter
+ .text.CAN_SetTsegSample
+                0x00000ee0       0xa0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00000ee0                CAN_SetTsegSample
+ .text.CAN_SetRestartType
+                0x00000f80       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00000f80                CAN_SetRestartType
+ .text.CAN_SetEdgeMode
+                0x00000fb8       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00000fb8                CAN_SetEdgeMode
+ .text.CAN_SetIrqMask
+                0x00000ff0       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00000ff0                CAN_SetIrqMask
+ .text.CAN_RxBufConfig
+                0x00001008       0x98 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00001008                CAN_RxBufConfig
+ .text.CAN_TxBufConfig
+                0x000010a0       0x58 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x000010a0                CAN_TxBufConfig
+ .text.CAN_RxTxBuffersConfig
+                0x000010f8       0x54 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x000010f8                CAN_RxTxBuffersConfig
+ .text.CAN_SetSwapDataEndianness
+                0x0000114c       0x40 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x0000114c                CAN_SetSwapDataEndianness
+ .text.CAN_Init
+                0x0000118c       0xe4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x0000118c                CAN_Init
+ .text.CAN_Start
+                0x00001270       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00001270                CAN_Start
+ .text.CAN_BusOffIsr
+                0x00001298       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+                0x00001298                CAN_BusOffIsr
+ .text.CAN_MsgRXIsr
+                0x000012ac       0x54 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+                0x000012ac                CAN_MsgRXIsr
+ .text.CAN_ISR  0x00001300       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+                0x00001300                CAN_ISR
+ .text.CAN_SendMsg0
+                0x00001320       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+                0x00001320                CAN_SendMsg0
+ .text.CAN_ReceiveMsg
+                0x00001358       0x1c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+                0x00001358                CAN_ReceiveMsg
+ .text.CAN_ReceiveMsg0
+                0x00001374       0x24 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+                0x00001374                CAN_ReceiveMsg0
+ .text.TXC_Write
+                0x00001398        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+                0x00001398                TXC_Write
+ .text.RX_Init  0x000013a4       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+                0x000013a4                RX_Init
+ .text.RX_Enable
+                0x000013dc       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+                0x000013dc                RX_Enable
+ .text.RX_Start
+                0x00001414       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+                0x00001414                RX_Start
+ .text.RX_RXISR
+                0x00001434       0x8c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+                0x00001434                RX_RXISR
+ .text.RX_IntClock_StartEx
+                0x000014c0       0x1c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+                0x000014c0                RX_IntClock_StartEx
+ .text.SENSOR_1_ScbEnableIntr
+                0x000014dc        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .text.SENSOR_1_Init
+                0x000014e8        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+                0x000014e8                SENSOR_1_Init
+ .text.SENSOR_1_Enable
+                0x000014f0       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+                0x000014f0                SENSOR_1_Enable
+ .text.SENSOR_1_Start
+                0x00001508       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+                0x00001508                SENSOR_1_Start
+ .text.SENSOR_1_I2CInit
+                0x00001528       0xbc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+                0x00001528                SENSOR_1_I2CInit
+ .text.SENSOR_1_I2CMasterStatus
+                0x000015e4       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+                0x000015e4                SENSOR_1_I2CMasterStatus
+ .text.SENSOR_1_I2CReStartGeneration
+                0x00001614       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+                0x00001614                SENSOR_1_I2CReStartGeneration
+ .text.SENSOR_1_I2CMasterWriteBuf
+                0x00001634       0xec .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+                0x00001634                SENSOR_1_I2CMasterWriteBuf
+ .text.SENSOR_1_I2CMasterReadBuf
+                0x00001720       0xfc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+                0x00001720                SENSOR_1_I2CMasterReadBuf
+ .text.SENSOR_2_ScbEnableIntr
+                0x0000181c        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .text.SENSOR_2_Init
+                0x00001828        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+                0x00001828                SENSOR_2_Init
+ .text.SENSOR_2_Enable
+                0x00001830       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+                0x00001830                SENSOR_2_Enable
+ .text.SENSOR_2_Start
+                0x00001848       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+                0x00001848                SENSOR_2_Start
+ .text.SENSOR_2_I2CInit
+                0x00001868       0xbc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+                0x00001868                SENSOR_2_I2CInit
+ .text.SENSOR_2_I2CMasterStatus
+                0x00001924       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+                0x00001924                SENSOR_2_I2CMasterStatus
+ .text.SENSOR_2_I2CReStartGeneration
+                0x00001954       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+                0x00001954                SENSOR_2_I2CReStartGeneration
+ .text.SENSOR_2_I2CMasterWriteBuf
+                0x00001974       0xec .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+                0x00001974                SENSOR_2_I2CMasterWriteBuf
+ .text.SENSOR_2_I2CMasterReadBuf
+                0x00001a60       0xfc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+                0x00001a60                SENSOR_2_I2CMasterReadBuf
+ .text.SENSOR_3_ScbEnableIntr
+                0x00001b5c        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .text.SENSOR_3_Init
+                0x00001b68        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+                0x00001b68                SENSOR_3_Init
+ .text.SENSOR_3_Enable
+                0x00001b70       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+                0x00001b70                SENSOR_3_Enable
+ .text.SENSOR_3_Start
+                0x00001b88       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+                0x00001b88                SENSOR_3_Start
+ .text.SENSOR_3_I2CInit
+                0x00001ba8       0xbc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+                0x00001ba8                SENSOR_3_I2CInit
+ .text.SENSOR_3_I2CMasterStatus
+                0x00001c64       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+                0x00001c64                SENSOR_3_I2CMasterStatus
+ .text.SENSOR_3_I2CReStartGeneration
+                0x00001c94       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+                0x00001c94                SENSOR_3_I2CReStartGeneration
+ .text.SENSOR_3_I2CMasterWriteBuf
+                0x00001cb4       0xec .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+                0x00001cb4                SENSOR_3_I2CMasterWriteBuf
+ .text.SENSOR_3_I2CMasterReadBuf
+                0x00001da0       0xfc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+                0x00001da0                SENSOR_3_I2CMasterReadBuf
+ .text.SENSOR_4_ScbEnableIntr
+                0x00001e9c        0xc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .text.SENSOR_4_Init
+                0x00001ea8        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+                0x00001ea8                SENSOR_4_Init
+ .text.SENSOR_4_Enable
+                0x00001eb0       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+                0x00001eb0                SENSOR_4_Enable
+ .text.SENSOR_4_Start
+                0x00001ec8       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+                0x00001ec8                SENSOR_4_Start
+ .text.SENSOR_4_I2CInit
+                0x00001ee8       0xbc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+                0x00001ee8                SENSOR_4_I2CInit
+ .text.SENSOR_4_I2CMasterStatus
+                0x00001fa4       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+                0x00001fa4                SENSOR_4_I2CMasterStatus
+ .text.SENSOR_4_I2CReStartGeneration
+                0x00001fd4       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+                0x00001fd4                SENSOR_4_I2CReStartGeneration
+ .text.SENSOR_4_I2CMasterWriteBuf
+                0x00001ff4       0xec .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+                0x00001ff4                SENSOR_4_I2CMasterWriteBuf
+ .text.SENSOR_4_I2CMasterReadBuf
+                0x000020e0       0xfc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+                0x000020e0                SENSOR_4_I2CMasterReadBuf
+ *fill*         0x000021dc        0x4 
+ .text          0x000021e0       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyBootAsmGnu.o)
+                0x000021e0                CyDelayCycles
+                0x000021f2                CyEnterCriticalSection
+                0x000021fa                CyExitCriticalSection
+ .text.CySysFlashSetWaitCycles
+                0x00002200       0x54 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+                0x00002200                CySysFlashSetWaitCycles
+ .text.SENSOR_1_I2C_ISR
+                0x00002254      0x374 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+                0x00002254                SENSOR_1_I2C_ISR
+ .text.SENSOR_2_I2C_ISR
+                0x000025c8      0x374 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+                0x000025c8                SENSOR_2_I2C_ISR
+ .text.SENSOR_3_I2C_ISR
+                0x0000293c      0x374 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+                0x0000293c                SENSOR_3_I2C_ISR
+ .text.SENSOR_4_I2C_ISR
+                0x00002cb0      0x374 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+                0x00002cb0                SENSOR_4_I2C_ISR
+ .text.__libc_init_array
+                0x00003024       0x4c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x00003024                __libc_init_array
+ .text.memcpy   0x00003070       0x12 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
+                0x00003070                memcpy
+ .text.memset   0x00003082       0x10 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                0x00003082                memset
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.bootloader)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+
+.v4_bx          0x00003094        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00003094        0x0
+ .iplt          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x00003094        0x4
+ *(.eh_frame)
+ .eh_frame      0x00003094        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .eh_frame      0x00003094        0x4 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+                0x00003098                PROVIDE (__exidx_start, .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00003098                __exidx_end = .
+
+.rodata         0x00003098      0x4b0
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x00003098      0x2d0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .rodata        0x00003368       0x48 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x00003368                cyImoFreqMhz2Reg
+                0x00003398                cyImoFreqMhz2DpllOffset
+ .rodata        0x000033b0      0x160 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x00003510                . = ALIGN (0x4)
+ *(.init)
+ .init          0x00003510        0x4 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00003510                _init
+ .init          0x00003514        0x8 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x0000351c                . = ALIGN (0x4)
+                0x0000351c                __preinit_array_start = .
+ *(.preinit_array)
+                0x0000351c                __preinit_array_end = .
+                0x0000351c                . = ALIGN (0x4)
+                0x0000351c                __init_array_start = .
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x0000351c        0x4 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .init_array    0x00003520        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00003524                __init_array_end = .
+                0x00003524                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x00003524        0x4 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00003524                _fini
+ .fini          0x00003528        0x8 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00003530                . = ALIGN (0x4)
+                0x00003530                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x00003530        0x4 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x00003534                __fini_array_end = .
+                0x00003534                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x00003534                . = ALIGN (0x4)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x00003534                . = ALIGN (0x4)
+                0x00003534                __cy_regions = .
+                0x00003534        0x4 LONG 0x3548 __cy_region_init_ram
+                0x00003538        0x4 LONG 0x200000c8 __cy_region_start_data
+                0x0000353c        0x4 LONG 0x20 __cy_region_init_size_ram
+                0x00003540        0x4 LONG 0x150 __cy_region_zero_size_ram
+                0x00003544                __cy_regions_end = .
+                0x00003548                . = ALIGN (0x8)
+ *fill*         0x00003544        0x4 
+                0x00003548                _etext = .
+
+.cy_checksum_exclude
+                0x00003548        0x0
+ *(.cy_checksum_exclude)
+
+.ramvectors     0x20000000       0xc0
+                0x20000000                __cy_region_start_ram = .
+ *(.ramvectors)
+ .ramvectors    0x20000000       0xc0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x20000000                CyRamVectors
+
+.noinit         0x200000c0        0x4
+ *(.noinit)
+ .noinit        0x200000c0        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+
+.data           0x200000c8       0x20 load address 0x00003548
+                0x200000c8                __cy_region_start_data = .
+ *(.jcr)
+ .jcr           0x200000c8        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .jcr           0x200000c8        0x4 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x200000cc       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                0x200000cc                cydelay32kMs
+                0x200000d0                cydelayFreqKhz
+                0x200000d4                cydelayFreqMhz
+                0x200000d8                cydelayFreqHz
+ .data          0x200000dc        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+                0x200000e8                . = ALIGN (0x8)
+ *fill*         0x200000e4        0x4 
+ *(.ram)
+                0x200000e8                _edata = .
+
+.igot.plt       0x200000e8        0x0 load address 0x00003568
+ .igot.plt      0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+
+.bss            0x200000e8      0x150 load address 0x00003568
+                0x200000e8                PROVIDE (__bss_start__, .)
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x200000e8       0x1c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .bss           0x20000104       0x10 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x20000104                i
+                0x20000108                ii
+                0x2000010c                iii
+                0x20000110                iiii
+ .bss           0x20000114       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .bss           0x2000013c        0x2 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+                0x2000013c                MOTOR_initVar
+ .bss           0x2000013e        0x1 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                0x2000013e                CAN_initVar
+ .bss           0x2000013f        0x6 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+                0x2000013f                RX_errorStatus
+                0x20000140                RX_initVar
+                0x20000141                RX_rxBufferRead
+                0x20000142                RX_rxBufferWrite
+                0x20000143                RX_rxBufferLoopDetect
+                0x20000144                RX_rxBufferOverflow
+ *fill*         0x20000145        0x3 
+ .bss           0x20000148        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+                0x20000148                SENSOR_1_initVar
+                0x2000014c                SENSOR_1_customIntrHandler
+ .bss           0x20000150        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+                0x20000150                SENSOR_2_initVar
+                0x20000154                SENSOR_2_customIntrHandler
+ .bss           0x20000158        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+                0x20000158                SENSOR_3_initVar
+                0x2000015c                SENSOR_3_customIntrHandler
+ .bss           0x20000160        0x8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+                0x20000160                SENSOR_4_initVar
+                0x20000164                SENSOR_4_customIntrHandler
+ *(COMMON)
+ COMMON         0x20000168       0x21 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x20000168                posicion
+                0x2000016c                Position_Low_Byte
+                0x2000016d                Checksum
+                0x2000016e                Incoming_Byte2
+                0x2000016f                dato_recibido
+                0x20000170                posicionh
+                0x20000174                Incoming_Byte
+                0x20000175                Error_Byte
+                0x20000176                tem
+                0x20000177                Position_High_Byte
+                0x20000178                dato_enviado
+                0x20000179                Position_Long_Byte
+                0x2000017a                dir
+                0x2000017c                Time_Counter
+                0x20000180                tes
+                0x20000181                error
+                0x20000184                posicionl
+                0x20000188                Temperature_Byte
+ *fill*         0x20000189        0x3 
+ COMMON         0x2000018c       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+                0x2000018c                RX_rxBuffer
+ COMMON         0x2000019c        0x1 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+                0x2000019c                SENSOR_1_state
+ *fill*         0x2000019d        0x3 
+ COMMON         0x200001a0       0x21 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+                0x200001a0                SENSOR_1_mstrWrBufIndex
+                0x200001a4                SENSOR_1_mstrWrBufSize
+                0x200001a8                SENSOR_1_mstrWrBufIndexTmp
+                0x200001ac                SENSOR_1_mstrRdBufPtr
+                0x200001b0                SENSOR_1_mstrStatus
+                0x200001b4                SENSOR_1_mstrWrBufPtr
+                0x200001b8                SENSOR_1_mstrRdBufIndex
+                0x200001bc                SENSOR_1_mstrRdBufSize
+                0x200001c0                SENSOR_1_mstrControl
+ COMMON         0x200001c1        0x1 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+                0x200001c1                SENSOR_2_state
+ *fill*         0x200001c2        0x2 
+ COMMON         0x200001c4       0x24 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+                0x200001c4                SENSOR_2_mstrControl
+                0x200001c8                SENSOR_2_mstrWrBufIndex
+                0x200001cc                SENSOR_2_mstrStatus
+                0x200001d0                SENSOR_2_mstrWrBufSize
+                0x200001d4                SENSOR_2_mstrWrBufIndexTmp
+                0x200001d8                SENSOR_2_mstrRdBufSize
+                0x200001dc                SENSOR_2_mstrRdBufPtr
+                0x200001e0                SENSOR_2_mstrRdBufIndex
+                0x200001e4                SENSOR_2_mstrWrBufPtr
+ COMMON         0x200001e8        0x1 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+                0x200001e8                SENSOR_3_state
+ *fill*         0x200001e9        0x3 
+ COMMON         0x200001ec       0x21 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+                0x200001ec                SENSOR_3_mstrRdBufIndex
+                0x200001f0                SENSOR_3_mstrStatus
+                0x200001f4                SENSOR_3_mstrWrBufSize
+                0x200001f8                SENSOR_3_mstrRdBufSize
+                0x200001fc                SENSOR_3_mstrWrBufIndexTmp
+                0x20000200                SENSOR_3_mstrRdBufPtr
+                0x20000204                SENSOR_3_mstrWrBufPtr
+                0x20000208                SENSOR_3_mstrWrBufIndex
+                0x2000020c                SENSOR_3_mstrControl
+ COMMON         0x2000020d        0x1 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+                0x2000020d                SENSOR_4_state
+ *fill*         0x2000020e        0x2 
+ COMMON         0x20000210       0x24 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+                0x20000210                SENSOR_4_mstrControl
+                0x20000214                SENSOR_4_mstrWrBufSize
+                0x20000218                SENSOR_4_mstrStatus
+                0x2000021c                SENSOR_4_mstrRdBufPtr
+                0x20000220                SENSOR_4_mstrWrBufIndex
+                0x20000224                SENSOR_4_mstrRdBufIndex
+                0x20000228                SENSOR_4_mstrWrBufIndexTmp
+                0x2000022c                SENSOR_4_mstrRdBufSize
+                0x20000230                SENSOR_4_mstrWrBufPtr
+                0x20000238                . = ALIGN (0x8)
+ *fill*         0x20000234        0x4 
+ *(.ram.b)
+                0x20000238                _end = .
+                0x20000238                __end = .
+                0x20000238                PROVIDE (end, .)
+                0x20000238                PROVIDE (__bss_end__, .)
+                0x00003548                __cy_region_init_ram = LOADADDR (.data)
+                0x00000020                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x00000150                __cy_region_zero_size_ram = (_end - _edata)
+
+.heap           0x20000238       0x80 load address 0x00003568
+                0x20000238                . = _end
+                0x200002b8                . = (. + 0x80)
+ *fill*         0x20000238       0x80 
+                0x200002b8                __cy_heap_limit = .
+
+.stack          0x20003800      0x800
+                0x20003800                __cy_stack_limit = .
+                0x20004000                . = (. + 0x800)
+ *fill*         0x20003800      0x800 
+                0x00000001                ASSERT ((__cy_stack_limit >= __cy_heap_limit), region RAM overflowed with stack)
+                0x00000000                cy_checksum_exclude_size = (CY_APPL_LOADABLE == 0x1)?SIZEOF (.cy_checksum_exclude):0x0
+                0x00000001                ASSERT ((cy_checksum_exclude_size <= CY_CHECKSUM_EXCLUDE_SIZE), CY_BOOT: Section .cy_checksum_exclude size exceedes specified limit.)
+                0x0001ffc0                cyloadermeta_start = (cy_project_type_bootloader || cy_project_type_app_for_stack_and_copier)?(0x20000 - CY_METADATA_SIZE):0xf0000000
+
+.cyloadermeta
+ *(.cyloadermeta)
+                0x0001ffc0                cyloadablemeta_start = cy_project_type_app_for_stack_and_copier?((0x20000 - CY_FLASH_ROW_SIZE) - CY_METADATA_SIZE):((0x20000 - (CY_FLASH_ROW_SIZE * (CY_APPL_NUM - 0x1))) - CY_METADATA_SIZE)
+
+.cyloadablemeta
+ *(.cyloadablemeta)
+
+.cyflashprotect
+                0x90400000       0x80
+ *(.cyflashprotect)
+ .cyflashprotect
+                0x90400000       0x80 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                0x90400000                cy_meta_flashprotect
+
+.cymeta         0x90500000        0xc
+ *(.cymeta)
+ .cymeta        0x90500000        0xc .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                0x90500000                cy_metadata
+
+.cychipprotect  0x90600000        0x4
+ *(.cychipprotect)
+ .cychipprotect
+                0x90600000        0x4 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                0x90600000                cy_meta_chipprotect
+
+.rel.dyn        0x00003568        0x0 load address 0x90600004
+ .rel.iplt      0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0xeb8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x138 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_aranges
+                0x00000138       0x18 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_aranges
+                0x00000150       0x48 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_aranges
+                0x00000198       0x48 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .debug_aranges
+                0x000001e0       0x48 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .debug_aranges
+                0x00000228       0x48 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .debug_aranges
+                0x00000270       0x48 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .debug_aranges
+                0x000002b8       0x48 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .debug_aranges
+                0x00000300      0x1b8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .debug_aranges
+                0x000004b8      0x188 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .debug_aranges
+                0x00000640       0xa0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .debug_aranges
+                0x000006e0       0x40 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .debug_aranges
+                0x00000720       0xe8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .debug_aranges
+                0x00000808       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .debug_aranges
+                0x00000838       0x40 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .debug_aranges
+                0x00000878       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .debug_aranges
+                0x000008a0       0x98 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .debug_aranges
+                0x00000938       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .debug_aranges
+                0x00000958       0x40 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .debug_aranges
+                0x00000998       0x60 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .debug_aranges
+                0x000009f8       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .debug_aranges
+                0x00000a20       0x88 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .debug_aranges
+                0x00000aa8       0x60 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .debug_aranges
+                0x00000b08       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .debug_aranges
+                0x00000b30       0x88 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .debug_aranges
+                0x00000bb8       0x60 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .debug_aranges
+                0x00000c18       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .debug_aranges
+                0x00000c40       0x88 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .debug_aranges
+                0x00000cc8       0x60 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .debug_aranges
+                0x00000d28       0x28 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .debug_aranges
+                0x00000d50       0x88 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .debug_aranges
+                0x00000dd8       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x00000df8       0x40 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .debug_aranges
+                0x00000e38       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .debug_aranges
+                0x00000e58       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .debug_aranges
+                0x00000e78       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .debug_aranges
+                0x00000e98       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0xa8de
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x29c6 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_info    0x000029c6       0xfe .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x00002ac4      0x38c .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_info    0x00002e50      0x5a9 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .debug_info    0x000033f9      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .debug_info    0x00003596      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .debug_info    0x00003733      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .debug_info    0x000038d0      0x19d .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .debug_info    0x00003a6d      0xd02 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .debug_info    0x0000476f     0x1056 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .debug_info    0x000057c5      0x474 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .debug_info    0x00005c39      0x166 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .debug_info    0x00005d9f      0x9f4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .debug_info    0x00006793      0x25a .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .debug_info    0x000069ed      0x3d0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .debug_info    0x00006dbd       0xd6 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .debug_info    0x00006e93      0x5e6 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .debug_info    0x00007479      0x145 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .debug_info    0x000075be      0x166 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .debug_info    0x00007724      0x297 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .debug_info    0x000079bb      0x1ab .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .debug_info    0x00007b66      0x5a3 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .debug_info    0x00008109      0x297 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .debug_info    0x000083a0      0x1ab .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .debug_info    0x0000854b      0x5a3 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .debug_info    0x00008aee      0x297 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .debug_info    0x00008d85      0x1ab .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .debug_info    0x00008f30      0x5a3 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .debug_info    0x000094d3      0x297 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .debug_info    0x0000976a      0x1ab .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .debug_info    0x00009915      0x5a3 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .debug_info    0x00009eb8       0x84 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyBootAsmGnu.o)
+ .debug_info    0x00009f3c      0x36e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .debug_info    0x0000a2aa      0x18d .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .debug_info    0x0000a437      0x18d .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .debug_info    0x0000a5c4      0x18d .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .debug_info    0x0000a751      0x18d .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+
+.debug_abbrev   0x00000000     0x2baf
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x24f .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_abbrev  0x0000024f       0x5d .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_abbrev  0x000002ac      0x1fe .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_abbrev  0x000004aa      0x237 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .debug_abbrev  0x000006e1       0xc8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .debug_abbrev  0x000007a9       0xc8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .debug_abbrev  0x00000871       0xc8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .debug_abbrev  0x00000939       0xc8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .debug_abbrev  0x00000a01      0x22d .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .debug_abbrev  0x00000c2e      0x273 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .debug_abbrev  0x00000ea1      0x1a2 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .debug_abbrev  0x00001043       0xb7 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .debug_abbrev  0x000010fa      0x1bc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .debug_abbrev  0x000012b6      0x100 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .debug_abbrev  0x000013b6      0x19c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .debug_abbrev  0x00001552       0x81 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .debug_abbrev  0x000015d3      0x1aa .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .debug_abbrev  0x0000177d       0x8a .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .debug_abbrev  0x00001807       0xb7 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .debug_abbrev  0x000018be      0x143 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .debug_abbrev  0x00001a01       0xf3 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .debug_abbrev  0x00001af4      0x189 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .debug_abbrev  0x00001c7d      0x143 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .debug_abbrev  0x00001dc0       0xf3 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .debug_abbrev  0x00001eb3      0x189 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .debug_abbrev  0x0000203c      0x143 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .debug_abbrev  0x0000217f       0xf3 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .debug_abbrev  0x00002272      0x189 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .debug_abbrev  0x000023fb      0x143 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .debug_abbrev  0x0000253e       0xf3 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .debug_abbrev  0x00002631      0x189 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .debug_abbrev  0x000027ba       0x14 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x000027ce      0x1c1 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .debug_abbrev  0x0000298f       0x88 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .debug_abbrev  0x00002a17       0x88 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .debug_abbrev  0x00002a9f       0x88 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .debug_abbrev  0x00002b27       0x88 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+
+.debug_line     0x00000000     0x3eda
+ *(.debug_line)
+ .debug_line    0x00000000      0x6c9 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_line    0x000006c9       0x51 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x0000071a      0x247 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_line    0x00000961      0x1dd .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .debug_line    0x00000b3e       0xbd .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .debug_line    0x00000bfb       0xbd .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .debug_line    0x00000cb8       0xbd .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .debug_line    0x00000d75       0xbd .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .debug_line    0x00000e32      0x51a .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .debug_line    0x0000134c      0x5d2 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .debug_line    0x0000191e      0x207 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .debug_line    0x00001b25       0xc3 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .debug_line    0x00001be8      0x3e7 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .debug_line    0x00001fcf       0xba .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .debug_line    0x00002089      0x128 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .debug_line    0x000021b1       0x6c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .debug_line    0x0000221d      0x1fa .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .debug_line    0x00002417       0x7c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .debug_line    0x00002493       0xc0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .debug_line    0x00002553      0x12e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .debug_line    0x00002681       0xaf .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .debug_line    0x00002730      0x29f .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .debug_line    0x000029cf      0x12e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .debug_line    0x00002afd       0xaf .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .debug_line    0x00002bac      0x29f .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .debug_line    0x00002e4b      0x12e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .debug_line    0x00002f79       0xaf .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .debug_line    0x00003028      0x29f .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .debug_line    0x000032c7      0x12e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .debug_line    0x000033f5       0xaf .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .debug_line    0x000034a4      0x29f .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .debug_line    0x00003743       0x68 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyBootAsmGnu.o)
+ .debug_line    0x000037ab      0x173 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .debug_line    0x0000391e      0x16f .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .debug_line    0x00003a8d      0x16f .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .debug_line    0x00003bfc      0x16f .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .debug_line    0x00003d6b      0x16f .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+
+.debug_frame    0x00000000     0x2464
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x464 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_frame   0x00000464       0xb0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_frame   0x00000514       0xbc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .debug_frame   0x000005d0       0x70 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .debug_frame   0x00000640       0x70 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .debug_frame   0x000006b0       0x70 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .debug_frame   0x00000720       0x70 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .debug_frame   0x00000790      0x474 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .debug_frame   0x00000c04      0x4a4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .debug_frame   0x000010a8      0x17c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .debug_frame   0x00001224       0x6c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .debug_frame   0x00001290      0x238 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .debug_frame   0x000014c8       0x68 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .debug_frame   0x00001530       0x80 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .debug_frame   0x000015b0       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .debug_frame   0x000015e0      0x17c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .debug_frame   0x0000175c       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .debug_frame   0x0000177c       0x6c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .debug_frame   0x000017e8       0xe8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .debug_frame   0x000018d0       0x3c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .debug_frame   0x0000190c      0x16c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .debug_frame   0x00001a78       0xe8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .debug_frame   0x00001b60       0x3c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .debug_frame   0x00001b9c      0x16c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .debug_frame   0x00001d08       0xe8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .debug_frame   0x00001df0       0x3c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .debug_frame   0x00001e2c      0x16c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .debug_frame   0x00001f98       0xe8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .debug_frame   0x00002080       0x3c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .debug_frame   0x000020bc      0x16c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .debug_frame   0x00002228       0x90 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .debug_frame   0x000022b8       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .debug_frame   0x000022e4       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .debug_frame   0x00002310       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .debug_frame   0x0000233c       0x2c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+ .debug_frame   0x00002368       0x20 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00002388       0x20 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x000023a8       0x20 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x000023c8       0x28 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x000023f0       0x2c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x0000241c       0x28 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x00002444       0x20 d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+
+.debug_str      0x00000000     0x3228
+ *(.debug_str)
+ .debug_str     0x00000000      0x68e .\CortexM0\ARM_GCC_493\Debug\main.o
+                                0x6fc (size before relaxing)
+ .debug_str     0x0000068e       0x59 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                                0x1c2 (size before relaxing)
+ .debug_str     0x000006e7      0x15a .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                                0x2e9 (size before relaxing)
+ .debug_str     0x00000841      0x1ab .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+                                0x372 (size before relaxing)
+ .debug_str     0x000009ec       0xa4 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+                                0x22a (size before relaxing)
+ .debug_str     0x00000a90       0x7b .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+                                0x22a (size before relaxing)
+ .debug_str     0x00000b0b       0x7b .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+                                0x22a (size before relaxing)
+ .debug_str     0x00000b86       0x7b .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+                                0x22a (size before relaxing)
+ .debug_str     0x00000c01      0x5a9 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+                                0x7b6 (size before relaxing)
+ .debug_str     0x000011aa      0x6e1 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+                                0x905 (size before relaxing)
+ .debug_str     0x0000188b      0x1dc .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+                                0x3a4 (size before relaxing)
+ .debug_str     0x00001a67       0xd6 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+                                0x275 (size before relaxing)
+ .debug_str     0x00001b3d      0x33a .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+                                0x52b (size before relaxing)
+ .debug_str     0x00001e77       0x61 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+                                0x25b (size before relaxing)
+ .debug_str     0x00001ed8       0x88 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+                                0x2e9 (size before relaxing)
+ .debug_str     0x00001f60       0x26 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+                                0x19d (size before relaxing)
+ .debug_str     0x00001f86      0x1a2 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+                                0x417 (size before relaxing)
+ .debug_str     0x00002128       0x4f .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+                                0x223 (size before relaxing)
+ .debug_str     0x00002177       0x96 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+                                0x263 (size before relaxing)
+ .debug_str     0x0000220d      0x12c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+                                0x2ec (size before relaxing)
+ .debug_str     0x00002339       0x79 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+                                0x252 (size before relaxing)
+ .debug_str     0x000023b2      0x245 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+                                0x488 (size before relaxing)
+ .debug_str     0x000025f7      0x10b .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+                                0x2ec (size before relaxing)
+ .debug_str     0x00002702       0x79 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+                                0x252 (size before relaxing)
+ .debug_str     0x0000277b      0x201 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+                                0x488 (size before relaxing)
+ .debug_str     0x0000297c      0x10b .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+                                0x2ec (size before relaxing)
+ .debug_str     0x00002a87       0x79 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+                                0x252 (size before relaxing)
+ .debug_str     0x00002b00      0x201 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+                                0x488 (size before relaxing)
+ .debug_str     0x00002d01      0x10b .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+                                0x2ec (size before relaxing)
+ .debug_str     0x00002e0c       0x79 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+                                0x252 (size before relaxing)
+ .debug_str     0x00002e85      0x201 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+                                0x488 (size before relaxing)
+ .debug_str     0x00003086       0xa0 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+                                0x298 (size before relaxing)
+ .debug_str     0x00003126       0x51 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x00003177       0x3b .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x000031b2       0x3b .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x000031ed       0x3b .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+                                0x2d3 (size before relaxing)
+
+.debug_loc      0x00000000     0x5f8a
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x960 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_loc     0x00000960      0x14f .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_loc     0x00000aaf      0x1fe .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .debug_loc     0x00000cad       0xa2 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .debug_loc     0x00000d4f       0xa2 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .debug_loc     0x00000df1       0xa2 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .debug_loc     0x00000e93       0xa2 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .debug_loc     0x00000f35      0x7ae .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .debug_loc     0x000016e3      0xdc1 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .debug_loc     0x000024a4      0x202 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .debug_loc     0x000026a6       0x76 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .debug_loc     0x0000271c      0xa77 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .debug_loc     0x00003193       0x54 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .debug_loc     0x000031e7      0x19e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .debug_loc     0x00003385      0x1a3 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .debug_loc     0x00003528       0x45 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .debug_loc     0x0000356d       0x76 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .debug_loc     0x000035e3       0x7e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .debug_loc     0x00003661      0x88e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .debug_loc     0x00003eef       0x7e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .debug_loc     0x00003f6d      0x88e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .debug_loc     0x000047fb       0x7e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .debug_loc     0x00004879      0x88e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .debug_loc     0x00005107       0x7e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .debug_loc     0x00005185      0x88e .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .debug_loc     0x00005a13      0x147 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .debug_loc     0x00005b5a      0x10c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .debug_loc     0x00005c66      0x10c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .debug_loc     0x00005d72      0x10c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .debug_loc     0x00005e7e      0x10c .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   0x00000000      0xc50
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x128 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_ranges  0x00000128       0x38 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_ranges  0x00000160       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .debug_ranges  0x00000198       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .debug_ranges  0x000001d0       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .debug_ranges  0x00000208       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .debug_ranges  0x00000240       0x38 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .debug_ranges  0x00000278      0x1a8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .debug_ranges  0x00000420      0x178 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .debug_ranges  0x00000598       0x90 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .debug_ranges  0x00000628       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .debug_ranges  0x00000658       0xd8 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .debug_ranges  0x00000730       0x20 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .debug_ranges  0x00000750       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .debug_ranges  0x00000780       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .debug_ranges  0x00000798       0x88 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .debug_ranges  0x00000820       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .debug_ranges  0x00000830       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .debug_ranges  0x00000860       0x50 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .debug_ranges  0x000008b0       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .debug_ranges  0x000008c8       0x78 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .debug_ranges  0x00000940       0x50 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .debug_ranges  0x00000990       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .debug_ranges  0x000009a8       0x78 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .debug_ranges  0x00000a20       0x50 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .debug_ranges  0x00000a70       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .debug_ranges  0x00000a88       0x78 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .debug_ranges  0x00000b00       0x50 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .debug_ranges  0x00000b50       0x18 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .debug_ranges  0x00000b68       0x78 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .debug_ranges  0x00000be0       0x30 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .debug_ranges  0x00000c10       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .debug_ranges  0x00000c20       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .debug_ranges  0x00000c30       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .debug_ranges  0x00000c40       0x10 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 .\CortexM0\ARM_GCC_493\Debug\main.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x28
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x1e d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+ .ARM.attributes
+                0x0000001e       0x2c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .ARM.attributes
+                0x0000004a       0x1b d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.attributes
+                0x00000065       0x31 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .ARM.attributes
+                0x00000096       0x31 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .ARM.attributes
+                0x000000c7       0x31 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .ARM.attributes
+                0x000000f8       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(cyfitter_cfg.o)
+ .ARM.attributes
+                0x00000129       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_1.o)
+ .ARM.attributes
+                0x0000015a       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_2.o)
+ .ARM.attributes
+                0x0000018b       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_3.o)
+ .ARM.attributes
+                0x000001bc       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(LED_4.o)
+ .ARM.attributes
+                0x000001ed       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLib.o)
+ .ARM.attributes
+                0x0000021e       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyLFClk.o)
+ .ARM.attributes
+                0x0000024f       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR.o)
+ .ARM.attributes
+                0x00000280       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(MOTOR_IntClock.o)
+ .ARM.attributes
+                0x000002b1       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN.o)
+ .ARM.attributes
+                0x000002e2       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_INT.o)
+ .ARM.attributes
+                0x00000313       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CAN_TX_RX_func.o)
+ .ARM.attributes
+                0x00000344       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(TXC.o)
+ .ARM.attributes
+                0x00000375       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX.o)
+ .ARM.attributes
+                0x000003a6       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_INT.o)
+ .ARM.attributes
+                0x000003d7       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(RX_IntClock.o)
+ .ARM.attributes
+                0x00000408       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1.o)
+ .ARM.attributes
+                0x00000439       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C.o)
+ .ARM.attributes
+                0x0000046a       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_MASTER.o)
+ .ARM.attributes
+                0x0000049b       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2.o)
+ .ARM.attributes
+                0x000004cc       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C.o)
+ .ARM.attributes
+                0x000004fd       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_MASTER.o)
+ .ARM.attributes
+                0x0000052e       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3.o)
+ .ARM.attributes
+                0x0000055f       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C.o)
+ .ARM.attributes
+                0x00000590       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_MASTER.o)
+ .ARM.attributes
+                0x000005c1       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4.o)
+ .ARM.attributes
+                0x000005f2       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C.o)
+ .ARM.attributes
+                0x00000623       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_MASTER.o)
+ .ARM.attributes
+                0x00000654       0x21 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyBootAsmGnu.o)
+ .ARM.attributes
+                0x00000675       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(CyFlash.o)
+ .ARM.attributes
+                0x000006a6       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_1_I2C_INT.o)
+ .ARM.attributes
+                0x000006d7       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_2_I2C_INT.o)
+ .ARM.attributes
+                0x00000708       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_3_I2C_INT.o)
+ .ARM.attributes
+                0x00000739       0x31 .\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.a(SENSOR_4_I2C_INT.o)
+ .ARM.attributes
+                0x0000076a       0x1e d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000788       0x1e d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x000007a6       0x1e d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000007c4       0x2c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .ARM.attributes
+                0x000007f0       0x2c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000081c       0x2c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000848       0x2c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000874       0x2c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x000008a0       0x2c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000008cc       0x2c d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+ .ARM.attributes
+                0x000008f8       0x1e d:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(.\CortexM0\ARM_GCC_493\Debug\Test_CAN_Module_1.elf elf32-littlearm)

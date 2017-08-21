@@ -1,0 +1,6 @@
+D:\henrry\empenzando\modulo.cydsn\modulo.cyprj|c0c4b57f-6c4f-48de-8702-3f7257431219
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d375d53f-7b31-4a58-b36c-ce3fbaf29239
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2d7a5e04-0d44-4f04-931f-d61b7b9a6118
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d676dfa1-3f72-488e-ba67-1433f7255b5a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a3059110-038c-4710-98e7-f06dfda17206
+D:\henrry\empenzando\modulo.cydsn\CAN_Psoc_kit.cydsn\CAN_Psoc_kit.cyprj|a7410b70-a7d0-42a5-8bf1-a0dd45fa1c45

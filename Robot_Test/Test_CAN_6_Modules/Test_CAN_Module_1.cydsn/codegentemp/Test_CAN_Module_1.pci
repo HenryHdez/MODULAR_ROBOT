@@ -1,5 +1,5 @@
 # Test_CAN_Module_1
-# 2017-02-01 01:12:45Z
+# 2017-07-21 03:55:13Z
 
 # IO_4@[IOP=(0)][IoId=(4)] is reserved: KhzXtalEnabled
 dont_use_io iocell 0 4
@@ -10,9 +10,5 @@ dont_use_io iocell 3 2
 # IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 3
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
-set_io "LED_1(0)" iocell 2 2
-set_io "LED_2(0)" iocell 2 3
-set_io "LED_3(0)" iocell 2 4
-set_io "LED_4(0)" iocell 2 5
 set_io "TX_1(0)" iocell 4 1
 set_io "RX_1(0)" iocell 4 0

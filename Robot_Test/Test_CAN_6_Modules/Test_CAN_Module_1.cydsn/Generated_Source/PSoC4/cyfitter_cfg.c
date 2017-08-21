@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: cyfitter_cfg.c
 * 
-* PSoC Creator  3.3 CP3
+* PSoC Creator  4.0 Update 1
 *
 * Description:
 * This file contains device initialization code.
@@ -22,6 +22,7 @@
 #include "CyLib.h"
 #include "CyLFClk.h"
 #include "cyfitter_cfg.h"
+#include "cyapicallbacks.h"
 
 
 #if defined(__GNUC__) || defined(__ARMCC_VERSION)
@@ -79,11 +80,13 @@ static void CYCONFIGCPYCODE(void *dest, const void *src, size_t n)
 
 
 
+
 /* Clock startup error codes                                                   */
 #define CYCLOCKSTART_NO_ERROR    0u
 #define CYCLOCKSTART_XTAL_ERROR  1u
 #define CYCLOCKSTART_32KHZ_ERROR 2u
 #define CYCLOCKSTART_PLL_ERROR   3u
+
 
 #ifdef CY_NEED_CYCLOCKSTARTUPERROR
 /*******************************************************************************
@@ -109,6 +112,14 @@ static void CyClockStartupError(uint8 errorCode)
     /* To remove the compiler warning if errorCode not used.                */
     errorCode = errorCode;
 
+    /* If we have a clock startup error (bad MHz crystal, PLL lock, etc.),  */
+    /* we will end up here to allow the customer to implement something to  */
+    /* deal with the clock condition.                                       */
+
+#ifdef CY_CFG_CLOCK_STARTUP_ERROR_CALLBACK
+	CY_CFG_Clock_Startup_ErrorCallback();
+#else
+	/*  If not using CY_CFG_CLOCK_STARTUP_ERROR_CALLBACK, place your clock startup code here. */
     /* `#START CyClockStartupError` */
 
     /* If we have a clock startup error (bad MHz crystal, PLL lock, etc.),  */
@@ -120,6 +131,7 @@ static void CyClockStartupError(uint8 errorCode)
     /* If nothing else, stop here since the clocks have not started         */
     /* correctly.                                                           */
     while(1) {}
+#endif /* CY_CFG_CLOCK_STARTUP_ERROR_CALLBACK */ 
 }
 #endif
 
@@ -258,9 +270,6 @@ void cyfitter_cfg(void)
 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_HSIOM_PORT_SEL3), 0x0000EE00u);
 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_HSIOM_PORT_SEL4), 0x000000AAu);
 
-		/* UDB_PA_2 Starting address: CYDEV_UDB_PA2_BASE */
-		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA2_BASE), 0x00990000u);
-
 		/* UDB_PA_3 Starting address: CYDEV_UDB_PA3_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA3_BASE), 0x00990000u);
 
@@ -273,9 +282,6 @@ void cyfitter_cfg(void)
 	}
 
 	/* Perform second pass device configuration. These items must be configured in specific order after the regular configuration is done. */
-	/* IOPINS0_2 Starting address: CYDEV_GPIO_PRT2_BASE */
-	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT2_PC), 0x00036D80u);
-
 	/* IOPINS0_3 Starting address: CYDEV_GPIO_PRT3_BASE */
 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_GPIO_PRT3_PC), 0x00000D80u);
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 1
 
 
    1              		.syntax unified
@@ -26,81 +26,81 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
   23              		.type	TX_1_Write, %function
   24              	TX_1_Write:
   25              	.LFB0:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\TX_1.c"
-   1:.\Generated_Source\PSoC5/TX_1.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC5/TX_1.c **** * File Name: TX_1.c  
-   3:.\Generated_Source\PSoC5/TX_1.c **** * Version 2.20
-   4:.\Generated_Source\PSoC5/TX_1.c **** *
-   5:.\Generated_Source\PSoC5/TX_1.c **** * Description:
-   6:.\Generated_Source\PSoC5/TX_1.c **** *  This file contains API to enable firmware control of a Pins component.
-   7:.\Generated_Source\PSoC5/TX_1.c **** *
-   8:.\Generated_Source\PSoC5/TX_1.c **** * Note:
-   9:.\Generated_Source\PSoC5/TX_1.c **** *
-  10:.\Generated_Source\PSoC5/TX_1.c **** ********************************************************************************
-  11:.\Generated_Source\PSoC5/TX_1.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  12:.\Generated_Source\PSoC5/TX_1.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  13:.\Generated_Source\PSoC5/TX_1.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  14:.\Generated_Source\PSoC5/TX_1.c **** * the software package with which this file was provided.
-  15:.\Generated_Source\PSoC5/TX_1.c **** *******************************************************************************/
-  16:.\Generated_Source\PSoC5/TX_1.c **** 
-  17:.\Generated_Source\PSoC5/TX_1.c **** #include "cytypes.h"
-  18:.\Generated_Source\PSoC5/TX_1.c **** #include "TX_1.h"
-  19:.\Generated_Source\PSoC5/TX_1.c **** 
-  20:.\Generated_Source\PSoC5/TX_1.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
-  21:.\Generated_Source\PSoC5/TX_1.c **** #if !(CY_PSOC5A &&\
-  22:.\Generated_Source\PSoC5/TX_1.c **** 	 TX_1__PORT == 15 && ((TX_1__MASK & 0xC0) != 0))
-  23:.\Generated_Source\PSoC5/TX_1.c **** 
-  24:.\Generated_Source\PSoC5/TX_1.c **** 
-  25:.\Generated_Source\PSoC5/TX_1.c **** /*******************************************************************************
-  26:.\Generated_Source\PSoC5/TX_1.c **** * Function Name: TX_1_Write
-  27:.\Generated_Source\PSoC5/TX_1.c **** ****************************************************************************//**
-  28:.\Generated_Source\PSoC5/TX_1.c **** *
-  29:.\Generated_Source\PSoC5/TX_1.c **** * \brief Writes the value to the physical port (data output register), masking
-  30:.\Generated_Source\PSoC5/TX_1.c **** *  and shifting the bits appropriately. 
-  31:.\Generated_Source\PSoC5/TX_1.c **** *
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\TX_1.c"
+   1:Generated_Source\PSoC5/TX_1.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/TX_1.c **** * File Name: TX_1.c  
+   3:Generated_Source\PSoC5/TX_1.c **** * Version 2.20
+   4:Generated_Source\PSoC5/TX_1.c **** *
+   5:Generated_Source\PSoC5/TX_1.c **** * Description:
+   6:Generated_Source\PSoC5/TX_1.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:Generated_Source\PSoC5/TX_1.c **** *
+   8:Generated_Source\PSoC5/TX_1.c **** * Note:
+   9:Generated_Source\PSoC5/TX_1.c **** *
+  10:Generated_Source\PSoC5/TX_1.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/TX_1.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/TX_1.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC5/TX_1.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC5/TX_1.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/TX_1.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/TX_1.c **** 
+  17:Generated_Source\PSoC5/TX_1.c **** #include "cytypes.h"
+  18:Generated_Source\PSoC5/TX_1.c **** #include "TX_1.h"
+  19:Generated_Source\PSoC5/TX_1.c **** 
+  20:Generated_Source\PSoC5/TX_1.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:Generated_Source\PSoC5/TX_1.c **** #if !(CY_PSOC5A &&\
+  22:Generated_Source\PSoC5/TX_1.c **** 	 TX_1__PORT == 15 && ((TX_1__MASK & 0xC0) != 0))
+  23:Generated_Source\PSoC5/TX_1.c **** 
+  24:Generated_Source\PSoC5/TX_1.c **** 
+  25:Generated_Source\PSoC5/TX_1.c **** /*******************************************************************************
+  26:Generated_Source\PSoC5/TX_1.c **** * Function Name: TX_1_Write
+  27:Generated_Source\PSoC5/TX_1.c **** ****************************************************************************//**
+  28:Generated_Source\PSoC5/TX_1.c **** *
+  29:Generated_Source\PSoC5/TX_1.c **** * \brief Writes the value to the physical port (data output register), masking
+  30:Generated_Source\PSoC5/TX_1.c **** *  and shifting the bits appropriately. 
+  31:Generated_Source\PSoC5/TX_1.c **** *
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/TX_1.c **** * The data output register controls the signal applied to the physical pin in 
-  33:.\Generated_Source\PSoC5/TX_1.c **** * conjunction with the drive mode parameter. This function avoids changing 
-  34:.\Generated_Source\PSoC5/TX_1.c **** * other bits in the port by using the appropriate method (read-modify-write or
-  35:.\Generated_Source\PSoC5/TX_1.c **** * bit banding).
-  36:.\Generated_Source\PSoC5/TX_1.c **** *
-  37:.\Generated_Source\PSoC5/TX_1.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
-  38:.\Generated_Source\PSoC5/TX_1.c **** * as it is driven by the hardware signal attached to it.
-  39:.\Generated_Source\PSoC5/TX_1.c **** *
-  40:.\Generated_Source\PSoC5/TX_1.c **** * \param value
-  41:.\Generated_Source\PSoC5/TX_1.c **** *  Value to write to the component instance.
-  42:.\Generated_Source\PSoC5/TX_1.c **** *
-  43:.\Generated_Source\PSoC5/TX_1.c **** * \return 
-  44:.\Generated_Source\PSoC5/TX_1.c **** *  None 
-  45:.\Generated_Source\PSoC5/TX_1.c **** *
-  46:.\Generated_Source\PSoC5/TX_1.c **** * \sideeffect
-  47:.\Generated_Source\PSoC5/TX_1.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
-  48:.\Generated_Source\PSoC5/TX_1.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
-  49:.\Generated_Source\PSoC5/TX_1.c **** *  interrupts this function and performs writes to the Pins component data 
-  50:.\Generated_Source\PSoC5/TX_1.c **** *  register can cause corrupted port data. To avoid this issue, you should 
-  51:.\Generated_Source\PSoC5/TX_1.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
-  52:.\Generated_Source\PSoC5/TX_1.c **** *  this function.
-  53:.\Generated_Source\PSoC5/TX_1.c **** *
-  54:.\Generated_Source\PSoC5/TX_1.c **** * \funcusage
-  55:.\Generated_Source\PSoC5/TX_1.c **** *  \snippet TX_1_SUT.c usage_TX_1_Write
-  56:.\Generated_Source\PSoC5/TX_1.c **** *******************************************************************************/
-  57:.\Generated_Source\PSoC5/TX_1.c **** void TX_1_Write(uint8 value)
-  58:.\Generated_Source\PSoC5/TX_1.c **** {
+  32:Generated_Source\PSoC5/TX_1.c **** * The data output register controls the signal applied to the physical pin in 
+  33:Generated_Source\PSoC5/TX_1.c **** * conjunction with the drive mode parameter. This function avoids changing 
+  34:Generated_Source\PSoC5/TX_1.c **** * other bits in the port by using the appropriate method (read-modify-write or
+  35:Generated_Source\PSoC5/TX_1.c **** * bit banding).
+  36:Generated_Source\PSoC5/TX_1.c **** *
+  37:Generated_Source\PSoC5/TX_1.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
+  38:Generated_Source\PSoC5/TX_1.c **** * as it is driven by the hardware signal attached to it.
+  39:Generated_Source\PSoC5/TX_1.c **** *
+  40:Generated_Source\PSoC5/TX_1.c **** * \param value
+  41:Generated_Source\PSoC5/TX_1.c **** *  Value to write to the component instance.
+  42:Generated_Source\PSoC5/TX_1.c **** *
+  43:Generated_Source\PSoC5/TX_1.c **** * \return 
+  44:Generated_Source\PSoC5/TX_1.c **** *  None 
+  45:Generated_Source\PSoC5/TX_1.c **** *
+  46:Generated_Source\PSoC5/TX_1.c **** * \sideeffect
+  47:Generated_Source\PSoC5/TX_1.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
+  48:Generated_Source\PSoC5/TX_1.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
+  49:Generated_Source\PSoC5/TX_1.c **** *  interrupts this function and performs writes to the Pins component data 
+  50:Generated_Source\PSoC5/TX_1.c **** *  register can cause corrupted port data. To avoid this issue, you should 
+  51:Generated_Source\PSoC5/TX_1.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
+  52:Generated_Source\PSoC5/TX_1.c **** *  this function.
+  53:Generated_Source\PSoC5/TX_1.c **** *
+  54:Generated_Source\PSoC5/TX_1.c **** * \funcusage
+  55:Generated_Source\PSoC5/TX_1.c **** *  \snippet TX_1_SUT.c usage_TX_1_Write
+  56:Generated_Source\PSoC5/TX_1.c **** *******************************************************************************/
+  57:Generated_Source\PSoC5/TX_1.c **** void TX_1_Write(uint8 value)
+  58:Generated_Source\PSoC5/TX_1.c **** {
   27              		.loc 1 58 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
   32              	.LVL0:
-  59:.\Generated_Source\PSoC5/TX_1.c ****     uint8 staticBits = (TX_1_DR & (uint8)(~TX_1_MASK));
+  59:Generated_Source\PSoC5/TX_1.c ****     uint8 staticBits = (TX_1_DR & (uint8)(~TX_1_MASK));
   33              		.loc 1 59 0
   34 0000 044A     		ldr	r2, .L2
   35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   36 0004 03F07F03 		and	r3, r3, #127
   37              	.LVL1:
-  60:.\Generated_Source\PSoC5/TX_1.c ****     TX_1_DR = staticBits | ((uint8)(value << TX_1_SHIFT) & TX_1_MASK);
+  60:Generated_Source\PSoC5/TX_1.c ****     TX_1_DR = staticBits | ((uint8)(value << TX_1_SHIFT) & TX_1_MASK);
   38              		.loc 1 60 0
   39 0008 C001     		lsls	r0, r0, #7
   40              	.LVL2:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
   52              		.size	TX_1_Write, .-TX_1_Write
   53              		.section	.text.TX_1_SetDriveMode,"ax",%progbits
   54              		.align	2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 3
 
 
   55              		.global	TX_1_SetDriveMode
@@ -127,44 +127,44 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
   58              		.type	TX_1_SetDriveMode, %function
   59              	TX_1_SetDriveMode:
   60              	.LFB1:
-  61:.\Generated_Source\PSoC5/TX_1.c **** }
-  62:.\Generated_Source\PSoC5/TX_1.c **** 
-  63:.\Generated_Source\PSoC5/TX_1.c **** 
-  64:.\Generated_Source\PSoC5/TX_1.c **** /*******************************************************************************
-  65:.\Generated_Source\PSoC5/TX_1.c **** * Function Name: TX_1_SetDriveMode
-  66:.\Generated_Source\PSoC5/TX_1.c **** ****************************************************************************//**
-  67:.\Generated_Source\PSoC5/TX_1.c **** *
-  68:.\Generated_Source\PSoC5/TX_1.c **** * \brief Sets the drive mode for each of the Pins component's pins.
-  69:.\Generated_Source\PSoC5/TX_1.c **** * 
-  70:.\Generated_Source\PSoC5/TX_1.c **** * <b>Note</b> This affects all pins in the Pins component instance. Use the
-  71:.\Generated_Source\PSoC5/TX_1.c **** * Per-Pin APIs if you wish to control individual pin's drive modes.
-  72:.\Generated_Source\PSoC5/TX_1.c **** *
-  73:.\Generated_Source\PSoC5/TX_1.c **** * \param mode
-  74:.\Generated_Source\PSoC5/TX_1.c **** *  Mode for the selected signals. Valid options are documented in 
-  75:.\Generated_Source\PSoC5/TX_1.c **** *  \ref driveMode.
-  76:.\Generated_Source\PSoC5/TX_1.c **** *
-  77:.\Generated_Source\PSoC5/TX_1.c **** * \return
-  78:.\Generated_Source\PSoC5/TX_1.c **** *  None
-  79:.\Generated_Source\PSoC5/TX_1.c **** *
-  80:.\Generated_Source\PSoC5/TX_1.c **** * \sideeffect
-  81:.\Generated_Source\PSoC5/TX_1.c **** *  If you use read-modify-write operations that are not atomic, the ISR can
-  82:.\Generated_Source\PSoC5/TX_1.c **** *  cause corruption of this function. An ISR that interrupts this function 
-  83:.\Generated_Source\PSoC5/TX_1.c **** *  and performs writes to the Pins component Drive Mode registers can cause 
-  84:.\Generated_Source\PSoC5/TX_1.c **** *  corrupted port data. To avoid this issue, you should either use the Per-Pin
-  85:.\Generated_Source\PSoC5/TX_1.c **** *  APIs (primary method) or disable interrupts around this function.
-  86:.\Generated_Source\PSoC5/TX_1.c **** *
-  87:.\Generated_Source\PSoC5/TX_1.c **** * \funcusage
-  88:.\Generated_Source\PSoC5/TX_1.c **** *  \snippet TX_1_SUT.c usage_TX_1_SetDriveMode
-  89:.\Generated_Source\PSoC5/TX_1.c **** *******************************************************************************/
-  90:.\Generated_Source\PSoC5/TX_1.c **** void TX_1_SetDriveMode(uint8 mode)
-  91:.\Generated_Source\PSoC5/TX_1.c **** {
+  61:Generated_Source\PSoC5/TX_1.c **** }
+  62:Generated_Source\PSoC5/TX_1.c **** 
+  63:Generated_Source\PSoC5/TX_1.c **** 
+  64:Generated_Source\PSoC5/TX_1.c **** /*******************************************************************************
+  65:Generated_Source\PSoC5/TX_1.c **** * Function Name: TX_1_SetDriveMode
+  66:Generated_Source\PSoC5/TX_1.c **** ****************************************************************************//**
+  67:Generated_Source\PSoC5/TX_1.c **** *
+  68:Generated_Source\PSoC5/TX_1.c **** * \brief Sets the drive mode for each of the Pins component's pins.
+  69:Generated_Source\PSoC5/TX_1.c **** * 
+  70:Generated_Source\PSoC5/TX_1.c **** * <b>Note</b> This affects all pins in the Pins component instance. Use the
+  71:Generated_Source\PSoC5/TX_1.c **** * Per-Pin APIs if you wish to control individual pin's drive modes.
+  72:Generated_Source\PSoC5/TX_1.c **** *
+  73:Generated_Source\PSoC5/TX_1.c **** * \param mode
+  74:Generated_Source\PSoC5/TX_1.c **** *  Mode for the selected signals. Valid options are documented in 
+  75:Generated_Source\PSoC5/TX_1.c **** *  \ref driveMode.
+  76:Generated_Source\PSoC5/TX_1.c **** *
+  77:Generated_Source\PSoC5/TX_1.c **** * \return
+  78:Generated_Source\PSoC5/TX_1.c **** *  None
+  79:Generated_Source\PSoC5/TX_1.c **** *
+  80:Generated_Source\PSoC5/TX_1.c **** * \sideeffect
+  81:Generated_Source\PSoC5/TX_1.c **** *  If you use read-modify-write operations that are not atomic, the ISR can
+  82:Generated_Source\PSoC5/TX_1.c **** *  cause corruption of this function. An ISR that interrupts this function 
+  83:Generated_Source\PSoC5/TX_1.c **** *  and performs writes to the Pins component Drive Mode registers can cause 
+  84:Generated_Source\PSoC5/TX_1.c **** *  corrupted port data. To avoid this issue, you should either use the Per-Pin
+  85:Generated_Source\PSoC5/TX_1.c **** *  APIs (primary method) or disable interrupts around this function.
+  86:Generated_Source\PSoC5/TX_1.c **** *
+  87:Generated_Source\PSoC5/TX_1.c **** * \funcusage
+  88:Generated_Source\PSoC5/TX_1.c **** *  \snippet TX_1_SUT.c usage_TX_1_SetDriveMode
+  89:Generated_Source\PSoC5/TX_1.c **** *******************************************************************************/
+  90:Generated_Source\PSoC5/TX_1.c **** void TX_1_SetDriveMode(uint8 mode)
+  91:Generated_Source\PSoC5/TX_1.c **** {
   61              		.loc 1 91 0
   62              		.cfi_startproc
   63              		@ args = 0, pretend = 0, frame = 0
   64              		@ frame_needed = 0, uses_anonymous_args = 0
   65              		@ link register save eliminated.
   66              	.LVL4:
-  92:.\Generated_Source\PSoC5/TX_1.c **** 	CyPins_SetPinDriveMode(TX_1_0, mode);
+  92:Generated_Source\PSoC5/TX_1.c **** 	CyPins_SetPinDriveMode(TX_1_0, mode);
   67              		.loc 1 92 0
   68 0000 044A     		ldr	r2, .L5
   69 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
   77 0012 00BF     		.align	2
   78              	.L5:
   79 0014 07500040 		.word	1073762311
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 4
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 4
 
 
   80              		.cfi_endproc
@@ -192,38 +192,38 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
   88              		.type	TX_1_Read, %function
   89              	TX_1_Read:
   90              	.LFB2:
-  93:.\Generated_Source\PSoC5/TX_1.c **** }
-  94:.\Generated_Source\PSoC5/TX_1.c **** 
-  95:.\Generated_Source\PSoC5/TX_1.c **** 
-  96:.\Generated_Source\PSoC5/TX_1.c **** /*******************************************************************************
-  97:.\Generated_Source\PSoC5/TX_1.c **** * Function Name: TX_1_Read
-  98:.\Generated_Source\PSoC5/TX_1.c **** ****************************************************************************//**
-  99:.\Generated_Source\PSoC5/TX_1.c **** *
- 100:.\Generated_Source\PSoC5/TX_1.c **** * \brief Reads the associated physical port (pin status register) and masks 
- 101:.\Generated_Source\PSoC5/TX_1.c **** *  the required bits according to the width and bit position of the component
- 102:.\Generated_Source\PSoC5/TX_1.c **** *  instance. 
- 103:.\Generated_Source\PSoC5/TX_1.c **** *
- 104:.\Generated_Source\PSoC5/TX_1.c **** * The pin's status register returns the current logic level present on the 
- 105:.\Generated_Source\PSoC5/TX_1.c **** * physical pin.
- 106:.\Generated_Source\PSoC5/TX_1.c **** *
- 107:.\Generated_Source\PSoC5/TX_1.c **** * \return 
- 108:.\Generated_Source\PSoC5/TX_1.c **** *  The current value for the pins in the component as a right justified number.
- 109:.\Generated_Source\PSoC5/TX_1.c **** *
- 110:.\Generated_Source\PSoC5/TX_1.c **** * \funcusage
- 111:.\Generated_Source\PSoC5/TX_1.c **** *  \snippet TX_1_SUT.c usage_TX_1_Read  
- 112:.\Generated_Source\PSoC5/TX_1.c **** *******************************************************************************/
- 113:.\Generated_Source\PSoC5/TX_1.c **** uint8 TX_1_Read(void)
- 114:.\Generated_Source\PSoC5/TX_1.c **** {
+  93:Generated_Source\PSoC5/TX_1.c **** }
+  94:Generated_Source\PSoC5/TX_1.c **** 
+  95:Generated_Source\PSoC5/TX_1.c **** 
+  96:Generated_Source\PSoC5/TX_1.c **** /*******************************************************************************
+  97:Generated_Source\PSoC5/TX_1.c **** * Function Name: TX_1_Read
+  98:Generated_Source\PSoC5/TX_1.c **** ****************************************************************************//**
+  99:Generated_Source\PSoC5/TX_1.c **** *
+ 100:Generated_Source\PSoC5/TX_1.c **** * \brief Reads the associated physical port (pin status register) and masks 
+ 101:Generated_Source\PSoC5/TX_1.c **** *  the required bits according to the width and bit position of the component
+ 102:Generated_Source\PSoC5/TX_1.c **** *  instance. 
+ 103:Generated_Source\PSoC5/TX_1.c **** *
+ 104:Generated_Source\PSoC5/TX_1.c **** * The pin's status register returns the current logic level present on the 
+ 105:Generated_Source\PSoC5/TX_1.c **** * physical pin.
+ 106:Generated_Source\PSoC5/TX_1.c **** *
+ 107:Generated_Source\PSoC5/TX_1.c **** * \return 
+ 108:Generated_Source\PSoC5/TX_1.c **** *  The current value for the pins in the component as a right justified number.
+ 109:Generated_Source\PSoC5/TX_1.c **** *
+ 110:Generated_Source\PSoC5/TX_1.c **** * \funcusage
+ 111:Generated_Source\PSoC5/TX_1.c **** *  \snippet TX_1_SUT.c usage_TX_1_Read  
+ 112:Generated_Source\PSoC5/TX_1.c **** *******************************************************************************/
+ 113:Generated_Source\PSoC5/TX_1.c **** uint8 TX_1_Read(void)
+ 114:Generated_Source\PSoC5/TX_1.c **** {
   91              		.loc 1 114 0
   92              		.cfi_startproc
   93              		@ args = 0, pretend = 0, frame = 0
   94              		@ frame_needed = 0, uses_anonymous_args = 0
   95              		@ link register save eliminated.
- 115:.\Generated_Source\PSoC5/TX_1.c ****     return (TX_1_PS & TX_1_MASK) >> TX_1_SHIFT;
+ 115:Generated_Source\PSoC5/TX_1.c ****     return (TX_1_PS & TX_1_MASK) >> TX_1_SHIFT;
   96              		.loc 1 115 0
   97 0000 014B     		ldr	r3, .L8
   98 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 116:.\Generated_Source\PSoC5/TX_1.c **** }
+ 116:Generated_Source\PSoC5/TX_1.c **** }
   99              		.loc 1 116 0
  100 0004 C009     		lsrs	r0, r0, #7
  101 0006 7047     		bx	lr
@@ -238,49 +238,49 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
  110              		.align	2
  111              		.global	TX_1_ReadDataReg
  112              		.thumb
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 5
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 5
 
 
  113              		.thumb_func
  114              		.type	TX_1_ReadDataReg, %function
  115              	TX_1_ReadDataReg:
  116              	.LFB3:
- 117:.\Generated_Source\PSoC5/TX_1.c **** 
- 118:.\Generated_Source\PSoC5/TX_1.c **** 
- 119:.\Generated_Source\PSoC5/TX_1.c **** /*******************************************************************************
- 120:.\Generated_Source\PSoC5/TX_1.c **** * Function Name: TX_1_ReadDataReg
- 121:.\Generated_Source\PSoC5/TX_1.c **** ****************************************************************************//**
- 122:.\Generated_Source\PSoC5/TX_1.c **** *
- 123:.\Generated_Source\PSoC5/TX_1.c **** * \brief Reads the associated physical port's data output register and masks 
- 124:.\Generated_Source\PSoC5/TX_1.c **** *  the correct bits according to the width and bit position of the component 
- 125:.\Generated_Source\PSoC5/TX_1.c **** *  instance. 
- 126:.\Generated_Source\PSoC5/TX_1.c **** *
- 127:.\Generated_Source\PSoC5/TX_1.c **** * The data output register controls the signal applied to the physical pin in 
- 128:.\Generated_Source\PSoC5/TX_1.c **** * conjunction with the drive mode parameter. This is not the same as the 
- 129:.\Generated_Source\PSoC5/TX_1.c **** * preferred TX_1_Read() API because the 
- 130:.\Generated_Source\PSoC5/TX_1.c **** * TX_1_ReadDataReg() reads the data register instead of the status 
- 131:.\Generated_Source\PSoC5/TX_1.c **** * register. For output pins this is a useful function to determine the value 
- 132:.\Generated_Source\PSoC5/TX_1.c **** * just written to the pin.
- 133:.\Generated_Source\PSoC5/TX_1.c **** *
- 134:.\Generated_Source\PSoC5/TX_1.c **** * \return 
- 135:.\Generated_Source\PSoC5/TX_1.c **** *  The current value of the data register masked and shifted into a right 
- 136:.\Generated_Source\PSoC5/TX_1.c **** *  justified number for the component instance.
- 137:.\Generated_Source\PSoC5/TX_1.c **** *
- 138:.\Generated_Source\PSoC5/TX_1.c **** * \funcusage
- 139:.\Generated_Source\PSoC5/TX_1.c **** *  \snippet TX_1_SUT.c usage_TX_1_ReadDataReg 
- 140:.\Generated_Source\PSoC5/TX_1.c **** *******************************************************************************/
- 141:.\Generated_Source\PSoC5/TX_1.c **** uint8 TX_1_ReadDataReg(void)
- 142:.\Generated_Source\PSoC5/TX_1.c **** {
+ 117:Generated_Source\PSoC5/TX_1.c **** 
+ 118:Generated_Source\PSoC5/TX_1.c **** 
+ 119:Generated_Source\PSoC5/TX_1.c **** /*******************************************************************************
+ 120:Generated_Source\PSoC5/TX_1.c **** * Function Name: TX_1_ReadDataReg
+ 121:Generated_Source\PSoC5/TX_1.c **** ****************************************************************************//**
+ 122:Generated_Source\PSoC5/TX_1.c **** *
+ 123:Generated_Source\PSoC5/TX_1.c **** * \brief Reads the associated physical port's data output register and masks 
+ 124:Generated_Source\PSoC5/TX_1.c **** *  the correct bits according to the width and bit position of the component 
+ 125:Generated_Source\PSoC5/TX_1.c **** *  instance. 
+ 126:Generated_Source\PSoC5/TX_1.c **** *
+ 127:Generated_Source\PSoC5/TX_1.c **** * The data output register controls the signal applied to the physical pin in 
+ 128:Generated_Source\PSoC5/TX_1.c **** * conjunction with the drive mode parameter. This is not the same as the 
+ 129:Generated_Source\PSoC5/TX_1.c **** * preferred TX_1_Read() API because the 
+ 130:Generated_Source\PSoC5/TX_1.c **** * TX_1_ReadDataReg() reads the data register instead of the status 
+ 131:Generated_Source\PSoC5/TX_1.c **** * register. For output pins this is a useful function to determine the value 
+ 132:Generated_Source\PSoC5/TX_1.c **** * just written to the pin.
+ 133:Generated_Source\PSoC5/TX_1.c **** *
+ 134:Generated_Source\PSoC5/TX_1.c **** * \return 
+ 135:Generated_Source\PSoC5/TX_1.c **** *  The current value of the data register masked and shifted into a right 
+ 136:Generated_Source\PSoC5/TX_1.c **** *  justified number for the component instance.
+ 137:Generated_Source\PSoC5/TX_1.c **** *
+ 138:Generated_Source\PSoC5/TX_1.c **** * \funcusage
+ 139:Generated_Source\PSoC5/TX_1.c **** *  \snippet TX_1_SUT.c usage_TX_1_ReadDataReg 
+ 140:Generated_Source\PSoC5/TX_1.c **** *******************************************************************************/
+ 141:Generated_Source\PSoC5/TX_1.c **** uint8 TX_1_ReadDataReg(void)
+ 142:Generated_Source\PSoC5/TX_1.c **** {
  117              		.loc 1 142 0
  118              		.cfi_startproc
  119              		@ args = 0, pretend = 0, frame = 0
  120              		@ frame_needed = 0, uses_anonymous_args = 0
  121              		@ link register save eliminated.
- 143:.\Generated_Source\PSoC5/TX_1.c ****     return (TX_1_DR & TX_1_MASK) >> TX_1_SHIFT;
+ 143:Generated_Source\PSoC5/TX_1.c ****     return (TX_1_DR & TX_1_MASK) >> TX_1_SHIFT;
  122              		.loc 1 143 0
  123 0000 014B     		ldr	r3, .L11
  124 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 144:.\Generated_Source\PSoC5/TX_1.c **** }
+ 144:Generated_Source\PSoC5/TX_1.c **** }
  125              		.loc 1 144 0
  126 0004 C009     		lsrs	r0, r0, #7
  127 0006 7047     		bx	lr
@@ -293,56 +293,56 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
  134              		.size	TX_1_ReadDataReg, .-TX_1_ReadDataReg
  135              		.text
  136              	.Letext0:
- 137              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 137              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  138              		.section	.debug_info,"",%progbits
  139              	.Ldebug_info0:
  140 0000 1D010000 		.4byte	0x11d
  141 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 6
 
 
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
  143 000a 04       		.byte	0x4
  144 000b 01       		.uleb128 0x1
- 145 000c 9D000000 		.4byte	.LASF20
+ 145 000c 9B000000 		.4byte	.LASF20
  146 0010 01       		.byte	0x1
- 147 0011 22000000 		.4byte	.LASF21
- 148 0015 38010000 		.4byte	.LASF22
+ 147 0011 1C000000 		.4byte	.LASF21
+ 148 0015 36010000 		.4byte	.LASF22
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 CD010000 		.4byte	.LASF0
+ 155 0028 F5010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
- 159 002f 4C000000 		.4byte	.LASF1
+ 159 002f 4A000000 		.4byte	.LASF1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 B4010000 		.4byte	.LASF2
+ 163 0036 DC010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
- 167 003d 83000000 		.4byte	.LASF3
+ 167 003d 81000000 		.4byte	.LASF3
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
  170 0043 05       		.byte	0x5
- 171 0044 C4010000 		.4byte	.LASF4
+ 171 0044 EC010000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
- 175 004b 5F000000 		.4byte	.LASF5
+ 175 004b 5D000000 		.4byte	.LASF5
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
- 179 0052 A1010000 		.4byte	.LASF6
+ 179 0052 C9010000 		.4byte	.LASF6
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
- 183 0059 74010000 		.4byte	.LASF7
+ 183 0059 9C010000 		.4byte	.LASF7
  184 005d 03       		.uleb128 0x3
  185 005e 04       		.byte	0x4
  186 005f 05       		.byte	0x5
@@ -350,36 +350,36 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
  188 0064 02       		.uleb128 0x2
  189 0065 04       		.byte	0x4
  190 0066 07       		.byte	0x7
- 191 0067 2B010000 		.4byte	.LASF8
+ 191 0067 29010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c BE010000 		.4byte	.LASF12
+ 193 006c E6010000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 9201     		.2byte	0x192
  196 0073 2C000000 		.4byte	0x2c
  197 0077 02       		.uleb128 0x2
  198 0078 04       		.byte	0x4
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 7
 
 
  199 0079 04       		.byte	0x4
- 200 007a 00000000 		.4byte	.LASF9
+ 200 007a 3A000000 		.4byte	.LASF9
  201 007e 02       		.uleb128 0x2
  202 007f 08       		.byte	0x8
  203 0080 04       		.byte	0x4
- 204 0081 96000000 		.4byte	.LASF10
+ 204 0081 94000000 		.4byte	.LASF10
  205 0085 02       		.uleb128 0x2
  206 0086 01       		.byte	0x1
  207 0087 08       		.byte	0x8
- 208 0088 AF010000 		.4byte	.LASF11
+ 208 0088 D7010000 		.4byte	.LASF11
  209 008c 04       		.uleb128 0x4
- 210 008d 5A000000 		.4byte	.LASF13
+ 210 008d 58000000 		.4byte	.LASF13
  211 0091 02       		.byte	0x2
  212 0092 3C02     		.2byte	0x23c
  213 0094 98000000 		.4byte	0x98
  214 0098 05       		.uleb128 0x5
  215 0099 6B000000 		.4byte	0x6b
  216 009d 06       		.uleb128 0x6
- 217 009e 17000000 		.4byte	.LASF14
+ 217 009e 11000000 		.4byte	.LASF14
  218 00a2 01       		.byte	0x1
  219 00a3 39       		.byte	0x39
  220 00a4 00000000 		.4byte	.LFB0
@@ -388,20 +388,20 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
  223 00ad 9C       		.byte	0x9c
  224 00ae D1000000 		.4byte	0xd1
  225 00b2 07       		.uleb128 0x7
- 226 00b3 06000000 		.4byte	.LASF16
+ 226 00b3 00000000 		.4byte	.LASF16
  227 00b7 01       		.byte	0x1
  228 00b8 39       		.byte	0x39
  229 00b9 6B000000 		.4byte	0x6b
  230 00bd 00000000 		.4byte	.LLST0
  231 00c1 08       		.uleb128 0x8
- 232 00c2 0C000000 		.4byte	.LASF23
+ 232 00c2 06000000 		.4byte	.LASF23
  233 00c6 01       		.byte	0x1
  234 00c7 3B       		.byte	0x3b
  235 00c8 6B000000 		.4byte	0x6b
  236 00cc 21000000 		.4byte	.LLST1
  237 00d0 00       		.byte	0
  238 00d1 06       		.uleb128 0x6
- 239 00d2 71000000 		.4byte	.LASF15
+ 239 00d2 6F000000 		.4byte	.LASF15
  240 00d6 01       		.byte	0x1
  241 00d7 5A       		.byte	0x5a
  242 00d8 00000000 		.4byte	.LFB1
@@ -410,15 +410,15 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
  245 00e1 9C       		.byte	0x9c
  246 00e2 F6000000 		.4byte	0xf6
  247 00e6 07       		.uleb128 0x7
- 248 00e7 8B010000 		.4byte	.LASF17
+ 248 00e7 B3010000 		.4byte	.LASF17
  249 00eb 01       		.byte	0x1
  250 00ec 5A       		.byte	0x5a
  251 00ed 6B000000 		.4byte	0x6b
  252 00f1 34000000 		.4byte	.LLST2
  253 00f5 00       		.byte	0
  254 00f6 09       		.uleb128 0x9
- 255 00f7 42000000 		.4byte	.LASF18
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 8
+ 255 00f7 40000000 		.4byte	.LASF18
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 8
 
 
  256 00fb 01       		.byte	0x1
@@ -429,7 +429,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
  261 0109 01       		.uleb128 0x1
  262 010a 9C       		.byte	0x9c
  263 010b 09       		.uleb128 0x9
- 264 010c 90010000 		.4byte	.LASF19
+ 264 010c B8010000 		.4byte	.LASF19
  265 0110 01       		.byte	0x1
  266 0111 8D       		.byte	0x8d
  267 0112 6B000000 		.4byte	0x6b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
  310 0023 3E       		.uleb128 0x3e
  311 0024 0B       		.uleb128 0xb
  312 0025 03       		.uleb128 0x3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 9
 
 
  313 0026 08       		.uleb128 0x8
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
  367 005d 0B       		.uleb128 0xb
  368 005e 3B       		.uleb128 0x3b
  369 005f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 10
 
 
  370 0060 49       		.uleb128 0x49
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
  424 000b 0A000000 		.4byte	.LVL2
  425 000f 18000000 		.4byte	.LFE0
  426 0013 0400     		.2byte	0x4
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 11
 
 
  427 0015 F3       		.byte	0xf3
@@ -658,142 +658,145 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 1
  481 001c 0C000000 		.4byte	.LFE3
  482 0020 00000000 		.4byte	0
  483 0024 00000000 		.4byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 12
 
 
  484              		.section	.debug_line,"",%progbits
  485              	.Ldebug_line0:
- 486 0000 8F000000 		.section	.debug_str,"MS",%progbits,1
- 486      02004300 
+ 486 0000 8D000000 		.section	.debug_str,"MS",%progbits,1
+ 486      02004100 
  486      00000201 
  486      FB0E0D00 
  486      01010101 
- 487              	.LASF9:
- 488 0000 666C6F61 		.ascii	"float\000"
- 488      7400
- 489              	.LASF16:
- 490 0006 76616C75 		.ascii	"value\000"
- 490      6500
- 491              	.LASF23:
- 492 000c 73746174 		.ascii	"staticBits\000"
- 492      69634269 
- 492      747300
- 493              	.LASF14:
- 494 0017 54585F31 		.ascii	"TX_1_Write\000"
- 494      5F577269 
- 494      746500
- 495              	.LASF21:
- 496 0022 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\TX_1.c\000"
- 496      6E657261 
- 496      7465645F 
- 496      536F7572 
- 496      63655C50 
+ 487              	.LASF16:
+ 488 0000 76616C75 		.ascii	"value\000"
+ 488      6500
+ 489              	.LASF23:
+ 490 0006 73746174 		.ascii	"staticBits\000"
+ 490      69634269 
+ 490      747300
+ 491              	.LASF14:
+ 492 0011 54585F31 		.ascii	"TX_1_Write\000"
+ 492      5F577269 
+ 492      746500
+ 493              	.LASF21:
+ 494 001c 47656E65 		.ascii	"Generated_Source\\PSoC5\\TX_1.c\000"
+ 494      72617465 
+ 494      645F536F 
+ 494      75726365 
+ 494      5C50536F 
+ 495              	.LASF9:
+ 496 003a 666C6F61 		.ascii	"float\000"
+ 496      7400
  497              	.LASF18:
- 498 0042 54585F31 		.ascii	"TX_1_Read\000"
+ 498 0040 54585F31 		.ascii	"TX_1_Read\000"
  498      5F526561 
  498      6400
  499              	.LASF1:
- 500 004c 756E7369 		.ascii	"unsigned char\000"
+ 500 004a 756E7369 		.ascii	"unsigned char\000"
  500      676E6564 
  500      20636861 
  500      7200
  501              	.LASF13:
- 502 005a 72656738 		.ascii	"reg8\000"
+ 502 0058 72656738 		.ascii	"reg8\000"
  502      00
  503              	.LASF5:
- 504 005f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 504 005d 6C6F6E67 		.ascii	"long unsigned int\000"
  504      20756E73 
  504      69676E65 
  504      6420696E 
  504      7400
  505              	.LASF15:
- 506 0071 54585F31 		.ascii	"TX_1_SetDriveMode\000"
+ 506 006f 54585F31 		.ascii	"TX_1_SetDriveMode\000"
  506      5F536574 
  506      44726976 
  506      654D6F64 
  506      6500
  507              	.LASF3:
- 508 0083 73686F72 		.ascii	"short unsigned int\000"
+ 508 0081 73686F72 		.ascii	"short unsigned int\000"
  508      7420756E 
  508      7369676E 
  508      65642069 
  508      6E7400
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 13
 
 
  509              	.LASF10:
- 510 0096 646F7562 		.ascii	"double\000"
+ 510 0094 646F7562 		.ascii	"double\000"
  510      6C6500
  511              	.LASF20:
- 512 009d 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 512 009b 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  512      4320342E 
  512      392E3320 
  512      32303135 
  512      30333033 
- 513 00d0 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 513 00ce 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
  513      20726576 
  513      6973696F 
  513      6E203232 
  513      31323230 
- 514 0103 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 514 0101 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  514      66756E63 
  514      74696F6E 
  514      2D736563 
  514      74696F6E 
  515              	.LASF8:
- 516 012b 756E7369 		.ascii	"unsigned int\000"
+ 516 0129 756E7369 		.ascii	"unsigned int\000"
  516      676E6564 
  516      20696E74 
  516      00
  517              	.LASF22:
- 518 0138 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\CAN_ROBOT\\CAN_P"
+ 518 0136 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
  518      73657273 
  518      5C48656E 
  518      72792041 
  518      6C626572 
- 519 0166 736F635F 		.ascii	"soc_kit.cydsn\000"
- 519      6B69742E 
- 519      63796473 
- 519      6E00
- 520              	.LASF7:
- 521 0174 6C6F6E67 		.ascii	"long long unsigned int\000"
- 521      206C6F6E 
- 521      6720756E 
- 521      7369676E 
- 521      65642069 
- 522              	.LASF17:
- 523 018b 6D6F6465 		.ascii	"mode\000"
- 523      00
- 524              	.LASF19:
- 525 0190 54585F31 		.ascii	"TX_1_ReadDataReg\000"
- 525      5F526561 
- 525      64446174 
- 525      61526567 
- 525      00
- 526              	.LASF6:
- 527 01a1 6C6F6E67 		.ascii	"long long int\000"
- 527      206C6F6E 
- 527      6720696E 
- 527      7400
- 528              	.LASF11:
- 529 01af 63686172 		.ascii	"char\000"
- 529      00
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc0M0qeL.s 			page 14
+ 519 0164 6F64756C 		.ascii	"odular\\Robot_Test\\Test_CAN_6_Modules\\CAN_Psoc_ki"
+ 519      61725C52 
+ 519      6F626F74 
+ 519      5F546573 
+ 519      745C5465 
+ 520 0194 742E6379 		.ascii	"t.cydsn\000"
+ 520      64736E00 
+ 521              	.LASF7:
+ 522 019c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 522      206C6F6E 
+ 522      6720756E 
+ 522      7369676E 
+ 522      65642069 
+ 523              	.LASF17:
+ 524 01b3 6D6F6465 		.ascii	"mode\000"
+ 524      00
+ 525              	.LASF19:
+ 526 01b8 54585F31 		.ascii	"TX_1_ReadDataReg\000"
+ 526      5F526561 
+ 526      64446174 
+ 526      61526567 
+ 526      00
+ 527              	.LASF6:
+ 528 01c9 6C6F6E67 		.ascii	"long long int\000"
+ 528      206C6F6E 
+ 528      6720696E 
+ 528      7400
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccQxrzCd.s 			page 14
 
 
- 530              	.LASF2:
- 531 01b4 73686F72 		.ascii	"short int\000"
- 531      7420696E 
- 531      7400
- 532              	.LASF12:
- 533 01be 75696E74 		.ascii	"uint8\000"
- 533      3800
- 534              	.LASF4:
- 535 01c4 6C6F6E67 		.ascii	"long int\000"
- 535      20696E74 
- 535      00
- 536              	.LASF0:
- 537 01cd 7369676E 		.ascii	"signed char\000"
- 537      65642063 
- 537      68617200 
- 538              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 529              	.LASF11:
+ 530 01d7 63686172 		.ascii	"char\000"
+ 530      00
+ 531              	.LASF2:
+ 532 01dc 73686F72 		.ascii	"short int\000"
+ 532      7420696E 
+ 532      7400
+ 533              	.LASF12:
+ 534 01e6 75696E74 		.ascii	"uint8\000"
+ 534      3800
+ 535              	.LASF4:
+ 536 01ec 6C6F6E67 		.ascii	"long int\000"
+ 536      20696E74 
+ 536      00
+ 537              	.LASF0:
+ 538 01f5 7369676E 		.ascii	"signed char\000"
+ 538      65642063 
+ 538      68617200 
+ 539              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

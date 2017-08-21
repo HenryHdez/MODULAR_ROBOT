@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,349 +25,349 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
   22              		.type	CAN_BusOffIsr, %function
   23              	CAN_BusOffIsr:
   24              	.LFB1:
-  25              		.file 1 ".\\Generated_Source\\PSoC4\\CAN_INT.c"
-   1:.\Generated_Source\PSoC4/CAN_INT.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC4/CAN_INT.c **** * File Name: CAN_INT.c
-   3:.\Generated_Source\PSoC4/CAN_INT.c **** * Version 3.0
-   4:.\Generated_Source\PSoC4/CAN_INT.c **** *
-   5:.\Generated_Source\PSoC4/CAN_INT.c **** * Description:
-   6:.\Generated_Source\PSoC4/CAN_INT.c **** *  This file contains Interrupt Service Routine (ISR) for CAN Component.
-   7:.\Generated_Source\PSoC4/CAN_INT.c **** *  The Interrupt handlers functions are generated accordingly to the PSoC
-   8:.\Generated_Source\PSoC4/CAN_INT.c **** *  Creator Customizer inputs.
-   9:.\Generated_Source\PSoC4/CAN_INT.c **** *
-  10:.\Generated_Source\PSoC4/CAN_INT.c **** * Note:
-  11:.\Generated_Source\PSoC4/CAN_INT.c **** *  None
-  12:.\Generated_Source\PSoC4/CAN_INT.c **** *
-  13:.\Generated_Source\PSoC4/CAN_INT.c **** ********************************************************************************
-  14:.\Generated_Source\PSoC4/CAN_INT.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  15:.\Generated_Source\PSoC4/CAN_INT.c **** * You may use this file only in accordance with the license, terms, conditions,
-  16:.\Generated_Source\PSoC4/CAN_INT.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  17:.\Generated_Source\PSoC4/CAN_INT.c **** * the software package with which this file was provided.
-  18:.\Generated_Source\PSoC4/CAN_INT.c **** *******************************************************************************/
-  19:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  20:.\Generated_Source\PSoC4/CAN_INT.c **** #include "CAN.h"
-  21:.\Generated_Source\PSoC4/CAN_INT.c **** #include "cyapicallbacks.h"
-  22:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  23:.\Generated_Source\PSoC4/CAN_INT.c **** /* `#START CAN_INT_C_CODE_DEFINITION` */
-  24:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  25:.\Generated_Source\PSoC4/CAN_INT.c **** /* `#END` */
-  26:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  27:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_ARB_LOST)
-  28:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
-  29:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_ArbLostIsr
-  30:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
-  31:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-  32:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 2
+  25              		.file 1 "Generated_Source\\PSoC4\\CAN_INT.c"
+   1:Generated_Source\PSoC4/CAN_INT.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/CAN_INT.c **** * File Name: CAN_INT.c
+   3:Generated_Source\PSoC4/CAN_INT.c **** * Version 3.0
+   4:Generated_Source\PSoC4/CAN_INT.c **** *
+   5:Generated_Source\PSoC4/CAN_INT.c **** * Description:
+   6:Generated_Source\PSoC4/CAN_INT.c **** *  This file contains Interrupt Service Routine (ISR) for CAN Component.
+   7:Generated_Source\PSoC4/CAN_INT.c **** *  The Interrupt handlers functions are generated accordingly to the PSoC
+   8:Generated_Source\PSoC4/CAN_INT.c **** *  Creator Customizer inputs.
+   9:Generated_Source\PSoC4/CAN_INT.c **** *
+  10:Generated_Source\PSoC4/CAN_INT.c **** * Note:
+  11:Generated_Source\PSoC4/CAN_INT.c **** *  None
+  12:Generated_Source\PSoC4/CAN_INT.c **** *
+  13:Generated_Source\PSoC4/CAN_INT.c **** ********************************************************************************
+  14:Generated_Source\PSoC4/CAN_INT.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  15:Generated_Source\PSoC4/CAN_INT.c **** * You may use this file only in accordance with the license, terms, conditions,
+  16:Generated_Source\PSoC4/CAN_INT.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  17:Generated_Source\PSoC4/CAN_INT.c **** * the software package with which this file was provided.
+  18:Generated_Source\PSoC4/CAN_INT.c **** *******************************************************************************/
+  19:Generated_Source\PSoC4/CAN_INT.c **** 
+  20:Generated_Source\PSoC4/CAN_INT.c **** #include "CAN.h"
+  21:Generated_Source\PSoC4/CAN_INT.c **** #include "cyapicallbacks.h"
+  22:Generated_Source\PSoC4/CAN_INT.c **** 
+  23:Generated_Source\PSoC4/CAN_INT.c **** /* `#START CAN_INT_C_CODE_DEFINITION` */
+  24:Generated_Source\PSoC4/CAN_INT.c **** 
+  25:Generated_Source\PSoC4/CAN_INT.c **** /* `#END` */
+  26:Generated_Source\PSoC4/CAN_INT.c **** 
+  27:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_ARB_LOST)
+  28:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+  29:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_ArbLostIsr
+  30:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+  31:Generated_Source\PSoC4/CAN_INT.c ****     *
+  32:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 2
 
 
-  33:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Arbitration Lost Interrupt. Clears
-  34:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Arbitration Lost interrupt flag. Only generated if Arbitration Lost
-  35:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Interrupt enable in Customizer.
-  36:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-  37:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
-  38:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
-  39:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-  40:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
-  41:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
-  42:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-  43:.\Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
-  44:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
-  45:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-  46:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
-  47:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_ArbLostIsr(void) 
-  48:.\Generated_Source\PSoC4/CAN_INT.c ****     {
-  49:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Arbitration Lost flag */
-  50:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_ARBITRATION_LOST_MASK;
-  51:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  52:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START ARBITRATION_LOST_ISR` */
-  53:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  54:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
-  55:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  56:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_ARB_LOST_ISR_CALLBACK
-  57:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_ArbLostIsr_Callback();
-  58:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_ARB_LOST_ISR_CALLBACK */
-  59:.\Generated_Source\PSoC4/CAN_INT.c ****     }
-  60:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_ARB_LOST */
-  61:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  62:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  63:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_OVERLOAD)
-  64:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
-  65:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_OvrLdErrorIsr
-  66:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
-  67:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-  68:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
-  69:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Overload Error Interrupt. Clears Overload
-  70:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Error interrupt flag. Only generated if Overload Error Interrupt enable
-  71:.\Generated_Source\PSoC4/CAN_INT.c ****     *  in Customizer.
-  72:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-  73:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
-  74:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
-  75:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-  76:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
-  77:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
-  78:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-  79:.\Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
-  80:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
-  81:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-  82:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
-  83:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_OvrLdErrorIsr(void) 
-  84:.\Generated_Source\PSoC4/CAN_INT.c ****     {
-  85:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Overload Error flag */
-  86:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_OVERLOAD_ERROR_MASK;
-  87:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  88:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START OVER_LOAD_ERROR_ISR` */
-  89:.\Generated_Source\PSoC4/CAN_INT.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 3
+  33:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Arbitration Lost Interrupt. Clears
+  34:Generated_Source\PSoC4/CAN_INT.c ****     *  Arbitration Lost interrupt flag. Only generated if Arbitration Lost
+  35:Generated_Source\PSoC4/CAN_INT.c ****     *  Interrupt enable in Customizer.
+  36:Generated_Source\PSoC4/CAN_INT.c ****     *
+  37:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+  38:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+  39:Generated_Source\PSoC4/CAN_INT.c ****     *
+  40:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+  41:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+  42:Generated_Source\PSoC4/CAN_INT.c ****     *
+  43:Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
+  44:Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
+  45:Generated_Source\PSoC4/CAN_INT.c ****     *
+  46:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+  47:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_ArbLostIsr(void) 
+  48:Generated_Source\PSoC4/CAN_INT.c ****     {
+  49:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Arbitration Lost flag */
+  50:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_ARBITRATION_LOST_MASK;
+  51:Generated_Source\PSoC4/CAN_INT.c **** 
+  52:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START ARBITRATION_LOST_ISR` */
+  53:Generated_Source\PSoC4/CAN_INT.c **** 
+  54:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+  55:Generated_Source\PSoC4/CAN_INT.c **** 
+  56:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_ARB_LOST_ISR_CALLBACK
+  57:Generated_Source\PSoC4/CAN_INT.c ****             CAN_ArbLostIsr_Callback();
+  58:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_ARB_LOST_ISR_CALLBACK */
+  59:Generated_Source\PSoC4/CAN_INT.c ****     }
+  60:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_ARB_LOST */
+  61:Generated_Source\PSoC4/CAN_INT.c **** 
+  62:Generated_Source\PSoC4/CAN_INT.c **** 
+  63:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_OVERLOAD)
+  64:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+  65:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_OvrLdErrorIsr
+  66:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+  67:Generated_Source\PSoC4/CAN_INT.c ****     *
+  68:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+  69:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Overload Error Interrupt. Clears Overload
+  70:Generated_Source\PSoC4/CAN_INT.c ****     *  Error interrupt flag. Only generated if Overload Error Interrupt enable
+  71:Generated_Source\PSoC4/CAN_INT.c ****     *  in Customizer.
+  72:Generated_Source\PSoC4/CAN_INT.c ****     *
+  73:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+  74:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+  75:Generated_Source\PSoC4/CAN_INT.c ****     *
+  76:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+  77:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+  78:Generated_Source\PSoC4/CAN_INT.c ****     *
+  79:Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
+  80:Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
+  81:Generated_Source\PSoC4/CAN_INT.c ****     *
+  82:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+  83:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_OvrLdErrorIsr(void) 
+  84:Generated_Source\PSoC4/CAN_INT.c ****     {
+  85:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Overload Error flag */
+  86:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_OVERLOAD_ERROR_MASK;
+  87:Generated_Source\PSoC4/CAN_INT.c **** 
+  88:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START OVER_LOAD_ERROR_ISR` */
+  89:Generated_Source\PSoC4/CAN_INT.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 3
 
 
-  90:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
-  91:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  92:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_OVR_LD_ERROR_ISR_CALLBACK
-  93:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_OvrLdErrorIsr_Callback();
-  94:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_OVR_LD_ERROR_ISR_CALLBACK */
-  95:.\Generated_Source\PSoC4/CAN_INT.c ****     }
-  96:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_OVERLOAD */
-  97:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  98:.\Generated_Source\PSoC4/CAN_INT.c **** 
-  99:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_BIT_ERR)
- 100:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 101:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_BitErrorIsr
- 102:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 103:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 104:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 105:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Bit Error Interrupt. Clears Bit Error
- 106:.\Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt flag. Only generated if Bit Error Interrupt enable in Customizer.
- 107:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 108:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 109:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 110:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 111:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 112:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 113:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 114:.\Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
- 115:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
- 116:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 117:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 118:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_BitErrorIsr(void) 
- 119:.\Generated_Source\PSoC4/CAN_INT.c ****     {
- 120:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Bit Error flag */
- 121:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_BIT_ERROR_MASK;
- 122:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 123:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START BIT_ERROR_ISR` */
- 124:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 125:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 126:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 127:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_BIT_ERROR_ISR_CALLBACK
- 128:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitErrorIsr_Callback();
- 129:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_BIT_ERROR_ISR_CALLBACK */
- 130:.\Generated_Source\PSoC4/CAN_INT.c ****     }
- 131:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_BIT_ERR */
- 132:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 133:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 134:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_STUFF_ERR)
- 135:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 136:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_BitStuffErrorIsr
- 137:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 138:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 139:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 140:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Bit Stuff Error Interrupt. Clears Bit Stuff
- 141:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Error interrupt flag. Only generated if Bit Stuff Error Interrupt enable
- 142:.\Generated_Source\PSoC4/CAN_INT.c ****     *  in Customizer.
- 143:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 144:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 145:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 146:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 4
+  90:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+  91:Generated_Source\PSoC4/CAN_INT.c **** 
+  92:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_OVR_LD_ERROR_ISR_CALLBACK
+  93:Generated_Source\PSoC4/CAN_INT.c ****             CAN_OvrLdErrorIsr_Callback();
+  94:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_OVR_LD_ERROR_ISR_CALLBACK */
+  95:Generated_Source\PSoC4/CAN_INT.c ****     }
+  96:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_OVERLOAD */
+  97:Generated_Source\PSoC4/CAN_INT.c **** 
+  98:Generated_Source\PSoC4/CAN_INT.c **** 
+  99:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_BIT_ERR)
+ 100:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 101:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_BitErrorIsr
+ 102:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 103:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 104:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 105:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Bit Error Interrupt. Clears Bit Error
+ 106:Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt flag. Only generated if Bit Error Interrupt enable in Customizer.
+ 107:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 108:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 109:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 110:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 111:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 112:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 113:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 114:Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
+ 115:Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
+ 116:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 117:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 118:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_BitErrorIsr(void) 
+ 119:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 120:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Bit Error flag */
+ 121:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_BIT_ERROR_MASK;
+ 122:Generated_Source\PSoC4/CAN_INT.c **** 
+ 123:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START BIT_ERROR_ISR` */
+ 124:Generated_Source\PSoC4/CAN_INT.c **** 
+ 125:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 126:Generated_Source\PSoC4/CAN_INT.c **** 
+ 127:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_BIT_ERROR_ISR_CALLBACK
+ 128:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitErrorIsr_Callback();
+ 129:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_BIT_ERROR_ISR_CALLBACK */
+ 130:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 131:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_BIT_ERR */
+ 132:Generated_Source\PSoC4/CAN_INT.c **** 
+ 133:Generated_Source\PSoC4/CAN_INT.c **** 
+ 134:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_STUFF_ERR)
+ 135:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 136:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_BitStuffErrorIsr
+ 137:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 138:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 139:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 140:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Bit Stuff Error Interrupt. Clears Bit Stuff
+ 141:Generated_Source\PSoC4/CAN_INT.c ****     *  Error interrupt flag. Only generated if Bit Stuff Error Interrupt enable
+ 142:Generated_Source\PSoC4/CAN_INT.c ****     *  in Customizer.
+ 143:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 144:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 145:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 146:Generated_Source\PSoC4/CAN_INT.c ****     *
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 4
 
 
- 147:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 148:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 149:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 150:.\Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
- 151:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
- 152:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 153:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 154:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_BitStuffErrorIsr(void) 
- 155:.\Generated_Source\PSoC4/CAN_INT.c ****     {
- 156:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Stuff Error flag */
- 157:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_STUFF_ERROR_MASK;
- 158:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 159:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START BIT_STUFF_ERROR_ISR` */
- 160:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 161:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 162:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 163:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_BIT_STUFF_ERROR_ISR_CALLBACK
- 164:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitStuffErrorIsr_Callback();
- 165:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_BIT_STUFF_ERROR_ISR_CALLBACK */
- 166:.\Generated_Source\PSoC4/CAN_INT.c ****     }
- 167:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_STUFF_ERR */
- 168:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 169:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 170:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_ACK_ERR)
- 171:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 172:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_AckErrorIsr
- 173:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 174:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 175:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 176:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Acknowledge Error Interrupt. Clears
- 177:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Acknowledge Error interrupt flag. Only generated if Acknowledge Error
- 178:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Interrupt enable in Customizer.
- 179:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 180:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 181:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 182:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 183:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 184:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 185:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 186:.\Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
- 187:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
- 188:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 189:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 190:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_AckErrorIsr(void) 
- 191:.\Generated_Source\PSoC4/CAN_INT.c ****     {
- 192:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Acknoledge Error flag */
- 193:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_ACK_ERROR_MASK;
- 194:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 195:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START ACKNOWLEDGE_ERROR_ISR` */
- 196:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 197:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 198:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 199:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_ACK_ERROR_ISR_CALLBACK
- 200:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_AckErrorIsr_Callback();
- 201:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_ACK_ERROR_ISR_CALLBACK */
- 202:.\Generated_Source\PSoC4/CAN_INT.c ****     }
- 203:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_ACK_ERR */
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 5
+ 147:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 148:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 149:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 150:Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
+ 151:Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
+ 152:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 153:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 154:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_BitStuffErrorIsr(void) 
+ 155:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 156:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Stuff Error flag */
+ 157:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_STUFF_ERROR_MASK;
+ 158:Generated_Source\PSoC4/CAN_INT.c **** 
+ 159:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START BIT_STUFF_ERROR_ISR` */
+ 160:Generated_Source\PSoC4/CAN_INT.c **** 
+ 161:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 162:Generated_Source\PSoC4/CAN_INT.c **** 
+ 163:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_BIT_STUFF_ERROR_ISR_CALLBACK
+ 164:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitStuffErrorIsr_Callback();
+ 165:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_BIT_STUFF_ERROR_ISR_CALLBACK */
+ 166:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 167:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_STUFF_ERR */
+ 168:Generated_Source\PSoC4/CAN_INT.c **** 
+ 169:Generated_Source\PSoC4/CAN_INT.c **** 
+ 170:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_ACK_ERR)
+ 171:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 172:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_AckErrorIsr
+ 173:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 174:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 175:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 176:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Acknowledge Error Interrupt. Clears
+ 177:Generated_Source\PSoC4/CAN_INT.c ****     *  Acknowledge Error interrupt flag. Only generated if Acknowledge Error
+ 178:Generated_Source\PSoC4/CAN_INT.c ****     *  Interrupt enable in Customizer.
+ 179:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 180:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 181:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 182:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 183:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 184:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 185:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 186:Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
+ 187:Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
+ 188:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 189:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 190:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_AckErrorIsr(void) 
+ 191:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 192:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Acknoledge Error flag */
+ 193:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_ACK_ERROR_MASK;
+ 194:Generated_Source\PSoC4/CAN_INT.c **** 
+ 195:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START ACKNOWLEDGE_ERROR_ISR` */
+ 196:Generated_Source\PSoC4/CAN_INT.c **** 
+ 197:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 198:Generated_Source\PSoC4/CAN_INT.c **** 
+ 199:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_ACK_ERROR_ISR_CALLBACK
+ 200:Generated_Source\PSoC4/CAN_INT.c ****             CAN_AckErrorIsr_Callback();
+ 201:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_ACK_ERROR_ISR_CALLBACK */
+ 202:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 203:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_ACK_ERR */
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 5
 
 
- 204:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 205:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 206:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_FORM_ERR)
- 207:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 208:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_MsgErrorIsr
- 209:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 210:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 211:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 212:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Form Error Interrupt. Clears Form Error
- 213:.\Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt flag. Only generated if Form Error Interrupt enable in Customizer.
- 214:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 215:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 216:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 217:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 218:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 219:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 220:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 221:.\Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
- 222:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
- 223:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 224:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 225:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_MsgErrorIsr(void) 
- 226:.\Generated_Source\PSoC4/CAN_INT.c ****     {
- 227:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Form Error flag */
- 228:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_FORM_ERROR_MASK;
- 229:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 230:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START MESSAGE_ERROR_ISR` */
- 231:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 232:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 233:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 234:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_MSG_ERROR_ISR_CALLBACK
- 235:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgErrorIsr_Callback();
- 236:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_MSG_ERROR_ISR_CALLBACK */
- 237:.\Generated_Source\PSoC4/CAN_INT.c ****     }
- 238:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_FORM_ERR */
- 239:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 240:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 241:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_CRC_ERR)
- 242:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 243:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_CrcErrorIsr
- 244:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 245:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 246:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 247:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to CRC Error Interrupt. Clears CRC Error
- 248:.\Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt flag. Only generated if CRC Error Interrupt enable in Customizer.
- 249:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 250:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 251:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 252:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 253:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 254:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 255:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 256:.\Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
- 257:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
- 258:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 259:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 260:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_CrcErrorIsr(void) 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 6
+ 204:Generated_Source\PSoC4/CAN_INT.c **** 
+ 205:Generated_Source\PSoC4/CAN_INT.c **** 
+ 206:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_FORM_ERR)
+ 207:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 208:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_MsgErrorIsr
+ 209:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 210:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 211:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 212:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Form Error Interrupt. Clears Form Error
+ 213:Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt flag. Only generated if Form Error Interrupt enable in Customizer.
+ 214:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 215:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 216:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 217:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 218:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 219:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 220:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 221:Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
+ 222:Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
+ 223:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 224:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 225:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_MsgErrorIsr(void) 
+ 226:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 227:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Form Error flag */
+ 228:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_FORM_ERROR_MASK;
+ 229:Generated_Source\PSoC4/CAN_INT.c **** 
+ 230:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START MESSAGE_ERROR_ISR` */
+ 231:Generated_Source\PSoC4/CAN_INT.c **** 
+ 232:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 233:Generated_Source\PSoC4/CAN_INT.c **** 
+ 234:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_MSG_ERROR_ISR_CALLBACK
+ 235:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgErrorIsr_Callback();
+ 236:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_MSG_ERROR_ISR_CALLBACK */
+ 237:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 238:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_FORM_ERR */
+ 239:Generated_Source\PSoC4/CAN_INT.c **** 
+ 240:Generated_Source\PSoC4/CAN_INT.c **** 
+ 241:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_CRC_ERR)
+ 242:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 243:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_CrcErrorIsr
+ 244:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 245:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 246:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 247:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to CRC Error Interrupt. Clears CRC Error
+ 248:Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt flag. Only generated if CRC Error Interrupt enable in Customizer.
+ 249:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 250:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 251:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 252:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 253:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 254:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 255:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 256:Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
+ 257:Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
+ 258:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 259:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 260:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_CrcErrorIsr(void) 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 6
 
 
- 261:.\Generated_Source\PSoC4/CAN_INT.c ****     {
- 262:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear CRC Error flag */
- 263:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_CRC_ERROR_MASK;
- 264:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 265:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START CRC_ERROR_ISR` */
- 266:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 267:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 268:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 269:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_CRC_ERROR_ISR_CALLBACK
- 270:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_CrcErrorIsr_Callback();
- 271:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_CRC_ERROR_ISR_CALLBACK */
- 272:.\Generated_Source\PSoC4/CAN_INT.c ****     }
- 273:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_CRC_ERR */
- 274:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 275:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 276:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_BUS_OFF)
- 277:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 278:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_BusOffIsr
- 279:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 280:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 281:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 282:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Bus Off Interrupt. Places CAN Component
- 283:.\Generated_Source\PSoC4/CAN_INT.c ****     *  to Stop mode. Only generated if Bus Off Interrupt enable in Customizer.
- 284:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Recommended setting to enable this interrupt.
- 285:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 286:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 287:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 288:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 289:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 290:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 291:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 292:.\Generated_Source\PSoC4/CAN_INT.c ****     * Side Effects:
- 293:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Stops CAN component operation.
- 294:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 295:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 296:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_BusOffIsr(void) 
- 297:.\Generated_Source\PSoC4/CAN_INT.c ****     {
+ 261:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 262:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear CRC Error flag */
+ 263:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_CRC_ERROR_MASK;
+ 264:Generated_Source\PSoC4/CAN_INT.c **** 
+ 265:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START CRC_ERROR_ISR` */
+ 266:Generated_Source\PSoC4/CAN_INT.c **** 
+ 267:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 268:Generated_Source\PSoC4/CAN_INT.c **** 
+ 269:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_CRC_ERROR_ISR_CALLBACK
+ 270:Generated_Source\PSoC4/CAN_INT.c ****             CAN_CrcErrorIsr_Callback();
+ 271:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_CRC_ERROR_ISR_CALLBACK */
+ 272:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 273:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_CRC_ERR */
+ 274:Generated_Source\PSoC4/CAN_INT.c **** 
+ 275:Generated_Source\PSoC4/CAN_INT.c **** 
+ 276:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_BUS_OFF)
+ 277:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 278:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_BusOffIsr
+ 279:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 280:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 281:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 282:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Bus Off Interrupt. Places CAN Component
+ 283:Generated_Source\PSoC4/CAN_INT.c ****     *  to Stop mode. Only generated if Bus Off Interrupt enable in Customizer.
+ 284:Generated_Source\PSoC4/CAN_INT.c ****     *  Recommended setting to enable this interrupt.
+ 285:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 286:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 287:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 288:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 289:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 290:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 291:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 292:Generated_Source\PSoC4/CAN_INT.c ****     * Side Effects:
+ 293:Generated_Source\PSoC4/CAN_INT.c ****     *  Stops CAN component operation.
+ 294:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 295:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 296:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_BusOffIsr(void) 
+ 297:Generated_Source\PSoC4/CAN_INT.c ****     {
   26              		.loc 1 297 0
   27              		.cfi_startproc
   28 0000 08B5     		push	{r3, lr}
   29              		.cfi_def_cfa_offset 8
   30              		.cfi_offset 3, -8
   31              		.cfi_offset 14, -4
- 298:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Bus Off flag */
- 299:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_BUS_OFF_MASK;
+ 298:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Bus Off flag */
+ 299:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_BUS_OFF_MASK;
   32              		.loc 1 299 0
   33 0002 8022     		mov	r2, #128
   34 0004 9200     		lsl	r2, r2, #2
   35 0006 024B     		ldr	r3, .L2
   36 0008 1A60     		str	r2, [r3]
- 300:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 301:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START BUS_OFF_ISR` */
- 302:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 303:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 304:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 305:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_BUS_OFF_ISR_CALLBACK
- 306:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_BusOffIsr_Callback();
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 7
+ 300:Generated_Source\PSoC4/CAN_INT.c **** 
+ 301:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START BUS_OFF_ISR` */
+ 302:Generated_Source\PSoC4/CAN_INT.c **** 
+ 303:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 304:Generated_Source\PSoC4/CAN_INT.c **** 
+ 305:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_BUS_OFF_ISR_CALLBACK
+ 306:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BusOffIsr_Callback();
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 7
 
 
- 307:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_BUS_OFF_ISR_CALLBACK */
- 308:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 309:.\Generated_Source\PSoC4/CAN_INT.c ****         (void) CAN_Stop();
+ 307:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_BUS_OFF_ISR_CALLBACK */
+ 308:Generated_Source\PSoC4/CAN_INT.c **** 
+ 309:Generated_Source\PSoC4/CAN_INT.c ****         (void) CAN_Stop();
   37              		.loc 1 309 0
   38 000a FFF7FEFF 		bl	CAN_Stop
   39              	.LVL0:
- 310:.\Generated_Source\PSoC4/CAN_INT.c ****     }
+ 310:Generated_Source\PSoC4/CAN_INT.c ****     }
   40              		.loc 1 310 0
   41              		@ sp needed
   42 000e 08BD     		pop	{r3, pc}
@@ -386,87 +386,87 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
   55              		.type	CAN_MsgTXIsr, %function
   56              	CAN_MsgTXIsr:
   57              	.LFB2:
- 311:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_BUS_OFF */
- 312:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 313:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 314:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_RX_MSG_LOST)
- 315:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 316:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_MsgLostIsr
- 317:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 318:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 319:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 320:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Message Lost Interrupt. Clears Message Lost
- 321:.\Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt flag. Only generated if Message Lost Interrupt enable in Customizer
- 322:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 323:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 324:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 325:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 326:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 327:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 328:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 329:.\Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
- 330:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
- 331:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 332:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 333:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_MsgLostIsr(void) 
- 334:.\Generated_Source\PSoC4/CAN_INT.c ****     {
- 335:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Receive Message Lost flag */
- 336:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_RX_MSG_LOST_MASK;
- 337:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 338:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START MESSAGE_LOST_ISR` */
- 339:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 340:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 341:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 342:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_MSG_LOST_ISR_CALLBACK
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 8
+ 311:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_BUS_OFF */
+ 312:Generated_Source\PSoC4/CAN_INT.c **** 
+ 313:Generated_Source\PSoC4/CAN_INT.c **** 
+ 314:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_RX_MSG_LOST)
+ 315:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 316:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_MsgLostIsr
+ 317:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 318:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 319:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 320:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Message Lost Interrupt. Clears Message Lost
+ 321:Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt flag. Only generated if Message Lost Interrupt enable in Customizer
+ 322:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 323:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 324:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 325:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 326:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 327:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 328:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 329:Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
+ 330:Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
+ 331:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 332:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 333:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_MsgLostIsr(void) 
+ 334:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 335:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Receive Message Lost flag */
+ 336:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_RX_MSG_LOST_MASK;
+ 337:Generated_Source\PSoC4/CAN_INT.c **** 
+ 338:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START MESSAGE_LOST_ISR` */
+ 339:Generated_Source\PSoC4/CAN_INT.c **** 
+ 340:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 341:Generated_Source\PSoC4/CAN_INT.c **** 
+ 342:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_MSG_LOST_ISR_CALLBACK
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 8
 
 
- 343:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgLostIsr_Callback();
- 344:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_MSG_LOST_ISR_CALLBACK */
- 345:.\Generated_Source\PSoC4/CAN_INT.c ****     }
- 346:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_RX_MSG_LOST */
- 347:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 348:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 349:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_TX_MESSAGE)
- 350:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 351:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_MsgTXIsr
- 352:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 353:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 354:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 355:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Transmit Message Interrupt. Clears Transmit
- 356:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Message interrupt flag. Only generated if Transmit Message Interrupt enable
- 357:.\Generated_Source\PSoC4/CAN_INT.c ****     *  in Customizer.
- 358:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 359:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 360:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 361:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 362:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 363:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 364:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 365:.\Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
- 366:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
- 367:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 368:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 369:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_MsgTXIsr(void) 
- 370:.\Generated_Source\PSoC4/CAN_INT.c ****     {
+ 343:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgLostIsr_Callback();
+ 344:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_MSG_LOST_ISR_CALLBACK */
+ 345:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 346:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_RX_MSG_LOST */
+ 347:Generated_Source\PSoC4/CAN_INT.c **** 
+ 348:Generated_Source\PSoC4/CAN_INT.c **** 
+ 349:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_TX_MESSAGE)
+ 350:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 351:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_MsgTXIsr
+ 352:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 353:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 354:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 355:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Transmit Message Interrupt. Clears Transmit
+ 356:Generated_Source\PSoC4/CAN_INT.c ****     *  Message interrupt flag. Only generated if Transmit Message Interrupt enable
+ 357:Generated_Source\PSoC4/CAN_INT.c ****     *  in Customizer.
+ 358:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 359:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 360:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 361:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 362:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 363:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 364:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 365:Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
+ 366:Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
+ 367:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 368:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 369:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_MsgTXIsr(void) 
+ 370:Generated_Source\PSoC4/CAN_INT.c ****     {
   58              		.loc 1 370 0
   59              		.cfi_startproc
- 371:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Transmit Message flag */
- 372:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_TX_MESSAGE_MASK;
+ 371:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Transmit Message flag */
+ 372:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_TX_MESSAGE_MASK;
   60              		.loc 1 372 0
   61 0000 8022     		mov	r2, #128
   62 0002 1201     		lsl	r2, r2, #4
   63 0004 014B     		ldr	r3, .L5
   64 0006 1A60     		str	r2, [r3]
- 373:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 374:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START MESSAGE_TRANSMITTED_ISR` */
- 375:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 376:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 377:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 378:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_MSG_TX_ISR_CALLBACK
- 379:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgTXIsr_Callback();
- 380:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_MSG_TX_ISR_CALLBACK */
- 381:.\Generated_Source\PSoC4/CAN_INT.c ****     }
+ 373:Generated_Source\PSoC4/CAN_INT.c **** 
+ 374:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START MESSAGE_TRANSMITTED_ISR` */
+ 375:Generated_Source\PSoC4/CAN_INT.c **** 
+ 376:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 377:Generated_Source\PSoC4/CAN_INT.c **** 
+ 378:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_MSG_TX_ISR_CALLBACK
+ 379:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgTXIsr_Callback();
+ 380:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_MSG_TX_ISR_CALLBACK */
+ 381:Generated_Source\PSoC4/CAN_INT.c ****     }
   65              		.loc 1 381 0
   66              		@ sp needed
   67 0008 7047     		bx	lr
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
   73              	.LFE2:
   74              		.size	CAN_MsgTXIsr, .-CAN_MsgTXIsr
   75              		.section	.text.CAN_MsgRXIsr,"ax",%progbits
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 9
 
 
   76              		.align	2
@@ -488,29 +488,29 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
   80              		.type	CAN_MsgRXIsr, %function
   81              	CAN_MsgRXIsr:
   82              	.LFB3:
- 382:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_TX_MESSAGE */
- 383:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 384:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 385:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_RX_MESSAGE)
- 386:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 387:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_MsgRXIsr
- 388:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 389:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 390:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 391:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Receive Message Interrupt. Clears Receive
- 392:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Message interrupt flag and call appropriate handlers for Basic and Full
- 393:.\Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt based mailboxes. Only generated if Receive Message Interrupt
- 394:.\Generated_Source\PSoC4/CAN_INT.c ****     *  enable in Customizer. Recommended setting to enable this interrupt.
- 395:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 396:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 397:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 398:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 399:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 400:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 401:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 402:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 403:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_MsgRXIsr(void) 
- 404:.\Generated_Source\PSoC4/CAN_INT.c ****     {
+ 382:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_TX_MESSAGE */
+ 383:Generated_Source\PSoC4/CAN_INT.c **** 
+ 384:Generated_Source\PSoC4/CAN_INT.c **** 
+ 385:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_RX_MESSAGE)
+ 386:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 387:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_MsgRXIsr
+ 388:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 389:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 390:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 391:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to Receive Message Interrupt. Clears Receive
+ 392:Generated_Source\PSoC4/CAN_INT.c ****     *  Message interrupt flag and call appropriate handlers for Basic and Full
+ 393:Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt based mailboxes. Only generated if Receive Message Interrupt
+ 394:Generated_Source\PSoC4/CAN_INT.c ****     *  enable in Customizer. Recommended setting to enable this interrupt.
+ 395:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 396:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 397:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 398:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 399:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 400:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 401:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 402:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 403:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_MsgRXIsr(void) 
+ 404:Generated_Source\PSoC4/CAN_INT.c ****     {
   83              		.loc 1 404 0
   84              		.cfi_startproc
   85 0000 38B5     		push	{r3, r4, r5, lr}
@@ -520,48 +520,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
   89              		.cfi_offset 5, -8
   90              		.cfi_offset 14, -4
   91              	.LVL1:
- 405:.\Generated_Source\PSoC4/CAN_INT.c ****         uint8 mailboxNumber;
- 406:.\Generated_Source\PSoC4/CAN_INT.c ****         uint16 shift = 0x01u;
- 407:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 408:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Receive Message flag */
- 409:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_RX_MESSAGE_MASK;
+ 405:Generated_Source\PSoC4/CAN_INT.c ****         uint8 mailboxNumber;
+ 406:Generated_Source\PSoC4/CAN_INT.c ****         uint16 shift = 0x01u;
+ 407:Generated_Source\PSoC4/CAN_INT.c **** 
+ 408:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Receive Message flag */
+ 409:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_RX_MESSAGE_MASK;
   92              		.loc 1 409 0
   93 0002 8022     		mov	r2, #128
   94 0004 5201     		lsl	r2, r2, #5
   95 0006 104B     		ldr	r3, .L13
   96 0008 1A60     		str	r2, [r3]
   97              	.LVL2:
- 406:.\Generated_Source\PSoC4/CAN_INT.c **** 
+ 406:Generated_Source\PSoC4/CAN_INT.c **** 
   98              		.loc 1 406 0
   99 000a 0125     		mov	r5, #1
- 410:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 411:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START MESSAGE_RECEIVE_ISR` */
- 412:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 413:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 10
+ 410:Generated_Source\PSoC4/CAN_INT.c **** 
+ 411:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START MESSAGE_RECEIVE_ISR` */
+ 412:Generated_Source\PSoC4/CAN_INT.c **** 
+ 413:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 10
 
 
- 414:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 415:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_MSG_RX_ISR_CALLBACK
- 416:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgRXIsr_Callback();
- 417:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_MSG_RX_ISR_CALLBACK */
- 418:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 419:.\Generated_Source\PSoC4/CAN_INT.c ****         for (mailboxNumber = 0u; mailboxNumber < CAN_NUMBER_OF_RX_MAILBOXES; mailboxNumber++)
+ 414:Generated_Source\PSoC4/CAN_INT.c **** 
+ 415:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_MSG_RX_ISR_CALLBACK
+ 416:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgRXIsr_Callback();
+ 417:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_MSG_RX_ISR_CALLBACK */
+ 418:Generated_Source\PSoC4/CAN_INT.c **** 
+ 419:Generated_Source\PSoC4/CAN_INT.c ****         for (mailboxNumber = 0u; mailboxNumber < CAN_NUMBER_OF_RX_MAILBOXES; mailboxNumber++)
  100              		.loc 1 419 0
  101 000c 0024     		mov	r4, #0
  102 000e 18E0     		b	.L8
  103              	.LVL3:
  104              	.L12:
- 420:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 421:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 422:.\Generated_Source\PSoC4/CAN_INT.c ****             if ((CAN_BUF_SR_REG & shift) != 0u)
+ 420:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 421:Generated_Source\PSoC4/CAN_INT.c **** 
+ 422:Generated_Source\PSoC4/CAN_INT.c ****             if ((CAN_BUF_SR_REG & shift) != 0u)
  105              		.loc 1 422 0
  106 0010 0E4B     		ldr	r3, .L13+4
  107 0012 1B68     		ldr	r3, [r3]
  108 0014 1D42     		tst	r5, r3
  109 0016 10D0     		beq	.L9
- 423:.\Generated_Source\PSoC4/CAN_INT.c ****             {
- 424:.\Generated_Source\PSoC4/CAN_INT.c ****                 if ((CAN_RX_CMD_REG(mailboxNumber) & CAN_RX_INT_ENABLE_MASK) != 0u)
+ 423:Generated_Source\PSoC4/CAN_INT.c ****             {
+ 424:Generated_Source\PSoC4/CAN_INT.c ****                 if ((CAN_RX_CMD_REG(mailboxNumber) & CAN_RX_INT_ENABLE_MASK) != 0u)
  110              		.loc 1 424 0
  111 0018 6301     		lsl	r3, r4, #5
  112 001a 0D4A     		ldr	r2, .L13+8
@@ -570,35 +570,35 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  115 0020 1B68     		ldr	r3, [r3]
  116 0022 9B06     		lsl	r3, r3, #26
  117 0024 09D5     		bpl	.L9
- 425:.\Generated_Source\PSoC4/CAN_INT.c ****                 {
- 426:.\Generated_Source\PSoC4/CAN_INT.c ****                     if ((CAN_RX_MAILBOX_TYPE & shift) != 0u)
+ 425:Generated_Source\PSoC4/CAN_INT.c ****                 {
+ 426:Generated_Source\PSoC4/CAN_INT.c ****                     if ((CAN_RX_MAILBOX_TYPE & shift) != 0u)
  118              		.loc 1 426 0
  119 0026 EB07     		lsl	r3, r5, #31
  120 0028 04D5     		bpl	.L10
- 427:.\Generated_Source\PSoC4/CAN_INT.c ****                     {
- 428:.\Generated_Source\PSoC4/CAN_INT.c ****                         /* RX Full mailboxes handler */
- 429:.\Generated_Source\PSoC4/CAN_INT.c ****                         switch(mailboxNumber)
+ 427:Generated_Source\PSoC4/CAN_INT.c ****                     {
+ 428:Generated_Source\PSoC4/CAN_INT.c ****                         /* RX Full mailboxes handler */
+ 429:Generated_Source\PSoC4/CAN_INT.c ****                         switch(mailboxNumber)
  121              		.loc 1 429 0
  122 002a 002C     		cmp	r4, #0
  123 002c 05D1     		bne	.L9
- 430:.\Generated_Source\PSoC4/CAN_INT.c ****                         {
- 431:.\Generated_Source\PSoC4/CAN_INT.c ****                             case 0u : CAN_ReceiveMsg0();
+ 430:Generated_Source\PSoC4/CAN_INT.c ****                         {
+ 431:Generated_Source\PSoC4/CAN_INT.c ****                             case 0u : CAN_ReceiveMsg0();
  124              		.loc 1 431 0
  125 002e FFF7FEFF 		bl	CAN_ReceiveMsg0
  126              	.LVL4:
- 432:.\Generated_Source\PSoC4/CAN_INT.c ****                             break;
+ 432:Generated_Source\PSoC4/CAN_INT.c ****                             break;
  127              		.loc 1 432 0
  128 0032 02E0     		b	.L9
  129              	.L10:
- 433:.\Generated_Source\PSoC4/CAN_INT.c ****                             default:
- 434:.\Generated_Source\PSoC4/CAN_INT.c ****                             break;
- 435:.\Generated_Source\PSoC4/CAN_INT.c ****                         }
- 436:.\Generated_Source\PSoC4/CAN_INT.c ****                     }
- 437:.\Generated_Source\PSoC4/CAN_INT.c ****                     else
- 438:.\Generated_Source\PSoC4/CAN_INT.c ****                     {
- 439:.\Generated_Source\PSoC4/CAN_INT.c ****                         /* RX Basic mailbox handler */
- 440:.\Generated_Source\PSoC4/CAN_INT.c ****                         CAN_ReceiveMsg(mailboxNumber);
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 11
+ 433:Generated_Source\PSoC4/CAN_INT.c ****                             default:
+ 434:Generated_Source\PSoC4/CAN_INT.c ****                             break;
+ 435:Generated_Source\PSoC4/CAN_INT.c ****                         }
+ 436:Generated_Source\PSoC4/CAN_INT.c ****                     }
+ 437:Generated_Source\PSoC4/CAN_INT.c ****                     else
+ 438:Generated_Source\PSoC4/CAN_INT.c ****                     {
+ 439:Generated_Source\PSoC4/CAN_INT.c ****                         /* RX Basic mailbox handler */
+ 440:Generated_Source\PSoC4/CAN_INT.c ****                         CAN_ReceiveMsg(mailboxNumber);
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 11
 
 
  130              		.loc 1 440 0
@@ -606,28 +606,28 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  132 0036 FFF7FEFF 		bl	CAN_ReceiveMsg
  133              	.LVL5:
  134              	.L9:
- 441:.\Generated_Source\PSoC4/CAN_INT.c ****                     }
- 442:.\Generated_Source\PSoC4/CAN_INT.c ****                 }
- 443:.\Generated_Source\PSoC4/CAN_INT.c ****             }
- 444:.\Generated_Source\PSoC4/CAN_INT.c ****             shift <<= 1u;
+ 441:Generated_Source\PSoC4/CAN_INT.c ****                     }
+ 442:Generated_Source\PSoC4/CAN_INT.c ****                 }
+ 443:Generated_Source\PSoC4/CAN_INT.c ****             }
+ 444:Generated_Source\PSoC4/CAN_INT.c ****             shift <<= 1u;
  135              		.loc 1 444 0 discriminator 2
  136 003a 6D00     		lsl	r5, r5, #1
  137              	.LVL6:
  138 003c ADB2     		uxth	r5, r5
  139              	.LVL7:
- 419:.\Generated_Source\PSoC4/CAN_INT.c ****         {
+ 419:Generated_Source\PSoC4/CAN_INT.c ****         {
  140              		.loc 1 419 0 discriminator 2
  141 003e 0134     		add	r4, r4, #1
  142              	.LVL8:
  143 0040 E4B2     		uxtb	r4, r4
  144              	.LVL9:
  145              	.L8:
- 419:.\Generated_Source\PSoC4/CAN_INT.c ****         {
+ 419:Generated_Source\PSoC4/CAN_INT.c ****         {
  146              		.loc 1 419 0 is_stmt 0 discriminator 1
  147 0042 0F2C     		cmp	r4, #15
  148 0044 E4D9     		bls	.L12
- 445:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 446:.\Generated_Source\PSoC4/CAN_INT.c ****     }
+ 445:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 446:Generated_Source\PSoC4/CAN_INT.c ****     }
  149              		.loc 1 446 0 is_stmt 1
  150              		@ sp needed
  151              	.LVL10:
@@ -650,342 +650,342 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  168              		.type	CAN_ISR, %function
  169              	CAN_ISR:
  170              	.LFB4:
- 447:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_RX_MESSAGE */
- 448:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 449:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 450:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_RTR_AUTO_MSG_SENT)
- 451:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 452:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_RtrAutoMsgSentIsr
- 453:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 454:.\Generated_Source\PSoC4/CAN_INT.c ****     *
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 12
+ 447:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_RX_MESSAGE */
+ 448:Generated_Source\PSoC4/CAN_INT.c **** 
+ 449:Generated_Source\PSoC4/CAN_INT.c **** 
+ 450:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_RTR_AUTO_MSG_SENT)
+ 451:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 452:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_RtrAutoMsgSentIsr
+ 453:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 454:Generated_Source\PSoC4/CAN_INT.c ****     *
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 12
 
 
- 455:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 456:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to the RTR automatic message sent Interrupt.
- 457:.\Generated_Source\PSoC4/CAN_INT.c ****     *  It is only generated if RTR message sent Interrupt is enabled in Customizer.
- 458:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 459:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 460:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 461:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 462:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 463:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 464:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 465:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 466:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_RtrAutoMsgSentIsr(void)
- 467:.\Generated_Source\PSoC4/CAN_INT.c ****     {
- 468:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear RTR auto-reply message sent flag */
- 469:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_RTR_MSG_MASK;
- 470:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 471:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START RTR_AUTO_MSG_SENT_ISR` */
- 472:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 473:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 474:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 475:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_RTR_AUTO_MSG_SENT_ISR_CALLBACK
- 476:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_RtrAutoMsgSentIsr_Callback();
- 477:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_RTR_AUTO_MSG_SENT_ISR_CALLBACK */
- 478:.\Generated_Source\PSoC4/CAN_INT.c ****     }
- 479:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_RTR_AUTO_MSG_SENT */
- 480:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 481:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 482:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_STUCK_AT_ZERO)
- 483:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 484:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_StuckAtZeroIsr
- 485:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 486:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 487:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 488:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is the entry point to the stuck at dominant bit Interrupt.
- 489:.\Generated_Source\PSoC4/CAN_INT.c ****     *  It is only generated if stuck at zero Interrupt is enabled in Customizer.
- 490:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Enabling this interrupt is recommended.
- 491:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 492:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 493:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 494:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 495:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 496:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 497:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 498:.\Generated_Source\PSoC4/CAN_INT.c ****     * Side Effects:
- 499:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Stops CAN component operation.
- 500:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 501:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 502:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_StuckAtZeroIsr(void)
- 503:.\Generated_Source\PSoC4/CAN_INT.c ****     {
- 504:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Stuck at dominant error flag */
- 505:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_STUCK_AT_ZERO_MASK;
- 506:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 507:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START STUCK_AT_ZERO_ISR` */
- 508:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 509:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 510:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 511:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_STUCK_AT_ZERO_ISR_CALLBACK
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 13
+ 455:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 456:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to the RTR automatic message sent Interrupt.
+ 457:Generated_Source\PSoC4/CAN_INT.c ****     *  It is only generated if RTR message sent Interrupt is enabled in Customizer.
+ 458:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 459:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 460:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 461:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 462:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 463:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 464:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 465:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 466:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_RtrAutoMsgSentIsr(void)
+ 467:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 468:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear RTR auto-reply message sent flag */
+ 469:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_RTR_MSG_MASK;
+ 470:Generated_Source\PSoC4/CAN_INT.c **** 
+ 471:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START RTR_AUTO_MSG_SENT_ISR` */
+ 472:Generated_Source\PSoC4/CAN_INT.c **** 
+ 473:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 474:Generated_Source\PSoC4/CAN_INT.c **** 
+ 475:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_RTR_AUTO_MSG_SENT_ISR_CALLBACK
+ 476:Generated_Source\PSoC4/CAN_INT.c ****             CAN_RtrAutoMsgSentIsr_Callback();
+ 477:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_RTR_AUTO_MSG_SENT_ISR_CALLBACK */
+ 478:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 479:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_RTR_AUTO_MSG_SENT */
+ 480:Generated_Source\PSoC4/CAN_INT.c **** 
+ 481:Generated_Source\PSoC4/CAN_INT.c **** 
+ 482:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_STUCK_AT_ZERO)
+ 483:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 484:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_StuckAtZeroIsr
+ 485:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 486:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 487:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 488:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is the entry point to the stuck at dominant bit Interrupt.
+ 489:Generated_Source\PSoC4/CAN_INT.c ****     *  It is only generated if stuck at zero Interrupt is enabled in Customizer.
+ 490:Generated_Source\PSoC4/CAN_INT.c ****     *  Enabling this interrupt is recommended.
+ 491:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 492:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 493:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 494:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 495:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 496:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 497:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 498:Generated_Source\PSoC4/CAN_INT.c ****     * Side Effects:
+ 499:Generated_Source\PSoC4/CAN_INT.c ****     *  Stops CAN component operation.
+ 500:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 501:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 502:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_StuckAtZeroIsr(void)
+ 503:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 504:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Stuck at dominant error flag */
+ 505:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_STUCK_AT_ZERO_MASK;
+ 506:Generated_Source\PSoC4/CAN_INT.c **** 
+ 507:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START STUCK_AT_ZERO_ISR` */
+ 508:Generated_Source\PSoC4/CAN_INT.c **** 
+ 509:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 510:Generated_Source\PSoC4/CAN_INT.c **** 
+ 511:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_STUCK_AT_ZERO_ISR_CALLBACK
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 13
 
 
- 512:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_StuckAtZeroIsr_Callback();
- 513:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_STUCK_AT_ZERO_ISR_CALLBACK */
- 514:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 515:.\Generated_Source\PSoC4/CAN_INT.c ****         (void) CAN_Stop();
- 516:.\Generated_Source\PSoC4/CAN_INT.c ****     }
- 517:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_STUCK_AT_ZERO */
- 518:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 519:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 520:.\Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_SST_FAILURE)
- 521:.\Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 522:.\Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_SSTErrorIsr
- 523:.\Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 524:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 525:.\Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 526:.\Generated_Source\PSoC4/CAN_INT.c ****     *  This function is the entry point to the single shot transmission error
- 527:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Interrupt. It is only generated if the single shot transmission Interrupt
- 528:.\Generated_Source\PSoC4/CAN_INT.c ****     *  is enabled in Customizer. Generated when the mailbox set for single shot
- 529:.\Generated_Source\PSoC4/CAN_INT.c ****     *  transmission experienced an arbitration loss or a bus error during
- 530:.\Generated_Source\PSoC4/CAN_INT.c ****     *  transmission.
- 531:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 532:.\Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 533:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 534:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 535:.\Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 536:.\Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 537:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 538:.\Generated_Source\PSoC4/CAN_INT.c ****     * Side Effects:
- 539:.\Generated_Source\PSoC4/CAN_INT.c ****     *  Removes message that failed SST transmission from the Tx mailbox.
- 540:.\Generated_Source\PSoC4/CAN_INT.c ****     *
- 541:.\Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 542:.\Generated_Source\PSoC4/CAN_INT.c ****     void CAN_SSTErrorIsr(void)
- 543:.\Generated_Source\PSoC4/CAN_INT.c ****     {
- 544:.\Generated_Source\PSoC4/CAN_INT.c ****         uint8 i;
- 545:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 546:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Single shot transmission failure flag */
- 547:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_SST_FAILURE_MASK;
- 548:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 549:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START SST_FAILURE_ISR_PRE` */
- 550:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 551:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 552:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 553:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_SST_ERROR_ISR_PRE_CALLBACK
- 554:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr_Pre_Callback();
- 555:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_SST_ERROR_ISR_PRE_CALLBACK */
- 556:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 557:.\Generated_Source\PSoC4/CAN_INT.c ****         /* Removes message that failed SST transmission from the Tx mailbox */
- 558:.\Generated_Source\PSoC4/CAN_INT.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
- 559:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 560:.\Generated_Source\PSoC4/CAN_INT.c ****             if ((CAN_TX_CMD_REG(i) & CAN_TX_ABORT_MASK) != 0u)
- 561:.\Generated_Source\PSoC4/CAN_INT.c ****             {
- 562:.\Generated_Source\PSoC4/CAN_INT.c ****                 CAN_TX_CMD_REG(i) = (CAN_TX_CMD_REG(i) & (uint32) (~(uint32) CAN_TX_TRANSMIT_REQUES
- 563:.\Generated_Source\PSoC4/CAN_INT.c ****                                     CAN_TX_ABORT_MASK;
- 564:.\Generated_Source\PSoC4/CAN_INT.c ****             }
- 565:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 566:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 567:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#START SST_FAILURE_ISR_POST` */
- 568:.\Generated_Source\PSoC4/CAN_INT.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 14
+ 512:Generated_Source\PSoC4/CAN_INT.c ****             CAN_StuckAtZeroIsr_Callback();
+ 513:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_STUCK_AT_ZERO_ISR_CALLBACK */
+ 514:Generated_Source\PSoC4/CAN_INT.c **** 
+ 515:Generated_Source\PSoC4/CAN_INT.c ****         (void) CAN_Stop();
+ 516:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 517:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_STUCK_AT_ZERO */
+ 518:Generated_Source\PSoC4/CAN_INT.c **** 
+ 519:Generated_Source\PSoC4/CAN_INT.c **** 
+ 520:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_SST_FAILURE)
+ 521:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 522:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_SSTErrorIsr
+ 523:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 524:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 525:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 526:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is the entry point to the single shot transmission error
+ 527:Generated_Source\PSoC4/CAN_INT.c ****     *  Interrupt. It is only generated if the single shot transmission Interrupt
+ 528:Generated_Source\PSoC4/CAN_INT.c ****     *  is enabled in Customizer. Generated when the mailbox set for single shot
+ 529:Generated_Source\PSoC4/CAN_INT.c ****     *  transmission experienced an arbitration loss or a bus error during
+ 530:Generated_Source\PSoC4/CAN_INT.c ****     *  transmission.
+ 531:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 532:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 533:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 534:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 535:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 536:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 537:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 538:Generated_Source\PSoC4/CAN_INT.c ****     * Side Effects:
+ 539:Generated_Source\PSoC4/CAN_INT.c ****     *  Removes message that failed SST transmission from the Tx mailbox.
+ 540:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 541:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 542:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_SSTErrorIsr(void)
+ 543:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 544:Generated_Source\PSoC4/CAN_INT.c ****         uint8 i;
+ 545:Generated_Source\PSoC4/CAN_INT.c **** 
+ 546:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Single shot transmission failure flag */
+ 547:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_SST_FAILURE_MASK;
+ 548:Generated_Source\PSoC4/CAN_INT.c **** 
+ 549:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START SST_FAILURE_ISR_PRE` */
+ 550:Generated_Source\PSoC4/CAN_INT.c **** 
+ 551:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 552:Generated_Source\PSoC4/CAN_INT.c **** 
+ 553:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_SST_ERROR_ISR_PRE_CALLBACK
+ 554:Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr_Pre_Callback();
+ 555:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_SST_ERROR_ISR_PRE_CALLBACK */
+ 556:Generated_Source\PSoC4/CAN_INT.c **** 
+ 557:Generated_Source\PSoC4/CAN_INT.c ****         /* Removes message that failed SST transmission from the Tx mailbox */
+ 558:Generated_Source\PSoC4/CAN_INT.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
+ 559:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 560:Generated_Source\PSoC4/CAN_INT.c ****             if ((CAN_TX_CMD_REG(i) & CAN_TX_ABORT_MASK) != 0u)
+ 561:Generated_Source\PSoC4/CAN_INT.c ****             {
+ 562:Generated_Source\PSoC4/CAN_INT.c ****                 CAN_TX_CMD_REG(i) = (CAN_TX_CMD_REG(i) & (uint32) (~(uint32) CAN_TX_TRANSMIT_REQUES
+ 563:Generated_Source\PSoC4/CAN_INT.c ****                                     CAN_TX_ABORT_MASK;
+ 564:Generated_Source\PSoC4/CAN_INT.c ****             }
+ 565:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 566:Generated_Source\PSoC4/CAN_INT.c **** 
+ 567:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START SST_FAILURE_ISR_POST` */
+ 568:Generated_Source\PSoC4/CAN_INT.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 14
 
 
- 569:.\Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
- 570:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 571:.\Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_SST_ERROR_ISR_POST_CALLBACK
- 572:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr_Post_Callback();
- 573:.\Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_SST_ERROR_ISR_POST_CALLBACK */
- 574:.\Generated_Source\PSoC4/CAN_INT.c ****     }
- 575:.\Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_SST_FAILURE */
- 576:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 577:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 578:.\Generated_Source\PSoC4/CAN_INT.c **** /*******************************************************************************
- 579:.\Generated_Source\PSoC4/CAN_INT.c **** * Function Name: CAN_ISR
- 580:.\Generated_Source\PSoC4/CAN_INT.c **** ********************************************************************************
- 581:.\Generated_Source\PSoC4/CAN_INT.c **** *
- 582:.\Generated_Source\PSoC4/CAN_INT.c **** * Summary:
- 583:.\Generated_Source\PSoC4/CAN_INT.c **** *  This ISR is executed when CAN Core generates and interrupt on one of events:
- 584:.\Generated_Source\PSoC4/CAN_INT.c **** *  Arb_lost, Overload, Bit_err, Stuff_err, Ack_err, Form_err, Crc_err,
- 585:.\Generated_Source\PSoC4/CAN_INT.c **** *  Buss_off, Rx_msg_lost, Tx_msg or Rx_msg. The interrupt sources depends
- 586:.\Generated_Source\PSoC4/CAN_INT.c **** *  on the Customizer inputs.
- 587:.\Generated_Source\PSoC4/CAN_INT.c **** *
- 588:.\Generated_Source\PSoC4/CAN_INT.c **** * Parameters:
- 589:.\Generated_Source\PSoC4/CAN_INT.c **** *  None.
- 590:.\Generated_Source\PSoC4/CAN_INT.c **** *
- 591:.\Generated_Source\PSoC4/CAN_INT.c **** * Return:
- 592:.\Generated_Source\PSoC4/CAN_INT.c **** *  None.
- 593:.\Generated_Source\PSoC4/CAN_INT.c **** *
- 594:.\Generated_Source\PSoC4/CAN_INT.c **** *******************************************************************************/
- 595:.\Generated_Source\PSoC4/CAN_INT.c **** CY_ISR(CAN_ISR)
- 596:.\Generated_Source\PSoC4/CAN_INT.c **** {
+ 569:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 570:Generated_Source\PSoC4/CAN_INT.c **** 
+ 571:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_SST_ERROR_ISR_POST_CALLBACK
+ 572:Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr_Post_Callback();
+ 573:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_SST_ERROR_ISR_POST_CALLBACK */
+ 574:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 575:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_SST_FAILURE */
+ 576:Generated_Source\PSoC4/CAN_INT.c **** 
+ 577:Generated_Source\PSoC4/CAN_INT.c **** 
+ 578:Generated_Source\PSoC4/CAN_INT.c **** /*******************************************************************************
+ 579:Generated_Source\PSoC4/CAN_INT.c **** * Function Name: CAN_ISR
+ 580:Generated_Source\PSoC4/CAN_INT.c **** ********************************************************************************
+ 581:Generated_Source\PSoC4/CAN_INT.c **** *
+ 582:Generated_Source\PSoC4/CAN_INT.c **** * Summary:
+ 583:Generated_Source\PSoC4/CAN_INT.c **** *  This ISR is executed when CAN Core generates and interrupt on one of events:
+ 584:Generated_Source\PSoC4/CAN_INT.c **** *  Arb_lost, Overload, Bit_err, Stuff_err, Ack_err, Form_err, Crc_err,
+ 585:Generated_Source\PSoC4/CAN_INT.c **** *  Buss_off, Rx_msg_lost, Tx_msg or Rx_msg. The interrupt sources depends
+ 586:Generated_Source\PSoC4/CAN_INT.c **** *  on the Customizer inputs.
+ 587:Generated_Source\PSoC4/CAN_INT.c **** *
+ 588:Generated_Source\PSoC4/CAN_INT.c **** * Parameters:
+ 589:Generated_Source\PSoC4/CAN_INT.c **** *  None.
+ 590:Generated_Source\PSoC4/CAN_INT.c **** *
+ 591:Generated_Source\PSoC4/CAN_INT.c **** * Return:
+ 592:Generated_Source\PSoC4/CAN_INT.c **** *  None.
+ 593:Generated_Source\PSoC4/CAN_INT.c **** *
+ 594:Generated_Source\PSoC4/CAN_INT.c **** *******************************************************************************/
+ 595:Generated_Source\PSoC4/CAN_INT.c **** CY_ISR(CAN_ISR)
+ 596:Generated_Source\PSoC4/CAN_INT.c **** {
  171              		.loc 1 596 0
  172              		.cfi_startproc
  173 0000 08B5     		push	{r3, lr}
  174              		.cfi_def_cfa_offset 8
  175              		.cfi_offset 3, -8
  176              		.cfi_offset 14, -4
- 597:.\Generated_Source\PSoC4/CAN_INT.c ****     #ifdef CAN_ISR_INTERRUPT_CALLBACK
- 598:.\Generated_Source\PSoC4/CAN_INT.c ****         CAN_ISR_InterruptCallback();
- 599:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ISR_INTERRUPT_CALLBACK */
- 600:.\Generated_Source\PSoC4/CAN_INT.c ****     
- 601:.\Generated_Source\PSoC4/CAN_INT.c ****     /* Place your Interrupt code here. */
- 602:.\Generated_Source\PSoC4/CAN_INT.c ****     /* `#START CAN_ISR` */
- 603:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 604:.\Generated_Source\PSoC4/CAN_INT.c ****     /* `#END` */
- 605:.\Generated_Source\PSoC4/CAN_INT.c ****     
- 606:.\Generated_Source\PSoC4/CAN_INT.c ****     /* Arbitration */
- 607:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_ARB_LOST && (CAN_ARB_LOST_USE_HELPER || \
- 608:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 609:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_ARBITRATION_LOST_MASK) != 0u)
- 610:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 611:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_ArbLostIsr();
- 612:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 613:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ARB_LOST && CAN_ARB_LOST_USE_HELPER */
- 614:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 615:.\Generated_Source\PSoC4/CAN_INT.c ****     /* Overload Error */
- 616:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_OVERLOAD && (CAN_OVERLOAD_USE_HELPER || \
- 617:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 618:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_OVERLOAD_ERROR_MASK) != 0u)
- 619:.\Generated_Source\PSoC4/CAN_INT.c ****         {
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 15
+ 597:Generated_Source\PSoC4/CAN_INT.c ****     #ifdef CAN_ISR_INTERRUPT_CALLBACK
+ 598:Generated_Source\PSoC4/CAN_INT.c ****         CAN_ISR_InterruptCallback();
+ 599:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ISR_INTERRUPT_CALLBACK */
+ 600:Generated_Source\PSoC4/CAN_INT.c ****     
+ 601:Generated_Source\PSoC4/CAN_INT.c ****     /* Place your Interrupt code here. */
+ 602:Generated_Source\PSoC4/CAN_INT.c ****     /* `#START CAN_ISR` */
+ 603:Generated_Source\PSoC4/CAN_INT.c **** 
+ 604:Generated_Source\PSoC4/CAN_INT.c ****     /* `#END` */
+ 605:Generated_Source\PSoC4/CAN_INT.c ****     
+ 606:Generated_Source\PSoC4/CAN_INT.c ****     /* Arbitration */
+ 607:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_ARB_LOST && (CAN_ARB_LOST_USE_HELPER || \
+ 608:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 609:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_ARBITRATION_LOST_MASK) != 0u)
+ 610:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 611:Generated_Source\PSoC4/CAN_INT.c ****             CAN_ArbLostIsr();
+ 612:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 613:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ARB_LOST && CAN_ARB_LOST_USE_HELPER */
+ 614:Generated_Source\PSoC4/CAN_INT.c **** 
+ 615:Generated_Source\PSoC4/CAN_INT.c ****     /* Overload Error */
+ 616:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_OVERLOAD && (CAN_OVERLOAD_USE_HELPER || \
+ 617:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 618:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_OVERLOAD_ERROR_MASK) != 0u)
+ 619:Generated_Source\PSoC4/CAN_INT.c ****         {
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 15
 
 
- 620:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_OvrLdErrorIsr();
- 621:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 622:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_OVERLOAD && CAN_OVERLOAD_USE_HELPER */
- 623:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 624:.\Generated_Source\PSoC4/CAN_INT.c ****     /* Bit Error */
- 625:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_BIT_ERR && (CAN_BIT_ERR_USE_HELPER || \
- 626:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 627:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_BIT_ERROR_MASK) != 0u)
- 628:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 629:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitErrorIsr();
- 630:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 631:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_BIT_ERR && CAN_BIT_ERR_USE_HELPER */
- 632:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 633:.\Generated_Source\PSoC4/CAN_INT.c ****     /* Bit Staff Error */
- 634:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_STUFF_ERR && (CAN_STUFF_ERR_USE_HELPER || \
- 635:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 636:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_STUFF_ERROR_MASK) != 0u)
- 637:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 638:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitStuffErrorIsr();
- 639:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 640:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_STUFF_ERR && CAN_STUFF_ERR_USE_HELPER */
- 641:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 642:.\Generated_Source\PSoC4/CAN_INT.c ****     /* ACK Error */
- 643:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_ACK_ERR && (CAN_ACK_ERR_USE_HELPER || \
- 644:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 645:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_ACK_ERROR_MASK) != 0u)
- 646:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 647:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_AckErrorIsr();
- 648:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 649:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ACK_ERR && CAN_ACK_ERR_USE_HELPER */
- 650:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 651:.\Generated_Source\PSoC4/CAN_INT.c ****     /* Form(msg) Error */
- 652:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_FORM_ERR && (CAN_FORM_ERR_USE_HELPER || \
- 653:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 654:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_FORM_ERROR_MASK) != 0u)
- 655:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 656:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgErrorIsr();
- 657:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 658:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_FORM_ERR && CAN_FORM_ERR_USE_HELPER */
- 659:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 660:.\Generated_Source\PSoC4/CAN_INT.c ****     /* CRC Error */
- 661:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_CRC_ERR && (CAN_CRC_ERR_USE_HELPER || \
- 662:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 663:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_CRC_ERROR_MASK) != 0u)
- 664:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 665:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_CrcErrorIsr();
- 666:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 667:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_CRC_ERR && CAN_CRC_ERR_USE_HELPER */
- 668:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 669:.\Generated_Source\PSoC4/CAN_INT.c ****     /* Bus Off state */
- 670:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_BUS_OFF && (CAN_BUS_OFF_USE_HELPER || \
- 671:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 672:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_BUS_OFF_MASK) != 0u)
+ 620:Generated_Source\PSoC4/CAN_INT.c ****             CAN_OvrLdErrorIsr();
+ 621:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 622:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_OVERLOAD && CAN_OVERLOAD_USE_HELPER */
+ 623:Generated_Source\PSoC4/CAN_INT.c **** 
+ 624:Generated_Source\PSoC4/CAN_INT.c ****     /* Bit Error */
+ 625:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_BIT_ERR && (CAN_BIT_ERR_USE_HELPER || \
+ 626:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 627:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_BIT_ERROR_MASK) != 0u)
+ 628:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 629:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitErrorIsr();
+ 630:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 631:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_BIT_ERR && CAN_BIT_ERR_USE_HELPER */
+ 632:Generated_Source\PSoC4/CAN_INT.c **** 
+ 633:Generated_Source\PSoC4/CAN_INT.c ****     /* Bit Staff Error */
+ 634:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_STUFF_ERR && (CAN_STUFF_ERR_USE_HELPER || \
+ 635:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 636:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_STUFF_ERROR_MASK) != 0u)
+ 637:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 638:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitStuffErrorIsr();
+ 639:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 640:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_STUFF_ERR && CAN_STUFF_ERR_USE_HELPER */
+ 641:Generated_Source\PSoC4/CAN_INT.c **** 
+ 642:Generated_Source\PSoC4/CAN_INT.c ****     /* ACK Error */
+ 643:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_ACK_ERR && (CAN_ACK_ERR_USE_HELPER || \
+ 644:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 645:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_ACK_ERROR_MASK) != 0u)
+ 646:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 647:Generated_Source\PSoC4/CAN_INT.c ****             CAN_AckErrorIsr();
+ 648:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 649:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ACK_ERR && CAN_ACK_ERR_USE_HELPER */
+ 650:Generated_Source\PSoC4/CAN_INT.c **** 
+ 651:Generated_Source\PSoC4/CAN_INT.c ****     /* Form(msg) Error */
+ 652:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_FORM_ERR && (CAN_FORM_ERR_USE_HELPER || \
+ 653:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 654:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_FORM_ERROR_MASK) != 0u)
+ 655:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 656:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgErrorIsr();
+ 657:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 658:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_FORM_ERR && CAN_FORM_ERR_USE_HELPER */
+ 659:Generated_Source\PSoC4/CAN_INT.c **** 
+ 660:Generated_Source\PSoC4/CAN_INT.c ****     /* CRC Error */
+ 661:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_CRC_ERR && (CAN_CRC_ERR_USE_HELPER || \
+ 662:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 663:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_CRC_ERROR_MASK) != 0u)
+ 664:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 665:Generated_Source\PSoC4/CAN_INT.c ****             CAN_CrcErrorIsr();
+ 666:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 667:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_CRC_ERR && CAN_CRC_ERR_USE_HELPER */
+ 668:Generated_Source\PSoC4/CAN_INT.c **** 
+ 669:Generated_Source\PSoC4/CAN_INT.c ****     /* Bus Off state */
+ 670:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_BUS_OFF && (CAN_BUS_OFF_USE_HELPER || \
+ 671:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 672:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_BUS_OFF_MASK) != 0u)
  177              		.loc 1 672 0
  178 0002 094B     		ldr	r3, .L19
  179 0004 1B68     		ldr	r3, [r3]
  180 0006 9B05     		lsl	r3, r3, #22
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 16
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 16
 
 
  181 0008 01D5     		bpl	.L16
- 673:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 674:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_BusOffIsr();
+ 673:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 674:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BusOffIsr();
  182              		.loc 1 674 0
  183 000a FFF7FEFF 		bl	CAN_BusOffIsr
  184              	.LVL12:
  185              	.L16:
- 675:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 676:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_BUS_OFF && CAN_BUS_OFF_USE_HELPER */
- 677:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 678:.\Generated_Source\PSoC4/CAN_INT.c ****     /* Message Lost */
- 679:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RX_MSG_LOST && (CAN_RX_MSG_LOST_USE_HELPER || \
- 680:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 681:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RX_MSG_LOST_MASK) != 0u)
- 682:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 683:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgLostIsr();
- 684:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 685:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RX_MSG_LOST && CAN_RX_MSG_LOST_USE_HELPER */
- 686:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 687:.\Generated_Source\PSoC4/CAN_INT.c ****     /* TX Message Send */
- 688:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_TX_MESSAGE && (CAN_TX_MESSAGE_USE_HELPER || \
- 689:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 690:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_TX_MESSAGE_MASK) != 0u)
+ 675:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 676:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_BUS_OFF && CAN_BUS_OFF_USE_HELPER */
+ 677:Generated_Source\PSoC4/CAN_INT.c **** 
+ 678:Generated_Source\PSoC4/CAN_INT.c ****     /* Message Lost */
+ 679:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RX_MSG_LOST && (CAN_RX_MSG_LOST_USE_HELPER || \
+ 680:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 681:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RX_MSG_LOST_MASK) != 0u)
+ 682:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 683:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgLostIsr();
+ 684:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 685:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RX_MSG_LOST && CAN_RX_MSG_LOST_USE_HELPER */
+ 686:Generated_Source\PSoC4/CAN_INT.c **** 
+ 687:Generated_Source\PSoC4/CAN_INT.c ****     /* TX Message Send */
+ 688:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_TX_MESSAGE && (CAN_TX_MESSAGE_USE_HELPER || \
+ 689:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 690:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_TX_MESSAGE_MASK) != 0u)
  186              		.loc 1 690 0
  187 000e 064B     		ldr	r3, .L19
  188 0010 1B68     		ldr	r3, [r3]
  189 0012 1B05     		lsl	r3, r3, #20
  190 0014 01D5     		bpl	.L17
- 691:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 692:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgTXIsr();
+ 691:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 692:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgTXIsr();
  191              		.loc 1 692 0
  192 0016 FFF7FEFF 		bl	CAN_MsgTXIsr
  193              	.LVL13:
  194              	.L17:
- 693:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 694:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_TX_MESSAGE && CAN_TX_MESSAGE_USE_HELPER */
- 695:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 696:.\Generated_Source\PSoC4/CAN_INT.c ****     /* RX Message Available */
- 697:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RX_MESSAGE && (CAN_RX_MESSAGE_USE_HELPER || \
- 698:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 699:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RX_MESSAGE_MASK) != 0u)
+ 693:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 694:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_TX_MESSAGE && CAN_TX_MESSAGE_USE_HELPER */
+ 695:Generated_Source\PSoC4/CAN_INT.c **** 
+ 696:Generated_Source\PSoC4/CAN_INT.c ****     /* RX Message Available */
+ 697:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RX_MESSAGE && (CAN_RX_MESSAGE_USE_HELPER || \
+ 698:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 699:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RX_MESSAGE_MASK) != 0u)
  195              		.loc 1 699 0
  196 001a 034B     		ldr	r3, .L19
  197 001c 1B68     		ldr	r3, [r3]
  198 001e DB04     		lsl	r3, r3, #19
  199 0020 01D5     		bpl	.L15
- 700:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 701:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgRXIsr();
+ 700:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 701:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgRXIsr();
  200              		.loc 1 701 0
  201 0022 FFF7FEFF 		bl	CAN_MsgRXIsr
  202              	.LVL14:
  203              	.L15:
- 702:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 703:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RX_MESSAGE && CAN_RX_MESSAGE_USE_HELPER */
- 704:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 705:.\Generated_Source\PSoC4/CAN_INT.c ****     /* RTR Auto-reply Message Sent */
- 706:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RTR_AUTO_MSG_SENT && (CAN_RTR_MESSAGE_USE_HELPER || \
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 17
+ 702:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 703:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RX_MESSAGE && CAN_RX_MESSAGE_USE_HELPER */
+ 704:Generated_Source\PSoC4/CAN_INT.c **** 
+ 705:Generated_Source\PSoC4/CAN_INT.c ****     /* RTR Auto-reply Message Sent */
+ 706:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RTR_AUTO_MSG_SENT && (CAN_RTR_MESSAGE_USE_HELPER || \
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 17
 
 
- 707:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 708:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RTR_MSG_MASK) != 0u)
- 709:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 710:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_RtrAutoMsgSentIsr();
- 711:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 712:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RTR_AUTO_MSG_SENT && CAN_RTR_MESSAGE_USE_HELPER */
- 713:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 714:.\Generated_Source\PSoC4/CAN_INT.c ****     /* Stuck at dominant error */
- 715:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_STUCK_AT_ZERO && (CAN_STUCK_AT_ZERO_USE_HELPER || \
- 716:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 717:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_STUCK_AT_ZERO_MASK) != 0u)
- 718:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 719:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_StuckAtZeroIsr();
- 720:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 721:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_STUCK_AT_ZERO && CAN_STUCK_AT_ZERO_USE_HELPER */
- 722:.\Generated_Source\PSoC4/CAN_INT.c **** 
- 723:.\Generated_Source\PSoC4/CAN_INT.c ****     /* Single shot transmission failure */
- 724:.\Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_SST_FAILURE && (CAN_SST_FAILURE_USE_HELPER || \
- 725:.\Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 726:.\Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_SST_FAILURE_MASK) != 0u)
- 727:.\Generated_Source\PSoC4/CAN_INT.c ****         {
- 728:.\Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr();
- 729:.\Generated_Source\PSoC4/CAN_INT.c ****         }
- 730:.\Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_SST_FAILURE && CAN_SST_FAILURE_USE_HELPER */
- 731:.\Generated_Source\PSoC4/CAN_INT.c **** }
+ 707:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 708:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RTR_MSG_MASK) != 0u)
+ 709:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 710:Generated_Source\PSoC4/CAN_INT.c ****             CAN_RtrAutoMsgSentIsr();
+ 711:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 712:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RTR_AUTO_MSG_SENT && CAN_RTR_MESSAGE_USE_HELPER */
+ 713:Generated_Source\PSoC4/CAN_INT.c **** 
+ 714:Generated_Source\PSoC4/CAN_INT.c ****     /* Stuck at dominant error */
+ 715:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_STUCK_AT_ZERO && (CAN_STUCK_AT_ZERO_USE_HELPER || \
+ 716:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 717:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_STUCK_AT_ZERO_MASK) != 0u)
+ 718:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 719:Generated_Source\PSoC4/CAN_INT.c ****             CAN_StuckAtZeroIsr();
+ 720:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 721:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_STUCK_AT_ZERO && CAN_STUCK_AT_ZERO_USE_HELPER */
+ 722:Generated_Source\PSoC4/CAN_INT.c **** 
+ 723:Generated_Source\PSoC4/CAN_INT.c ****     /* Single shot transmission failure */
+ 724:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_SST_FAILURE && (CAN_SST_FAILURE_USE_HELPER || \
+ 725:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 726:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_SST_FAILURE_MASK) != 0u)
+ 727:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 728:Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr();
+ 729:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 730:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_SST_FAILURE && CAN_SST_FAILURE_USE_HELPER */
+ 731:Generated_Source\PSoC4/CAN_INT.c **** }
  204              		.loc 1 731 0
  205              		@ sp needed
  206 0026 08BD     		pop	{r3, pc}
@@ -998,8 +998,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  213              		.size	CAN_ISR, .-CAN_ISR
  214              		.text
  215              	.Letext0:
- 216              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
- 217              		.file 3 ".\\Generated_Source\\PSoC4\\CAN.h"
+ 216              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 217              		.file 3 "Generated_Source\\PSoC4\\CAN.h"
  218              		.section	.debug_info,"",%progbits
  219              	.Ldebug_info0:
  220 0000 71020000 		.4byte	0x271
@@ -1007,48 +1007,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  222 0006 00000000 		.4byte	.Ldebug_abbrev0
  223 000a 04       		.byte	0x4
  224 000b 01       		.uleb128 0x1
- 225 000c A1010000 		.4byte	.LASF34
+ 225 000c 5D010000 		.4byte	.LASF34
  226 0010 01       		.byte	0x1
- 227 0011 20010000 		.4byte	.LASF35
- 228 0015 5F010000 		.4byte	.LASF36
+ 227 0011 15000000 		.4byte	.LASF35
+ 228 0015 EB010000 		.4byte	.LASF36
  229 0019 00000000 		.4byte	.Ldebug_ranges0+0
  230 001d 00000000 		.4byte	0
  231 0021 00000000 		.4byte	.Ldebug_line0
  232 0025 02       		.uleb128 0x2
  233 0026 01       		.byte	0x1
  234 0027 06       		.byte	0x6
- 235 0028 5B020000 		.4byte	.LASF0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 18
+ 235 0028 7A020000 		.4byte	.LASF0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 18
 
 
  236 002c 02       		.uleb128 0x2
  237 002d 01       		.byte	0x1
  238 002e 08       		.byte	0x8
- 239 002f 60000000 		.4byte	.LASF1
+ 239 002f 81000000 		.4byte	.LASF1
  240 0033 02       		.uleb128 0x2
  241 0034 02       		.byte	0x2
  242 0035 05       		.byte	0x5
- 243 0036 2F020000 		.4byte	.LASF2
+ 243 0036 4E020000 		.4byte	.LASF2
  244 003a 02       		.uleb128 0x2
  245 003b 02       		.byte	0x2
  246 003c 07       		.byte	0x7
- 247 003d 34000000 		.4byte	.LASF3
+ 247 003d 55000000 		.4byte	.LASF3
  248 0041 02       		.uleb128 0x2
  249 0042 04       		.byte	0x4
  250 0043 05       		.byte	0x5
- 251 0044 3F020000 		.4byte	.LASF4
+ 251 0044 5E020000 		.4byte	.LASF4
  252 0048 02       		.uleb128 0x2
  253 0049 04       		.byte	0x4
  254 004a 07       		.byte	0x7
- 255 004b 78000000 		.4byte	.LASF5
+ 255 004b 99000000 		.4byte	.LASF5
  256 004f 02       		.uleb128 0x2
  257 0050 08       		.byte	0x8
  258 0051 05       		.byte	0x5
- 259 0052 43010000 		.4byte	.LASF6
+ 259 0052 41010000 		.4byte	.LASF6
  260 0056 02       		.uleb128 0x2
  261 0057 08       		.byte	0x8
  262 0058 07       		.byte	0x7
- 263 0059 DF000000 		.4byte	.LASF7
+ 263 0059 F9000000 		.4byte	.LASF7
  264 005d 03       		.uleb128 0x3
  265 005e 04       		.byte	0x4
  266 005f 05       		.byte	0x5
@@ -1056,46 +1056,46 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  268 0064 02       		.uleb128 0x2
  269 0065 04       		.byte	0x4
  270 0066 07       		.byte	0x7
- 271 0067 D2000000 		.4byte	.LASF8
+ 271 0067 EC000000 		.4byte	.LASF8
  272 006b 04       		.uleb128 0x4
- 273 006c 8A000000 		.4byte	.LASF9
+ 273 006c AB000000 		.4byte	.LASF9
  274 0070 02       		.byte	0x2
  275 0071 9801     		.2byte	0x198
  276 0073 2C000000 		.4byte	0x2c
  277 0077 04       		.uleb128 0x4
- 278 0078 B4000000 		.4byte	.LASF10
+ 278 0078 CE000000 		.4byte	.LASF10
  279 007c 02       		.byte	0x2
  280 007d 9901     		.2byte	0x199
  281 007f 3A000000 		.4byte	0x3a
  282 0083 04       		.uleb128 0x4
- 283 0084 BB000000 		.4byte	.LASF11
+ 283 0084 D5000000 		.4byte	.LASF11
  284 0088 02       		.byte	0x2
  285 0089 9A01     		.2byte	0x19a
  286 008b 48000000 		.4byte	0x48
  287 008f 02       		.uleb128 0x2
  288 0090 04       		.byte	0x4
  289 0091 04       		.byte	0x4
- 290 0092 5A000000 		.4byte	.LASF12
+ 290 0092 7B000000 		.4byte	.LASF12
  291 0096 02       		.uleb128 0x2
  292 0097 08       		.byte	0x8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 19
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 19
 
 
  293 0098 04       		.byte	0x4
- 294 0099 9F000000 		.4byte	.LASF13
+ 294 0099 B9000000 		.4byte	.LASF13
  295 009d 02       		.uleb128 0x2
  296 009e 01       		.byte	0x1
  297 009f 08       		.byte	0x8
- 298 00a0 51010000 		.4byte	.LASF14
+ 298 00a0 4F010000 		.4byte	.LASF14
  299 00a4 04       		.uleb128 0x4
- 300 00a5 73000000 		.4byte	.LASF15
+ 300 00a5 94000000 		.4byte	.LASF15
  301 00a9 02       		.byte	0x2
  302 00aa 4202     		.2byte	0x242
  303 00ac B0000000 		.4byte	0xb0
  304 00b0 05       		.uleb128 0x5
  305 00b1 6B000000 		.4byte	0x6b
  306 00b5 04       		.uleb128 0x4
- 307 00b6 48020000 		.4byte	.LASF16
+ 307 00b6 67020000 		.4byte	.LASF16
  308 00ba 02       		.byte	0x2
  309 00bb 4402     		.2byte	0x244
  310 00bd C1000000 		.4byte	0xc1
@@ -1104,14 +1104,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  313 00c6 02       		.uleb128 0x2
  314 00c7 04       		.byte	0x4
  315 00c8 07       		.byte	0x7
- 316 00c9 17010000 		.4byte	.LASF17
+ 316 00c9 31010000 		.4byte	.LASF17
  317 00cd 06       		.uleb128 0x6
  318 00ce 08       		.byte	0x8
  319 00cf 03       		.byte	0x3
  320 00d0 75       		.byte	0x75
  321 00d1 E2000000 		.4byte	0xe2
  322 00d5 07       		.uleb128 0x7
- 323 00d6 47000000 		.4byte	.LASF19
+ 323 00d6 68000000 		.4byte	.LASF19
  324 00da 03       		.byte	0x3
  325 00db 77       		.byte	0x77
  326 00dc F2000000 		.4byte	0xf2
@@ -1137,8 +1137,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  346 0105 7B       		.byte	0x7b
  347 0106 17010000 		.4byte	0x117
  348 010a 07       		.uleb128 0x7
- 349 010b 47000000 		.4byte	.LASF19
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 20
+ 349 010b 68000000 		.4byte	.LASF19
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 20
 
 
  350 010f 03       		.byte	0x3
@@ -1156,7 +1156,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  362 0127 05       		.uleb128 0x5
  363 0128 17010000 		.4byte	0x117
  364 012c 0A       		.uleb128 0xa
- 365 012d 29000000 		.4byte	.LASF20
+ 365 012d 4A000000 		.4byte	.LASF20
  366 0131 03       		.byte	0x3
  367 0132 7E       		.byte	0x7e
  368 0133 02010000 		.4byte	0x102
@@ -1166,58 +1166,58 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  372 013a A0       		.byte	0xa0
  373 013b 94010000 		.4byte	0x194
  374 013f 07       		.uleb128 0x7
- 375 0140 04010000 		.4byte	.LASF21
+ 375 0140 1E010000 		.4byte	.LASF21
  376 0144 03       		.byte	0x3
  377 0145 A2       		.byte	0xa2
  378 0146 2C010000 		.4byte	0x12c
  379 014a 00       		.byte	0
  380 014b 07       		.uleb128 0x7
- 381 014c 6E000000 		.4byte	.LASF22
+ 381 014c 8F000000 		.4byte	.LASF22
  382 0150 03       		.byte	0x3
  383 0151 A3       		.byte	0xa3
  384 0152 2C010000 		.4byte	0x12c
  385 0156 04       		.byte	0x4
  386 0157 07       		.uleb128 0x7
- 387 0158 4C000000 		.4byte	.LASF23
+ 387 0158 6D000000 		.4byte	.LASF23
  388 015c 03       		.byte	0x3
  389 015d A4       		.byte	0xa4
  390 015e F7000000 		.4byte	0xf7
  391 0162 08       		.byte	0x8
  392 0163 07       		.uleb128 0x7
- 393 0164 15000000 		.4byte	.LASF24
+ 393 0164 36000000 		.4byte	.LASF24
  394 0168 03       		.byte	0x3
  395 0169 A5       		.byte	0xa5
  396 016a 2C010000 		.4byte	0x12c
  397 016e 10       		.byte	0x10
  398 016f 07       		.uleb128 0x7
- 399 0170 39020000 		.4byte	.LASF25
+ 399 0170 58020000 		.4byte	.LASF25
  400 0174 03       		.byte	0x3
  401 0175 A6       		.byte	0xa6
  402 0176 2C010000 		.4byte	0x12c
  403 017a 14       		.byte	0x14
  404 017b 07       		.uleb128 0x7
- 405 017c 98000000 		.4byte	.LASF26
+ 405 017c 3A010000 		.4byte	.LASF26
  406 0180 03       		.byte	0x3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 21
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 21
 
 
  407 0181 A7       		.byte	0xa7
  408 0182 2C010000 		.4byte	0x12c
  409 0186 18       		.byte	0x18
  410 0187 07       		.uleb128 0x7
- 411 0188 53000000 		.4byte	.LASF27
+ 411 0188 74000000 		.4byte	.LASF27
  412 018c 03       		.byte	0x3
  413 018d A8       		.byte	0xa8
  414 018e 2C010000 		.4byte	0x12c
  415 0192 1C       		.byte	0x1c
  416 0193 00       		.byte	0
  417 0194 0A       		.uleb128 0xa
- 418 0195 F6000000 		.4byte	.LASF28
+ 418 0195 10010000 		.4byte	.LASF28
  419 0199 03       		.byte	0x3
  420 019a A9       		.byte	0xa9
  421 019b 37010000 		.4byte	0x137
  422 019f 0B       		.uleb128 0xb
- 423 01a0 A6000000 		.4byte	.LASF29
+ 423 01a0 C0000000 		.4byte	.LASF29
  424 01a4 01       		.byte	0x1
  425 01a5 2801     		.2byte	0x128
  426 01a7 00000000 		.4byte	.LFB1
@@ -1230,7 +1230,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  433 01ba 53020000 		.4byte	0x253
  434 01be 00       		.byte	0
  435 01bf 0D       		.uleb128 0xd
- 436 01c0 4E020000 		.4byte	.LASF37
+ 436 01c0 6D020000 		.4byte	.LASF37
  437 01c4 01       		.byte	0x1
  438 01c5 7101     		.2byte	0x171
  439 01c7 00000000 		.4byte	.LFB2
@@ -1238,7 +1238,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  441 01cf 01       		.uleb128 0x1
  442 01d0 9C       		.byte	0x9c
  443 01d1 0B       		.uleb128 0xb
- 444 01d2 0A010000 		.4byte	.LASF30
+ 444 01d2 24010000 		.4byte	.LASF30
  445 01d6 01       		.byte	0x1
  446 01d7 9301     		.2byte	0x193
  447 01d9 00000000 		.4byte	.LFB3
@@ -1247,7 +1247,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  450 01e2 9C       		.byte	0x9c
  451 01e3 21020000 		.4byte	0x221
  452 01e7 0E       		.uleb128 0xe
- 453 01e8 1B000000 		.4byte	.LASF31
+ 453 01e8 3C000000 		.4byte	.LASF31
  454 01ec 01       		.byte	0x1
  455 01ed 9501     		.2byte	0x195
  456 01ef 6B000000 		.4byte	0x6b
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  461 01fd 9601     		.2byte	0x196
  462 01ff 77000000 		.4byte	0x77
  463 0203 2A000000 		.4byte	.LLST1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 22
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 22
 
 
  464 0207 0C       		.uleb128 0xc
@@ -1276,7 +1276,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  476 021f 00       		.byte	0
  477 0220 00       		.byte	0
  478 0221 0B       		.uleb128 0xb
- 479 0222 90000000 		.4byte	.LASF33
+ 479 0222 B1000000 		.4byte	.LASF33
  480 0226 01       		.byte	0x1
  481 0227 5302     		.2byte	0x253
  482 0229 00000000 		.4byte	.LFB4
@@ -1295,16 +1295,16 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  495 024e D1010000 		.4byte	0x1d1
  496 0252 00       		.byte	0
  497 0253 11       		.uleb128 0x11
- 498 0254 56010000 		.4byte	.LASF38
+ 498 0254 54010000 		.4byte	.LASF38
  499 0258 03       		.byte	0x3
  500 0259 C6       		.byte	0xc6
  501 025a 6B000000 		.4byte	0x6b
  502 025e 12       		.uleb128 0x12
- 503 025f C2000000 		.4byte	.LASF39
+ 503 025f DC000000 		.4byte	.LASF39
  504 0263 03       		.byte	0x3
  505 0264 3501     		.2byte	0x135
  506 0266 13       		.uleb128 0x13
- 507 0267 67020000 		.4byte	.LASF40
+ 507 0267 86020000 		.4byte	.LASF40
  508 026b 03       		.byte	0x3
  509 026c 1A01     		.2byte	0x11a
  510 026e 14       		.uleb128 0x14
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  518 0002 01       		.byte	0x1
  519 0003 25       		.uleb128 0x25
  520 0004 0E       		.uleb128 0xe
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 23
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 23
 
 
  521 0005 13       		.uleb128 0x13
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  575 003b 00       		.byte	0
  576 003c 00       		.byte	0
  577 003d 06       		.uleb128 0x6
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 24
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 24
 
 
  578 003e 13       		.uleb128 0x13
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  632 0074 49       		.uleb128 0x49
  633 0075 13       		.uleb128 0x13
  634 0076 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 25
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 25
 
 
  635 0077 00       		.byte	0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  689 00b0 9742     		.uleb128 0x2117
  690 00b2 19       		.uleb128 0x19
  691 00b3 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 26
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 26
 
 
  692 00b4 00       		.byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  746 00ef 2E       		.uleb128 0x2e
  747 00f0 00       		.byte	0
  748 00f1 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 27
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 27
 
 
  749 00f2 19       		.uleb128 0x19
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  803 0022 00000000 		.4byte	0
  804 0026 00000000 		.4byte	0
  805              	.LLST1:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 28
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 28
 
 
  806 002a 02000000 		.4byte	.LVL1
@@ -1668,8 +1668,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  850 0024 00000000 		.4byte	0
  851              		.section	.debug_line,"",%progbits
  852              	.Ldebug_line0:
- 853 0000 CE000000 		.section	.debug_str,"MS",%progbits,1
- 853      02004F00 
+ 853 0000 CC000000 		.section	.debug_str,"MS",%progbits,1
+ 853      02004D00 
  853      00000201 
  853      FB0E0D00 
  853      01010101 
@@ -1678,195 +1678,197 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 1
  855      7400
  856              	.LASF18:
  857 0006 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 29
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 29
 
 
  857      44415441 
  857      5F425954 
  857      455300
- 858              	.LASF24:
- 859 0015 7278616D 		.ascii	"rxamr\000"
- 859      7200
- 860              	.LASF31:
- 861 001b 6D61696C 		.ascii	"mailboxNumber\000"
- 861      626F784E 
- 861      756D6265 
+ 858              	.LASF35:
+ 859 0015 47656E65 		.ascii	"Generated_Source\\PSoC4\\CAN_INT.c\000"
+ 859      72617465 
+ 859      645F536F 
+ 859      75726365 
+ 859      5C50536F 
+ 860              	.LASF24:
+ 861 0036 7278616D 		.ascii	"rxamr\000"
  861      7200
- 862              	.LASF20:
- 863 0029 43414E5F 		.ascii	"CAN_REG_32\000"
- 863      5245475F 
- 863      333200
- 864              	.LASF3:
- 865 0034 73686F72 		.ascii	"short unsigned int\000"
- 865      7420756E 
- 865      7369676E 
- 865      65642069 
- 865      6E7400
- 866              	.LASF19:
- 867 0047 62797465 		.ascii	"byte\000"
- 867      00
- 868              	.LASF23:
- 869 004c 72786461 		.ascii	"rxdata\000"
- 869      746100
- 870              	.LASF27:
- 871 0053 72786163 		.ascii	"rxacrd\000"
- 871      726400
- 872              	.LASF12:
- 873 005a 666C6F61 		.ascii	"float\000"
- 873      7400
- 874              	.LASF1:
- 875 0060 756E7369 		.ascii	"unsigned char\000"
- 875      676E6564 
- 875      20636861 
- 875      7200
- 876              	.LASF22:
- 877 006e 72786964 		.ascii	"rxid\000"
- 877      00
- 878              	.LASF15:
- 879 0073 72656738 		.ascii	"reg8\000"
+ 862              	.LASF31:
+ 863 003c 6D61696C 		.ascii	"mailboxNumber\000"
+ 863      626F784E 
+ 863      756D6265 
+ 863      7200
+ 864              	.LASF20:
+ 865 004a 43414E5F 		.ascii	"CAN_REG_32\000"
+ 865      5245475F 
+ 865      333200
+ 866              	.LASF3:
+ 867 0055 73686F72 		.ascii	"short unsigned int\000"
+ 867      7420756E 
+ 867      7369676E 
+ 867      65642069 
+ 867      6E7400
+ 868              	.LASF19:
+ 869 0068 62797465 		.ascii	"byte\000"
+ 869      00
+ 870              	.LASF23:
+ 871 006d 72786461 		.ascii	"rxdata\000"
+ 871      746100
+ 872              	.LASF27:
+ 873 0074 72786163 		.ascii	"rxacrd\000"
+ 873      726400
+ 874              	.LASF12:
+ 875 007b 666C6F61 		.ascii	"float\000"
+ 875      7400
+ 876              	.LASF1:
+ 877 0081 756E7369 		.ascii	"unsigned char\000"
+ 877      676E6564 
+ 877      20636861 
+ 877      7200
+ 878              	.LASF22:
+ 879 008f 72786964 		.ascii	"rxid\000"
  879      00
- 880              	.LASF5:
- 881 0078 6C6F6E67 		.ascii	"long unsigned int\000"
- 881      20756E73 
- 881      69676E65 
- 881      6420696E 
- 881      7400
- 882              	.LASF9:
- 883 008a 75696E74 		.ascii	"uint8\000"
- 883      3800
- 884              	.LASF33:
- 885 0090 43414E5F 		.ascii	"CAN_ISR\000"
- 885      49535200 
- 886              	.LASF26:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 30
+ 880              	.LASF15:
+ 881 0094 72656738 		.ascii	"reg8\000"
+ 881      00
+ 882              	.LASF5:
+ 883 0099 6C6F6E67 		.ascii	"long unsigned int\000"
+ 883      20756E73 
+ 883      69676E65 
+ 883      6420696E 
+ 883      7400
+ 884              	.LASF9:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 30
 
 
- 887 0098 7278616D 		.ascii	"rxamrd\000"
- 887      726400
+ 885 00ab 75696E74 		.ascii	"uint8\000"
+ 885      3800
+ 886              	.LASF33:
+ 887 00b1 43414E5F 		.ascii	"CAN_ISR\000"
+ 887      49535200 
  888              	.LASF13:
- 889 009f 646F7562 		.ascii	"double\000"
+ 889 00b9 646F7562 		.ascii	"double\000"
  889      6C6500
  890              	.LASF29:
- 891 00a6 43414E5F 		.ascii	"CAN_BusOffIsr\000"
+ 891 00c0 43414E5F 		.ascii	"CAN_BusOffIsr\000"
  891      4275734F 
  891      66664973 
  891      7200
  892              	.LASF10:
- 893 00b4 75696E74 		.ascii	"uint16\000"
+ 893 00ce 75696E74 		.ascii	"uint16\000"
  893      313600
  894              	.LASF11:
- 895 00bb 75696E74 		.ascii	"uint32\000"
+ 895 00d5 75696E74 		.ascii	"uint32\000"
  895      333200
  896              	.LASF39:
- 897 00c2 43414E5F 		.ascii	"CAN_ReceiveMsg0\000"
+ 897 00dc 43414E5F 		.ascii	"CAN_ReceiveMsg0\000"
  897      52656365 
  897      6976654D 
  897      73673000 
  898              	.LASF8:
- 899 00d2 756E7369 		.ascii	"unsigned int\000"
+ 899 00ec 756E7369 		.ascii	"unsigned int\000"
  899      676E6564 
  899      20696E74 
  899      00
  900              	.LASF7:
- 901 00df 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 901 00f9 6C6F6E67 		.ascii	"long long unsigned int\000"
  901      206C6F6E 
  901      6720756E 
  901      7369676E 
  901      65642069 
  902              	.LASF28:
- 903 00f6 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 903 0110 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
  903      52585F53 
  903      54525543 
  903      5400
  904              	.LASF21:
- 905 0104 7278636D 		.ascii	"rxcmd\000"
+ 905 011e 7278636D 		.ascii	"rxcmd\000"
  905      6400
  906              	.LASF30:
- 907 010a 43414E5F 		.ascii	"CAN_MsgRXIsr\000"
+ 907 0124 43414E5F 		.ascii	"CAN_MsgRXIsr\000"
  907      4D736752 
  907      58497372 
  907      00
  908              	.LASF17:
- 909 0117 73697A65 		.ascii	"sizetype\000"
+ 909 0131 73697A65 		.ascii	"sizetype\000"
  909      74797065 
  909      00
- 910              	.LASF35:
- 911 0120 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CAN_INT.c\000"
- 911      6E657261 
- 911      7465645F 
- 911      536F7572 
- 911      63655C50 
+ 910              	.LASF26:
+ 911 013a 7278616D 		.ascii	"rxamrd\000"
+ 911      726400
  912              	.LASF6:
- 913 0143 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 31
+ 913 0141 6C6F6E67 		.ascii	"long long int\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 31
 
 
  913      206C6F6E 
  913      6720696E 
  913      7400
  914              	.LASF14:
- 915 0151 63686172 		.ascii	"char\000"
+ 915 014f 63686172 		.ascii	"char\000"
  915      00
  916              	.LASF38:
- 917 0156 43414E5F 		.ascii	"CAN_Stop\000"
+ 917 0154 43414E5F 		.ascii	"CAN_Stop\000"
  917      53746F70 
  917      00
- 918              	.LASF36:
- 919 015f 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\Test_Robot\\Test"
- 919      73657273 
- 919      5C48656E 
- 919      72792041 
- 919      6C626572 
- 920 018d 5F43414E 		.ascii	"_CAN_Module_1.cydsn\000"
- 920      5F4D6F64 
- 920      756C655F 
- 920      312E6379 
- 920      64736E00 
- 921              	.LASF34:
- 922 01a1 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 922      4320342E 
- 922      392E3320 
- 922      32303135 
- 922      30333033 
- 923 01d4 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 923      20726576 
- 923      6973696F 
- 923      6E203232 
- 923      31323230 
- 924 0207 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 924      66756E63 
- 924      74696F6E 
- 924      2D736563 
- 924      74696F6E 
- 925              	.LASF2:
- 926 022f 73686F72 		.ascii	"short int\000"
- 926      7420696E 
- 926      7400
- 927              	.LASF25:
- 928 0239 72786163 		.ascii	"rxacr\000"
- 928      7200
- 929              	.LASF4:
- 930 023f 6C6F6E67 		.ascii	"long int\000"
- 930      20696E74 
- 930      00
- 931              	.LASF16:
- 932 0248 72656733 		.ascii	"reg32\000"
- 932      3200
- 933              	.LASF37:
- 934 024e 43414E5F 		.ascii	"CAN_MsgTXIsr\000"
- 934      4D736754 
- 934      58497372 
- 934      00
- 935              	.LASF0:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccs6v0hf.s 			page 32
+ 918              	.LASF34:
+ 919 015d 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 919      4320342E 
+ 919      392E3320 
+ 919      32303135 
+ 919      30333033 
+ 920 0190 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 920      20726576 
+ 920      6973696F 
+ 920      6E203232 
+ 920      31323230 
+ 921 01c3 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 921      66756E63 
+ 921      74696F6E 
+ 921      2D736563 
+ 921      74696F6E 
+ 922              	.LASF36:
+ 923 01eb 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 923      73657273 
+ 923      5C48656E 
+ 923      72792041 
+ 923      6C626572 
+ 924 0219 6F64756C 		.ascii	"odular\\Robot_Test\\Test_Robot\\Test_CAN_Module_1.c"
+ 924      61725C52 
+ 924      6F626F74 
+ 924      5F546573 
+ 924      745C5465 
+ 925 0249 7964736E 		.ascii	"ydsn\000"
+ 925      00
+ 926              	.LASF2:
+ 927 024e 73686F72 		.ascii	"short int\000"
+ 927      7420696E 
+ 927      7400
+ 928              	.LASF25:
+ 929 0258 72786163 		.ascii	"rxacr\000"
+ 929      7200
+ 930              	.LASF4:
+ 931 025e 6C6F6E67 		.ascii	"long int\000"
+ 931      20696E74 
+ 931      00
+ 932              	.LASF16:
+ 933 0267 72656733 		.ascii	"reg32\000"
+ 933      3200
+ 934              	.LASF37:
+ 935 026d 43414E5F 		.ascii	"CAN_MsgTXIsr\000"
+ 935      4D736754 
+ 935      58497372 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccsUkMhf.s 			page 32
 
 
- 936 025b 7369676E 		.ascii	"signed char\000"
- 936      65642063 
- 936      68617200 
- 937              	.LASF40:
- 938 0267 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
- 938      52656365 
- 938      6976654D 
- 938      736700
- 939              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 935      00
+ 936              	.LASF0:
+ 937 027a 7369676E 		.ascii	"signed char\000"
+ 937      65642063 
+ 937      68617200 
+ 938              	.LASF40:
+ 939 0286 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
+ 939      52656365 
+ 939      6976654D 
+ 939      736700
+ 940              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

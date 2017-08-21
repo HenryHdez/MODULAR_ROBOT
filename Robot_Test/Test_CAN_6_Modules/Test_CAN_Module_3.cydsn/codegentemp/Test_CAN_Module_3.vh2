@@ -2,7 +2,7 @@
 --	Conversion of Test_CAN_Module_3.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Jan 31 20:47:22 2017
+--	Thu Jul 20 22:11:16 2017
 --
 
 USE cypress.cypress.all;
@@ -36,8 +36,8 @@ TERMINAL tmpSIOVREF__LED_4_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__LED_4_net_0 : bit;
 SIGNAL Net_74 : bit;
 SIGNAL \CAN:Net_15\ : bit;
-SIGNAL \CAN:Net_14\ : bit;
 SIGNAL \CAN:Net_13\ : bit;
+SIGNAL \CAN:Net_14\ : bit;
 SIGNAL Net_11 : bit;
 SIGNAL Net_12 : bit;
 SIGNAL Net_73 : bit;
@@ -337,7 +337,8 @@ LED_4:cy_psoc3_pins_v1_10
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__LED_4_net_0);
 \CAN:isr\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_74);
 \CAN:HFCLK\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",

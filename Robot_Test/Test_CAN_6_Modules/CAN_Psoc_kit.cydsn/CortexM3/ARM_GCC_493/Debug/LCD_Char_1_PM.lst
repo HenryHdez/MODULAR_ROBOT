@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 1
 
 
    1              		.syntax unified
@@ -26,48 +26,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
   23              		.type	LCD_Char_1_SaveConfig, %function
   24              	LCD_Char_1_SaveConfig:
   25              	.LFB0:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\LCD_Char_1_PM.c"
-   1:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * File Name: LCD_Char_1_PM.c
-   3:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Version 2.20
-   4:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-   5:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Description:
-   6:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  This file provides the API source code for the Static Segment LCD component.
-   7:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-   8:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Note:
-   9:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  10:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** ********************************************************************************
-  11:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
-  12:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
-  13:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  14:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * the software package with which this file was provided.
-  15:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *******************************************************************************/
-  16:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  17:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** #include "LCD_Char_1.h"
-  18:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  19:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  20:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** static LCD_Char_1_BACKUP_STRUCT LCD_Char_1_backup;
-  21:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  22:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  23:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** /*******************************************************************************
-  24:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Function Name: LCD_Char_1_SaveConfig
-  25:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** ********************************************************************************
-  26:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  27:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Summary:
-  28:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  Does nothing, provided for consistency.
-  29:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  30:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Parameters:
-  31:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\LCD_Char_1_PM.c"
+   1:Generated_Source\PSoC5/LCD_Char_1_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * File Name: LCD_Char_1_PM.c
+   3:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Version 2.20
+   4:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+   5:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Description:
+   6:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  This file provides the API source code for the Static Segment LCD component.
+   7:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+   8:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Note:
+   9:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  10:Generated_Source\PSoC5/LCD_Char_1_PM.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  13:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  14:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  17:Generated_Source\PSoC5/LCD_Char_1_PM.c **** #include "LCD_Char_1.h"
+  18:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  19:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  20:Generated_Source\PSoC5/LCD_Char_1_PM.c **** static LCD_Char_1_BACKUP_STRUCT LCD_Char_1_backup;
+  21:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  22:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  23:Generated_Source\PSoC5/LCD_Char_1_PM.c **** /*******************************************************************************
+  24:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Function Name: LCD_Char_1_SaveConfig
+  25:Generated_Source\PSoC5/LCD_Char_1_PM.c **** ********************************************************************************
+  26:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  27:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Summary:
+  28:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  Does nothing, provided for consistency.
+  29:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  30:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Parameters:
+  31:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  33:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Return:
-  34:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
-  35:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  36:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *******************************************************************************/
-  37:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** void LCD_Char_1_SaveConfig(void) 
-  38:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** {
+  32:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  33:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Return:
+  34:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
+  35:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  36:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *******************************************************************************/
+  37:Generated_Source\PSoC5/LCD_Char_1_PM.c **** void LCD_Char_1_SaveConfig(void) 
+  38:Generated_Source\PSoC5/LCD_Char_1_PM.c **** {
   27              		.loc 1 38 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -85,25 +85,25 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
   41              		.type	LCD_Char_1_RestoreConfig, %function
   42              	LCD_Char_1_RestoreConfig:
   43              	.LFB1:
-  39:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** }
-  40:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  41:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  42:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** /*******************************************************************************
-  43:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Function Name: LCD_Char_1_RestoreConfig
-  44:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** ********************************************************************************
-  45:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  46:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Summary:
-  47:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  Does nothing, provided for consistency.
-  48:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  49:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Parameters:
-  50:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
-  51:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  52:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Return:
-  53:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
-  54:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  55:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *******************************************************************************/
-  56:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** void LCD_Char_1_RestoreConfig(void) 
-  57:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** {
+  39:Generated_Source\PSoC5/LCD_Char_1_PM.c **** }
+  40:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  41:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  42:Generated_Source\PSoC5/LCD_Char_1_PM.c **** /*******************************************************************************
+  43:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Function Name: LCD_Char_1_RestoreConfig
+  44:Generated_Source\PSoC5/LCD_Char_1_PM.c **** ********************************************************************************
+  45:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  46:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Summary:
+  47:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  Does nothing, provided for consistency.
+  48:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  49:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Parameters:
+  50:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
+  51:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  52:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Return:
+  53:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
+  54:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  55:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *******************************************************************************/
+  56:Generated_Source\PSoC5/LCD_Char_1_PM.c **** void LCD_Char_1_RestoreConfig(void) 
+  57:Generated_Source\PSoC5/LCD_Char_1_PM.c **** {
   44              		.loc 1 57 0
   45              		.cfi_startproc
   46              		@ args = 0, pretend = 0, frame = 0
@@ -118,34 +118,34 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
   55              		.global	LCD_Char_1_Sleep
   56              		.thumb
   57              		.thumb_func
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 3
 
 
   58              		.type	LCD_Char_1_Sleep, %function
   59              	LCD_Char_1_Sleep:
   60              	.LFB2:
-  58:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** }
-  59:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  60:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  61:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** /*******************************************************************************
-  62:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Function Name: LCD_Char_1_Sleep
-  63:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** ********************************************************************************
-  64:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  65:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Summary:
-  66:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  Prepares the component for entering the sleep mode.
-  67:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  68:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Parameters:
-  69:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
-  70:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  71:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Return:
-  72:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
-  73:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  74:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Reentrant:
-  75:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  No.
-  76:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  77:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *******************************************************************************/
-  78:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** void LCD_Char_1_Sleep(void) 
-  79:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** {
+  58:Generated_Source\PSoC5/LCD_Char_1_PM.c **** }
+  59:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  60:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  61:Generated_Source\PSoC5/LCD_Char_1_PM.c **** /*******************************************************************************
+  62:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Function Name: LCD_Char_1_Sleep
+  63:Generated_Source\PSoC5/LCD_Char_1_PM.c **** ********************************************************************************
+  64:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  65:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Summary:
+  66:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  Prepares the component for entering the sleep mode.
+  67:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  68:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Parameters:
+  69:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
+  70:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  71:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Return:
+  72:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  None.
+  73:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  74:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Reentrant:
+  75:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  No.
+  76:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  77:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *******************************************************************************/
+  78:Generated_Source\PSoC5/LCD_Char_1_PM.c **** void LCD_Char_1_Sleep(void) 
+  79:Generated_Source\PSoC5/LCD_Char_1_PM.c **** {
   61              		.loc 1 79 0
   62              		.cfi_startproc
   63              		@ args = 0, pretend = 0, frame = 0
@@ -155,14 +155,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
   67              		.cfi_def_cfa_offset 8
   68              		.cfi_offset 3, -8
   69              		.cfi_offset 14, -4
-  80:.\Generated_Source\PSoC5/LCD_Char_1_PM.c ****     LCD_Char_1_backup.enableState = LCD_Char_1_enableState;
+  80:Generated_Source\PSoC5/LCD_Char_1_PM.c ****     LCD_Char_1_backup.enableState = LCD_Char_1_enableState;
   70              		.loc 1 80 0
   71 0002 034B     		ldr	r3, .L5
   72 0004 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
   73 0006 034B     		ldr	r3, .L5+4
   74 0008 1A70     		strb	r2, [r3]
-  81:.\Generated_Source\PSoC5/LCD_Char_1_PM.c ****     LCD_Char_1_SaveConfig();
-  82:.\Generated_Source\PSoC5/LCD_Char_1_PM.c ****     LCD_Char_1_Stop();
+  81:Generated_Source\PSoC5/LCD_Char_1_PM.c ****     LCD_Char_1_SaveConfig();
+  82:Generated_Source\PSoC5/LCD_Char_1_PM.c ****     LCD_Char_1_Stop();
   75              		.loc 1 82 0
   76 000a FFF7FEFF 		bl	LCD_Char_1_Stop
   77              	.LVL0:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
   87              		.section	.text.LCD_Char_1_Wakeup,"ax",%progbits
   88              		.align	2
   89              		.global	LCD_Char_1_Wakeup
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 4
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 4
 
 
   90              		.thumb
@@ -186,32 +186,32 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
   92              		.type	LCD_Char_1_Wakeup, %function
   93              	LCD_Char_1_Wakeup:
   94              	.LFB3:
-  83:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** }
-  84:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  85:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
-  86:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** /*******************************************************************************
-  87:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Function Name: LCD_Char_1_Wakeup
-  88:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** ********************************************************************************
-  89:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  90:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Summary:
-  91:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  Wakes the component from sleep mode. Configures DMA and enables the component
-  92:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  for normal operation.
-  93:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  94:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Parameters:
-  95:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  LCD_Char_1_enableState - Global variable.
-  96:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
-  97:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Return:
-  98:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  Status one of standard status for PSoC3 Component
-  99:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *       CYRET_SUCCESS - Function completed successfully.
- 100:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *       CYRET_LOCKED - The object was locked, already in use. Some of TDs or
- 101:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *                      a channel already in use.
- 102:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
- 103:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Reentrant:
- 104:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  No.
- 105:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
- 106:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** *******************************************************************************/
- 107:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** void LCD_Char_1_Wakeup(void) 
- 108:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** {
+  83:Generated_Source\PSoC5/LCD_Char_1_PM.c **** }
+  84:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  85:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+  86:Generated_Source\PSoC5/LCD_Char_1_PM.c **** /*******************************************************************************
+  87:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Function Name: LCD_Char_1_Wakeup
+  88:Generated_Source\PSoC5/LCD_Char_1_PM.c **** ********************************************************************************
+  89:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  90:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Summary:
+  91:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  Wakes the component from sleep mode. Configures DMA and enables the component
+  92:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  for normal operation.
+  93:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  94:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Parameters:
+  95:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  LCD_Char_1_enableState - Global variable.
+  96:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+  97:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Return:
+  98:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  Status one of standard status for PSoC3 Component
+  99:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *       CYRET_SUCCESS - Function completed successfully.
+ 100:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *       CYRET_LOCKED - The object was locked, already in use. Some of TDs or
+ 101:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *                      a channel already in use.
+ 102:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+ 103:Generated_Source\PSoC5/LCD_Char_1_PM.c **** * Reentrant:
+ 104:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *  No.
+ 105:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *
+ 106:Generated_Source\PSoC5/LCD_Char_1_PM.c **** *******************************************************************************/
+ 107:Generated_Source\PSoC5/LCD_Char_1_PM.c **** void LCD_Char_1_Wakeup(void) 
+ 108:Generated_Source\PSoC5/LCD_Char_1_PM.c **** {
   95              		.loc 1 108 0
   96              		.cfi_startproc
   97              		@ args = 0, pretend = 0, frame = 0
@@ -220,16 +220,16 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  100              		.cfi_def_cfa_offset 8
  101              		.cfi_offset 3, -8
  102              		.cfi_offset 14, -4
- 109:.\Generated_Source\PSoC5/LCD_Char_1_PM.c ****     LCD_Char_1_RestoreConfig();
- 110:.\Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
- 111:.\Generated_Source\PSoC5/LCD_Char_1_PM.c ****     if(LCD_Char_1_backup.enableState == 1u)
+ 109:Generated_Source\PSoC5/LCD_Char_1_PM.c ****     LCD_Char_1_RestoreConfig();
+ 110:Generated_Source\PSoC5/LCD_Char_1_PM.c **** 
+ 111:Generated_Source\PSoC5/LCD_Char_1_PM.c ****     if(LCD_Char_1_backup.enableState == 1u)
  103              		.loc 1 111 0
  104 0002 034B     		ldr	r3, .L10
  105 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  106 0006 012B     		cmp	r3, #1
  107 0008 01D1     		bne	.L7
- 112:.\Generated_Source\PSoC5/LCD_Char_1_PM.c ****     {
- 113:.\Generated_Source\PSoC5/LCD_Char_1_PM.c ****         LCD_Char_1_Enable();
+ 112:Generated_Source\PSoC5/LCD_Char_1_PM.c ****     {
+ 113:Generated_Source\PSoC5/LCD_Char_1_PM.c ****         LCD_Char_1_Enable();
  108              		.loc 1 113 0
  109 000a FFF7FEFF 		bl	LCD_Char_1_Enable
  110              	.LVL1:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  113              	.L11:
  114              		.align	2
  115              	.L10:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 5
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 5
 
 
  116 0010 00000000 		.word	.LANCHOR0
@@ -254,8 +254,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  126 0000 00       		.space	1
  127 0001 000000   		.text
  128              	.Letext0:
- 129              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
- 130              		.file 3 ".\\Generated_Source\\PSoC5\\LCD_Char_1.h"
+ 129              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 130              		.file 3 "Generated_Source\\PSoC5\\LCD_Char_1.h"
  131              		.section	.debug_info,"",%progbits
  132              	.Ldebug_info0:
  133 0000 33010000 		.4byte	0x133
@@ -263,17 +263,17 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  135 0006 00000000 		.4byte	.Ldebug_abbrev0
  136 000a 04       		.byte	0x4
  137 000b 01       		.uleb128 0x1
- 138 000c F7000000 		.4byte	.LASF20
+ 138 000c CE000000 		.4byte	.LASF20
  139 0010 01       		.byte	0x1
- 140 0011 B5000000 		.4byte	.LASF21
- 141 0015 92010000 		.4byte	.LASF22
+ 140 0011 E6010000 		.4byte	.LASF21
+ 141 0015 69010000 		.4byte	.LASF22
  142 0019 00000000 		.4byte	.Ldebug_ranges0+0
  143 001d 00000000 		.4byte	0
  144 0021 00000000 		.4byte	.Ldebug_line0
  145 0025 02       		.uleb128 0x2
  146 0026 01       		.byte	0x1
  147 0027 06       		.byte	0x6
- 148 0028 2F020000 		.4byte	.LASF0
+ 148 0028 57020000 		.4byte	.LASF0
  149 002c 02       		.uleb128 0x2
  150 002d 01       		.byte	0x1
  151 002e 08       		.byte	0x8
@@ -281,7 +281,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  153 0033 02       		.uleb128 0x2
  154 0034 02       		.byte	0x2
  155 0035 05       		.byte	0x5
- 156 0036 0A020000 		.4byte	.LASF2
+ 156 0036 32020000 		.4byte	.LASF2
  157 003a 02       		.uleb128 0x2
  158 003b 02       		.byte	0x2
  159 003c 07       		.byte	0x7
@@ -289,7 +289,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  161 0041 02       		.uleb128 0x2
  162 0042 04       		.byte	0x4
  163 0043 05       		.byte	0x5
- 164 0044 1A020000 		.4byte	.LASF4
+ 164 0044 42020000 		.4byte	.LASF4
  165 0048 02       		.uleb128 0x2
  166 0049 04       		.byte	0x4
  167 004a 07       		.byte	0x7
@@ -297,14 +297,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  169 004f 02       		.uleb128 0x2
  170 0050 08       		.byte	0x8
  171 0051 05       		.byte	0x5
- 172 0052 F7010000 		.4byte	.LASF6
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 6
+ 172 0052 1F020000 		.4byte	.LASF6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 6
 
 
  173 0056 02       		.uleb128 0x2
  174 0057 08       		.byte	0x8
  175 0058 07       		.byte	0x7
- 176 0059 CE010000 		.4byte	.LASF7
+ 176 0059 CF010000 		.4byte	.LASF7
  177 005d 03       		.uleb128 0x3
  178 005e 04       		.byte	0x4
  179 005f 05       		.byte	0x5
@@ -312,9 +312,9 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  181 0064 02       		.uleb128 0x2
  182 0065 04       		.byte	0x4
  183 0066 07       		.byte	0x7
- 184 0067 85010000 		.4byte	.LASF8
+ 184 0067 5C010000 		.4byte	.LASF8
  185 006b 04       		.uleb128 0x4
- 186 006c 14020000 		.4byte	.LASF12
+ 186 006c 3C020000 		.4byte	.LASF12
  187 0070 02       		.byte	0x2
  188 0071 9201     		.2byte	0x192
  189 0073 2C000000 		.4byte	0x2c
@@ -329,26 +329,26 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  198 0085 02       		.uleb128 0x2
  199 0086 01       		.byte	0x1
  200 0087 08       		.byte	0x8
- 201 0088 05020000 		.4byte	.LASF11
+ 201 0088 2D020000 		.4byte	.LASF11
  202 008c 05       		.uleb128 0x5
  203 008d 01       		.byte	0x1
  204 008e 03       		.byte	0x3
  205 008f 2C       		.byte	0x2c
  206 0090 A1000000 		.4byte	0xa1
  207 0094 06       		.uleb128 0x6
- 208 0095 23020000 		.4byte	.LASF23
+ 208 0095 4B020000 		.4byte	.LASF23
  209 0099 03       		.byte	0x3
  210 009a 2E       		.byte	0x2e
  211 009b 6B000000 		.4byte	0x6b
  212 009f 00       		.byte	0
  213 00a0 00       		.byte	0
  214 00a1 07       		.uleb128 0x7
- 215 00a2 DE000000 		.4byte	.LASF13
+ 215 00a2 B5000000 		.4byte	.LASF13
  216 00a6 03       		.byte	0x3
  217 00a7 2F       		.byte	0x2f
  218 00a8 8C000000 		.4byte	0x8c
  219 00ac 08       		.uleb128 0x8
- 220 00ad 3B020000 		.4byte	.LASF14
+ 220 00ad 63020000 		.4byte	.LASF14
  221 00b1 01       		.byte	0x1
  222 00b2 25       		.byte	0x25
  223 00b3 00000000 		.4byte	.LFB0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  227 00bd 08       		.uleb128 0x8
  228 00be 47000000 		.4byte	.LASF15
  229 00c2 01       		.byte	0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 7
 
 
  230 00c3 38       		.byte	0x38
@@ -380,7 +380,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  246 00e8 28010000 		.4byte	0x128
  247 00ec 00       		.byte	0
  248 00ed 09       		.uleb128 0x9
- 249 00ee E5010000 		.4byte	.LASF17
+ 249 00ee 0D020000 		.4byte	.LASF17
  250 00f2 01       		.byte	0x1
  251 00f3 6B       		.byte	0x6b
  252 00f4 00000000 		.4byte	.LFB3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  284              	.Ldebug_abbrev0:
  285 0000 01       		.uleb128 0x1
  286 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 8
 
 
  287 0002 01       		.byte	0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  341 0038 01       		.byte	0x1
  342 0039 0B       		.uleb128 0xb
  343 003a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 9
 
 
  344 003b 3A       		.uleb128 0x3a
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  398 0071 18       		.uleb128 0x18
  399 0072 9742     		.uleb128 0x2117
  400 0074 19       		.uleb128 0x19
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 10
 
 
  401 0075 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  455 00ae 03       		.uleb128 0x3
  456 00af 0E       		.uleb128 0xe
  457 00b0 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 11
 
 
  458 00b1 0B       		.uleb128 0xb
@@ -658,15 +658,15 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  512 0014 18000000 		.4byte	.LFE2
  513 0018 00000000 		.4byte	.LFB3
  514 001c 14000000 		.4byte	.LFE3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 12
 
 
  515 0020 00000000 		.4byte	0
  516 0024 00000000 		.4byte	0
  517              		.section	.debug_line,"",%progbits
  518              	.Ldebug_line0:
- 519 0000 A5000000 		.section	.debug_str,"MS",%progbits,1
- 519      02005C00 
+ 519 0000 A3000000 		.section	.debug_str,"MS",%progbits,1
+ 519      02005A00 
  519      00000201 
  519      FB0E0D00 
  519      01010101 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  537      43686172 
  537      5F315F65 
  537      6E61626C 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 13
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 13
 
 
  537      65537461 
@@ -731,95 +731,98 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 1
  540              	.LASF10:
  541 00ae 646F7562 		.ascii	"double\000"
  541      6C6500
- 542              	.LASF21:
- 543 00b5 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\LCD_Char_1_PM.c\000"
- 543      6E657261 
- 543      7465645F 
- 543      536F7572 
- 543      63655C50 
- 544              	.LASF13:
- 545 00de 4C43445F 		.ascii	"LCD_Char_1_BACKUP_STRUCT\000"
- 545      43686172 
- 545      5F315F42 
- 545      41434B55 
- 545      505F5354 
- 546              	.LASF20:
- 547 00f7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 547      4320342E 
- 547      392E3320 
- 547      32303135 
- 547      30333033 
- 548 012a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 548      20726576 
- 548      6973696F 
- 548      6E203232 
- 548      31323230 
- 549 015d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 549      66756E63 
- 549      74696F6E 
- 549      2D736563 
- 549      74696F6E 
- 550              	.LASF8:
- 551 0185 756E7369 		.ascii	"unsigned int\000"
- 551      676E6564 
- 551      20696E74 
- 551      00
- 552              	.LASF22:
- 553 0192 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\CAN_ROBOT\\CAN_P"
- 553      73657273 
- 553      5C48656E 
- 553      72792041 
- 553      6C626572 
- 554 01c0 736F635F 		.ascii	"soc_kit.cydsn\000"
- 554      6B69742E 
- 554      63796473 
- 554      6E00
- 555              	.LASF7:
- 556 01ce 6C6F6E67 		.ascii	"long long unsigned int\000"
- 556      206C6F6E 
- 556      6720756E 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnG9pog.s 			page 14
+ 542              	.LASF13:
+ 543 00b5 4C43445F 		.ascii	"LCD_Char_1_BACKUP_STRUCT\000"
+ 543      43686172 
+ 543      5F315F42 
+ 543      41434B55 
+ 543      505F5354 
+ 544              	.LASF20:
+ 545 00ce 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 545      4320342E 
+ 545      392E3320 
+ 545      32303135 
+ 545      30333033 
+ 546 0101 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 546      20726576 
+ 546      6973696F 
+ 546      6E203232 
+ 546      31323230 
+ 547 0134 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 547      66756E63 
+ 547      74696F6E 
+ 547      2D736563 
+ 547      74696F6E 
+ 548              	.LASF8:
+ 549 015c 756E7369 		.ascii	"unsigned int\000"
+ 549      676E6564 
+ 549      20696E74 
+ 549      00
+ 550              	.LASF22:
+ 551 0169 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 551      73657273 
+ 551      5C48656E 
+ 551      72792041 
+ 551      6C626572 
+ 552 0197 6F64756C 		.ascii	"odular\\Robot_Test\\Test_CAN_6_Modules\\CAN_Psoc_ki"
+ 552      61725C52 
+ 552      6F626F74 
+ 552      5F546573 
+ 552      745C5465 
+ 553 01c7 742E6379 		.ascii	"t.cydsn\000"
+ 553      64736E00 
+ 554              	.LASF7:
+ 555 01cf 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 555      206C6F6E 
+ 555      6720756E 
+ 555      7369676E 
+ 555      65642069 
+ 556              	.LASF21:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccbw1w77.s 			page 14
 
 
- 556      7369676E 
- 556      65642069 
- 557              	.LASF17:
- 558 01e5 4C43445F 		.ascii	"LCD_Char_1_Wakeup\000"
- 558      43686172 
- 558      5F315F57 
- 558      616B6575 
- 558      7000
- 559              	.LASF6:
- 560 01f7 6C6F6E67 		.ascii	"long long int\000"
- 560      206C6F6E 
- 560      6720696E 
- 560      7400
- 561              	.LASF11:
- 562 0205 63686172 		.ascii	"char\000"
- 562      00
- 563              	.LASF2:
- 564 020a 73686F72 		.ascii	"short int\000"
- 564      7420696E 
- 564      7400
- 565              	.LASF12:
- 566 0214 75696E74 		.ascii	"uint8\000"
- 566      3800
- 567              	.LASF4:
- 568 021a 6C6F6E67 		.ascii	"long int\000"
- 568      20696E74 
- 568      00
- 569              	.LASF23:
- 570 0223 656E6162 		.ascii	"enableState\000"
- 570      6C655374 
- 570      61746500 
- 571              	.LASF0:
- 572 022f 7369676E 		.ascii	"signed char\000"
- 572      65642063 
- 572      68617200 
- 573              	.LASF14:
- 574 023b 4C43445F 		.ascii	"LCD_Char_1_SaveConfig\000"
- 574      43686172 
- 574      5F315F53 
- 574      61766543 
- 574      6F6E6669 
- 575              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 557 01e6 47656E65 		.ascii	"Generated_Source\\PSoC5\\LCD_Char_1_PM.c\000"
+ 557      72617465 
+ 557      645F536F 
+ 557      75726365 
+ 557      5C50536F 
+ 558              	.LASF17:
+ 559 020d 4C43445F 		.ascii	"LCD_Char_1_Wakeup\000"
+ 559      43686172 
+ 559      5F315F57 
+ 559      616B6575 
+ 559      7000
+ 560              	.LASF6:
+ 561 021f 6C6F6E67 		.ascii	"long long int\000"
+ 561      206C6F6E 
+ 561      6720696E 
+ 561      7400
+ 562              	.LASF11:
+ 563 022d 63686172 		.ascii	"char\000"
+ 563      00
+ 564              	.LASF2:
+ 565 0232 73686F72 		.ascii	"short int\000"
+ 565      7420696E 
+ 565      7400
+ 566              	.LASF12:
+ 567 023c 75696E74 		.ascii	"uint8\000"
+ 567      3800
+ 568              	.LASF4:
+ 569 0242 6C6F6E67 		.ascii	"long int\000"
+ 569      20696E74 
+ 569      00
+ 570              	.LASF23:
+ 571 024b 656E6162 		.ascii	"enableState\000"
+ 571      6C655374 
+ 571      61746500 
+ 572              	.LASF0:
+ 573 0257 7369676E 		.ascii	"signed char\000"
+ 573      65642063 
+ 573      68617200 
+ 574              	.LASF14:
+ 575 0263 4C43445F 		.ascii	"LCD_Char_1_SaveConfig\000"
+ 575      43686172 
+ 575      5F315F53 
+ 575      61766543 
+ 575      6F6E6669 
+ 576              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

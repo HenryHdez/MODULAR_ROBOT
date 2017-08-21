@@ -2,7 +2,7 @@
 --	Conversion of CAN_Psoc_kit.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Feb 02 16:20:24 2017
+--	Thu Jul 20 21:23:07 2017
 --
 
 USE cypress.cypress.all;
@@ -217,7 +217,8 @@ TX_1:cy_psoc3_pins_v1_10
 		can_tx_en=>Net_13,
 		interrupt=>Net_14);
 \RX_CAN:isr\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_14);
 \LCD_Char_1:LCDPort\:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"878e97a3-f6c4-4845-991e-9a6a48e9b2c5/ed092b9b-d398-4703-be89-cebf998501f6",

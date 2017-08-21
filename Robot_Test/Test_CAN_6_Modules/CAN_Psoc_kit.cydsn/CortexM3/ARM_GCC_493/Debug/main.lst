@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 1
 
 
    1              		.syntax unified
@@ -26,30 +26,30 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
   23              		.type	main, %function
   24              	main:
   25              	.LFB63:
-  26              		.file 1 ".\\main.c"
-   1:.\main.c      **** /* ========================================
-   2:.\main.c      ****  *
-   3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
-   4:.\main.c      ****  * All Rights Reserved
-   5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
-   6:.\main.c      ****  *
-   7:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
-   8:.\main.c      ****  * WHICH IS THE PROPERTY OF your company.
-   9:.\main.c      ****  *
-  10:.\main.c      ****  * ========================================
-  11:.\main.c      **** */
-  12:.\main.c      **** #include <project.h>
-  13:.\main.c      **** uint8 dato_recibido_1;
-  14:.\main.c      **** uint8 dato_recibido_2;
-  15:.\main.c      **** uint8 dato_recibido_3;
-  16:.\main.c      **** uint8 dato_recibido_4;
-  17:.\main.c      **** uint8 dato_recibido_5;
-  18:.\main.c      **** uint8 dato_recibido_6;
-  19:.\main.c      **** uint8 dato_recibido_7;
-  20:.\main.c      **** uint8 dato_enviado;
-  21:.\main.c      **** 
-  22:.\main.c      **** int main()
-  23:.\main.c      **** {
+  26              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include <project.h>
+  13:main.c        **** uint8 dato_recibido_1;
+  14:main.c        **** uint8 dato_recibido_2;
+  15:main.c        **** uint8 dato_recibido_3;
+  16:main.c        **** uint8 dato_recibido_4;
+  17:main.c        **** uint8 dato_recibido_5;
+  18:main.c        **** uint8 dato_recibido_6;
+  19:main.c        **** uint8 dato_recibido_7;
+  20:main.c        **** uint8 dato_enviado;
+  21:main.c        **** 
+  22:main.c        **** int main()
+  23:main.c        **** {
   27              		.loc 1 23 0
   28              		.cfi_startproc
   29              		@ Volatile: function does not return.
@@ -58,127 +58,127 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
   32 0000 08B5     		push	{r3, lr}
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 3, -8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 2
 
 
   35              		.cfi_offset 14, -4
-  24:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  24:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
   36              		.loc 1 24 0
-  37              	@ 24 ".\main.c" 1
+  37              	@ 24 "main.c" 1
   38 0002 62B6     		CPSIE   i
   39              	@ 0 "" 2
-  25:.\main.c      ****     RX_CAN_Start();
+  25:main.c        ****     RX_CAN_Start();
   40              		.loc 1 25 0
   41              		.thumb
   42 0004 FFF7FEFF 		bl	RX_CAN_Start
   43              	.LVL0:
-  26:.\main.c      ****     LCD_Char_1_Start();
+  26:main.c        ****     LCD_Char_1_Start();
   44              		.loc 1 26 0
   45 0008 FFF7FEFF 		bl	LCD_Char_1_Start
   46              	.LVL1:
-  27:.\main.c      ****     LCD_Char_1_Position(0,0);
+  27:main.c        ****     LCD_Char_1_Position(0,0);
   47              		.loc 1 27 0
   48 000c 0020     		movs	r0, #0
   49 000e 0146     		mov	r1, r0
   50 0010 FFF7FEFF 		bl	LCD_Char_1_Position
   51              	.LVL2:
-  28:.\main.c      ****     LCD_Char_1_PrintString("R1_3: ");
+  28:main.c        ****     LCD_Char_1_PrintString("R1_3: ");
   52              		.loc 1 28 0
   53 0014 3148     		ldr	r0, .L6
   54 0016 FFF7FEFF 		bl	LCD_Char_1_PrintString
   55              	.LVL3:
-  29:.\main.c      ****     LCD_Char_1_Position(1,0);
+  29:main.c        ****     LCD_Char_1_Position(1,0);
   56              		.loc 1 29 0
   57 001a 0120     		movs	r0, #1
   58 001c 0021     		movs	r1, #0
   59 001e FFF7FEFF 		bl	LCD_Char_1_Position
   60              	.LVL4:
-  30:.\main.c      ****     LCD_Char_1_PrintString("R4_6: ");    
+  30:main.c        ****     LCD_Char_1_PrintString("R4_6: ");    
   61              		.loc 1 30 0
   62 0022 2F48     		ldr	r0, .L6+4
   63 0024 FFF7FEFF 		bl	LCD_Char_1_PrintString
   64              	.LVL5:
-  31:.\main.c      ****     dato_enviado=0;
+  31:main.c        ****     dato_enviado=0;
   65              		.loc 1 31 0
   66 0028 0022     		movs	r2, #0
   67 002a 2E4B     		ldr	r3, .L6+8
   68 002c 1A70     		strb	r2, [r3]
   69              	.L4:
-  32:.\main.c      ****     for(;;)
-  33:.\main.c      ****     {
-  34:.\main.c      ****         RX_CAN_ReceiveMsg0();
+  32:main.c        ****     for(;;)
+  33:main.c        ****     {
+  34:main.c        ****         RX_CAN_ReceiveMsg0();
   70              		.loc 1 34 0
   71 002e FFF7FEFF 		bl	RX_CAN_ReceiveMsg0
   72              	.LVL6:
-  35:.\main.c      ****         RX_CAN_ReceiveMsg1();
+  35:main.c        ****         RX_CAN_ReceiveMsg1();
   73              		.loc 1 35 0
   74 0032 FFF7FEFF 		bl	RX_CAN_ReceiveMsg1
   75              	.LVL7:
-  36:.\main.c      ****         RX_CAN_ReceiveMsg2();
+  36:main.c        ****         RX_CAN_ReceiveMsg2();
   76              		.loc 1 36 0
   77 0036 FFF7FEFF 		bl	RX_CAN_ReceiveMsg2
   78              	.LVL8:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 3
 
 
-  37:.\main.c      ****         RX_CAN_ReceiveMsg3();
+  37:main.c        ****         RX_CAN_ReceiveMsg3();
   79              		.loc 1 37 0
   80 003a FFF7FEFF 		bl	RX_CAN_ReceiveMsg3
   81              	.LVL9:
-  38:.\main.c      ****         RX_CAN_ReceiveMsg4();
+  38:main.c        ****         RX_CAN_ReceiveMsg4();
   82              		.loc 1 38 0
   83 003e FFF7FEFF 		bl	RX_CAN_ReceiveMsg4
   84              	.LVL10:
-  39:.\main.c      ****         RX_CAN_ReceiveMsg5();
+  39:main.c        ****         RX_CAN_ReceiveMsg5();
   85              		.loc 1 39 0
   86 0042 FFF7FEFF 		bl	RX_CAN_ReceiveMsg5
   87              	.LVL11:
-  40:.\main.c      ****         CyDelay(10);
+  40:main.c        ****         CyDelay(10);
   88              		.loc 1 40 0
   89 0046 0A20     		movs	r0, #10
   90 0048 FFF7FEFF 		bl	CyDelay
   91              	.LVL12:
-  41:.\main.c      ****         RX_CAN_SendMsg0();
+  41:main.c        ****         RX_CAN_SendMsg0();
   92              		.loc 1 41 0
   93 004c FFF7FEFF 		bl	RX_CAN_SendMsg0
   94              	.LVL13:
-  42:.\main.c      ****         RX_CAN_SendMsg1();
+  42:main.c        ****         RX_CAN_SendMsg1();
   95              		.loc 1 42 0
   96 0050 FFF7FEFF 		bl	RX_CAN_SendMsg1
   97              	.LVL14:
-  43:.\main.c      ****         RX_CAN_SendMsg2();
+  43:main.c        ****         RX_CAN_SendMsg2();
   98              		.loc 1 43 0
   99 0054 FFF7FEFF 		bl	RX_CAN_SendMsg2
  100              	.LVL15:
-  44:.\main.c      ****         RX_CAN_SendMsg3();
+  44:main.c        ****         RX_CAN_SendMsg3();
  101              		.loc 1 44 0
  102 0058 FFF7FEFF 		bl	RX_CAN_SendMsg3
  103              	.LVL16:
-  45:.\main.c      ****         RX_CAN_SendMsg4();
+  45:main.c        ****         RX_CAN_SendMsg4();
  104              		.loc 1 45 0
  105 005c FFF7FEFF 		bl	RX_CAN_SendMsg4
  106              	.LVL17:
-  46:.\main.c      ****         RX_CAN_SendMsg5();
+  46:main.c        ****         RX_CAN_SendMsg5();
  107              		.loc 1 46 0
  108 0060 FFF7FEFF 		bl	RX_CAN_SendMsg5
  109              	.LVL18:
-  47:.\main.c      ****         if(dato_enviado==1){
+  47:main.c        ****         if(dato_enviado==1){
  110              		.loc 1 47 0
  111 0064 1F4B     		ldr	r3, .L6+8
  112 0066 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  113 0068 012B     		cmp	r3, #1
  114 006a 03D1     		bne	.L2
-  48:.\main.c      ****             dato_enviado=0;
+  48:main.c        ****             dato_enviado=0;
  115              		.loc 1 48 0
  116 006c 0022     		movs	r2, #0
  117 006e 1D4B     		ldr	r3, .L6+8
  118 0070 1A70     		strb	r2, [r3]
  119 0072 02E0     		b	.L3
  120              	.L2:
-  49:.\main.c      ****         }
-  50:.\main.c      ****         else{
-  51:.\main.c      ****             dato_enviado=1;
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 4
+  49:main.c        ****         }
+  50:main.c        ****         else{
+  51:main.c        ****             dato_enviado=1;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 4
 
 
  121              		.loc 1 51 0
@@ -186,83 +186,83 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  123 0076 1B4B     		ldr	r3, .L6+8
  124 0078 1A70     		strb	r2, [r3]
  125              	.L3:
-  52:.\main.c      ****         }
-  53:.\main.c      ****         LCD_Char_1_Position(0,6);
+  52:main.c        ****         }
+  53:main.c        ****         LCD_Char_1_Position(0,6);
  126              		.loc 1 53 0
  127 007a 0020     		movs	r0, #0
  128 007c 0621     		movs	r1, #6
  129 007e FFF7FEFF 		bl	LCD_Char_1_Position
  130              	.LVL19:
-  54:.\main.c      ****         LCD_Char_1_PrintHexUint8(dato_recibido_1);    
+  54:main.c        ****         LCD_Char_1_PrintHexUint8(dato_recibido_1);    
  131              		.loc 1 54 0
  132 0082 194B     		ldr	r3, .L6+12
  133 0084 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  134 0086 FFF7FEFF 		bl	LCD_Char_1_PrintInt8
  135              	.LVL20:
-  55:.\main.c      ****         LCD_Char_1_Position(0,9);
+  55:main.c        ****         LCD_Char_1_Position(0,9);
  136              		.loc 1 55 0
  137 008a 0020     		movs	r0, #0
  138 008c 0921     		movs	r1, #9
  139 008e FFF7FEFF 		bl	LCD_Char_1_Position
  140              	.LVL21:
-  56:.\main.c      ****         LCD_Char_1_PrintHexUint8(dato_recibido_2); 
+  56:main.c        ****         LCD_Char_1_PrintHexUint8(dato_recibido_2); 
  141              		.loc 1 56 0
  142 0092 164B     		ldr	r3, .L6+16
  143 0094 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  144 0096 FFF7FEFF 		bl	LCD_Char_1_PrintInt8
  145              	.LVL22:
-  57:.\main.c      ****         LCD_Char_1_Position(0,12);
+  57:main.c        ****         LCD_Char_1_Position(0,12);
  146              		.loc 1 57 0
  147 009a 0020     		movs	r0, #0
  148 009c 0C21     		movs	r1, #12
  149 009e FFF7FEFF 		bl	LCD_Char_1_Position
  150              	.LVL23:
-  58:.\main.c      ****         LCD_Char_1_PrintHexUint8(dato_recibido_3);
+  58:main.c        ****         LCD_Char_1_PrintHexUint8(dato_recibido_3);
  151              		.loc 1 58 0
  152 00a2 134B     		ldr	r3, .L6+20
  153 00a4 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  154 00a6 FFF7FEFF 		bl	LCD_Char_1_PrintInt8
  155              	.LVL24:
-  59:.\main.c      ****         LCD_Char_1_Position(1,6);
+  59:main.c        ****         LCD_Char_1_Position(1,6);
  156              		.loc 1 59 0
  157 00aa 0120     		movs	r0, #1
  158 00ac 0621     		movs	r1, #6
  159 00ae FFF7FEFF 		bl	LCD_Char_1_Position
  160              	.LVL25:
-  60:.\main.c      ****         LCD_Char_1_PrintHexUint8(dato_recibido_4);
+  60:main.c        ****         LCD_Char_1_PrintHexUint8(dato_recibido_4);
  161              		.loc 1 60 0
  162 00b2 104B     		ldr	r3, .L6+24
  163 00b4 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  164 00b6 FFF7FEFF 		bl	LCD_Char_1_PrintInt8
  165              	.LVL26:
-  61:.\main.c      ****         LCD_Char_1_Position(1,9);
+  61:main.c        ****         LCD_Char_1_Position(1,9);
  166              		.loc 1 61 0
  167 00ba 0120     		movs	r0, #1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 5
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 5
 
 
  168 00bc 0921     		movs	r1, #9
  169 00be FFF7FEFF 		bl	LCD_Char_1_Position
  170              	.LVL27:
-  62:.\main.c      ****         LCD_Char_1_PrintHexUint8(dato_recibido_5);
+  62:main.c        ****         LCD_Char_1_PrintHexUint8(dato_recibido_5);
  171              		.loc 1 62 0
  172 00c2 0D4B     		ldr	r3, .L6+28
  173 00c4 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  174 00c6 FFF7FEFF 		bl	LCD_Char_1_PrintInt8
  175              	.LVL28:
-  63:.\main.c      ****         LCD_Char_1_Position(1,12);
+  63:main.c        ****         LCD_Char_1_Position(1,12);
  176              		.loc 1 63 0
  177 00ca 0120     		movs	r0, #1
  178 00cc 0C21     		movs	r1, #12
  179 00ce FFF7FEFF 		bl	LCD_Char_1_Position
  180              	.LVL29:
-  64:.\main.c      ****         LCD_Char_1_PrintHexUint8(dato_recibido_6);
+  64:main.c        ****         LCD_Char_1_PrintHexUint8(dato_recibido_6);
  181              		.loc 1 64 0
  182 00d2 0A4B     		ldr	r3, .L6+32
  183 00d4 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  184 00d6 FFF7FEFF 		bl	LCD_Char_1_PrintInt8
  185              	.LVL30:
-  65:.\main.c      ****         }
+  65:main.c        ****         }
  186              		.loc 1 65 0
  187 00da A8E7     		b	.L4
  188              	.L7:
@@ -298,12 +298,12 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  217 0008 52345F36 		.ascii	"R4_6: \000"
  217      3A2000
  218 000f 00       		.text
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 6
 
 
  219              	.Letext0:
- 220              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 221              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 220              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 221              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
  222              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
  223              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
  224              		.file 6 "Generated_Source\\PSoC5/LCD_Char_1.h"
@@ -316,29 +316,29 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  231 0006 00000000 		.4byte	.Ldebug_abbrev0
  232 000a 04       		.byte	0x4
  233 000b 01       		.uleb128 0x1
- 234 000c DB010000 		.4byte	.LASF44
+ 234 000c FC010000 		.4byte	.LASF44
  235 0010 01       		.byte	0x1
- 236 0011 0A000000 		.4byte	.LASF45
- 237 0015 88010000 		.4byte	.LASF46
+ 236 0011 13030000 		.4byte	.LASF45
+ 237 0015 7F010000 		.4byte	.LASF46
  238 0019 00000000 		.4byte	.Ldebug_ranges0+0
  239 001d 00000000 		.4byte	0
  240 0021 00000000 		.4byte	.Ldebug_line0
  241 0025 02       		.uleb128 0x2
  242 0026 01       		.byte	0x1
  243 0027 06       		.byte	0x6
- 244 0028 4A030000 		.4byte	.LASF0
+ 244 0028 72030000 		.4byte	.LASF0
  245 002c 02       		.uleb128 0x2
  246 002d 01       		.byte	0x1
  247 002e 08       		.byte	0x8
- 248 002f 4D010000 		.4byte	.LASF1
+ 248 002f 44010000 		.4byte	.LASF1
  249 0033 02       		.uleb128 0x2
  250 0034 02       		.byte	0x2
  251 0035 05       		.byte	0x5
- 252 0036 20030000 		.4byte	.LASF2
+ 252 0036 48030000 		.4byte	.LASF2
  253 003a 02       		.uleb128 0x2
  254 003b 02       		.byte	0x2
  255 003c 07       		.byte	0x7
- 256 003d 20010000 		.4byte	.LASF3
+ 256 003d 17010000 		.4byte	.LASF3
  257 0041 03       		.uleb128 0x3
  258 0042 00000000 		.4byte	.LASF9
  259 0046 02       		.byte	0x2
@@ -347,22 +347,22 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  262 004c 02       		.uleb128 0x2
  263 004d 04       		.byte	0x4
  264 004e 05       		.byte	0x5
- 265 004f 30030000 		.4byte	.LASF4
+ 265 004f 58030000 		.4byte	.LASF4
  266 0053 02       		.uleb128 0x2
  267 0054 04       		.byte	0x4
  268 0055 07       		.byte	0x7
- 269 0056 0E010000 		.4byte	.LASF5
+ 269 0056 05010000 		.4byte	.LASF5
  270 005a 02       		.uleb128 0x2
  271 005b 08       		.byte	0x8
  272 005c 05       		.byte	0x5
- 273 005d E4020000 		.4byte	.LASF6
+ 273 005d 05030000 		.4byte	.LASF6
  274 0061 02       		.uleb128 0x2
  275 0062 08       		.byte	0x8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 7
 
 
  276 0063 07       		.byte	0x7
- 277 0064 C4010000 		.4byte	.LASF7
+ 277 0064 E5010000 		.4byte	.LASF7
  278 0068 04       		.uleb128 0x4
  279 0069 04       		.byte	0x4
  280 006a 05       		.byte	0x5
@@ -370,45 +370,45 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  282 006f 02       		.uleb128 0x2
  283 0070 04       		.byte	0x4
  284 0071 07       		.byte	0x7
- 285 0072 7B010000 		.4byte	.LASF8
+ 285 0072 72010000 		.4byte	.LASF8
  286 0076 03       		.uleb128 0x3
- 287 0077 83000000 		.4byte	.LASF10
+ 287 0077 7A000000 		.4byte	.LASF10
  288 007b 03       		.byte	0x3
  289 007c 2C       		.byte	0x2c
  290 007d 41000000 		.4byte	0x41
  291 0081 05       		.uleb128 0x5
- 292 0082 2A030000 		.4byte	.LASF11
+ 292 0082 52030000 		.4byte	.LASF11
  293 0086 04       		.byte	0x4
  294 0087 9201     		.2byte	0x192
  295 0089 2C000000 		.4byte	0x2c
  296 008d 05       		.uleb128 0x5
- 297 008e 67010000 		.4byte	.LASF12
+ 297 008e 5E010000 		.4byte	.LASF12
  298 0092 04       		.byte	0x4
  299 0093 9401     		.2byte	0x194
  300 0095 53000000 		.4byte	0x53
  301 0099 02       		.uleb128 0x2
  302 009a 04       		.byte	0x4
  303 009b 04       		.byte	0x4
- 304 009c AB000000 		.4byte	.LASF13
+ 304 009c A2000000 		.4byte	.LASF13
  305 00a0 02       		.uleb128 0x2
  306 00a1 08       		.byte	0x8
  307 00a2 04       		.byte	0x4
- 308 00a3 5B010000 		.4byte	.LASF14
+ 308 00a3 52010000 		.4byte	.LASF14
  309 00a7 05       		.uleb128 0x5
- 310 00a8 F8000000 		.4byte	.LASF15
+ 310 00a8 EF000000 		.4byte	.LASF15
  311 00ac 04       		.byte	0x4
  312 00ad A301     		.2byte	0x1a3
  313 00af B3000000 		.4byte	0xb3
  314 00b3 02       		.uleb128 0x2
  315 00b4 01       		.byte	0x1
  316 00b5 08       		.byte	0x8
- 317 00b6 F2020000 		.4byte	.LASF16
+ 317 00b6 1A030000 		.4byte	.LASF16
  318 00ba 02       		.uleb128 0x2
  319 00bb 04       		.byte	0x4
  320 00bc 07       		.byte	0x7
- 321 00bd DB020000 		.4byte	.LASF17
+ 321 00bd FC020000 		.4byte	.LASF17
  322 00c1 06       		.uleb128 0x6
- 323 00c2 62010000 		.4byte	.LASF47
+ 323 00c2 59010000 		.4byte	.LASF47
  324 00c6 01       		.byte	0x1
  325 00c7 16       		.byte	0x16
  326 00c8 68000000 		.4byte	0x68
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  330 00d5 9C       		.byte	0x9c
  331 00d6 90020000 		.4byte	0x290
  332 00da 07       		.uleb128 0x7
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 8
 
 
  333 00db 08000000 		.4byte	.LVL0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  387 0144 03       		.byte	0x3
  388 0145 08000000 		.4byte	.LC1
  389 0149 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 9
 
 
  390 014a 07       		.uleb128 0x7
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  444 01da 36       		.byte	0x36
  445 01db 09       		.uleb128 0x9
  446 01dc 01       		.uleb128 0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 10
 
 
  447 01dd 50       		.byte	0x50
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  501 0240 50       		.byte	0x50
  502 0241 01       		.uleb128 0x1
  503 0242 31       		.byte	0x31
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 11
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 11
 
 
  504 0243 00       		.byte	0
@@ -643,14 +643,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  543 028b F6030000 		.4byte	0x3f6
  544 028f 00       		.byte	0
  545 0290 0A       		.uleb128 0xa
- 546 0291 33010000 		.4byte	.LASF18
+ 546 0291 2A010000 		.4byte	.LASF18
  547 0295 05       		.byte	0x5
  548 0296 9606     		.2byte	0x696
  549 0298 9C020000 		.4byte	0x29c
  550 029c 0B       		.uleb128 0xb
  551 029d 76000000 		.4byte	0x76
  552 02a1 0C       		.uleb128 0xc
- 553 02a2 13000000 		.4byte	.LASF19
+ 553 02a2 0A000000 		.4byte	.LASF19
  554 02a6 01       		.byte	0x1
  555 02a7 0D       		.byte	0xd
  556 02a8 81000000 		.4byte	0x81
@@ -658,10 +658,10 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  558 02ad 03       		.byte	0x3
  559 02ae 00000000 		.4byte	dato_recibido_1
  560 02b2 0C       		.uleb128 0xc
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 12
 
 
- 561 02b3 23000000 		.4byte	.LASF20
+ 561 02b3 1A000000 		.4byte	.LASF20
  562 02b7 01       		.byte	0x1
  563 02b8 0E       		.byte	0xe
  564 02b9 81000000 		.4byte	0x81
@@ -669,7 +669,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  566 02be 03       		.byte	0x3
  567 02bf 00000000 		.4byte	dato_recibido_2
  568 02c3 0C       		.uleb128 0xc
- 569 02c4 33000000 		.4byte	.LASF21
+ 569 02c4 2A000000 		.4byte	.LASF21
  570 02c8 01       		.byte	0x1
  571 02c9 0F       		.byte	0xf
  572 02ca 81000000 		.4byte	0x81
@@ -677,7 +677,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  574 02cf 03       		.byte	0x3
  575 02d0 00000000 		.4byte	dato_recibido_3
  576 02d4 0C       		.uleb128 0xc
- 577 02d5 43000000 		.4byte	.LASF22
+ 577 02d5 3A000000 		.4byte	.LASF22
  578 02d9 01       		.byte	0x1
  579 02da 10       		.byte	0x10
  580 02db 81000000 		.4byte	0x81
@@ -685,7 +685,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  582 02e0 03       		.byte	0x3
  583 02e1 00000000 		.4byte	dato_recibido_4
  584 02e5 0C       		.uleb128 0xc
- 585 02e6 53000000 		.4byte	.LASF23
+ 585 02e6 4A000000 		.4byte	.LASF23
  586 02ea 01       		.byte	0x1
  587 02eb 11       		.byte	0x11
  588 02ec 81000000 		.4byte	0x81
@@ -693,7 +693,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  590 02f1 03       		.byte	0x3
  591 02f2 00000000 		.4byte	dato_recibido_5
  592 02f6 0C       		.uleb128 0xc
- 593 02f7 63000000 		.4byte	.LASF24
+ 593 02f7 5A000000 		.4byte	.LASF24
  594 02fb 01       		.byte	0x1
  595 02fc 12       		.byte	0x12
  596 02fd 81000000 		.4byte	0x81
@@ -701,7 +701,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  598 0302 03       		.byte	0x3
  599 0303 00000000 		.4byte	dato_recibido_6
  600 0307 0C       		.uleb128 0xc
- 601 0308 73000000 		.4byte	.LASF25
+ 601 0308 6A000000 		.4byte	.LASF25
  602 030c 01       		.byte	0x1
  603 030d 13       		.byte	0x13
  604 030e 81000000 		.4byte	0x81
@@ -709,7 +709,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  606 0313 03       		.byte	0x3
  607 0314 00000000 		.4byte	dato_recibido_7
  608 0318 0C       		.uleb128 0xc
- 609 0319 6E010000 		.4byte	.LASF26
+ 609 0319 65010000 		.4byte	.LASF26
  610 031d 01       		.byte	0x1
  611 031e 14       		.byte	0x14
  612 031f 81000000 		.4byte	0x81
@@ -717,19 +717,19 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  614 0324 03       		.byte	0x3
  615 0325 00000000 		.4byte	dato_enviado
  616 0329 0D       		.uleb128 0xd
- 617 032a 40010000 		.4byte	.LASF37
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 13
+ 617 032a 37010000 		.4byte	.LASF37
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 13
 
 
  618 032e 07       		.byte	0x7
  619 032f C5       		.byte	0xc5
  620 0330 81000000 		.4byte	0x81
  621 0334 0E       		.uleb128 0xe
- 622 0335 39030000 		.4byte	.LASF29
+ 622 0335 61030000 		.4byte	.LASF29
  623 0339 06       		.byte	0x6
  624 033a 38       		.byte	0x38
  625 033b 0F       		.uleb128 0xf
- 626 033c F7020000 		.4byte	.LASF27
+ 626 033c 1F030000 		.4byte	.LASF27
  627 0340 06       		.byte	0x6
  628 0341 3D       		.byte	0x3d
  629 0342 51030000 		.4byte	0x351
@@ -739,7 +739,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  633 034c 81000000 		.4byte	0x81
  634 0350 00       		.byte	0
  635 0351 0F       		.uleb128 0xf
- 636 0352 E1000000 		.4byte	.LASF28
+ 636 0352 D8000000 		.4byte	.LASF28
  637 0356 06       		.byte	0x6
  638 0357 3C       		.byte	0x3c
  639 0358 62030000 		.4byte	0x362
@@ -752,33 +752,33 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  646 0368 12       		.uleb128 0x12
  647 0369 A7000000 		.4byte	0xa7
  648 036d 13       		.uleb128 0x13
- 649 036e 69020000 		.4byte	.LASF30
+ 649 036e 8A020000 		.4byte	.LASF30
  650 0372 07       		.byte	0x7
  651 0373 3501     		.2byte	0x135
  652 0375 13       		.uleb128 0x13
- 653 0376 7C020000 		.4byte	.LASF31
+ 653 0376 9D020000 		.4byte	.LASF31
  654 037a 07       		.byte	0x7
  655 037b 3801     		.2byte	0x138
  656 037d 13       		.uleb128 0x13
- 657 037e 8F020000 		.4byte	.LASF32
+ 657 037e B0020000 		.4byte	.LASF32
  658 0382 07       		.byte	0x7
  659 0383 3B01     		.2byte	0x13b
  660 0385 13       		.uleb128 0x13
- 661 0386 A2020000 		.4byte	.LASF33
+ 661 0386 C3020000 		.4byte	.LASF33
  662 038a 07       		.byte	0x7
  663 038b 3E01     		.2byte	0x13e
  664 038d 13       		.uleb128 0x13
- 665 038e B5020000 		.4byte	.LASF34
+ 665 038e D6020000 		.4byte	.LASF34
  666 0392 07       		.byte	0x7
  667 0393 4101     		.2byte	0x141
  668 0395 13       		.uleb128 0x13
- 669 0396 C8020000 		.4byte	.LASF35
+ 669 0396 E9020000 		.4byte	.LASF35
  670 039a 07       		.byte	0x7
  671 039b 4401     		.2byte	0x144
  672 039d 0F       		.uleb128 0xf
- 673 039e 56030000 		.4byte	.LASF36
+ 673 039e 7E030000 		.4byte	.LASF36
  674 03a2 08       		.byte	0x8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 14
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 14
 
 
  675 03a3 76       		.byte	0x76
@@ -787,37 +787,37 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  678 03a9 8D000000 		.4byte	0x8d
  679 03ad 00       		.byte	0
  680 03ae 14       		.uleb128 0x14
- 681 03af 8B000000 		.4byte	.LASF38
+ 681 03af 82000000 		.4byte	.LASF38
  682 03b3 07       		.byte	0x7
  683 03b4 1D01     		.2byte	0x11d
  684 03b6 81000000 		.4byte	0x81
  685 03ba 14       		.uleb128 0x14
- 686 03bb 9B000000 		.4byte	.LASF39
+ 686 03bb 92000000 		.4byte	.LASF39
  687 03bf 07       		.byte	0x7
  688 03c0 2001     		.2byte	0x120
  689 03c2 81000000 		.4byte	0x81
  690 03c6 14       		.uleb128 0x14
- 691 03c7 D1000000 		.4byte	.LASF40
+ 691 03c7 C8000000 		.4byte	.LASF40
  692 03cb 07       		.byte	0x7
  693 03cc 2301     		.2byte	0x123
  694 03ce 81000000 		.4byte	0x81
  695 03d2 14       		.uleb128 0x14
- 696 03d3 B1000000 		.4byte	.LASF41
+ 696 03d3 A8000000 		.4byte	.LASF41
  697 03d7 07       		.byte	0x7
  698 03d8 2601     		.2byte	0x126
  699 03da 81000000 		.4byte	0x81
  700 03de 14       		.uleb128 0x14
- 701 03df C1000000 		.4byte	.LASF42
+ 701 03df B8000000 		.4byte	.LASF42
  702 03e3 07       		.byte	0x7
  703 03e4 2901     		.2byte	0x129
  704 03e6 81000000 		.4byte	0x81
  705 03ea 14       		.uleb128 0x14
- 706 03eb FE000000 		.4byte	.LASF43
+ 706 03eb F5000000 		.4byte	.LASF43
  707 03ef 07       		.byte	0x7
  708 03f0 2C01     		.2byte	0x12c
  709 03f2 81000000 		.4byte	0x81
  710 03f6 15       		.uleb128 0x15
- 711 03f7 0B030000 		.4byte	.LASF48
+ 711 03f7 33030000 		.4byte	.LASF48
  712 03fb 06       		.byte	0x6
  713 03fc 5D       		.byte	0x5d
  714 03fd 10       		.uleb128 0x10
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  729 0009 1B       		.uleb128 0x1b
  730 000a 0E       		.uleb128 0xe
  731 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 15
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 15
 
 
  732 000c 17       		.uleb128 0x17
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  786 0042 00       		.byte	0
  787 0043 06       		.uleb128 0x6
  788 0044 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 16
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 16
 
 
  789 0045 01       		.byte	0x1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  843 0083 00       		.byte	0
  844 0084 03       		.uleb128 0x3
  845 0085 0E       		.uleb128 0xe
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 17
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 17
 
 
  846 0086 3A       		.uleb128 0x3a
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  900 00bc 00       		.byte	0
  901 00bd 0E       		.uleb128 0xe
  902 00be 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 18
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 18
 
 
  903 00bf 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  957 00f5 13       		.uleb128 0x13
  958 00f6 00       		.byte	0
  959 00f7 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 19
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 19
 
 
  960 00f8 13       		.uleb128 0x13
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  1014              		.section	.debug_aranges,"",%progbits
  1015 0000 1C000000 		.4byte	0x1c
  1016 0004 0200     		.2byte	0x2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 20
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 20
 
 
  1017 0006 00000000 		.4byte	.Ldebug_info0
@@ -1158,8 +1158,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  1031 000c 00000000 		.4byte	0
  1032              		.section	.debug_line,"",%progbits
  1033              	.Ldebug_line0:
- 1034 0000 AA010000 		.section	.debug_str,"MS",%progbits,1
- 1034      02007001 
+ 1034 0000 A8010000 		.section	.debug_str,"MS",%progbits,1
+ 1034      02006E01 
  1034      00000201 
  1034      FB0E0D00 
  1034      01010101 
@@ -1167,262 +1167,264 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 1
  1036 0000 5F5F696E 		.ascii	"__int32_t\000"
  1036      7433325F 
  1036      7400
- 1037              	.LASF45:
- 1038 000a 2E5C6D61 		.ascii	".\\main.c\000"
- 1038      696E2E63 
- 1038      00
- 1039              	.LASF19:
- 1040 0013 6461746F 		.ascii	"dato_recibido_1\000"
+ 1037              	.LASF19:
+ 1038 000a 6461746F 		.ascii	"dato_recibido_1\000"
+ 1038      5F726563 
+ 1038      69626964 
+ 1038      6F5F3100 
+ 1039              	.LASF20:
+ 1040 001a 6461746F 		.ascii	"dato_recibido_2\000"
  1040      5F726563 
  1040      69626964 
- 1040      6F5F3100 
- 1041              	.LASF20:
- 1042 0023 6461746F 		.ascii	"dato_recibido_2\000"
+ 1040      6F5F3200 
+ 1041              	.LASF21:
+ 1042 002a 6461746F 		.ascii	"dato_recibido_3\000"
  1042      5F726563 
  1042      69626964 
- 1042      6F5F3200 
- 1043              	.LASF21:
- 1044 0033 6461746F 		.ascii	"dato_recibido_3\000"
+ 1042      6F5F3300 
+ 1043              	.LASF22:
+ 1044 003a 6461746F 		.ascii	"dato_recibido_4\000"
  1044      5F726563 
  1044      69626964 
- 1044      6F5F3300 
- 1045              	.LASF22:
- 1046 0043 6461746F 		.ascii	"dato_recibido_4\000"
+ 1044      6F5F3400 
+ 1045              	.LASF23:
+ 1046 004a 6461746F 		.ascii	"dato_recibido_5\000"
  1046      5F726563 
  1046      69626964 
- 1046      6F5F3400 
- 1047              	.LASF23:
- 1048 0053 6461746F 		.ascii	"dato_recibido_5\000"
+ 1046      6F5F3500 
+ 1047              	.LASF24:
+ 1048 005a 6461746F 		.ascii	"dato_recibido_6\000"
  1048      5F726563 
  1048      69626964 
- 1048      6F5F3500 
- 1049              	.LASF24:
- 1050 0063 6461746F 		.ascii	"dato_recibido_6\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 21
+ 1048      6F5F3600 
+ 1049              	.LASF25:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 21
 
 
+ 1050 006a 6461746F 		.ascii	"dato_recibido_7\000"
  1050      5F726563 
  1050      69626964 
- 1050      6F5F3600 
- 1051              	.LASF25:
- 1052 0073 6461746F 		.ascii	"dato_recibido_7\000"
- 1052      5F726563 
- 1052      69626964 
- 1052      6F5F3700 
- 1053              	.LASF10:
- 1054 0083 696E7433 		.ascii	"int32_t\000"
- 1054      325F7400 
- 1055              	.LASF38:
- 1056 008b 52585F43 		.ascii	"RX_CAN_SendMsg0\000"
+ 1050      6F5F3700 
+ 1051              	.LASF10:
+ 1052 007a 696E7433 		.ascii	"int32_t\000"
+ 1052      325F7400 
+ 1053              	.LASF38:
+ 1054 0082 52585F43 		.ascii	"RX_CAN_SendMsg0\000"
+ 1054      414E5F53 
+ 1054      656E644D 
+ 1054      73673000 
+ 1055              	.LASF39:
+ 1056 0092 52585F43 		.ascii	"RX_CAN_SendMsg1\000"
  1056      414E5F53 
  1056      656E644D 
- 1056      73673000 
- 1057              	.LASF39:
- 1058 009b 52585F43 		.ascii	"RX_CAN_SendMsg1\000"
- 1058      414E5F53 
- 1058      656E644D 
- 1058      73673100 
- 1059              	.LASF13:
- 1060 00ab 666C6F61 		.ascii	"float\000"
- 1060      7400
- 1061              	.LASF41:
- 1062 00b1 52585F43 		.ascii	"RX_CAN_SendMsg3\000"
+ 1056      73673100 
+ 1057              	.LASF13:
+ 1058 00a2 666C6F61 		.ascii	"float\000"
+ 1058      7400
+ 1059              	.LASF41:
+ 1060 00a8 52585F43 		.ascii	"RX_CAN_SendMsg3\000"
+ 1060      414E5F53 
+ 1060      656E644D 
+ 1060      73673300 
+ 1061              	.LASF42:
+ 1062 00b8 52585F43 		.ascii	"RX_CAN_SendMsg4\000"
  1062      414E5F53 
  1062      656E644D 
- 1062      73673300 
- 1063              	.LASF42:
- 1064 00c1 52585F43 		.ascii	"RX_CAN_SendMsg4\000"
+ 1062      73673400 
+ 1063              	.LASF40:
+ 1064 00c8 52585F43 		.ascii	"RX_CAN_SendMsg2\000"
  1064      414E5F53 
  1064      656E644D 
- 1064      73673400 
- 1065              	.LASF40:
- 1066 00d1 52585F43 		.ascii	"RX_CAN_SendMsg2\000"
- 1066      414E5F53 
- 1066      656E644D 
- 1066      73673200 
- 1067              	.LASF28:
- 1068 00e1 4C43445F 		.ascii	"LCD_Char_1_PrintString\000"
- 1068      43686172 
- 1068      5F315F50 
- 1068      72696E74 
- 1068      53747269 
- 1069              	.LASF15:
- 1070 00f8 63686172 		.ascii	"char8\000"
- 1070      3800
- 1071              	.LASF43:
- 1072 00fe 52585F43 		.ascii	"RX_CAN_SendMsg5\000"
- 1072      414E5F53 
- 1072      656E644D 
- 1072      73673500 
- 1073              	.LASF5:
- 1074 010e 6C6F6E67 		.ascii	"long unsigned int\000"
- 1074      20756E73 
- 1074      69676E65 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 22
+ 1064      73673200 
+ 1065              	.LASF28:
+ 1066 00d8 4C43445F 		.ascii	"LCD_Char_1_PrintString\000"
+ 1066      43686172 
+ 1066      5F315F50 
+ 1066      72696E74 
+ 1066      53747269 
+ 1067              	.LASF15:
+ 1068 00ef 63686172 		.ascii	"char8\000"
+ 1068      3800
+ 1069              	.LASF43:
+ 1070 00f5 52585F43 		.ascii	"RX_CAN_SendMsg5\000"
+ 1070      414E5F53 
+ 1070      656E644D 
+ 1070      73673500 
+ 1071              	.LASF5:
+ 1072 0105 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1072      20756E73 
+ 1072      69676E65 
+ 1072      6420696E 
+ 1072      7400
+ 1073              	.LASF3:
+ 1074 0117 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 22
 
 
- 1074      6420696E 
- 1074      7400
- 1075              	.LASF3:
- 1076 0120 73686F72 		.ascii	"short unsigned int\000"
- 1076      7420756E 
- 1076      7369676E 
- 1076      65642069 
- 1076      6E7400
- 1077              	.LASF18:
- 1078 0133 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1078      52784275 
- 1078      66666572 
+ 1074      7420756E 
+ 1074      7369676E 
+ 1074      65642069 
+ 1074      6E7400
+ 1075              	.LASF18:
+ 1076 012a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1076      52784275 
+ 1076      66666572 
+ 1076      00
+ 1077              	.LASF37:
+ 1078 0137 52585F43 		.ascii	"RX_CAN_Start\000"
+ 1078      414E5F53 
+ 1078      74617274 
  1078      00
- 1079              	.LASF37:
- 1080 0140 52585F43 		.ascii	"RX_CAN_Start\000"
- 1080      414E5F53 
- 1080      74617274 
- 1080      00
- 1081              	.LASF1:
- 1082 014d 756E7369 		.ascii	"unsigned char\000"
- 1082      676E6564 
- 1082      20636861 
- 1082      7200
- 1083              	.LASF14:
- 1084 015b 646F7562 		.ascii	"double\000"
- 1084      6C6500
- 1085              	.LASF47:
- 1086 0162 6D61696E 		.ascii	"main\000"
- 1086      00
- 1087              	.LASF12:
- 1088 0167 75696E74 		.ascii	"uint32\000"
- 1088      333200
- 1089              	.LASF26:
- 1090 016e 6461746F 		.ascii	"dato_enviado\000"
- 1090      5F656E76 
- 1090      6961646F 
+ 1079              	.LASF1:
+ 1080 0144 756E7369 		.ascii	"unsigned char\000"
+ 1080      676E6564 
+ 1080      20636861 
+ 1080      7200
+ 1081              	.LASF14:
+ 1082 0152 646F7562 		.ascii	"double\000"
+ 1082      6C6500
+ 1083              	.LASF47:
+ 1084 0159 6D61696E 		.ascii	"main\000"
+ 1084      00
+ 1085              	.LASF12:
+ 1086 015e 75696E74 		.ascii	"uint32\000"
+ 1086      333200
+ 1087              	.LASF26:
+ 1088 0165 6461746F 		.ascii	"dato_enviado\000"
+ 1088      5F656E76 
+ 1088      6961646F 
+ 1088      00
+ 1089              	.LASF8:
+ 1090 0172 756E7369 		.ascii	"unsigned int\000"
+ 1090      676E6564 
+ 1090      20696E74 
  1090      00
- 1091              	.LASF8:
- 1092 017b 756E7369 		.ascii	"unsigned int\000"
- 1092      676E6564 
- 1092      20696E74 
- 1092      00
- 1093              	.LASF46:
- 1094 0188 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\CAN_ROBOT\\CAN_P"
- 1094      73657273 
- 1094      5C48656E 
- 1094      72792041 
- 1094      6C626572 
- 1095 01b6 736F635F 		.ascii	"soc_kit.cydsn\000"
- 1095      6B69742E 
- 1095      63796473 
- 1095      6E00
- 1096              	.LASF7:
- 1097 01c4 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1097      206C6F6E 
- 1097      6720756E 
- 1097      7369676E 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 23
+ 1091              	.LASF46:
+ 1092 017f 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 1092      73657273 
+ 1092      5C48656E 
+ 1092      72792041 
+ 1092      6C626572 
+ 1093 01ad 6F64756C 		.ascii	"odular\\Robot_Test\\Test_CAN_6_Modules\\CAN_Psoc_ki"
+ 1093      61725C52 
+ 1093      6F626F74 
+ 1093      5F546573 
+ 1093      745C5465 
+ 1094 01dd 742E6379 		.ascii	"t.cydsn\000"
+ 1094      64736E00 
+ 1095              	.LASF7:
+ 1096 01e5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1096      206C6F6E 
+ 1096      6720756E 
+ 1096      7369676E 
+ 1096      65642069 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 23
 
 
- 1097      65642069 
- 1098              	.LASF44:
- 1099 01db 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1099      4320342E 
- 1099      392E3320 
- 1099      32303135 
- 1099      30333033 
- 1100 020e 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1100      20726576 
- 1100      6973696F 
- 1100      6E203232 
- 1100      31323230 
- 1101 0241 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1101      66756E63 
- 1101      74696F6E 
- 1101      2D736563 
- 1101      74696F6E 
- 1102              	.LASF30:
- 1103 0269 52585F43 		.ascii	"RX_CAN_ReceiveMsg0\000"
- 1103      414E5F52 
- 1103      65636569 
- 1103      76654D73 
- 1103      673000
- 1104              	.LASF31:
- 1105 027c 52585F43 		.ascii	"RX_CAN_ReceiveMsg1\000"
- 1105      414E5F52 
- 1105      65636569 
- 1105      76654D73 
- 1105      673100
- 1106              	.LASF32:
- 1107 028f 52585F43 		.ascii	"RX_CAN_ReceiveMsg2\000"
- 1107      414E5F52 
- 1107      65636569 
- 1107      76654D73 
- 1107      673200
- 1108              	.LASF33:
- 1109 02a2 52585F43 		.ascii	"RX_CAN_ReceiveMsg3\000"
- 1109      414E5F52 
- 1109      65636569 
- 1109      76654D73 
- 1109      673300
- 1110              	.LASF34:
- 1111 02b5 52585F43 		.ascii	"RX_CAN_ReceiveMsg4\000"
- 1111      414E5F52 
- 1111      65636569 
- 1111      76654D73 
- 1111      673400
- 1112              	.LASF35:
- 1113 02c8 52585F43 		.ascii	"RX_CAN_ReceiveMsg5\000"
- 1113      414E5F52 
- 1113      65636569 
- 1113      76654D73 
- 1113      673500
- 1114              	.LASF17:
- 1115 02db 73697A65 		.ascii	"sizetype\000"
- 1115      74797065 
- 1115      00
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccGhMbRj.s 			page 24
+ 1097              	.LASF44:
+ 1098 01fc 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1098      4320342E 
+ 1098      392E3320 
+ 1098      32303135 
+ 1098      30333033 
+ 1099 022f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1099      20726576 
+ 1099      6973696F 
+ 1099      6E203232 
+ 1099      31323230 
+ 1100 0262 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1100      66756E63 
+ 1100      74696F6E 
+ 1100      2D736563 
+ 1100      74696F6E 
+ 1101              	.LASF30:
+ 1102 028a 52585F43 		.ascii	"RX_CAN_ReceiveMsg0\000"
+ 1102      414E5F52 
+ 1102      65636569 
+ 1102      76654D73 
+ 1102      673000
+ 1103              	.LASF31:
+ 1104 029d 52585F43 		.ascii	"RX_CAN_ReceiveMsg1\000"
+ 1104      414E5F52 
+ 1104      65636569 
+ 1104      76654D73 
+ 1104      673100
+ 1105              	.LASF32:
+ 1106 02b0 52585F43 		.ascii	"RX_CAN_ReceiveMsg2\000"
+ 1106      414E5F52 
+ 1106      65636569 
+ 1106      76654D73 
+ 1106      673200
+ 1107              	.LASF33:
+ 1108 02c3 52585F43 		.ascii	"RX_CAN_ReceiveMsg3\000"
+ 1108      414E5F52 
+ 1108      65636569 
+ 1108      76654D73 
+ 1108      673300
+ 1109              	.LASF34:
+ 1110 02d6 52585F43 		.ascii	"RX_CAN_ReceiveMsg4\000"
+ 1110      414E5F52 
+ 1110      65636569 
+ 1110      76654D73 
+ 1110      673400
+ 1111              	.LASF35:
+ 1112 02e9 52585F43 		.ascii	"RX_CAN_ReceiveMsg5\000"
+ 1112      414E5F52 
+ 1112      65636569 
+ 1112      76654D73 
+ 1112      673500
+ 1113              	.LASF17:
+ 1114 02fc 73697A65 		.ascii	"sizetype\000"
+ 1114      74797065 
+ 1114      00
+ 1115              	.LASF6:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccCXCfBM.s 			page 24
 
 
- 1116              	.LASF6:
- 1117 02e4 6C6F6E67 		.ascii	"long long int\000"
- 1117      206C6F6E 
- 1117      6720696E 
- 1117      7400
- 1118              	.LASF16:
- 1119 02f2 63686172 		.ascii	"char\000"
- 1119      00
- 1120              	.LASF27:
- 1121 02f7 4C43445F 		.ascii	"LCD_Char_1_Position\000"
- 1121      43686172 
- 1121      5F315F50 
- 1121      6F736974 
- 1121      696F6E00 
- 1122              	.LASF48:
- 1123 030b 4C43445F 		.ascii	"LCD_Char_1_PrintInt8\000"
- 1123      43686172 
- 1123      5F315F50 
- 1123      72696E74 
- 1123      496E7438 
- 1124              	.LASF2:
- 1125 0320 73686F72 		.ascii	"short int\000"
- 1125      7420696E 
- 1125      7400
- 1126              	.LASF11:
- 1127 032a 75696E74 		.ascii	"uint8\000"
- 1127      3800
- 1128              	.LASF4:
- 1129 0330 6C6F6E67 		.ascii	"long int\000"
- 1129      20696E74 
- 1129      00
- 1130              	.LASF29:
- 1131 0339 4C43445F 		.ascii	"LCD_Char_1_Start\000"
- 1131      43686172 
- 1131      5F315F53 
- 1131      74617274 
- 1131      00
- 1132              	.LASF0:
- 1133 034a 7369676E 		.ascii	"signed char\000"
- 1133      65642063 
- 1133      68617200 
- 1134              	.LASF36:
- 1135 0356 43794465 		.ascii	"CyDelay\000"
- 1135      6C617900 
- 1136              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1116 0305 6C6F6E67 		.ascii	"long long int\000"
+ 1116      206C6F6E 
+ 1116      6720696E 
+ 1116      7400
+ 1117              	.LASF45:
+ 1118 0313 6D61696E 		.ascii	"main.c\000"
+ 1118      2E6300
+ 1119              	.LASF16:
+ 1120 031a 63686172 		.ascii	"char\000"
+ 1120      00
+ 1121              	.LASF27:
+ 1122 031f 4C43445F 		.ascii	"LCD_Char_1_Position\000"
+ 1122      43686172 
+ 1122      5F315F50 
+ 1122      6F736974 
+ 1122      696F6E00 
+ 1123              	.LASF48:
+ 1124 0333 4C43445F 		.ascii	"LCD_Char_1_PrintInt8\000"
+ 1124      43686172 
+ 1124      5F315F50 
+ 1124      72696E74 
+ 1124      496E7438 
+ 1125              	.LASF2:
+ 1126 0348 73686F72 		.ascii	"short int\000"
+ 1126      7420696E 
+ 1126      7400
+ 1127              	.LASF11:
+ 1128 0352 75696E74 		.ascii	"uint8\000"
+ 1128      3800
+ 1129              	.LASF4:
+ 1130 0358 6C6F6E67 		.ascii	"long int\000"
+ 1130      20696E74 
+ 1130      00
+ 1131              	.LASF29:
+ 1132 0361 4C43445F 		.ascii	"LCD_Char_1_Start\000"
+ 1132      43686172 
+ 1132      5F315F53 
+ 1132      74617274 
+ 1132      00
+ 1133              	.LASF0:
+ 1134 0372 7369676E 		.ascii	"signed char\000"
+ 1134      65642063 
+ 1134      68617200 
+ 1135              	.LASF36:
+ 1136 037e 43794465 		.ascii	"CyDelay\000"
+ 1136      6C617900 
+ 1137              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

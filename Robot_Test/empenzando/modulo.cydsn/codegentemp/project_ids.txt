@@ -1,0 +1,6 @@
+C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\empenzando\modulo.cydsn\modulo.cyprj|6e405efb-7a81-4c78-b418-1e272c936e6c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7e056457-8198-4bf2-9be5-8bac73688c04
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|085379e6-4978-44e3-b8b2-703d135fc01d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a7757a99-095b-492d-896b-844e18b1322a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|080c0378-3be2-41c9-89d2-db0219a93772
+C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\empenzando\modulo.cydsn\CAN_Psoc_kit.cydsn\CAN_Psoc_kit.cyprj|2ee256c9-8db6-40a4-a7d9-3fd96e45ed58

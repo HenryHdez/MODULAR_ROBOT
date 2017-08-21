@@ -1,10 +1,10 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2017-01-05T22:27:10Z")
+ (DATE "2017-08-12T01:35:10Z")
  (DESIGN "Test_CAN_Module_1")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
- (VERSION " 3.3 CP3")
+ (VERSION " 4.0 Update 1")
  (DIVIDER .)
  (TIMESCALE 1 ns)
  (CELL

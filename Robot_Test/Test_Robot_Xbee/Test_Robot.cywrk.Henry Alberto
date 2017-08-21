@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Test_Robot\Test_Xbee\Source Files\main.c">
+<ExpandedNodeIds>
+<v>Test_Robot</v>
+<v>Test_Robot\Test_Xbee</v>
+<v>Test_Robot\Test_Xbee\TopDesign</v>
+<v>Test_Robot\Test_Xbee\Test_Xbee.cydwr</v>
+<v>Test_Robot\Test_Xbee\Header Files\AX12.h</v>
+<v>Test_Robot\Test_Xbee\Header Files\cyapicallbacks.h</v>
+<v>Test_Robot\Test_Xbee\Header Files\DynamixelSerial1.h</v>
+<v>Test_Robot\Test_Xbee\Header Files\VCNL4010_1.h</v>
+<v>Test_Robot\Test_Xbee\Header Files\VCNL4010_2.h</v>
+<v>Test_Robot\Test_Xbee\Header Files\VCNL4010_3.h</v>
+<v>Test_Robot\Test_Xbee\Header Files\VCNL4010_4.h</v>
+<v>Test_Robot\Test_Xbee\Source Files</v>
+<v>Test_Robot\Test_Xbee\Source Files\main.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC\ADC.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC\ADC.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC\ADC_INT.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC\ADC_PM.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC_intClock</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC_intClock\ADC_intClock.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC_intClock\ADC_intClock.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC_IRQ</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC_IRQ\ADC_IRQ.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\ADC_IRQ\ADC_IRQ.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN\CAN.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN\CAN.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN\CAN_INT.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN\CAN_PM.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN\CAN_TX_RX_func.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN_HFCLK</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN_HFCLK\CAN_HFCLK.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN_HFCLK\CAN_HFCLK.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN_isr</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN_isr\CAN_isr.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\CAN_isr\CAN_isr.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\cmsis_armcc.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\cmsis_gcc.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\cypins.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_dmac</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_dmac\CyDMA.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_dmac\CyDMA.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_lfclk</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_lfclk\CyLFClk.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cy_lfclk\CyLFClk.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\FUERZA_XBEE</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\FUERZA_XBEE\FUERZA_XBEE.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\FUERZA_XBEE\FUERZA_XBEE.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\FUERZA_XBEE\FUERZA_XBEE_aliases.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\FUERZA_XBEE\FUERZA_XBEE_PM.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\LED_1</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\LED_1\LED_1.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\LED_1\LED_1.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\LED_1\LED_1_aliases.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\LED_1\LED_1_PM.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\RESET_XBEE</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\RESET_XBEE\RESET_XBEE.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\RESET_XBEE\RESET_XBEE.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\RESET_XBEE\RESET_XBEE_aliases.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\RESET_XBEE\RESET_XBEE_PM.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\RX_2</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\RX_2\RX_2.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\RX_2\RX_2.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\RX_2\RX_2_aliases.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\RX_2\RX_2_PM.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\SLEEP_CTRL</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\SLEEP_CTRL\SLEEP_CTRL.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\SLEEP_CTRL\SLEEP_CTRL.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\SLEEP_CTRL\SLEEP_CTRL_aliases.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\SLEEP_CTRL\SLEEP_CTRL_PM.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\SLEEP_XBEE</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\SLEEP_XBEE\SLEEP_XBEE.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\SLEEP_XBEE\SLEEP_XBEE.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\SLEEP_XBEE\SLEEP_XBEE_aliases.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\SLEEP_XBEE\SLEEP_XBEE_PM.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\TX_2</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\TX_2\TX_2.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\TX_2\TX_2.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\TX_2\TX_2_aliases.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\TX_2\TX_2_PM.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\XBEE</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\XBEE\XBEE.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\XBEE\XBEE.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\XBEE\XBEE_BOOT.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\XBEE\XBEE_INT.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\XBEE\XBEE_PM.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\XBEE_IntClock</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\XBEE_IntClock\XBEE_IntClock.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\XBEE_IntClock\XBEE_IntClock.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cycodeshareexport.ld</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cycodeshareimport.ld</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cycodeshareimport.scat</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cyfitter.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cyfitter_cfg.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cyfitter_cfg.h</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cyfittergnu.inc</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cyfitteriar.inc</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cyfitterrv.inc</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\cymetadata.c</v>
+<v>Test_Robot\Test_Xbee\Generated_Source\PSoC4\project.h</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Test_Robot</v>
+<v>Test_Robot\Test_Xbee</v>
+<v>Test_Robot\Test_Xbee\TopDesign</v>
+<v>Test_Robot\Test_Xbee\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Test_Robot</v>
+<v>Test_Robot\Test_Xbee</v>
+<v>Test_Robot\Test_Xbee\CortexM0</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_INT.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_intClock.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_PM.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN_HFCLK.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN_INT.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN_isr.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN_PM.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CAN_TX_RX_func.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\Cm0Start.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CyDMA.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLFClk.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\FUERZA_XBEE.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\FUERZA_XBEE_PM.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_1.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\LED_1_PM.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\RESET_XBEE.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\RESET_XBEE_PM.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\RX_2.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\RX_2_PM.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\SLEEP_CTRL.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\SLEEP_CTRL_PM.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\SLEEP_XBEE.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\SLEEP_XBEE_PM.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\TX_2.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\TX_2_PM.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\XBEE.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\XBEE_BOOT.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\XBEE_INT.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\XBEE_IntClock.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Listing Files\XBEE_PM.lst</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Test_Xbee.elf</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Test_Xbee.hex</v>
+<v>Test_Robot\Test_Xbee\CortexM0\ARM_GCC_493\Debug\Test_Xbee.map</v>
+<v>Test_Robot\Test_Xbee\Test_Xbee.gpdsc</v>
+<v>Test_Robot\Test_Xbee\Test_Xbee.rpt</v>
+<v>Test_Robot\Test_Xbee\Test_Xbee_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Test_Robot</v>
+<v>Test_Robot\Test_Xbee</v>
+<v>Test_Robot\Test_Xbee\PSoC 4 Architecture TRM</v>
+<v>Test_Robot\Test_Xbee\PSoC 4200M Family Datasheet</v>
+<v>Test_Robot\Test_Xbee\System Reference Guides</v>
+<v>Test_Robot\Test_Xbee\System Reference Guides\cy_boot_v5_40</v>
+<v>Test_Robot\Test_Xbee\System Reference Guides\cy_dmac_v1_10</v>
+<v>Test_Robot\Test_Xbee\System Reference Guides\cy_lfclk_v1_10</v>
+<v>Test_Robot\Test_Xbee\ADC_SAR_SEQ_P4_v2_40.pdf</v>
+<v>Test_Robot\Test_Xbee\CAN_v3_0.pdf</v>
+<v>Test_Robot\Test_Xbee\cy_pins_v2_20</v>
+<v>Test_Robot\Test_Xbee\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Test_Robot\Test_Xbee\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Test_Xbee.cydsn\main.c" />
+<name v=".\Test_Xbee.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Test_Xbee.cydsn\Test_Xbee.cydwr" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="766, 399" SelectedTabbedMdiWindow="71baab4c-ead6-49ea-ac7b-88305e70f59c"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="43850630-c835-437f-9fe3-2e8d4db89471" /><DocumentWindow Key="f70020f6-7f4c-4709-94d8-bbc056e2bdff" Guid="71baab4c-ead6-49ea-ac7b-88305e70f59c" /><DocumentWindow Key="5ea64576-e214-4444-b286-2ad3be02c7d6" Guid="746bbaca-c53f-46c4-b79c-7d68ab3247d7" /><DocumentWindow Key="5fcad036-55f0-46d2-9ddd-fc7e5d72ede0" Guid="4c9bb141-42f2-4b59-975f-9f6316d8ff14" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

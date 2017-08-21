@@ -8,16 +8,11 @@ int main()
     CAN_Start();
     for(;;)
     {
-        CAN_ReceiveMsg0();
-        if(dato_recibido==1){
             CAN_SendMsg0();
             CyDelay(500);
             dato_enviado++;
-            LED_1_Write(1);
-        }
-        else{
-            LED_1_Write(0);
-        }
+
+        
     }
 }
 

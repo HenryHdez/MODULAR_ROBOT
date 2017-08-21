@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,76 +25,76 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
   22              		.type	main, %function
   23              	main:
   24              	.LFB36:
-  25              		.file 1 ".\\main.c"
-   1:.\main.c      **** #include <project.h>
-   2:.\main.c      **** uint8 dato_enviado;
-   3:.\main.c      **** uint8 dato_recibido;
-   4:.\main.c      **** 
-   5:.\main.c      **** int main()
-   6:.\main.c      **** {
+  25              		.file 1 "main.c"
+   1:main.c        **** #include <project.h>
+   2:main.c        **** uint8 dato_enviado;
+   3:main.c        **** uint8 dato_recibido;
+   4:main.c        **** 
+   5:main.c        **** int main()
+   6:main.c        **** {
   26              		.loc 1 6 0
   27              		.cfi_startproc
   28 0000 08B5     		push	{r3, lr}
   29              		.cfi_def_cfa_offset 8
   30              		.cfi_offset 3, -8
   31              		.cfi_offset 14, -4
-   7:.\main.c      ****     CyGlobalIntEnable; /* Enable global interrupts. */
+   7:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
   32              		.loc 1 7 0
-  33              	@ 7 ".\main.c" 1
+  33              	@ 7 "main.c" 1
   34 0002 62B6     		CPSIE   i
   35              	@ 0 "" 2
-   8:.\main.c      ****     CAN_Start();
+   8:main.c        ****     CAN_Start();
   36              		.loc 1 8 0
   37              		.code	16
   38 0004 FFF7FEFF 		bl	CAN_Start
   39              	.LVL0:
-   9:.\main.c      ****     dato_enviado=10;
+   9:main.c        ****     dato_enviado=10;
   40              		.loc 1 9 0
   41 0008 0A22     		mov	r2, #10
   42 000a 0D4B     		ldr	r3, .L5
   43 000c 1A70     		strb	r2, [r3]
   44              	.L2:
-  10:.\main.c      ****     for(;;)
-  11:.\main.c      ****     {
-  12:.\main.c      ****         CAN_ReceiveMsg0();
+  10:main.c        ****     for(;;)
+  11:main.c        ****     {
+  12:main.c        ****         CAN_ReceiveMsg0();
   45              		.loc 1 12 0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 2
 
 
   46 000e FFF7FEFF 		bl	CAN_ReceiveMsg0
   47              	.LVL1:
-  13:.\main.c      ****         if(dato_recibido==1){
+  13:main.c        ****         if(dato_recibido==1){
   48              		.loc 1 13 0
   49 0012 0C4B     		ldr	r3, .L5+4
   50 0014 1B78     		ldrb	r3, [r3]
   51 0016 012B     		cmp	r3, #1
   52 0018 0DD1     		bne	.L3
-  14:.\main.c      ****             CAN_SendMsg0();
+  14:main.c        ****             CAN_SendMsg0();
   53              		.loc 1 14 0
   54 001a FFF7FEFF 		bl	CAN_SendMsg0
   55              	.LVL2:
-  15:.\main.c      ****             CyDelay(500);
+  15:main.c        ****             CyDelay(500);
   56              		.loc 1 15 0
   57 001e FA20     		mov	r0, #250
   58 0020 4000     		lsl	r0, r0, #1
   59 0022 FFF7FEFF 		bl	CyDelay
   60              	.LVL3:
-  16:.\main.c      ****             dato_enviado++;
+  16:main.c        ****             dato_enviado++;
   61              		.loc 1 16 0
   62 0026 064A     		ldr	r2, .L5
   63 0028 1378     		ldrb	r3, [r2]
   64 002a 0133     		add	r3, r3, #1
   65 002c 1370     		strb	r3, [r2]
-  17:.\main.c      ****             LED_1_Write(1);
+  17:main.c        ****             LED_1_Write(1);
   66              		.loc 1 17 0
   67 002e 0120     		mov	r0, #1
   68 0030 FFF7FEFF 		bl	LED_1_Write
   69              	.LVL4:
   70 0034 EBE7     		b	.L2
   71              	.L3:
-  18:.\main.c      ****         }
-  19:.\main.c      ****         else{
-  20:.\main.c      ****             LED_1_Write(0);
+  18:main.c        ****         }
+  19:main.c        ****         else{
+  20:main.c        ****             LED_1_Write(0);
   72              		.loc 1 20 0
   73 0036 0020     		mov	r0, #0
   74 0038 FFF7FEFF 		bl	LED_1_Write
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
   92              		.file 5 "Generated_Source\\PSoC4/LED_1.h"
   93              		.section	.debug_info,"",%progbits
   94              	.Ldebug_info0:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 3
 
 
   95 0000 67010000 		.4byte	0x167
@@ -126,37 +126,37 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
   97 0006 00000000 		.4byte	.Ldebug_abbrev0
   98 000a 04       		.byte	0x4
   99 000b 01       		.uleb128 0x1
- 100 000c 3F010000 		.4byte	.LASF19
+ 100 000c 66010000 		.4byte	.LASF19
  101 0010 01       		.byte	0x1
- 102 0011 CD010000 		.4byte	.LASF20
- 103 0015 D2000000 		.4byte	.LASF21
+ 102 0011 22000000 		.4byte	.LASF20
+ 103 0015 BF000000 		.4byte	.LASF21
  104 0019 00000000 		.4byte	.Ldebug_ranges0+0
  105 001d 00000000 		.4byte	0
  106 0021 00000000 		.4byte	.Ldebug_line0
  107 0025 02       		.uleb128 0x2
  108 0026 01       		.byte	0x1
  109 0027 06       		.byte	0x6
- 110 0028 26010000 		.4byte	.LASF0
+ 110 0028 4D010000 		.4byte	.LASF0
  111 002c 02       		.uleb128 0x2
  112 002d 01       		.byte	0x1
  113 002e 08       		.byte	0x8
- 114 002f A5000000 		.4byte	.LASF1
+ 114 002f AC000000 		.4byte	.LASF1
  115 0033 02       		.uleb128 0x2
  116 0034 02       		.byte	0x2
  117 0035 05       		.byte	0x5
- 118 0036 C1000000 		.4byte	.LASF2
+ 118 0036 F4010000 		.4byte	.LASF2
  119 003a 02       		.uleb128 0x2
  120 003b 02       		.byte	0x2
  121 003c 07       		.byte	0x7
- 122 003d 13010000 		.4byte	.LASF3
+ 122 003d 3A010000 		.4byte	.LASF3
  123 0041 02       		.uleb128 0x2
  124 0042 04       		.byte	0x4
  125 0043 05       		.byte	0x5
- 126 0044 B8000000 		.4byte	.LASF4
+ 126 0044 2A010000 		.4byte	.LASF4
  127 0048 02       		.uleb128 0x2
  128 0049 04       		.byte	0x4
  129 004a 07       		.byte	0x7
- 130 004b 4B000000 		.4byte	.LASF5
+ 130 004b 52000000 		.4byte	.LASF5
  131 004f 02       		.uleb128 0x2
  132 0050 08       		.byte	0x8
  133 0051 05       		.byte	0x5
@@ -164,7 +164,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  135 0056 02       		.uleb128 0x2
  136 0057 08       		.byte	0x8
  137 0058 07       		.byte	0x7
- 138 0059 5D000000 		.4byte	.LASF7
+ 138 0059 64000000 		.4byte	.LASF7
  139 005d 03       		.uleb128 0x3
  140 005e 04       		.byte	0x4
  141 005f 05       		.byte	0x5
@@ -174,11 +174,11 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  145 0066 07       		.byte	0x7
  146 0067 15000000 		.4byte	.LASF8
  147 006b 04       		.uleb128 0x4
- 148 006c 45000000 		.4byte	.LASF9
+ 148 006c 4C000000 		.4byte	.LASF9
  149 0070 02       		.byte	0x2
  150 0071 9801     		.2byte	0x198
  151 0073 2C000000 		.4byte	0x2c
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 4
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 4
 
 
  152 0077 04       		.uleb128 0x4
@@ -189,21 +189,21 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  157 0083 02       		.uleb128 0x2
  158 0084 04       		.byte	0x4
  159 0085 04       		.byte	0x4
- 160 0086 82000000 		.4byte	.LASF11
+ 160 0086 89000000 		.4byte	.LASF11
  161 008a 02       		.uleb128 0x2
  162 008b 08       		.byte	0x8
  163 008c 04       		.byte	0x4
- 164 008d CB000000 		.4byte	.LASF12
+ 164 008d 33010000 		.4byte	.LASF12
  165 0091 02       		.uleb128 0x2
  166 0092 01       		.byte	0x1
  167 0093 08       		.byte	0x8
- 168 0094 B3000000 		.4byte	.LASF13
+ 168 0094 BA000000 		.4byte	.LASF13
  169 0098 02       		.uleb128 0x2
  170 0099 04       		.byte	0x4
  171 009a 07       		.byte	0x7
- 172 009b D6010000 		.4byte	.LASF14
+ 172 009b FE010000 		.4byte	.LASF14
  173 009f 05       		.uleb128 0x5
- 174 00a0 22000000 		.4byte	.LASF22
+ 174 00a0 29000000 		.4byte	.LASF22
  175 00a4 01       		.byte	0x1
  176 00a5 05       		.byte	0x5
  177 00a6 5D000000 		.4byte	0x5d
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  206 00f1 FB000000 		.4byte	0xfb
  207 00f5 08       		.uleb128 0x8
  208 00f6 01       		.uleb128 0x1
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 5
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 5
 
 
  209 00f7 50       		.byte	0x50
@@ -256,7 +256,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  221 0109 00       		.byte	0
  222 010a 00       		.byte	0
  223 010b 0A       		.uleb128 0xa
- 224 010c 98000000 		.4byte	.LASF15
+ 224 010c 9F000000 		.4byte	.LASF15
  225 0110 01       		.byte	0x1
  226 0111 02       		.byte	0x2
  227 0112 6B000000 		.4byte	0x6b
@@ -264,7 +264,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  229 0117 03       		.byte	0x3
  230 0118 00000000 		.4byte	dato_enviado
  231 011c 0A       		.uleb128 0xa
- 232 011d 74000000 		.4byte	.LASF16
+ 232 011d 7B000000 		.4byte	.LASF16
  233 0121 01       		.byte	0x1
  234 0122 03       		.byte	0x3
  235 0123 6B000000 		.4byte	0x6b
@@ -272,21 +272,21 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  237 0128 03       		.byte	0x3
  238 0129 00000000 		.4byte	dato_recibido
  239 012d 0B       		.uleb128 0xb
- 240 012e 27000000 		.4byte	.LASF17
+ 240 012e 2E000000 		.4byte	.LASF17
  241 0132 03       		.byte	0x3
  242 0133 C5       		.byte	0xc5
  243 0134 6B000000 		.4byte	0x6b
  244 0138 0C       		.uleb128 0xc
- 245 0139 88000000 		.4byte	.LASF23
+ 245 0139 8F000000 		.4byte	.LASF23
  246 013d 03       		.byte	0x3
  247 013e 3501     		.2byte	0x135
  248 0140 0D       		.uleb128 0xd
- 249 0141 32010000 		.4byte	.LASF18
+ 249 0141 59010000 		.4byte	.LASF18
  250 0145 03       		.byte	0x3
  251 0146 1D01     		.2byte	0x11d
  252 0148 6B000000 		.4byte	0x6b
  253 014c 0E       		.uleb128 0xe
- 254 014d 3D000000 		.4byte	.LASF24
+ 254 014d 44000000 		.4byte	.LASF24
  255 0151 04       		.byte	0x4
  256 0152 D7       		.byte	0xd7
  257 0153 5D010000 		.4byte	0x15d
@@ -294,11 +294,11 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  259 0158 77000000 		.4byte	0x77
  260 015c 00       		.byte	0
  261 015d 10       		.uleb128 0x10
- 262 015e 31000000 		.4byte	.LASF25
+ 262 015e 38000000 		.4byte	.LASF25
  263 0162 05       		.byte	0x5
  264 0163 33       		.byte	0x33
  265 0164 0F       		.uleb128 0xf
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 6
 
 
  266 0165 6B000000 		.4byte	0x6b
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  320 0031 05       		.uleb128 0x5
  321 0032 49       		.uleb128 0x49
  322 0033 13       		.uleb128 0x13
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 7
 
 
  323 0034 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  377 0072 00       		.byte	0
  378 0073 00       		.byte	0
  379 0074 09       		.uleb128 0x9
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 8
 
 
  380 0075 898201   		.uleb128 0x4109
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  434 00ad 05       		.uleb128 0x5
  435 00ae 27       		.uleb128 0x27
  436 00af 19       		.uleb128 0x19
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 9
 
 
  437 00b0 3C       		.uleb128 0x3c
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  491 00e6 03       		.uleb128 0x3
  492 00e7 0E       		.uleb128 0xe
  493 00e8 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 10
 
 
  494 00e9 0B       		.uleb128 0xb
@@ -571,8 +571,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  521 000c 00000000 		.4byte	0
  522              		.section	.debug_line,"",%progbits
  523              	.Ldebug_line0:
- 524 0000 7F000000 		.section	.debug_str,"MS",%progbits,1
- 524      02006200 
+ 524 0000 7D000000 		.section	.debug_str,"MS",%progbits,1
+ 524      02006000 
  524      00000201 
  524      FB0E0D00 
  524      01010101 
@@ -589,126 +589,129 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 1
  530      676E6564 
  530      20696E74 
  530      00
- 531              	.LASF22:
- 532 0022 6D61696E 		.ascii	"main\000"
- 532      00
- 533              	.LASF17:
- 534 0027 43414E5F 		.ascii	"CAN_Start\000"
- 534      53746172 
- 534      7400
- 535              	.LASF25:
- 536 0031 4C45445F 		.ascii	"LED_1_Write\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 11
+ 531              	.LASF20:
+ 532 0022 6D61696E 		.ascii	"main.c\000"
+ 532      2E6300
+ 533              	.LASF22:
+ 534 0029 6D61696E 		.ascii	"main\000"
+ 534      00
+ 535              	.LASF17:
+ 536 002e 43414E5F 		.ascii	"CAN_Start\000"
+ 536      53746172 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 11
 
 
- 536      315F5772 
- 536      69746500 
- 537              	.LASF24:
- 538 003d 43794465 		.ascii	"CyDelay\000"
- 538      6C617900 
- 539              	.LASF9:
- 540 0045 75696E74 		.ascii	"uint8\000"
- 540      3800
- 541              	.LASF5:
- 542 004b 6C6F6E67 		.ascii	"long unsigned int\000"
- 542      20756E73 
- 542      69676E65 
- 542      6420696E 
- 542      7400
- 543              	.LASF7:
- 544 005d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 544      206C6F6E 
- 544      6720756E 
- 544      7369676E 
- 544      65642069 
- 545              	.LASF16:
- 546 0074 6461746F 		.ascii	"dato_recibido\000"
- 546      5F726563 
- 546      69626964 
- 546      6F00
- 547              	.LASF11:
- 548 0082 666C6F61 		.ascii	"float\000"
- 548      7400
- 549              	.LASF23:
- 550 0088 43414E5F 		.ascii	"CAN_ReceiveMsg0\000"
- 550      52656365 
- 550      6976654D 
- 550      73673000 
- 551              	.LASF15:
- 552 0098 6461746F 		.ascii	"dato_enviado\000"
- 552      5F656E76 
- 552      6961646F 
- 552      00
- 553              	.LASF1:
- 554 00a5 756E7369 		.ascii	"unsigned char\000"
- 554      676E6564 
- 554      20636861 
- 554      7200
- 555              	.LASF13:
- 556 00b3 63686172 		.ascii	"char\000"
- 556      00
- 557              	.LASF4:
- 558 00b8 6C6F6E67 		.ascii	"long int\000"
- 558      20696E74 
+ 536      7400
+ 537              	.LASF25:
+ 538 0038 4C45445F 		.ascii	"LED_1_Write\000"
+ 538      315F5772 
+ 538      69746500 
+ 539              	.LASF24:
+ 540 0044 43794465 		.ascii	"CyDelay\000"
+ 540      6C617900 
+ 541              	.LASF9:
+ 542 004c 75696E74 		.ascii	"uint8\000"
+ 542      3800
+ 543              	.LASF5:
+ 544 0052 6C6F6E67 		.ascii	"long unsigned int\000"
+ 544      20756E73 
+ 544      69676E65 
+ 544      6420696E 
+ 544      7400
+ 545              	.LASF7:
+ 546 0064 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 546      206C6F6E 
+ 546      6720756E 
+ 546      7369676E 
+ 546      65642069 
+ 547              	.LASF16:
+ 548 007b 6461746F 		.ascii	"dato_recibido\000"
+ 548      5F726563 
+ 548      69626964 
+ 548      6F00
+ 549              	.LASF11:
+ 550 0089 666C6F61 		.ascii	"float\000"
+ 550      7400
+ 551              	.LASF23:
+ 552 008f 43414E5F 		.ascii	"CAN_ReceiveMsg0\000"
+ 552      52656365 
+ 552      6976654D 
+ 552      73673000 
+ 553              	.LASF15:
+ 554 009f 6461746F 		.ascii	"dato_enviado\000"
+ 554      5F656E76 
+ 554      6961646F 
+ 554      00
+ 555              	.LASF1:
+ 556 00ac 756E7369 		.ascii	"unsigned char\000"
+ 556      676E6564 
+ 556      20636861 
+ 556      7200
+ 557              	.LASF13:
+ 558 00ba 63686172 		.ascii	"char\000"
  558      00
- 559              	.LASF2:
- 560 00c1 73686F72 		.ascii	"short int\000"
- 560      7420696E 
- 560      7400
- 561              	.LASF12:
- 562 00cb 646F7562 		.ascii	"double\000"
- 562      6C6500
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cckfRAqd.s 			page 12
+ 559              	.LASF21:
+ 560 00bf 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 560      73657273 
+ 560      5C48656E 
+ 560      72792041 
+ 560      6C626572 
+ 561 00ed 6F64756C 		.ascii	"odular\\Robot_Test\\Test_CAN_6_Modules\\Test_CAN_Mo"
+ 561      61725C52 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cchtL0m5.s 			page 12
 
 
- 563              	.LASF21:
- 564 00d2 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\CAN_ROBOT\\Test_"
- 564      73657273 
- 564      5C48656E 
- 564      72792041 
- 564      6C626572 
- 565 0100 43414E5F 		.ascii	"CAN_Module_2.cydsn\000"
- 565      4D6F6475 
- 565      6C655F32 
- 565      2E637964 
- 565      736E00
- 566              	.LASF3:
- 567 0113 73686F72 		.ascii	"short unsigned int\000"
- 567      7420756E 
- 567      7369676E 
- 567      65642069 
- 567      6E7400
- 568              	.LASF0:
- 569 0126 7369676E 		.ascii	"signed char\000"
- 569      65642063 
- 569      68617200 
- 570              	.LASF18:
- 571 0132 43414E5F 		.ascii	"CAN_SendMsg0\000"
- 571      53656E64 
- 571      4D736730 
- 571      00
- 572              	.LASF19:
- 573 013f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 573      4320342E 
- 573      392E3320 
- 573      32303135 
- 573      30333033 
- 574 0172 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 574      20726576 
- 574      6973696F 
- 574      6E203232 
- 574      31323230 
- 575 01a5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 575      66756E63 
- 575      74696F6E 
- 575      2D736563 
- 575      74696F6E 
- 576              	.LASF20:
- 577 01cd 2E5C6D61 		.ascii	".\\main.c\000"
- 577      696E2E63 
- 577      00
- 578              	.LASF14:
- 579 01d6 73697A65 		.ascii	"sizetype\000"
- 579      74797065 
- 579      00
- 580              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 561      6F626F74 
+ 561      5F546573 
+ 561      745C5465 
+ 562 011d 64756C65 		.ascii	"dule_2.cydsn\000"
+ 562      5F322E63 
+ 562      7964736E 
+ 562      00
+ 563              	.LASF4:
+ 564 012a 6C6F6E67 		.ascii	"long int\000"
+ 564      20696E74 
+ 564      00
+ 565              	.LASF12:
+ 566 0133 646F7562 		.ascii	"double\000"
+ 566      6C6500
+ 567              	.LASF3:
+ 568 013a 73686F72 		.ascii	"short unsigned int\000"
+ 568      7420756E 
+ 568      7369676E 
+ 568      65642069 
+ 568      6E7400
+ 569              	.LASF0:
+ 570 014d 7369676E 		.ascii	"signed char\000"
+ 570      65642063 
+ 570      68617200 
+ 571              	.LASF18:
+ 572 0159 43414E5F 		.ascii	"CAN_SendMsg0\000"
+ 572      53656E64 
+ 572      4D736730 
+ 572      00
+ 573              	.LASF19:
+ 574 0166 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 574      4320342E 
+ 574      392E3320 
+ 574      32303135 
+ 574      30333033 
+ 575 0199 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 575      20726576 
+ 575      6973696F 
+ 575      6E203232 
+ 575      31323230 
+ 576 01cc 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 576      66756E63 
+ 576      74696F6E 
+ 576      2D736563 
+ 576      74696F6E 
+ 577              	.LASF2:
+ 578 01f4 73686F72 		.ascii	"short int\000"
+ 578      7420696E 
+ 578      7400
+ 579              	.LASF14:
+ 580 01fe 73697A65 		.ascii	"sizetype\000"
+ 580      74797065 
+ 580      00
+ 581              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,64 +25,64 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
   22              		.type	CAN_SendMsg, %function
   23              	CAN_SendMsg:
   24              	.LFB1:
-  25              		.file 1 ".\\Generated_Source\\PSoC4\\CAN_TX_RX_func.c"
-   1:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * File Name: CAN_TX_RX_func.c
-   3:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Version 3.0
-   4:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
-   5:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Description:
-   6:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  There are functions process "Full" Receive and Transmit mailboxes:
-   7:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *     - CAN_SendMsg0-7();
-   8:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *     - CAN_ReceiveMsg0-15();
-   9:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  Transmission of message, and receive routine for "Basic" mailboxes:
-  10:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *     - CAN_SendMsg();
-  11:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *     - CAN_TxCancel();
-  12:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *     - CAN_ReceiveMsg();
-  13:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
-  14:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  Note:
-  15:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *   None
-  16:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
-  17:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** ********************************************************************************
-  18:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  19:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * You may use this file only in accordance with the license, terms, conditions,
-  20:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  21:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * the software package with which this file was provided.
-  22:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *******************************************************************************/
-  23:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-  24:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #include "CAN.h"
-  25:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #include "cyapicallbacks.h"
-  26:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-  27:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** /* `#START TX_RX_FUNCTION` */
-  28:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** extern uint8 dato_enviado;
-  29:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** extern uint8 dato_recibido;
-  30:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** /* `#END` */
-  31:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-  32:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 2
+  25              		.file 1 "Generated_Source\\PSoC4\\CAN_TX_RX_func.c"
+   1:Generated_Source\PSoC4/CAN_TX_RX_func.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * File Name: CAN_TX_RX_func.c
+   3:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Version 3.0
+   4:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+   5:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Description:
+   6:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  There are functions process "Full" Receive and Transmit mailboxes:
+   7:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *     - CAN_SendMsg0-7();
+   8:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *     - CAN_ReceiveMsg0-15();
+   9:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  Transmission of message, and receive routine for "Basic" mailboxes:
+  10:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *     - CAN_SendMsg();
+  11:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *     - CAN_TxCancel();
+  12:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *     - CAN_ReceiveMsg();
+  13:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+  14:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  Note:
+  15:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *   None
+  16:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+  17:Generated_Source\PSoC4/CAN_TX_RX_func.c **** ********************************************************************************
+  18:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  19:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * the software package with which this file was provided.
+  22:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *******************************************************************************/
+  23:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+  24:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #include "CAN.h"
+  25:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #include "cyapicallbacks.h"
+  26:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+  27:Generated_Source\PSoC4/CAN_TX_RX_func.c **** /* `#START TX_RX_FUNCTION` */
+  28:Generated_Source\PSoC4/CAN_TX_RX_func.c **** extern uint8 dato_enviado;
+  29:Generated_Source\PSoC4/CAN_TX_RX_func.c **** extern uint8 dato_recibido;
+  30:Generated_Source\PSoC4/CAN_TX_RX_func.c **** /* `#END` */
+  31:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+  32:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 2
 
 
-  33:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** /*******************************************************************************
-  34:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_SendMsg
-  35:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** ********************************************************************************
-  36:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
-  37:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Summary:
-  38:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  This function is Send Message from one of Basic mailboxes. The function loops
-  39:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  through the transmit message buffer designed as Basic CAN mailboxes for the
-  40:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  first free available and sends from it. The number of retries is limited.
-  41:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
-  42:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Parameters:
-  43:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  message: The pointer to a structure that contains all required data to send
-  44:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *           messages.
-  45:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
-  46:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Return:
-  47:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  Indication if message has been sent.
-  48:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *   Define                             Description
-  49:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *    CYRET_SUCCESS                      The function passed successfully
-  50:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *    CAN_FAIL              The function failed
-  51:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
-  52:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *******************************************************************************/
-  53:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** uint8 CAN_SendMsg(const CAN_TX_MSG *message) 
-  54:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** {
+  33:Generated_Source\PSoC4/CAN_TX_RX_func.c **** /*******************************************************************************
+  34:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_SendMsg
+  35:Generated_Source\PSoC4/CAN_TX_RX_func.c **** ********************************************************************************
+  36:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+  37:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Summary:
+  38:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  This function is Send Message from one of Basic mailboxes. The function loops
+  39:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  through the transmit message buffer designed as Basic CAN mailboxes for the
+  40:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  first free available and sends from it. The number of retries is limited.
+  41:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+  42:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Parameters:
+  43:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  message: The pointer to a structure that contains all required data to send
+  44:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *           messages.
+  45:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+  46:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Return:
+  47:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  Indication if message has been sent.
+  48:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *   Define                             Description
+  49:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *    CYRET_SUCCESS                      The function passed successfully
+  50:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *    CAN_FAIL              The function failed
+  51:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+  52:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *******************************************************************************/
+  53:Generated_Source\PSoC4/CAN_TX_RX_func.c **** uint8 CAN_SendMsg(const CAN_TX_MSG *message) 
+  54:Generated_Source\PSoC4/CAN_TX_RX_func.c **** {
   26              		.loc 1 54 0
   27              		.cfi_startproc
   28              	.LVL0:
@@ -102,86 +102,86 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
   42              		.cfi_offset 9, -28
   43 0008 061C     		mov	r6, r0
   44              	.LVL1:
-  55:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 i, j, shift;
-  56:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 retry = 0u;
-  57:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 result = CAN_FAIL;
+  55:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 i, j, shift;
+  56:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 retry = 0u;
+  57:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 result = CAN_FAIL;
   45              		.loc 1 57 0
   46 000a 0120     		mov	r0, #1
   47              	.LVL2:
-  56:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 result = CAN_FAIL;
+  56:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 result = CAN_FAIL;
   48              		.loc 1 56 0
   49 000c 0023     		mov	r3, #0
   50 000e 9846     		mov	r8, r3
-  58:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint32 regTemp;
-  59:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-  60:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     while (retry < CAN_RETRY_NUMBER)
+  58:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint32 regTemp;
+  59:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+  60:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     while (retry < CAN_RETRY_NUMBER)
   51              		.loc 1 60 0
   52 0010 93E0     		b	.L2
   53              	.LVL3:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 3
 
 
   54              	.L18:
-  61:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
-  62:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         shift = 1u;    /* Start from first mailbox */
-  63:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
-  64:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
-  65:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             /* Find Basic TX mailboxes */
-  66:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_MAILBOX_TYPE & shift) == 0u)
+  61:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+  62:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         shift = 1u;    /* Start from first mailbox */
+  63:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
+  64:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
+  65:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             /* Find Basic TX mailboxes */
+  66:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_MAILBOX_TYPE & shift) == 0u)
   55              		.loc 1 66 0
   56 0012 EB07     		lsl	r3, r5, #31
   57 0014 7FD4     		bmi	.L3
-  67:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
-  68:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* Find free mailbox */
-  69:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #if (CY_PSOC3 || CY_PSOC5)
-  70:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     if ((CAN_BUF_SR_REG.byte[2] & shift) == 0u)
-  71:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #else  /* CY_PSOC4 */
-  72:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     if ((CAN_BUF_SR_REG &
+  67:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+  68:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* Find free mailbox */
+  69:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #if (CY_PSOC3 || CY_PSOC5)
+  70:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     if ((CAN_BUF_SR_REG.byte[2] & shift) == 0u)
+  71:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #else  /* CY_PSOC4 */
+  72:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     if ((CAN_BUF_SR_REG &
   58              		.loc 1 72 0
   59 0016 4C4B     		ldr	r3, .L23
   60 0018 1B68     		ldr	r3, [r3]
-  73:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         (uint32) ((uint32) shift << CAN_TWO_BYTE_OFFSET)) == 0u)
+  73:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         (uint32) ((uint32) shift << CAN_TWO_BYTE_OFFSET)) == 0u)
   61              		.loc 1 73 0
   62 001a 2A04     		lsl	r2, r5, #16
-  72:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         (uint32) ((uint32) shift << CAN_TWO_BYTE_OFFSET)) == 0u)
+  72:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         (uint32) ((uint32) shift << CAN_TWO_BYTE_OFFSET)) == 0u)
   63              		.loc 1 72 0
   64 001c 1A42     		tst	r2, r3
   65 001e 7AD1     		bne	.L3
   66              	.LVL4:
-  74:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CY_PSOC3 || CY_PSOC5 */
-  75:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     {
-  76:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         regTemp = 0u;
-  77:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-  78:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         /* Set message parameters */
-  79:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         if (message->rtr != CAN_STANDARD_MESSAGE)
+  74:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CY_PSOC3 || CY_PSOC5 */
+  75:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     {
+  76:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         regTemp = 0u;
+  77:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+  78:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         /* Set message parameters */
+  79:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         if (message->rtr != CAN_STANDARD_MESSAGE)
   67              		.loc 1 79 0
   68 0020 3379     		ldrb	r3, [r6, #4]
   69 0022 002B     		cmp	r3, #0
   70 0024 01D1     		bne	.L21
-  76:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+  76:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
   71              		.loc 1 76 0
   72 0026 0027     		mov	r7, #0
   73 0028 01E0     		b	.L4
   74              	.L21:
-  80:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
-  81:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             regTemp = CAN_TX_RTR_MASK;    /* RTR message Enable */
+  80:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
+  81:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             regTemp = CAN_TX_RTR_MASK;    /* RTR message Enable */
   75              		.loc 1 81 0
   76 002a 8027     		mov	r7, #128
   77 002c BF03     		lsl	r7, r7, #14
   78              	.L4:
   79              	.LVL5:
-  82:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
-  83:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-  84:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         if (message->ide == CAN_STANDARD_MESSAGE)
+  82:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
+  83:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+  84:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         if (message->ide == CAN_STANDARD_MESSAGE)
   80              		.loc 1 84 0
   81 002e 7379     		ldrb	r3, [r6, #5]
   82 0030 002B     		cmp	r3, #0
   83 0032 07D1     		bne	.L5
-  85:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 4
+  85:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 4
 
 
-  86:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             CAN_SET_TX_ID_STANDARD_MSG(i, message->id);
+  86:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             CAN_SET_TX_ID_STANDARD_MSG(i, message->id);
   84              		.loc 1 86 0
   85 0034 2301     		lsl	r3, r4, #4
   86 0036 454A     		ldr	r2, .L23+4
@@ -192,16 +192,16 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
   91 0040 5A60     		str	r2, [r3, #4]
   92 0042 09E0     		b	.L6
   93              	.L5:
-  87:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
-  88:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         else
-  89:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
-  90:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_IDE_MASK;
+  87:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
+  88:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         else
+  89:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
+  90:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_IDE_MASK;
   94              		.loc 1 90 0
   95 0044 8023     		mov	r3, #128
   96 0046 5B03     		lsl	r3, r3, #13
   97 0048 1F43     		orr	r7, r3
   98              	.LVL6:
-  91:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             CAN_SET_TX_ID_EXTENDED_MSG(i, message->id);
+  91:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             CAN_SET_TX_ID_EXTENDED_MSG(i, message->id);
   99              		.loc 1 91 0
  100 004a 2301     		lsl	r3, r4, #4
  101 004c 3F4A     		ldr	r2, .L23+4
@@ -211,15 +211,15 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  105 0054 D200     		lsl	r2, r2, #3
  106 0056 5A60     		str	r2, [r3, #4]
  107              	.L6:
-  92:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
-  93:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-  94:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         if (message->dlc < CAN_TX_DLC_MAX_VALUE)
+  92:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
+  93:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+  94:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         if (message->dlc < CAN_TX_DLC_MAX_VALUE)
  108              		.loc 1 94 0
  109 0058 B379     		ldrb	r3, [r6, #6]
  110 005a 072B     		cmp	r3, #7
  111 005c 03D8     		bhi	.L7
-  95:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
-  96:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             regTemp |= ((uint32) message->dlc) << CAN_TWO_BYTE_OFFSET;
+  95:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
+  96:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             regTemp |= ((uint32) message->dlc) << CAN_TWO_BYTE_OFFSET;
  112              		.loc 1 96 0
  113 005e 1B04     		lsl	r3, r3, #16
  114 0060 1F43     		orr	r7, r3
@@ -228,30 +228,30 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  117              	.LVL8:
  118 0064 03E0     		b	.L8
  119              	.L7:
-  97:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
-  98:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         else
-  99:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
- 100:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_DLC_UPPER_VALUE;
+  97:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
+  98:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         else
+  99:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
+ 100:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_DLC_UPPER_VALUE;
  120              		.loc 1 100 0
  121 0066 8023     		mov	r3, #128
  122 0068 1B03     		lsl	r3, r3, #12
  123 006a 1F43     		orr	r7, r3
  124              	.LVL9:
  125 006c B946     		mov	r9, r7
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 5
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 5
 
 
  126              	.LVL10:
  127              	.L8:
- 101:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
- 102:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 103:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         if (message->irq != CAN_TRANSMIT_INT_DISABLE)
+ 101:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
+ 102:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 103:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         if (message->irq != CAN_TRANSMIT_INT_DISABLE)
  128              		.loc 1 103 0
  129 006e F379     		ldrb	r3, [r6, #7]
  130 0070 002B     		cmp	r3, #0
  131 0072 03D0     		beq	.L9
- 104:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
- 105:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_INT_ENABLE_MASK;    /* Transmit Interrupt Enable */
+ 104:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
+ 105:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_INT_ENABLE_MASK;    /* Transmit Interrupt Enable */
  132              		.loc 1 105 0
  133 0074 0423     		mov	r3, #4
  134 0076 4A46     		mov	r2, r9
@@ -259,19 +259,19 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  136 007a 9146     		mov	r9, r2
  137              	.LVL11:
  138              	.L9:
- 106:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
- 107:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 108:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         for (j = 0u; (j < message->dlc) && (j < CAN_TX_DLC_MAX_VALUE); j++)
+ 106:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
+ 107:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 108:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         for (j = 0u; (j < message->dlc) && (j < CAN_TX_DLC_MAX_VALUE); j++)
  139              		.loc 1 108 0
  140 007c 0023     		mov	r3, #0
  141 007e 2AE0     		b	.L10
  142              	.LVL12:
  143              	.L14:
- 109:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
- 110:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             #if (CY_PSOC3 || CY_PSOC5)
- 111:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 CAN_TX_DATA_BYTE(i, j) = message->msg->byte[j];
- 112:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             #else /* CY_PSOC4 */
- 113:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 CAN_TX_DATA_BYTE(i, j, message->msg->byte[j]);
+ 109:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
+ 110:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             #if (CY_PSOC3 || CY_PSOC5)
+ 111:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 CAN_TX_DATA_BYTE(i, j) = message->msg->byte[j];
+ 112:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             #else /* CY_PSOC4 */
+ 113:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 CAN_TX_DATA_BYTE(i, j, message->msg->byte[j]);
  144              		.loc 1 113 0
  145 0080 032B     		cmp	r3, #3
  146 0082 13D9     		bls	.L11
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  167 00aa 12E0     		b	.L12
  168              	.L11:
  169              		.loc 1 113 0 discriminator 2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 6
 
 
  170 00ac 2001     		lsl	r0, r4, #4
@@ -321,35 +321,35 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  187 00ce 0A43     		orr	r2, r1
  188 00d0 8260     		str	r2, [r0, #8]
  189              	.L12:
- 108:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
+ 108:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
  190              		.loc 1 108 0 is_stmt 1 discriminator 2
  191 00d2 0133     		add	r3, r3, #1
  192              	.LVL13:
  193 00d4 DBB2     		uxtb	r3, r3
  194              	.LVL14:
  195              	.L10:
- 108:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
+ 108:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
  196              		.loc 1 108 0 is_stmt 0 discriminator 1
  197 00d6 B279     		ldrb	r2, [r6, #6]
  198 00d8 9A42     		cmp	r2, r3
  199 00da 01D9     		bls	.L13
- 108:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
+ 108:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         {
  200              		.loc 1 108 0 discriminator 3
  201 00dc 072B     		cmp	r3, #7
  202 00de CFD9     		bls	.L14
  203              	.L13:
- 114:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             #endif /* CY_PSOC3 || CY_PSOC5 */
- 115:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
- 116:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 117:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         /* Disable isr */
- 118:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     CyIntDisable(CAN_ISR_NUMBER);
+ 114:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             #endif /* CY_PSOC3 || CY_PSOC5 */
+ 115:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         }
+ 116:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 117:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         /* Disable isr */
+ 118:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     CyIntDisable(CAN_ISR_NUMBER);
  204              		.loc 1 118 0 is_stmt 1
  205 00e0 1B20     		mov	r0, #27
  206 00e2 FFF7FEFF 		bl	CyIntDisable
  207              	.LVL15:
- 119:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 120:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         /* WPN[23] and WPN[3] set to 1 for write to CAN Control reg */
- 121:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         CY_SET_REG32(CAN_TX_CMD_PTR(i), (regTemp | CAN_TX_WPN_SET));
+ 119:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 120:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         /* WPN[23] and WPN[3] set to 1 for write to CAN Control reg */
+ 121:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         CY_SET_REG32(CAN_TX_CMD_PTR(i), (regTemp | CAN_TX_WPN_SET));
  208              		.loc 1 121 0
  209 00e6 2301     		lsl	r3, r4, #4
  210 00e8 184A     		ldr	r2, .L23+4
@@ -358,22 +358,22 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  213 00ee 194A     		ldr	r2, .L23+12
  214 00f0 4F46     		mov	r7, r9
  215 00f2 1743     		orr	r7, r2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 7
 
 
  216 00f4 1F60     		str	r7, [r3]
- 122:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 123:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         #if (CY_PSOC3 || CY_PSOC5)
- 124:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             CY_SET_REG32(CAN_TX_CMD_PTR(i), CAN_SEND_MESSAGE);
- 125:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         #else /* CY_PSOC4 */
- 126:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             if (message->sst != CAN_STANDARD_MESSAGE)
+ 122:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 123:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         #if (CY_PSOC3 || CY_PSOC5)
+ 124:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             CY_SET_REG32(CAN_TX_CMD_PTR(i), CAN_SEND_MESSAGE);
+ 125:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         #else /* CY_PSOC4 */
+ 126:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             if (message->sst != CAN_STANDARD_MESSAGE)
  217              		.loc 1 126 0
  218 00f6 327A     		ldrb	r2, [r6, #8]
  219 00f8 002A     		cmp	r2, #0
  220 00fa 04D0     		beq	.L15
- 127:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             {
- 128:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 /* Single Shot Transmission */
- 129:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 CAN_TX_CMD_REG(i) |= CAN_SEND_MESSAGE |
+ 127:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             {
+ 128:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 /* Single Shot Transmission */
+ 129:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 CAN_TX_CMD_REG(i) |= CAN_SEND_MESSAGE |
  221              		.loc 1 129 0
  222 00fc 1968     		ldr	r1, [r3]
  223 00fe 0322     		mov	r2, #3
@@ -381,48 +381,48 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  225 0102 1A60     		str	r2, [r3]
  226 0104 03E0     		b	.L16
  227              	.L15:
- 130:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 CAN_TX_ABORT_MASK;
- 131:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             }
- 132:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             else
- 133:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             {
- 134:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 CAN_TX_CMD_REG(i) |= CAN_SEND_MESSAGE;
+ 130:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 CAN_TX_ABORT_MASK;
+ 131:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             }
+ 132:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             else
+ 133:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             {
+ 134:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                                 CAN_TX_CMD_REG(i) |= CAN_SEND_MESSAGE;
  228              		.loc 1 134 0
  229 0106 1968     		ldr	r1, [r3]
  230 0108 0122     		mov	r2, #1
  231 010a 0A43     		orr	r2, r1
  232 010c 1A60     		str	r2, [r3]
  233              	.L16:
- 135:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             }
- 136:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         #endif /* CY_PSOC3 || CY_PSOC5 */
- 137:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 138:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         /* Enable isr */
- 139:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     CyIntEnable(CAN_ISR_NUMBER);
+ 135:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                             }
+ 136:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 137:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 138:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         /* Enable isr */
+ 139:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     CyIntEnable(CAN_ISR_NUMBER);
  234              		.loc 1 139 0
  235 010e 1B20     		mov	r0, #27
  236 0110 FFF7FEFF 		bl	CyIntEnable
  237              	.LVL16:
- 140:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 141:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         result = CYRET_SUCCESS;
+ 140:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 141:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                         result = CYRET_SUCCESS;
  238              		.loc 1 141 0
  239 0114 0020     		mov	r0, #0
  240              	.LVL17:
  241              	.L3:
- 142:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     }
- 143:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 144:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             shift <<= 1u;
+ 142:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     }
+ 143:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 144:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             shift <<= 1u;
  242              		.loc 1 144 0
  243 0116 6D00     		lsl	r5, r5, #1
  244              	.LVL18:
  245 0118 EDB2     		uxtb	r5, r5
  246              	.LVL19:
- 145:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if (result == CYRET_SUCCESS)
+ 145:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if (result == CYRET_SUCCESS)
  247              		.loc 1 145 0
  248 011a 0028     		cmp	r0, #0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 8
 
 
  249 011c 07D0     		beq	.L17
-  63:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
+  63:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
  250              		.loc 1 63 0 discriminator 2
  251 011e 0134     		add	r4, r4, #1
  252              	.LVL20:
@@ -435,27 +435,27 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  259 0126 0024     		mov	r4, #0
  260              	.L20:
  261              	.LVL23:
-  63:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
+  63:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
  262              		.loc 1 63 0 is_stmt 0 discriminator 1
  263 0128 072C     		cmp	r4, #7
  264 012a 00D8     		bhi	.LCB277
  265 012c 71E7     		b	.L18	@long jump
  266              	.LCB277:
  267              	.L17:
- 146:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 147:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 break;
- 148:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 149:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         }
- 150:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         if (result == CYRET_SUCCESS)
+ 146:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 147:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 break;
+ 148:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 149:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         }
+ 150:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         if (result == CYRET_SUCCESS)
  268              		.loc 1 150 0 is_stmt 1
  269 012e 0028     		cmp	r0, #0
  270 0130 06D0     		beq	.L19
- 151:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
- 152:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             break;
- 153:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         }
- 154:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         else
- 155:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
- 156:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             retry++;
+ 151:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
+ 152:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             break;
+ 153:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         }
+ 154:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         else
+ 155:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
+ 156:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             retry++;
  271              		.loc 1 156 0
  272 0132 4346     		mov	r3, r8
  273 0134 0133     		add	r3, r3, #1
@@ -463,22 +463,22 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  275 0138 9846     		mov	r8, r3
  276              	.LVL24:
  277              	.L2:
-  60:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+  60:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
  278              		.loc 1 60 0
  279 013a 4346     		mov	r3, r8
  280 013c 022B     		cmp	r3, #2
  281 013e F1D9     		bls	.L22
  282              	.L19:
- 157:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         }
- 158:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
- 159:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 160:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     return (result);
- 161:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** }
+ 157:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         }
+ 158:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 159:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 160:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     return (result);
+ 161:Generated_Source\PSoC4/CAN_TX_RX_func.c **** }
  283              		.loc 1 161 0
  284              		@ sp needed
  285              	.LVL25:
  286              	.LVL26:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 9
 
 
  287 0140 0CBC     		pop	{r2, r3}
@@ -503,34 +503,34 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  306              		.type	CAN_TxCancel, %function
  307              	CAN_TxCancel:
  308              	.LFB2:
- 162:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 163:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 164:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** /*******************************************************************************
- 165:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_TxCancel
- 166:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** ********************************************************************************
- 167:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
- 168:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Summary:
- 169:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  This function cancels transmission of a message that has been queued to be
- 170:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  transmitted. Values between 0 and 7 are valid.
- 171:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
- 172:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Parameters:
- 173:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  bufferId: The mailbox number.
- 174:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
- 175:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Return:
- 176:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  None.
- 177:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
- 178:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *******************************************************************************/
- 179:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** void CAN_TxCancel(uint8 bufferId) 
- 180:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** {
+ 162:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 163:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 164:Generated_Source\PSoC4/CAN_TX_RX_func.c **** /*******************************************************************************
+ 165:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_TxCancel
+ 166:Generated_Source\PSoC4/CAN_TX_RX_func.c **** ********************************************************************************
+ 167:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+ 168:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Summary:
+ 169:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  This function cancels transmission of a message that has been queued to be
+ 170:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  transmitted. Values between 0 and 7 are valid.
+ 171:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+ 172:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Parameters:
+ 173:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  bufferId: The mailbox number.
+ 174:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+ 175:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Return:
+ 176:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  None.
+ 177:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+ 178:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *******************************************************************************/
+ 179:Generated_Source\PSoC4/CAN_TX_RX_func.c **** void CAN_TxCancel(uint8 bufferId) 
+ 180:Generated_Source\PSoC4/CAN_TX_RX_func.c **** {
  309              		.loc 1 180 0
  310              		.cfi_startproc
  311              	.LVL27:
- 181:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     if (bufferId < CAN_NUMBER_OF_TX_MAILBOXES)
+ 181:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     if (bufferId < CAN_NUMBER_OF_TX_MAILBOXES)
  312              		.loc 1 181 0
  313 0000 0728     		cmp	r0, #7
  314 0002 09D8     		bhi	.L25
- 182:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
- 183:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         CAN_TX_ABORT_MESSAGE(bufferId);
+ 182:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+ 183:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         CAN_TX_ABORT_MESSAGE(bufferId);
  315              		.loc 1 183 0
  316 0004 0001     		lsl	r0, r0, #4
  317              	.LVL28:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  319 0008 9C46     		mov	ip, r3
  320 000a 6044     		add	r0, r0, ip
  321 000c 0368     		ldr	r3, [r0]
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 10
 
 
  322 000e 0322     		mov	r2, #3
@@ -547,8 +547,8 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  325 0014 1343     		orr	r3, r2
  326 0016 0360     		str	r3, [r0]
  327              	.L25:
- 184:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
- 185:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** }
+ 184:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 185:Generated_Source\PSoC4/CAN_TX_RX_func.c **** }
  328              		.loc 1 185 0
  329              		@ sp needed
  330 0018 7047     		bx	lr
@@ -567,56 +567,56 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  343              		.type	CAN_SendMsg0, %function
  344              	CAN_SendMsg0:
  345              	.LFB3:
- 186:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 187:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 188:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX0_FUNC_ENABLE)
- 189:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
- 190:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg0
- 191:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
- 192:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 193:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
- 194:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 0. The function checks
- 195:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 0 doesn't already have un-transmitted messages waiting for
- 196:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 197:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 198:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 199:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
- 200:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
- 201:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 202:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
- 203:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 204:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
- 205:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 206:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 207:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 208:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
- 209:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg0(void) 
- 210:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+ 186:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 187:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 188:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX0_FUNC_ENABLE)
+ 189:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 190:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg0
+ 191:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
+ 192:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 193:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
+ 194:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 0. The function checks
+ 195:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 0 doesn't already have un-transmitted messages waiting for
+ 196:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 197:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 198:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 199:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
+ 200:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
+ 201:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 202:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
+ 203:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 204:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
+ 205:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 206:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 207:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 208:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 209:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg0(void) 
+ 210:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
  346              		.loc 1 210 0
  347              		.cfi_startproc
  348              	.LVL29:
- 211:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 212:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 213:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 11
+ 211:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 212:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 213:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 11
 
 
- 214:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[0u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 215:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 216:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(0u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 214:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[0u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 215:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 216:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(0u) & CAN_TX_REQUEST_PENDING) != 0u)
  349              		.loc 1 216 0
  350 0000 0A4B     		ldr	r3, .L32
  351 0002 1B68     		ldr	r3, [r3]
  352 0004 DB07     		lsl	r3, r3, #31
  353 0006 0FD4     		bmi	.L31
- 217:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 218:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 219:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 220:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 221:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
- 222:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 223:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_0_TRASMITTED` */
- 224:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(0,0,dato_enviado);
+ 217:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 218:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 219:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 220:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 221:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
+ 222:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 223:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_0_TRASMITTED` */
+ 224:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(0,0,dato_enviado);
  354              		.loc 1 224 0
  355 0008 0949     		ldr	r1, .L32+4
  356 000a 0B68     		ldr	r3, [r1]
@@ -627,38 +627,38 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  361 0014 1206     		lsl	r2, r2, #24
  362 0016 1343     		orr	r3, r2
  363 0018 0B60     		str	r3, [r1]
- 225:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
- 226:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 227:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_0_CALLBACK
- 228:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_0_Callback();
- 229:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_0_CALLBACK */
- 230:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 231:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(0u),
+ 225:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
+ 226:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 227:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_0_CALLBACK
+ 228:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_0_Callback();
+ 229:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_0_CALLBACK */
+ 230:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 231:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(0u),
  364              		.loc 1 231 0
  365 001a 044A     		ldr	r2, .L32
  366 001c 1168     		ldr	r1, [r2]
  367 001e 0123     		mov	r3, #1
  368 0020 0B43     		orr	r3, r1
  369 0022 1360     		str	r3, [r2]
- 211:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 211:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
  370              		.loc 1 211 0
  371 0024 0020     		mov	r0, #0
  372 0026 00E0     		b	.L30
  373              	.L31:
- 219:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 219:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
  374              		.loc 1 219 0
  375 0028 0120     		mov	r0, #1
  376              	.L30:
  377              	.LVL30:
- 232:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(0u)) | CAN_SEND_MESSAGE);
- 233:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 234:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 235:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
- 236:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 232:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(0u)) | CAN_SEND_MESSAGE);
+ 233:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 234:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 235:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
+ 236:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
  378              		.loc 1 236 0
  379              		@ sp needed
  380 002a 7047     		bx	lr
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 12
 
 
  381              	.L33:
@@ -678,422 +678,422 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  395              		.type	CAN_ReceiveMsg, %function
  396              	CAN_ReceiveMsg:
  397              	.LFB4:
- 237:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX0_FUNC_ENABLE */
- 238:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 239:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 240:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX1_FUNC_ENABLE)
- 241:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
- 242:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg1
- 243:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
- 244:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 245:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
- 246:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 1. The function checks
- 247:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 1 doesn't already have un-transmitted messages waiting for
- 248:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 249:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 250:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 251:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
- 252:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
- 253:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 254:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
- 255:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 256:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
- 257:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 258:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 259:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 260:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
- 261:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg1(void) 
- 262:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
- 263:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 264:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 265:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 266:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[1u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 267:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 268:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(1u) & CAN_TX_REQUEST_PENDING) != 0u)
- 269:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 270:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 271:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 272:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 273:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
- 274:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 275:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_1_TRASMITTED` */
- 276:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 13
+ 237:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX0_FUNC_ENABLE */
+ 238:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 239:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 240:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX1_FUNC_ENABLE)
+ 241:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 242:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg1
+ 243:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
+ 244:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 245:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
+ 246:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 1. The function checks
+ 247:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 1 doesn't already have un-transmitted messages waiting for
+ 248:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 249:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 250:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 251:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
+ 252:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
+ 253:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 254:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
+ 255:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 256:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
+ 257:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 258:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 259:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 260:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 261:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg1(void) 
+ 262:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+ 263:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 264:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 265:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 266:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[1u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 267:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 268:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(1u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 269:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 270:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 271:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 272:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 273:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
+ 274:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 275:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_1_TRASMITTED` */
+ 276:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 13
 
 
- 277:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
- 278:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 279:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_1_CALLBACK
- 280:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_1_Callback();
- 281:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_1_CALLBACK */
- 282:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 283:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(1u),
- 284:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(1u)) | CAN_SEND_MESSAGE);
- 285:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 286:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 287:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
- 288:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
- 289:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX1_FUNC_ENABLE */
- 290:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 291:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 292:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX2_FUNC_ENABLE)
- 293:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
- 294:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg2
- 295:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
- 296:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 297:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
- 298:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 2. The function checks
- 299:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 2 doesn't already have un-transmitted messages waiting for
- 300:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 301:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 302:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 303:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
- 304:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
- 305:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 306:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
- 307:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 308:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
- 309:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 310:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 311:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 312:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
- 313:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg2(void) 
- 314:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
- 315:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 316:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 317:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 318:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[2u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 319:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 320:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(2u) & CAN_TX_REQUEST_PENDING) != 0u)
- 321:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 322:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 323:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 324:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 325:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
- 326:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 327:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_2_TRASMITTED` */
- 328:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 329:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
- 330:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 331:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_2_CALLBACK
- 332:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_2_Callback();
- 333:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_2_CALLBACK */
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 14
+ 277:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
+ 278:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 279:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_1_CALLBACK
+ 280:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_1_Callback();
+ 281:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_1_CALLBACK */
+ 282:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 283:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(1u),
+ 284:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(1u)) | CAN_SEND_MESSAGE);
+ 285:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 286:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 287:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
+ 288:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 289:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX1_FUNC_ENABLE */
+ 290:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 291:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 292:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX2_FUNC_ENABLE)
+ 293:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 294:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg2
+ 295:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
+ 296:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 297:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
+ 298:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 2. The function checks
+ 299:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 2 doesn't already have un-transmitted messages waiting for
+ 300:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 301:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 302:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 303:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
+ 304:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
+ 305:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 306:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
+ 307:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 308:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
+ 309:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 310:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 311:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 312:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 313:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg2(void) 
+ 314:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+ 315:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 316:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 317:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 318:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[2u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 319:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 320:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(2u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 321:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 322:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 323:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 324:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 325:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
+ 326:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 327:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_2_TRASMITTED` */
+ 328:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 329:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
+ 330:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 331:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_2_CALLBACK
+ 332:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_2_Callback();
+ 333:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_2_CALLBACK */
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 14
 
 
- 334:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 335:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(2u),
- 336:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(2u)) | CAN_SEND_MESSAGE);
- 337:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 338:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 339:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
- 340:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
- 341:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX2_FUNC_ENABLE */
- 342:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 343:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 344:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX3_FUNC_ENABLE)
- 345:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
- 346:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg3
- 347:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
- 348:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 349:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
- 350:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 3. The function checks
- 351:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 3 doesn't already have un-transmitted messages waiting for
- 352:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 353:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 354:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 355:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
- 356:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
- 357:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 358:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
- 359:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 360:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
- 361:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 362:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 363:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 364:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
- 365:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg3(void) 
- 366:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
- 367:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 368:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 369:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 370:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[3u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 371:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 372:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(3u) & CAN_TX_REQUEST_PENDING) != 0u)
- 373:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 374:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 375:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 376:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 377:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
- 378:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 379:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_3_TRASMITTED` */
- 380:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 381:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
- 382:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 383:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_3_CALLBACK
- 384:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_3_Callback();
- 385:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_3_CALLBACK */
- 386:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 387:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(3u),
- 388:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(3u)) | CAN_SEND_MESSAGE);
- 389:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 390:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 15
+ 334:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 335:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(2u),
+ 336:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(2u)) | CAN_SEND_MESSAGE);
+ 337:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 338:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 339:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
+ 340:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 341:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX2_FUNC_ENABLE */
+ 342:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 343:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 344:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX3_FUNC_ENABLE)
+ 345:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 346:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg3
+ 347:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
+ 348:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 349:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
+ 350:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 3. The function checks
+ 351:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 3 doesn't already have un-transmitted messages waiting for
+ 352:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 353:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 354:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 355:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
+ 356:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
+ 357:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 358:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
+ 359:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 360:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
+ 361:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 362:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 363:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 364:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 365:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg3(void) 
+ 366:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+ 367:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 368:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 369:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 370:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[3u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 371:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 372:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(3u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 373:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 374:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 375:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 376:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 377:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
+ 378:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 379:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_3_TRASMITTED` */
+ 380:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 381:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
+ 382:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 383:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_3_CALLBACK
+ 384:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_3_Callback();
+ 385:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_3_CALLBACK */
+ 386:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 387:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(3u),
+ 388:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(3u)) | CAN_SEND_MESSAGE);
+ 389:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 390:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 15
 
 
- 391:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
- 392:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
- 393:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX3_FUNC_ENABLE */
- 394:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 395:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 396:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX4_FUNC_ENABLE)
- 397:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
- 398:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg4
- 399:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
- 400:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 401:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
- 402:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 4. The function checks
- 403:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 4 doesn't already have un-transmitted messages waiting for
- 404:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 405:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 406:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 407:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
- 408:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
- 409:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 410:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
- 411:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 412:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
- 413:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 414:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 415:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 416:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
- 417:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg4(void) 
- 418:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
- 419:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 420:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 421:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 422:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[4u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 423:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 424:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(4u) & CAN_TX_REQUEST_PENDING) != 0u)
- 425:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 426:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 427:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 428:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 429:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
- 430:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 431:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_4_TRASMITTED` */
- 432:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 433:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
- 434:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 435:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_4_CALLBACK
- 436:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_4_Callback();
- 437:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_4_CALLBACK */
- 438:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 439:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(4u),
- 440:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(4u)) | CAN_SEND_MESSAGE);
- 441:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 442:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 443:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
- 444:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
- 445:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX4_FUNC_ENABLE */
- 446:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 447:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 16
+ 391:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
+ 392:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 393:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX3_FUNC_ENABLE */
+ 394:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 395:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 396:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX4_FUNC_ENABLE)
+ 397:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 398:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg4
+ 399:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
+ 400:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 401:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
+ 402:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 4. The function checks
+ 403:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 4 doesn't already have un-transmitted messages waiting for
+ 404:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 405:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 406:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 407:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
+ 408:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
+ 409:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 410:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
+ 411:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 412:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
+ 413:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 414:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 415:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 416:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 417:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg4(void) 
+ 418:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+ 419:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 420:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 421:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 422:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[4u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 423:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 424:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(4u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 425:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 426:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 427:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 428:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 429:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
+ 430:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 431:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_4_TRASMITTED` */
+ 432:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 433:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
+ 434:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 435:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_4_CALLBACK
+ 436:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_4_Callback();
+ 437:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_4_CALLBACK */
+ 438:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 439:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(4u),
+ 440:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(4u)) | CAN_SEND_MESSAGE);
+ 441:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 442:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 443:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
+ 444:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 445:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX4_FUNC_ENABLE */
+ 446:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 447:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 16
 
 
- 448:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX5_FUNC_ENABLE)
- 449:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
- 450:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg5
- 451:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
- 452:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 453:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
- 454:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 5. The function checks
- 455:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 5 doesn't already have un-transmitted messages waiting for
- 456:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 457:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 458:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 459:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
- 460:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
- 461:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 462:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
- 463:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 464:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
- 465:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 466:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 467:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 468:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
- 469:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg5(void) 
- 470:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
- 471:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 472:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 473:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 474:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[5u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 475:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 476:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(5u) & CAN_TX_REQUEST_PENDING) != 0u)
- 477:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 478:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 479:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 480:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 481:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
- 482:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 483:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_5_TRASMITTED` */
- 484:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 485:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
- 486:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 487:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_5_CALLBACK
- 488:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_5_Callback();
- 489:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_5_CALLBACK */
- 490:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 491:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(5u),
- 492:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(5u)) | CAN_SEND_MESSAGE);
- 493:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 494:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 495:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
- 496:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
- 497:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX5_FUNC_ENABLE */
- 498:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 499:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 500:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX6_FUNC_ENABLE)
- 501:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
- 502:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg6
- 503:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
- 504:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 17
+ 448:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX5_FUNC_ENABLE)
+ 449:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 450:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg5
+ 451:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
+ 452:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 453:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
+ 454:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 5. The function checks
+ 455:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 5 doesn't already have un-transmitted messages waiting for
+ 456:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 457:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 458:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 459:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
+ 460:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
+ 461:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 462:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
+ 463:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 464:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
+ 465:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 466:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 467:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 468:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 469:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg5(void) 
+ 470:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+ 471:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 472:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 473:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 474:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[5u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 475:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 476:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(5u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 477:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 478:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 479:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 480:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 481:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
+ 482:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 483:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_5_TRASMITTED` */
+ 484:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 485:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
+ 486:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 487:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_5_CALLBACK
+ 488:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_5_Callback();
+ 489:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_5_CALLBACK */
+ 490:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 491:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(5u),
+ 492:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(5u)) | CAN_SEND_MESSAGE);
+ 493:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 494:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 495:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
+ 496:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 497:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX5_FUNC_ENABLE */
+ 498:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 499:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 500:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX6_FUNC_ENABLE)
+ 501:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 502:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg6
+ 503:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
+ 504:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 17
 
 
- 505:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
- 506:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 6. The function checks
- 507:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 6 doesn't already have un-transmitted messages waiting for
- 508:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 509:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 510:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 511:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
- 512:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
- 513:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 514:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
- 515:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 516:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
- 517:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 518:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 519:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 520:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
- 521:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg6(void) 
- 522:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
- 523:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 524:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 525:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 526:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[6u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 527:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 528:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(6u) & CAN_TX_REQUEST_PENDING) != 0u)
- 529:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 530:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 531:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 532:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 533:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
- 534:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 535:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_6_TRASMITTED` */
- 536:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 537:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
- 538:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 539:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_6_CALLBACK
- 540:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_6_Callback();
- 541:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_6_CALLBACK */
- 542:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 543:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(6u),
- 544:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(6u)) | CAN_SEND_MESSAGE);
- 545:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 546:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 547:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
- 548:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
- 549:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX6_FUNC_ENABLE */
- 550:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 551:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 552:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX7_FUNC_ENABLE)
- 553:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
- 554:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg7)
- 555:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
- 556:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 557:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
- 558:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 7. The function checks
- 559:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 7 doesn't already have un-transmitted messages waiting for
- 560:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 561:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 18
+ 505:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
+ 506:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 6. The function checks
+ 507:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 6 doesn't already have un-transmitted messages waiting for
+ 508:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 509:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 510:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 511:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
+ 512:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
+ 513:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 514:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
+ 515:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 516:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
+ 517:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 518:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 519:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 520:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 521:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg6(void) 
+ 522:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+ 523:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 524:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 525:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 526:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[6u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 527:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 528:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(6u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 529:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 530:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 531:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 532:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 533:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
+ 534:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 535:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_6_TRASMITTED` */
+ 536:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 537:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
+ 538:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 539:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_6_CALLBACK
+ 540:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_6_Callback();
+ 541:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_6_CALLBACK */
+ 542:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 543:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(6u),
+ 544:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(6u)) | CAN_SEND_MESSAGE);
+ 545:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 546:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 547:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
+ 548:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 549:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX6_FUNC_ENABLE */
+ 550:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 551:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 552:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_TX7_FUNC_ENABLE)
+ 553:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 554:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg7)
+ 555:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
+ 556:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 557:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
+ 558:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 7. The function checks
+ 559:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  if mailbox 7 doesn't already have un-transmitted messages waiting for
+ 560:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 561:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 18
 
 
- 562:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 563:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
- 564:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
- 565:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 566:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
- 567:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 568:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
- 569:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 570:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 571:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 572:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
- 573:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg7(void) 
- 574:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
- 575:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 576:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 577:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 578:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[7u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 579:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 580:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(7u) & CAN_TX_REQUEST_PENDING) != 0u)
- 581:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 582:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 583:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 584:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 585:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
- 586:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
- 587:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_7_TRASMITTED` */
- 588:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 589:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
- 590:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 591:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_7_CALLBACK
- 592:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_7_Callback();
- 593:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_7_CALLBACK */
- 594:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 595:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(7u),
- 596:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(7u)) | CAN_SEND_MESSAGE);
- 597:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
- 598:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 599:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
- 600:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
- 601:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX7_FUNC_ENABLE */
- 602:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 603:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 604:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** /*******************************************************************************
- 605:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_ReceiveMsg
- 606:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** ********************************************************************************
- 607:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
- 608:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Summary:
- 609:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  This function is the entry point to Receive Message Interrupt for Basic
- 610:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  mailboxes. Clears the Receive particular Message interrupt flag. Generated
- 611:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  only if one of the Receive mailboxes is designed as Basic.
- 612:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
- 613:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Parameters:
- 614:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  rxMailbox: The mailbox number that trig Receive Message Interrupt.
- 615:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
- 616:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Return:
- 617:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  None.
- 618:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 19
+ 562:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 563:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
+ 564:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
+ 565:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 566:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
+ 567:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 568:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *   Define                             Description
+ 569:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 570:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 571:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 572:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 573:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg7(void) 
+ 574:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+ 575:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 576:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 577:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 578:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX[7u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 579:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 580:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(7u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 581:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 582:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 583:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 584:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 585:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             else
+ 586:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             {
+ 587:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_7_TRASMITTED` */
+ 588:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 589:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 /* `#END` */
+ 590:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 591:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_7_CALLBACK
+ 592:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                     CAN_SendMsg_7_Callback();
+ 593:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_7_CALLBACK */
+ 594:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 595:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(7u),
+ 596:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(7u)) | CAN_SEND_MESSAGE);
+ 597:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             }
+ 598:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 599:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         return (result);
+ 600:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 601:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #endif /* CAN_TX7_FUNC_ENABLE */
+ 602:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 603:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 604:Generated_Source\PSoC4/CAN_TX_RX_func.c **** /*******************************************************************************
+ 605:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_ReceiveMsg
+ 606:Generated_Source\PSoC4/CAN_TX_RX_func.c **** ********************************************************************************
+ 607:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+ 608:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Summary:
+ 609:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  This function is the entry point to Receive Message Interrupt for Basic
+ 610:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  mailboxes. Clears the Receive particular Message interrupt flag. Generated
+ 611:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  only if one of the Receive mailboxes is designed as Basic.
+ 612:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+ 613:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Parameters:
+ 614:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  rxMailbox: The mailbox number that trig Receive Message Interrupt.
+ 615:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+ 616:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Return:
+ 617:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  None.
+ 618:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 19
 
 
- 619:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Reentrant:
- 620:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  Depends on the Customer code.
- 621:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
- 622:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** *******************************************************************************/
- 623:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** void CAN_ReceiveMsg(uint8 rxMailbox) 
- 624:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** {
+ 619:Generated_Source\PSoC4/CAN_TX_RX_func.c **** * Reentrant:
+ 620:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *  Depends on the Customer code.
+ 621:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *
+ 622:Generated_Source\PSoC4/CAN_TX_RX_func.c **** *******************************************************************************/
+ 623:Generated_Source\PSoC4/CAN_TX_RX_func.c **** void CAN_ReceiveMsg(uint8 rxMailbox) 
+ 624:Generated_Source\PSoC4/CAN_TX_RX_func.c **** {
  398              		.loc 1 624 0
  399              		.cfi_startproc
  400              	.LVL31:
- 625:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     #if (CY_PSOC3 || CY_PSOC5)
- 626:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         if ((CAN_RX[rxMailbox].rxcmd.byte[0u] & CAN_RX_ACK_MSG) != 0u)
- 627:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     #else  /* CY_PSOC4 */
- 628:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         if ((CAN_RX_CMD_REG(rxMailbox) & CAN_RX_ACK_MSG) != 0u)
+ 625:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     #if (CY_PSOC3 || CY_PSOC5)
+ 626:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         if ((CAN_RX[rxMailbox].rxcmd.byte[0u] & CAN_RX_ACK_MSG) != 0u)
+ 627:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     #else  /* CY_PSOC4 */
+ 628:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         if ((CAN_RX_CMD_REG(rxMailbox) & CAN_RX_ACK_MSG) != 0u)
  401              		.loc 1 628 0
  402 0000 4001     		lsl	r0, r0, #5
  403              	.LVL32:
@@ -1103,29 +1103,29 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  407 0008 0368     		ldr	r3, [r0]
  408 000a DB07     		lsl	r3, r3, #31
  409 000c 03D5     		bpl	.L34
- 629:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
- 630:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
- 631:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             /* `#START MESSAGE_BASIC_RECEIVED` */
- 632:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 633:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             /* `#END` */
- 634:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 635:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             #ifdef CAN_RECEIVE_MSG_CALLBACK
- 636:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CAN_ReceiveMsg_Callback();
- 637:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             #endif /* CAN_RECEIVE_MSG_CALLBACK */
- 638:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 639:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             #if (CY_PSOC3 || CY_PSOC5)
- 640:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CAN_RX[rxMailbox].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
- 641:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             #else  /* CY_PSOC4 */
- 642:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CAN_RX_CMD_REG(rxMailbox) |= CAN_RX_ACK_MSG;
+ 629:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+ 630:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         {
+ 631:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             /* `#START MESSAGE_BASIC_RECEIVED` */
+ 632:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 633:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             /* `#END` */
+ 634:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 635:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             #ifdef CAN_RECEIVE_MSG_CALLBACK
+ 636:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CAN_ReceiveMsg_Callback();
+ 637:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             #endif /* CAN_RECEIVE_MSG_CALLBACK */
+ 638:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 639:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             #if (CY_PSOC3 || CY_PSOC5)
+ 640:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CAN_RX[rxMailbox].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
+ 641:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             #else  /* CY_PSOC4 */
+ 642:Generated_Source\PSoC4/CAN_TX_RX_func.c ****                 CAN_RX_CMD_REG(rxMailbox) |= CAN_RX_ACK_MSG;
  410              		.loc 1 642 0
  411 000e 0268     		ldr	r2, [r0]
  412 0010 0123     		mov	r3, #1
  413 0012 1343     		orr	r3, r2
  414 0014 0360     		str	r3, [r0]
  415              	.L34:
- 643:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             #endif /* CY_PSOC3 || CY_PSOC5 */
- 644:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         }
- 645:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** }
+ 643:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             #endif /* CY_PSOC3 || CY_PSOC5 */
+ 644:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         }
+ 645:Generated_Source\PSoC4/CAN_TX_RX_func.c **** }
  416              		.loc 1 645 0
  417              		@ sp needed
  418 0016 7047     		bx	lr
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  425              		.size	CAN_ReceiveMsg, .-CAN_ReceiveMsg
  426              		.section	.text.CAN_ReceiveMsg0,"ax",%progbits
  427              		.align	2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 20
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 20
 
 
  428              		.global	CAN_ReceiveMsg0
@@ -1147,58 +1147,58 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  431              		.type	CAN_ReceiveMsg0, %function
  432              	CAN_ReceiveMsg0:
  433              	.LFB5:
- 646:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 647:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 648:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_RX0_FUNC_ENABLE)
- 649:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
- 650:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsg0
- 651:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
- 652:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 653:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
- 654:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 0 Interrupt. Clears the
- 655:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Receive Message 0 interrupt flag. Generated only for the Receive mailbox
- 656:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  designed as Full.
- 657:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 658:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
- 659:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
- 660:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 661:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
- 662:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
- 663:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 664:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Reentrant:
- 665:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
- 666:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
- 667:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
- 668:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     void CAN_ReceiveMsg0(void) 
- 669:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
+ 646:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 647:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 648:Generated_Source\PSoC4/CAN_TX_RX_func.c **** #if (CAN_RX0_FUNC_ENABLE)
+ 649:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 650:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsg0
+ 651:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     ********************************************************************************
+ 652:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 653:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Summary:
+ 654:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 0 Interrupt. Clears the
+ 655:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Receive Message 0 interrupt flag. Generated only for the Receive mailbox
+ 656:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  designed as Full.
+ 657:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 658:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Parameters:
+ 659:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
+ 660:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 661:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Return:
+ 662:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  None.
+ 663:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 664:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     * Reentrant:
+ 665:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 666:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *
+ 667:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 668:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     void CAN_ReceiveMsg0(void) 
+ 669:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     {
  434              		.loc 1 669 0
  435              		.cfi_startproc
- 670:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         /* `#START MESSAGE_0_RECEIVED` */
- 671:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         dato_recibido=CAN_RX_DATA_BYTE(0,0);
+ 670:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         /* `#START MESSAGE_0_RECEIVED` */
+ 671:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         dato_recibido=CAN_RX_DATA_BYTE(0,0);
  436              		.loc 1 671 0
  437 0000 054B     		ldr	r3, .L39
  438 0002 1B68     		ldr	r3, [r3]
  439 0004 1B0E     		lsr	r3, r3, #24
  440 0006 054A     		ldr	r2, .L39+4
  441 0008 1370     		strb	r3, [r2]
- 672:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         /* `#END` */
- 673:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 674:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_0_CALLBACK
- 675:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_0_Callback();
- 676:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_0_CALLBACK */
- 677:.\Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
- 678:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****         CAN_RX_ACK_MESSAGE(0u);
+ 672:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         /* `#END` */
+ 673:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 674:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_0_CALLBACK
+ 675:Generated_Source\PSoC4/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_0_Callback();
+ 676:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_0_CALLBACK */
+ 677:Generated_Source\PSoC4/CAN_TX_RX_func.c **** 
+ 678:Generated_Source\PSoC4/CAN_TX_RX_func.c ****         CAN_RX_ACK_MESSAGE(0u);
  442              		.loc 1 678 0
  443 000a 054A     		ldr	r2, .L39+8
  444 000c 1168     		ldr	r1, [r2]
  445 000e 0123     		mov	r3, #1
  446 0010 0B43     		orr	r3, r1
  447 0012 1360     		str	r3, [r2]
- 679:.\Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
+ 679:Generated_Source\PSoC4/CAN_TX_RX_func.c ****     }
  448              		.loc 1 679 0
  449              		@ sp needed
  450 0014 7047     		bx	lr
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 21
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 21
 
 
  451              	.L40:
@@ -1212,9 +1212,9 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  459              		.size	CAN_ReceiveMsg0, .-CAN_ReceiveMsg0
  460              		.text
  461              	.Letext0:
- 462              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
- 463              		.file 3 ".\\Generated_Source\\PSoC4\\CAN.h"
- 464              		.file 4 ".\\Generated_Source\\PSoC4\\CyLib.h"
+ 462              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 463              		.file 3 "Generated_Source\\PSoC4\\CAN.h"
+ 464              		.file 4 "Generated_Source\\PSoC4\\CyLib.h"
  465              		.section	.debug_info,"",%progbits
  466              	.Ldebug_info0:
  467 0000 CC030000 		.4byte	0x3cc
@@ -1222,17 +1222,17 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  469 0006 00000000 		.4byte	.Ldebug_abbrev0
  470 000a 04       		.byte	0x4
  471 000b 01       		.uleb128 0x1
- 472 000c CC010000 		.4byte	.LASF47
+ 472 000c 89010000 		.4byte	.LASF47
  473 0010 01       		.byte	0x1
- 474 0011 9B010000 		.4byte	.LASF48
- 475 0015 5A010000 		.4byte	.LASF49
+ 474 0011 12010000 		.4byte	.LASF48
+ 475 0015 48020000 		.4byte	.LASF49
  476 0019 00000000 		.4byte	.Ldebug_ranges0+0
  477 001d 00000000 		.4byte	0
  478 0021 00000000 		.4byte	.Ldebug_line0
  479 0025 02       		.uleb128 0x2
  480 0026 01       		.byte	0x1
  481 0027 06       		.byte	0x6
- 482 0028 D4020000 		.4byte	.LASF0
+ 482 0028 FC020000 		.4byte	.LASF0
  483 002c 02       		.uleb128 0x2
  484 002d 01       		.byte	0x1
  485 002e 08       		.byte	0x8
@@ -1248,7 +1248,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  495 0041 02       		.uleb128 0x2
  496 0042 04       		.byte	0x4
  497 0043 05       		.byte	0x5
- 498 0044 BF020000 		.4byte	.LASF4
+ 498 0044 E7020000 		.4byte	.LASF4
  499 0048 02       		.uleb128 0x2
  500 0049 04       		.byte	0x4
  501 004a 07       		.byte	0x7
@@ -1256,14 +1256,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  503 004f 02       		.uleb128 0x2
  504 0050 08       		.byte	0x8
  505 0051 05       		.byte	0x5
- 506 0052 8B020000 		.4byte	.LASF6
+ 506 0052 B3020000 		.4byte	.LASF6
  507 0056 02       		.uleb128 0x2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 22
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 22
 
 
  508 0057 08       		.byte	0x8
  509 0058 07       		.byte	0x7
- 510 0059 43010000 		.4byte	.LASF7
+ 510 0059 6B010000 		.4byte	.LASF7
  511 005d 03       		.uleb128 0x3
  512 005e 04       		.byte	0x4
  513 005f 05       		.byte	0x5
@@ -1271,14 +1271,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  515 0064 02       		.uleb128 0x2
  516 0065 04       		.byte	0x4
  517 0066 07       		.byte	0x7
- 518 0067 36010000 		.4byte	.LASF8
+ 518 0067 5E010000 		.4byte	.LASF8
  519 006b 04       		.uleb128 0x4
  520 006c CD000000 		.4byte	.LASF9
  521 0070 02       		.byte	0x2
  522 0071 9801     		.2byte	0x198
  523 0073 2C000000 		.4byte	0x2c
  524 0077 04       		.uleb128 0x4
- 525 0078 22010000 		.4byte	.LASF10
+ 525 0078 4A010000 		.4byte	.LASF10
  526 007c 02       		.byte	0x2
  527 007d 9A01     		.2byte	0x19a
  528 007f 48000000 		.4byte	0x48
@@ -1311,14 +1311,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  555 00ba 02       		.uleb128 0x2
  556 00bb 04       		.byte	0x4
  557 00bc 07       		.byte	0x7
- 558 00bd 7B020000 		.4byte	.LASF16
+ 558 00bd 38020000 		.4byte	.LASF16
  559 00c1 06       		.uleb128 0x6
  560 00c2 08       		.byte	0x8
  561 00c3 03       		.byte	0x3
  562 00c4 6F       		.byte	0x6f
  563 00c5 D6000000 		.4byte	0xd6
  564 00c9 07       		.uleb128 0x7
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 23
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 23
 
 
  565 00ca 6C000000 		.4byte	.LASF18
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  619 0139 00       		.byte	0
  620 013a 00       		.byte	0
  621 013b 08       		.uleb128 0x8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 24
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 24
 
 
  622 013c 98000000 		.4byte	0x98
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  676 01aa 0B       		.uleb128 0xb
  677 01ab 6D736700 		.ascii	"msg\000"
  678 01af 03       		.byte	0x3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 25
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 25
 
 
  679 01b0 8B       		.byte	0x8b
@@ -1459,7 +1459,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  694 01cb A0       		.byte	0xa0
  695 01cc 25020000 		.4byte	0x225
  696 01d0 07       		.uleb128 0x7
- 697 01d1 75020000 		.4byte	.LASF22
+ 697 01d1 32020000 		.4byte	.LASF22
  698 01d5 03       		.byte	0x3
  699 01d6 A2       		.byte	0xa2
  700 01d7 50010000 		.4byte	0x150
@@ -1483,13 +1483,13 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  718 01fb 50010000 		.4byte	0x150
  719 01ff 10       		.byte	0x10
  720 0200 07       		.uleb128 0x7
- 721 0201 B9020000 		.4byte	.LASF26
+ 721 0201 E1020000 		.4byte	.LASF26
  722 0205 03       		.byte	0x3
  723 0206 A6       		.byte	0xa6
  724 0207 50010000 		.4byte	0x150
  725 020b 14       		.byte	0x14
  726 020c 07       		.uleb128 0x7
- 727 020d 84020000 		.4byte	.LASF27
+ 727 020d 41020000 		.4byte	.LASF27
  728 0211 03       		.byte	0x3
  729 0212 A7       		.byte	0xa7
  730 0213 50010000 		.4byte	0x150
@@ -1498,14 +1498,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  733 0219 78000000 		.4byte	.LASF28
  734 021d 03       		.byte	0x3
  735 021e A8       		.byte	0xa8
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 26
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 26
 
 
  736 021f 50010000 		.4byte	0x150
  737 0223 1C       		.byte	0x1c
  738 0224 00       		.byte	0
  739 0225 0A       		.uleb128 0xa
- 740 0226 67020000 		.4byte	.LASF29
+ 740 0226 24020000 		.4byte	.LASF29
  741 022a 03       		.byte	0x3
  742 022b A9       		.byte	0xa9
  743 022c C8010000 		.4byte	0x1c8
@@ -1527,7 +1527,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  759 024b 50010000 		.4byte	0x150
  760 024f 04       		.byte	0x4
  761 0250 07       		.uleb128 0x7
- 762 0251 E0020000 		.4byte	.LASF32
+ 762 0251 08030000 		.4byte	.LASF32
  763 0255 03       		.byte	0x3
  764 0256 B0       		.byte	0xb0
  765 0257 1B010000 		.4byte	0x11b
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  790 0291 6900     		.ascii	"i\000"
  791 0293 01       		.byte	0x1
  792 0294 37       		.byte	0x37
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 27
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 27
 
 
  793 0295 6B000000 		.4byte	0x6b
@@ -1582,7 +1582,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  811 02c0 6B000000 		.4byte	0x6b
  812 02c4 A8000000 		.4byte	.LLST4
  813 02c8 10       		.uleb128 0x10
- 814 02c9 C5010000 		.4byte	.LASF36
+ 814 02c9 82010000 		.4byte	.LASF36
  815 02cd 01       		.byte	0x1
  816 02ce 39       		.byte	0x39
  817 02cf 6B000000 		.4byte	0x6b
@@ -1618,11 +1618,11 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  847 030b 0F030000 		.4byte	0x30f
  848 030f 14       		.uleb128 0x14
  849 0310 BD010000 		.4byte	0x1bd
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 28
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 28
 
 
  850 0314 15       		.uleb128 0x15
- 851 0315 5A020000 		.4byte	.LASF42
+ 851 0315 17020000 		.4byte	.LASF42
  852 0319 01       		.byte	0x1
  853 031a B3       		.byte	0xb3
  854 031b 00000000 		.4byte	.LFB2
@@ -1631,7 +1631,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  857 0324 9C       		.byte	0x9c
  858 0325 39030000 		.4byte	0x339
  859 0329 0E       		.uleb128 0xe
- 860 032a 99020000 		.4byte	.LASF39
+ 860 032a C1020000 		.4byte	.LASF39
  861 032e 01       		.byte	0x1
  862 032f B3       		.byte	0xb3
  863 0330 6B000000 		.4byte	0x6b
@@ -1648,14 +1648,14 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  874 034d 9C       		.byte	0x9c
  875 034e 62030000 		.4byte	0x362
  876 0352 10       		.uleb128 0x10
- 877 0353 C5010000 		.4byte	.LASF36
+ 877 0353 82010000 		.4byte	.LASF36
  878 0357 01       		.byte	0x1
  879 0358 D3       		.byte	0xd3
  880 0359 6B000000 		.4byte	0x6b
  881 035d 5E010000 		.4byte	.LLST8
  882 0361 00       		.byte	0
  883 0362 16       		.uleb128 0x16
- 884 0363 E7020000 		.4byte	.LASF43
+ 884 0363 0F030000 		.4byte	.LASF43
  885 0367 01       		.byte	0x1
  886 0368 6F02     		.2byte	0x26f
  887 036a 00000000 		.4byte	.LFB4
@@ -1664,25 +1664,25 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  890 0373 9C       		.byte	0x9c
  891 0374 89030000 		.4byte	0x389
  892 0378 17       		.uleb128 0x17
- 893 0379 A2020000 		.4byte	.LASF44
+ 893 0379 CA020000 		.4byte	.LASF44
  894 037d 01       		.byte	0x1
  895 037e 6F02     		.2byte	0x26f
  896 0380 6B000000 		.4byte	0x6b
  897 0384 7D010000 		.4byte	.LLST9
  898 0388 00       		.byte	0
  899 0389 18       		.uleb128 0x18
- 900 038a 12010000 		.4byte	.LASF50
+ 900 038a 3A010000 		.4byte	.LASF50
  901 038e 01       		.byte	0x1
  902 038f 9C02     		.2byte	0x29c
  903 0391 00000000 		.4byte	.LFB5
  904 0395 24000000 		.4byte	.LFE5-.LFB5
  905 0399 01       		.uleb128 0x1
  906 039a 9C       		.byte	0x9c
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 29
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 29
 
 
  907 039b 19       		.uleb128 0x19
- 908 039c 29010000 		.4byte	.LASF45
+ 908 039c 51010000 		.4byte	.LASF45
  909 03a0 01       		.byte	0x1
  910 03a1 1C       		.byte	0x1c
  911 03a2 6B000000 		.4byte	0x6b
@@ -1692,7 +1692,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  915 03ac 1D       		.byte	0x1d
  916 03ad 6B000000 		.4byte	0x6b
  917 03b1 1A       		.uleb128 0x1a
- 918 03b2 AC020000 		.4byte	.LASF51
+ 918 03b2 D4020000 		.4byte	.LASF51
  919 03b6 04       		.byte	0x4
  920 03b7 C3       		.byte	0xc3
  921 03b8 C2030000 		.4byte	0x3c2
@@ -1700,7 +1700,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  923 03bd 6B000000 		.4byte	0x6b
  924 03c1 00       		.byte	0
  925 03c2 1C       		.uleb128 0x1c
- 926 03c3 C8020000 		.4byte	.LASF52
+ 926 03c3 F0020000 		.4byte	.LASF52
  927 03c7 04       		.byte	0x4
  928 03c8 C1       		.byte	0xc1
  929 03c9 1B       		.uleb128 0x1b
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  961 001a 03       		.uleb128 0x3
  962 001b 0E       		.uleb128 0xe
  963 001c 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 30
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 30
 
 
  964 001d 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1018 0053 49       		.uleb128 0x49
  1019 0054 13       		.uleb128 0x13
  1020 0055 38       		.uleb128 0x38
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 31
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 31
 
 
  1021 0056 0B       		.uleb128 0xb
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1075 008c 49       		.uleb128 0x49
  1076 008d 13       		.uleb128 0x13
  1077 008e 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 32
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 32
 
 
  1078 008f 00       		.byte	0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1132 00c6 02       		.uleb128 0x2
  1133 00c7 17       		.uleb128 0x17
  1134 00c8 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 33
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 33
 
 
  1135 00c9 00       		.byte	0
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1189 0106 01       		.byte	0x1
  1190 0107 3F       		.uleb128 0x3f
  1191 0108 19       		.uleb128 0x19
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 34
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 34
 
 
  1192 0109 03       		.uleb128 0x3
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1246 0141 49       		.uleb128 0x49
  1247 0142 13       		.uleb128 0x13
  1248 0143 02       		.uleb128 0x2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 35
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 35
 
 
  1249 0144 17       		.uleb128 0x17
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1303 017b 27       		.uleb128 0x27
  1304 017c 19       		.uleb128 0x19
  1305 017d 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 36
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 36
 
 
  1306 017e 19       		.uleb128 0x19
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1360 0036 54       		.byte	0x54
  1361 0037 22010000 		.4byte	.LVL21
  1362 003b 24010000 		.4byte	.LVL22
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 37
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 37
 
 
  1363 003f 0100     		.2byte	0x1
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1417 00cf 0200     		.2byte	0x2
  1418 00d1 31       		.byte	0x31
  1419 00d2 9F       		.byte	0x9f
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 38
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 38
 
 
  1420 00d3 12000000 		.4byte	.LVL3
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1474 015e 00000000 		.4byte	.LVL29
  1475 0162 2A000000 		.4byte	.LVL30
  1476 0166 0200     		.2byte	0x2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 39
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 39
 
 
  1477 0168 30       		.byte	0x30
@@ -2338,12 +2338,12 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1531 0028 00000000 		.4byte	0
  1532 002c 00000000 		.4byte	0
  1533              		.section	.debug_line,"",%progbits
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 40
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 40
 
 
  1534              	.Ldebug_line0:
- 1535 0000 26010000 		.section	.debug_str,"MS",%progbits,1
- 1535      02006100 
+ 1535 0000 24010000 		.section	.debug_str,"MS",%progbits,1
+ 1535      02005F00 
  1535      00000201 
  1535      FB0E0D00 
  1535      01010101 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1561      746100
  1562              	.LASF28:
  1563 0078 72786163 		.ascii	"rxacrd\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 41
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 41
 
 
  1563      726400
@@ -2458,136 +2458,140 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 1
  1591      656D7000 
  1592              	.LASF2:
  1593 0108 73686F72 		.ascii	"short int\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 42
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 42
 
 
  1593      7420696E 
  1593      7400
- 1594              	.LASF50:
- 1595 0112 43414E5F 		.ascii	"CAN_ReceiveMsg0\000"
- 1595      52656365 
- 1595      6976654D 
- 1595      73673000 
- 1596              	.LASF10:
- 1597 0122 75696E74 		.ascii	"uint32\000"
- 1597      333200
- 1598              	.LASF45:
- 1599 0129 6461746F 		.ascii	"dato_enviado\000"
- 1599      5F656E76 
- 1599      6961646F 
- 1599      00
- 1600              	.LASF8:
- 1601 0136 756E7369 		.ascii	"unsigned int\000"
- 1601      676E6564 
- 1601      20696E74 
+ 1594              	.LASF48:
+ 1595 0112 47656E65 		.ascii	"Generated_Source\\PSoC4\\CAN_TX_RX_func.c\000"
+ 1595      72617465 
+ 1595      645F536F 
+ 1595      75726365 
+ 1595      5C50536F 
+ 1596              	.LASF50:
+ 1597 013a 43414E5F 		.ascii	"CAN_ReceiveMsg0\000"
+ 1597      52656365 
+ 1597      6976654D 
+ 1597      73673000 
+ 1598              	.LASF10:
+ 1599 014a 75696E74 		.ascii	"uint32\000"
+ 1599      333200
+ 1600              	.LASF45:
+ 1601 0151 6461746F 		.ascii	"dato_enviado\000"
+ 1601      5F656E76 
+ 1601      6961646F 
  1601      00
- 1602              	.LASF7:
- 1603 0143 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1603      206C6F6E 
- 1603      6720756E 
- 1603      7369676E 
- 1603      65642069 
- 1604              	.LASF49:
- 1605 015a 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Desktop\\CAN_ROBOT\\Test_"
- 1605      73657273 
- 1605      5C48656E 
- 1605      72792041 
- 1605      6C626572 
- 1606 0188 43414E5F 		.ascii	"CAN_Module_2.cydsn\000"
- 1606      4D6F6475 
- 1606      6C655F32 
- 1606      2E637964 
- 1606      736E00
- 1607              	.LASF48:
- 1608 019b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CAN_TX_RX_func.c\000"
- 1608      6E657261 
- 1608      7465645F 
- 1608      536F7572 
- 1608      63655C50 
- 1609              	.LASF36:
- 1610 01c5 72657375 		.ascii	"result\000"
- 1610      6C7400
- 1611              	.LASF47:
- 1612 01cc 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1612      4320342E 
- 1612      392E3320 
- 1612      32303135 
- 1612      30333033 
- 1613 01ff 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 1613      20726576 
- 1613      6973696F 
- 1613      6E203232 
- 1613      31323230 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 43
+ 1602              	.LASF8:
+ 1603 015e 756E7369 		.ascii	"unsigned int\000"
+ 1603      676E6564 
+ 1603      20696E74 
+ 1603      00
+ 1604              	.LASF7:
+ 1605 016b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1605      206C6F6E 
+ 1605      6720756E 
+ 1605      7369676E 
+ 1605      65642069 
+ 1606              	.LASF36:
+ 1607 0182 72657375 		.ascii	"result\000"
+ 1607      6C7400
+ 1608              	.LASF47:
+ 1609 0189 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1609      4320342E 
+ 1609      392E3320 
+ 1609      32303135 
+ 1609      30333033 
+ 1610 01bc 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1610      20726576 
+ 1610      6973696F 
+ 1610      6E203232 
+ 1610      31323230 
+ 1611 01ef 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1611      66756E63 
+ 1611      74696F6E 
+ 1611      2D736563 
+ 1611      74696F6E 
+ 1612              	.LASF42:
+ 1613 0217 43414E5F 		.ascii	"CAN_TxCancel\000"
+ 1613      54784361 
+ 1613      6E63656C 
+ 1613      00
+ 1614              	.LASF29:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 43
 
 
- 1614 0232 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1614      66756E63 
- 1614      74696F6E 
- 1614      2D736563 
- 1614      74696F6E 
- 1615              	.LASF42:
- 1616 025a 43414E5F 		.ascii	"CAN_TxCancel\000"
- 1616      54784361 
- 1616      6E63656C 
- 1616      00
- 1617              	.LASF29:
- 1618 0267 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
- 1618      52585F53 
- 1618      54525543 
- 1618      5400
- 1619              	.LASF22:
- 1620 0275 7278636D 		.ascii	"rxcmd\000"
- 1620      6400
- 1621              	.LASF16:
- 1622 027b 73697A65 		.ascii	"sizetype\000"
- 1622      74797065 
- 1622      00
- 1623              	.LASF27:
- 1624 0284 7278616D 		.ascii	"rxamrd\000"
- 1624      726400
- 1625              	.LASF6:
- 1626 028b 6C6F6E67 		.ascii	"long long int\000"
- 1626      206C6F6E 
- 1626      6720696E 
- 1626      7400
- 1627              	.LASF39:
- 1628 0299 62756666 		.ascii	"bufferId\000"
- 1628      65724964 
- 1628      00
- 1629              	.LASF44:
- 1630 02a2 72784D61 		.ascii	"rxMailbox\000"
- 1630      696C626F 
- 1630      7800
- 1631              	.LASF51:
- 1632 02ac 4379496E 		.ascii	"CyIntDisable\000"
- 1632      74446973 
- 1632      61626C65 
- 1632      00
- 1633              	.LASF26:
- 1634 02b9 72786163 		.ascii	"rxacr\000"
- 1634      7200
- 1635              	.LASF4:
- 1636 02bf 6C6F6E67 		.ascii	"long int\000"
- 1636      20696E74 
- 1636      00
- 1637              	.LASF52:
- 1638 02c8 4379496E 		.ascii	"CyIntEnable\000"
- 1638      74456E61 
- 1638      626C6500 
- 1639              	.LASF0:
- 1640 02d4 7369676E 		.ascii	"signed char\000"
- 1640      65642063 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccR5mqq7.s 			page 44
+ 1615 0224 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 1615      52585F53 
+ 1615      54525543 
+ 1615      5400
+ 1616              	.LASF22:
+ 1617 0232 7278636D 		.ascii	"rxcmd\000"
+ 1617      6400
+ 1618              	.LASF16:
+ 1619 0238 73697A65 		.ascii	"sizetype\000"
+ 1619      74797065 
+ 1619      00
+ 1620              	.LASF27:
+ 1621 0241 7278616D 		.ascii	"rxamrd\000"
+ 1621      726400
+ 1622              	.LASF49:
+ 1623 0248 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 1623      73657273 
+ 1623      5C48656E 
+ 1623      72792041 
+ 1623      6C626572 
+ 1624 0276 6F64756C 		.ascii	"odular\\Robot_Test\\Test_CAN_6_Modules\\Test_CAN_Mo"
+ 1624      61725C52 
+ 1624      6F626F74 
+ 1624      5F546573 
+ 1624      745C5465 
+ 1625 02a6 64756C65 		.ascii	"dule_2.cydsn\000"
+ 1625      5F322E63 
+ 1625      7964736E 
+ 1625      00
+ 1626              	.LASF6:
+ 1627 02b3 6C6F6E67 		.ascii	"long long int\000"
+ 1627      206C6F6E 
+ 1627      6720696E 
+ 1627      7400
+ 1628              	.LASF39:
+ 1629 02c1 62756666 		.ascii	"bufferId\000"
+ 1629      65724964 
+ 1629      00
+ 1630              	.LASF44:
+ 1631 02ca 72784D61 		.ascii	"rxMailbox\000"
+ 1631      696C626F 
+ 1631      7800
+ 1632              	.LASF51:
+ 1633 02d4 4379496E 		.ascii	"CyIntDisable\000"
+ 1633      74446973 
+ 1633      61626C65 
+ 1633      00
+ 1634              	.LASF26:
+ 1635 02e1 72786163 		.ascii	"rxacr\000"
+ 1635      7200
+ 1636              	.LASF4:
+ 1637 02e7 6C6F6E67 		.ascii	"long int\000"
+ 1637      20696E74 
+ 1637      00
+ 1638              	.LASF52:
+ 1639 02f0 4379496E 		.ascii	"CyIntEnable\000"
+ 1639      74456E61 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\cc3TD2Ln.s 			page 44
 
 
- 1640      68617200 
- 1641              	.LASF32:
- 1642 02e0 74786461 		.ascii	"txdata\000"
- 1642      746100
- 1643              	.LASF43:
- 1644 02e7 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
- 1644      52656365 
- 1644      6976654D 
- 1644      736700
- 1645              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1639      626C6500 
+ 1640              	.LASF0:
+ 1641 02fc 7369676E 		.ascii	"signed char\000"
+ 1641      65642063 
+ 1641      68617200 
+ 1642              	.LASF32:
+ 1643 0308 74786461 		.ascii	"txdata\000"
+ 1643      746100
+ 1644              	.LASF43:
+ 1645 030f 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
+ 1645      52656365 
+ 1645      6976654D 
+ 1645      736700
+ 1646              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
