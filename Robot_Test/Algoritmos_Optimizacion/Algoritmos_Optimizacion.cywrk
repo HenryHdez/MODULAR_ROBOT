@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="Algoritmos_Optimizacion" persistent="Algoritmos_Optimizacion.cywrk" platform="NOT_USED">
+<current_project name=".\Ultrasonido.cydsn\Ultrasonido.cyprj" />
+<wrkspc_folders />
+<files />
+<projects>
+<v>.\Modulo.cydsn\Modulo.cyprj</v>
+<v>.\Ultrasonido.cydsn\Ultrasonido.cyprj</v>
+<v>.\Test_Xbee.cydsn\Test_Xbee.cyprj</v>
+<v>.\CAN_Psoc_kit.cydsn\CAN_Psoc_kit.cyprj</v>
+<v>.\Algoritmo_Genetico.cydsn\Algoritmo_Genetico.cyprj</v>
+<v>.\Hill_Climbing.cydsn\Hill_Climbing.cyprj</v>
+<v>.\Tempado_Simulado.cydsn\Tempado_Simulado.cyprj</v>
+</projects>
+<workspace_id v="fd9c44b0-6ba7-42f8-8dd8-9981b6d60157" />
+<WriteAppVersionLastSavedWith v="4.1.0.3210" />
+<WriteAppMarketingVersionLastSavedWith v="4.1 Update 1" />
+<CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyPrjDependencyList" version="4">
+<wrkspc_dependencies />
+</CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316>
+<CyGuid_63b68103-67f5-4406-8da6-5c8625765b82 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyIgnoredSystemDepsList" version="1">
+<wrkspc_dependencies />
+</CyGuid_63b68103-67f5-4406-8da6-5c8625765b82>
+</CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd>
+</CyXmlSerializer>
