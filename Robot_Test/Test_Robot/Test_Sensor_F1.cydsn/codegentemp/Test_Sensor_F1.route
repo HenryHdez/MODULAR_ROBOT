@@ -12,14 +12,14 @@ end Net_27
 net \I2C_1:scl_wire\
 	term   ":ioport2:pin0.fb"
 	switch ":ioport2:pin0.fb==>:ioport2:hsiom_in0.hsiom0_in"
-	switch ":ioport2:hsiom_in0.fixed_DPSLP_2==>:m0s8scbcell_1__scl__hsiom_permute.ioport2__fixed_out_p0_DPSLP_2"
-	switch ":m0s8scbcell_1__scl__hsiom_permute.m0s8scbcell_1__scl==>:m0s8scbcell_1.scl"
-	term   ":m0s8scbcell_1.scl"
+	switch ":ioport2:hsiom_in0.fixed_DPSLP_2==>:m0s8scbcell_1__i2c_scl__hsiom_permute.ioport2__fixed_out_p0_DPSLP_2"
+	switch ":m0s8scbcell_1__i2c_scl__hsiom_permute.m0s8scbcell_1__i2c_scl==>:m0s8scbcell_1.i2c_scl"
+	term   ":m0s8scbcell_1.i2c_scl"
 end \I2C_1:scl_wire\
 net \I2C_1:sda_wire\
 	term   ":ioport2:pin1.fb"
 	switch ":ioport2:pin1.fb==>:ioport2:hsiom_in1.hsiom1_in"
-	switch ":ioport2:hsiom_in1.fixed_DPSLP_2==>:m0s8scbcell_1__sda__hsiom_permute.ioport2__fixed_out_p1_DPSLP_2"
-	switch ":m0s8scbcell_1__sda__hsiom_permute.m0s8scbcell_1__sda==>:m0s8scbcell_1.sda"
-	term   ":m0s8scbcell_1.sda"
+	switch ":ioport2:hsiom_in1.fixed_DPSLP_2==>:m0s8scbcell_1__i2c_sda__hsiom_permute.ioport2__fixed_out_p1_DPSLP_2"
+	switch ":m0s8scbcell_1__i2c_sda__hsiom_permute.m0s8scbcell_1__i2c_sda==>:m0s8scbcell_1.i2c_sda"
+	term   ":m0s8scbcell_1.i2c_sda"
 end \I2C_1:sda_wire\

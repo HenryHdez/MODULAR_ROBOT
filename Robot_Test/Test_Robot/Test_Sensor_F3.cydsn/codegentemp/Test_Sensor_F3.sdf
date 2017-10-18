@@ -1,10 +1,10 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2017-06-24T22:39:26Z")
+ (DATE "2017-09-29T21:24:34Z")
  (DESIGN "Test_Sensor_F3")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
- (VERSION " 4.0 Update 1")
+ (VERSION " 4.1 Update 1")
  (DIVIDER .)
  (TIMESCALE 1 ns)
  (CELL
@@ -15,8 +15,8 @@
     (INTERCONNECT ClockBlock.hfclk \\I2C_1\:SCB_IRQ\\.clock (0.000:0.000:0.000))
     (INTERCONNECT \\I2C_1\:SCB\\.interrupt \\I2C_1\:SCB_IRQ\\.interrupt (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.ff_div_5 \\I2C_1\:SCB\\.clock (0.000:0.000:0.000))
-    (INTERCONNECT \\I2C_1\:scl\(0\)\\.fb \\I2C_1\:SCB\\.scl (0.000:0.000:0.000))
-    (INTERCONNECT \\I2C_1\:sda\(0\)\\.fb \\I2C_1\:SCB\\.sda (0.000:0.000:0.000))
+    (INTERCONNECT \\I2C_1\:scl\(0\)\\.fb \\I2C_1\:SCB\\.i2c_scl (0.000:0.000:0.000))
+    (INTERCONNECT \\I2C_1\:sda\(0\)\\.fb \\I2C_1\:SCB\\.i2c_sda (0.000:0.000:0.000))
     (INTERCONNECT LED_1\(0\)_PAD LED_1\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT LED_2\(0\)_PAD LED_2\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT LED_3\(0\)_PAD LED_3\(0\).pad_in (0.000:0.000:0.000))

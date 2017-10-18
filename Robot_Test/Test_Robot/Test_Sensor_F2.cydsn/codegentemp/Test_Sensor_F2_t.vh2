@@ -1,6 +1,6 @@
 -- Project:   C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F2.cydsn\Test_Sensor_F2.cyprj
--- Generated: 06/24/2017 17:38:34
--- PSoC Creator  4.0 Update 1
+-- Generated: 09/29/2017 16:23:30
+-- PSoC Creator  4.1 Update 1
 
 ENTITY Test_Sensor_F2 IS
     PORT(
@@ -241,10 +241,10 @@ ARCHITECTURE __DEFAULT__ OF Test_Sensor_F2 IS
         PORT (
             clock : IN std_ulogic;
             interrupt : OUT std_ulogic;
-            cts : IN std_ulogic;
-            rts : OUT std_ulogic;
-            rx : IN std_ulogic;
-            tx : OUT std_ulogic;
+            uart_cts : IN std_ulogic;
+            uart_rts : OUT std_ulogic;
+            uart_rx : IN std_ulogic;
+            uart_tx : OUT std_ulogic;
             mosi_m : OUT std_ulogic;
             miso_m : IN std_ulogic;
             select_m_0 : OUT std_ulogic;
@@ -256,10 +256,10 @@ ARCHITECTURE __DEFAULT__ OF Test_Sensor_F2 IS
             miso_s : OUT std_ulogic;
             select_s : IN std_ulogic;
             sclk_s : IN std_ulogic;
-            scl : IN std_ulogic;
-            sda : IN std_ulogic;
-            rx_req : OUT std_ulogic;
-            tx_req : OUT std_ulogic);
+            i2c_scl : IN std_ulogic;
+            i2c_sda : IN std_ulogic;
+            tr_rx_req : OUT std_ulogic;
+            tr_tx_req : OUT std_ulogic);
     END COMPONENT;
 BEGIN
 
@@ -837,10 +837,10 @@ BEGIN
         PORT MAP(
             clock => \I2C_1:Net_847_ff2\,
             interrupt => Net_27,
-            rx => open,
-            tx => \I2C_1:tx_wire\,
-            cts => open,
-            rts => \I2C_1:rts_wire\,
+            uart_rx => open,
+            uart_tx => \I2C_1:tx_wire\,
+            uart_cts => open,
+            uart_rts => \I2C_1:rts_wire\,
             mosi_m => \I2C_1:mosi_m_wire\,
             miso_m => open,
             select_m_3 => \I2C_1:select_m_wire_3\,
@@ -852,9 +852,9 @@ BEGIN
             miso_s => \I2C_1:miso_s_wire\,
             select_s => open,
             sclk_s => open,
-            scl => \I2C_1:scl_wire\,
-            sda => \I2C_1:sda_wire\,
-            tx_req => Net_30,
-            rx_req => Net_29);
+            i2c_scl => \I2C_1:scl_wire\,
+            i2c_sda => \I2C_1:sda_wire\,
+            tr_tx_req => Net_30,
+            tr_rx_req => Net_29);
 
 END __DEFAULT__;

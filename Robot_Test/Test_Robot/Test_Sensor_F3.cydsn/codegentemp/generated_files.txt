@@ -3,7 +3,6 @@
 <fileSet version="1" anchorPath="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F3.cydsn\codegentemp" xsi:schemaLocation="http://cypress.com/xsd/cypathdictionary cypathdictionary.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cypathdictionary">
   <file name="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F3.cydsn\codegentemp\cyfitter_cfg.h" value="HEADER;;;;;" />
   <file name="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F3.cydsn\codegentemp\cyfitter_cfg.c" value="SOURCE_C;CortexM0;;;;" />
-  <file name="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F3.cydsn\codegentemp\protect.hex" value="OTHER;;;;;" />
   <file name="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F3.cydsn\codegentemp\cymetadata.c" value="SOURCE_C;CortexM0;;;;" />
   <file name="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F3.cydsn\codegentemp\cydevice_trm.h" value="HEADER;;;;;" />
   <file name="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F3.cydsn\codegentemp\cydevicegnu_trm.inc" value="HEADER;;;;;" />

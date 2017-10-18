@@ -205,11 +205,6 @@ SECTIONS
     }
 
     
-    .btldr_run (NOLOAD) : ALIGN(8)
-    {
-        KEEP(*(.bootloaderruntype))
-    }
-
 
     .noinit (NOLOAD) : ALIGN(8)
     {

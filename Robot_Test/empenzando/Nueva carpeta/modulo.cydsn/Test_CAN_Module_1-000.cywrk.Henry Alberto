@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Test_CAN_Module_1-000\modulo\Header Files\inicio.h">
+<ExpandedNodeIds>
+<v>Test_CAN_Module_1-000</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\TopDesign</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.cydwr</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.cydwr\Pins</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.cydwr\Analog</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.cydwr\Clocks</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.cydwr\Interrupts</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.cydwr\DMA</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.cydwr\System</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.cydwr\Directives</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.cydwr\Flash Security</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.cydwr\EEPROM</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\Header Files</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\Header Files\cyapicallbacks.h</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\Header Files\math.h</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\Source Files</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\Source Files\main.c</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\Generated_Source</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\Generated_Source\PSoC5</v>
+<v>Test_CAN_Module_1-000\modulo</v>
+<v>Test_CAN_Module_1-000\modulo\TopDesign</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Pins</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Analog</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\DMA</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Clocks</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Interrupts</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\System</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Directives</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Flash Security</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\AX12.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\cyapicallbacks.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\DynamixelSerial1.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\inicio.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\protocolo can.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\VCNL4010_1.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\VCNL4010_2.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\VCNL4010_3.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\VCNL4010_4.h</v>
+<v>Test_CAN_Module_1-000\modulo\Source Files</v>
+<v>Test_CAN_Module_1-000\modulo\Source Files\main.c</v>
+<v>Test_CAN_Module_1-000\modulo\Generated_Source</v>
+<v>Test_CAN_Module_1-000\modulo\Generated_Source\PSoC4</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Analog</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\DMA</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Clocks</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Interrupts</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\System</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Directives</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.cydwr\Flash Security</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\AX12.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\cyapicallbacks.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\DynamixelSerial1.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\inicio.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\protocolo can.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\VCNL4010_1.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\VCNL4010_2.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\VCNL4010_3.h</v>
+<v>Test_CAN_Module_1-000\modulo\Header Files\VCNL4010_4.h</v>
+<v>Test_CAN_Module_1-000\modulo\Source Files</v>
+<v>Test_CAN_Module_1-000\modulo\Source Files\main.c</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Test_CAN_Module_1-000</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\TopDesign</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\TopDesign\TopDesign.cysch</v>
+<v>Test_CAN_Module_1-000\modulo</v>
+<v>Test_CAN_Module_1-000\modulo\TopDesign</v>
+<v>Test_CAN_Module_1-000\modulo\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Test_CAN_Module_1-000</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\TopDesign</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\TopDesign\TopDesign.cysch</v>
+<v>Test_CAN_Module_1-000\modulo</v>
+<v>Test_CAN_Module_1-000\modulo\TopDesign</v>
+<v>Test_CAN_Module_1-000\modulo\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Test_CAN_Module_1-000</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.gpdsc</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.rpt</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit_timing.html</v>
+<v>Test_CAN_Module_1-000\modulo</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.gpdsc</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.rpt</v>
+<v>Test_CAN_Module_1-000\modulo\modulo_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Test_CAN_Module_1-000</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.gpdsc</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit.rpt</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_Psoc_kit_timing.html</v>
+<v>Test_CAN_Module_1-000\modulo</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.gpdsc</v>
+<v>Test_CAN_Module_1-000\modulo\modulo.rpt</v>
+<v>Test_CAN_Module_1-000\modulo\modulo_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Test_CAN_Module_1-000</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\PSoC 5LP Architecture TRM</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CY8C58LP Family Datasheet</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\System Reference Guides</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\System Reference Guides\cy_boot_v5_40</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_v3_0.pdf</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CharLCD_v2_20.pdf</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\cy_pins_v2_20</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Test_CAN_Module_1-000\modulo</v>
+<v>Test_CAN_Module_1-000\modulo\PSoC 4 Architecture TRM</v>
+<v>Test_CAN_Module_1-000\modulo\PSoC 4200M Family Datasheet</v>
+<v>Test_CAN_Module_1-000\modulo\System Reference Guides</v>
+<v>Test_CAN_Module_1-000\modulo\System Reference Guides\cy_boot_v5_40</v>
+<v>Test_CAN_Module_1-000\modulo\System Reference Guides\cy_dmac_v1_10</v>
+<v>Test_CAN_Module_1-000\modulo\System Reference Guides\cy_lfclk_v1_10</v>
+<v>Test_CAN_Module_1-000\modulo\CAN_v3_0.pdf</v>
+<v>Test_CAN_Module_1-000\modulo\cy_constant_v1_0</v>
+<v>Test_CAN_Module_1-000\modulo\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>Test_CAN_Module_1-000\modulo\cy_pins_v2_20</v>
+<v>Test_CAN_Module_1-000\modulo\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Test_CAN_Module_1-000\modulo\CyControlReg_v1_80.pdf</v>
+<v>Test_CAN_Module_1-000\modulo\mux_v1_10</v>
+<v>Test_CAN_Module_1-000\modulo\mux_v1_10\mux_v1_10.pdf</v>
+<v>Test_CAN_Module_1-000\modulo\SCB_P4_v3_20</v>
+<v>Test_CAN_Module_1-000\modulo\SCB_P4_v3_20\SCB_P4_v3_20.pdf</v>
+<v>Test_CAN_Module_1-000\modulo\UART_v2_50</v>
+<v>Test_CAN_Module_1-000\modulo\UART_v2_50\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Test_CAN_Module_1-000</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\PSoC 5LP Architecture TRM</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CY8C58LP Family Datasheet</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\System Reference Guides</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\System Reference Guides\cy_boot_v5_40</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CAN_v3_0.pdf</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\CharLCD_v2_20.pdf</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\cy_pins_v2_20</v>
+<v>Test_CAN_Module_1-000\CAN_Psoc_kit\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Test_CAN_Module_1-000\modulo</v>
+<v>Test_CAN_Module_1-000\modulo\PSoC 4 Architecture TRM</v>
+<v>Test_CAN_Module_1-000\modulo\PSoC 4200M Family Datasheet</v>
+<v>Test_CAN_Module_1-000\modulo\System Reference Guides</v>
+<v>Test_CAN_Module_1-000\modulo\System Reference Guides\cy_boot_v5_40</v>
+<v>Test_CAN_Module_1-000\modulo\System Reference Guides\cy_dmac_v1_10</v>
+<v>Test_CAN_Module_1-000\modulo\System Reference Guides\cy_lfclk_v1_10</v>
+<v>Test_CAN_Module_1-000\modulo\CAN_v3_0.pdf</v>
+<v>Test_CAN_Module_1-000\modulo\cy_constant_v1_0</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\main.c" />
+<name v=".\inicio.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="792, 399" SelectedTabbedMdiWindow="8904d90d-be00-4609-8bed-e605424249f1"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="43850630-c835-437f-9fe3-2e8d4db89471" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\empenzando\Nueva carpeta\modulo.cydsn\main.c" Guid="5722165e-bb28-46e3-ac7c-dc405792ceda" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\empenzando\Nueva carpeta\modulo.cydsn\inicio.h" Guid="8904d90d-be00-4609-8bed-e605424249f1" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
