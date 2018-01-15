@@ -1,6 +1,6 @@
 -- Project:   Test_All_Sensor
--- Generated: 07/13/2017 18:27:45
--- PSoC Creator  4.0 Update 1
+-- Generated: 01/13/2018 10:42:34
+-- PSoC Creator  4.1 Update 1
 
 ENTITY Test_All_Sensor IS
     PORT(
@@ -319,10 +319,10 @@ ARCHITECTURE __DEFAULT__ OF Test_All_Sensor IS
         PORT (
             clock : IN std_ulogic;
             interrupt : OUT std_ulogic;
-            cts : IN std_ulogic;
-            rts : OUT std_ulogic;
-            rx : IN std_ulogic;
-            tx : OUT std_ulogic;
+            uart_cts : IN std_ulogic;
+            uart_rts : OUT std_ulogic;
+            uart_rx : IN std_ulogic;
+            uart_tx : OUT std_ulogic;
             mosi_m : OUT std_ulogic;
             miso_m : IN std_ulogic;
             select_m_0 : OUT std_ulogic;
@@ -334,10 +334,10 @@ ARCHITECTURE __DEFAULT__ OF Test_All_Sensor IS
             miso_s : OUT std_ulogic;
             select_s : IN std_ulogic;
             sclk_s : IN std_ulogic;
-            scl : IN std_ulogic;
-            sda : IN std_ulogic;
-            rx_req : OUT std_ulogic;
-            tx_req : OUT std_ulogic);
+            i2c_scl : IN std_ulogic;
+            i2c_sda : IN std_ulogic;
+            tr_rx_req : OUT std_ulogic;
+            tr_tx_req : OUT std_ulogic);
     END COMPONENT;
 BEGIN
 
@@ -1469,10 +1469,10 @@ BEGIN
         PORT MAP(
             clock => \SENSOR_1:Net_847_ff4\,
             interrupt => Net_27,
-            rx => open,
-            tx => \SENSOR_1:tx_wire\,
-            cts => open,
-            rts => \SENSOR_1:rts_wire\,
+            uart_rx => open,
+            uart_tx => \SENSOR_1:tx_wire\,
+            uart_cts => open,
+            uart_rts => \SENSOR_1:rts_wire\,
             mosi_m => \SENSOR_1:mosi_m_wire\,
             miso_m => open,
             select_m_3 => \SENSOR_1:select_m_wire_3\,
@@ -1484,10 +1484,10 @@ BEGIN
             miso_s => \SENSOR_1:miso_s_wire\,
             select_s => open,
             sclk_s => open,
-            scl => \SENSOR_1:scl_wire\,
-            sda => \SENSOR_1:sda_wire\,
-            tx_req => Net_30,
-            rx_req => Net_29);
+            i2c_scl => \SENSOR_1:scl_wire\,
+            i2c_sda => \SENSOR_1:sda_wire\,
+            tr_tx_req => Net_30,
+            tr_rx_req => Net_29);
 
     \SENSOR_2:SCB_IRQ\:interrupt
         GENERIC MAP(
@@ -1504,10 +1504,10 @@ BEGIN
         PORT MAP(
             clock => \SENSOR_2:Net_847_ff2\,
             interrupt => Net_103,
-            rx => open,
-            tx => \SENSOR_2:tx_wire\,
-            cts => open,
-            rts => \SENSOR_2:rts_wire\,
+            uart_rx => open,
+            uart_tx => \SENSOR_2:tx_wire\,
+            uart_cts => open,
+            uart_rts => \SENSOR_2:rts_wire\,
             mosi_m => \SENSOR_2:mosi_m_wire\,
             miso_m => open,
             select_m_3 => \SENSOR_2:select_m_wire_3\,
@@ -1519,10 +1519,10 @@ BEGIN
             miso_s => \SENSOR_2:miso_s_wire\,
             select_s => open,
             sclk_s => open,
-            scl => \SENSOR_2:scl_wire\,
-            sda => \SENSOR_2:sda_wire\,
-            tx_req => Net_106,
-            rx_req => Net_105);
+            i2c_scl => \SENSOR_2:scl_wire\,
+            i2c_sda => \SENSOR_2:sda_wire\,
+            tr_tx_req => Net_106,
+            tr_rx_req => Net_105);
 
     \SENSOR_3:SCB_IRQ\:interrupt
         GENERIC MAP(
@@ -1539,10 +1539,10 @@ BEGIN
         PORT MAP(
             clock => \SENSOR_3:Net_847_ff5\,
             interrupt => Net_122,
-            rx => open,
-            tx => \SENSOR_3:tx_wire\,
-            cts => open,
-            rts => \SENSOR_3:rts_wire\,
+            uart_rx => open,
+            uart_tx => \SENSOR_3:tx_wire\,
+            uart_cts => open,
+            uart_rts => \SENSOR_3:rts_wire\,
             mosi_m => \SENSOR_3:mosi_m_wire\,
             miso_m => open,
             select_m_3 => \SENSOR_3:select_m_wire_3\,
@@ -1554,10 +1554,10 @@ BEGIN
             miso_s => \SENSOR_3:miso_s_wire\,
             select_s => open,
             sclk_s => open,
-            scl => \SENSOR_3:scl_wire\,
-            sda => \SENSOR_3:sda_wire\,
-            tx_req => Net_125,
-            rx_req => Net_124);
+            i2c_scl => \SENSOR_3:scl_wire\,
+            i2c_sda => \SENSOR_3:sda_wire\,
+            tr_tx_req => Net_125,
+            tr_rx_req => Net_124);
 
     \SENSOR_4:SCB_IRQ\:interrupt
         GENERIC MAP(
@@ -1574,10 +1574,10 @@ BEGIN
         PORT MAP(
             clock => \SENSOR_4:Net_847_ff3\,
             interrupt => Net_141,
-            rx => open,
-            tx => \SENSOR_4:tx_wire\,
-            cts => open,
-            rts => \SENSOR_4:rts_wire\,
+            uart_rx => open,
+            uart_tx => \SENSOR_4:tx_wire\,
+            uart_cts => open,
+            uart_rts => \SENSOR_4:rts_wire\,
             mosi_m => \SENSOR_4:mosi_m_wire\,
             miso_m => open,
             select_m_3 => \SENSOR_4:select_m_wire_3\,
@@ -1589,9 +1589,9 @@ BEGIN
             miso_s => \SENSOR_4:miso_s_wire\,
             select_s => open,
             sclk_s => open,
-            scl => \SENSOR_4:scl_wire\,
-            sda => \SENSOR_4:sda_wire\,
-            tx_req => Net_144,
-            rx_req => Net_143);
+            i2c_scl => \SENSOR_4:scl_wire\,
+            i2c_sda => \SENSOR_4:sda_wire\,
+            tr_tx_req => Net_144,
+            tr_rx_req => Net_143);
 
 END __DEFAULT__;

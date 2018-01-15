@@ -1,0 +1,4679 @@
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_i2d
+  20              		.global	__aeabi_ddiv
+  21              		.global	__aeabi_d2f
+  22              		.global	__aeabi_fadd
+  23              		.global	__aeabi_fmul
+  24              		.section	.text.Serial_Interrupt,"ax",%progbits
+  25              		.align	2
+  26              		.global	Serial_Interrupt
+  27              		.code	16
+  28              		.thumb_func
+  29              		.type	Serial_Interrupt, %function
+  30              	Serial_Interrupt:
+  31              	.LFB50:
+  32              		.file 1 "main.c"
+   1:main.c        **** #include <project.h>
+   2:main.c        **** #include <stdio.h>
+   3:main.c        **** #include <stdlib.h>
+   4:main.c        **** #include <math.h>
+   5:main.c        **** #include <protocolo can.h>
+   6:main.c        **** //Import Libraries
+   7:main.c        **** //Global Variables
+   8:main.c        **** uint8 mailbox0[8];
+   9:main.c        **** uint8 mailbox1[8];
+  10:main.c        **** uint8 mailbox2[8];
+  11:main.c        **** uint8 dato_enviado[8];
+  12:main.c        **** uint8 dato_enviado_1[8];
+  13:main.c        **** uint8 dato_enviado_2[8];
+  14:main.c        **** int16 conta=0;
+  15:main.c        **** int cantidadM=0;
+  16:main.c        **** int Cantidad_Sensores=0;
+  17:main.c        **** //Variables AE
+  18:main.c        **** int Max_Conta=150;
+  19:main.c        **** float Amplitud_H=0.0;
+  20:main.c        **** float Amplitud_V=0.0;
+  21:main.c        **** float Offset_H=0.833;
+  22:main.c        **** float Offset_V=0.833;
+  23:main.c        **** float Fase=0.0;
+  24:main.c        **** float ampli_aux_V=0.0;
+  25:main.c        **** float ampli_aux_H=0.0;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 2
+
+
+  26:main.c        **** float off_aux_V=0.833;
+  27:main.c        **** float off_aux_H=0.833;
+  28:main.c        **** float pha_aux=0.0;
+  29:main.c        **** float ampli_aux_V_2=0.0;
+  30:main.c        **** float off_aux_V_2=0.833;
+  31:main.c        **** float pha_aux_2=0.0;
+  32:main.c        **** float ampli_aux_H_2=0.0;
+  33:main.c        **** float off_aux_H_2=0.833;
+  34:main.c        **** float Peso_Sensor=0.0;
+  35:main.c        **** int flag=0;
+  36:main.c        **** float dist=0.0;
+  37:main.c        **** float L_actual=0.0;
+  38:main.c        **** float L_anterior=0.0;
+  39:main.c        **** int punto_a=0;
+  40:main.c        **** int punto_b=0;
+  41:main.c        **** int move_s=0;
+  42:main.c        **** int individuo=0;
+  43:main.c        **** 
+  44:main.c        **** 
+  45:main.c        **** double randd() {
+  46:main.c        ****   return (double)rand()/((double)RAND_MAX + 1);
+  47:main.c        **** }
+  48:main.c        **** 
+  49:main.c        **** double random_amplitud_1(){
+  50:main.c        ****     float r=0.0;
+  51:main.c        ****     r=randd();
+  52:main.c        ****     return r;
+  53:main.c        **** }
+  54:main.c        **** 
+  55:main.c        **** double random_amplitud_2(){
+  56:main.c        ****     float r=0.0;
+  57:main.c        ****     r=randd();
+  58:main.c        ****     r=r*0.2;
+  59:main.c        ****     return r;
+  60:main.c        **** }
+  61:main.c        **** 
+  62:main.c        **** double random_Fase(){
+  63:main.c        ****     float r=0.0;
+  64:main.c        ****     r=-0.1*randd();
+  65:main.c        ****     return r;
+  66:main.c        **** }
+  67:main.c        **** 
+  68:main.c        **** double random_Offset(){
+  69:main.c        ****     float r=0.0;
+  70:main.c        ****     r=randd();
+  71:main.c        ****     r=r*-0.01;
+  72:main.c        ****     r=r+0.02;
+  73:main.c        ****     return r;
+  74:main.c        **** }
+  75:main.c        **** 
+  76:main.c        **** void movimiento(unsigned int dirr,int mov){
+  77:main.c        ****     char byteh,bytel;
+  78:main.c        ****     byteh= mov >> 8;
+  79:main.c        ****     bytel=mov;
+  80:main.c        ****     dato_enviado[0]=VER ;//verificacion
+  81:main.c        ****     dato_enviado[1]=dirr ;//dir
+  82:main.c        ****     dato_enviado[2]=ESCRITURA ;//operacion
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 3
+
+
+  83:main.c        ****     dato_enviado[3]=MOTOR;//lugar
+  84:main.c        ****     dato_enviado[4]= byteh ;  //dato
+  85:main.c        ****     dato_enviado[5]= bytel ;  //dato
+  86:main.c        ****     CAN_SendMsg0(); 
+  87:main.c        ****     CyDelay(25);    
+  88:main.c        **** }
+  89:main.c        **** 
+  90:main.c        **** void Send_Angle(int datas,int Conta3){ 
+  91:main.c        ****     dato_enviado[0]=VER2;//verificacion
+  92:main.c        ****     dato_enviado[1]=Conta3;//dir
+  93:main.c        ****     dato_enviado[2]=Conta3;//dir
+  94:main.c        ****     dato_enviado[3]=ANGLE;
+  95:main.c        ****     dato_enviado[4]=0;//lugar
+  96:main.c        ****     dato_enviado[5]=0;  //dato... en este caso direcion para asignar
+  97:main.c        ****     dato_enviado[6]=datas;
+  98:main.c        ****     dato_enviado[7]=Conta3;
+  99:main.c        ****     CAN_SendMsg0(); 
+ 100:main.c        ****     CyDelay(50);
+ 101:main.c        **** }
+ 102:main.c        **** 
+ 103:main.c        **** void Enviar_Parametros(float Amplitud,float Phase,float Offset,int Orientacion){
+ 104:main.c        ****     //Convertir el Valor a entero para ser enviado
+ 105:main.c        ****     int Amp_env=(int)fabs(Amplitud*10000);
+ 106:main.c        ****     int Phase_env=(int)fabs(Phase*10000);
+ 107:main.c        ****     int Offset_env=(int)fabs(Offset*10000);
+ 108:main.c        ****     //Enviar datos
+ 109:main.c        ****     dato_enviado_1[0]=VER_M1;
+ 110:main.c        ****     dato_enviado_1[1]=Orientacion;
+ 111:main.c        ****     //Convertir Amplitud
+ 112:main.c        ****     uint8 datoL=Amp_env;
+ 113:main.c        ****     uint8 datoH=Amp_env>>8;
+ 114:main.c        ****     uint8 Aux=0;
+ 115:main.c        ****     if(Amplitud<0.0){
+ 116:main.c        ****         Aux=(1<<7);
+ 117:main.c        ****         datoH=datoH+Aux;
+ 118:main.c        ****     }
+ 119:main.c        ****     else{
+ 120:main.c        ****         Aux=(0<<7);
+ 121:main.c        ****         datoH=datoH+Aux;    
+ 122:main.c        ****     }
+ 123:main.c        ****     dato_enviado_1[2]=datoL;
+ 124:main.c        ****     dato_enviado_1[3]=datoH;
+ 125:main.c        ****     //Convertir Fase
+ 126:main.c        ****     datoL=Phase_env;
+ 127:main.c        ****     datoH=Phase_env>>8;
+ 128:main.c        ****     if(Phase<0.0){
+ 129:main.c        ****         Aux=(1<<7);
+ 130:main.c        ****         datoH=datoH+Aux;
+ 131:main.c        ****     }
+ 132:main.c        ****     else{
+ 133:main.c        ****         Aux=(0<<7);
+ 134:main.c        ****         datoH=datoH+Aux;    
+ 135:main.c        ****     }
+ 136:main.c        ****     dato_enviado_1[4]=datoL;
+ 137:main.c        ****     dato_enviado_1[5]=datoH;
+ 138:main.c        ****     //Convertir Offset
+ 139:main.c        ****     datoL=Offset_env;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 4
+
+
+ 140:main.c        ****     datoH=Offset_env>>8;
+ 141:main.c        ****     if(Offset<0.0){
+ 142:main.c        ****         Aux=(1<<7);
+ 143:main.c        ****         datoH=datoH+Aux;
+ 144:main.c        ****     }
+ 145:main.c        ****     else{
+ 146:main.c        ****         Aux=(0<<7);
+ 147:main.c        ****         datoH=datoH+Aux;    
+ 148:main.c        ****     }
+ 149:main.c        ****     dato_enviado_1[6]=datoL;
+ 150:main.c        ****     dato_enviado_1[7]=datoH;    
+ 151:main.c        ****     CAN_SendMsg1();
+ 152:main.c        ****     CyDelay(25);
+ 153:main.c        **** }
+ 154:main.c        **** 
+ 155:main.c        **** void Recibe_mail_0(){
+ 156:main.c        **** if(mailbox0[0]==VER){
+ 157:main.c        ****             switch(mailbox0[2]){
+ 158:main.c        ****             ///////////////////////////////////////////////////////
+ 159:main.c        ****             case ESCRITURA:{ 
+ 160:main.c        ****                 switch(mailbox0[3]){//////////+6+++++++++++++
+ 161:main.c        ****                     case CANTIDAD_MOD: 
+ 162:main.c        ****                             cantidadM=mailbox0[4];
+ 163:main.c        ****                     break;
+ 164:main.c        ****                     case START:
+ 165:main.c        ****                         
+ 166:main.c        ****                     break;
+ 167:main.c        ****                 }
+ 168:main.c        ****             }                                            
+ 169:main.c        ****         }    
+ 170:main.c        **** }
+ 171:main.c        **** if(mailbox0[0]==VER2){
+ 172:main.c        ****                 switch(mailbox0[3]){
+ 173:main.c        ****                 ///////////////////////////////////////////////////////
+ 174:main.c        ****                 case ANGLE:{
+ 175:main.c        ****                     int Contador=mailbox0[7];
+ 176:main.c        ****                     if(Contador>=cantidadM){
+ 177:main.c        ****                             Enviar_Parametros(Amplitud_H,Fase,Offset_H,H);
+ 178:main.c        ****                             CyDelay(50);
+ 179:main.c        ****                             Enviar_Parametros(Amplitud_V,Fase,Offset_V,V);
+ 180:main.c        ****                             CyDelay(50); 
+ 181:main.c        ****                             Send_Angle(0,0);
+ 182:main.c        ****                     } 
+ 183:main.c        ****                 }
+ 184:main.c        ****                 break;}
+ 185:main.c        ****             }
+ 186:main.c        **** }
+ 187:main.c        **** 
+ 188:main.c        **** void Recibe_Mail_2(){
+ 189:main.c        ****     if(mailbox2[0]==SENSORES){
+ 190:main.c        ****         //Mailbox2[1] Derecha
+ 191:main.c        ****         //Mailbox2[2] Frente
+ 192:main.c        ****         //Mailbox2[3] Izquierda
+ 193:main.c        ****         if(mailbox2[1]==0&&mailbox2[2]==0&&mailbox2[3]==0)      {Peso_Sensor=0.0;}   //Normal
+ 194:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==0&&mailbox2[3]==1) {Peso_Sensor=0.2;}   //Izquierda
+ 195:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==1&&mailbox2[3]==0) {Peso_Sensor=0.6;}   //Frontal
+ 196:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==1&&mailbox2[3]==1) {Peso_Sensor=0.8;}   //Frontal e Iz
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 5
+
+
+ 197:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==0&&mailbox2[3]==0) {Peso_Sensor=0.2;}   //Derecha
+ 198:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==0&&mailbox2[3]==1) {Peso_Sensor=0.4;}   //Derecha e Iz
+ 199:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==1&&mailbox2[3]==0) {Peso_Sensor=0.8;}   //Frontal y De
+ 200:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==1&&mailbox2[3]==1) {Peso_Sensor=1;}     //Todos
+ 201:main.c        ****         else                                                    {Peso_Sensor=0.0;}   //Normal
+ 202:main.c        ****     }
+ 203:main.c        **** }
+ 204:main.c        **** 
+ 205:main.c        **** CY_ISR(interrutcan){
+ 206:main.c        ****     CAN_GlobalIntDisable();
+ 207:main.c        ****     CAN_MsgRXIsr();  
+ 208:main.c        ****     Recibe_mail_0();
+ 209:main.c        ****     Recibe_Mail_2();
+ 210:main.c        ****     CAN_GlobalIntEnable();
+ 211:main.c        **** }
+ 212:main.c        **** 
+ 213:main.c        **** void Hill(){
+ 214:main.c        ****     if (flag==1){
+ 215:main.c        ****         ampli_aux_V=Amplitud_V;
+ 216:main.c        ****         ampli_aux_H=Amplitud_H;
+ 217:main.c        ****         pha_aux=Fase;
+ 218:main.c        ****         off_aux_V=Offset_V;
+ 219:main.c        ****         off_aux_H=Offset_H;      
+ 220:main.c        ****         Amplitud_V=0.0;
+ 221:main.c        ****         Amplitud_H=0.0;
+ 222:main.c        ****         Fase=0.0;
+ 223:main.c        ****         Offset_V=0.833;
+ 224:main.c        ****         Offset_H=0.833;
+ 225:main.c        ****         Max_Conta=15;
+ 226:main.c        ****     }
+ 227:main.c        ****     else if (flag==2){   
+ 228:main.c        ****         L_anterior=dist;
+ 229:main.c        ****         if(randd()<0.5){
+ 230:main.c        ****             Amplitud_H=random_amplitud_1();
+ 231:main.c        ****             Amplitud_V=random_amplitud_2();
+ 232:main.c        ****             Fase=random_Fase();
+ 233:main.c        ****             Offset_H=0.833+random_Offset();
+ 234:main.c        ****             Offset_V=Offset_H; 
+ 235:main.c        ****         }
+ 236:main.c        ****         else{
+ 237:main.c        ****             Amplitud_V=random_amplitud_1();
+ 238:main.c        ****             Amplitud_H=0.0;
+ 239:main.c        ****             Fase=random_Fase();
+ 240:main.c        ****             Offset_H=0.833;
+ 241:main.c        ****             Offset_V=0.833+random_Offset();
+ 242:main.c        ****         }  
+ 243:main.c        ****         ampli_aux_H_2=Amplitud_H;
+ 244:main.c        ****         off_aux_H_2=Offset_H;      
+ 245:main.c        ****         ampli_aux_V_2=Amplitud_V;
+ 246:main.c        ****         off_aux_V_2=Offset_V;
+ 247:main.c        ****         pha_aux_2=Fase; 
+ 248:main.c        ****         Max_Conta=50;
+ 249:main.c        ****     }
+ 250:main.c        ****     else if (flag==3){
+ 251:main.c        ****         Amplitud_V=0.0;
+ 252:main.c        ****         Amplitud_H=0.0;
+ 253:main.c        ****         Fase=0.0;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 6
+
+
+ 254:main.c        ****         Offset_V=0.833;
+ 255:main.c        ****         Offset_H=0.833;
+ 256:main.c        ****         Max_Conta=15;
+ 257:main.c        ****     }    
+ 258:main.c        ****     else if(flag==4){
+ 259:main.c        ****         L_actual=dist;
+ 260:main.c        ****         dato_enviado_2[0]=individuo;
+ 261:main.c        ****         dato_enviado_2[1]=(int)dist;
+ 262:main.c        ****         CAN_SendMsg3();
+ 263:main.c        ****         if(L_anterior<L_actual){
+ 264:main.c        ****             Amplitud_V=ampli_aux_V;
+ 265:main.c        ****             Amplitud_H=ampli_aux_H;
+ 266:main.c        ****             Fase=pha_aux;
+ 267:main.c        ****             Offset_V=off_aux_V;
+ 268:main.c        ****             Offset_H=off_aux_H;              
+ 269:main.c        ****         }
+ 270:main.c        ****         else{
+ 271:main.c        ****             Amplitud_V=ampli_aux_V_2;
+ 272:main.c        ****             Amplitud_H=ampli_aux_H_2;
+ 273:main.c        ****             Fase=pha_aux_2;
+ 274:main.c        ****             Offset_V=off_aux_V_2;
+ 275:main.c        ****             Offset_H=off_aux_H_2;       
+ 276:main.c        ****         }
+ 277:main.c        ****         if(individuo==0){individuo=1;}
+ 278:main.c        ****         else{individuo=0;}
+ 279:main.c        ****         flag=0;
+ 280:main.c        ****         Max_Conta=70;
+ 281:main.c        ****     }
+ 282:main.c        ****     else if(flag>4){flag=0;Max_Conta=4;}  
+ 283:main.c        **** }
+ 284:main.c        **** 
+ 285:main.c        **** //Interrupt's
+ 286:main.c        **** CY_ISR(Temporizador){
+ 287:main.c        ****     conta++;  
+ 288:main.c        ****     if(conta==Max_Conta){     
+ 289:main.c        ****         LED_1_Write(1);
+ 290:main.c        ****         flag++;      
+ 291:main.c        ****         Hill(); 
+ 292:main.c        ****         for(int i=0;i<5;i++){
+ 293:main.c        ****             Enviar_Parametros(Amplitud_H,Fase,Offset_H,H);
+ 294:main.c        ****             CyDelay(50);
+ 295:main.c        ****             Enviar_Parametros(Amplitud_V,Fase,Offset_V,V);
+ 296:main.c        ****             CyDelay(50);
+ 297:main.c        ****             Send_Angle(0,0);
+ 298:main.c        ****         }        
+ 299:main.c        ****         conta=0;
+ 300:main.c        ****     }
+ 301:main.c        ****     else{
+ 302:main.c        ****         LED_1_Write(0);
+ 303:main.c        ****     }  
+ 304:main.c        **** }
+ 305:main.c        **** 
+ 306:main.c        **** CY_ISR(Serial_Interrupt){
+  33              		.loc 1 306 0
+  34              		.cfi_startproc
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 7
+
+
+  37 0000 10B5     		push	{r4, lr}
+  38              		.cfi_def_cfa_offset 8
+  39              		.cfi_offset 4, -8
+  40              		.cfi_offset 14, -4
+ 307:main.c        ****     dist=SENSOR_U_GetChar()/255.0;
+  41              		.loc 1 307 0
+  42 0002 FFF7FEFF 		bl	SENSOR_U_GetChar
+  43              	.LVL0:
+  44 0006 FFF7FEFF 		bl	__aeabi_i2d
+  45              	.LVL1:
+  46 000a 0022     		movs	r2, #0
+  47 000c 064B     		ldr	r3, .L2
+  48 000e FFF7FEFF 		bl	__aeabi_ddiv
+  49              	.LVL2:
+  50 0012 FFF7FEFF 		bl	__aeabi_d2f
+  51              	.LVL3:
+  52 0016 054C     		ldr	r4, .L2+4
+ 308:main.c        ****     dist=dist+Peso_Sensor;
+  53              		.loc 1 308 0
+  54 0018 6168     		ldr	r1, [r4, #4]
+  55 001a FFF7FEFF 		bl	__aeabi_fadd
+  56              	.LVL4:
+ 309:main.c        ****     dist=dist*100;
+  57              		.loc 1 309 0
+  58 001e 0449     		ldr	r1, .L2+8
+  59 0020 FFF7FEFF 		bl	__aeabi_fmul
+  60              	.LVL5:
+  61 0024 2060     		str	r0, [r4]
+ 310:main.c        **** }
+  62              		.loc 1 310 0
+  63              		@ sp needed
+  64 0026 10BD     		pop	{r4, pc}
+  65              	.L3:
+  66              		.align	2
+  67              	.L2:
+  68 0028 00E06F40 		.word	1081073664
+  69 002c 00000000 		.word	.LANCHOR0
+  70 0030 0000C842 		.word	1120403456
+  71              		.cfi_endproc
+  72              	.LFE50:
+  73              		.size	Serial_Interrupt, .-Serial_Interrupt
+  74              		.global	__aeabi_dmul
+  75              		.section	.text.randd,"ax",%progbits
+  76              		.align	2
+  77              		.global	randd
+  78              		.code	16
+  79              		.thumb_func
+  80              		.type	randd, %function
+  81              	randd:
+  82              	.LFB37:
+  45:main.c        ****   return (double)rand()/((double)RAND_MAX + 1);
+  83              		.loc 1 45 0
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 0
+  86              		@ frame_needed = 0, uses_anonymous_args = 0
+  87 0000 10B5     		push	{r4, lr}
+  88              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 8
+
+
+  89              		.cfi_offset 4, -8
+  90              		.cfi_offset 14, -4
+  46:main.c        **** }
+  91              		.loc 1 46 0
+  92 0002 FFF7FEFF 		bl	rand
+  93              	.LVL6:
+  94 0006 FFF7FEFF 		bl	__aeabi_i2d
+  95              	.LVL7:
+  96 000a 0022     		movs	r2, #0
+  97 000c F823     		movs	r3, #248
+  98 000e 9B05     		lsls	r3, r3, #22
+  99 0010 FFF7FEFF 		bl	__aeabi_dmul
+ 100              	.LVL8:
+  47:main.c        **** 
+ 101              		.loc 1 47 0
+ 102              		@ sp needed
+ 103 0014 10BD     		pop	{r4, pc}
+ 104              		.cfi_endproc
+ 105              	.LFE37:
+ 106              		.size	randd, .-randd
+ 107              		.global	__aeabi_f2d
+ 108 0016 C046     		.section	.text.random_amplitud_1,"ax",%progbits
+ 109              		.align	2
+ 110              		.global	random_amplitud_1
+ 111              		.code	16
+ 112              		.thumb_func
+ 113              		.type	random_amplitud_1, %function
+ 114              	random_amplitud_1:
+ 115              	.LFB38:
+  49:main.c        ****     float r=0.0;
+ 116              		.loc 1 49 0
+ 117              		.cfi_startproc
+ 118              		@ args = 0, pretend = 0, frame = 0
+ 119              		@ frame_needed = 0, uses_anonymous_args = 0
+ 120 0000 10B5     		push	{r4, lr}
+ 121              		.cfi_def_cfa_offset 8
+ 122              		.cfi_offset 4, -8
+ 123              		.cfi_offset 14, -4
+ 124              	.LVL9:
+  51:main.c        ****     return r;
+ 125              		.loc 1 51 0
+ 126 0002 FFF7FEFF 		bl	randd
+ 127              	.LVL10:
+ 128 0006 FFF7FEFF 		bl	__aeabi_d2f
+ 129              	.LVL11:
+  52:main.c        **** }
+ 130              		.loc 1 52 0
+ 131 000a FFF7FEFF 		bl	__aeabi_f2d
+ 132              	.LVL12:
+  53:main.c        **** 
+ 133              		.loc 1 53 0
+ 134              		@ sp needed
+ 135 000e 10BD     		pop	{r4, pc}
+ 136              		.cfi_endproc
+ 137              	.LFE38:
+ 138              		.size	random_amplitud_1, .-random_amplitud_1
+ 139              		.section	.text.random_amplitud_2,"ax",%progbits
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 9
+
+
+ 140              		.align	2
+ 141              		.global	random_amplitud_2
+ 142              		.code	16
+ 143              		.thumb_func
+ 144              		.type	random_amplitud_2, %function
+ 145              	random_amplitud_2:
+ 146              	.LFB39:
+  55:main.c        ****     float r=0.0;
+ 147              		.loc 1 55 0
+ 148              		.cfi_startproc
+ 149              		@ args = 0, pretend = 0, frame = 0
+ 150              		@ frame_needed = 0, uses_anonymous_args = 0
+ 151 0000 10B5     		push	{r4, lr}
+ 152              		.cfi_def_cfa_offset 8
+ 153              		.cfi_offset 4, -8
+ 154              		.cfi_offset 14, -4
+ 155              	.LVL13:
+  57:main.c        ****     r=r*0.2;
+ 156              		.loc 1 57 0
+ 157 0002 FFF7FEFF 		bl	randd
+ 158              	.LVL14:
+ 159 0006 FFF7FEFF 		bl	__aeabi_d2f
+ 160              	.LVL15:
+  58:main.c        ****     return r;
+ 161              		.loc 1 58 0
+ 162 000a FFF7FEFF 		bl	__aeabi_f2d
+ 163              	.LVL16:
+ 164 000e 044A     		ldr	r2, .L7
+ 165 0010 044B     		ldr	r3, .L7+4
+ 166 0012 FFF7FEFF 		bl	__aeabi_dmul
+ 167              	.LVL17:
+ 168 0016 FFF7FEFF 		bl	__aeabi_d2f
+ 169              	.LVL18:
+  59:main.c        **** }
+ 170              		.loc 1 59 0
+ 171 001a FFF7FEFF 		bl	__aeabi_f2d
+ 172              	.LVL19:
+  60:main.c        **** 
+ 173              		.loc 1 60 0
+ 174              		@ sp needed
+ 175 001e 10BD     		pop	{r4, pc}
+ 176              	.L8:
+ 177              		.align	2
+ 178              	.L7:
+ 179 0020 9A999999 		.word	-1717986918
+ 180 0024 9999C93F 		.word	1070176665
+ 181              		.cfi_endproc
+ 182              	.LFE39:
+ 183              		.size	random_amplitud_2, .-random_amplitud_2
+ 184              		.section	.text.random_Fase,"ax",%progbits
+ 185              		.align	2
+ 186              		.global	random_Fase
+ 187              		.code	16
+ 188              		.thumb_func
+ 189              		.type	random_Fase, %function
+ 190              	random_Fase:
+ 191              	.LFB40:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 10
+
+
+  62:main.c        ****     float r=0.0;
+ 192              		.loc 1 62 0
+ 193              		.cfi_startproc
+ 194              		@ args = 0, pretend = 0, frame = 0
+ 195              		@ frame_needed = 0, uses_anonymous_args = 0
+ 196 0000 10B5     		push	{r4, lr}
+ 197              		.cfi_def_cfa_offset 8
+ 198              		.cfi_offset 4, -8
+ 199              		.cfi_offset 14, -4
+ 200              	.LVL20:
+  64:main.c        ****     return r;
+ 201              		.loc 1 64 0
+ 202 0002 FFF7FEFF 		bl	randd
+ 203              	.LVL21:
+ 204 0006 044A     		ldr	r2, .L10
+ 205 0008 044B     		ldr	r3, .L10+4
+ 206 000a FFF7FEFF 		bl	__aeabi_dmul
+ 207              	.LVL22:
+ 208 000e FFF7FEFF 		bl	__aeabi_d2f
+ 209              	.LVL23:
+  65:main.c        **** }
+ 210              		.loc 1 65 0
+ 211 0012 FFF7FEFF 		bl	__aeabi_f2d
+ 212              	.LVL24:
+  66:main.c        **** 
+ 213              		.loc 1 66 0
+ 214              		@ sp needed
+ 215 0016 10BD     		pop	{r4, pc}
+ 216              	.L11:
+ 217              		.align	2
+ 218              	.L10:
+ 219 0018 9A999999 		.word	-1717986918
+ 220 001c 9999B9BF 		.word	-1078355559
+ 221              		.cfi_endproc
+ 222              	.LFE40:
+ 223              		.size	random_Fase, .-random_Fase
+ 224              		.global	__aeabi_dadd
+ 225              		.section	.text.random_Offset,"ax",%progbits
+ 226              		.align	2
+ 227              		.global	random_Offset
+ 228              		.code	16
+ 229              		.thumb_func
+ 230              		.type	random_Offset, %function
+ 231              	random_Offset:
+ 232              	.LFB41:
+  68:main.c        ****     float r=0.0;
+ 233              		.loc 1 68 0
+ 234              		.cfi_startproc
+ 235              		@ args = 0, pretend = 0, frame = 0
+ 236              		@ frame_needed = 0, uses_anonymous_args = 0
+ 237 0000 10B5     		push	{r4, lr}
+ 238              		.cfi_def_cfa_offset 8
+ 239              		.cfi_offset 4, -8
+ 240              		.cfi_offset 14, -4
+ 241              	.LVL25:
+  70:main.c        ****     r=r*-0.01;
+ 242              		.loc 1 70 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 11
+
+
+ 243 0002 FFF7FEFF 		bl	randd
+ 244              	.LVL26:
+ 245 0006 FFF7FEFF 		bl	__aeabi_d2f
+ 246              	.LVL27:
+  71:main.c        ****     r=r+0.02;
+ 247              		.loc 1 71 0
+ 248 000a FFF7FEFF 		bl	__aeabi_f2d
+ 249              	.LVL28:
+ 250 000e 084A     		ldr	r2, .L13
+ 251 0010 084B     		ldr	r3, .L13+4
+ 252 0012 FFF7FEFF 		bl	__aeabi_dmul
+ 253              	.LVL29:
+ 254 0016 FFF7FEFF 		bl	__aeabi_d2f
+ 255              	.LVL30:
+  72:main.c        ****     return r;
+ 256              		.loc 1 72 0
+ 257 001a FFF7FEFF 		bl	__aeabi_f2d
+ 258              	.LVL31:
+ 259 001e 044A     		ldr	r2, .L13
+ 260 0020 054B     		ldr	r3, .L13+8
+ 261 0022 FFF7FEFF 		bl	__aeabi_dadd
+ 262              	.LVL32:
+ 263 0026 FFF7FEFF 		bl	__aeabi_d2f
+ 264              	.LVL33:
+  73:main.c        **** }
+ 265              		.loc 1 73 0
+ 266 002a FFF7FEFF 		bl	__aeabi_f2d
+ 267              	.LVL34:
+  74:main.c        **** 
+ 268              		.loc 1 74 0
+ 269              		@ sp needed
+ 270 002e 10BD     		pop	{r4, pc}
+ 271              	.L14:
+ 272              		.align	2
+ 273              	.L13:
+ 274 0030 7B14AE47 		.word	1202590843
+ 275 0034 E17A84BF 		.word	-1081836831
+ 276 0038 E17A943F 		.word	1066695393
+ 277              		.cfi_endproc
+ 278              	.LFE41:
+ 279              		.size	random_Offset, .-random_Offset
+ 280              		.section	.text.movimiento,"ax",%progbits
+ 281              		.align	2
+ 282              		.global	movimiento
+ 283              		.code	16
+ 284              		.thumb_func
+ 285              		.type	movimiento, %function
+ 286              	movimiento:
+ 287              	.LFB42:
+  76:main.c        ****     char byteh,bytel;
+ 288              		.loc 1 76 0
+ 289              		.cfi_startproc
+ 290              		@ args = 0, pretend = 0, frame = 0
+ 291              		@ frame_needed = 0, uses_anonymous_args = 0
+ 292              	.LVL35:
+ 293 0000 10B5     		push	{r4, lr}
+ 294              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 12
+
+
+ 295              		.cfi_offset 4, -8
+ 296              		.cfi_offset 14, -4
+  78:main.c        ****     bytel=mov;
+ 297              		.loc 1 78 0
+ 298 0002 0A12     		asrs	r2, r1, #8
+ 299              	.LVL36:
+  80:main.c        ****     dato_enviado[1]=dirr ;//dir
+ 300              		.loc 1 80 0
+ 301 0004 074B     		ldr	r3, .L16
+ 302 0006 7F24     		movs	r4, #127
+ 303 0008 1C70     		strb	r4, [r3]
+  81:main.c        ****     dato_enviado[2]=ESCRITURA ;//operacion
+ 304              		.loc 1 81 0
+ 305 000a 5870     		strb	r0, [r3, #1]
+  82:main.c        ****     dato_enviado[3]=MOTOR;//lugar
+ 306              		.loc 1 82 0
+ 307 000c 0220     		movs	r0, #2
+ 308              	.LVL37:
+ 309 000e 9870     		strb	r0, [r3, #2]
+  83:main.c        ****     dato_enviado[4]= byteh ;  //dato
+ 310              		.loc 1 83 0
+ 311 0010 0130     		adds	r0, r0, #1
+ 312 0012 D870     		strb	r0, [r3, #3]
+  84:main.c        ****     dato_enviado[5]= bytel ;  //dato
+ 313              		.loc 1 84 0
+ 314 0014 1A71     		strb	r2, [r3, #4]
+  85:main.c        ****     CAN_SendMsg0(); 
+ 315              		.loc 1 85 0
+ 316 0016 5971     		strb	r1, [r3, #5]
+  86:main.c        ****     CyDelay(25);    
+ 317              		.loc 1 86 0
+ 318 0018 FFF7FEFF 		bl	CAN_SendMsg0
+ 319              	.LVL38:
+  87:main.c        **** }
+ 320              		.loc 1 87 0
+ 321 001c 1920     		movs	r0, #25
+ 322 001e FFF7FEFF 		bl	CyDelay
+ 323              	.LVL39:
+  88:main.c        **** 
+ 324              		.loc 1 88 0
+ 325              		@ sp needed
+ 326 0022 10BD     		pop	{r4, pc}
+ 327              	.L17:
+ 328              		.align	2
+ 329              	.L16:
+ 330 0024 00000000 		.word	dato_enviado
+ 331              		.cfi_endproc
+ 332              	.LFE42:
+ 333              		.size	movimiento, .-movimiento
+ 334              		.section	.text.Send_Angle,"ax",%progbits
+ 335              		.align	2
+ 336              		.global	Send_Angle
+ 337              		.code	16
+ 338              		.thumb_func
+ 339              		.type	Send_Angle, %function
+ 340              	Send_Angle:
+ 341              	.LFB43:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 13
+
+
+  90:main.c        ****     dato_enviado[0]=VER2;//verificacion
+ 342              		.loc 1 90 0
+ 343              		.cfi_startproc
+ 344              		@ args = 0, pretend = 0, frame = 0
+ 345              		@ frame_needed = 0, uses_anonymous_args = 0
+ 346              	.LVL40:
+ 347 0000 10B5     		push	{r4, lr}
+ 348              		.cfi_def_cfa_offset 8
+ 349              		.cfi_offset 4, -8
+ 350              		.cfi_offset 14, -4
+  91:main.c        ****     dato_enviado[1]=Conta3;//dir
+ 351              		.loc 1 91 0
+ 352 0002 094B     		ldr	r3, .L19
+ 353 0004 8022     		movs	r2, #128
+ 354 0006 1A70     		strb	r2, [r3]
+  92:main.c        ****     dato_enviado[2]=Conta3;//dir
+ 355              		.loc 1 92 0
+ 356 0008 C9B2     		uxtb	r1, r1
+ 357              	.LVL41:
+ 358 000a 5970     		strb	r1, [r3, #1]
+  93:main.c        ****     dato_enviado[3]=ANGLE;
+ 359              		.loc 1 93 0
+ 360 000c 9970     		strb	r1, [r3, #2]
+  94:main.c        ****     dato_enviado[4]=0;//lugar
+ 361              		.loc 1 94 0
+ 362 000e 653A     		subs	r2, r2, #101
+ 363 0010 DA70     		strb	r2, [r3, #3]
+  95:main.c        ****     dato_enviado[5]=0;  //dato... en este caso direcion para asignar
+ 364              		.loc 1 95 0
+ 365 0012 0022     		movs	r2, #0
+ 366 0014 1A71     		strb	r2, [r3, #4]
+  96:main.c        ****     dato_enviado[6]=datas;
+ 367              		.loc 1 96 0
+ 368 0016 5A71     		strb	r2, [r3, #5]
+  97:main.c        ****     dato_enviado[7]=Conta3;
+ 369              		.loc 1 97 0
+ 370 0018 9871     		strb	r0, [r3, #6]
+  98:main.c        ****     CAN_SendMsg0(); 
+ 371              		.loc 1 98 0
+ 372 001a D971     		strb	r1, [r3, #7]
+  99:main.c        ****     CyDelay(50);
+ 373              		.loc 1 99 0
+ 374 001c FFF7FEFF 		bl	CAN_SendMsg0
+ 375              	.LVL42:
+ 100:main.c        **** }
+ 376              		.loc 1 100 0
+ 377 0020 3220     		movs	r0, #50
+ 378 0022 FFF7FEFF 		bl	CyDelay
+ 379              	.LVL43:
+ 101:main.c        **** 
+ 380              		.loc 1 101 0
+ 381              		@ sp needed
+ 382 0026 10BD     		pop	{r4, pc}
+ 383              	.L20:
+ 384              		.align	2
+ 385              	.L19:
+ 386 0028 00000000 		.word	dato_enviado
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 14
+
+
+ 387              		.cfi_endproc
+ 388              	.LFE43:
+ 389              		.size	Send_Angle, .-Send_Angle
+ 390              		.global	__aeabi_f2iz
+ 391              		.global	__aeabi_fcmplt
+ 392              		.section	.text.Enviar_Parametros,"ax",%progbits
+ 393              		.align	2
+ 394              		.global	Enviar_Parametros
+ 395              		.code	16
+ 396              		.thumb_func
+ 397              		.type	Enviar_Parametros, %function
+ 398              	Enviar_Parametros:
+ 399              	.LFB44:
+ 103:main.c        ****     //Convertir el Valor a entero para ser enviado
+ 400              		.loc 1 103 0
+ 401              		.cfi_startproc
+ 402              		@ args = 0, pretend = 0, frame = 16
+ 403              		@ frame_needed = 0, uses_anonymous_args = 0
+ 404              	.LVL44:
+ 405 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 406              		.cfi_def_cfa_offset 20
+ 407              		.cfi_offset 4, -20
+ 408              		.cfi_offset 5, -16
+ 409              		.cfi_offset 6, -12
+ 410              		.cfi_offset 7, -8
+ 411              		.cfi_offset 14, -4
+ 412 0002 85B0     		sub	sp, sp, #20
+ 413              		.cfi_def_cfa_offset 40
+ 414 0004 0190     		str	r0, [sp, #4]
+ 415 0006 0291     		str	r1, [sp, #8]
+ 416 0008 0392     		str	r2, [sp, #12]
+ 417 000a 1F00     		movs	r7, r3
+ 105:main.c        ****     int Phase_env=(int)fabs(Phase*10000);
+ 418              		.loc 1 105 0
+ 419 000c 2749     		ldr	r1, .L31
+ 420              	.LVL45:
+ 421 000e FFF7FEFF 		bl	__aeabi_fmul
+ 422              	.LVL46:
+ 423 0012 4000     		lsls	r0, r0, #1
+ 424 0014 4008     		lsrs	r0, r0, #1
+ 425 0016 FFF7FEFF 		bl	__aeabi_f2iz
+ 426              	.LVL47:
+ 427 001a 0600     		movs	r6, r0
+ 428              	.LVL48:
+ 106:main.c        ****     int Offset_env=(int)fabs(Offset*10000);
+ 429              		.loc 1 106 0
+ 430 001c 2349     		ldr	r1, .L31
+ 431 001e 0298     		ldr	r0, [sp, #8]
+ 432              	.LVL49:
+ 433 0020 FFF7FEFF 		bl	__aeabi_fmul
+ 434              	.LVL50:
+ 435 0024 4000     		lsls	r0, r0, #1
+ 436 0026 4008     		lsrs	r0, r0, #1
+ 437 0028 FFF7FEFF 		bl	__aeabi_f2iz
+ 438              	.LVL51:
+ 439 002c 0500     		movs	r5, r0
+ 440              	.LVL52:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 15
+
+
+ 107:main.c        ****     //Enviar datos
+ 441              		.loc 1 107 0
+ 442 002e 1F49     		ldr	r1, .L31
+ 443 0030 0398     		ldr	r0, [sp, #12]
+ 444              	.LVL53:
+ 445 0032 FFF7FEFF 		bl	__aeabi_fmul
+ 446              	.LVL54:
+ 447 0036 4000     		lsls	r0, r0, #1
+ 448 0038 4008     		lsrs	r0, r0, #1
+ 449 003a FFF7FEFF 		bl	__aeabi_f2iz
+ 450              	.LVL55:
+ 451 003e 0400     		movs	r4, r0
+ 452              	.LVL56:
+ 109:main.c        ****     dato_enviado_1[1]=Orientacion;
+ 453              		.loc 1 109 0
+ 454 0040 1B4B     		ldr	r3, .L31+4
+ 455 0042 8122     		movs	r2, #129
+ 456 0044 1A70     		strb	r2, [r3]
+ 110:main.c        ****     //Convertir Amplitud
+ 457              		.loc 1 110 0
+ 458 0046 5F70     		strb	r7, [r3, #1]
+ 112:main.c        ****     uint8 datoH=Amp_env>>8;
+ 459              		.loc 1 112 0
+ 460 0048 F7B2     		uxtb	r7, r6
+ 461              	.LVL57:
+ 113:main.c        ****     uint8 Aux=0;
+ 462              		.loc 1 113 0
+ 463 004a 3612     		asrs	r6, r6, #8
+ 464              	.LVL58:
+ 465 004c F6B2     		uxtb	r6, r6
+ 466              	.LVL59:
+ 115:main.c        ****         Aux=(1<<7);
+ 467              		.loc 1 115 0
+ 468 004e 0021     		movs	r1, #0
+ 469 0050 0198     		ldr	r0, [sp, #4]
+ 470              	.LVL60:
+ 471 0052 FFF7FEFF 		bl	__aeabi_fcmplt
+ 472              	.LVL61:
+ 473 0056 0028     		cmp	r0, #0
+ 474 0058 01D0     		beq	.L22
+ 475              	.LVL62:
+ 117:main.c        ****     }
+ 476              		.loc 1 117 0
+ 477 005a 803E     		subs	r6, r6, #128
+ 478              	.LVL63:
+ 479 005c F6B2     		uxtb	r6, r6
+ 480              	.LVL64:
+ 481              	.L22:
+ 123:main.c        ****     dato_enviado_1[3]=datoH;
+ 482              		.loc 1 123 0
+ 483 005e 144B     		ldr	r3, .L31+4
+ 484 0060 9F70     		strb	r7, [r3, #2]
+ 124:main.c        ****     //Convertir Fase
+ 485              		.loc 1 124 0
+ 486 0062 DE70     		strb	r6, [r3, #3]
+ 126:main.c        ****     datoH=Phase_env>>8;
+ 487              		.loc 1 126 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 16
+
+
+ 488 0064 EEB2     		uxtb	r6, r5
+ 489              	.LVL65:
+ 127:main.c        ****     if(Phase<0.0){
+ 490              		.loc 1 127 0
+ 491 0066 2D12     		asrs	r5, r5, #8
+ 492              	.LVL66:
+ 493 0068 EDB2     		uxtb	r5, r5
+ 494              	.LVL67:
+ 128:main.c        ****         Aux=(1<<7);
+ 495              		.loc 1 128 0
+ 496 006a 0021     		movs	r1, #0
+ 497 006c 0298     		ldr	r0, [sp, #8]
+ 498 006e FFF7FEFF 		bl	__aeabi_fcmplt
+ 499              	.LVL68:
+ 500 0072 0028     		cmp	r0, #0
+ 501 0074 01D0     		beq	.L24
+ 502              	.LVL69:
+ 130:main.c        ****     }
+ 503              		.loc 1 130 0
+ 504 0076 803D     		subs	r5, r5, #128
+ 505              	.LVL70:
+ 506 0078 EDB2     		uxtb	r5, r5
+ 507              	.LVL71:
+ 508              	.L24:
+ 136:main.c        ****     dato_enviado_1[5]=datoH;
+ 509              		.loc 1 136 0
+ 510 007a 0D4B     		ldr	r3, .L31+4
+ 511 007c 1E71     		strb	r6, [r3, #4]
+ 137:main.c        ****     //Convertir Offset
+ 512              		.loc 1 137 0
+ 513 007e 5D71     		strb	r5, [r3, #5]
+ 139:main.c        ****     datoH=Offset_env>>8;
+ 514              		.loc 1 139 0
+ 515 0080 E5B2     		uxtb	r5, r4
+ 516              	.LVL72:
+ 140:main.c        ****     if(Offset<0.0){
+ 517              		.loc 1 140 0
+ 518 0082 2412     		asrs	r4, r4, #8
+ 519              	.LVL73:
+ 520 0084 E4B2     		uxtb	r4, r4
+ 521              	.LVL74:
+ 141:main.c        ****         Aux=(1<<7);
+ 522              		.loc 1 141 0
+ 523 0086 0021     		movs	r1, #0
+ 524 0088 0398     		ldr	r0, [sp, #12]
+ 525 008a FFF7FEFF 		bl	__aeabi_fcmplt
+ 526              	.LVL75:
+ 527 008e 0028     		cmp	r0, #0
+ 528 0090 01D0     		beq	.L26
+ 529              	.LVL76:
+ 143:main.c        ****     }
+ 530              		.loc 1 143 0
+ 531 0092 803C     		subs	r4, r4, #128
+ 532              	.LVL77:
+ 533 0094 E4B2     		uxtb	r4, r4
+ 534              	.LVL78:
+ 535              	.L26:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 17
+
+
+ 149:main.c        ****     dato_enviado_1[7]=datoH;    
+ 536              		.loc 1 149 0
+ 537 0096 064B     		ldr	r3, .L31+4
+ 538 0098 9D71     		strb	r5, [r3, #6]
+ 150:main.c        ****     CAN_SendMsg1();
+ 539              		.loc 1 150 0
+ 540 009a DC71     		strb	r4, [r3, #7]
+ 151:main.c        ****     CyDelay(25);
+ 541              		.loc 1 151 0
+ 542 009c FFF7FEFF 		bl	CAN_SendMsg1
+ 543              	.LVL79:
+ 152:main.c        **** }
+ 544              		.loc 1 152 0
+ 545 00a0 1920     		movs	r0, #25
+ 546 00a2 FFF7FEFF 		bl	CyDelay
+ 547              	.LVL80:
+ 153:main.c        **** 
+ 548              		.loc 1 153 0
+ 549 00a6 05B0     		add	sp, sp, #20
+ 550              		@ sp needed
+ 551              	.LVL81:
+ 552              	.LVL82:
+ 553 00a8 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 554              	.L32:
+ 555 00aa C046     		.align	2
+ 556              	.L31:
+ 557 00ac 00401C46 		.word	1176256512
+ 558 00b0 00000000 		.word	dato_enviado_1
+ 559              		.cfi_endproc
+ 560              	.LFE44:
+ 561              		.size	Enviar_Parametros, .-Enviar_Parametros
+ 562              		.section	.text.Recibe_mail_0,"ax",%progbits
+ 563              		.align	2
+ 564              		.global	Recibe_mail_0
+ 565              		.code	16
+ 566              		.thumb_func
+ 567              		.type	Recibe_mail_0, %function
+ 568              	Recibe_mail_0:
+ 569              	.LFB45:
+ 155:main.c        **** if(mailbox0[0]==VER){
+ 570              		.loc 1 155 0
+ 571              		.cfi_startproc
+ 572              		@ args = 0, pretend = 0, frame = 0
+ 573              		@ frame_needed = 0, uses_anonymous_args = 0
+ 574 0000 70B5     		push	{r4, r5, r6, lr}
+ 575              		.cfi_def_cfa_offset 16
+ 576              		.cfi_offset 4, -16
+ 577              		.cfi_offset 5, -12
+ 578              		.cfi_offset 6, -8
+ 579              		.cfi_offset 14, -4
+ 156:main.c        ****             switch(mailbox0[2]){
+ 580              		.loc 1 156 0
+ 581 0002 1A4B     		ldr	r3, .L39
+ 582 0004 1B78     		ldrb	r3, [r3]
+ 583 0006 7F2B     		cmp	r3, #127
+ 584 0008 0BD1     		bne	.L34
+ 157:main.c        ****             ///////////////////////////////////////////////////////
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 18
+
+
+ 585              		.loc 1 157 0
+ 586 000a 184A     		ldr	r2, .L39
+ 587 000c 9278     		ldrb	r2, [r2, #2]
+ 588 000e 022A     		cmp	r2, #2
+ 589 0010 07D1     		bne	.L34
+ 160:main.c        ****                     case CANTIDAD_MOD: 
+ 590              		.loc 1 160 0
+ 591 0012 164A     		ldr	r2, .L39
+ 592 0014 D278     		ldrb	r2, [r2, #3]
+ 593 0016 2B2A     		cmp	r2, #43
+ 594 0018 03D1     		bne	.L34
+ 162:main.c        ****                     break;
+ 595              		.loc 1 162 0
+ 596 001a 144A     		ldr	r2, .L39
+ 597 001c 1179     		ldrb	r1, [r2, #4]
+ 598 001e 144A     		ldr	r2, .L39+4
+ 599 0020 9160     		str	r1, [r2, #8]
+ 600              	.L34:
+ 171:main.c        ****                 switch(mailbox0[3]){
+ 601              		.loc 1 171 0
+ 602 0022 802B     		cmp	r3, #128
+ 603 0024 21D1     		bne	.L33
+ 172:main.c        ****                 ///////////////////////////////////////////////////////
+ 604              		.loc 1 172 0
+ 605 0026 114B     		ldr	r3, .L39
+ 606 0028 DB78     		ldrb	r3, [r3, #3]
+ 607 002a 1B2B     		cmp	r3, #27
+ 608 002c 1DD1     		bne	.L33
+ 609              	.LBB2:
+ 175:main.c        ****                     if(Contador>=cantidadM){
+ 610              		.loc 1 175 0
+ 611 002e 0F4B     		ldr	r3, .L39
+ 612 0030 DA79     		ldrb	r2, [r3, #7]
+ 613              	.LVL83:
+ 176:main.c        ****                             Enviar_Parametros(Amplitud_H,Fase,Offset_H,H);
+ 614              		.loc 1 176 0
+ 615 0032 0F4B     		ldr	r3, .L39+4
+ 616 0034 9B68     		ldr	r3, [r3, #8]
+ 617 0036 9A42     		cmp	r2, r3
+ 618 0038 17DB     		blt	.L33
+ 177:main.c        ****                             CyDelay(50);
+ 619              		.loc 1 177 0
+ 620 003a 0E4D     		ldr	r5, .L39+8
+ 621 003c 0C4C     		ldr	r4, .L39+4
+ 622 003e 2023     		movs	r3, #32
+ 623 0040 2A68     		ldr	r2, [r5]
+ 624              	.LVL84:
+ 625 0042 E168     		ldr	r1, [r4, #12]
+ 626 0044 2069     		ldr	r0, [r4, #16]
+ 627 0046 FFF7FEFF 		bl	Enviar_Parametros
+ 628              	.LVL85:
+ 178:main.c        ****                             Enviar_Parametros(Amplitud_V,Fase,Offset_V,V);
+ 629              		.loc 1 178 0
+ 630 004a 3220     		movs	r0, #50
+ 631 004c FFF7FEFF 		bl	CyDelay
+ 632              	.LVL86:
+ 179:main.c        ****                             CyDelay(50); 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 19
+
+
+ 633              		.loc 1 179 0
+ 634 0050 6A68     		ldr	r2, [r5, #4]
+ 635 0052 E168     		ldr	r1, [r4, #12]
+ 636 0054 6069     		ldr	r0, [r4, #20]
+ 637 0056 2123     		movs	r3, #33
+ 638 0058 FFF7FEFF 		bl	Enviar_Parametros
+ 639              	.LVL87:
+ 180:main.c        ****                             Send_Angle(0,0);
+ 640              		.loc 1 180 0
+ 641 005c 3220     		movs	r0, #50
+ 642 005e FFF7FEFF 		bl	CyDelay
+ 643              	.LVL88:
+ 181:main.c        ****                     } 
+ 644              		.loc 1 181 0
+ 645 0062 0021     		movs	r1, #0
+ 646 0064 0020     		movs	r0, #0
+ 647 0066 FFF7FEFF 		bl	Send_Angle
+ 648              	.LVL89:
+ 649              	.L33:
+ 650              	.LBE2:
+ 186:main.c        **** 
+ 651              		.loc 1 186 0
+ 652              		@ sp needed
+ 653 006a 70BD     		pop	{r4, r5, r6, pc}
+ 654              	.L40:
+ 655              		.align	2
+ 656              	.L39:
+ 657 006c 00000000 		.word	mailbox0
+ 658 0070 00000000 		.word	.LANCHOR0
+ 659 0074 00000000 		.word	.LANCHOR1
+ 660              		.cfi_endproc
+ 661              	.LFE45:
+ 662              		.size	Recibe_mail_0, .-Recibe_mail_0
+ 663              		.section	.text.Recibe_Mail_2,"ax",%progbits
+ 664              		.align	2
+ 665              		.global	Recibe_Mail_2
+ 666              		.code	16
+ 667              		.thumb_func
+ 668              		.type	Recibe_Mail_2, %function
+ 669              	Recibe_Mail_2:
+ 670              	.LFB46:
+ 188:main.c        ****     if(mailbox2[0]==SENSORES){
+ 671              		.loc 1 188 0
+ 672              		.cfi_startproc
+ 673              		@ args = 0, pretend = 0, frame = 0
+ 674              		@ frame_needed = 0, uses_anonymous_args = 0
+ 675              		@ link register save eliminated.
+ 189:main.c        ****         //Mailbox2[1] Derecha
+ 676              		.loc 1 189 0
+ 677 0000 3D4B     		ldr	r3, .L51
+ 678 0002 1B78     		ldrb	r3, [r3]
+ 679 0004 822B     		cmp	r3, #130
+ 680 0006 75D1     		bne	.L41
+ 193:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==0&&mailbox2[3]==1) {Peso_Sensor=0.2;}   //Izquierda
+ 681              		.loc 1 193 0
+ 682 0008 3B4B     		ldr	r3, .L51
+ 683 000a 5B78     		ldrb	r3, [r3, #1]
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 20
+
+
+ 684 000c 002B     		cmp	r3, #0
+ 685 000e 0BD1     		bne	.L43
+ 193:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==0&&mailbox2[3]==1) {Peso_Sensor=0.2;}   //Izquierda
+ 686              		.loc 1 193 0 is_stmt 0 discriminator 1
+ 687 0010 394A     		ldr	r2, .L51
+ 688 0012 9278     		ldrb	r2, [r2, #2]
+ 689 0014 002A     		cmp	r2, #0
+ 690 0016 07D1     		bne	.L43
+ 193:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==0&&mailbox2[3]==1) {Peso_Sensor=0.2;}   //Izquierda
+ 691              		.loc 1 193 0 discriminator 2
+ 692 0018 374A     		ldr	r2, .L51
+ 693 001a D278     		ldrb	r2, [r2, #3]
+ 694 001c 002A     		cmp	r2, #0
+ 695 001e 03D1     		bne	.L43
+ 193:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==0&&mailbox2[3]==1) {Peso_Sensor=0.2;}   //Izquierda
+ 696              		.loc 1 193 0 discriminator 3
+ 697 0020 0022     		movs	r2, #0
+ 698 0022 364B     		ldr	r3, .L51+4
+ 699 0024 5A60     		str	r2, [r3, #4]
+ 700 0026 65E0     		b	.L41
+ 701              	.L43:
+ 194:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==1&&mailbox2[3]==0) {Peso_Sensor=0.6;}   //Frontal
+ 702              		.loc 1 194 0 is_stmt 1
+ 703 0028 002B     		cmp	r3, #0
+ 704 002a 0BD1     		bne	.L44
+ 194:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==1&&mailbox2[3]==0) {Peso_Sensor=0.6;}   //Frontal
+ 705              		.loc 1 194 0 is_stmt 0 discriminator 1
+ 706 002c 324A     		ldr	r2, .L51
+ 707 002e 9278     		ldrb	r2, [r2, #2]
+ 708 0030 002A     		cmp	r2, #0
+ 709 0032 07D1     		bne	.L44
+ 194:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==1&&mailbox2[3]==0) {Peso_Sensor=0.6;}   //Frontal
+ 710              		.loc 1 194 0 discriminator 2
+ 711 0034 304A     		ldr	r2, .L51
+ 712 0036 D278     		ldrb	r2, [r2, #3]
+ 713 0038 012A     		cmp	r2, #1
+ 714 003a 03D1     		bne	.L44
+ 194:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==1&&mailbox2[3]==0) {Peso_Sensor=0.6;}   //Frontal
+ 715              		.loc 1 194 0 discriminator 3
+ 716 003c 304A     		ldr	r2, .L51+8
+ 717 003e 2F4B     		ldr	r3, .L51+4
+ 718 0040 5A60     		str	r2, [r3, #4]
+ 719 0042 57E0     		b	.L41
+ 720              	.L44:
+ 195:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==1&&mailbox2[3]==1) {Peso_Sensor=0.8;}   //Frontal e Iz
+ 721              		.loc 1 195 0 is_stmt 1
+ 722 0044 002B     		cmp	r3, #0
+ 723 0046 0BD1     		bne	.L45
+ 195:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==1&&mailbox2[3]==1) {Peso_Sensor=0.8;}   //Frontal e Iz
+ 724              		.loc 1 195 0 is_stmt 0 discriminator 1
+ 725 0048 2B4A     		ldr	r2, .L51
+ 726 004a 9278     		ldrb	r2, [r2, #2]
+ 727 004c 012A     		cmp	r2, #1
+ 728 004e 07D1     		bne	.L45
+ 195:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==1&&mailbox2[3]==1) {Peso_Sensor=0.8;}   //Frontal e Iz
+ 729              		.loc 1 195 0 discriminator 2
+ 730 0050 294A     		ldr	r2, .L51
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 21
+
+
+ 731 0052 D278     		ldrb	r2, [r2, #3]
+ 732 0054 002A     		cmp	r2, #0
+ 733 0056 03D1     		bne	.L45
+ 195:main.c        ****         else if(mailbox2[1]==0&&mailbox2[2]==1&&mailbox2[3]==1) {Peso_Sensor=0.8;}   //Frontal e Iz
+ 734              		.loc 1 195 0 discriminator 3
+ 735 0058 2A4A     		ldr	r2, .L51+12
+ 736 005a 284B     		ldr	r3, .L51+4
+ 737 005c 5A60     		str	r2, [r3, #4]
+ 738 005e 49E0     		b	.L41
+ 739              	.L45:
+ 196:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==0&&mailbox2[3]==0) {Peso_Sensor=0.2;}   //Derecha
+ 740              		.loc 1 196 0 is_stmt 1
+ 741 0060 002B     		cmp	r3, #0
+ 742 0062 0BD1     		bne	.L46
+ 196:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==0&&mailbox2[3]==0) {Peso_Sensor=0.2;}   //Derecha
+ 743              		.loc 1 196 0 is_stmt 0 discriminator 1
+ 744 0064 244A     		ldr	r2, .L51
+ 745 0066 9278     		ldrb	r2, [r2, #2]
+ 746 0068 012A     		cmp	r2, #1
+ 747 006a 07D1     		bne	.L46
+ 196:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==0&&mailbox2[3]==0) {Peso_Sensor=0.2;}   //Derecha
+ 748              		.loc 1 196 0 discriminator 2
+ 749 006c 224A     		ldr	r2, .L51
+ 750 006e D278     		ldrb	r2, [r2, #3]
+ 751 0070 012A     		cmp	r2, #1
+ 752 0072 03D1     		bne	.L46
+ 196:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==0&&mailbox2[3]==0) {Peso_Sensor=0.2;}   //Derecha
+ 753              		.loc 1 196 0 discriminator 3
+ 754 0074 244A     		ldr	r2, .L51+16
+ 755 0076 214B     		ldr	r3, .L51+4
+ 756 0078 5A60     		str	r2, [r3, #4]
+ 757 007a 3BE0     		b	.L41
+ 758              	.L46:
+ 197:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==0&&mailbox2[3]==1) {Peso_Sensor=0.4;}   //Derecha e Iz
+ 759              		.loc 1 197 0 is_stmt 1
+ 760 007c 012B     		cmp	r3, #1
+ 761 007e 0BD1     		bne	.L47
+ 197:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==0&&mailbox2[3]==1) {Peso_Sensor=0.4;}   //Derecha e Iz
+ 762              		.loc 1 197 0 is_stmt 0 discriminator 1
+ 763 0080 1D4A     		ldr	r2, .L51
+ 764 0082 9278     		ldrb	r2, [r2, #2]
+ 765 0084 002A     		cmp	r2, #0
+ 766 0086 07D1     		bne	.L47
+ 197:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==0&&mailbox2[3]==1) {Peso_Sensor=0.4;}   //Derecha e Iz
+ 767              		.loc 1 197 0 discriminator 2
+ 768 0088 1B4A     		ldr	r2, .L51
+ 769 008a D278     		ldrb	r2, [r2, #3]
+ 770 008c 002A     		cmp	r2, #0
+ 771 008e 03D1     		bne	.L47
+ 197:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==0&&mailbox2[3]==1) {Peso_Sensor=0.4;}   //Derecha e Iz
+ 772              		.loc 1 197 0 discriminator 3
+ 773 0090 1B4A     		ldr	r2, .L51+8
+ 774 0092 1A4B     		ldr	r3, .L51+4
+ 775 0094 5A60     		str	r2, [r3, #4]
+ 776 0096 2DE0     		b	.L41
+ 777              	.L47:
+ 198:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==1&&mailbox2[3]==0) {Peso_Sensor=0.8;}   //Frontal y De
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 22
+
+
+ 778              		.loc 1 198 0 is_stmt 1
+ 779 0098 012B     		cmp	r3, #1
+ 780 009a 0BD1     		bne	.L48
+ 198:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==1&&mailbox2[3]==0) {Peso_Sensor=0.8;}   //Frontal y De
+ 781              		.loc 1 198 0 is_stmt 0 discriminator 1
+ 782 009c 164A     		ldr	r2, .L51
+ 783 009e 9278     		ldrb	r2, [r2, #2]
+ 784 00a0 002A     		cmp	r2, #0
+ 785 00a2 07D1     		bne	.L48
+ 198:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==1&&mailbox2[3]==0) {Peso_Sensor=0.8;}   //Frontal y De
+ 786              		.loc 1 198 0 discriminator 2
+ 787 00a4 144A     		ldr	r2, .L51
+ 788 00a6 D278     		ldrb	r2, [r2, #3]
+ 789 00a8 012A     		cmp	r2, #1
+ 790 00aa 03D1     		bne	.L48
+ 198:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==1&&mailbox2[3]==0) {Peso_Sensor=0.8;}   //Frontal y De
+ 791              		.loc 1 198 0 discriminator 3
+ 792 00ac 174A     		ldr	r2, .L51+20
+ 793 00ae 134B     		ldr	r3, .L51+4
+ 794 00b0 5A60     		str	r2, [r3, #4]
+ 795 00b2 1FE0     		b	.L41
+ 796              	.L48:
+ 199:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==1&&mailbox2[3]==1) {Peso_Sensor=1;}     //Todos
+ 797              		.loc 1 199 0 is_stmt 1
+ 798 00b4 012B     		cmp	r3, #1
+ 799 00b6 0BD1     		bne	.L49
+ 199:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==1&&mailbox2[3]==1) {Peso_Sensor=1;}     //Todos
+ 800              		.loc 1 199 0 is_stmt 0 discriminator 1
+ 801 00b8 0F4A     		ldr	r2, .L51
+ 802 00ba 9278     		ldrb	r2, [r2, #2]
+ 803 00bc 012A     		cmp	r2, #1
+ 804 00be 07D1     		bne	.L49
+ 199:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==1&&mailbox2[3]==1) {Peso_Sensor=1;}     //Todos
+ 805              		.loc 1 199 0 discriminator 2
+ 806 00c0 0D4A     		ldr	r2, .L51
+ 807 00c2 D278     		ldrb	r2, [r2, #3]
+ 808 00c4 002A     		cmp	r2, #0
+ 809 00c6 03D1     		bne	.L49
+ 199:main.c        ****         else if(mailbox2[1]==1&&mailbox2[2]==1&&mailbox2[3]==1) {Peso_Sensor=1;}     //Todos
+ 810              		.loc 1 199 0 discriminator 3
+ 811 00c8 0F4A     		ldr	r2, .L51+16
+ 812 00ca 0C4B     		ldr	r3, .L51+4
+ 813 00cc 5A60     		str	r2, [r3, #4]
+ 814 00ce 11E0     		b	.L41
+ 815              	.L49:
+ 200:main.c        ****         else                                                    {Peso_Sensor=0.0;}   //Normal
+ 816              		.loc 1 200 0 is_stmt 1
+ 817 00d0 012B     		cmp	r3, #1
+ 818 00d2 0CD1     		bne	.L50
+ 200:main.c        ****         else                                                    {Peso_Sensor=0.0;}   //Normal
+ 819              		.loc 1 200 0 is_stmt 0 discriminator 1
+ 820 00d4 084B     		ldr	r3, .L51
+ 821 00d6 9B78     		ldrb	r3, [r3, #2]
+ 822 00d8 012B     		cmp	r3, #1
+ 823 00da 08D1     		bne	.L50
+ 200:main.c        ****         else                                                    {Peso_Sensor=0.0;}   //Normal
+ 824              		.loc 1 200 0 discriminator 2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 23
+
+
+ 825 00dc 064B     		ldr	r3, .L51
+ 826 00de DB78     		ldrb	r3, [r3, #3]
+ 827 00e0 012B     		cmp	r3, #1
+ 828 00e2 04D1     		bne	.L50
+ 200:main.c        ****         else                                                    {Peso_Sensor=0.0;}   //Normal
+ 829              		.loc 1 200 0 discriminator 3
+ 830 00e4 FE22     		movs	r2, #254
+ 831 00e6 9205     		lsls	r2, r2, #22
+ 832 00e8 044B     		ldr	r3, .L51+4
+ 833 00ea 5A60     		str	r2, [r3, #4]
+ 834 00ec 02E0     		b	.L41
+ 835              	.L50:
+ 201:main.c        ****     }
+ 836              		.loc 1 201 0 is_stmt 1
+ 837 00ee 0022     		movs	r2, #0
+ 838 00f0 024B     		ldr	r3, .L51+4
+ 839 00f2 5A60     		str	r2, [r3, #4]
+ 840              	.L41:
+ 203:main.c        **** 
+ 841              		.loc 1 203 0
+ 842              		@ sp needed
+ 843 00f4 7047     		bx	lr
+ 844              	.L52:
+ 845 00f6 C046     		.align	2
+ 846              	.L51:
+ 847 00f8 00000000 		.word	mailbox2
+ 848 00fc 00000000 		.word	.LANCHOR0
+ 849 0100 CDCC4C3E 		.word	1045220557
+ 850 0104 9A99193F 		.word	1058642330
+ 851 0108 CDCC4C3F 		.word	1061997773
+ 852 010c CDCCCC3E 		.word	1053609165
+ 853              		.cfi_endproc
+ 854              	.LFE46:
+ 855              		.size	Recibe_Mail_2, .-Recibe_Mail_2
+ 856              		.section	.text.interrutcan,"ax",%progbits
+ 857              		.align	2
+ 858              		.global	interrutcan
+ 859              		.code	16
+ 860              		.thumb_func
+ 861              		.type	interrutcan, %function
+ 862              	interrutcan:
+ 863              	.LFB47:
+ 205:main.c        ****     CAN_GlobalIntDisable();
+ 864              		.loc 1 205 0
+ 865              		.cfi_startproc
+ 866              		@ args = 0, pretend = 0, frame = 0
+ 867              		@ frame_needed = 0, uses_anonymous_args = 0
+ 868 0000 10B5     		push	{r4, lr}
+ 869              		.cfi_def_cfa_offset 8
+ 870              		.cfi_offset 4, -8
+ 871              		.cfi_offset 14, -4
+ 206:main.c        ****     CAN_MsgRXIsr();  
+ 872              		.loc 1 206 0
+ 873 0002 FFF7FEFF 		bl	CAN_GlobalIntDisable
+ 874              	.LVL90:
+ 207:main.c        ****     Recibe_mail_0();
+ 875              		.loc 1 207 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 24
+
+
+ 876 0006 FFF7FEFF 		bl	CAN_MsgRXIsr
+ 877              	.LVL91:
+ 208:main.c        ****     Recibe_Mail_2();
+ 878              		.loc 1 208 0
+ 879 000a FFF7FEFF 		bl	Recibe_mail_0
+ 880              	.LVL92:
+ 209:main.c        ****     CAN_GlobalIntEnable();
+ 881              		.loc 1 209 0
+ 882 000e FFF7FEFF 		bl	Recibe_Mail_2
+ 883              	.LVL93:
+ 210:main.c        **** }
+ 884              		.loc 1 210 0
+ 885 0012 FFF7FEFF 		bl	CAN_GlobalIntEnable
+ 886              	.LVL94:
+ 211:main.c        **** 
+ 887              		.loc 1 211 0
+ 888              		@ sp needed
+ 889 0016 10BD     		pop	{r4, pc}
+ 890              		.cfi_endproc
+ 891              	.LFE47:
+ 892              		.size	interrutcan, .-interrutcan
+ 893              		.global	__aeabi_dcmplt
+ 894              		.section	.text.Hill,"ax",%progbits
+ 895              		.align	2
+ 896              		.global	Hill
+ 897              		.code	16
+ 898              		.thumb_func
+ 899              		.type	Hill, %function
+ 900              	Hill:
+ 901              	.LFB48:
+ 213:main.c        ****     if (flag==1){
+ 902              		.loc 1 213 0
+ 903              		.cfi_startproc
+ 904              		@ args = 0, pretend = 0, frame = 0
+ 905              		@ frame_needed = 0, uses_anonymous_args = 0
+ 906 0000 70B5     		push	{r4, r5, r6, lr}
+ 907              		.cfi_def_cfa_offset 16
+ 908              		.cfi_offset 4, -16
+ 909              		.cfi_offset 5, -12
+ 910              		.cfi_offset 6, -8
+ 911              		.cfi_offset 14, -4
+ 214:main.c        ****         ampli_aux_V=Amplitud_V;
+ 912              		.loc 1 214 0
+ 913 0002 604B     		ldr	r3, .L72
+ 914 0004 9B69     		ldr	r3, [r3, #24]
+ 915 0006 012B     		cmp	r3, #1
+ 916 0008 15D1     		bne	.L55
+ 215:main.c        ****         ampli_aux_H=Amplitud_H;
+ 917              		.loc 1 215 0
+ 918 000a 5E4B     		ldr	r3, .L72
+ 919 000c 5A69     		ldr	r2, [r3, #20]
+ 920 000e DA61     		str	r2, [r3, #28]
+ 216:main.c        ****         pha_aux=Fase;
+ 921              		.loc 1 216 0
+ 922 0010 1A69     		ldr	r2, [r3, #16]
+ 923 0012 1A62     		str	r2, [r3, #32]
+ 217:main.c        ****         off_aux_V=Offset_V;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 25
+
+
+ 924              		.loc 1 217 0
+ 925 0014 DA68     		ldr	r2, [r3, #12]
+ 926 0016 5A62     		str	r2, [r3, #36]
+ 218:main.c        ****         off_aux_H=Offset_H;      
+ 927              		.loc 1 218 0
+ 928 0018 5B4A     		ldr	r2, .L72+4
+ 929 001a 5168     		ldr	r1, [r2, #4]
+ 930 001c 9160     		str	r1, [r2, #8]
+ 219:main.c        ****         Amplitud_V=0.0;
+ 931              		.loc 1 219 0
+ 932 001e 1168     		ldr	r1, [r2]
+ 933 0020 D160     		str	r1, [r2, #12]
+ 220:main.c        ****         Amplitud_H=0.0;
+ 934              		.loc 1 220 0
+ 935 0022 0021     		movs	r1, #0
+ 936 0024 5961     		str	r1, [r3, #20]
+ 221:main.c        ****         Fase=0.0;
+ 937              		.loc 1 221 0
+ 938 0026 1961     		str	r1, [r3, #16]
+ 222:main.c        ****         Offset_V=0.833;
+ 939              		.loc 1 222 0
+ 940 0028 D960     		str	r1, [r3, #12]
+ 223:main.c        ****         Offset_H=0.833;
+ 941              		.loc 1 223 0
+ 942 002a 584B     		ldr	r3, .L72+8
+ 943 002c 5360     		str	r3, [r2, #4]
+ 224:main.c        ****         Max_Conta=15;
+ 944              		.loc 1 224 0
+ 945 002e 1360     		str	r3, [r2]
+ 225:main.c        ****     }
+ 946              		.loc 1 225 0
+ 947 0030 0F23     		movs	r3, #15
+ 948 0032 1361     		str	r3, [r2, #16]
+ 949 0034 A4E0     		b	.L54
+ 950              	.L55:
+ 227:main.c        ****         L_anterior=dist;
+ 951              		.loc 1 227 0
+ 952 0036 022B     		cmp	r3, #2
+ 953 0038 4ED1     		bne	.L57
+ 228:main.c        ****         if(randd()<0.5){
+ 954              		.loc 1 228 0
+ 955 003a 524B     		ldr	r3, .L72
+ 956 003c 1A68     		ldr	r2, [r3]
+ 957 003e 9A62     		str	r2, [r3, #40]
+ 229:main.c        ****             Amplitud_H=random_amplitud_1();
+ 958              		.loc 1 229 0
+ 959 0040 FFF7FEFF 		bl	randd
+ 960              	.LVL95:
+ 961 0044 0022     		movs	r2, #0
+ 962 0046 524B     		ldr	r3, .L72+12
+ 963 0048 FFF7FEFF 		bl	__aeabi_dcmplt
+ 964              	.LVL96:
+ 965 004c 0028     		cmp	r0, #0
+ 966 004e 1BD0     		beq	.L70
+ 230:main.c        ****             Amplitud_V=random_amplitud_2();
+ 967              		.loc 1 230 0
+ 968 0050 FFF7FEFF 		bl	random_amplitud_1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 26
+
+
+ 969              	.LVL97:
+ 970 0054 4B4C     		ldr	r4, .L72
+ 971 0056 FFF7FEFF 		bl	__aeabi_d2f
+ 972              	.LVL98:
+ 973 005a 2061     		str	r0, [r4, #16]
+ 231:main.c        ****             Fase=random_Fase();
+ 974              		.loc 1 231 0
+ 975 005c FFF7FEFF 		bl	random_amplitud_2
+ 976              	.LVL99:
+ 977 0060 FFF7FEFF 		bl	__aeabi_d2f
+ 978              	.LVL100:
+ 979 0064 6061     		str	r0, [r4, #20]
+ 232:main.c        ****             Offset_H=0.833+random_Offset();
+ 980              		.loc 1 232 0
+ 981 0066 FFF7FEFF 		bl	random_Fase
+ 982              	.LVL101:
+ 983 006a FFF7FEFF 		bl	__aeabi_d2f
+ 984              	.LVL102:
+ 985 006e E060     		str	r0, [r4, #12]
+ 233:main.c        ****             Offset_V=Offset_H; 
+ 986              		.loc 1 233 0
+ 987 0070 FFF7FEFF 		bl	random_Offset
+ 988              	.LVL103:
+ 989 0074 474A     		ldr	r2, .L72+16
+ 990 0076 484B     		ldr	r3, .L72+20
+ 991 0078 FFF7FEFF 		bl	__aeabi_dadd
+ 992              	.LVL104:
+ 993 007c FFF7FEFF 		bl	__aeabi_d2f
+ 994              	.LVL105:
+ 995 0080 414B     		ldr	r3, .L72+4
+ 996 0082 1860     		str	r0, [r3]
+ 234:main.c        ****         }
+ 997              		.loc 1 234 0
+ 998 0084 5860     		str	r0, [r3, #4]
+ 999 0086 18E0     		b	.L60
+ 1000              	.L70:
+ 237:main.c        ****             Amplitud_H=0.0;
+ 1001              		.loc 1 237 0
+ 1002 0088 FFF7FEFF 		bl	random_amplitud_1
+ 1003              	.LVL106:
+ 1004 008c 3D4C     		ldr	r4, .L72
+ 1005 008e FFF7FEFF 		bl	__aeabi_d2f
+ 1006              	.LVL107:
+ 1007 0092 6061     		str	r0, [r4, #20]
+ 238:main.c        ****             Fase=random_Fase();
+ 1008              		.loc 1 238 0
+ 1009 0094 0023     		movs	r3, #0
+ 1010 0096 2361     		str	r3, [r4, #16]
+ 239:main.c        ****             Offset_H=0.833;
+ 1011              		.loc 1 239 0
+ 1012 0098 FFF7FEFF 		bl	random_Fase
+ 1013              	.LVL108:
+ 1014 009c FFF7FEFF 		bl	__aeabi_d2f
+ 1015              	.LVL109:
+ 1016 00a0 E060     		str	r0, [r4, #12]
+ 240:main.c        ****             Offset_V=0.833+random_Offset();
+ 1017              		.loc 1 240 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 27
+
+
+ 1018 00a2 394C     		ldr	r4, .L72+4
+ 1019 00a4 394B     		ldr	r3, .L72+8
+ 1020 00a6 2360     		str	r3, [r4]
+ 241:main.c        ****         }  
+ 1021              		.loc 1 241 0
+ 1022 00a8 FFF7FEFF 		bl	random_Offset
+ 1023              	.LVL110:
+ 1024 00ac 394A     		ldr	r2, .L72+16
+ 1025 00ae 3A4B     		ldr	r3, .L72+20
+ 1026 00b0 FFF7FEFF 		bl	__aeabi_dadd
+ 1027              	.LVL111:
+ 1028 00b4 FFF7FEFF 		bl	__aeabi_d2f
+ 1029              	.LVL112:
+ 1030 00b8 6060     		str	r0, [r4, #4]
+ 1031              	.L60:
+ 243:main.c        ****         off_aux_H_2=Offset_H;      
+ 1032              		.loc 1 243 0
+ 1033 00ba 324B     		ldr	r3, .L72
+ 1034 00bc 1A69     		ldr	r2, [r3, #16]
+ 1035 00be DA62     		str	r2, [r3, #44]
+ 244:main.c        ****         ampli_aux_V_2=Amplitud_V;
+ 1036              		.loc 1 244 0
+ 1037 00c0 314A     		ldr	r2, .L72+4
+ 1038 00c2 1168     		ldr	r1, [r2]
+ 1039 00c4 5161     		str	r1, [r2, #20]
+ 245:main.c        ****         off_aux_V_2=Offset_V;
+ 1040              		.loc 1 245 0
+ 1041 00c6 5969     		ldr	r1, [r3, #20]
+ 1042 00c8 1963     		str	r1, [r3, #48]
+ 246:main.c        ****         pha_aux_2=Fase; 
+ 1043              		.loc 1 246 0
+ 1044 00ca 5168     		ldr	r1, [r2, #4]
+ 1045 00cc 9161     		str	r1, [r2, #24]
+ 247:main.c        ****         Max_Conta=50;
+ 1046              		.loc 1 247 0
+ 1047 00ce D968     		ldr	r1, [r3, #12]
+ 1048 00d0 5963     		str	r1, [r3, #52]
+ 248:main.c        ****     }
+ 1049              		.loc 1 248 0
+ 1050 00d2 3223     		movs	r3, #50
+ 1051 00d4 1361     		str	r3, [r2, #16]
+ 1052 00d6 53E0     		b	.L54
+ 1053              	.L57:
+ 250:main.c        ****         Amplitud_V=0.0;
+ 1054              		.loc 1 250 0
+ 1055 00d8 032B     		cmp	r3, #3
+ 1056 00da 0BD1     		bne	.L61
+ 251:main.c        ****         Amplitud_H=0.0;
+ 1057              		.loc 1 251 0
+ 1058 00dc 294B     		ldr	r3, .L72
+ 1059 00de 0022     		movs	r2, #0
+ 1060 00e0 5A61     		str	r2, [r3, #20]
+ 252:main.c        ****         Fase=0.0;
+ 1061              		.loc 1 252 0
+ 1062 00e2 1A61     		str	r2, [r3, #16]
+ 253:main.c        ****         Offset_V=0.833;
+ 1063              		.loc 1 253 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 28
+
+
+ 1064 00e4 DA60     		str	r2, [r3, #12]
+ 254:main.c        ****         Offset_H=0.833;
+ 1065              		.loc 1 254 0
+ 1066 00e6 284B     		ldr	r3, .L72+4
+ 1067 00e8 284A     		ldr	r2, .L72+8
+ 1068 00ea 5A60     		str	r2, [r3, #4]
+ 255:main.c        ****         Max_Conta=15;
+ 1069              		.loc 1 255 0
+ 1070 00ec 1A60     		str	r2, [r3]
+ 256:main.c        ****     }    
+ 1071              		.loc 1 256 0
+ 1072 00ee 0F22     		movs	r2, #15
+ 1073 00f0 1A61     		str	r2, [r3, #16]
+ 1074 00f2 45E0     		b	.L54
+ 1075              	.L61:
+ 258:main.c        ****         L_actual=dist;
+ 1076              		.loc 1 258 0
+ 1077 00f4 042B     		cmp	r3, #4
+ 1078 00f6 3BD1     		bne	.L62
+ 259:main.c        ****         dato_enviado_2[0]=individuo;
+ 1079              		.loc 1 259 0
+ 1080 00f8 224C     		ldr	r4, .L72
+ 1081 00fa 2068     		ldr	r0, [r4]
+ 1082 00fc A063     		str	r0, [r4, #56]
+ 260:main.c        ****         dato_enviado_2[1]=(int)dist;
+ 1083              		.loc 1 260 0
+ 1084 00fe 274D     		ldr	r5, .L72+24
+ 1085 0100 E36B     		ldr	r3, [r4, #60]
+ 1086 0102 2B70     		strb	r3, [r5]
+ 261:main.c        ****         CAN_SendMsg3();
+ 1087              		.loc 1 261 0
+ 1088 0104 FFF7FEFF 		bl	__aeabi_f2iz
+ 1089              	.LVL113:
+ 1090 0108 6870     		strb	r0, [r5, #1]
+ 262:main.c        ****         if(L_anterior<L_actual){
+ 1091              		.loc 1 262 0
+ 1092 010a FFF7FEFF 		bl	CAN_SendMsg3
+ 1093              	.LVL114:
+ 263:main.c        ****             Amplitud_V=ampli_aux_V;
+ 1094              		.loc 1 263 0
+ 1095 010e A06A     		ldr	r0, [r4, #40]
+ 1096 0110 A16B     		ldr	r1, [r4, #56]
+ 1097 0112 FFF7FEFF 		bl	__aeabi_fcmplt
+ 1098              	.LVL115:
+ 1099 0116 0028     		cmp	r0, #0
+ 1100 0118 0CD0     		beq	.L71
+ 264:main.c        ****             Amplitud_H=ampli_aux_H;
+ 1101              		.loc 1 264 0
+ 1102 011a 1A4B     		ldr	r3, .L72
+ 1103 011c DA69     		ldr	r2, [r3, #28]
+ 1104 011e 5A61     		str	r2, [r3, #20]
+ 265:main.c        ****             Fase=pha_aux;
+ 1105              		.loc 1 265 0
+ 1106 0120 1A6A     		ldr	r2, [r3, #32]
+ 1107 0122 1A61     		str	r2, [r3, #16]
+ 266:main.c        ****             Offset_V=off_aux_V;
+ 1108              		.loc 1 266 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 29
+
+
+ 1109 0124 5A6A     		ldr	r2, [r3, #36]
+ 1110 0126 DA60     		str	r2, [r3, #12]
+ 267:main.c        ****             Offset_H=off_aux_H;              
+ 1111              		.loc 1 267 0
+ 1112 0128 174B     		ldr	r3, .L72+4
+ 1113 012a 9A68     		ldr	r2, [r3, #8]
+ 1114 012c 5A60     		str	r2, [r3, #4]
+ 268:main.c        ****         }
+ 1115              		.loc 1 268 0
+ 1116 012e DA68     		ldr	r2, [r3, #12]
+ 1117 0130 1A60     		str	r2, [r3]
+ 1118 0132 0BE0     		b	.L65
+ 1119              	.L71:
+ 271:main.c        ****             Amplitud_H=ampli_aux_H_2;
+ 1120              		.loc 1 271 0
+ 1121 0134 134B     		ldr	r3, .L72
+ 1122 0136 1A6B     		ldr	r2, [r3, #48]
+ 1123 0138 5A61     		str	r2, [r3, #20]
+ 272:main.c        ****             Fase=pha_aux_2;
+ 1124              		.loc 1 272 0
+ 1125 013a DA6A     		ldr	r2, [r3, #44]
+ 1126 013c 1A61     		str	r2, [r3, #16]
+ 273:main.c        ****             Offset_V=off_aux_V_2;
+ 1127              		.loc 1 273 0
+ 1128 013e 5A6B     		ldr	r2, [r3, #52]
+ 1129 0140 DA60     		str	r2, [r3, #12]
+ 274:main.c        ****             Offset_H=off_aux_H_2;       
+ 1130              		.loc 1 274 0
+ 1131 0142 114B     		ldr	r3, .L72+4
+ 1132 0144 9A69     		ldr	r2, [r3, #24]
+ 1133 0146 5A60     		str	r2, [r3, #4]
+ 275:main.c        ****         }
+ 1134              		.loc 1 275 0
+ 1135 0148 5A69     		ldr	r2, [r3, #20]
+ 1136 014a 1A60     		str	r2, [r3]
+ 1137              	.L65:
+ 277:main.c        ****         else{individuo=0;}
+ 1138              		.loc 1 277 0
+ 1139 014c 0D4B     		ldr	r3, .L72
+ 1140 014e DB6B     		ldr	r3, [r3, #60]
+ 1141 0150 002B     		cmp	r3, #0
+ 1142 0152 03D1     		bne	.L66
+ 277:main.c        ****         else{individuo=0;}
+ 1143              		.loc 1 277 0 is_stmt 0 discriminator 1
+ 1144 0154 0122     		movs	r2, #1
+ 1145 0156 0B4B     		ldr	r3, .L72
+ 1146 0158 DA63     		str	r2, [r3, #60]
+ 1147 015a 02E0     		b	.L67
+ 1148              	.L66:
+ 278:main.c        ****         flag=0;
+ 1149              		.loc 1 278 0 is_stmt 1
+ 1150 015c 0022     		movs	r2, #0
+ 1151 015e 094B     		ldr	r3, .L72
+ 1152 0160 DA63     		str	r2, [r3, #60]
+ 1153              	.L67:
+ 279:main.c        ****         Max_Conta=70;
+ 1154              		.loc 1 279 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 30
+
+
+ 1155 0162 0022     		movs	r2, #0
+ 1156 0164 074B     		ldr	r3, .L72
+ 1157 0166 9A61     		str	r2, [r3, #24]
+ 280:main.c        ****     }
+ 1158              		.loc 1 280 0
+ 1159 0168 4632     		adds	r2, r2, #70
+ 1160 016a 074B     		ldr	r3, .L72+4
+ 1161 016c 1A61     		str	r2, [r3, #16]
+ 1162 016e 07E0     		b	.L54
+ 1163              	.L62:
+ 282:main.c        **** }
+ 1164              		.loc 1 282 0
+ 1165 0170 042B     		cmp	r3, #4
+ 1166 0172 05DD     		ble	.L54
+ 282:main.c        **** }
+ 1167              		.loc 1 282 0 is_stmt 0 discriminator 1
+ 1168 0174 0022     		movs	r2, #0
+ 1169 0176 034B     		ldr	r3, .L72
+ 1170 0178 9A61     		str	r2, [r3, #24]
+ 1171 017a 0432     		adds	r2, r2, #4
+ 1172 017c 024B     		ldr	r3, .L72+4
+ 1173 017e 1A61     		str	r2, [r3, #16]
+ 1174              	.L54:
+ 283:main.c        **** 
+ 1175              		.loc 1 283 0 is_stmt 1
+ 1176              		@ sp needed
+ 1177 0180 70BD     		pop	{r4, r5, r6, pc}
+ 1178              	.L73:
+ 1179 0182 C046     		.align	2
+ 1180              	.L72:
+ 1181 0184 00000000 		.word	.LANCHOR0
+ 1182 0188 00000000 		.word	.LANCHOR1
+ 1183 018c 7D3F553F 		.word	1062551421
+ 1184 0190 0000E03F 		.word	1071644672
+ 1185 0194 0E2DB29D 		.word	-1649267442
+ 1186 0198 EFA7EA3F 		.word	1072343023
+ 1187 019c 00000000 		.word	dato_enviado_2
+ 1188              		.cfi_endproc
+ 1189              	.LFE48:
+ 1190              		.size	Hill, .-Hill
+ 1191              		.section	.text.Temporizador,"ax",%progbits
+ 1192              		.align	2
+ 1193              		.global	Temporizador
+ 1194              		.code	16
+ 1195              		.thumb_func
+ 1196              		.type	Temporizador, %function
+ 1197              	Temporizador:
+ 1198              	.LFB49:
+ 286:main.c        ****     conta++;  
+ 1199              		.loc 1 286 0
+ 1200              		.cfi_startproc
+ 1201              		@ args = 0, pretend = 0, frame = 0
+ 1202              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1203 0000 70B5     		push	{r4, r5, r6, lr}
+ 1204              		.cfi_def_cfa_offset 16
+ 1205              		.cfi_offset 4, -16
+ 1206              		.cfi_offset 5, -12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 31
+
+
+ 1207              		.cfi_offset 6, -8
+ 1208              		.cfi_offset 14, -4
+ 287:main.c        ****     if(conta==Max_Conta){     
+ 1209              		.loc 1 287 0
+ 1210 0002 1C49     		ldr	r1, .L79
+ 1211 0004 4022     		movs	r2, #64
+ 1212 0006 8B5A     		ldrh	r3, [r1, r2]
+ 1213 0008 0133     		adds	r3, r3, #1
+ 1214 000a 1BB2     		sxth	r3, r3
+ 1215 000c 8B52     		strh	r3, [r1, r2]
+ 288:main.c        ****         LED_1_Write(1);
+ 1216              		.loc 1 288 0
+ 1217 000e 1A4A     		ldr	r2, .L79+4
+ 1218 0010 1269     		ldr	r2, [r2, #16]
+ 1219 0012 9342     		cmp	r3, r2
+ 1220 0014 2AD1     		bne	.L75
+ 289:main.c        ****         flag++;      
+ 1221              		.loc 1 289 0
+ 1222 0016 0120     		movs	r0, #1
+ 1223 0018 FFF7FEFF 		bl	LED_1_Write
+ 1224              	.LVL116:
+ 290:main.c        ****         Hill(); 
+ 1225              		.loc 1 290 0
+ 1226 001c 154A     		ldr	r2, .L79
+ 1227 001e 9369     		ldr	r3, [r2, #24]
+ 1228 0020 0133     		adds	r3, r3, #1
+ 1229 0022 9361     		str	r3, [r2, #24]
+ 291:main.c        ****         for(int i=0;i<5;i++){
+ 1230              		.loc 1 291 0
+ 1231 0024 FFF7FEFF 		bl	Hill
+ 1232              	.LVL117:
+ 1233              	.LBB3:
+ 292:main.c        ****             Enviar_Parametros(Amplitud_H,Fase,Offset_H,H);
+ 1234              		.loc 1 292 0
+ 1235 0028 0025     		movs	r5, #0
+ 1236 002a 18E0     		b	.L76
+ 1237              	.LVL118:
+ 1238              	.L77:
+ 293:main.c        ****             CyDelay(50);
+ 1239              		.loc 1 293 0 discriminator 3
+ 1240 002c 124E     		ldr	r6, .L79+4
+ 1241 002e 114C     		ldr	r4, .L79
+ 1242 0030 2023     		movs	r3, #32
+ 1243 0032 3268     		ldr	r2, [r6]
+ 1244 0034 E168     		ldr	r1, [r4, #12]
+ 1245 0036 2069     		ldr	r0, [r4, #16]
+ 1246 0038 FFF7FEFF 		bl	Enviar_Parametros
+ 1247              	.LVL119:
+ 294:main.c        ****             Enviar_Parametros(Amplitud_V,Fase,Offset_V,V);
+ 1248              		.loc 1 294 0 discriminator 3
+ 1249 003c 3220     		movs	r0, #50
+ 1250 003e FFF7FEFF 		bl	CyDelay
+ 1251              	.LVL120:
+ 295:main.c        ****             CyDelay(50);
+ 1252              		.loc 1 295 0 discriminator 3
+ 1253 0042 7268     		ldr	r2, [r6, #4]
+ 1254 0044 E168     		ldr	r1, [r4, #12]
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 32
+
+
+ 1255 0046 6069     		ldr	r0, [r4, #20]
+ 1256 0048 2123     		movs	r3, #33
+ 1257 004a FFF7FEFF 		bl	Enviar_Parametros
+ 1258              	.LVL121:
+ 296:main.c        ****             Send_Angle(0,0);
+ 1259              		.loc 1 296 0 discriminator 3
+ 1260 004e 3220     		movs	r0, #50
+ 1261 0050 FFF7FEFF 		bl	CyDelay
+ 1262              	.LVL122:
+ 297:main.c        ****         }        
+ 1263              		.loc 1 297 0 discriminator 3
+ 1264 0054 0021     		movs	r1, #0
+ 1265 0056 0020     		movs	r0, #0
+ 1266 0058 FFF7FEFF 		bl	Send_Angle
+ 1267              	.LVL123:
+ 292:main.c        ****             Enviar_Parametros(Amplitud_H,Fase,Offset_H,H);
+ 1268              		.loc 1 292 0 discriminator 3
+ 1269 005c 0135     		adds	r5, r5, #1
+ 1270              	.LVL124:
+ 1271              	.L76:
+ 292:main.c        ****             Enviar_Parametros(Amplitud_H,Fase,Offset_H,H);
+ 1272              		.loc 1 292 0 is_stmt 0 discriminator 1
+ 1273 005e 042D     		cmp	r5, #4
+ 1274 0060 E4DD     		ble	.L77
+ 1275              	.LBE3:
+ 299:main.c        ****     }
+ 1276              		.loc 1 299 0 is_stmt 1
+ 1277 0062 0021     		movs	r1, #0
+ 1278 0064 4023     		movs	r3, #64
+ 1279 0066 034A     		ldr	r2, .L79
+ 1280 0068 D152     		strh	r1, [r2, r3]
+ 1281 006a 02E0     		b	.L74
+ 1282              	.LVL125:
+ 1283              	.L75:
+ 302:main.c        ****     }  
+ 1284              		.loc 1 302 0
+ 1285 006c 0020     		movs	r0, #0
+ 1286 006e FFF7FEFF 		bl	LED_1_Write
+ 1287              	.LVL126:
+ 1288              	.L74:
+ 304:main.c        **** 
+ 1289              		.loc 1 304 0
+ 1290              		@ sp needed
+ 1291 0072 70BD     		pop	{r4, r5, r6, pc}
+ 1292              	.L80:
+ 1293              		.align	2
+ 1294              	.L79:
+ 1295 0074 00000000 		.word	.LANCHOR0
+ 1296 0078 00000000 		.word	.LANCHOR1
+ 1297              		.cfi_endproc
+ 1298              	.LFE49:
+ 1299              		.size	Temporizador, .-Temporizador
+ 1300              		.section	.text.main,"ax",%progbits
+ 1301              		.align	2
+ 1302              		.global	main
+ 1303              		.code	16
+ 1304              		.thumb_func
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 33
+
+
+ 1305              		.type	main, %function
+ 1306              	main:
+ 1307              	.LFB51:
+ 311:main.c        **** 
+ 312:main.c        **** int main()
+ 313:main.c        **** {
+ 1308              		.loc 1 313 0
+ 1309              		.cfi_startproc
+ 1310              		@ Volatile: function does not return.
+ 1311              		@ args = 0, pretend = 0, frame = 0
+ 1312              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1313 0000 10B5     		push	{r4, lr}
+ 1314              		.cfi_def_cfa_offset 8
+ 1315              		.cfi_offset 4, -8
+ 1316              		.cfi_offset 14, -4
+ 314:main.c        ****     //Init LED's
+ 315:main.c        ****     CAN_Start(); ///  start CAN
+ 1317              		.loc 1 315 0
+ 1318 0002 FFF7FEFF 		bl	CAN_Start
+ 1319              	.LVL127:
+ 316:main.c        ****     Timer_1_Start();
+ 1320              		.loc 1 316 0
+ 1321 0006 FFF7FEFF 		bl	Timer_1_Start
+ 1322              	.LVL128:
+ 317:main.c        ****     Timer_Start();
+ 1323              		.loc 1 317 0
+ 1324 000a FFF7FEFF 		bl	Timer_Start
+ 1325              	.LVL129:
+ 318:main.c        ****     SENSOR_U_Start();
+ 1326              		.loc 1 318 0
+ 1327 000e FFF7FEFF 		bl	SENSOR_U_Start
+ 1328              	.LVL130:
+ 319:main.c        ****     CAN_isr_StartEx(interrutcan);
+ 1329              		.loc 1 319 0
+ 1330 0012 0648     		ldr	r0, .L83
+ 1331 0014 FFF7FEFF 		bl	CAN_isr_StartEx
+ 1332              	.LVL131:
+ 320:main.c        ****     CAN_GlobalIntEnable();
+ 1333              		.loc 1 320 0
+ 1334 0018 FFF7FEFF 		bl	CAN_GlobalIntEnable
+ 1335              	.LVL132:
+ 321:main.c        ****     Int_Serial_StartEx(Serial_Interrupt);
+ 1336              		.loc 1 321 0
+ 1337 001c 0448     		ldr	r0, .L83+4
+ 1338 001e FFF7FEFF 		bl	Int_Serial_StartEx
+ 1339              	.LVL133:
+ 322:main.c        ****     Timer_StartEx(Temporizador);
+ 1340              		.loc 1 322 0
+ 1341 0022 0448     		ldr	r0, .L83+8
+ 1342 0024 FFF7FEFF 		bl	Timer_StartEx
+ 1343              	.LVL134:
+ 323:main.c        ****     CyGlobalIntEnable;
+ 1344              		.loc 1 323 0
+ 1345              		.syntax divided
+ 1346              	@ 323 "main.c" 1
+ 1347 0028 62B6     		CPSIE   i
+ 1348              	@ 0 "" 2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 34
+
+
+ 1349              		.thumb
+ 1350              		.syntax unified
+ 1351              	.L82:
+ 1352 002a FEE7     		b	.L82
+ 1353              	.L84:
+ 1354              		.align	2
+ 1355              	.L83:
+ 1356 002c 00000000 		.word	interrutcan
+ 1357 0030 00000000 		.word	Serial_Interrupt
+ 1358 0034 00000000 		.word	Temporizador
+ 1359              		.cfi_endproc
+ 1360              	.LFE51:
+ 1361              		.size	main, .-main
+ 1362              		.global	individuo
+ 1363              		.global	move_s
+ 1364              		.global	punto_b
+ 1365              		.global	punto_a
+ 1366              		.global	L_anterior
+ 1367              		.global	L_actual
+ 1368              		.global	dist
+ 1369              		.global	flag
+ 1370              		.global	Peso_Sensor
+ 1371              		.global	off_aux_H_2
+ 1372              		.global	ampli_aux_H_2
+ 1373              		.global	pha_aux_2
+ 1374              		.global	off_aux_V_2
+ 1375              		.global	ampli_aux_V_2
+ 1376              		.global	pha_aux
+ 1377              		.global	off_aux_H
+ 1378              		.global	off_aux_V
+ 1379              		.global	ampli_aux_H
+ 1380              		.global	ampli_aux_V
+ 1381              		.global	Fase
+ 1382              		.global	Offset_V
+ 1383              		.global	Offset_H
+ 1384              		.global	Amplitud_V
+ 1385              		.global	Amplitud_H
+ 1386              		.global	Max_Conta
+ 1387              		.global	Cantidad_Sensores
+ 1388              		.global	cantidadM
+ 1389              		.global	conta
+ 1390              		.comm	dato_enviado_2,8,4
+ 1391              		.comm	dato_enviado_1,8,4
+ 1392              		.comm	dato_enviado,8,4
+ 1393              		.comm	mailbox2,8,4
+ 1394              		.comm	mailbox1,8,4
+ 1395              		.comm	mailbox0,8,4
+ 1396              		.data
+ 1397              		.align	2
+ 1398              		.set	.LANCHOR1,. + 0
+ 1399              		.type	Offset_H, %object
+ 1400              		.size	Offset_H, 4
+ 1401              	Offset_H:
+ 1402 0000 7D3F553F 		.word	1062551421
+ 1403              		.type	Offset_V, %object
+ 1404              		.size	Offset_V, 4
+ 1405              	Offset_V:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 35
+
+
+ 1406 0004 7D3F553F 		.word	1062551421
+ 1407              		.type	off_aux_V, %object
+ 1408              		.size	off_aux_V, 4
+ 1409              	off_aux_V:
+ 1410 0008 7D3F553F 		.word	1062551421
+ 1411              		.type	off_aux_H, %object
+ 1412              		.size	off_aux_H, 4
+ 1413              	off_aux_H:
+ 1414 000c 7D3F553F 		.word	1062551421
+ 1415              		.type	Max_Conta, %object
+ 1416              		.size	Max_Conta, 4
+ 1417              	Max_Conta:
+ 1418 0010 96000000 		.word	150
+ 1419              		.type	off_aux_H_2, %object
+ 1420              		.size	off_aux_H_2, 4
+ 1421              	off_aux_H_2:
+ 1422 0014 7D3F553F 		.word	1062551421
+ 1423              		.type	off_aux_V_2, %object
+ 1424              		.size	off_aux_V_2, 4
+ 1425              	off_aux_V_2:
+ 1426 0018 7D3F553F 		.word	1062551421
+ 1427              		.bss
+ 1428              		.align	2
+ 1429              		.set	.LANCHOR0,. + 0
+ 1430              		.type	dist, %object
+ 1431              		.size	dist, 4
+ 1432              	dist:
+ 1433 0000 00000000 		.space	4
+ 1434              		.type	Peso_Sensor, %object
+ 1435              		.size	Peso_Sensor, 4
+ 1436              	Peso_Sensor:
+ 1437 0004 00000000 		.space	4
+ 1438              		.type	cantidadM, %object
+ 1439              		.size	cantidadM, 4
+ 1440              	cantidadM:
+ 1441 0008 00000000 		.space	4
+ 1442              		.type	Fase, %object
+ 1443              		.size	Fase, 4
+ 1444              	Fase:
+ 1445 000c 00000000 		.space	4
+ 1446              		.type	Amplitud_H, %object
+ 1447              		.size	Amplitud_H, 4
+ 1448              	Amplitud_H:
+ 1449 0010 00000000 		.space	4
+ 1450              		.type	Amplitud_V, %object
+ 1451              		.size	Amplitud_V, 4
+ 1452              	Amplitud_V:
+ 1453 0014 00000000 		.space	4
+ 1454              		.type	flag, %object
+ 1455              		.size	flag, 4
+ 1456              	flag:
+ 1457 0018 00000000 		.space	4
+ 1458              		.type	ampli_aux_V, %object
+ 1459              		.size	ampli_aux_V, 4
+ 1460              	ampli_aux_V:
+ 1461 001c 00000000 		.space	4
+ 1462              		.type	ampli_aux_H, %object
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 36
+
+
+ 1463              		.size	ampli_aux_H, 4
+ 1464              	ampli_aux_H:
+ 1465 0020 00000000 		.space	4
+ 1466              		.type	pha_aux, %object
+ 1467              		.size	pha_aux, 4
+ 1468              	pha_aux:
+ 1469 0024 00000000 		.space	4
+ 1470              		.type	L_anterior, %object
+ 1471              		.size	L_anterior, 4
+ 1472              	L_anterior:
+ 1473 0028 00000000 		.space	4
+ 1474              		.type	ampli_aux_H_2, %object
+ 1475              		.size	ampli_aux_H_2, 4
+ 1476              	ampli_aux_H_2:
+ 1477 002c 00000000 		.space	4
+ 1478              		.type	ampli_aux_V_2, %object
+ 1479              		.size	ampli_aux_V_2, 4
+ 1480              	ampli_aux_V_2:
+ 1481 0030 00000000 		.space	4
+ 1482              		.type	pha_aux_2, %object
+ 1483              		.size	pha_aux_2, 4
+ 1484              	pha_aux_2:
+ 1485 0034 00000000 		.space	4
+ 1486              		.type	L_actual, %object
+ 1487              		.size	L_actual, 4
+ 1488              	L_actual:
+ 1489 0038 00000000 		.space	4
+ 1490              		.type	individuo, %object
+ 1491              		.size	individuo, 4
+ 1492              	individuo:
+ 1493 003c 00000000 		.space	4
+ 1494              		.type	conta, %object
+ 1495              		.size	conta, 2
+ 1496              	conta:
+ 1497 0040 0000     		.space	2
+ 1498 0042 0000     		.space	2
+ 1499              		.type	move_s, %object
+ 1500              		.size	move_s, 4
+ 1501              	move_s:
+ 1502 0044 00000000 		.space	4
+ 1503              		.type	punto_b, %object
+ 1504              		.size	punto_b, 4
+ 1505              	punto_b:
+ 1506 0048 00000000 		.space	4
+ 1507              		.type	punto_a, %object
+ 1508              		.size	punto_a, 4
+ 1509              	punto_a:
+ 1510 004c 00000000 		.space	4
+ 1511              		.type	Cantidad_Sensores, %object
+ 1512              		.size	Cantidad_Sensores, 4
+ 1513              	Cantidad_Sensores:
+ 1514 0050 00000000 		.space	4
+ 1515              		.text
+ 1516              	.Letext0:
+ 1517              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 1518              		.file 3 "Generated_Source\\PSoC4/SENSOR_U.h"
+ 1519              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 37
+
+
+ 1520              		.file 5 "Generated_Source\\PSoC4/CAN.h"
+ 1521              		.file 6 "Generated_Source\\PSoC4/CyLib.h"
+ 1522              		.file 7 "Generated_Source\\PSoC4/LED_1.h"
+ 1523              		.file 8 "Generated_Source\\PSoC4/Timer_1.h"
+ 1524              		.file 9 "Generated_Source\\PSoC4/Timer.h"
+ 1525              		.file 10 "Generated_Source\\PSoC4/CAN_isr.h"
+ 1526              		.file 11 "Generated_Source\\PSoC4/Int_Serial.h"
+ 1527              		.section	.debug_info,"",%progbits
+ 1528              	.Ldebug_info0:
+ 1529 0000 CB080000 		.4byte	0x8cb
+ 1530 0004 0400     		.2byte	0x4
+ 1531 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1532 000a 04       		.byte	0x4
+ 1533 000b 01       		.uleb128 0x1
+ 1534 000c 0E040000 		.4byte	.LASF95
+ 1535 0010 0C       		.byte	0xc
+ 1536 0011 86030000 		.4byte	.LASF96
+ 1537 0015 89020000 		.4byte	.LASF97
+ 1538 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1539 001d 00000000 		.4byte	0
+ 1540 0021 00000000 		.4byte	.Ldebug_line0
+ 1541 0025 02       		.uleb128 0x2
+ 1542 0026 01       		.byte	0x1
+ 1543 0027 06       		.byte	0x6
+ 1544 0028 14010000 		.4byte	.LASF0
+ 1545 002c 02       		.uleb128 0x2
+ 1546 002d 01       		.byte	0x1
+ 1547 002e 08       		.byte	0x8
+ 1548 002f C0010000 		.4byte	.LASF1
+ 1549 0033 02       		.uleb128 0x2
+ 1550 0034 02       		.byte	0x2
+ 1551 0035 05       		.byte	0x5
+ 1552 0036 5A000000 		.4byte	.LASF2
+ 1553 003a 02       		.uleb128 0x2
+ 1554 003b 02       		.byte	0x2
+ 1555 003c 07       		.byte	0x7
+ 1556 003d 0B030000 		.4byte	.LASF3
+ 1557 0041 02       		.uleb128 0x2
+ 1558 0042 04       		.byte	0x4
+ 1559 0043 05       		.byte	0x5
+ 1560 0044 F1020000 		.4byte	.LASF4
+ 1561 0048 02       		.uleb128 0x2
+ 1562 0049 04       		.byte	0x4
+ 1563 004a 07       		.byte	0x7
+ 1564 004b 3A020000 		.4byte	.LASF5
+ 1565 004f 02       		.uleb128 0x2
+ 1566 0050 08       		.byte	0x8
+ 1567 0051 05       		.byte	0x5
+ 1568 0052 48010000 		.4byte	.LASF6
+ 1569 0056 02       		.uleb128 0x2
+ 1570 0057 08       		.byte	0x8
+ 1571 0058 07       		.byte	0x7
+ 1572 0059 F0010000 		.4byte	.LASF7
+ 1573 005d 03       		.uleb128 0x3
+ 1574 005e 04       		.byte	0x4
+ 1575 005f 05       		.byte	0x5
+ 1576 0060 696E7400 		.ascii	"int\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 38
+
+
+ 1577 0064 02       		.uleb128 0x2
+ 1578 0065 04       		.byte	0x4
+ 1579 0066 07       		.byte	0x7
+ 1580 0067 1A020000 		.4byte	.LASF8
+ 1581 006b 04       		.uleb128 0x4
+ 1582 006c F4000000 		.4byte	.LASF9
+ 1583 0070 02       		.byte	0x2
+ 1584 0071 9801     		.2byte	0x198
+ 1585 0073 2C000000 		.4byte	0x2c
+ 1586 0077 04       		.uleb128 0x4
+ 1587 0078 EE000000 		.4byte	.LASF10
+ 1588 007c 02       		.byte	0x2
+ 1589 007d 9C01     		.2byte	0x19c
+ 1590 007f 33000000 		.4byte	0x33
+ 1591 0083 02       		.uleb128 0x2
+ 1592 0084 04       		.byte	0x4
+ 1593 0085 04       		.byte	0x4
+ 1594 0086 31010000 		.4byte	.LASF11
+ 1595 008a 02       		.uleb128 0x2
+ 1596 008b 08       		.byte	0x8
+ 1597 008c 04       		.byte	0x4
+ 1598 008d C2030000 		.4byte	.LASF12
+ 1599 0091 02       		.uleb128 0x2
+ 1600 0092 01       		.byte	0x1
+ 1601 0093 08       		.byte	0x8
+ 1602 0094 EC020000 		.4byte	.LASF13
+ 1603 0098 02       		.uleb128 0x2
+ 1604 0099 08       		.byte	0x8
+ 1605 009a 04       		.byte	0x4
+ 1606 009b A6010000 		.4byte	.LASF14
+ 1607 009f 02       		.uleb128 0x2
+ 1608 00a0 04       		.byte	0x4
+ 1609 00a1 07       		.byte	0x7
+ 1610 00a2 64000000 		.4byte	.LASF15
+ 1611 00a6 05       		.uleb128 0x5
+ 1612 00a7 6B000000 		.4byte	0x6b
+ 1613 00ab B6000000 		.4byte	0xb6
+ 1614 00af 06       		.uleb128 0x6
+ 1615 00b0 9F000000 		.4byte	0x9f
+ 1616 00b4 07       		.byte	0x7
+ 1617 00b5 00       		.byte	0
+ 1618 00b6 07       		.uleb128 0x7
+ 1619 00b7 20010000 		.4byte	.LASF16
+ 1620 00bb 01       		.byte	0x1
+ 1621 00bc 3201     		.2byte	0x132
+ 1622 00be 00000000 		.4byte	.LFB50
+ 1623 00c2 34000000 		.4byte	.LFE50-.LFB50
+ 1624 00c6 01       		.uleb128 0x1
+ 1625 00c7 9C       		.byte	0x9c
+ 1626 00c8 D6000000 		.4byte	0xd6
+ 1627 00cc 08       		.uleb128 0x8
+ 1628 00cd 06000000 		.4byte	.LVL0
+ 1629 00d1 0F080000 		.4byte	0x80f
+ 1630 00d5 00       		.byte	0
+ 1631 00d6 09       		.uleb128 0x9
+ 1632 00d7 B8040000 		.4byte	.LASF17
+ 1633 00db 01       		.byte	0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 39
+
+
+ 1634 00dc 2D       		.byte	0x2d
+ 1635 00dd 8A000000 		.4byte	0x8a
+ 1636 00e1 00000000 		.4byte	.LFB37
+ 1637 00e5 16000000 		.4byte	.LFE37-.LFB37
+ 1638 00e9 01       		.uleb128 0x1
+ 1639 00ea 9C       		.byte	0x9c
+ 1640 00eb F9000000 		.4byte	0xf9
+ 1641 00ef 08       		.uleb128 0x8
+ 1642 00f0 06000000 		.4byte	.LVL6
+ 1643 00f4 1A080000 		.4byte	0x81a
+ 1644 00f8 00       		.byte	0
+ 1645 00f9 09       		.uleb128 0x9
+ 1646 00fa 8D030000 		.4byte	.LASF18
+ 1647 00fe 01       		.byte	0x1
+ 1648 00ff 31       		.byte	0x31
+ 1649 0100 8A000000 		.4byte	0x8a
+ 1650 0104 00000000 		.4byte	.LFB38
+ 1651 0108 10000000 		.4byte	.LFE38-.LFB38
+ 1652 010c 01       		.uleb128 0x1
+ 1653 010d 9C       		.byte	0x9c
+ 1654 010e 29010000 		.4byte	0x129
+ 1655 0112 0A       		.uleb128 0xa
+ 1656 0113 7200     		.ascii	"r\000"
+ 1657 0115 01       		.byte	0x1
+ 1658 0116 32       		.byte	0x32
+ 1659 0117 83000000 		.4byte	0x83
+ 1660 011b 00000000 		.4byte	.LLST0
+ 1661 011f 08       		.uleb128 0x8
+ 1662 0120 06000000 		.4byte	.LVL10
+ 1663 0124 D6000000 		.4byte	0xd6
+ 1664 0128 00       		.byte	0
+ 1665 0129 09       		.uleb128 0x9
+ 1666 012a 9F030000 		.4byte	.LASF19
+ 1667 012e 01       		.byte	0x1
+ 1668 012f 37       		.byte	0x37
+ 1669 0130 8A000000 		.4byte	0x8a
+ 1670 0134 00000000 		.4byte	.LFB39
+ 1671 0138 28000000 		.4byte	.LFE39-.LFB39
+ 1672 013c 01       		.uleb128 0x1
+ 1673 013d 9C       		.byte	0x9c
+ 1674 013e 59010000 		.4byte	0x159
+ 1675 0142 0A       		.uleb128 0xa
+ 1676 0143 7200     		.ascii	"r\000"
+ 1677 0145 01       		.byte	0x1
+ 1678 0146 38       		.byte	0x38
+ 1679 0147 83000000 		.4byte	0x83
+ 1680 014b 23000000 		.4byte	.LLST1
+ 1681 014f 08       		.uleb128 0x8
+ 1682 0150 06000000 		.4byte	.LVL14
+ 1683 0154 D6000000 		.4byte	0xd6
+ 1684 0158 00       		.byte	0
+ 1685 0159 09       		.uleb128 0x9
+ 1686 015a 74030000 		.4byte	.LASF20
+ 1687 015e 01       		.byte	0x1
+ 1688 015f 3E       		.byte	0x3e
+ 1689 0160 8A000000 		.4byte	0x8a
+ 1690 0164 00000000 		.4byte	.LFB40
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 40
+
+
+ 1691 0168 20000000 		.4byte	.LFE40-.LFB40
+ 1692 016c 01       		.uleb128 0x1
+ 1693 016d 9C       		.byte	0x9c
+ 1694 016e 89010000 		.4byte	0x189
+ 1695 0172 0A       		.uleb128 0xa
+ 1696 0173 7200     		.ascii	"r\000"
+ 1697 0175 01       		.byte	0x1
+ 1698 0176 3F       		.byte	0x3f
+ 1699 0177 83000000 		.4byte	0x83
+ 1700 017b 51000000 		.4byte	.LLST2
+ 1701 017f 08       		.uleb128 0x8
+ 1702 0180 06000000 		.4byte	.LVL21
+ 1703 0184 D6000000 		.4byte	0xd6
+ 1704 0188 00       		.byte	0
+ 1705 0189 09       		.uleb128 0x9
+ 1706 018a 98000000 		.4byte	.LASF21
+ 1707 018e 01       		.byte	0x1
+ 1708 018f 44       		.byte	0x44
+ 1709 0190 8A000000 		.4byte	0x8a
+ 1710 0194 00000000 		.4byte	.LFB41
+ 1711 0198 3C000000 		.4byte	.LFE41-.LFB41
+ 1712 019c 01       		.uleb128 0x1
+ 1713 019d 9C       		.byte	0x9c
+ 1714 019e B9010000 		.4byte	0x1b9
+ 1715 01a2 0A       		.uleb128 0xa
+ 1716 01a3 7200     		.ascii	"r\000"
+ 1717 01a5 01       		.byte	0x1
+ 1718 01a6 45       		.byte	0x45
+ 1719 01a7 83000000 		.4byte	0x83
+ 1720 01ab 74000000 		.4byte	.LLST3
+ 1721 01af 08       		.uleb128 0x8
+ 1722 01b0 06000000 		.4byte	.LVL26
+ 1723 01b4 D6000000 		.4byte	0xd6
+ 1724 01b8 00       		.byte	0
+ 1725 01b9 0B       		.uleb128 0xb
+ 1726 01ba 9B010000 		.4byte	.LASF22
+ 1727 01be 01       		.byte	0x1
+ 1728 01bf 4C       		.byte	0x4c
+ 1729 01c0 00000000 		.4byte	.LFB42
+ 1730 01c4 28000000 		.4byte	.LFE42-.LFB42
+ 1731 01c8 01       		.uleb128 0x1
+ 1732 01c9 9C       		.byte	0x9c
+ 1733 01ca 23020000 		.4byte	0x223
+ 1734 01ce 0C       		.uleb128 0xc
+ 1735 01cf 37010000 		.4byte	.LASF23
+ 1736 01d3 01       		.byte	0x1
+ 1737 01d4 4C       		.byte	0x4c
+ 1738 01d5 64000000 		.4byte	0x64
+ 1739 01d9 AD000000 		.4byte	.LLST4
+ 1740 01dd 0D       		.uleb128 0xd
+ 1741 01de 6D6F7600 		.ascii	"mov\000"
+ 1742 01e2 01       		.byte	0x1
+ 1743 01e3 4C       		.byte	0x4c
+ 1744 01e4 5D000000 		.4byte	0x5d
+ 1745 01e8 CE000000 		.4byte	.LLST5
+ 1746 01ec 0E       		.uleb128 0xe
+ 1747 01ed 6E030000 		.4byte	.LASF24
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 41
+
+
+ 1748 01f1 01       		.byte	0x1
+ 1749 01f2 4D       		.byte	0x4d
+ 1750 01f3 91000000 		.4byte	0x91
+ 1751 01f7 EF000000 		.4byte	.LLST6
+ 1752 01fb 0E       		.uleb128 0xe
+ 1753 01fc 80030000 		.4byte	.LASF25
+ 1754 0200 01       		.byte	0x1
+ 1755 0201 4D       		.byte	0x4d
+ 1756 0202 91000000 		.4byte	0x91
+ 1757 0206 12010000 		.4byte	.LLST7
+ 1758 020a 08       		.uleb128 0x8
+ 1759 020b 1C000000 		.4byte	.LVL38
+ 1760 020f 25080000 		.4byte	0x825
+ 1761 0213 0F       		.uleb128 0xf
+ 1762 0214 22000000 		.4byte	.LVL39
+ 1763 0218 31080000 		.4byte	0x831
+ 1764 021c 10       		.uleb128 0x10
+ 1765 021d 01       		.uleb128 0x1
+ 1766 021e 50       		.byte	0x50
+ 1767 021f 01       		.uleb128 0x1
+ 1768 0220 49       		.byte	0x49
+ 1769 0221 00       		.byte	0
+ 1770 0222 00       		.byte	0
+ 1771 0223 0B       		.uleb128 0xb
+ 1772 0224 DA000000 		.4byte	.LASF26
+ 1773 0228 01       		.byte	0x1
+ 1774 0229 5A       		.byte	0x5a
+ 1775 022a 00000000 		.4byte	.LFB43
+ 1776 022e 2C000000 		.4byte	.LFE43-.LFB43
+ 1777 0232 01       		.uleb128 0x1
+ 1778 0233 9C       		.byte	0x9c
+ 1779 0234 70020000 		.4byte	0x270
+ 1780 0238 0C       		.uleb128 0xc
+ 1781 0239 92000000 		.4byte	.LASF27
+ 1782 023d 01       		.byte	0x1
+ 1783 023e 5A       		.byte	0x5a
+ 1784 023f 5D000000 		.4byte	0x5d
+ 1785 0243 33010000 		.4byte	.LLST8
+ 1786 0247 0C       		.uleb128 0xc
+ 1787 0248 62010000 		.4byte	.LASF28
+ 1788 024c 01       		.byte	0x1
+ 1789 024d 5A       		.byte	0x5a
+ 1790 024e 5D000000 		.4byte	0x5d
+ 1791 0252 54010000 		.4byte	.LLST9
+ 1792 0256 08       		.uleb128 0x8
+ 1793 0257 20000000 		.4byte	.LVL42
+ 1794 025b 25080000 		.4byte	0x825
+ 1795 025f 0F       		.uleb128 0xf
+ 1796 0260 26000000 		.4byte	.LVL43
+ 1797 0264 31080000 		.4byte	0x831
+ 1798 0268 10       		.uleb128 0x10
+ 1799 0269 01       		.uleb128 0x1
+ 1800 026a 50       		.byte	0x50
+ 1801 026b 02       		.uleb128 0x2
+ 1802 026c 08       		.byte	0x8
+ 1803 026d 32       		.byte	0x32
+ 1804 026e 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 42
+
+
+ 1805 026f 00       		.byte	0
+ 1806 0270 11       		.uleb128 0x11
+ 1807 0271 9C040000 		.4byte	.LASF29
+ 1808 0275 01       		.byte	0x1
+ 1809 0276 67       		.byte	0x67
+ 1810 0277 00000000 		.4byte	.LFB44
+ 1811 027b B4000000 		.4byte	.LFE44-.LFB44
+ 1812 027f 01       		.uleb128 0x1
+ 1813 0280 9C       		.byte	0x9c
+ 1814 0281 34030000 		.4byte	0x334
+ 1815 0285 0C       		.uleb128 0xc
+ 1816 0286 E8040000 		.4byte	.LASF30
+ 1817 028a 01       		.byte	0x1
+ 1818 028b 67       		.byte	0x67
+ 1819 028c 83000000 		.4byte	0x83
+ 1820 0290 75010000 		.4byte	.LLST10
+ 1821 0294 0C       		.uleb128 0xc
+ 1822 0295 E2040000 		.4byte	.LASF31
+ 1823 0299 01       		.byte	0x1
+ 1824 029a 67       		.byte	0x67
+ 1825 029b 83000000 		.4byte	0x83
+ 1826 029f 94010000 		.4byte	.LLST11
+ 1827 02a3 0C       		.uleb128 0xc
+ 1828 02a4 5B020000 		.4byte	.LASF32
+ 1829 02a8 01       		.byte	0x1
+ 1830 02a9 67       		.byte	0x67
+ 1831 02aa 83000000 		.4byte	0x83
+ 1832 02ae B3010000 		.4byte	.LLST12
+ 1833 02b2 0C       		.uleb128 0xc
+ 1834 02b3 FF000000 		.4byte	.LASF33
+ 1835 02b7 01       		.byte	0x1
+ 1836 02b8 67       		.byte	0x67
+ 1837 02b9 5D000000 		.4byte	0x5d
+ 1838 02bd D2010000 		.4byte	.LLST13
+ 1839 02c1 0E       		.uleb128 0xe
+ 1840 02c2 CD040000 		.4byte	.LASF34
+ 1841 02c6 01       		.byte	0x1
+ 1842 02c7 69       		.byte	0x69
+ 1843 02c8 5D000000 		.4byte	0x5d
+ 1844 02cc FE010000 		.4byte	.LLST14
+ 1845 02d0 0E       		.uleb128 0xe
+ 1846 02d1 28030000 		.4byte	.LASF35
+ 1847 02d5 01       		.byte	0x1
+ 1848 02d6 6A       		.byte	0x6a
+ 1849 02d7 5D000000 		.4byte	0x5d
+ 1850 02db 1C020000 		.4byte	.LLST15
+ 1851 02df 0E       		.uleb128 0xe
+ 1852 02e0 F5030000 		.4byte	.LASF36
+ 1853 02e4 01       		.byte	0x1
+ 1854 02e5 6B       		.byte	0x6b
+ 1855 02e6 5D000000 		.4byte	0x5d
+ 1856 02ea 3A020000 		.4byte	.LLST16
+ 1857 02ee 0E       		.uleb128 0xe
+ 1858 02ef BC030000 		.4byte	.LASF37
+ 1859 02f3 01       		.byte	0x1
+ 1860 02f4 70       		.byte	0x70
+ 1861 02f5 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 43
+
+
+ 1862 02f9 58020000 		.4byte	.LLST17
+ 1863 02fd 0E       		.uleb128 0xe
+ 1864 02fe 48000000 		.4byte	.LASF38
+ 1865 0302 01       		.byte	0x1
+ 1866 0303 71       		.byte	0x71
+ 1867 0304 6B000000 		.4byte	0x6b
+ 1868 0308 81020000 		.4byte	.LLST18
+ 1869 030c 0A       		.uleb128 0xa
+ 1870 030d 41757800 		.ascii	"Aux\000"
+ 1871 0311 01       		.byte	0x1
+ 1872 0312 72       		.byte	0x72
+ 1873 0313 6B000000 		.4byte	0x6b
+ 1874 0317 13030000 		.4byte	.LLST19
+ 1875 031b 08       		.uleb128 0x8
+ 1876 031c A0000000 		.4byte	.LVL79
+ 1877 0320 3C080000 		.4byte	0x83c
+ 1878 0324 0F       		.uleb128 0xf
+ 1879 0325 A6000000 		.4byte	.LVL80
+ 1880 0329 31080000 		.4byte	0x831
+ 1881 032d 10       		.uleb128 0x10
+ 1882 032e 01       		.uleb128 0x1
+ 1883 032f 50       		.byte	0x50
+ 1884 0330 01       		.uleb128 0x1
+ 1885 0331 49       		.byte	0x49
+ 1886 0332 00       		.byte	0
+ 1887 0333 00       		.byte	0
+ 1888 0334 12       		.uleb128 0x12
+ 1889 0335 7F010000 		.4byte	.LASF41
+ 1890 0339 01       		.byte	0x1
+ 1891 033a 9B       		.byte	0x9b
+ 1892 033b 00000000 		.4byte	.LFB45
+ 1893 033f 78000000 		.4byte	.LFE45-.LFB45
+ 1894 0343 01       		.uleb128 0x1
+ 1895 0344 9C       		.byte	0x9c
+ 1896 0345 C7030000 		.4byte	0x3c7
+ 1897 0349 13       		.uleb128 0x13
+ 1898 034a 2E000000 		.4byte	.LBB2
+ 1899 034e 3C000000 		.4byte	.LBE2-.LBB2
+ 1900 0352 0E       		.uleb128 0xe
+ 1901 0353 1B050000 		.4byte	.LASF39
+ 1902 0357 01       		.byte	0x1
+ 1903 0358 AF       		.byte	0xaf
+ 1904 0359 5D000000 		.4byte	0x5d
+ 1905 035d 4E030000 		.4byte	.LLST20
+ 1906 0361 14       		.uleb128 0x14
+ 1907 0362 4A000000 		.4byte	.LVL85
+ 1908 0366 70020000 		.4byte	0x270
+ 1909 036a 75030000 		.4byte	0x375
+ 1910 036e 10       		.uleb128 0x10
+ 1911 036f 01       		.uleb128 0x1
+ 1912 0370 53       		.byte	0x53
+ 1913 0371 02       		.uleb128 0x2
+ 1914 0372 08       		.byte	0x8
+ 1915 0373 20       		.byte	0x20
+ 1916 0374 00       		.byte	0
+ 1917 0375 14       		.uleb128 0x14
+ 1918 0376 50000000 		.4byte	.LVL86
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 44
+
+
+ 1919 037a 31080000 		.4byte	0x831
+ 1920 037e 89030000 		.4byte	0x389
+ 1921 0382 10       		.uleb128 0x10
+ 1922 0383 01       		.uleb128 0x1
+ 1923 0384 50       		.byte	0x50
+ 1924 0385 02       		.uleb128 0x2
+ 1925 0386 08       		.byte	0x8
+ 1926 0387 32       		.byte	0x32
+ 1927 0388 00       		.byte	0
+ 1928 0389 14       		.uleb128 0x14
+ 1929 038a 5C000000 		.4byte	.LVL87
+ 1930 038e 70020000 		.4byte	0x270
+ 1931 0392 9D030000 		.4byte	0x39d
+ 1932 0396 10       		.uleb128 0x10
+ 1933 0397 01       		.uleb128 0x1
+ 1934 0398 53       		.byte	0x53
+ 1935 0399 02       		.uleb128 0x2
+ 1936 039a 08       		.byte	0x8
+ 1937 039b 21       		.byte	0x21
+ 1938 039c 00       		.byte	0
+ 1939 039d 14       		.uleb128 0x14
+ 1940 039e 62000000 		.4byte	.LVL88
+ 1941 03a2 31080000 		.4byte	0x831
+ 1942 03a6 B1030000 		.4byte	0x3b1
+ 1943 03aa 10       		.uleb128 0x10
+ 1944 03ab 01       		.uleb128 0x1
+ 1945 03ac 50       		.byte	0x50
+ 1946 03ad 02       		.uleb128 0x2
+ 1947 03ae 08       		.byte	0x8
+ 1948 03af 32       		.byte	0x32
+ 1949 03b0 00       		.byte	0
+ 1950 03b1 0F       		.uleb128 0xf
+ 1951 03b2 6A000000 		.4byte	.LVL89
+ 1952 03b6 23020000 		.4byte	0x223
+ 1953 03ba 10       		.uleb128 0x10
+ 1954 03bb 01       		.uleb128 0x1
+ 1955 03bc 50       		.byte	0x50
+ 1956 03bd 01       		.uleb128 0x1
+ 1957 03be 30       		.byte	0x30
+ 1958 03bf 10       		.uleb128 0x10
+ 1959 03c0 01       		.uleb128 0x1
+ 1960 03c1 51       		.byte	0x51
+ 1961 03c2 01       		.uleb128 0x1
+ 1962 03c3 30       		.byte	0x30
+ 1963 03c4 00       		.byte	0
+ 1964 03c5 00       		.byte	0
+ 1965 03c6 00       		.byte	0
+ 1966 03c7 15       		.uleb128 0x15
+ 1967 03c8 7B020000 		.4byte	.LASF98
+ 1968 03cc 01       		.byte	0x1
+ 1969 03cd BC       		.byte	0xbc
+ 1970 03ce 00000000 		.4byte	.LFB46
+ 1971 03d2 10010000 		.4byte	.LFE46-.LFB46
+ 1972 03d6 01       		.uleb128 0x1
+ 1973 03d7 9C       		.byte	0x9c
+ 1974 03d8 0B       		.uleb128 0xb
+ 1975 03d9 4E000000 		.4byte	.LASF40
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 45
+
+
+ 1976 03dd 01       		.byte	0x1
+ 1977 03de CD       		.byte	0xcd
+ 1978 03df 00000000 		.4byte	.LFB47
+ 1979 03e3 18000000 		.4byte	.LFE47-.LFB47
+ 1980 03e7 01       		.uleb128 0x1
+ 1981 03e8 9C       		.byte	0x9c
+ 1982 03e9 1B040000 		.4byte	0x41b
+ 1983 03ed 08       		.uleb128 0x8
+ 1984 03ee 06000000 		.4byte	.LVL90
+ 1985 03f2 48080000 		.4byte	0x848
+ 1986 03f6 08       		.uleb128 0x8
+ 1987 03f7 0A000000 		.4byte	.LVL91
+ 1988 03fb 53080000 		.4byte	0x853
+ 1989 03ff 08       		.uleb128 0x8
+ 1990 0400 0E000000 		.4byte	.LVL92
+ 1991 0404 34030000 		.4byte	0x334
+ 1992 0408 08       		.uleb128 0x8
+ 1993 0409 12000000 		.4byte	.LVL93
+ 1994 040d C7030000 		.4byte	0x3c7
+ 1995 0411 08       		.uleb128 0x8
+ 1996 0412 16000000 		.4byte	.LVL94
+ 1997 0416 5F080000 		.4byte	0x85f
+ 1998 041a 00       		.byte	0
+ 1999 041b 16       		.uleb128 0x16
+ 2000 041c 96010000 		.4byte	.LASF42
+ 2001 0420 01       		.byte	0x1
+ 2002 0421 D5       		.byte	0xd5
+ 2003 0422 00000000 		.4byte	.LFB48
+ 2004 0426 A0010000 		.4byte	.LFE48-.LFB48
+ 2005 042a 01       		.uleb128 0x1
+ 2006 042b 9C       		.byte	0x9c
+ 2007 042c 82040000 		.4byte	0x482
+ 2008 0430 08       		.uleb128 0x8
+ 2009 0431 44000000 		.4byte	.LVL95
+ 2010 0435 D6000000 		.4byte	0xd6
+ 2011 0439 08       		.uleb128 0x8
+ 2012 043a 54000000 		.4byte	.LVL97
+ 2013 043e F9000000 		.4byte	0xf9
+ 2014 0442 08       		.uleb128 0x8
+ 2015 0443 60000000 		.4byte	.LVL99
+ 2016 0447 29010000 		.4byte	0x129
+ 2017 044b 08       		.uleb128 0x8
+ 2018 044c 6A000000 		.4byte	.LVL101
+ 2019 0450 59010000 		.4byte	0x159
+ 2020 0454 08       		.uleb128 0x8
+ 2021 0455 74000000 		.4byte	.LVL103
+ 2022 0459 89010000 		.4byte	0x189
+ 2023 045d 08       		.uleb128 0x8
+ 2024 045e 8C000000 		.4byte	.LVL106
+ 2025 0462 F9000000 		.4byte	0xf9
+ 2026 0466 08       		.uleb128 0x8
+ 2027 0467 9C000000 		.4byte	.LVL108
+ 2028 046b 59010000 		.4byte	0x159
+ 2029 046f 08       		.uleb128 0x8
+ 2030 0470 AC000000 		.4byte	.LVL110
+ 2031 0474 89010000 		.4byte	0x189
+ 2032 0478 08       		.uleb128 0x8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 46
+
+
+ 2033 0479 0E010000 		.4byte	.LVL114
+ 2034 047d 6A080000 		.4byte	0x86a
+ 2035 0481 00       		.byte	0
+ 2036 0482 17       		.uleb128 0x17
+ 2037 0483 D5040000 		.4byte	.LASF43
+ 2038 0487 01       		.byte	0x1
+ 2039 0488 1E01     		.2byte	0x11e
+ 2040 048a 00000000 		.4byte	.LFB49
+ 2041 048e 7C000000 		.4byte	.LFE49-.LFB49
+ 2042 0492 01       		.uleb128 0x1
+ 2043 0493 9C       		.byte	0x9c
+ 2044 0494 44050000 		.4byte	0x544
+ 2045 0498 18       		.uleb128 0x18
+ 2046 0499 28000000 		.4byte	.LBB3
+ 2047 049d 3A000000 		.4byte	.LBE3-.LBB3
+ 2048 04a1 18050000 		.4byte	0x518
+ 2049 04a5 19       		.uleb128 0x19
+ 2050 04a6 6900     		.ascii	"i\000"
+ 2051 04a8 01       		.byte	0x1
+ 2052 04a9 2401     		.2byte	0x124
+ 2053 04ab 5D000000 		.4byte	0x5d
+ 2054 04af 76030000 		.4byte	.LLST21
+ 2055 04b3 14       		.uleb128 0x14
+ 2056 04b4 3C000000 		.4byte	.LVL119
+ 2057 04b8 70020000 		.4byte	0x270
+ 2058 04bc C7040000 		.4byte	0x4c7
+ 2059 04c0 10       		.uleb128 0x10
+ 2060 04c1 01       		.uleb128 0x1
+ 2061 04c2 53       		.byte	0x53
+ 2062 04c3 02       		.uleb128 0x2
+ 2063 04c4 08       		.byte	0x8
+ 2064 04c5 20       		.byte	0x20
+ 2065 04c6 00       		.byte	0
+ 2066 04c7 14       		.uleb128 0x14
+ 2067 04c8 42000000 		.4byte	.LVL120
+ 2068 04cc 31080000 		.4byte	0x831
+ 2069 04d0 DB040000 		.4byte	0x4db
+ 2070 04d4 10       		.uleb128 0x10
+ 2071 04d5 01       		.uleb128 0x1
+ 2072 04d6 50       		.byte	0x50
+ 2073 04d7 02       		.uleb128 0x2
+ 2074 04d8 08       		.byte	0x8
+ 2075 04d9 32       		.byte	0x32
+ 2076 04da 00       		.byte	0
+ 2077 04db 14       		.uleb128 0x14
+ 2078 04dc 4E000000 		.4byte	.LVL121
+ 2079 04e0 70020000 		.4byte	0x270
+ 2080 04e4 EF040000 		.4byte	0x4ef
+ 2081 04e8 10       		.uleb128 0x10
+ 2082 04e9 01       		.uleb128 0x1
+ 2083 04ea 53       		.byte	0x53
+ 2084 04eb 02       		.uleb128 0x2
+ 2085 04ec 08       		.byte	0x8
+ 2086 04ed 21       		.byte	0x21
+ 2087 04ee 00       		.byte	0
+ 2088 04ef 14       		.uleb128 0x14
+ 2089 04f0 54000000 		.4byte	.LVL122
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 47
+
+
+ 2090 04f4 31080000 		.4byte	0x831
+ 2091 04f8 03050000 		.4byte	0x503
+ 2092 04fc 10       		.uleb128 0x10
+ 2093 04fd 01       		.uleb128 0x1
+ 2094 04fe 50       		.byte	0x50
+ 2095 04ff 02       		.uleb128 0x2
+ 2096 0500 08       		.byte	0x8
+ 2097 0501 32       		.byte	0x32
+ 2098 0502 00       		.byte	0
+ 2099 0503 0F       		.uleb128 0xf
+ 2100 0504 5C000000 		.4byte	.LVL123
+ 2101 0508 23020000 		.4byte	0x223
+ 2102 050c 10       		.uleb128 0x10
+ 2103 050d 01       		.uleb128 0x1
+ 2104 050e 50       		.byte	0x50
+ 2105 050f 01       		.uleb128 0x1
+ 2106 0510 30       		.byte	0x30
+ 2107 0511 10       		.uleb128 0x10
+ 2108 0512 01       		.uleb128 0x1
+ 2109 0513 51       		.byte	0x51
+ 2110 0514 01       		.uleb128 0x1
+ 2111 0515 30       		.byte	0x30
+ 2112 0516 00       		.byte	0
+ 2113 0517 00       		.byte	0
+ 2114 0518 14       		.uleb128 0x14
+ 2115 0519 1C000000 		.4byte	.LVL116
+ 2116 051d 76080000 		.4byte	0x876
+ 2117 0521 2B050000 		.4byte	0x52b
+ 2118 0525 10       		.uleb128 0x10
+ 2119 0526 01       		.uleb128 0x1
+ 2120 0527 50       		.byte	0x50
+ 2121 0528 01       		.uleb128 0x1
+ 2122 0529 31       		.byte	0x31
+ 2123 052a 00       		.byte	0
+ 2124 052b 08       		.uleb128 0x8
+ 2125 052c 28000000 		.4byte	.LVL117
+ 2126 0530 1B040000 		.4byte	0x41b
+ 2127 0534 0F       		.uleb128 0xf
+ 2128 0535 72000000 		.4byte	.LVL126
+ 2129 0539 76080000 		.4byte	0x876
+ 2130 053d 10       		.uleb128 0x10
+ 2131 053e 01       		.uleb128 0x1
+ 2132 053f 50       		.byte	0x50
+ 2133 0540 01       		.uleb128 0x1
+ 2134 0541 30       		.byte	0x30
+ 2135 0542 00       		.byte	0
+ 2136 0543 00       		.byte	0
+ 2137 0544 1A       		.uleb128 0x1a
+ 2138 0545 FA020000 		.4byte	.LASF99
+ 2139 0549 01       		.byte	0x1
+ 2140 054a 3801     		.2byte	0x138
+ 2141 054c 5D000000 		.4byte	0x5d
+ 2142 0550 00000000 		.4byte	.LFB51
+ 2143 0554 38000000 		.4byte	.LFE51-.LFB51
+ 2144 0558 01       		.uleb128 0x1
+ 2145 0559 9C       		.byte	0x9c
+ 2146 055a CD050000 		.4byte	0x5cd
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 48
+
+
+ 2147 055e 08       		.uleb128 0x8
+ 2148 055f 06000000 		.4byte	.LVL127
+ 2149 0563 81080000 		.4byte	0x881
+ 2150 0567 08       		.uleb128 0x8
+ 2151 0568 0A000000 		.4byte	.LVL128
+ 2152 056c 8C080000 		.4byte	0x88c
+ 2153 0570 08       		.uleb128 0x8
+ 2154 0571 0E000000 		.4byte	.LVL129
+ 2155 0575 97080000 		.4byte	0x897
+ 2156 0579 08       		.uleb128 0x8
+ 2157 057a 12000000 		.4byte	.LVL130
+ 2158 057e A2080000 		.4byte	0x8a2
+ 2159 0582 14       		.uleb128 0x14
+ 2160 0583 18000000 		.4byte	.LVL131
+ 2161 0587 AD080000 		.4byte	0x8ad
+ 2162 058b 99050000 		.4byte	0x599
+ 2163 058f 10       		.uleb128 0x10
+ 2164 0590 01       		.uleb128 0x1
+ 2165 0591 50       		.byte	0x50
+ 2166 0592 05       		.uleb128 0x5
+ 2167 0593 03       		.byte	0x3
+ 2168 0594 00000000 		.4byte	interrutcan
+ 2169 0598 00       		.byte	0
+ 2170 0599 08       		.uleb128 0x8
+ 2171 059a 1C000000 		.4byte	.LVL132
+ 2172 059e 5F080000 		.4byte	0x85f
+ 2173 05a2 14       		.uleb128 0x14
+ 2174 05a3 22000000 		.4byte	.LVL133
+ 2175 05a7 B8080000 		.4byte	0x8b8
+ 2176 05ab B9050000 		.4byte	0x5b9
+ 2177 05af 10       		.uleb128 0x10
+ 2178 05b0 01       		.uleb128 0x1
+ 2179 05b1 50       		.byte	0x50
+ 2180 05b2 05       		.uleb128 0x5
+ 2181 05b3 03       		.byte	0x3
+ 2182 05b4 00000000 		.4byte	Serial_Interrupt
+ 2183 05b8 00       		.byte	0
+ 2184 05b9 0F       		.uleb128 0xf
+ 2185 05ba 28000000 		.4byte	.LVL134
+ 2186 05be C3080000 		.4byte	0x8c3
+ 2187 05c2 10       		.uleb128 0x10
+ 2188 05c3 01       		.uleb128 0x1
+ 2189 05c4 50       		.byte	0x50
+ 2190 05c5 05       		.uleb128 0x5
+ 2191 05c6 03       		.byte	0x3
+ 2192 05c7 00000000 		.4byte	Temporizador
+ 2193 05cb 00       		.byte	0
+ 2194 05cc 00       		.byte	0
+ 2195 05cd 1B       		.uleb128 0x1b
+ 2196 05ce 37030000 		.4byte	.LASF44
+ 2197 05d2 01       		.byte	0x1
+ 2198 05d3 08       		.byte	0x8
+ 2199 05d4 A6000000 		.4byte	0xa6
+ 2200 05d8 05       		.uleb128 0x5
+ 2201 05d9 03       		.byte	0x3
+ 2202 05da 00000000 		.4byte	mailbox0
+ 2203 05de 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 49
+
+
+ 2204 05df 6D000000 		.4byte	.LASF45
+ 2205 05e3 01       		.byte	0x1
+ 2206 05e4 09       		.byte	0x9
+ 2207 05e5 A6000000 		.4byte	0xa6
+ 2208 05e9 05       		.uleb128 0x5
+ 2209 05ea 03       		.byte	0x3
+ 2210 05eb 00000000 		.4byte	mailbox1
+ 2211 05ef 1B       		.uleb128 0x1b
+ 2212 05f0 31020000 		.4byte	.LASF46
+ 2213 05f4 01       		.byte	0x1
+ 2214 05f5 0A       		.byte	0xa
+ 2215 05f6 A6000000 		.4byte	0xa6
+ 2216 05fa 05       		.uleb128 0x5
+ 2217 05fb 03       		.byte	0x3
+ 2218 05fc 00000000 		.4byte	mailbox2
+ 2219 0600 1B       		.uleb128 0x1b
+ 2220 0601 62020000 		.4byte	.LASF47
+ 2221 0605 01       		.byte	0x1
+ 2222 0606 0B       		.byte	0xb
+ 2223 0607 A6000000 		.4byte	0xa6
+ 2224 060b 05       		.uleb128 0x5
+ 2225 060c 03       		.byte	0x3
+ 2226 060d 00000000 		.4byte	dato_enviado
+ 2227 0611 1B       		.uleb128 0x1b
+ 2228 0612 A6000000 		.4byte	.LASF48
+ 2229 0616 01       		.byte	0x1
+ 2230 0617 0C       		.byte	0xc
+ 2231 0618 A6000000 		.4byte	0xa6
+ 2232 061c 05       		.uleb128 0x5
+ 2233 061d 03       		.byte	0x3
+ 2234 061e 00000000 		.4byte	dato_enviado_1
+ 2235 0622 1B       		.uleb128 0x1b
+ 2236 0623 B5000000 		.4byte	.LASF49
+ 2237 0627 01       		.byte	0x1
+ 2238 0628 0D       		.byte	0xd
+ 2239 0629 A6000000 		.4byte	0xa6
+ 2240 062d 05       		.uleb128 0x5
+ 2241 062e 03       		.byte	0x3
+ 2242 062f 00000000 		.4byte	dato_enviado_2
+ 2243 0633 1B       		.uleb128 0x1b
+ 2244 0634 76000000 		.4byte	.LASF50
+ 2245 0638 01       		.byte	0x1
+ 2246 0639 0E       		.byte	0xe
+ 2247 063a 77000000 		.4byte	0x77
+ 2248 063e 05       		.uleb128 0x5
+ 2249 063f 03       		.byte	0x3
+ 2250 0640 00000000 		.4byte	conta
+ 2251 0644 1B       		.uleb128 0x1b
+ 2252 0645 BE040000 		.4byte	.LASF51
+ 2253 0649 01       		.byte	0x1
+ 2254 064a 0F       		.byte	0xf
+ 2255 064b 5D000000 		.4byte	0x5d
+ 2256 064f 05       		.uleb128 0x5
+ 2257 0650 03       		.byte	0x3
+ 2258 0651 00000000 		.4byte	cantidadM
+ 2259 0655 1B       		.uleb128 0x1b
+ 2260 0656 CE010000 		.4byte	.LASF52
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 50
+
+
+ 2261 065a 01       		.byte	0x1
+ 2262 065b 10       		.byte	0x10
+ 2263 065c 5D000000 		.4byte	0x5d
+ 2264 0660 05       		.uleb128 0x5
+ 2265 0661 03       		.byte	0x3
+ 2266 0662 00000000 		.4byte	Cantidad_Sensores
+ 2267 0666 1B       		.uleb128 0x1b
+ 2268 0667 27020000 		.4byte	.LASF53
+ 2269 066b 01       		.byte	0x1
+ 2270 066c 12       		.byte	0x12
+ 2271 066d 5D000000 		.4byte	0x5d
+ 2272 0671 05       		.uleb128 0x5
+ 2273 0672 03       		.byte	0x3
+ 2274 0673 00000000 		.4byte	Max_Conta
+ 2275 0677 1B       		.uleb128 0x1b
+ 2276 0678 4E030000 		.4byte	.LASF54
+ 2277 067c 01       		.byte	0x1
+ 2278 067d 13       		.byte	0x13
+ 2279 067e 83000000 		.4byte	0x83
+ 2280 0682 05       		.uleb128 0x5
+ 2281 0683 03       		.byte	0x3
+ 2282 0684 00000000 		.4byte	Amplitud_H
+ 2283 0688 1B       		.uleb128 0x1b
+ 2284 0689 B1030000 		.4byte	.LASF55
+ 2285 068d 01       		.byte	0x1
+ 2286 068e 14       		.byte	0x14
+ 2287 068f 83000000 		.4byte	0x83
+ 2288 0693 05       		.uleb128 0x5
+ 2289 0694 03       		.byte	0x3
+ 2290 0695 00000000 		.4byte	Amplitud_V
+ 2291 0699 1B       		.uleb128 0x1b
+ 2292 069a 0B010000 		.4byte	.LASF56
+ 2293 069e 01       		.byte	0x1
+ 2294 069f 15       		.byte	0x15
+ 2295 06a0 83000000 		.4byte	0x83
+ 2296 06a4 05       		.uleb128 0x5
+ 2297 06a5 03       		.byte	0x3
+ 2298 06a6 00000000 		.4byte	Offset_H
+ 2299 06aa 1B       		.uleb128 0x1b
+ 2300 06ab 8D010000 		.4byte	.LASF57
+ 2301 06af 01       		.byte	0x1
+ 2302 06b0 16       		.byte	0x16
+ 2303 06b1 83000000 		.4byte	0x83
+ 2304 06b5 05       		.uleb128 0x5
+ 2305 06b6 03       		.byte	0x3
+ 2306 06b7 00000000 		.4byte	Offset_V
+ 2307 06bb 1B       		.uleb128 0x1b
+ 2308 06bc 32030000 		.4byte	.LASF58
+ 2309 06c0 01       		.byte	0x1
+ 2310 06c1 17       		.byte	0x17
+ 2311 06c2 83000000 		.4byte	0x83
+ 2312 06c6 05       		.uleb128 0x5
+ 2313 06c7 03       		.byte	0x3
+ 2314 06c8 00000000 		.4byte	Fase
+ 2315 06cc 1B       		.uleb128 0x1b
+ 2316 06cd FF020000 		.4byte	.LASF59
+ 2317 06d1 01       		.byte	0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 51
+
+
+ 2318 06d2 18       		.byte	0x18
+ 2319 06d3 83000000 		.4byte	0x83
+ 2320 06d7 05       		.uleb128 0x5
+ 2321 06d8 03       		.byte	0x3
+ 2322 06d9 00000000 		.4byte	ampli_aux_V
+ 2323 06dd 1B       		.uleb128 0x1b
+ 2324 06de 6F020000 		.4byte	.LASF60
+ 2325 06e2 01       		.byte	0x1
+ 2326 06e3 19       		.byte	0x19
+ 2327 06e4 83000000 		.4byte	0x83
+ 2328 06e8 05       		.uleb128 0x5
+ 2329 06e9 03       		.byte	0x3
+ 2330 06ea 00000000 		.4byte	ampli_aux_H
+ 2331 06ee 1B       		.uleb128 0x1b
+ 2332 06ef 1E030000 		.4byte	.LASF61
+ 2333 06f3 01       		.byte	0x1
+ 2334 06f4 1A       		.byte	0x1a
+ 2335 06f5 83000000 		.4byte	0x83
+ 2336 06f9 05       		.uleb128 0x5
+ 2337 06fa 03       		.byte	0x3
+ 2338 06fb 00000000 		.4byte	off_aux_V
+ 2339 06ff 1B       		.uleb128 0x1b
+ 2340 0700 05050000 		.4byte	.LASF62
+ 2341 0704 01       		.byte	0x1
+ 2342 0705 1B       		.byte	0x1b
+ 2343 0706 83000000 		.4byte	0x83
+ 2344 070a 05       		.uleb128 0x5
+ 2345 070b 03       		.byte	0x3
+ 2346 070c 00000000 		.4byte	off_aux_H
+ 2347 0710 1B       		.uleb128 0x1b
+ 2348 0711 8A000000 		.4byte	.LASF63
+ 2349 0715 01       		.byte	0x1
+ 2350 0716 1C       		.byte	0x1c
+ 2351 0717 83000000 		.4byte	0x83
+ 2352 071b 05       		.uleb128 0x5
+ 2353 071c 03       		.byte	0x3
+ 2354 071d 00000000 		.4byte	pha_aux
+ 2355 0721 1B       		.uleb128 0x1b
+ 2356 0722 00040000 		.4byte	.LASF64
+ 2357 0726 01       		.byte	0x1
+ 2358 0727 1D       		.byte	0x1d
+ 2359 0728 83000000 		.4byte	0x83
+ 2360 072c 05       		.uleb128 0x5
+ 2361 072d 03       		.byte	0x3
+ 2362 072e 00000000 		.4byte	ampli_aux_V_2
+ 2363 0732 1B       		.uleb128 0x1b
+ 2364 0733 56010000 		.4byte	.LASF65
+ 2365 0737 01       		.byte	0x1
+ 2366 0738 1E       		.byte	0x1e
+ 2367 0739 83000000 		.4byte	0x83
+ 2368 073d 05       		.uleb128 0x5
+ 2369 073e 03       		.byte	0x3
+ 2370 073f 00000000 		.4byte	off_aux_V_2
+ 2371 0743 1B       		.uleb128 0x1b
+ 2372 0744 AE040000 		.4byte	.LASF66
+ 2373 0748 01       		.byte	0x1
+ 2374 0749 1F       		.byte	0x1f
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 52
+
+
+ 2375 074a 83000000 		.4byte	0x83
+ 2376 074e 05       		.uleb128 0x5
+ 2377 074f 03       		.byte	0x3
+ 2378 0750 00000000 		.4byte	pha_aux_2
+ 2379 0754 1B       		.uleb128 0x1b
+ 2380 0755 B2010000 		.4byte	.LASF67
+ 2381 0759 01       		.byte	0x1
+ 2382 075a 20       		.byte	0x20
+ 2383 075b 83000000 		.4byte	0x83
+ 2384 075f 05       		.uleb128 0x5
+ 2385 0760 03       		.byte	0x3
+ 2386 0761 00000000 		.4byte	ampli_aux_H_2
+ 2387 0765 1B       		.uleb128 0x1b
+ 2388 0766 0F050000 		.4byte	.LASF68
+ 2389 076a 01       		.byte	0x1
+ 2390 076b 21       		.byte	0x21
+ 2391 076c 83000000 		.4byte	0x83
+ 2392 0770 05       		.uleb128 0x5
+ 2393 0771 03       		.byte	0x3
+ 2394 0772 00000000 		.4byte	off_aux_H_2
+ 2395 0776 1B       		.uleb128 0x1b
+ 2396 0777 F1040000 		.4byte	.LASF69
+ 2397 077b 01       		.byte	0x1
+ 2398 077c 22       		.byte	0x22
+ 2399 077d 83000000 		.4byte	0x83
+ 2400 0781 05       		.uleb128 0x5
+ 2401 0782 03       		.byte	0x3
+ 2402 0783 00000000 		.4byte	Peso_Sensor
+ 2403 0787 1B       		.uleb128 0x1b
+ 2404 0788 C8040000 		.4byte	.LASF70
+ 2405 078c 01       		.byte	0x1
+ 2406 078d 23       		.byte	0x23
+ 2407 078e 5D000000 		.4byte	0x5d
+ 2408 0792 05       		.uleb128 0x5
+ 2409 0793 03       		.byte	0x3
+ 2410 0794 00000000 		.4byte	flag
+ 2411 0798 1B       		.uleb128 0x1b
+ 2412 0799 56020000 		.4byte	.LASF71
+ 2413 079d 01       		.byte	0x1
+ 2414 079e 24       		.byte	0x24
+ 2415 079f 83000000 		.4byte	0x83
+ 2416 07a3 05       		.uleb128 0x5
+ 2417 07a4 03       		.byte	0x3
+ 2418 07a5 00000000 		.4byte	dist
+ 2419 07a9 1B       		.uleb128 0x1b
+ 2420 07aa E5000000 		.4byte	.LASF72
+ 2421 07ae 01       		.byte	0x1
+ 2422 07af 25       		.byte	0x25
+ 2423 07b0 83000000 		.4byte	0x83
+ 2424 07b4 05       		.uleb128 0x5
+ 2425 07b5 03       		.byte	0x3
+ 2426 07b6 00000000 		.4byte	L_actual
+ 2427 07ba 1B       		.uleb128 0x1b
+ 2428 07bb C9030000 		.4byte	.LASF73
+ 2429 07bf 01       		.byte	0x1
+ 2430 07c0 26       		.byte	0x26
+ 2431 07c1 83000000 		.4byte	0x83
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 53
+
+
+ 2432 07c5 05       		.uleb128 0x5
+ 2433 07c6 03       		.byte	0x3
+ 2434 07c7 00000000 		.4byte	L_anterior
+ 2435 07cb 1B       		.uleb128 0x1b
+ 2436 07cc 00000000 		.4byte	.LASF74
+ 2437 07d0 01       		.byte	0x1
+ 2438 07d1 27       		.byte	0x27
+ 2439 07d2 5D000000 		.4byte	0x5d
+ 2440 07d6 05       		.uleb128 0x5
+ 2441 07d7 03       		.byte	0x3
+ 2442 07d8 00000000 		.4byte	punto_a
+ 2443 07dc 1B       		.uleb128 0x1b
+ 2444 07dd 08000000 		.4byte	.LASF75
+ 2445 07e1 01       		.byte	0x1
+ 2446 07e2 28       		.byte	0x28
+ 2447 07e3 5D000000 		.4byte	0x5d
+ 2448 07e7 05       		.uleb128 0x5
+ 2449 07e8 03       		.byte	0x3
+ 2450 07e9 00000000 		.4byte	punto_b
+ 2451 07ed 1B       		.uleb128 0x1b
+ 2452 07ee C4000000 		.4byte	.LASF76
+ 2453 07f2 01       		.byte	0x1
+ 2454 07f3 29       		.byte	0x29
+ 2455 07f4 5D000000 		.4byte	0x5d
+ 2456 07f8 05       		.uleb128 0x5
+ 2457 07f9 03       		.byte	0x3
+ 2458 07fa 00000000 		.4byte	move_s
+ 2459 07fe 1B       		.uleb128 0x1b
+ 2460 07ff 4C020000 		.4byte	.LASF77
+ 2461 0803 01       		.byte	0x1
+ 2462 0804 2A       		.byte	0x2a
+ 2463 0805 5D000000 		.4byte	0x5d
+ 2464 0809 05       		.uleb128 0x5
+ 2465 080a 03       		.byte	0x3
+ 2466 080b 00000000 		.4byte	individuo
+ 2467 080f 1C       		.uleb128 0x1c
+ 2468 0810 10000000 		.4byte	.LASF78
+ 2469 0814 10000000 		.4byte	.LASF78
+ 2470 0818 03       		.byte	0x3
+ 2471 0819 71       		.byte	0x71
+ 2472 081a 1C       		.uleb128 0x1c
+ 2473 081b FA000000 		.4byte	.LASF79
+ 2474 081f FA000000 		.4byte	.LASF79
+ 2475 0823 04       		.byte	0x4
+ 2476 0824 88       		.byte	0x88
+ 2477 0825 1D       		.uleb128 0x1d
+ 2478 0826 21000000 		.4byte	.LASF80
+ 2479 082a 21000000 		.4byte	.LASF80
+ 2480 082e 05       		.byte	0x5
+ 2481 082f 1D01     		.2byte	0x11d
+ 2482 0831 1C       		.uleb128 0x1c
+ 2483 0832 FD040000 		.4byte	.LASF81
+ 2484 0836 FD040000 		.4byte	.LASF81
+ 2485 083a 06       		.byte	0x6
+ 2486 083b D7       		.byte	0xd7
+ 2487 083c 1D       		.uleb128 0x1d
+ 2488 083d 2E000000 		.4byte	.LASF82
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 54
+
+
+ 2489 0841 2E000000 		.4byte	.LASF82
+ 2490 0845 05       		.byte	0x5
+ 2491 0846 2001     		.2byte	0x120
+ 2492 0848 1C       		.uleb128 0x1c
+ 2493 0849 59030000 		.4byte	.LASF83
+ 2494 084d 59030000 		.4byte	.LASF83
+ 2495 0851 05       		.byte	0x5
+ 2496 0852 C9       		.byte	0xc9
+ 2497 0853 1D       		.uleb128 0x1d
+ 2498 0854 E8030000 		.4byte	.LASF84
+ 2499 0858 E8030000 		.4byte	.LASF84
+ 2500 085c 05       		.byte	0x5
+ 2501 085d 0401     		.2byte	0x104
+ 2502 085f 1C       		.uleb128 0x1c
+ 2503 0860 D4030000 		.4byte	.LASF85
+ 2504 0864 D4030000 		.4byte	.LASF85
+ 2505 0868 05       		.byte	0x5
+ 2506 0869 C8       		.byte	0xc8
+ 2507 086a 1D       		.uleb128 0x1d
+ 2508 086b 3B000000 		.4byte	.LASF86
+ 2509 086f 3B000000 		.4byte	.LASF86
+ 2510 0873 05       		.byte	0x5
+ 2511 0874 2601     		.2byte	0x126
+ 2512 0876 1C       		.uleb128 0x1c
+ 2513 0877 3C010000 		.4byte	.LASF87
+ 2514 087b 3C010000 		.4byte	.LASF87
+ 2515 087f 07       		.byte	0x7
+ 2516 0880 33       		.byte	0x33
+ 2517 0881 1C       		.uleb128 0x1c
+ 2518 0882 75010000 		.4byte	.LASF88
+ 2519 0886 75010000 		.4byte	.LASF88
+ 2520 088a 05       		.byte	0x5
+ 2521 088b C5       		.byte	0xc5
+ 2522 088c 1C       		.uleb128 0x1c
+ 2523 088d 7C000000 		.4byte	.LASF89
+ 2524 0891 7C000000 		.4byte	.LASF89
+ 2525 0895 08       		.byte	0x8
+ 2526 0896 5A       		.byte	0x5a
+ 2527 0897 1C       		.uleb128 0x1c
+ 2528 0898 69010000 		.4byte	.LASF90
+ 2529 089c 69010000 		.4byte	.LASF90
+ 2530 08a0 09       		.byte	0x9
+ 2531 08a1 17       		.byte	0x17
+ 2532 08a2 1C       		.uleb128 0x1c
+ 2533 08a3 CB000000 		.4byte	.LASF91
+ 2534 08a7 CB000000 		.4byte	.LASF91
+ 2535 08ab 03       		.byte	0x3
+ 2536 08ac 54       		.byte	0x54
+ 2537 08ad 1C       		.uleb128 0x1c
+ 2538 08ae E0010000 		.4byte	.LASF92
+ 2539 08b2 E0010000 		.4byte	.LASF92
+ 2540 08b6 0A       		.byte	0xa
+ 2541 08b7 18       		.byte	0x18
+ 2542 08b8 1C       		.uleb128 0x1c
+ 2543 08b9 07020000 		.4byte	.LASF93
+ 2544 08bd 07020000 		.4byte	.LASF93
+ 2545 08c1 0B       		.byte	0xb
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 55
+
+
+ 2546 08c2 18       		.byte	0x18
+ 2547 08c3 1C       		.uleb128 0x1c
+ 2548 08c4 40030000 		.4byte	.LASF94
+ 2549 08c8 40030000 		.4byte	.LASF94
+ 2550 08cc 09       		.byte	0x9
+ 2551 08cd 18       		.byte	0x18
+ 2552 08ce 00       		.byte	0
+ 2553              		.section	.debug_abbrev,"",%progbits
+ 2554              	.Ldebug_abbrev0:
+ 2555 0000 01       		.uleb128 0x1
+ 2556 0001 11       		.uleb128 0x11
+ 2557 0002 01       		.byte	0x1
+ 2558 0003 25       		.uleb128 0x25
+ 2559 0004 0E       		.uleb128 0xe
+ 2560 0005 13       		.uleb128 0x13
+ 2561 0006 0B       		.uleb128 0xb
+ 2562 0007 03       		.uleb128 0x3
+ 2563 0008 0E       		.uleb128 0xe
+ 2564 0009 1B       		.uleb128 0x1b
+ 2565 000a 0E       		.uleb128 0xe
+ 2566 000b 55       		.uleb128 0x55
+ 2567 000c 17       		.uleb128 0x17
+ 2568 000d 11       		.uleb128 0x11
+ 2569 000e 01       		.uleb128 0x1
+ 2570 000f 10       		.uleb128 0x10
+ 2571 0010 17       		.uleb128 0x17
+ 2572 0011 00       		.byte	0
+ 2573 0012 00       		.byte	0
+ 2574 0013 02       		.uleb128 0x2
+ 2575 0014 24       		.uleb128 0x24
+ 2576 0015 00       		.byte	0
+ 2577 0016 0B       		.uleb128 0xb
+ 2578 0017 0B       		.uleb128 0xb
+ 2579 0018 3E       		.uleb128 0x3e
+ 2580 0019 0B       		.uleb128 0xb
+ 2581 001a 03       		.uleb128 0x3
+ 2582 001b 0E       		.uleb128 0xe
+ 2583 001c 00       		.byte	0
+ 2584 001d 00       		.byte	0
+ 2585 001e 03       		.uleb128 0x3
+ 2586 001f 24       		.uleb128 0x24
+ 2587 0020 00       		.byte	0
+ 2588 0021 0B       		.uleb128 0xb
+ 2589 0022 0B       		.uleb128 0xb
+ 2590 0023 3E       		.uleb128 0x3e
+ 2591 0024 0B       		.uleb128 0xb
+ 2592 0025 03       		.uleb128 0x3
+ 2593 0026 08       		.uleb128 0x8
+ 2594 0027 00       		.byte	0
+ 2595 0028 00       		.byte	0
+ 2596 0029 04       		.uleb128 0x4
+ 2597 002a 16       		.uleb128 0x16
+ 2598 002b 00       		.byte	0
+ 2599 002c 03       		.uleb128 0x3
+ 2600 002d 0E       		.uleb128 0xe
+ 2601 002e 3A       		.uleb128 0x3a
+ 2602 002f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 56
+
+
+ 2603 0030 3B       		.uleb128 0x3b
+ 2604 0031 05       		.uleb128 0x5
+ 2605 0032 49       		.uleb128 0x49
+ 2606 0033 13       		.uleb128 0x13
+ 2607 0034 00       		.byte	0
+ 2608 0035 00       		.byte	0
+ 2609 0036 05       		.uleb128 0x5
+ 2610 0037 01       		.uleb128 0x1
+ 2611 0038 01       		.byte	0x1
+ 2612 0039 49       		.uleb128 0x49
+ 2613 003a 13       		.uleb128 0x13
+ 2614 003b 01       		.uleb128 0x1
+ 2615 003c 13       		.uleb128 0x13
+ 2616 003d 00       		.byte	0
+ 2617 003e 00       		.byte	0
+ 2618 003f 06       		.uleb128 0x6
+ 2619 0040 21       		.uleb128 0x21
+ 2620 0041 00       		.byte	0
+ 2621 0042 49       		.uleb128 0x49
+ 2622 0043 13       		.uleb128 0x13
+ 2623 0044 2F       		.uleb128 0x2f
+ 2624 0045 0B       		.uleb128 0xb
+ 2625 0046 00       		.byte	0
+ 2626 0047 00       		.byte	0
+ 2627 0048 07       		.uleb128 0x7
+ 2628 0049 2E       		.uleb128 0x2e
+ 2629 004a 01       		.byte	0x1
+ 2630 004b 3F       		.uleb128 0x3f
+ 2631 004c 19       		.uleb128 0x19
+ 2632 004d 03       		.uleb128 0x3
+ 2633 004e 0E       		.uleb128 0xe
+ 2634 004f 3A       		.uleb128 0x3a
+ 2635 0050 0B       		.uleb128 0xb
+ 2636 0051 3B       		.uleb128 0x3b
+ 2637 0052 05       		.uleb128 0x5
+ 2638 0053 27       		.uleb128 0x27
+ 2639 0054 19       		.uleb128 0x19
+ 2640 0055 11       		.uleb128 0x11
+ 2641 0056 01       		.uleb128 0x1
+ 2642 0057 12       		.uleb128 0x12
+ 2643 0058 06       		.uleb128 0x6
+ 2644 0059 40       		.uleb128 0x40
+ 2645 005a 18       		.uleb128 0x18
+ 2646 005b 9642     		.uleb128 0x2116
+ 2647 005d 19       		.uleb128 0x19
+ 2648 005e 01       		.uleb128 0x1
+ 2649 005f 13       		.uleb128 0x13
+ 2650 0060 00       		.byte	0
+ 2651 0061 00       		.byte	0
+ 2652 0062 08       		.uleb128 0x8
+ 2653 0063 898201   		.uleb128 0x4109
+ 2654 0066 00       		.byte	0
+ 2655 0067 11       		.uleb128 0x11
+ 2656 0068 01       		.uleb128 0x1
+ 2657 0069 31       		.uleb128 0x31
+ 2658 006a 13       		.uleb128 0x13
+ 2659 006b 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 57
+
+
+ 2660 006c 00       		.byte	0
+ 2661 006d 09       		.uleb128 0x9
+ 2662 006e 2E       		.uleb128 0x2e
+ 2663 006f 01       		.byte	0x1
+ 2664 0070 3F       		.uleb128 0x3f
+ 2665 0071 19       		.uleb128 0x19
+ 2666 0072 03       		.uleb128 0x3
+ 2667 0073 0E       		.uleb128 0xe
+ 2668 0074 3A       		.uleb128 0x3a
+ 2669 0075 0B       		.uleb128 0xb
+ 2670 0076 3B       		.uleb128 0x3b
+ 2671 0077 0B       		.uleb128 0xb
+ 2672 0078 49       		.uleb128 0x49
+ 2673 0079 13       		.uleb128 0x13
+ 2674 007a 11       		.uleb128 0x11
+ 2675 007b 01       		.uleb128 0x1
+ 2676 007c 12       		.uleb128 0x12
+ 2677 007d 06       		.uleb128 0x6
+ 2678 007e 40       		.uleb128 0x40
+ 2679 007f 18       		.uleb128 0x18
+ 2680 0080 9642     		.uleb128 0x2116
+ 2681 0082 19       		.uleb128 0x19
+ 2682 0083 01       		.uleb128 0x1
+ 2683 0084 13       		.uleb128 0x13
+ 2684 0085 00       		.byte	0
+ 2685 0086 00       		.byte	0
+ 2686 0087 0A       		.uleb128 0xa
+ 2687 0088 34       		.uleb128 0x34
+ 2688 0089 00       		.byte	0
+ 2689 008a 03       		.uleb128 0x3
+ 2690 008b 08       		.uleb128 0x8
+ 2691 008c 3A       		.uleb128 0x3a
+ 2692 008d 0B       		.uleb128 0xb
+ 2693 008e 3B       		.uleb128 0x3b
+ 2694 008f 0B       		.uleb128 0xb
+ 2695 0090 49       		.uleb128 0x49
+ 2696 0091 13       		.uleb128 0x13
+ 2697 0092 02       		.uleb128 0x2
+ 2698 0093 17       		.uleb128 0x17
+ 2699 0094 00       		.byte	0
+ 2700 0095 00       		.byte	0
+ 2701 0096 0B       		.uleb128 0xb
+ 2702 0097 2E       		.uleb128 0x2e
+ 2703 0098 01       		.byte	0x1
+ 2704 0099 3F       		.uleb128 0x3f
+ 2705 009a 19       		.uleb128 0x19
+ 2706 009b 03       		.uleb128 0x3
+ 2707 009c 0E       		.uleb128 0xe
+ 2708 009d 3A       		.uleb128 0x3a
+ 2709 009e 0B       		.uleb128 0xb
+ 2710 009f 3B       		.uleb128 0x3b
+ 2711 00a0 0B       		.uleb128 0xb
+ 2712 00a1 27       		.uleb128 0x27
+ 2713 00a2 19       		.uleb128 0x19
+ 2714 00a3 11       		.uleb128 0x11
+ 2715 00a4 01       		.uleb128 0x1
+ 2716 00a5 12       		.uleb128 0x12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 58
+
+
+ 2717 00a6 06       		.uleb128 0x6
+ 2718 00a7 40       		.uleb128 0x40
+ 2719 00a8 18       		.uleb128 0x18
+ 2720 00a9 9742     		.uleb128 0x2117
+ 2721 00ab 19       		.uleb128 0x19
+ 2722 00ac 01       		.uleb128 0x1
+ 2723 00ad 13       		.uleb128 0x13
+ 2724 00ae 00       		.byte	0
+ 2725 00af 00       		.byte	0
+ 2726 00b0 0C       		.uleb128 0xc
+ 2727 00b1 05       		.uleb128 0x5
+ 2728 00b2 00       		.byte	0
+ 2729 00b3 03       		.uleb128 0x3
+ 2730 00b4 0E       		.uleb128 0xe
+ 2731 00b5 3A       		.uleb128 0x3a
+ 2732 00b6 0B       		.uleb128 0xb
+ 2733 00b7 3B       		.uleb128 0x3b
+ 2734 00b8 0B       		.uleb128 0xb
+ 2735 00b9 49       		.uleb128 0x49
+ 2736 00ba 13       		.uleb128 0x13
+ 2737 00bb 02       		.uleb128 0x2
+ 2738 00bc 17       		.uleb128 0x17
+ 2739 00bd 00       		.byte	0
+ 2740 00be 00       		.byte	0
+ 2741 00bf 0D       		.uleb128 0xd
+ 2742 00c0 05       		.uleb128 0x5
+ 2743 00c1 00       		.byte	0
+ 2744 00c2 03       		.uleb128 0x3
+ 2745 00c3 08       		.uleb128 0x8
+ 2746 00c4 3A       		.uleb128 0x3a
+ 2747 00c5 0B       		.uleb128 0xb
+ 2748 00c6 3B       		.uleb128 0x3b
+ 2749 00c7 0B       		.uleb128 0xb
+ 2750 00c8 49       		.uleb128 0x49
+ 2751 00c9 13       		.uleb128 0x13
+ 2752 00ca 02       		.uleb128 0x2
+ 2753 00cb 17       		.uleb128 0x17
+ 2754 00cc 00       		.byte	0
+ 2755 00cd 00       		.byte	0
+ 2756 00ce 0E       		.uleb128 0xe
+ 2757 00cf 34       		.uleb128 0x34
+ 2758 00d0 00       		.byte	0
+ 2759 00d1 03       		.uleb128 0x3
+ 2760 00d2 0E       		.uleb128 0xe
+ 2761 00d3 3A       		.uleb128 0x3a
+ 2762 00d4 0B       		.uleb128 0xb
+ 2763 00d5 3B       		.uleb128 0x3b
+ 2764 00d6 0B       		.uleb128 0xb
+ 2765 00d7 49       		.uleb128 0x49
+ 2766 00d8 13       		.uleb128 0x13
+ 2767 00d9 02       		.uleb128 0x2
+ 2768 00da 17       		.uleb128 0x17
+ 2769 00db 00       		.byte	0
+ 2770 00dc 00       		.byte	0
+ 2771 00dd 0F       		.uleb128 0xf
+ 2772 00de 898201   		.uleb128 0x4109
+ 2773 00e1 01       		.byte	0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 59
+
+
+ 2774 00e2 11       		.uleb128 0x11
+ 2775 00e3 01       		.uleb128 0x1
+ 2776 00e4 31       		.uleb128 0x31
+ 2777 00e5 13       		.uleb128 0x13
+ 2778 00e6 00       		.byte	0
+ 2779 00e7 00       		.byte	0
+ 2780 00e8 10       		.uleb128 0x10
+ 2781 00e9 8A8201   		.uleb128 0x410a
+ 2782 00ec 00       		.byte	0
+ 2783 00ed 02       		.uleb128 0x2
+ 2784 00ee 18       		.uleb128 0x18
+ 2785 00ef 9142     		.uleb128 0x2111
+ 2786 00f1 18       		.uleb128 0x18
+ 2787 00f2 00       		.byte	0
+ 2788 00f3 00       		.byte	0
+ 2789 00f4 11       		.uleb128 0x11
+ 2790 00f5 2E       		.uleb128 0x2e
+ 2791 00f6 01       		.byte	0x1
+ 2792 00f7 3F       		.uleb128 0x3f
+ 2793 00f8 19       		.uleb128 0x19
+ 2794 00f9 03       		.uleb128 0x3
+ 2795 00fa 0E       		.uleb128 0xe
+ 2796 00fb 3A       		.uleb128 0x3a
+ 2797 00fc 0B       		.uleb128 0xb
+ 2798 00fd 3B       		.uleb128 0x3b
+ 2799 00fe 0B       		.uleb128 0xb
+ 2800 00ff 27       		.uleb128 0x27
+ 2801 0100 19       		.uleb128 0x19
+ 2802 0101 11       		.uleb128 0x11
+ 2803 0102 01       		.uleb128 0x1
+ 2804 0103 12       		.uleb128 0x12
+ 2805 0104 06       		.uleb128 0x6
+ 2806 0105 40       		.uleb128 0x40
+ 2807 0106 18       		.uleb128 0x18
+ 2808 0107 9642     		.uleb128 0x2116
+ 2809 0109 19       		.uleb128 0x19
+ 2810 010a 01       		.uleb128 0x1
+ 2811 010b 13       		.uleb128 0x13
+ 2812 010c 00       		.byte	0
+ 2813 010d 00       		.byte	0
+ 2814 010e 12       		.uleb128 0x12
+ 2815 010f 2E       		.uleb128 0x2e
+ 2816 0110 01       		.byte	0x1
+ 2817 0111 3F       		.uleb128 0x3f
+ 2818 0112 19       		.uleb128 0x19
+ 2819 0113 03       		.uleb128 0x3
+ 2820 0114 0E       		.uleb128 0xe
+ 2821 0115 3A       		.uleb128 0x3a
+ 2822 0116 0B       		.uleb128 0xb
+ 2823 0117 3B       		.uleb128 0x3b
+ 2824 0118 0B       		.uleb128 0xb
+ 2825 0119 11       		.uleb128 0x11
+ 2826 011a 01       		.uleb128 0x1
+ 2827 011b 12       		.uleb128 0x12
+ 2828 011c 06       		.uleb128 0x6
+ 2829 011d 40       		.uleb128 0x40
+ 2830 011e 18       		.uleb128 0x18
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 60
+
+
+ 2831 011f 9742     		.uleb128 0x2117
+ 2832 0121 19       		.uleb128 0x19
+ 2833 0122 01       		.uleb128 0x1
+ 2834 0123 13       		.uleb128 0x13
+ 2835 0124 00       		.byte	0
+ 2836 0125 00       		.byte	0
+ 2837 0126 13       		.uleb128 0x13
+ 2838 0127 0B       		.uleb128 0xb
+ 2839 0128 01       		.byte	0x1
+ 2840 0129 11       		.uleb128 0x11
+ 2841 012a 01       		.uleb128 0x1
+ 2842 012b 12       		.uleb128 0x12
+ 2843 012c 06       		.uleb128 0x6
+ 2844 012d 00       		.byte	0
+ 2845 012e 00       		.byte	0
+ 2846 012f 14       		.uleb128 0x14
+ 2847 0130 898201   		.uleb128 0x4109
+ 2848 0133 01       		.byte	0x1
+ 2849 0134 11       		.uleb128 0x11
+ 2850 0135 01       		.uleb128 0x1
+ 2851 0136 31       		.uleb128 0x31
+ 2852 0137 13       		.uleb128 0x13
+ 2853 0138 01       		.uleb128 0x1
+ 2854 0139 13       		.uleb128 0x13
+ 2855 013a 00       		.byte	0
+ 2856 013b 00       		.byte	0
+ 2857 013c 15       		.uleb128 0x15
+ 2858 013d 2E       		.uleb128 0x2e
+ 2859 013e 00       		.byte	0
+ 2860 013f 3F       		.uleb128 0x3f
+ 2861 0140 19       		.uleb128 0x19
+ 2862 0141 03       		.uleb128 0x3
+ 2863 0142 0E       		.uleb128 0xe
+ 2864 0143 3A       		.uleb128 0x3a
+ 2865 0144 0B       		.uleb128 0xb
+ 2866 0145 3B       		.uleb128 0x3b
+ 2867 0146 0B       		.uleb128 0xb
+ 2868 0147 11       		.uleb128 0x11
+ 2869 0148 01       		.uleb128 0x1
+ 2870 0149 12       		.uleb128 0x12
+ 2871 014a 06       		.uleb128 0x6
+ 2872 014b 40       		.uleb128 0x40
+ 2873 014c 18       		.uleb128 0x18
+ 2874 014d 9742     		.uleb128 0x2117
+ 2875 014f 19       		.uleb128 0x19
+ 2876 0150 00       		.byte	0
+ 2877 0151 00       		.byte	0
+ 2878 0152 16       		.uleb128 0x16
+ 2879 0153 2E       		.uleb128 0x2e
+ 2880 0154 01       		.byte	0x1
+ 2881 0155 3F       		.uleb128 0x3f
+ 2882 0156 19       		.uleb128 0x19
+ 2883 0157 03       		.uleb128 0x3
+ 2884 0158 0E       		.uleb128 0xe
+ 2885 0159 3A       		.uleb128 0x3a
+ 2886 015a 0B       		.uleb128 0xb
+ 2887 015b 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 61
+
+
+ 2888 015c 0B       		.uleb128 0xb
+ 2889 015d 11       		.uleb128 0x11
+ 2890 015e 01       		.uleb128 0x1
+ 2891 015f 12       		.uleb128 0x12
+ 2892 0160 06       		.uleb128 0x6
+ 2893 0161 40       		.uleb128 0x40
+ 2894 0162 18       		.uleb128 0x18
+ 2895 0163 9642     		.uleb128 0x2116
+ 2896 0165 19       		.uleb128 0x19
+ 2897 0166 01       		.uleb128 0x1
+ 2898 0167 13       		.uleb128 0x13
+ 2899 0168 00       		.byte	0
+ 2900 0169 00       		.byte	0
+ 2901 016a 17       		.uleb128 0x17
+ 2902 016b 2E       		.uleb128 0x2e
+ 2903 016c 01       		.byte	0x1
+ 2904 016d 3F       		.uleb128 0x3f
+ 2905 016e 19       		.uleb128 0x19
+ 2906 016f 03       		.uleb128 0x3
+ 2907 0170 0E       		.uleb128 0xe
+ 2908 0171 3A       		.uleb128 0x3a
+ 2909 0172 0B       		.uleb128 0xb
+ 2910 0173 3B       		.uleb128 0x3b
+ 2911 0174 05       		.uleb128 0x5
+ 2912 0175 27       		.uleb128 0x27
+ 2913 0176 19       		.uleb128 0x19
+ 2914 0177 11       		.uleb128 0x11
+ 2915 0178 01       		.uleb128 0x1
+ 2916 0179 12       		.uleb128 0x12
+ 2917 017a 06       		.uleb128 0x6
+ 2918 017b 40       		.uleb128 0x40
+ 2919 017c 18       		.uleb128 0x18
+ 2920 017d 9742     		.uleb128 0x2117
+ 2921 017f 19       		.uleb128 0x19
+ 2922 0180 01       		.uleb128 0x1
+ 2923 0181 13       		.uleb128 0x13
+ 2924 0182 00       		.byte	0
+ 2925 0183 00       		.byte	0
+ 2926 0184 18       		.uleb128 0x18
+ 2927 0185 0B       		.uleb128 0xb
+ 2928 0186 01       		.byte	0x1
+ 2929 0187 11       		.uleb128 0x11
+ 2930 0188 01       		.uleb128 0x1
+ 2931 0189 12       		.uleb128 0x12
+ 2932 018a 06       		.uleb128 0x6
+ 2933 018b 01       		.uleb128 0x1
+ 2934 018c 13       		.uleb128 0x13
+ 2935 018d 00       		.byte	0
+ 2936 018e 00       		.byte	0
+ 2937 018f 19       		.uleb128 0x19
+ 2938 0190 34       		.uleb128 0x34
+ 2939 0191 00       		.byte	0
+ 2940 0192 03       		.uleb128 0x3
+ 2941 0193 08       		.uleb128 0x8
+ 2942 0194 3A       		.uleb128 0x3a
+ 2943 0195 0B       		.uleb128 0xb
+ 2944 0196 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 62
+
+
+ 2945 0197 05       		.uleb128 0x5
+ 2946 0198 49       		.uleb128 0x49
+ 2947 0199 13       		.uleb128 0x13
+ 2948 019a 02       		.uleb128 0x2
+ 2949 019b 17       		.uleb128 0x17
+ 2950 019c 00       		.byte	0
+ 2951 019d 00       		.byte	0
+ 2952 019e 1A       		.uleb128 0x1a
+ 2953 019f 2E       		.uleb128 0x2e
+ 2954 01a0 01       		.byte	0x1
+ 2955 01a1 3F       		.uleb128 0x3f
+ 2956 01a2 19       		.uleb128 0x19
+ 2957 01a3 03       		.uleb128 0x3
+ 2958 01a4 0E       		.uleb128 0xe
+ 2959 01a5 3A       		.uleb128 0x3a
+ 2960 01a6 0B       		.uleb128 0xb
+ 2961 01a7 3B       		.uleb128 0x3b
+ 2962 01a8 05       		.uleb128 0x5
+ 2963 01a9 49       		.uleb128 0x49
+ 2964 01aa 13       		.uleb128 0x13
+ 2965 01ab 8701     		.uleb128 0x87
+ 2966 01ad 19       		.uleb128 0x19
+ 2967 01ae 11       		.uleb128 0x11
+ 2968 01af 01       		.uleb128 0x1
+ 2969 01b0 12       		.uleb128 0x12
+ 2970 01b1 06       		.uleb128 0x6
+ 2971 01b2 40       		.uleb128 0x40
+ 2972 01b3 18       		.uleb128 0x18
+ 2973 01b4 9742     		.uleb128 0x2117
+ 2974 01b6 19       		.uleb128 0x19
+ 2975 01b7 01       		.uleb128 0x1
+ 2976 01b8 13       		.uleb128 0x13
+ 2977 01b9 00       		.byte	0
+ 2978 01ba 00       		.byte	0
+ 2979 01bb 1B       		.uleb128 0x1b
+ 2980 01bc 34       		.uleb128 0x34
+ 2981 01bd 00       		.byte	0
+ 2982 01be 03       		.uleb128 0x3
+ 2983 01bf 0E       		.uleb128 0xe
+ 2984 01c0 3A       		.uleb128 0x3a
+ 2985 01c1 0B       		.uleb128 0xb
+ 2986 01c2 3B       		.uleb128 0x3b
+ 2987 01c3 0B       		.uleb128 0xb
+ 2988 01c4 49       		.uleb128 0x49
+ 2989 01c5 13       		.uleb128 0x13
+ 2990 01c6 3F       		.uleb128 0x3f
+ 2991 01c7 19       		.uleb128 0x19
+ 2992 01c8 02       		.uleb128 0x2
+ 2993 01c9 18       		.uleb128 0x18
+ 2994 01ca 00       		.byte	0
+ 2995 01cb 00       		.byte	0
+ 2996 01cc 1C       		.uleb128 0x1c
+ 2997 01cd 2E       		.uleb128 0x2e
+ 2998 01ce 00       		.byte	0
+ 2999 01cf 3F       		.uleb128 0x3f
+ 3000 01d0 19       		.uleb128 0x19
+ 3001 01d1 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 63
+
+
+ 3002 01d2 19       		.uleb128 0x19
+ 3003 01d3 6E       		.uleb128 0x6e
+ 3004 01d4 0E       		.uleb128 0xe
+ 3005 01d5 03       		.uleb128 0x3
+ 3006 01d6 0E       		.uleb128 0xe
+ 3007 01d7 3A       		.uleb128 0x3a
+ 3008 01d8 0B       		.uleb128 0xb
+ 3009 01d9 3B       		.uleb128 0x3b
+ 3010 01da 0B       		.uleb128 0xb
+ 3011 01db 00       		.byte	0
+ 3012 01dc 00       		.byte	0
+ 3013 01dd 1D       		.uleb128 0x1d
+ 3014 01de 2E       		.uleb128 0x2e
+ 3015 01df 00       		.byte	0
+ 3016 01e0 3F       		.uleb128 0x3f
+ 3017 01e1 19       		.uleb128 0x19
+ 3018 01e2 3C       		.uleb128 0x3c
+ 3019 01e3 19       		.uleb128 0x19
+ 3020 01e4 6E       		.uleb128 0x6e
+ 3021 01e5 0E       		.uleb128 0xe
+ 3022 01e6 03       		.uleb128 0x3
+ 3023 01e7 0E       		.uleb128 0xe
+ 3024 01e8 3A       		.uleb128 0x3a
+ 3025 01e9 0B       		.uleb128 0xb
+ 3026 01ea 3B       		.uleb128 0x3b
+ 3027 01eb 05       		.uleb128 0x5
+ 3028 01ec 00       		.byte	0
+ 3029 01ed 00       		.byte	0
+ 3030 01ee 00       		.byte	0
+ 3031              		.section	.debug_loc,"",%progbits
+ 3032              	.Ldebug_loc0:
+ 3033              	.LLST0:
+ 3034 0000 02000000 		.4byte	.LVL9
+ 3035 0004 0A000000 		.4byte	.LVL11
+ 3036 0008 0600     		.2byte	0x6
+ 3037 000a 9E       		.byte	0x9e
+ 3038 000b 04       		.uleb128 0x4
+ 3039 000c 00000000 		.4byte	0
+ 3040 0010 0A000000 		.4byte	.LVL11
+ 3041 0014 0D000000 		.4byte	.LVL12-1
+ 3042 0018 0100     		.2byte	0x1
+ 3043 001a 50       		.byte	0x50
+ 3044 001b 00000000 		.4byte	0
+ 3045 001f 00000000 		.4byte	0
+ 3046              	.LLST1:
+ 3047 0023 02000000 		.4byte	.LVL13
+ 3048 0027 0A000000 		.4byte	.LVL15
+ 3049 002b 0600     		.2byte	0x6
+ 3050 002d 9E       		.byte	0x9e
+ 3051 002e 04       		.uleb128 0x4
+ 3052 002f 00000000 		.4byte	0
+ 3053 0033 0A000000 		.4byte	.LVL15
+ 3054 0037 0D000000 		.4byte	.LVL16-1
+ 3055 003b 0100     		.2byte	0x1
+ 3056 003d 50       		.byte	0x50
+ 3057 003e 1A000000 		.4byte	.LVL18
+ 3058 0042 1D000000 		.4byte	.LVL19-1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 64
+
+
+ 3059 0046 0100     		.2byte	0x1
+ 3060 0048 50       		.byte	0x50
+ 3061 0049 00000000 		.4byte	0
+ 3062 004d 00000000 		.4byte	0
+ 3063              	.LLST2:
+ 3064 0051 02000000 		.4byte	.LVL20
+ 3065 0055 12000000 		.4byte	.LVL23
+ 3066 0059 0600     		.2byte	0x6
+ 3067 005b 9E       		.byte	0x9e
+ 3068 005c 04       		.uleb128 0x4
+ 3069 005d 00000000 		.4byte	0
+ 3070 0061 12000000 		.4byte	.LVL23
+ 3071 0065 15000000 		.4byte	.LVL24-1
+ 3072 0069 0100     		.2byte	0x1
+ 3073 006b 50       		.byte	0x50
+ 3074 006c 00000000 		.4byte	0
+ 3075 0070 00000000 		.4byte	0
+ 3076              	.LLST3:
+ 3077 0074 02000000 		.4byte	.LVL25
+ 3078 0078 0A000000 		.4byte	.LVL27
+ 3079 007c 0600     		.2byte	0x6
+ 3080 007e 9E       		.byte	0x9e
+ 3081 007f 04       		.uleb128 0x4
+ 3082 0080 00000000 		.4byte	0
+ 3083 0084 0A000000 		.4byte	.LVL27
+ 3084 0088 0D000000 		.4byte	.LVL28-1
+ 3085 008c 0100     		.2byte	0x1
+ 3086 008e 50       		.byte	0x50
+ 3087 008f 1A000000 		.4byte	.LVL30
+ 3088 0093 1D000000 		.4byte	.LVL31-1
+ 3089 0097 0100     		.2byte	0x1
+ 3090 0099 50       		.byte	0x50
+ 3091 009a 2A000000 		.4byte	.LVL33
+ 3092 009e 2D000000 		.4byte	.LVL34-1
+ 3093 00a2 0100     		.2byte	0x1
+ 3094 00a4 50       		.byte	0x50
+ 3095 00a5 00000000 		.4byte	0
+ 3096 00a9 00000000 		.4byte	0
+ 3097              	.LLST4:
+ 3098 00ad 00000000 		.4byte	.LVL35
+ 3099 00b1 0E000000 		.4byte	.LVL37
+ 3100 00b5 0100     		.2byte	0x1
+ 3101 00b7 50       		.byte	0x50
+ 3102 00b8 0E000000 		.4byte	.LVL37
+ 3103 00bc 28000000 		.4byte	.LFE42
+ 3104 00c0 0400     		.2byte	0x4
+ 3105 00c2 F3       		.byte	0xf3
+ 3106 00c3 01       		.uleb128 0x1
+ 3107 00c4 50       		.byte	0x50
+ 3108 00c5 9F       		.byte	0x9f
+ 3109 00c6 00000000 		.4byte	0
+ 3110 00ca 00000000 		.4byte	0
+ 3111              	.LLST5:
+ 3112 00ce 00000000 		.4byte	.LVL35
+ 3113 00d2 1B000000 		.4byte	.LVL38-1
+ 3114 00d6 0100     		.2byte	0x1
+ 3115 00d8 51       		.byte	0x51
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 65
+
+
+ 3116 00d9 1B000000 		.4byte	.LVL38-1
+ 3117 00dd 28000000 		.4byte	.LFE42
+ 3118 00e1 0400     		.2byte	0x4
+ 3119 00e3 F3       		.byte	0xf3
+ 3120 00e4 01       		.uleb128 0x1
+ 3121 00e5 51       		.byte	0x51
+ 3122 00e6 9F       		.byte	0x9f
+ 3123 00e7 00000000 		.4byte	0
+ 3124 00eb 00000000 		.4byte	0
+ 3125              	.LLST6:
+ 3126 00ef 04000000 		.4byte	.LVL36
+ 3127 00f3 1B000000 		.4byte	.LVL38-1
+ 3128 00f7 0100     		.2byte	0x1
+ 3129 00f9 52       		.byte	0x52
+ 3130 00fa 1B000000 		.4byte	.LVL38-1
+ 3131 00fe 28000000 		.4byte	.LFE42
+ 3132 0102 0600     		.2byte	0x6
+ 3133 0104 F3       		.byte	0xf3
+ 3134 0105 01       		.uleb128 0x1
+ 3135 0106 51       		.byte	0x51
+ 3136 0107 38       		.byte	0x38
+ 3137 0108 26       		.byte	0x26
+ 3138 0109 9F       		.byte	0x9f
+ 3139 010a 00000000 		.4byte	0
+ 3140 010e 00000000 		.4byte	0
+ 3141              	.LLST7:
+ 3142 0112 04000000 		.4byte	.LVL36
+ 3143 0116 1B000000 		.4byte	.LVL38-1
+ 3144 011a 0100     		.2byte	0x1
+ 3145 011c 51       		.byte	0x51
+ 3146 011d 1B000000 		.4byte	.LVL38-1
+ 3147 0121 28000000 		.4byte	.LFE42
+ 3148 0125 0400     		.2byte	0x4
+ 3149 0127 F3       		.byte	0xf3
+ 3150 0128 01       		.uleb128 0x1
+ 3151 0129 51       		.byte	0x51
+ 3152 012a 9F       		.byte	0x9f
+ 3153 012b 00000000 		.4byte	0
+ 3154 012f 00000000 		.4byte	0
+ 3155              	.LLST8:
+ 3156 0133 00000000 		.4byte	.LVL40
+ 3157 0137 1F000000 		.4byte	.LVL42-1
+ 3158 013b 0100     		.2byte	0x1
+ 3159 013d 50       		.byte	0x50
+ 3160 013e 1F000000 		.4byte	.LVL42-1
+ 3161 0142 2C000000 		.4byte	.LFE43
+ 3162 0146 0400     		.2byte	0x4
+ 3163 0148 F3       		.byte	0xf3
+ 3164 0149 01       		.uleb128 0x1
+ 3165 014a 50       		.byte	0x50
+ 3166 014b 9F       		.byte	0x9f
+ 3167 014c 00000000 		.4byte	0
+ 3168 0150 00000000 		.4byte	0
+ 3169              	.LLST9:
+ 3170 0154 00000000 		.4byte	.LVL40
+ 3171 0158 0A000000 		.4byte	.LVL41
+ 3172 015c 0100     		.2byte	0x1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 66
+
+
+ 3173 015e 51       		.byte	0x51
+ 3174 015f 0A000000 		.4byte	.LVL41
+ 3175 0163 2C000000 		.4byte	.LFE43
+ 3176 0167 0400     		.2byte	0x4
+ 3177 0169 F3       		.byte	0xf3
+ 3178 016a 01       		.uleb128 0x1
+ 3179 016b 51       		.byte	0x51
+ 3180 016c 9F       		.byte	0x9f
+ 3181 016d 00000000 		.4byte	0
+ 3182 0171 00000000 		.4byte	0
+ 3183              	.LLST10:
+ 3184 0175 00000000 		.4byte	.LVL44
+ 3185 0179 11000000 		.4byte	.LVL46-1
+ 3186 017d 0100     		.2byte	0x1
+ 3187 017f 50       		.byte	0x50
+ 3188 0180 11000000 		.4byte	.LVL46-1
+ 3189 0184 B4000000 		.4byte	.LFE44
+ 3190 0188 0200     		.2byte	0x2
+ 3191 018a 91       		.byte	0x91
+ 3192 018b 5C       		.sleb128 -36
+ 3193 018c 00000000 		.4byte	0
+ 3194 0190 00000000 		.4byte	0
+ 3195              	.LLST11:
+ 3196 0194 00000000 		.4byte	.LVL44
+ 3197 0198 0E000000 		.4byte	.LVL45
+ 3198 019c 0100     		.2byte	0x1
+ 3199 019e 51       		.byte	0x51
+ 3200 019f 0E000000 		.4byte	.LVL45
+ 3201 01a3 B4000000 		.4byte	.LFE44
+ 3202 01a7 0200     		.2byte	0x2
+ 3203 01a9 91       		.byte	0x91
+ 3204 01aa 60       		.sleb128 -32
+ 3205 01ab 00000000 		.4byte	0
+ 3206 01af 00000000 		.4byte	0
+ 3207              	.LLST12:
+ 3208 01b3 00000000 		.4byte	.LVL44
+ 3209 01b7 11000000 		.4byte	.LVL46-1
+ 3210 01bb 0100     		.2byte	0x1
+ 3211 01bd 52       		.byte	0x52
+ 3212 01be 11000000 		.4byte	.LVL46-1
+ 3213 01c2 B4000000 		.4byte	.LFE44
+ 3214 01c6 0200     		.2byte	0x2
+ 3215 01c8 91       		.byte	0x91
+ 3216 01c9 64       		.sleb128 -28
+ 3217 01ca 00000000 		.4byte	0
+ 3218 01ce 00000000 		.4byte	0
+ 3219              	.LLST13:
+ 3220 01d2 00000000 		.4byte	.LVL44
+ 3221 01d6 11000000 		.4byte	.LVL46-1
+ 3222 01da 0100     		.2byte	0x1
+ 3223 01dc 53       		.byte	0x53
+ 3224 01dd 11000000 		.4byte	.LVL46-1
+ 3225 01e1 4A000000 		.4byte	.LVL57
+ 3226 01e5 0100     		.2byte	0x1
+ 3227 01e7 57       		.byte	0x57
+ 3228 01e8 4A000000 		.4byte	.LVL57
+ 3229 01ec B4000000 		.4byte	.LFE44
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 67
+
+
+ 3230 01f0 0400     		.2byte	0x4
+ 3231 01f2 F3       		.byte	0xf3
+ 3232 01f3 01       		.uleb128 0x1
+ 3233 01f4 53       		.byte	0x53
+ 3234 01f5 9F       		.byte	0x9f
+ 3235 01f6 00000000 		.4byte	0
+ 3236 01fa 00000000 		.4byte	0
+ 3237              	.LLST14:
+ 3238 01fe 1C000000 		.4byte	.LVL48
+ 3239 0202 20000000 		.4byte	.LVL49
+ 3240 0206 0100     		.2byte	0x1
+ 3241 0208 50       		.byte	0x50
+ 3242 0209 20000000 		.4byte	.LVL49
+ 3243 020d 4C000000 		.4byte	.LVL58
+ 3244 0211 0100     		.2byte	0x1
+ 3245 0213 56       		.byte	0x56
+ 3246 0214 00000000 		.4byte	0
+ 3247 0218 00000000 		.4byte	0
+ 3248              	.LLST15:
+ 3249 021c 2E000000 		.4byte	.LVL52
+ 3250 0220 32000000 		.4byte	.LVL53
+ 3251 0224 0100     		.2byte	0x1
+ 3252 0226 50       		.byte	0x50
+ 3253 0227 32000000 		.4byte	.LVL53
+ 3254 022b 68000000 		.4byte	.LVL66
+ 3255 022f 0100     		.2byte	0x1
+ 3256 0231 55       		.byte	0x55
+ 3257 0232 00000000 		.4byte	0
+ 3258 0236 00000000 		.4byte	0
+ 3259              	.LLST16:
+ 3260 023a 40000000 		.4byte	.LVL56
+ 3261 023e 52000000 		.4byte	.LVL60
+ 3262 0242 0100     		.2byte	0x1
+ 3263 0244 50       		.byte	0x50
+ 3264 0245 52000000 		.4byte	.LVL60
+ 3265 0249 84000000 		.4byte	.LVL73
+ 3266 024d 0100     		.2byte	0x1
+ 3267 024f 54       		.byte	0x54
+ 3268 0250 00000000 		.4byte	0
+ 3269 0254 00000000 		.4byte	0
+ 3270              	.LLST17:
+ 3271 0258 4A000000 		.4byte	.LVL57
+ 3272 025c 66000000 		.4byte	.LVL65
+ 3273 0260 0100     		.2byte	0x1
+ 3274 0262 57       		.byte	0x57
+ 3275 0263 66000000 		.4byte	.LVL65
+ 3276 0267 82000000 		.4byte	.LVL72
+ 3277 026b 0100     		.2byte	0x1
+ 3278 026d 56       		.byte	0x56
+ 3279 026e 82000000 		.4byte	.LVL72
+ 3280 0272 A8000000 		.4byte	.LVL82
+ 3281 0276 0100     		.2byte	0x1
+ 3282 0278 55       		.byte	0x55
+ 3283 0279 00000000 		.4byte	0
+ 3284 027d 00000000 		.4byte	0
+ 3285              	.LLST18:
+ 3286 0281 4E000000 		.4byte	.LVL59
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 68
+
+
+ 3287 0285 5C000000 		.4byte	.LVL63
+ 3288 0289 0100     		.2byte	0x1
+ 3289 028b 56       		.byte	0x56
+ 3290 028c 5C000000 		.4byte	.LVL63
+ 3291 0290 5E000000 		.4byte	.LVL64
+ 3292 0294 0400     		.2byte	0x4
+ 3293 0296 76       		.byte	0x76
+ 3294 0297 8001     		.sleb128 128
+ 3295 0299 9F       		.byte	0x9f
+ 3296 029a 5E000000 		.4byte	.LVL64
+ 3297 029e 66000000 		.4byte	.LVL65
+ 3298 02a2 0100     		.2byte	0x1
+ 3299 02a4 56       		.byte	0x56
+ 3300 02a5 66000000 		.4byte	.LVL65
+ 3301 02a9 6A000000 		.4byte	.LVL67
+ 3302 02ad 0500     		.2byte	0x5
+ 3303 02af 03       		.byte	0x3
+ 3304 02b0 03000000 		.4byte	dato_enviado_1+3
+ 3305 02b4 6A000000 		.4byte	.LVL67
+ 3306 02b8 78000000 		.4byte	.LVL70
+ 3307 02bc 0100     		.2byte	0x1
+ 3308 02be 55       		.byte	0x55
+ 3309 02bf 78000000 		.4byte	.LVL70
+ 3310 02c3 7A000000 		.4byte	.LVL71
+ 3311 02c7 0400     		.2byte	0x4
+ 3312 02c9 75       		.byte	0x75
+ 3313 02ca 8001     		.sleb128 128
+ 3314 02cc 9F       		.byte	0x9f
+ 3315 02cd 7A000000 		.4byte	.LVL71
+ 3316 02d1 82000000 		.4byte	.LVL72
+ 3317 02d5 0100     		.2byte	0x1
+ 3318 02d7 55       		.byte	0x55
+ 3319 02d8 82000000 		.4byte	.LVL72
+ 3320 02dc 86000000 		.4byte	.LVL74
+ 3321 02e0 0500     		.2byte	0x5
+ 3322 02e2 03       		.byte	0x3
+ 3323 02e3 05000000 		.4byte	dato_enviado_1+5
+ 3324 02e7 86000000 		.4byte	.LVL74
+ 3325 02eb 94000000 		.4byte	.LVL77
+ 3326 02ef 0100     		.2byte	0x1
+ 3327 02f1 54       		.byte	0x54
+ 3328 02f2 94000000 		.4byte	.LVL77
+ 3329 02f6 96000000 		.4byte	.LVL78
+ 3330 02fa 0400     		.2byte	0x4
+ 3331 02fc 74       		.byte	0x74
+ 3332 02fd 8001     		.sleb128 128
+ 3333 02ff 9F       		.byte	0x9f
+ 3334 0300 96000000 		.4byte	.LVL78
+ 3335 0304 A8000000 		.4byte	.LVL81
+ 3336 0308 0100     		.2byte	0x1
+ 3337 030a 54       		.byte	0x54
+ 3338 030b 00000000 		.4byte	0
+ 3339 030f 00000000 		.4byte	0
+ 3340              	.LLST19:
+ 3341 0313 4E000000 		.4byte	.LVL59
+ 3342 0317 5A000000 		.4byte	.LVL62
+ 3343 031b 0200     		.2byte	0x2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 69
+
+
+ 3344 031d 30       		.byte	0x30
+ 3345 031e 9F       		.byte	0x9f
+ 3346 031f 5A000000 		.4byte	.LVL62
+ 3347 0323 5E000000 		.4byte	.LVL64
+ 3348 0327 0300     		.2byte	0x3
+ 3349 0329 09       		.byte	0x9
+ 3350 032a 80       		.byte	0x80
+ 3351 032b 9F       		.byte	0x9f
+ 3352 032c 76000000 		.4byte	.LVL69
+ 3353 0330 7A000000 		.4byte	.LVL71
+ 3354 0334 0300     		.2byte	0x3
+ 3355 0336 09       		.byte	0x9
+ 3356 0337 80       		.byte	0x80
+ 3357 0338 9F       		.byte	0x9f
+ 3358 0339 92000000 		.4byte	.LVL76
+ 3359 033d 96000000 		.4byte	.LVL78
+ 3360 0341 0300     		.2byte	0x3
+ 3361 0343 09       		.byte	0x9
+ 3362 0344 80       		.byte	0x80
+ 3363 0345 9F       		.byte	0x9f
+ 3364 0346 00000000 		.4byte	0
+ 3365 034a 00000000 		.4byte	0
+ 3366              	.LLST20:
+ 3367 034e 32000000 		.4byte	.LVL83
+ 3368 0352 42000000 		.4byte	.LVL84
+ 3369 0356 0100     		.2byte	0x1
+ 3370 0358 52       		.byte	0x52
+ 3371 0359 42000000 		.4byte	.LVL84
+ 3372 035d 49000000 		.4byte	.LVL85-1
+ 3373 0361 0B00     		.2byte	0xb
+ 3374 0363 03       		.byte	0x3
+ 3375 0364 07000000 		.4byte	mailbox0+7
+ 3376 0368 94       		.byte	0x94
+ 3377 0369 01       		.byte	0x1
+ 3378 036a 08       		.byte	0x8
+ 3379 036b FF       		.byte	0xff
+ 3380 036c 1A       		.byte	0x1a
+ 3381 036d 9F       		.byte	0x9f
+ 3382 036e 00000000 		.4byte	0
+ 3383 0372 00000000 		.4byte	0
+ 3384              	.LLST21:
+ 3385 0376 28000000 		.4byte	.LVL117
+ 3386 037a 2C000000 		.4byte	.LVL118
+ 3387 037e 0200     		.2byte	0x2
+ 3388 0380 30       		.byte	0x30
+ 3389 0381 9F       		.byte	0x9f
+ 3390 0382 2C000000 		.4byte	.LVL118
+ 3391 0386 6C000000 		.4byte	.LVL125
+ 3392 038a 0100     		.2byte	0x1
+ 3393 038c 55       		.byte	0x55
+ 3394 038d 00000000 		.4byte	0
+ 3395 0391 00000000 		.4byte	0
+ 3396              		.section	.debug_aranges,"",%progbits
+ 3397 0000 8C000000 		.4byte	0x8c
+ 3398 0004 0200     		.2byte	0x2
+ 3399 0006 00000000 		.4byte	.Ldebug_info0
+ 3400 000a 04       		.byte	0x4
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 70
+
+
+ 3401 000b 00       		.byte	0
+ 3402 000c 0000     		.2byte	0
+ 3403 000e 0000     		.2byte	0
+ 3404 0010 00000000 		.4byte	.LFB50
+ 3405 0014 34000000 		.4byte	.LFE50-.LFB50
+ 3406 0018 00000000 		.4byte	.LFB37
+ 3407 001c 16000000 		.4byte	.LFE37-.LFB37
+ 3408 0020 00000000 		.4byte	.LFB38
+ 3409 0024 10000000 		.4byte	.LFE38-.LFB38
+ 3410 0028 00000000 		.4byte	.LFB39
+ 3411 002c 28000000 		.4byte	.LFE39-.LFB39
+ 3412 0030 00000000 		.4byte	.LFB40
+ 3413 0034 20000000 		.4byte	.LFE40-.LFB40
+ 3414 0038 00000000 		.4byte	.LFB41
+ 3415 003c 3C000000 		.4byte	.LFE41-.LFB41
+ 3416 0040 00000000 		.4byte	.LFB42
+ 3417 0044 28000000 		.4byte	.LFE42-.LFB42
+ 3418 0048 00000000 		.4byte	.LFB43
+ 3419 004c 2C000000 		.4byte	.LFE43-.LFB43
+ 3420 0050 00000000 		.4byte	.LFB44
+ 3421 0054 B4000000 		.4byte	.LFE44-.LFB44
+ 3422 0058 00000000 		.4byte	.LFB45
+ 3423 005c 78000000 		.4byte	.LFE45-.LFB45
+ 3424 0060 00000000 		.4byte	.LFB46
+ 3425 0064 10010000 		.4byte	.LFE46-.LFB46
+ 3426 0068 00000000 		.4byte	.LFB47
+ 3427 006c 18000000 		.4byte	.LFE47-.LFB47
+ 3428 0070 00000000 		.4byte	.LFB48
+ 3429 0074 A0010000 		.4byte	.LFE48-.LFB48
+ 3430 0078 00000000 		.4byte	.LFB49
+ 3431 007c 7C000000 		.4byte	.LFE49-.LFB49
+ 3432 0080 00000000 		.4byte	.LFB51
+ 3433 0084 38000000 		.4byte	.LFE51-.LFB51
+ 3434 0088 00000000 		.4byte	0
+ 3435 008c 00000000 		.4byte	0
+ 3436              		.section	.debug_ranges,"",%progbits
+ 3437              	.Ldebug_ranges0:
+ 3438 0000 00000000 		.4byte	.LFB50
+ 3439 0004 34000000 		.4byte	.LFE50
+ 3440 0008 00000000 		.4byte	.LFB37
+ 3441 000c 16000000 		.4byte	.LFE37
+ 3442 0010 00000000 		.4byte	.LFB38
+ 3443 0014 10000000 		.4byte	.LFE38
+ 3444 0018 00000000 		.4byte	.LFB39
+ 3445 001c 28000000 		.4byte	.LFE39
+ 3446 0020 00000000 		.4byte	.LFB40
+ 3447 0024 20000000 		.4byte	.LFE40
+ 3448 0028 00000000 		.4byte	.LFB41
+ 3449 002c 3C000000 		.4byte	.LFE41
+ 3450 0030 00000000 		.4byte	.LFB42
+ 3451 0034 28000000 		.4byte	.LFE42
+ 3452 0038 00000000 		.4byte	.LFB43
+ 3453 003c 2C000000 		.4byte	.LFE43
+ 3454 0040 00000000 		.4byte	.LFB44
+ 3455 0044 B4000000 		.4byte	.LFE44
+ 3456 0048 00000000 		.4byte	.LFB45
+ 3457 004c 78000000 		.4byte	.LFE45
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 71
+
+
+ 3458 0050 00000000 		.4byte	.LFB46
+ 3459 0054 10010000 		.4byte	.LFE46
+ 3460 0058 00000000 		.4byte	.LFB47
+ 3461 005c 18000000 		.4byte	.LFE47
+ 3462 0060 00000000 		.4byte	.LFB48
+ 3463 0064 A0010000 		.4byte	.LFE48
+ 3464 0068 00000000 		.4byte	.LFB49
+ 3465 006c 7C000000 		.4byte	.LFE49
+ 3466 0070 00000000 		.4byte	.LFB51
+ 3467 0074 38000000 		.4byte	.LFE51
+ 3468 0078 00000000 		.4byte	0
+ 3469 007c 00000000 		.4byte	0
+ 3470              		.section	.debug_line,"",%progbits
+ 3471              	.Ldebug_line0:
+ 3472 0000 77030000 		.section	.debug_str,"MS",%progbits,1
+ 3472      02001701 
+ 3472      00000201 
+ 3472      FB0E0D00 
+ 3472      01010101 
+ 3473              	.LASF74:
+ 3474 0000 70756E74 		.ascii	"punto_a\000"
+ 3474      6F5F6100 
+ 3475              	.LASF75:
+ 3476 0008 70756E74 		.ascii	"punto_b\000"
+ 3476      6F5F6200 
+ 3477              	.LASF78:
+ 3478 0010 53454E53 		.ascii	"SENSOR_U_GetChar\000"
+ 3478      4F525F55 
+ 3478      5F476574 
+ 3478      43686172 
+ 3478      00
+ 3479              	.LASF80:
+ 3480 0021 43414E5F 		.ascii	"CAN_SendMsg0\000"
+ 3480      53656E64 
+ 3480      4D736730 
+ 3480      00
+ 3481              	.LASF82:
+ 3482 002e 43414E5F 		.ascii	"CAN_SendMsg1\000"
+ 3482      53656E64 
+ 3482      4D736731 
+ 3482      00
+ 3483              	.LASF86:
+ 3484 003b 43414E5F 		.ascii	"CAN_SendMsg3\000"
+ 3484      53656E64 
+ 3484      4D736733 
+ 3484      00
+ 3485              	.LASF38:
+ 3486 0048 6461746F 		.ascii	"datoH\000"
+ 3486      4800
+ 3487              	.LASF40:
+ 3488 004e 696E7465 		.ascii	"interrutcan\000"
+ 3488      72727574 
+ 3488      63616E00 
+ 3489              	.LASF2:
+ 3490 005a 73686F72 		.ascii	"short int\000"
+ 3490      7420696E 
+ 3490      7400
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 72
+
+
+ 3491              	.LASF15:
+ 3492 0064 73697A65 		.ascii	"sizetype\000"
+ 3492      74797065 
+ 3492      00
+ 3493              	.LASF45:
+ 3494 006d 6D61696C 		.ascii	"mailbox1\000"
+ 3494      626F7831 
+ 3494      00
+ 3495              	.LASF50:
+ 3496 0076 636F6E74 		.ascii	"conta\000"
+ 3496      6100
+ 3497              	.LASF89:
+ 3498 007c 54696D65 		.ascii	"Timer_1_Start\000"
+ 3498      725F315F 
+ 3498      53746172 
+ 3498      7400
+ 3499              	.LASF63:
+ 3500 008a 7068615F 		.ascii	"pha_aux\000"
+ 3500      61757800 
+ 3501              	.LASF27:
+ 3502 0092 64617461 		.ascii	"datas\000"
+ 3502      7300
+ 3503              	.LASF21:
+ 3504 0098 72616E64 		.ascii	"random_Offset\000"
+ 3504      6F6D5F4F 
+ 3504      66667365 
+ 3504      7400
+ 3505              	.LASF48:
+ 3506 00a6 6461746F 		.ascii	"dato_enviado_1\000"
+ 3506      5F656E76 
+ 3506      6961646F 
+ 3506      5F3100
+ 3507              	.LASF49:
+ 3508 00b5 6461746F 		.ascii	"dato_enviado_2\000"
+ 3508      5F656E76 
+ 3508      6961646F 
+ 3508      5F3200
+ 3509              	.LASF76:
+ 3510 00c4 6D6F7665 		.ascii	"move_s\000"
+ 3510      5F7300
+ 3511              	.LASF91:
+ 3512 00cb 53454E53 		.ascii	"SENSOR_U_Start\000"
+ 3512      4F525F55 
+ 3512      5F537461 
+ 3512      727400
+ 3513              	.LASF26:
+ 3514 00da 53656E64 		.ascii	"Send_Angle\000"
+ 3514      5F416E67 
+ 3514      6C6500
+ 3515              	.LASF72:
+ 3516 00e5 4C5F6163 		.ascii	"L_actual\000"
+ 3516      7475616C 
+ 3516      00
+ 3517              	.LASF10:
+ 3518 00ee 696E7431 		.ascii	"int16\000"
+ 3518      3600
+ 3519              	.LASF9:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 73
+
+
+ 3520 00f4 75696E74 		.ascii	"uint8\000"
+ 3520      3800
+ 3521              	.LASF79:
+ 3522 00fa 72616E64 		.ascii	"rand\000"
+ 3522      00
+ 3523              	.LASF33:
+ 3524 00ff 4F726965 		.ascii	"Orientacion\000"
+ 3524      6E746163 
+ 3524      696F6E00 
+ 3525              	.LASF56:
+ 3526 010b 4F666673 		.ascii	"Offset_H\000"
+ 3526      65745F48 
+ 3526      00
+ 3527              	.LASF0:
+ 3528 0114 7369676E 		.ascii	"signed char\000"
+ 3528      65642063 
+ 3528      68617200 
+ 3529              	.LASF16:
+ 3530 0120 53657269 		.ascii	"Serial_Interrupt\000"
+ 3530      616C5F49 
+ 3530      6E746572 
+ 3530      72757074 
+ 3530      00
+ 3531              	.LASF11:
+ 3532 0131 666C6F61 		.ascii	"float\000"
+ 3532      7400
+ 3533              	.LASF23:
+ 3534 0137 64697272 		.ascii	"dirr\000"
+ 3534      00
+ 3535              	.LASF87:
+ 3536 013c 4C45445F 		.ascii	"LED_1_Write\000"
+ 3536      315F5772 
+ 3536      69746500 
+ 3537              	.LASF6:
+ 3538 0148 6C6F6E67 		.ascii	"long long int\000"
+ 3538      206C6F6E 
+ 3538      6720696E 
+ 3538      7400
+ 3539              	.LASF65:
+ 3540 0156 6F66665F 		.ascii	"off_aux_V_2\000"
+ 3540      6175785F 
+ 3540      565F3200 
+ 3541              	.LASF28:
+ 3542 0162 436F6E74 		.ascii	"Conta3\000"
+ 3542      613300
+ 3543              	.LASF90:
+ 3544 0169 54696D65 		.ascii	"Timer_Start\000"
+ 3544      725F5374 
+ 3544      61727400 
+ 3545              	.LASF88:
+ 3546 0175 43414E5F 		.ascii	"CAN_Start\000"
+ 3546      53746172 
+ 3546      7400
+ 3547              	.LASF41:
+ 3548 017f 52656369 		.ascii	"Recibe_mail_0\000"
+ 3548      62655F6D 
+ 3548      61696C5F 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 74
+
+
+ 3548      3000
+ 3549              	.LASF57:
+ 3550 018d 4F666673 		.ascii	"Offset_V\000"
+ 3550      65745F56 
+ 3550      00
+ 3551              	.LASF42:
+ 3552 0196 48696C6C 		.ascii	"Hill\000"
+ 3552      00
+ 3553              	.LASF22:
+ 3554 019b 6D6F7669 		.ascii	"movimiento\000"
+ 3554      6D69656E 
+ 3554      746F00
+ 3555              	.LASF14:
+ 3556 01a6 6C6F6E67 		.ascii	"long double\000"
+ 3556      20646F75 
+ 3556      626C6500 
+ 3557              	.LASF67:
+ 3558 01b2 616D706C 		.ascii	"ampli_aux_H_2\000"
+ 3558      695F6175 
+ 3558      785F485F 
+ 3558      3200
+ 3559              	.LASF1:
+ 3560 01c0 756E7369 		.ascii	"unsigned char\000"
+ 3560      676E6564 
+ 3560      20636861 
+ 3560      7200
+ 3561              	.LASF52:
+ 3562 01ce 43616E74 		.ascii	"Cantidad_Sensores\000"
+ 3562      69646164 
+ 3562      5F53656E 
+ 3562      736F7265 
+ 3562      7300
+ 3563              	.LASF92:
+ 3564 01e0 43414E5F 		.ascii	"CAN_isr_StartEx\000"
+ 3564      6973725F 
+ 3564      53746172 
+ 3564      74457800 
+ 3565              	.LASF7:
+ 3566 01f0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3566      206C6F6E 
+ 3566      6720756E 
+ 3566      7369676E 
+ 3566      65642069 
+ 3567              	.LASF93:
+ 3568 0207 496E745F 		.ascii	"Int_Serial_StartEx\000"
+ 3568      53657269 
+ 3568      616C5F53 
+ 3568      74617274 
+ 3568      457800
+ 3569              	.LASF8:
+ 3570 021a 756E7369 		.ascii	"unsigned int\000"
+ 3570      676E6564 
+ 3570      20696E74 
+ 3570      00
+ 3571              	.LASF53:
+ 3572 0227 4D61785F 		.ascii	"Max_Conta\000"
+ 3572      436F6E74 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 75
+
+
+ 3572      6100
+ 3573              	.LASF46:
+ 3574 0231 6D61696C 		.ascii	"mailbox2\000"
+ 3574      626F7832 
+ 3574      00
+ 3575              	.LASF5:
+ 3576 023a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3576      20756E73 
+ 3576      69676E65 
+ 3576      6420696E 
+ 3576      7400
+ 3577              	.LASF77:
+ 3578 024c 696E6469 		.ascii	"individuo\000"
+ 3578      76696475 
+ 3578      6F00
+ 3579              	.LASF71:
+ 3580 0256 64697374 		.ascii	"dist\000"
+ 3580      00
+ 3581              	.LASF32:
+ 3582 025b 4F666673 		.ascii	"Offset\000"
+ 3582      657400
+ 3583              	.LASF47:
+ 3584 0262 6461746F 		.ascii	"dato_enviado\000"
+ 3584      5F656E76 
+ 3584      6961646F 
+ 3584      00
+ 3585              	.LASF60:
+ 3586 026f 616D706C 		.ascii	"ampli_aux_H\000"
+ 3586      695F6175 
+ 3586      785F4800 
+ 3587              	.LASF98:
+ 3588 027b 52656369 		.ascii	"Recibe_Mail_2\000"
+ 3588      62655F4D 
+ 3588      61696C5F 
+ 3588      3200
+ 3589              	.LASF97:
+ 3590 0289 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 3590      73657273 
+ 3590      5C48656E 
+ 3590      72792041 
+ 3590      6C626572 
+ 3591 02b7 6F64756C 		.ascii	"odular\\Optimization_Algorithms\\Hill_Climbing_2.cy"
+ 3591      61725C4F 
+ 3591      7074696D 
+ 3591      697A6174 
+ 3591      696F6E5F 
+ 3592 02e8 64736E00 		.ascii	"dsn\000"
+ 3593              	.LASF13:
+ 3594 02ec 63686172 		.ascii	"char\000"
+ 3594      00
+ 3595              	.LASF4:
+ 3596 02f1 6C6F6E67 		.ascii	"long int\000"
+ 3596      20696E74 
+ 3596      00
+ 3597              	.LASF99:
+ 3598 02fa 6D61696E 		.ascii	"main\000"
+ 3598      00
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 76
+
+
+ 3599              	.LASF59:
+ 3600 02ff 616D706C 		.ascii	"ampli_aux_V\000"
+ 3600      695F6175 
+ 3600      785F5600 
+ 3601              	.LASF3:
+ 3602 030b 73686F72 		.ascii	"short unsigned int\000"
+ 3602      7420756E 
+ 3602      7369676E 
+ 3602      65642069 
+ 3602      6E7400
+ 3603              	.LASF61:
+ 3604 031e 6F66665F 		.ascii	"off_aux_V\000"
+ 3604      6175785F 
+ 3604      5600
+ 3605              	.LASF35:
+ 3606 0328 50686173 		.ascii	"Phase_env\000"
+ 3606      655F656E 
+ 3606      7600
+ 3607              	.LASF58:
+ 3608 0332 46617365 		.ascii	"Fase\000"
+ 3608      00
+ 3609              	.LASF44:
+ 3610 0337 6D61696C 		.ascii	"mailbox0\000"
+ 3610      626F7830 
+ 3610      00
+ 3611              	.LASF94:
+ 3612 0340 54696D65 		.ascii	"Timer_StartEx\000"
+ 3612      725F5374 
+ 3612      61727445 
+ 3612      7800
+ 3613              	.LASF54:
+ 3614 034e 416D706C 		.ascii	"Amplitud_H\000"
+ 3614      69747564 
+ 3614      5F4800
+ 3615              	.LASF83:
+ 3616 0359 43414E5F 		.ascii	"CAN_GlobalIntDisable\000"
+ 3616      476C6F62 
+ 3616      616C496E 
+ 3616      74446973 
+ 3616      61626C65 
+ 3617              	.LASF24:
+ 3618 036e 62797465 		.ascii	"byteh\000"
+ 3618      6800
+ 3619              	.LASF20:
+ 3620 0374 72616E64 		.ascii	"random_Fase\000"
+ 3620      6F6D5F46 
+ 3620      61736500 
+ 3621              	.LASF25:
+ 3622 0380 62797465 		.ascii	"bytel\000"
+ 3622      6C00
+ 3623              	.LASF96:
+ 3624 0386 6D61696E 		.ascii	"main.c\000"
+ 3624      2E6300
+ 3625              	.LASF18:
+ 3626 038d 72616E64 		.ascii	"random_amplitud_1\000"
+ 3626      6F6D5F61 
+ 3626      6D706C69 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 77
+
+
+ 3626      7475645F 
+ 3626      3100
+ 3627              	.LASF19:
+ 3628 039f 72616E64 		.ascii	"random_amplitud_2\000"
+ 3628      6F6D5F61 
+ 3628      6D706C69 
+ 3628      7475645F 
+ 3628      3200
+ 3629              	.LASF55:
+ 3630 03b1 416D706C 		.ascii	"Amplitud_V\000"
+ 3630      69747564 
+ 3630      5F5600
+ 3631              	.LASF37:
+ 3632 03bc 6461746F 		.ascii	"datoL\000"
+ 3632      4C00
+ 3633              	.LASF12:
+ 3634 03c2 646F7562 		.ascii	"double\000"
+ 3634      6C6500
+ 3635              	.LASF73:
+ 3636 03c9 4C5F616E 		.ascii	"L_anterior\000"
+ 3636      74657269 
+ 3636      6F7200
+ 3637              	.LASF85:
+ 3638 03d4 43414E5F 		.ascii	"CAN_GlobalIntEnable\000"
+ 3638      476C6F62 
+ 3638      616C496E 
+ 3638      74456E61 
+ 3638      626C6500 
+ 3639              	.LASF84:
+ 3640 03e8 43414E5F 		.ascii	"CAN_MsgRXIsr\000"
+ 3640      4D736752 
+ 3640      58497372 
+ 3640      00
+ 3641              	.LASF36:
+ 3642 03f5 4F666673 		.ascii	"Offset_env\000"
+ 3642      65745F65 
+ 3642      6E7600
+ 3643              	.LASF64:
+ 3644 0400 616D706C 		.ascii	"ampli_aux_V_2\000"
+ 3644      695F6175 
+ 3644      785F565F 
+ 3644      3200
+ 3645              	.LASF95:
+ 3646 040e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3646      43313120 
+ 3646      352E342E 
+ 3646      31203230 
+ 3646      31363036 
+ 3647 0441 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 3647      20726576 
+ 3647      6973696F 
+ 3647      6E203233 
+ 3647      37373135 
+ 3648 0474 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3648      66756E63 
+ 3648      74696F6E 
+ 3648      2D736563 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccXtTLpa.s 			page 78
+
+
+ 3648      74696F6E 
+ 3649              	.LASF29:
+ 3650 049c 456E7669 		.ascii	"Enviar_Parametros\000"
+ 3650      61725F50 
+ 3650      6172616D 
+ 3650      6574726F 
+ 3650      7300
+ 3651              	.LASF66:
+ 3652 04ae 7068615F 		.ascii	"pha_aux_2\000"
+ 3652      6175785F 
+ 3652      3200
+ 3653              	.LASF17:
+ 3654 04b8 72616E64 		.ascii	"randd\000"
+ 3654      6400
+ 3655              	.LASF51:
+ 3656 04be 63616E74 		.ascii	"cantidadM\000"
+ 3656      69646164 
+ 3656      4D00
+ 3657              	.LASF70:
+ 3658 04c8 666C6167 		.ascii	"flag\000"
+ 3658      00
+ 3659              	.LASF34:
+ 3660 04cd 416D705F 		.ascii	"Amp_env\000"
+ 3660      656E7600 
+ 3661              	.LASF43:
+ 3662 04d5 54656D70 		.ascii	"Temporizador\000"
+ 3662      6F72697A 
+ 3662      61646F72 
+ 3662      00
+ 3663              	.LASF31:
+ 3664 04e2 50686173 		.ascii	"Phase\000"
+ 3664      6500
+ 3665              	.LASF30:
+ 3666 04e8 416D706C 		.ascii	"Amplitud\000"
+ 3666      69747564 
+ 3666      00
+ 3667              	.LASF69:
+ 3668 04f1 5065736F 		.ascii	"Peso_Sensor\000"
+ 3668      5F53656E 
+ 3668      736F7200 
+ 3669              	.LASF81:
+ 3670 04fd 43794465 		.ascii	"CyDelay\000"
+ 3670      6C617900 
+ 3671              	.LASF62:
+ 3672 0505 6F66665F 		.ascii	"off_aux_H\000"
+ 3672      6175785F 
+ 3672      4800
+ 3673              	.LASF68:
+ 3674 050f 6F66665F 		.ascii	"off_aux_H_2\000"
+ 3674      6175785F 
+ 3674      485F3200 
+ 3675              	.LASF39:
+ 3676 051b 436F6E74 		.ascii	"Contador\000"
+ 3676      61646F72 
+ 3676      00
+ 3677              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

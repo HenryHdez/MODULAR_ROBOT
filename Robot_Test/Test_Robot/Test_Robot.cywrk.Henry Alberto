@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Test_Robot\Test_Sensor_F2">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Test_Robot\Test_Sensor_F4">
 <ExpandedNodeIds>
 <v>Test_Robot</v>
 <v>Test_Robot\CAN_Psoc_kit\TopDesign</v>
@@ -1355,6 +1355,84 @@
 <v>Test_Robot\CAN_Psoc_kit\CAN_Psoc_kit.rpt</v>
 <v>Test_Robot\CAN_Psoc_kit\CAN_Psoc_kit_timing.html</v>
 <v>Test_Robot\Test_All_Sensor</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_1.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_1_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_2.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_2_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_3.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_3_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_4.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_4_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_BOOT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_I2C.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_I2C_BOOT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_I2C_INT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_I2C_MASTER.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_SCB_IRQ.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_SCBCLK.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_scl.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_scl_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_sda.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_1_sda_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_BOOT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_I2C.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_I2C_BOOT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_I2C_INT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_I2C_MASTER.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_SCB_IRQ.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_SCBCLK.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_scl.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_scl_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_sda.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_2_sda_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_BOOT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_I2C.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_I2C_BOOT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_I2C_INT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_I2C_MASTER.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_SCB_IRQ.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_SCBCLK.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_scl.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_scl_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_sda.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_3_sda_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_BOOT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_I2C.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_I2C_BOOT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_I2C_INT.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_I2C_MASTER.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_SCB_IRQ.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_SCBCLK.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_scl.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_scl_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_sda.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\SENSOR_4_sda_PM.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Test_All_Sensor.elf</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Test_All_Sensor.hex</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Test_All_Sensor.map</v>
 <v>Test_Robot\Test_All_Sensor\Test_All_Sensor.gpdsc</v>
 <v>Test_Robot\Test_All_Sensor\Test_All_Sensor.rpt</v>
 <v>Test_Robot\Test_All_Sensor\Test_All_Sensor_timing.html</v>
@@ -1558,19 +1636,19 @@
 <v>Test_Robot\CAN_Psoc_kit\CAN_Psoc_kit.rpt</v>
 <v>Test_Robot\CAN_Psoc_kit\CAN_Psoc_kit_timing.html</v>
 <v>Test_Robot\Test_All_Sensor</v>
-<v>Test_Robot\Test_All_Sensor\Test_All_Sensor.gpdsc</v>
-<v>Test_Robot\Test_All_Sensor\Test_All_Sensor.rpt</v>
-<v>Test_Robot\Test_All_Sensor\Test_All_Sensor_timing.html</v>
-<v>Test_Robot\Test_CAN_Module_1</v>
-<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.gpdsc</v>
-<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1.rpt</v>
-<v>Test_Robot\Test_CAN_Module_1\Test_CAN_Module_1_timing.html</v>
-<v>Test_Robot\Test_CAN_Module_2</v>
-<v>Test_Robot\Test_CAN_Module_2\Test_CAN_Module_2.gpdsc</v>
-<v>Test_Robot\Test_CAN_Module_2\Test_CAN_Module_2.rpt</v>
-<v>Test_Robot\Test_CAN_Module_2\Test_CAN_Module_2_timing.html</v>
-<v>Test_Robot\Test_LED</v>
-<v>Test_Robot\Test_LED\Test_LED.gpdsc</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Test_Robot\Test_All_Sensor\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -1740,7 +1818,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="792, 399" SelectedTabbedMdiWindow="d6d21bdd-260d-49ed-ae05-08f6854d5bec"><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn\TopDesign\TopDesign.cysch" Guid="68e42271-d45c-4c03-9449-ae3bd02a4784" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn\Test_Sensor_F4.cydwr" Guid="4768d2e2-8f12-498f-8a5c-7a4a82f3ac95" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn\main.c" Guid="174b7d60-b236-4d45-9a45-e32fc84cc2ae" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F2.cydsn\main.c" Guid="d6d21bdd-260d-49ed-ae05-08f6854d5bec" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F2.cydsn\Generated_Source\PSoC4\I2C_1_I2C_MASTER.c" Guid="5488d1e1-865c-4f67-8a94-f34e8d34973f" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="43850630-c835-437f-9fe3-2e8d4db89471" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="821, 399" SelectedTabbedMdiWindow="d6d21bdd-260d-49ed-ae05-08f6854d5bec"><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn\TopDesign\TopDesign.cysch" Guid="68e42271-d45c-4c03-9449-ae3bd02a4784" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn\Test_Sensor_F4.cydwr" Guid="4768d2e2-8f12-498f-8a5c-7a4a82f3ac95" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F4.cydsn\main.c" Guid="174b7d60-b236-4d45-9a45-e32fc84cc2ae" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F2.cydsn\main.c" Guid="d6d21bdd-260d-49ed-ae05-08f6854d5bec" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_Sensor_F2.cydsn\Generated_Source\PSoC4\I2C_1_I2C_MASTER.c" Guid="5488d1e1-865c-4f67-8a94-f34e8d34973f" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="43850630-c835-437f-9fe3-2e8d4db89471" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

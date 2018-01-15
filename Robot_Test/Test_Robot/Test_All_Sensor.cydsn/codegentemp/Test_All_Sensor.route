@@ -36,56 +36,56 @@ end Net_27
 net \SENSOR_1:scl_wire\
 	term   ":ioport2:pin0.fb"
 	switch ":ioport2:pin0.fb==>:ioport2:hsiom_in0.hsiom0_in"
-	switch ":ioport2:hsiom_in0.fixed_DPSLP_2==>:m0s8scbcell_1__scl__hsiom_permute.ioport2__fixed_out_p0_DPSLP_2"
-	switch ":m0s8scbcell_1__scl__hsiom_permute.m0s8scbcell_1__scl==>:m0s8scbcell_1.scl"
-	term   ":m0s8scbcell_1.scl"
+	switch ":ioport2:hsiom_in0.fixed_DPSLP_2==>:m0s8scbcell_1__i2c_scl__hsiom_permute.ioport2__fixed_out_p0_DPSLP_2"
+	switch ":m0s8scbcell_1__i2c_scl__hsiom_permute.m0s8scbcell_1__i2c_scl==>:m0s8scbcell_1.i2c_scl"
+	term   ":m0s8scbcell_1.i2c_scl"
 end \SENSOR_1:scl_wire\
 net \SENSOR_1:sda_wire\
 	term   ":ioport2:pin1.fb"
 	switch ":ioport2:pin1.fb==>:ioport2:hsiom_in1.hsiom1_in"
-	switch ":ioport2:hsiom_in1.fixed_DPSLP_2==>:m0s8scbcell_1__sda__hsiom_permute.ioport2__fixed_out_p1_DPSLP_2"
-	switch ":m0s8scbcell_1__sda__hsiom_permute.m0s8scbcell_1__sda==>:m0s8scbcell_1.sda"
-	term   ":m0s8scbcell_1.sda"
+	switch ":ioport2:hsiom_in1.fixed_DPSLP_2==>:m0s8scbcell_1__i2c_sda__hsiom_permute.ioport2__fixed_out_p1_DPSLP_2"
+	switch ":m0s8scbcell_1__i2c_sda__hsiom_permute.m0s8scbcell_1__i2c_sda==>:m0s8scbcell_1.i2c_sda"
+	term   ":m0s8scbcell_1.i2c_sda"
 end \SENSOR_1:sda_wire\
 net \SENSOR_2:scl_wire\
 	term   ":ioport5:pin0.fb"
 	switch ":ioport5:pin0.fb==>:ioport5:hsiom_in0.hsiom0_in"
-	switch ":ioport5:hsiom_in0.fixed_DPSLP_2==>:m0s8scbcell_2__scl__hsiom_permute.ioport5__fixed_out_p0_DPSLP_2"
-	switch ":m0s8scbcell_2__scl__hsiom_permute.m0s8scbcell_2__scl==>:m0s8scbcell_2.scl"
-	term   ":m0s8scbcell_2.scl"
+	switch ":ioport5:hsiom_in0.fixed_DPSLP_2==>:m0s8scbcell_2__i2c_scl__hsiom_permute.ioport5__fixed_out_p0_DPSLP_2"
+	switch ":m0s8scbcell_2__i2c_scl__hsiom_permute.m0s8scbcell_2__i2c_scl==>:m0s8scbcell_2.i2c_scl"
+	term   ":m0s8scbcell_2.i2c_scl"
 end \SENSOR_2:scl_wire\
 net \SENSOR_2:sda_wire\
 	term   ":ioport5:pin1.fb"
 	switch ":ioport5:pin1.fb==>:ioport5:hsiom_in1.hsiom1_in"
-	switch ":ioport5:hsiom_in1.fixed_DPSLP_2==>:m0s8scbcell_2__sda__hsiom_permute.ioport5__fixed_out_p1_DPSLP_2"
-	switch ":m0s8scbcell_2__sda__hsiom_permute.m0s8scbcell_2__sda==>:m0s8scbcell_2.sda"
-	term   ":m0s8scbcell_2.sda"
+	switch ":ioport5:hsiom_in1.fixed_DPSLP_2==>:m0s8scbcell_2__i2c_sda__hsiom_permute.ioport5__fixed_out_p1_DPSLP_2"
+	switch ":m0s8scbcell_2__i2c_sda__hsiom_permute.m0s8scbcell_2__i2c_sda==>:m0s8scbcell_2.i2c_sda"
+	term   ":m0s8scbcell_2.i2c_sda"
 end \SENSOR_2:sda_wire\
 net \SENSOR_3:scl_wire\
 	term   ":ioport6:pin0.fb"
 	switch ":ioport6:pin0.fb==>:ioport6:hsiom_in0.hsiom0_in"
-	switch ":ioport6:hsiom_in0.fixed_DPSLP_2==>:m0s8scbcell_3__scl__hsiom_permute.ioport6__fixed_out_p0_DPSLP_2"
-	switch ":m0s8scbcell_3__scl__hsiom_permute.m0s8scbcell_3__scl==>:m0s8scbcell_3.scl"
-	term   ":m0s8scbcell_3.scl"
+	switch ":ioport6:hsiom_in0.fixed_DPSLP_2==>:m0s8scbcell_3__i2c_scl__hsiom_permute.ioport6__fixed_out_p0_DPSLP_2"
+	switch ":m0s8scbcell_3__i2c_scl__hsiom_permute.m0s8scbcell_3__i2c_scl==>:m0s8scbcell_3.i2c_scl"
+	term   ":m0s8scbcell_3.i2c_scl"
 end \SENSOR_3:scl_wire\
 net \SENSOR_3:sda_wire\
 	term   ":ioport6:pin1.fb"
 	switch ":ioport6:pin1.fb==>:ioport6:hsiom_in1.hsiom1_in"
-	switch ":ioport6:hsiom_in1.fixed_DPSLP_2==>:m0s8scbcell_3__sda__hsiom_permute.ioport6__fixed_out_p1_DPSLP_2"
-	switch ":m0s8scbcell_3__sda__hsiom_permute.m0s8scbcell_3__sda==>:m0s8scbcell_3.sda"
-	term   ":m0s8scbcell_3.sda"
+	switch ":ioport6:hsiom_in1.fixed_DPSLP_2==>:m0s8scbcell_3__i2c_sda__hsiom_permute.ioport6__fixed_out_p1_DPSLP_2"
+	switch ":m0s8scbcell_3__i2c_sda__hsiom_permute.m0s8scbcell_3__i2c_sda==>:m0s8scbcell_3.i2c_sda"
+	term   ":m0s8scbcell_3.i2c_sda"
 end \SENSOR_3:sda_wire\
 net \SENSOR_4:scl_wire\
 	term   ":ioport1:pin0.fb"
 	switch ":ioport1:pin0.fb==>:ioport1:hsiom_in0.hsiom0_in"
-	switch ":ioport1:hsiom_in0.fixed_DPSLP_2==>:m0s8scbcell_0__scl__hsiom_permute.ioport1__fixed_out_p0_DPSLP_2"
-	switch ":m0s8scbcell_0__scl__hsiom_permute.m0s8scbcell_0__scl==>:m0s8scbcell_0.scl"
-	term   ":m0s8scbcell_0.scl"
+	switch ":ioport1:hsiom_in0.fixed_DPSLP_2==>:m0s8scbcell_0__i2c_scl__hsiom_permute.ioport1__fixed_out_p0_DPSLP_2"
+	switch ":m0s8scbcell_0__i2c_scl__hsiom_permute.m0s8scbcell_0__i2c_scl==>:m0s8scbcell_0.i2c_scl"
+	term   ":m0s8scbcell_0.i2c_scl"
 end \SENSOR_4:scl_wire\
 net \SENSOR_4:sda_wire\
 	term   ":ioport1:pin1.fb"
 	switch ":ioport1:pin1.fb==>:ioport1:hsiom_in1.hsiom1_in"
-	switch ":ioport1:hsiom_in1.fixed_DPSLP_2==>:m0s8scbcell_0__sda__hsiom_permute.ioport1__fixed_out_p1_DPSLP_2"
-	switch ":m0s8scbcell_0__sda__hsiom_permute.m0s8scbcell_0__sda==>:m0s8scbcell_0.sda"
-	term   ":m0s8scbcell_0.sda"
+	switch ":ioport1:hsiom_in1.fixed_DPSLP_2==>:m0s8scbcell_0__i2c_sda__hsiom_permute.ioport1__fixed_out_p1_DPSLP_2"
+	switch ":m0s8scbcell_0__i2c_sda__hsiom_permute.m0s8scbcell_0__i2c_sda==>:m0s8scbcell_0.i2c_sda"
+	term   ":m0s8scbcell_0.i2c_sda"
 end \SENSOR_4:sda_wire\
