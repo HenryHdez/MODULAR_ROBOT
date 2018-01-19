@@ -342,6 +342,7 @@
     </register>
   </block>
   <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DMAC" BASE="0x0" SIZE="0x0" desc="DMAC Registers" visible="true" hidden="false">
     <register name="DMAC_CH_CTL17" address="0x40000000" bitWidth="32" desc="DMA channel 17 control register" hidden="true">
       <field name="ENABLED" from="31" to="31" access="RW" resetVal="" desc="Channel enable control." hidden="false">
@@ -1722,30 +1723,21 @@
     </register>
   </block>
   <block name="cy_lfclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Interrupcion" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="TX_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SLEEP_CTRL" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SLEEP_XBEE" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="RESET_XBEE" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Tx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="RX_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="XBEE" BASE="0x0" SIZE="0x0" desc="UART" visible="true" hidden="false">
     <block name="IntClock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="BUART" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <register name="RX_XBEE_RX_ADDRESS1" address="0x400F0022" bitWidth="8" desc="RX Address1 Register" hidden="false" />
     <register name="RX_XBEE_RX_ADDRESS2" address="0x400F0032" bitWidth="8" desc="RX Address2 Register" hidden="false" />
-    <register name="TX_XBEE_TX_DATA" address="0x400F0040" bitWidth="8" desc="TX Data Register" hidden="false" />
+    <register name="TX_XBEE_TX_DATA" address="0x400F0041" bitWidth="8" desc="TX Data Register" hidden="false" />
     <register name="RX_XBEE_RX_DATA" address="0x400F0042" bitWidth="8" desc="RX Data Register" hidden="false" />
-    <register name="TX_XBEE_TX_STATUS" address="0x400F0060" bitWidth="8" desc="TX status register" hidden="false">
-      <field name="XBEE_TX_STS_COMPLETE" from="0" to="0" access="R" resetVal="" desc="" hidden="false" />
-      <field name="XBEE_TX_STS_FIFO_EMPTY" from="1" to="1" access="R" resetVal="" desc="" hidden="false" />
-      <field name="XBEE_TX_STS_FIFO_FULL" from="2" to="2" access="R" resetVal="" desc="" hidden="false" />
-      <field name="XBEE_TX_STS_FIFO_NOT_FULL" from="3" to="3" access="R" resetVal="" desc="" hidden="false" />
-    </register>
-    <register name="RX_XBEE_RX_STATUS" address="0x400F0061" bitWidth="8" desc="RX status register" hidden="false">
+    <register name="RX_XBEE_RX_STATUS" address="0x400F0060" bitWidth="8" desc="RX status register" hidden="false">
       <field name="XBEE_RX_STS_MRKSPC" from="0" to="0" access="R" resetVal="" desc="" hidden="false" />
       <field name="XBEE_RX_STS_BREAK" from="1" to="1" access="R" resetVal="" desc="" hidden="false" />
       <field name="XBEE_RX_STS_PAR_ERROR" from="2" to="2" access="R" resetVal="" desc="" hidden="false" />
@@ -1754,6 +1746,15 @@
       <field name="XBEE_RX_STS_FIFO_NOTEMPTY" from="5" to="5" access="R" resetVal="" desc="" hidden="false" />
       <field name="XBEE_RX_STS_ADDR_MATCH" from="6" to="6" access="R" resetVal="" desc="" hidden="false" />
     </register>
+    <register name="TX_XBEE_TX_STATUS" address="0x400F0061" bitWidth="8" desc="TX status register" hidden="false">
+      <field name="XBEE_TX_STS_COMPLETE" from="0" to="0" access="R" resetVal="" desc="" hidden="false" />
+      <field name="XBEE_TX_STS_FIFO_EMPTY" from="1" to="1" access="R" resetVal="" desc="" hidden="false" />
+      <field name="XBEE_TX_STS_FIFO_FULL" from="2" to="2" access="R" resetVal="" desc="" hidden="false" />
+      <field name="XBEE_TX_STS_FIFO_NOT_FULL" from="3" to="3" access="R" resetVal="" desc="" hidden="false" />
+    </register>
   </block>
+  <block name="RX_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="TX_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Rx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Tx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>

@@ -2,7 +2,7 @@
 --	Conversion of Test_LED.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Jan 03 14:34:06 2017
+--	Tue Jan 16 19:28:17 2018
 --
 
 USE cypress.cypress.all;

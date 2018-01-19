@@ -31,6 +31,7 @@ extern uint8 mailbox0[8];
 extern uint8 mailbox1[8];
 extern uint8 mailbox2[8];
 extern uint8 mailbox3[8];
+extern uint8 mailbox4[8];
 /* `#END` */
 
 
@@ -858,7 +859,14 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsg4(void) 
     {
         /* `#START MESSAGE_4_RECEIVED` */
- 
+            mailbox4[0]=CAN_RX_DATA_BYTE1(4);
+            mailbox4[1]=CAN_RX_DATA_BYTE2(4);
+            mailbox4[2]=CAN_RX_DATA_BYTE3(4);
+            mailbox4[3]=CAN_RX_DATA_BYTE4(4);
+            mailbox4[4]=CAN_RX_DATA_BYTE5(4);
+            mailbox4[5]=CAN_RX_DATA_BYTE6(4);
+            mailbox4[6]=CAN_RX_DATA_BYTE7(4);
+            mailbox4[7]=CAN_RX_DATA_BYTE8(4); 
         /* `#END` */
 
         #ifdef CAN_RECEIVE_MSG_4_CALLBACK

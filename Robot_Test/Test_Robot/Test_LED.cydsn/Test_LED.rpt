@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.362ms
-Initializing data phase: Elapsed time ==> 0s.000ms
+Loading plugins phase: Elapsed time ==> 0s.776ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -d CY8C4247AZI-M485 -s C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -d CY8C4247AZI-M485 -s C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 0s.721ms
+Elaboration phase: Elapsed time ==> 1s.652ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.088ms
+HDL generation phase: Elapsed time ==> 0s.116ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -24,24 +24,24 @@ HDL generation phase: Elapsed time ==> 0s.088ms
 
 ======================================================================
 Compiling:  Test_LED.v
-Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -dcpsoc3 Test_LED.v -verilog
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -dcpsoc3 Test_LED.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Test_LED.v
-Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -dcpsoc3 Test_LED.v -verilog
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -dcpsoc3 Test_LED.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Test_LED.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -dcpsoc3 -verilog Test_LED.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -dcpsoc3 -verilog Test_LED.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Tue Jan 03 14:34:06 2017
+Tue Jan 16 19:28:16 2018
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Test_LED.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Tue Jan 03 14:34:06 2017
+Tue Jan 16 19:28:16 2018
 
 
 vpp:  No errors.
@@ -59,15 +59,15 @@ vpp:  No errors.
 Library 'work' => directory 'lcpsoc3'
 General_symbol_table
 General_symbol_table
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
 Using control file 'Test_LED.ctl'.
 
 vlogfe:  No errors.
@@ -76,23 +76,23 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  Test_LED.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -dcpsoc3 -verilog Test_LED.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -dcpsoc3 -verilog Test_LED.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Tue Jan 03 14:34:06 2017
+Tue Jan 16 19:28:17 2018
 
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\codegentemp\Test_LED.ctl'.
-Linking 'C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\codegentemp\Test_LED.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\codegentemp\Test_LED.ctl'.
+Linking 'C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\codegentemp\Test_LED.v'.
 
 tovif:  No errors.
 
@@ -100,24 +100,24 @@ tovif:  No errors.
 ======================================================================
 Compiling:  Test_LED.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -dcpsoc3 -verilog Test_LED.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -dcpsoc3 -verilog Test_LED.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Tue Jan 03 14:34:06 2017
+Tue Jan 16 19:28:17 2018
 
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\codegentemp\Test_LED.ctl'.
-Linking 'C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\codegentemp\Test_LED.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\codegentemp\Test_LED.ctl'.
+Linking 'C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\codegentemp\Test_LED.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
 
 ----------------------------------------------------------
 Detecting unused logic.
@@ -158,20 +158,20 @@ Circuit simplification results:
 
 topld:  No errors.
 
-CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp
-Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Test_LED.cyprj" -dcpsoc3 Test_LED.v -verilog
+CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp
+Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\bin\warp.exe
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\Test_LED.cyprj" -dcpsoc3 Test_LED.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.487ms
+Warp synthesis phase: Elapsed time ==> 2s.746ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.3.0.9604, Family: PSoC3, Started at: Tuesday, 03 January 2017 14:34:07
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -d CY8C4247AZI-M485 Test_LED.v -verilog
+cyp3fit: V4.1.0.3210, Family: PSoC3, Started at: Tuesday, 16 January 2018 19:28:17
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\Test_LED.cyprj -d CY8C4247AZI-M485 Test_LED.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.021ms
+Design parsing phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
-<CYPRESSTAG name="Tech mapping">
+<CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
 <CYPRESSTAG name="UDB Clock/Enable Remapping Results">
@@ -222,7 +222,7 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilitites: DIGITAL
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
@@ -261,7 +261,7 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilitites: DIGITAL
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
@@ -300,7 +300,7 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilitites: DIGITAL
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
@@ -339,7 +339,7 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilitites: DIGITAL
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
@@ -400,20 +400,33 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    2 :    2 :  0.00 %
   8-bit IDAC                  :    0 :    2 :    2 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.034ms
-Tech mapping phase: Elapsed time ==> 0s.083ms
+Technology Mapping: Elapsed time ==> 0s.031ms
+Tech Mapping phase: Elapsed time ==> 0s.108ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
-<CYPRESSTAG name="Analog Placement">
-Elapsed time ==> 0.5583858s
+<CYPRESSTAG name="FFB & IO Pre Placement">
+<CYPRESSTAG name="Placement" icon="FILE_RPT_PLACEMENT">
+
+Cell                                : Block                              
+=========================================================================
+LED_1(0)                            : [IOP=(2)][IoId=(2)]                
+LED_2(0)                            : [IOP=(2)][IoId=(3)]                
+LED_3(0)                            : [IOP=(2)][IoId=(4)]                
+LED_4(0)                            : [IOP=(2)][IoId=(5)]                
+ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]           
+
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 1s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Real Analog Placement">
+Elapsed time ==> 0.8904844s
+</CYPRESSTAG>
+Analog Placement phase: Elapsed time ==> 1s.427ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0017366 secs
+Route success=True, Iterations=1 Elapsed=0.0026309 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.002ms
+Analog Routing phase: Elapsed time ==> 0s.003ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -424,32 +437,26 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.033ms
+Analog Code Generation phase: Elapsed time ==> 0s.049ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
-I2076: Total run-time: 0.3 sec.
+I2076: Total run-time: 0.6 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
 <CYPRESSTAG name="PLD Packing Summary">
 No PLDs were packed.
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.000ms
+PLD Packing: Elapsed time ==> 0s.001ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.013ms
-</CYPRESSTAG>
-<CYPRESSTAG name="Simulated Annealing">
-Annealing: Elapsed time ==> 0s.001ms
-<CYPRESSTAG name="Simulated Annealing Results">
-The seed used for moves was 114161200.
-Inital cost was 0, final cost is 0 (NaN improvement).</CYPRESSTAG>
+Partitioning: Elapsed time ==> 0s.016ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -472,8 +479,8 @@ UDB [UDB=(1,0)] is empty.
 UDB [UDB=(1,1)] is empty.
 Intr container @ [IntrContainer=(0)]: empty
 Drq container @ [DrqContainer=(0)]: empty
-Port 0 is empty
-Port 1 is empty
+Port 0 contains the following IO cells:
+Port 1 contains the following IO cells:
 Port 2 contains the following IO cells:
 [IoId=2]: 
 Pin : Name = LED_1(0)
@@ -505,7 +512,7 @@ Pin : Name = LED_1(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL
+        Required Capabilities: DIGITAL
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
@@ -545,7 +552,7 @@ Pin : Name = LED_2(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL
+        Required Capabilities: DIGITAL
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
@@ -585,7 +592,7 @@ Pin : Name = LED_3(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL
+        Required Capabilities: DIGITAL
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
@@ -625,7 +632,7 @@ Pin : Name = LED_4(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL
+        Required Capabilities: DIGITAL
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
@@ -635,14 +642,15 @@ Pin : Name = LED_4(0)
     {
     }
 
-Port 3 is empty
-Port 4 is empty
-Port 5 is empty
-Port 6 is empty
-Port 7 is empty
-CAN 2.0b group 0: empty
+Port 3 contains the following IO cells:
+Port 4 contains the following IO cells:
+Port 5 contains the following IO cells:
+Port 6 contains the following IO cells:
+Port 7 contains the following IO cells:
+ARM group 0: empty
+CAN group 0: empty
 Clock group 0: 
-    M0S8 Clock Block @ F(Clock,0): 
+    Clock Block @ F(Clock,0): 
     m0s8clockblockcell: Name =ClockBlock
         PORT MAP (
             hfclk => ClockBlock_HFCLK ,
@@ -656,20 +664,17 @@ Clock group 0:
         Properties:
         {
         }
-PM group 0: empty
-SPC group 0: empty
-WDT group 0: empty
-FSS group 0: empty
-LP Comparator group 0: empty
-Serial Communication (SCB) group 0: empty
-CapSense group 0: empty
-8-bit IDAC group 0: empty
-7-bit IDAC group 0: empty
-Timer/Counter/PWM group 0: empty
-Comparator/Opamp group 0: empty
-Die Temp group 0: empty
-SAR ADC group 0: empty
-Segment LCD group 0: empty
+LCD group 0: empty
+PICU group 0: empty
+LPCOMP group 0: empty
+SCB group 0: empty
+CSD group 0: empty
+CSIDAC8 group 0: empty
+CSIDAC7 group 0: empty
+TCPWM group 0: empty
+OA group 0: empty
+TEMP group 0: empty
+SARADC group 0: empty
 CLK_GEN group 0: 
     M0S8 Clock Gen Block @ F(CLK_GEN,0): 
     m0s8clockgenblockcell: Name =ClockGenBlock
@@ -680,10 +685,10 @@ CLK_GEN group 0:
         }
 LPCOMPBLOCK group 0: empty
 PASSBLOCK group 0: empty
-ANAPUMP group 0: empty
-GANGED_PICU group 0: empty
 WCO group 0: empty
-M0S8DMAC group 0: empty
+SRSS group 0: empty
+CPUSS group 0: empty
+IOSS group 0: empty
 </CYPRESSTAG>
 <CYPRESSTAG name="Port Configuration Details">
 
@@ -701,32 +706,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |     Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.001ms
-Digital Placement phase: Elapsed time ==> 0s.683ms
+Digital component placer commit/Report: Elapsed time ==> 0s.011ms
+Digital Placement phase: Elapsed time ==> 1s.188ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
+"C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\dev\psoc4/4/route_arch-rrg.cydata" --vh2-path "Test_LED_r.vh2" --pcf-path "Test_LED.pco" --des-name "Test_LED" --dsf-path "Test_LED.dsf" --sdc-path "Test_LED.sdc" --lib-path "Test_LED_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 1s.450ms
+Digital Routing phase: Elapsed time ==> 1s.329ms
 </CYPRESSTAG>
-<CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.798ms
+<CYPRESSTAG name="Bitstream Generation">
+Bitstream Generation phase: Elapsed time ==> 0s.557ms
 </CYPRESSTAG>
-<CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.047ms
+<CYPRESSTAG name="Bitstream Verification">
+Bitstream Verification phase: Elapsed time ==> 0s.049ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Test_LED_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.332ms
+Static timing analysis phase: Elapsed time ==> 0s.431ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.227ms
+Design database save phase: Elapsed time ==> 0s.332ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 4s.716ms
+cydsfit: Elapsed time ==> 5s.570ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 4s.848ms
-API generation phase: Elapsed time ==> 2s.207ms
-Dependency generation phase: Elapsed time ==> 0s.041ms
-Cleanup phase: Elapsed time ==> 0s.002ms
+Fitter phase: Elapsed time ==> 5s.571ms
+API generation phase: Elapsed time ==> 2s.883ms
+Dependency generation phase: Elapsed time ==> 0s.047ms
+Cleanup phase: Elapsed time ==> 0s.003ms

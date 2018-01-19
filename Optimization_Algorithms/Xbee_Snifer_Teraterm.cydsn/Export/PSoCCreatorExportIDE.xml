@@ -132,6 +132,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Interrupcion.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Interrupcion.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Optimization_Algorithms\Xbee_Snifer_Teraterm.cydsn\Export\ARM_GCC_Generic">

@@ -1,5 +1,5 @@
 -- Project:   Xbee_Snifer_Teraterm
--- Generated: 01/14/2018 21:50:28
+-- Generated: 01/18/2018 21:16:25
 -- PSoC Creator  4.1 Update 1
 
 ENTITY Xbee_Snifer_Teraterm IS
@@ -42,6 +42,7 @@ ARCHITECTURE __DEFAULT__ OF Xbee_Snifer_Teraterm IS
     SIGNAL Net_12 : bit;
     SIGNAL Net_158 : bit;
     SIGNAL Net_163 : bit;
+    SIGNAL Net_176 : bit;
     SIGNAL Net_183 : bit;
     SIGNAL Net_184 : bit;
     SIGNAL Net_244 : bit;
@@ -1550,7 +1551,8 @@ BEGIN
             status_3 => \XBEE:BUART:rx_status_3\,
             status_2 => open,
             status_1 => open,
-            status_0 => open);
+            status_0 => open,
+            interrupt => Net_176);
 
     \CAN:isr\:interrupt
         GENERIC MAP(
@@ -1649,6 +1651,14 @@ BEGIN
             is_nmi => 0)
         PORT MAP(
             interrupt => Net_244,
+            clock => ClockBlock_HFCLK);
+
+    Interrupcion:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_176,
             clock => ClockBlock_HFCLK);
 
     \XBEE:BUART:txn\:macrocell

@@ -1,6 +1,6 @@
 -- Project:   Test_LED
--- Generated: 01/03/2017 14:34:08
--- PSoC Creator  3.3 CP3
+-- Generated: 01/16/2018 19:28:19
+-- PSoC Creator  4.1 Update 1
 
 ENTITY Test_LED IS
     PORT(

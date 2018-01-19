@@ -100,7 +100,7 @@ int main()
     initVCNL();
     for(;;)
     {
-        P=readProximity();
+        P=readAmbient();
         if(P<2500){
             LED_1_Write(1);
         }

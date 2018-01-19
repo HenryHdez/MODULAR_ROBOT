@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.787ms
+Loading plugins phase: Elapsed time ==> 0s.331ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Optimization_Algorithms\Xbee_Snifer_Teraterm.cydsn\Xbee_Snifer_Teraterm.cyprj -d CY8C4247AZI-M485 -s C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Optimization_Algorithms\Xbee_Snifer_Teraterm.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 3s.663ms
+Elaboration phase: Elapsed time ==> 2s.311ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.189ms
+HDL generation phase: Elapsed time ==> 0s.104ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Sun Jan 14 21:50:20 2018
+Thu Jan 18 21:16:21 2018
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Xbee_Snifer_Teraterm.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Sun Jan 14 21:50:21 2018
+Thu Jan 18 21:16:21 2018
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v'
@@ -100,7 +100,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Sun Jan 14 21:50:21 2018
+Thu Jan 18 21:16:22 2018
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -135,7 +135,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Sun Jan 14 21:50:23 2018
+Thu Jan 18 21:16:23 2018
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -167,7 +167,6 @@ Detecting unused logic.
     User names
 	\XBEE:BUART:reset_sr\
 	Net_175
-	Net_176
 	\XBEE:BUART:sRX:s23Poll:MODULE_1:g2:a0:b_1\
 	\XBEE:BUART:sRX:s23Poll:MODULE_1:g2:a0:b_0\
 	\XBEE:BUART:sRX:s23Poll:MODULE_2:g2:a0:gta_0\
@@ -203,7 +202,7 @@ Detecting unused logic.
 	Net_253
 
 
-Deleted 36 User equations/components.
+Deleted 35 User equations/components.
 Deleted 0 Synthesized equations/components.
 
 ------------------------------------------------------
@@ -275,6 +274,7 @@ Removing Lhs of wire \XBEE:BUART:FinalAddrMode_2\[36] = zero[2]
 Removing Lhs of wire \XBEE:BUART:FinalAddrMode_1\[37] = zero[2]
 Removing Lhs of wire \XBEE:BUART:FinalAddrMode_0\[38] = zero[2]
 Removing Lhs of wire \XBEE:BUART:tx_ctrl_mark\[39] = zero[2]
+Removing Rhs of wire Net_176[46] = \XBEE:BUART:rx_interrupt_out\[47]
 Removing Rhs of wire \XBEE:BUART:tx_bitclk_enable_pre\[51] = \XBEE:BUART:tx_bitclk_dp\[87]
 Removing Lhs of wire \XBEE:BUART:tx_counter_tc\[97] = \XBEE:BUART:tx_counter_dp\[88]
 Removing Lhs of wire \XBEE:BUART:tx_status_6\[98] = zero[2]
@@ -383,17 +383,17 @@ Removing Rhs of wire \Timer_1:TimerUDB:status_3\[393] = \Timer_1:TimerUDB:fifo_n
 Removing Lhs of wire \Timer_1:TimerUDB:cs_addr_2\[397] = zero[2]
 Removing Lhs of wire \Timer_1:TimerUDB:cs_addr_1\[398] = \Timer_1:TimerUDB:trig_reg\[385]
 Removing Lhs of wire \Timer_1:TimerUDB:cs_addr_0\[399] = \Timer_1:TimerUDB:per_zero\[376]
-Removing Lhs of wire \XBEE:BUART:reset_reg\\D\[432] = zero[2]
-Removing Lhs of wire \XBEE:BUART:rx_bitclk\\D\[447] = \XBEE:BUART:rx_bitclk_pre\[153]
-Removing Lhs of wire \XBEE:BUART:rx_parity_error_pre\\D\[456] = \XBEE:BUART:rx_parity_error_pre\[230]
-Removing Lhs of wire \XBEE:BUART:rx_break_status\\D\[457] = zero[2]
-Removing Lhs of wire \Timer_1:TimerUDB:capture_last\\D\[461] = zero[2]
-Removing Lhs of wire \Timer_1:TimerUDB:tc_reg_i\\D\[462] = \Timer_1:TimerUDB:status_tc\[374]
-Removing Lhs of wire \Timer_1:TimerUDB:hwEnable_reg\\D\[463] = \Timer_1:TimerUDB:control_7\[352]
-Removing Lhs of wire \Timer_1:TimerUDB:capture_out_reg_i\\D\[464] = \Timer_1:TimerUDB:capt_fifo_load\[370]
+Removing Lhs of wire \XBEE:BUART:reset_reg\\D\[433] = zero[2]
+Removing Lhs of wire \XBEE:BUART:rx_bitclk\\D\[448] = \XBEE:BUART:rx_bitclk_pre\[153]
+Removing Lhs of wire \XBEE:BUART:rx_parity_error_pre\\D\[457] = \XBEE:BUART:rx_parity_error_pre\[230]
+Removing Lhs of wire \XBEE:BUART:rx_break_status\\D\[458] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:capture_last\\D\[462] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:tc_reg_i\\D\[463] = \Timer_1:TimerUDB:status_tc\[374]
+Removing Lhs of wire \Timer_1:TimerUDB:hwEnable_reg\\D\[464] = \Timer_1:TimerUDB:control_7\[352]
+Removing Lhs of wire \Timer_1:TimerUDB:capture_out_reg_i\\D\[465] = \Timer_1:TimerUDB:capt_fifo_load\[370]
 
 ------------------------------------------------------
-Aliased 0 equations, 129 wires.
+Aliased 0 equations, 130 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -550,12 +550,12 @@ Removing Lhs of wire \XBEE:BUART:rx_status_0\[216] = zero[2]
 Removing Lhs of wire \XBEE:BUART:rx_status_6\[225] = zero[2]
 Removing Lhs of wire \Timer_1:TimerUDB:capt_fifo_load\[370] = zero[2]
 Removing Lhs of wire \Timer_1:TimerUDB:trig_reg\[385] = \Timer_1:TimerUDB:control_7\[352]
-Removing Lhs of wire \XBEE:BUART:tx_ctrl_mark_last\\D\[439] = \XBEE:BUART:tx_ctrl_mark_last\[108]
-Removing Lhs of wire \XBEE:BUART:rx_markspace_status\\D\[451] = zero[2]
-Removing Lhs of wire \XBEE:BUART:rx_parity_error_status\\D\[452] = zero[2]
-Removing Lhs of wire \XBEE:BUART:rx_addr_match_status\\D\[454] = zero[2]
-Removing Lhs of wire \XBEE:BUART:rx_markspace_pre\\D\[455] = \XBEE:BUART:rx_markspace_pre\[229]
-Removing Lhs of wire \XBEE:BUART:rx_parity_bit\\D\[460] = \XBEE:BUART:rx_parity_bit\[235]
+Removing Lhs of wire \XBEE:BUART:tx_ctrl_mark_last\\D\[440] = \XBEE:BUART:tx_ctrl_mark_last\[108]
+Removing Lhs of wire \XBEE:BUART:rx_markspace_status\\D\[452] = zero[2]
+Removing Lhs of wire \XBEE:BUART:rx_parity_error_status\\D\[453] = zero[2]
+Removing Lhs of wire \XBEE:BUART:rx_addr_match_status\\D\[455] = zero[2]
+Removing Lhs of wire \XBEE:BUART:rx_markspace_pre\\D\[456] = \XBEE:BUART:rx_markspace_pre\[229]
+Removing Lhs of wire \XBEE:BUART:rx_parity_bit\\D\[461] = \XBEE:BUART:rx_parity_bit\[235]
 
 ------------------------------------------------------
 Aliased 0 equations, 11 wires.
@@ -594,14 +594,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Optimization_Algorithms\Xbee_Snifer_Teraterm.cydsn\Xbee_Snifer_Teraterm.cyprj" -dcpsoc3 Xbee_Snifer_Teraterm.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 4s.791ms
+Warp synthesis phase: Elapsed time ==> 2s.642ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.1.0.3210, Family: PSoC3, Started at: Sunday, 14 January 2018 21:50:24
+cyp3fit: V4.1.0.3210, Family: PSoC3, Started at: Thursday, 18 January 2018 21:16:23
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Optimization_Algorithms\Xbee_Snifer_Teraterm.cydsn\Xbee_Snifer_Teraterm.cyprj -d CY8C4247AZI-M485 Xbee_Snifer_Teraterm.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.074ms
+Design parsing phase: Elapsed time ==> 0s.032ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1636,7 +1636,8 @@ Design Equations
             clock => \XBEE:Net_9_digital\ ,
             status_5 => \XBEE:BUART:rx_status_5\ ,
             status_4 => \XBEE:BUART:rx_status_4\ ,
-            status_3 => \XBEE:BUART:rx_status_3\ );
+            status_3 => \XBEE:BUART:rx_status_3\ ,
+            interrupt => Net_176 );
         Properties:
         {
             cy_force_order = 1
@@ -1745,6 +1746,15 @@ Design Equations
             int_type = "00"
             is_nmi = 0
         }
+
+    interrupt: Name =Interrupcion
+        PORT MAP (
+            interrupt => Net_176 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
     </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Technology mapping summary" expanded>
@@ -1756,7 +1766,7 @@ Technology mapping summary
 Resource Type                 : Used : Free :  Max :  % Used
 ============================================================
 Digital Clocks                :    2 :    2 :    4 : 50.00 %
-Interrupts                    :    2 :   30 :   32 :  6.25 %
+Interrupts                    :    3 :   29 :   32 :  9.38 %
 IO                            :   12 :   39 :   51 : 23.53 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CapSense                      :    0 :    2 :    2 :  0.00 %
@@ -1783,8 +1793,8 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    2 :    2 :  0.00 %
   8-bit IDAC                  :    0 :    2 :    2 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.549ms
-Tech Mapping phase: Elapsed time ==> 0s.682ms
+Technology Mapping: Elapsed time ==> 0s.222ms
+Tech Mapping phase: Elapsed time ==> 0s.269ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -1806,15 +1816,15 @@ ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 1.2315923s
+Elapsed time ==> 0.6582445s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 2s.231ms
+Analog Placement phase: Elapsed time ==> 1s.060ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0016187 secs
+Route success=True, Iterations=1 Elapsed=0.0014221 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.003ms
+Analog Routing phase: Elapsed time ==> 0s.002ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1825,11 +1835,11 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.046ms
+Analog Code Generation phase: Elapsed time ==> 0s.039ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 1.3 sec.
+I2076: Total run-time: 0.6 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1847,20 +1857,20 @@ PLD Packing Summary
         PLD Resource Type :     Average/LAB
     =======================================
                    Inputs :            7.63
-                   Pterms :            6.00
+                   Pterms :            6.25
                Macrocells :            3.25
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.003ms
+PLD Packing: Elapsed time ==> 0s.002ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.034ms
+Partitioning: Elapsed time ==> 0s.024ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -1908,20 +1918,7 @@ LAB@[UDB=(0,0)][LB=0] #macrocells=4, #inputs=6, #pterms=3
         {
         }
 
-    [McSlotId=2]:     MacroCell: Name=\XBEE:BUART:rx_status_5\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=2]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \XBEE:BUART:rx_fifonotempty\ * \XBEE:BUART:rx_state_stop1_reg\
-        );
-        Output = \XBEE:BUART:rx_status_5\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\XBEE:BUART:rx_status_4\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=3]
+    [McSlotId=2]:     MacroCell: Name=\XBEE:BUART:rx_status_4\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=2]
         Total # of inputs        : 2
         Total # of product terms : 1
             Clock Enable: True
@@ -1933,11 +1930,39 @@ LAB@[UDB=(0,0)][LB=0] #macrocells=4, #inputs=6, #pterms=3
         Properties               : 
         {
         }
+
+    [McSlotId=3]:     MacroCell: Name=\XBEE:BUART:rx_status_5\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \XBEE:BUART:rx_fifonotempty\ * \XBEE:BUART:rx_state_stop1_reg\
+        );
+        Output = \XBEE:BUART:rx_status_5\ (fanout=1)
+        Properties               : 
+        {
+        }
 }
 
 LAB@[UDB=(0,0)][LB=1] #macrocells=2, #inputs=1, #pterms=1
 {
-    [McSlotId=0]:     MacroCell: Name=\XBEE:BUART:tx_ctrl_mark_last\, Mode=(T-Register) @ [UDB=(0,0)][LB=1][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\XBEE:BUART:rx_last\, Mode=(D-Register) @ [UDB=(0,0)][LB=1][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\XBEE:Net_9_digital\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_163
+        );
+        Output = \XBEE:BUART:rx_last\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\XBEE:BUART:tx_ctrl_mark_last\, Mode=(T-Register) @ [UDB=(0,0)][LB=1][MC=1]
         Total # of inputs        : 0
         Total # of product terms : 0
         List of special equations: 
@@ -1948,19 +1973,6 @@ LAB@[UDB=(0,0)][LB=1] #macrocells=2, #inputs=1, #pterms=1
             0
         );
         Output = \XBEE:BUART:tx_ctrl_mark_last\ (fanout=8)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\XBEE:BUART:tx_status_2\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=1][MC=1]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !\XBEE:BUART:tx_fifo_notfull\
-        );
-        Output = \XBEE:BUART:tx_status_2\ (fanout=1)
         Properties               : 
         {
         }
@@ -2042,7 +2054,7 @@ controlcell: Name =\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
     Clock Enable: True
 
 UDB [UDB=(0,1)] contents:
-LAB@[UDB=(0,1)][LB=0] #macrocells=2, #inputs=9, #pterms=6
+LAB@[UDB=(0,1)][LB=0] #macrocells=2, #inputs=8, #pterms=8
 {
     [McSlotId=0]:     MacroCell: Name=\XBEE:BUART:txn\, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=0]
         Total # of inputs        : 7
@@ -2068,17 +2080,22 @@ LAB@[UDB=(0,1)][LB=0] #macrocells=2, #inputs=9, #pterms=6
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\XBEE:BUART:tx_status_0\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=0][MC=1]
-        Total # of inputs        : 5
-        Total # of product terms : 1
+    [McSlotId=1]:     MacroCell: Name=\XBEE:BUART:tx_state_1\, Mode=(T-Register) @ [UDB=(0,1)][LB=0][MC=1]
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\XBEE:Net_9_digital\) => Global
             Clock Enable: True
-        Main Equation            : 1 pterm
+        Main Equation            : 3 pterms
         (
-              !\XBEE:BUART:tx_state_1\ * !\XBEE:BUART:tx_state_0\ * 
-              \XBEE:BUART:tx_bitclk_enable_pre\ * \XBEE:BUART:tx_fifo_empty\ * 
-              \XBEE:BUART:tx_state_2\
+              \XBEE:BUART:tx_state_1\ * \XBEE:BUART:tx_state_0\ * 
+              \XBEE:BUART:tx_bitclk_enable_pre\ * \XBEE:BUART:tx_state_2\
+            + \XBEE:BUART:tx_state_1\ * !\XBEE:BUART:tx_state_2\ * 
+              \XBEE:BUART:tx_counter_dp\ * \XBEE:BUART:tx_bitclk\
+            + \XBEE:BUART:tx_state_0\ * !\XBEE:BUART:tx_state_2\ * 
+              \XBEE:BUART:tx_bitclk\
         );
-        Output = \XBEE:BUART:tx_status_0\ (fanout=1)
+        Output = \XBEE:BUART:tx_state_1\ (fanout=8)
         Properties               : 
         {
         }
@@ -2089,7 +2106,7 @@ LAB@[UDB=(0,1)][LB=0] #macrocells=2, #inputs=9, #pterms=6
 
 LAB@[UDB=(0,1)][LB=1] #macrocells=3, #inputs=6, #pterms=8
 {
-    [McSlotId=0]:     MacroCell: Name=\XBEE:BUART:tx_state_0\, Mode=(T-Register) @ [UDB=(0,1)][LB=1][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\XBEE:BUART:tx_state_2\, Mode=(T-Register) @ [UDB=(0,1)][LB=1][MC=0]
         Total # of inputs        : 6
         Total # of product terms : 4
         List of special equations: 
@@ -2098,16 +2115,15 @@ LAB@[UDB=(0,1)][LB=1] #macrocells=3, #inputs=6, #pterms=8
         Main Equation            : 4 pterms
         (
               !\XBEE:BUART:tx_state_1\ * !\XBEE:BUART:tx_state_0\ * 
-              \XBEE:BUART:tx_bitclk_enable_pre\ * !\XBEE:BUART:tx_fifo_empty\
-            + !\XBEE:BUART:tx_state_1\ * !\XBEE:BUART:tx_state_0\ * 
-              !\XBEE:BUART:tx_fifo_empty\ * !\XBEE:BUART:tx_state_2\
+              \XBEE:BUART:tx_bitclk_enable_pre\ * \XBEE:BUART:tx_state_2\
             + \XBEE:BUART:tx_state_1\ * \XBEE:BUART:tx_state_0\ * 
-              \XBEE:BUART:tx_bitclk_enable_pre\ * \XBEE:BUART:tx_fifo_empty\ * 
-              \XBEE:BUART:tx_state_2\
-            + \XBEE:BUART:tx_state_0\ * !\XBEE:BUART:tx_state_2\ * 
-              \XBEE:BUART:tx_bitclk\
+              \XBEE:BUART:tx_bitclk_enable_pre\ * \XBEE:BUART:tx_state_2\
+            + \XBEE:BUART:tx_state_1\ * \XBEE:BUART:tx_state_0\ * 
+              !\XBEE:BUART:tx_state_2\ * \XBEE:BUART:tx_bitclk\
+            + \XBEE:BUART:tx_state_1\ * !\XBEE:BUART:tx_state_2\ * 
+              \XBEE:BUART:tx_counter_dp\ * \XBEE:BUART:tx_bitclk\
         );
-        Output = \XBEE:BUART:tx_state_0\ (fanout=8)
+        Output = \XBEE:BUART:tx_state_2\ (fanout=7)
         Properties               : 
         {
         }
@@ -2148,15 +2164,12 @@ LAB@[UDB=(0,1)][LB=1] #macrocells=3, #inputs=6, #pterms=8
     [McSlotId=3]: (empty)
 }
 
-datapathcell: Name =\XBEE:BUART:sTX:TxShifter:u0\
+datapathcell: Name =\XBEE:BUART:sTX:sCLOCK:TxBitClkGen\
     PORT MAP (
         clock => \XBEE:Net_9_digital\ ,
-        cs_addr_2 => \XBEE:BUART:tx_state_1\ ,
-        cs_addr_1 => \XBEE:BUART:tx_state_0\ ,
-        cs_addr_0 => \XBEE:BUART:tx_bitclk_enable_pre\ ,
-        so_comb => \XBEE:BUART:tx_shift_out\ ,
-        f0_bus_stat_comb => \XBEE:BUART:tx_fifo_notfull\ ,
-        f0_blk_stat_comb => \XBEE:BUART:tx_fifo_empty\ );
+        cs_addr_0 => \XBEE:BUART:counter_load_not\ ,
+        ce0_reg => \XBEE:BUART:tx_bitclk_enable_pre\ ,
+        ce1_reg => \XBEE:BUART:tx_counter_dp\ );
     Properties:
     {
         a0_init = "00000000"
@@ -2167,7 +2180,7 @@ datapathcell: Name =\XBEE:BUART:sTX:TxShifter:u0\
         cl1_sync = 1
         cmsb_sync = 1
         co_msb_sync = 1
-        cy_dpconfig = "0000000000000000000000000000000000000000000000000000000011000000000000000000000000000010010000000000000000000000000000000000000011111111000000001111111111111111000000000000000001000100111100000000000000001100"
+        cy_dpconfig = "1010100001000000001000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111100000111001000000100000000000101111100000000000000001000"
         d0_init = "00000000"
         d1_init = "00000000"
         f0_blk_sync = 1
@@ -2184,18 +2197,18 @@ datapathcell: Name =\XBEE:BUART:sTX:TxShifter:u0\
     Clock Polarity: Active High
     Clock Enable: True
 
-statusicell: Name =\XBEE:BUART:sTX:TxSts\
+statusicell: Name =\XBEE:BUART:sRX:RxSts\
     PORT MAP (
         clock => \XBEE:Net_9_digital\ ,
-        status_3 => \XBEE:BUART:tx_fifo_notfull\ ,
-        status_2 => \XBEE:BUART:tx_status_2\ ,
-        status_1 => \XBEE:BUART:tx_fifo_empty\ ,
-        status_0 => \XBEE:BUART:tx_status_0\ );
+        status_5 => \XBEE:BUART:rx_status_5\ ,
+        status_4 => \XBEE:BUART:rx_status_4\ ,
+        status_3 => \XBEE:BUART:rx_status_3\ ,
+        interrupt => Net_176 );
     Properties:
     {
         cy_force_order = 1
         cy_int_mask = "1111111"
-        cy_md_select = "0000001"
+        cy_md_select = "1011111"
     }
     Clock Polarity: Active High
     Clock Enable: True
@@ -2298,7 +2311,7 @@ LAB@[UDB=(1,0)][LB=0] #macrocells=4, #inputs=11, #pterms=8
         }
 }
 
-LAB@[UDB=(1,0)][LB=1] #macrocells=4, #inputs=10, #pterms=8
+LAB@[UDB=(1,0)][LB=1] #macrocells=4, #inputs=11, #pterms=8
 {
     [McSlotId=0]:     MacroCell: Name=\XBEE:BUART:rx_state_2\, Mode=(T-Register) @ [UDB=(1,0)][LB=1][MC=0]
         Total # of inputs        : 10
@@ -2357,17 +2370,15 @@ LAB@[UDB=(1,0)][LB=1] #macrocells=4, #inputs=10, #pterms=8
         {
         }
 
-    [McSlotId=3]:     MacroCell: Name=\XBEE:BUART:rx_last\, Mode=(D-Register) @ [UDB=(1,0)][LB=1][MC=3]
+    [McSlotId=3]:     MacroCell: Name=\XBEE:BUART:tx_status_2\, Mode=(Combinatorial) @ [UDB=(1,0)][LB=1][MC=3]
         Total # of inputs        : 1
         Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\XBEE:Net_9_digital\) => Global
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              Net_163
+              !\XBEE:BUART:tx_fifo_notfull\
         );
-        Output = \XBEE:BUART:rx_last\ (fanout=1)
+        Output = \XBEE:BUART:tx_status_2\ (fanout=1)
         Properties               : 
         {
         }
@@ -2436,7 +2447,7 @@ count7cell: Name =\XBEE:BUART:sRX:RxBitCounter\
 UDB [UDB=(1,1)] contents:
 LAB@[UDB=(1,1)][LB=0] #macrocells=3, #inputs=11, #pterms=8
 {
-    [McSlotId=0]:     MacroCell: Name=\XBEE:BUART:tx_state_2\, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\XBEE:BUART:tx_state_0\, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=0]
         Total # of inputs        : 6
         Total # of product terms : 4
         List of special equations: 
@@ -2445,35 +2456,31 @@ LAB@[UDB=(1,1)][LB=0] #macrocells=3, #inputs=11, #pterms=8
         Main Equation            : 4 pterms
         (
               !\XBEE:BUART:tx_state_1\ * !\XBEE:BUART:tx_state_0\ * 
-              \XBEE:BUART:tx_bitclk_enable_pre\ * \XBEE:BUART:tx_state_2\
+              \XBEE:BUART:tx_bitclk_enable_pre\ * !\XBEE:BUART:tx_fifo_empty\
+            + !\XBEE:BUART:tx_state_1\ * !\XBEE:BUART:tx_state_0\ * 
+              !\XBEE:BUART:tx_fifo_empty\ * !\XBEE:BUART:tx_state_2\
             + \XBEE:BUART:tx_state_1\ * \XBEE:BUART:tx_state_0\ * 
-              \XBEE:BUART:tx_bitclk_enable_pre\ * \XBEE:BUART:tx_state_2\
-            + \XBEE:BUART:tx_state_1\ * \XBEE:BUART:tx_state_0\ * 
-              !\XBEE:BUART:tx_state_2\ * \XBEE:BUART:tx_bitclk\
-            + \XBEE:BUART:tx_state_1\ * !\XBEE:BUART:tx_state_2\ * 
-              \XBEE:BUART:tx_counter_dp\ * \XBEE:BUART:tx_bitclk\
+              \XBEE:BUART:tx_bitclk_enable_pre\ * \XBEE:BUART:tx_fifo_empty\ * 
+              \XBEE:BUART:tx_state_2\
+            + \XBEE:BUART:tx_state_0\ * !\XBEE:BUART:tx_state_2\ * 
+              \XBEE:BUART:tx_bitclk\
         );
-        Output = \XBEE:BUART:tx_state_2\ (fanout=7)
+        Output = \XBEE:BUART:tx_state_0\ (fanout=8)
         Properties               : 
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\XBEE:BUART:tx_state_1\, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=1]
-        Total # of inputs        : 6
-        Total # of product terms : 3
-        List of special equations: 
-            Clock  = (\XBEE:Net_9_digital\) => Global
+    [McSlotId=1]:     MacroCell: Name=\XBEE:BUART:tx_status_0\, Mode=(Combinatorial) @ [UDB=(1,1)][LB=0][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 1
             Clock Enable: True
-        Main Equation            : 3 pterms
+        Main Equation            : 1 pterm
         (
-              \XBEE:BUART:tx_state_1\ * \XBEE:BUART:tx_state_0\ * 
-              \XBEE:BUART:tx_bitclk_enable_pre\ * \XBEE:BUART:tx_state_2\
-            + \XBEE:BUART:tx_state_1\ * !\XBEE:BUART:tx_state_2\ * 
-              \XBEE:BUART:tx_counter_dp\ * \XBEE:BUART:tx_bitclk\
-            + \XBEE:BUART:tx_state_0\ * !\XBEE:BUART:tx_state_2\ * 
-              \XBEE:BUART:tx_bitclk\
+              !\XBEE:BUART:tx_state_1\ * !\XBEE:BUART:tx_state_0\ * 
+              \XBEE:BUART:tx_bitclk_enable_pre\ * \XBEE:BUART:tx_fifo_empty\ * 
+              \XBEE:BUART:tx_state_2\
         );
-        Output = \XBEE:BUART:tx_state_1\ (fanout=8)
+        Output = \XBEE:BUART:tx_status_0\ (fanout=1)
         Properties               : 
         {
         }
@@ -2565,12 +2572,15 @@ LAB@[UDB=(1,1)][LB=1] #macrocells=4, #inputs=7, #pterms=6
         }
 }
 
-datapathcell: Name =\XBEE:BUART:sTX:sCLOCK:TxBitClkGen\
+datapathcell: Name =\XBEE:BUART:sTX:TxShifter:u0\
     PORT MAP (
         clock => \XBEE:Net_9_digital\ ,
-        cs_addr_0 => \XBEE:BUART:counter_load_not\ ,
-        ce0_reg => \XBEE:BUART:tx_bitclk_enable_pre\ ,
-        ce1_reg => \XBEE:BUART:tx_counter_dp\ );
+        cs_addr_2 => \XBEE:BUART:tx_state_1\ ,
+        cs_addr_1 => \XBEE:BUART:tx_state_0\ ,
+        cs_addr_0 => \XBEE:BUART:tx_bitclk_enable_pre\ ,
+        so_comb => \XBEE:BUART:tx_shift_out\ ,
+        f0_bus_stat_comb => \XBEE:BUART:tx_fifo_notfull\ ,
+        f0_blk_stat_comb => \XBEE:BUART:tx_fifo_empty\ );
     Properties:
     {
         a0_init = "00000000"
@@ -2581,7 +2591,7 @@ datapathcell: Name =\XBEE:BUART:sTX:sCLOCK:TxBitClkGen\
         cl1_sync = 1
         cmsb_sync = 1
         co_msb_sync = 1
-        cy_dpconfig = "1010100001000000001000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111100000111001000000100000000000101111100000000000000001000"
+        cy_dpconfig = "0000000000000000000000000000000000000000000000000000000011000000000000000000000000000010010000000000000000000000000000000000000011111111000000001111111111111111000000000000000001000100111100000000000000001100"
         d0_init = "00000000"
         d1_init = "00000000"
         f0_blk_sync = 1
@@ -2598,23 +2608,33 @@ datapathcell: Name =\XBEE:BUART:sTX:sCLOCK:TxBitClkGen\
     Clock Polarity: Active High
     Clock Enable: True
 
-statusicell: Name =\XBEE:BUART:sRX:RxSts\
+statusicell: Name =\XBEE:BUART:sTX:TxSts\
     PORT MAP (
         clock => \XBEE:Net_9_digital\ ,
-        status_5 => \XBEE:BUART:rx_status_5\ ,
-        status_4 => \XBEE:BUART:rx_status_4\ ,
-        status_3 => \XBEE:BUART:rx_status_3\ );
+        status_3 => \XBEE:BUART:tx_fifo_notfull\ ,
+        status_2 => \XBEE:BUART:tx_status_2\ ,
+        status_1 => \XBEE:BUART:tx_fifo_empty\ ,
+        status_0 => \XBEE:BUART:tx_status_0\ );
     Properties:
     {
         cy_force_order = 1
         cy_int_mask = "1111111"
-        cy_md_select = "1011111"
+        cy_md_select = "0000001"
     }
     Clock Polarity: Active High
     Clock Enable: True
 
 Intr container @ [IntrContainer=(0)]: 
   Intr@ [IntrContainer=(0)][IntrId=(0)] 
+    interrupt: Name =Interrupcion
+        PORT MAP (
+            interrupt => Net_176 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(1)] 
     interrupt: Name =Timer
         PORT MAP (
             interrupt => Net_244 );
@@ -3047,33 +3067,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |          Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.163ms
-Digital Placement phase: Elapsed time ==> 2s.112ms
+Digital component placer commit/Report: Elapsed time ==> 0s.064ms
+Digital Placement phase: Elapsed time ==> 1s.136ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\dev\psoc4/4/route_arch-rrg.cydata" --vh2-path "Xbee_Snifer_Teraterm_r.vh2" --pcf-path "Xbee_Snifer_Teraterm.pco" --des-name "Xbee_Snifer_Teraterm" --dsf-path "Xbee_Snifer_Teraterm.dsf" --sdc-path "Xbee_Snifer_Teraterm.sdc" --lib-path "Xbee_Snifer_Teraterm_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 3s.977ms
+Digital Routing phase: Elapsed time ==> 1s.936ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.927ms
+Bitstream Generation phase: Elapsed time ==> 0s.477ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.095ms
+Bitstream Verification phase: Elapsed time ==> 0s.070ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Xbee_Snifer_Teraterm_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.882ms
+Static timing analysis phase: Elapsed time ==> 0s.689ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.537ms
+Design database save phase: Elapsed time ==> 0s.399ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 11s.669ms
+cydsfit: Elapsed time ==> 6s.190ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 11s.670ms
-API generation phase: Elapsed time ==> 4s.309ms
-Dependency generation phase: Elapsed time ==> 0s.055ms
+Fitter phase: Elapsed time ==> 6s.191ms
+API generation phase: Elapsed time ==> 3s.345ms
+Dependency generation phase: Elapsed time ==> 0s.045ms
 Cleanup phase: Elapsed time ==> 0s.002ms

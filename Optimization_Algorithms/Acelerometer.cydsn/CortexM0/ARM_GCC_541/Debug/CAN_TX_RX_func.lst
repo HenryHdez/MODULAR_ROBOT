@@ -1,0 +1,3527 @@
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"CAN_TX_RX_func.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.CAN_SendMsg,"ax",%progbits
+  20              		.align	2
+  21              		.global	CAN_SendMsg
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	CAN_SendMsg, %function
+  25              	CAN_SendMsg:
+  26              	.LFB1:
+  27              		.file 1 "CAN_TX_RX_func.c"
+   1:CAN_TX_RX_func.c **** /*******************************************************************************
+   2:CAN_TX_RX_func.c **** * File Name: CAN_TX_RX_func.c
+   3:CAN_TX_RX_func.c **** * Version 3.0
+   4:CAN_TX_RX_func.c **** *
+   5:CAN_TX_RX_func.c **** * Description:
+   6:CAN_TX_RX_func.c **** *  There are functions process "Full" Receive and Transmit mailboxes:
+   7:CAN_TX_RX_func.c **** *     - CAN_SendMsg0-7();
+   8:CAN_TX_RX_func.c **** *     - CAN_ReceiveMsg0-15();
+   9:CAN_TX_RX_func.c **** *  Transmission of message, and receive routine for "Basic" mailboxes:
+  10:CAN_TX_RX_func.c **** *     - CAN_SendMsg();
+  11:CAN_TX_RX_func.c **** *     - CAN_TxCancel();
+  12:CAN_TX_RX_func.c **** *     - CAN_ReceiveMsg();
+  13:CAN_TX_RX_func.c **** *
+  14:CAN_TX_RX_func.c **** *  Note:
+  15:CAN_TX_RX_func.c **** *   None
+  16:CAN_TX_RX_func.c **** *
+  17:CAN_TX_RX_func.c **** ********************************************************************************
+  18:CAN_TX_RX_func.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  19:CAN_TX_RX_func.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:CAN_TX_RX_func.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:CAN_TX_RX_func.c **** * the software package with which this file was provided.
+  22:CAN_TX_RX_func.c **** *******************************************************************************/
+  23:CAN_TX_RX_func.c **** 
+  24:CAN_TX_RX_func.c **** #include "CAN.h"
+  25:CAN_TX_RX_func.c **** #include "cyapicallbacks.h"
+  26:CAN_TX_RX_func.c **** 
+  27:CAN_TX_RX_func.c **** /* `#START TX_RX_FUNCTION` */
+  28:CAN_TX_RX_func.c **** extern uint8 dato_enviado[8];
+  29:CAN_TX_RX_func.c **** extern uint8 dato_enviado_1[8];
+  30:CAN_TX_RX_func.c **** extern uint8 mailbox0[8];
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 2
+
+
+  31:CAN_TX_RX_func.c **** extern uint8 mailbox1[8];
+  32:CAN_TX_RX_func.c **** extern uint8 mailbox2[8];
+  33:CAN_TX_RX_func.c **** extern uint8 mailbox3[8];
+  34:CAN_TX_RX_func.c **** extern uint8 mailbox4[8];
+  35:CAN_TX_RX_func.c **** /* `#END` */
+  36:CAN_TX_RX_func.c **** 
+  37:CAN_TX_RX_func.c **** 
+  38:CAN_TX_RX_func.c **** /*******************************************************************************
+  39:CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_SendMsg
+  40:CAN_TX_RX_func.c **** ********************************************************************************
+  41:CAN_TX_RX_func.c **** *
+  42:CAN_TX_RX_func.c **** * Summary:
+  43:CAN_TX_RX_func.c **** *  This function is Send Message from one of Basic mailboxes. The function loops
+  44:CAN_TX_RX_func.c **** *  through the transmit message buffer designed as Basic CAN mailboxes for the
+  45:CAN_TX_RX_func.c **** *  first free available and sends from it. The number of retries is limited.
+  46:CAN_TX_RX_func.c **** *
+  47:CAN_TX_RX_func.c **** * Parameters:
+  48:CAN_TX_RX_func.c **** *  message: The pointer to a structure that contains all required data to send
+  49:CAN_TX_RX_func.c **** *           messages.
+  50:CAN_TX_RX_func.c **** *
+  51:CAN_TX_RX_func.c **** * Return:
+  52:CAN_TX_RX_func.c **** *  Indication if message has been sent.
+  53:CAN_TX_RX_func.c **** *   Define                             Description
+  54:CAN_TX_RX_func.c **** *    CYRET_SUCCESS                      The function passed successfully
+  55:CAN_TX_RX_func.c **** *    CAN_FAIL              The function failed
+  56:CAN_TX_RX_func.c **** *
+  57:CAN_TX_RX_func.c **** *******************************************************************************/
+  58:CAN_TX_RX_func.c **** uint8 CAN_SendMsg(const CAN_TX_MSG *message) 
+  59:CAN_TX_RX_func.c **** {
+  28              		.loc 1 59 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  34              		.cfi_def_cfa_offset 24
+  35              		.cfi_offset 3, -24
+  36              		.cfi_offset 4, -20
+  37              		.cfi_offset 5, -16
+  38              		.cfi_offset 6, -12
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 4F46     		mov	r7, r9
+  42 0004 4646     		mov	r6, r8
+  43 0006 C0B4     		push	{r6, r7}
+  44              		.cfi_def_cfa_offset 32
+  45              		.cfi_offset 8, -32
+  46              		.cfi_offset 9, -28
+  47 0008 0600     		movs	r6, r0
+  48              	.LVL1:
+  60:CAN_TX_RX_func.c ****     uint8 i, j, shift;
+  61:CAN_TX_RX_func.c ****     uint8 retry = 0u;
+  62:CAN_TX_RX_func.c ****     uint8 result = CAN_FAIL;
+  49              		.loc 1 62 0
+  50 000a 0120     		movs	r0, #1
+  51              	.LVL2:
+  61:CAN_TX_RX_func.c ****     uint8 result = CAN_FAIL;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 3
+
+
+  52              		.loc 1 61 0
+  53 000c 0023     		movs	r3, #0
+  54 000e 9846     		mov	r8, r3
+  63:CAN_TX_RX_func.c ****     uint32 regTemp;
+  64:CAN_TX_RX_func.c **** 
+  65:CAN_TX_RX_func.c ****     while (retry < CAN_RETRY_NUMBER)
+  55              		.loc 1 65 0
+  56 0010 94E0     		b	.L2
+  57              	.LVL3:
+  58              	.L18:
+  66:CAN_TX_RX_func.c ****     {
+  67:CAN_TX_RX_func.c ****         shift = 1u;    /* Start from first mailbox */
+  68:CAN_TX_RX_func.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
+  69:CAN_TX_RX_func.c ****         {
+  70:CAN_TX_RX_func.c ****             /* Find Basic TX mailboxes */
+  71:CAN_TX_RX_func.c ****             if ((CAN_TX_MAILBOX_TYPE & shift) == 0u)
+  59              		.loc 1 71 0
+  60 0012 1323     		movs	r3, #19
+  61 0014 2B42     		tst	r3, r5
+  62 0016 7FD1     		bne	.L3
+  72:CAN_TX_RX_func.c ****             {
+  73:CAN_TX_RX_func.c ****                 /* Find free mailbox */
+  74:CAN_TX_RX_func.c ****                 #if (CY_PSOC3 || CY_PSOC5)
+  75:CAN_TX_RX_func.c ****                     if ((CAN_BUF_SR_REG.byte[2] & shift) == 0u)
+  76:CAN_TX_RX_func.c ****                 #else  /* CY_PSOC4 */
+  77:CAN_TX_RX_func.c ****                     if ((CAN_BUF_SR_REG &
+  63              		.loc 1 77 0
+  64 0018 4C4B     		ldr	r3, .L23
+  65 001a 1B68     		ldr	r3, [r3]
+  78:CAN_TX_RX_func.c ****                         (uint32) ((uint32) shift << CAN_TWO_BYTE_OFFSET)) == 0u)
+  66              		.loc 1 78 0
+  67 001c 2A04     		lsls	r2, r5, #16
+  77:CAN_TX_RX_func.c ****                         (uint32) ((uint32) shift << CAN_TWO_BYTE_OFFSET)) == 0u)
+  68              		.loc 1 77 0
+  69 001e 1A42     		tst	r2, r3
+  70 0020 7AD1     		bne	.L3
+  71              	.LVL4:
+  79:CAN_TX_RX_func.c ****                 #endif /* CY_PSOC3 || CY_PSOC5 */
+  80:CAN_TX_RX_func.c ****                     {
+  81:CAN_TX_RX_func.c ****                         regTemp = 0u;
+  82:CAN_TX_RX_func.c **** 
+  83:CAN_TX_RX_func.c ****                         /* Set message parameters */
+  84:CAN_TX_RX_func.c ****                         if (message->rtr != CAN_STANDARD_MESSAGE)
+  72              		.loc 1 84 0
+  73 0022 3379     		ldrb	r3, [r6, #4]
+  74 0024 002B     		cmp	r3, #0
+  75 0026 01D1     		bne	.L21
+  81:CAN_TX_RX_func.c **** 
+  76              		.loc 1 81 0
+  77 0028 0027     		movs	r7, #0
+  78 002a 01E0     		b	.L4
+  79              	.L21:
+  85:CAN_TX_RX_func.c ****                         {
+  86:CAN_TX_RX_func.c ****                             regTemp = CAN_TX_RTR_MASK;    /* RTR message Enable */
+  80              		.loc 1 86 0
+  81 002c 8027     		movs	r7, #128
+  82 002e BF03     		lsls	r7, r7, #14
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 4
+
+
+  83              	.L4:
+  84              	.LVL5:
+  87:CAN_TX_RX_func.c ****                         }
+  88:CAN_TX_RX_func.c **** 
+  89:CAN_TX_RX_func.c ****                         if (message->ide == CAN_STANDARD_MESSAGE)
+  85              		.loc 1 89 0
+  86 0030 7379     		ldrb	r3, [r6, #5]
+  87 0032 002B     		cmp	r3, #0
+  88 0034 07D1     		bne	.L5
+  90:CAN_TX_RX_func.c ****                         {
+  91:CAN_TX_RX_func.c ****                             CAN_SET_TX_ID_STANDARD_MSG(i, message->id);
+  89              		.loc 1 91 0
+  90 0036 2301     		lsls	r3, r4, #4
+  91 0038 454A     		ldr	r2, .L23+4
+  92 003a 9446     		mov	ip, r2
+  93 003c 6344     		add	r3, r3, ip
+  94 003e 3268     		ldr	r2, [r6]
+  95 0040 5205     		lsls	r2, r2, #21
+  96 0042 5A60     		str	r2, [r3, #4]
+  97 0044 09E0     		b	.L6
+  98              	.L5:
+  92:CAN_TX_RX_func.c ****                         }
+  93:CAN_TX_RX_func.c ****                         else
+  94:CAN_TX_RX_func.c ****                         {
+  95:CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_IDE_MASK;
+  99              		.loc 1 95 0
+ 100 0046 8023     		movs	r3, #128
+ 101 0048 5B03     		lsls	r3, r3, #13
+ 102 004a 1F43     		orrs	r7, r3
+ 103              	.LVL6:
+  96:CAN_TX_RX_func.c ****                             CAN_SET_TX_ID_EXTENDED_MSG(i, message->id);
+ 104              		.loc 1 96 0
+ 105 004c 2301     		lsls	r3, r4, #4
+ 106 004e 404A     		ldr	r2, .L23+4
+ 107 0050 9446     		mov	ip, r2
+ 108 0052 6344     		add	r3, r3, ip
+ 109 0054 3268     		ldr	r2, [r6]
+ 110 0056 D200     		lsls	r2, r2, #3
+ 111 0058 5A60     		str	r2, [r3, #4]
+ 112              	.L6:
+  97:CAN_TX_RX_func.c ****                         }
+  98:CAN_TX_RX_func.c **** 
+  99:CAN_TX_RX_func.c ****                         if (message->dlc < CAN_TX_DLC_MAX_VALUE)
+ 113              		.loc 1 99 0
+ 114 005a B379     		ldrb	r3, [r6, #6]
+ 115 005c 072B     		cmp	r3, #7
+ 116 005e 03D8     		bhi	.L7
+ 100:CAN_TX_RX_func.c ****                         {
+ 101:CAN_TX_RX_func.c ****                             regTemp |= ((uint32) message->dlc) << CAN_TWO_BYTE_OFFSET;
+ 117              		.loc 1 101 0
+ 118 0060 1B04     		lsls	r3, r3, #16
+ 119 0062 1F43     		orrs	r7, r3
+ 120              	.LVL7:
+ 121 0064 B946     		mov	r9, r7
+ 122              	.LVL8:
+ 123 0066 03E0     		b	.L8
+ 124              	.L7:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 5
+
+
+ 102:CAN_TX_RX_func.c ****                         }
+ 103:CAN_TX_RX_func.c ****                         else
+ 104:CAN_TX_RX_func.c ****                         {
+ 105:CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_DLC_UPPER_VALUE;
+ 125              		.loc 1 105 0
+ 126 0068 8023     		movs	r3, #128
+ 127 006a 1B03     		lsls	r3, r3, #12
+ 128 006c 1F43     		orrs	r7, r3
+ 129              	.LVL9:
+ 130 006e B946     		mov	r9, r7
+ 131              	.LVL10:
+ 132              	.L8:
+ 106:CAN_TX_RX_func.c ****                         }
+ 107:CAN_TX_RX_func.c **** 
+ 108:CAN_TX_RX_func.c ****                         if (message->irq != CAN_TRANSMIT_INT_DISABLE)
+ 133              		.loc 1 108 0
+ 134 0070 F379     		ldrb	r3, [r6, #7]
+ 135 0072 002B     		cmp	r3, #0
+ 136 0074 03D0     		beq	.L9
+ 109:CAN_TX_RX_func.c ****                         {
+ 110:CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_INT_ENABLE_MASK;    /* Transmit Interrupt Enable */
+ 137              		.loc 1 110 0
+ 138 0076 0423     		movs	r3, #4
+ 139 0078 4A46     		mov	r2, r9
+ 140 007a 1A43     		orrs	r2, r3
+ 141 007c 9146     		mov	r9, r2
+ 142              	.LVL11:
+ 143              	.L9:
+ 111:CAN_TX_RX_func.c ****                         }
+ 112:CAN_TX_RX_func.c **** 
+ 113:CAN_TX_RX_func.c ****                         for (j = 0u; (j < message->dlc) && (j < CAN_TX_DLC_MAX_VALUE); j++)
+ 144              		.loc 1 113 0
+ 145 007e 0023     		movs	r3, #0
+ 146 0080 2AE0     		b	.L10
+ 147              	.LVL12:
+ 148              	.L14:
+ 114:CAN_TX_RX_func.c ****                         {
+ 115:CAN_TX_RX_func.c ****                             #if (CY_PSOC3 || CY_PSOC5)
+ 116:CAN_TX_RX_func.c ****                                 CAN_TX_DATA_BYTE(i, j) = message->msg->byte[j];
+ 117:CAN_TX_RX_func.c ****                             #else /* CY_PSOC4 */
+ 118:CAN_TX_RX_func.c ****                                 CAN_TX_DATA_BYTE(i, j, message->msg->byte[j]);
+ 149              		.loc 1 118 0
+ 150 0082 032B     		cmp	r3, #3
+ 151 0084 13D9     		bls	.L11
+ 152              		.loc 1 118 0 is_stmt 0 discriminator 1
+ 153 0086 2001     		lsls	r0, r4, #4
+ 154 0088 324A     		ldr	r2, .L23+8
+ 155 008a 9446     		mov	ip, r2
+ 156 008c 6044     		add	r0, r0, ip
+ 157 008e 0268     		ldr	r2, [r0]
+ 158 0090 9446     		mov	ip, r2
+ 159 0092 5907     		lsls	r1, r3, #29
+ 160 0094 CA1A     		subs	r2, r1, r3
+ 161 0096 D100     		lsls	r1, r2, #3
+ 162 0098 3831     		adds	r1, r1, #56
+ 163 009a FF22     		movs	r2, #255
+ 164 009c 8A40     		lsls	r2, r2, r1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 6
+
+
+ 165 009e 6746     		mov	r7, ip
+ 166 00a0 9743     		bics	r7, r2
+ 167 00a2 F268     		ldr	r2, [r6, #12]
+ 168 00a4 D25C     		ldrb	r2, [r2, r3]
+ 169 00a6 8A40     		lsls	r2, r2, r1
+ 170 00a8 3A43     		orrs	r2, r7
+ 171 00aa 0260     		str	r2, [r0]
+ 172 00ac 12E0     		b	.L12
+ 173              	.L11:
+ 174              		.loc 1 118 0 discriminator 2
+ 175 00ae 2001     		lsls	r0, r4, #4
+ 176 00b0 274A     		ldr	r2, .L23+4
+ 177 00b2 9446     		mov	ip, r2
+ 178 00b4 6044     		add	r0, r0, ip
+ 179 00b6 8268     		ldr	r2, [r0, #8]
+ 180 00b8 9446     		mov	ip, r2
+ 181 00ba 5907     		lsls	r1, r3, #29
+ 182 00bc CA1A     		subs	r2, r1, r3
+ 183 00be D100     		lsls	r1, r2, #3
+ 184 00c0 1831     		adds	r1, r1, #24
+ 185 00c2 FF22     		movs	r2, #255
+ 186 00c4 8A40     		lsls	r2, r2, r1
+ 187 00c6 6746     		mov	r7, ip
+ 188 00c8 9743     		bics	r7, r2
+ 189 00ca F268     		ldr	r2, [r6, #12]
+ 190 00cc D25C     		ldrb	r2, [r2, r3]
+ 191 00ce 8A40     		lsls	r2, r2, r1
+ 192 00d0 3A43     		orrs	r2, r7
+ 193 00d2 8260     		str	r2, [r0, #8]
+ 194              	.L12:
+ 113:CAN_TX_RX_func.c ****                         {
+ 195              		.loc 1 113 0 is_stmt 1 discriminator 2
+ 196 00d4 0133     		adds	r3, r3, #1
+ 197              	.LVL13:
+ 198 00d6 DBB2     		uxtb	r3, r3
+ 199              	.LVL14:
+ 200              	.L10:
+ 113:CAN_TX_RX_func.c ****                         {
+ 201              		.loc 1 113 0 is_stmt 0 discriminator 1
+ 202 00d8 B279     		ldrb	r2, [r6, #6]
+ 203 00da 9342     		cmp	r3, r2
+ 204 00dc 01D2     		bcs	.L13
+ 113:CAN_TX_RX_func.c ****                         {
+ 205              		.loc 1 113 0 discriminator 3
+ 206 00de 072B     		cmp	r3, #7
+ 207 00e0 CFD9     		bls	.L14
+ 208              	.L13:
+ 119:CAN_TX_RX_func.c ****                             #endif /* CY_PSOC3 || CY_PSOC5 */
+ 120:CAN_TX_RX_func.c ****                         }
+ 121:CAN_TX_RX_func.c **** 
+ 122:CAN_TX_RX_func.c ****                         /* Disable isr */
+ 123:CAN_TX_RX_func.c ****     CyIntDisable(CAN_ISR_NUMBER);
+ 209              		.loc 1 123 0 is_stmt 1
+ 210 00e2 1B20     		movs	r0, #27
+ 211 00e4 FFF7FEFF 		bl	CyIntDisable
+ 212              	.LVL15:
+ 124:CAN_TX_RX_func.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 7
+
+
+ 125:CAN_TX_RX_func.c ****                         /* WPN[23] and WPN[3] set to 1 for write to CAN Control reg */
+ 126:CAN_TX_RX_func.c ****                         CY_SET_REG32(CAN_TX_CMD_PTR(i), (regTemp | CAN_TX_WPN_SET));
+ 213              		.loc 1 126 0
+ 214 00e8 2301     		lsls	r3, r4, #4
+ 215 00ea 194A     		ldr	r2, .L23+4
+ 216 00ec 9446     		mov	ip, r2
+ 217 00ee 6344     		add	r3, r3, ip
+ 218 00f0 194A     		ldr	r2, .L23+12
+ 219 00f2 4F46     		mov	r7, r9
+ 220 00f4 1743     		orrs	r7, r2
+ 221 00f6 1F60     		str	r7, [r3]
+ 127:CAN_TX_RX_func.c **** 
+ 128:CAN_TX_RX_func.c ****                         #if (CY_PSOC3 || CY_PSOC5)
+ 129:CAN_TX_RX_func.c ****                             CY_SET_REG32(CAN_TX_CMD_PTR(i), CAN_SEND_MESSAGE);
+ 130:CAN_TX_RX_func.c ****                         #else /* CY_PSOC4 */
+ 131:CAN_TX_RX_func.c ****                             if (message->sst != CAN_STANDARD_MESSAGE)
+ 222              		.loc 1 131 0
+ 223 00f8 327A     		ldrb	r2, [r6, #8]
+ 224 00fa 002A     		cmp	r2, #0
+ 225 00fc 04D0     		beq	.L15
+ 132:CAN_TX_RX_func.c ****                             {
+ 133:CAN_TX_RX_func.c ****                                 /* Single Shot Transmission */
+ 134:CAN_TX_RX_func.c ****                                 CAN_TX_CMD_REG(i) |= CAN_SEND_MESSAGE |
+ 226              		.loc 1 134 0
+ 227 00fe 1968     		ldr	r1, [r3]
+ 228 0100 0322     		movs	r2, #3
+ 229 0102 0A43     		orrs	r2, r1
+ 230 0104 1A60     		str	r2, [r3]
+ 231 0106 03E0     		b	.L16
+ 232              	.L15:
+ 135:CAN_TX_RX_func.c ****                                 CAN_TX_ABORT_MASK;
+ 136:CAN_TX_RX_func.c ****                             }
+ 137:CAN_TX_RX_func.c ****                             else
+ 138:CAN_TX_RX_func.c ****                             {
+ 139:CAN_TX_RX_func.c ****                                 CAN_TX_CMD_REG(i) |= CAN_SEND_MESSAGE;
+ 233              		.loc 1 139 0
+ 234 0108 1968     		ldr	r1, [r3]
+ 235 010a 0122     		movs	r2, #1
+ 236 010c 0A43     		orrs	r2, r1
+ 237 010e 1A60     		str	r2, [r3]
+ 238              	.L16:
+ 140:CAN_TX_RX_func.c ****                             }
+ 141:CAN_TX_RX_func.c ****                         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 142:CAN_TX_RX_func.c **** 
+ 143:CAN_TX_RX_func.c ****                         /* Enable isr */
+ 144:CAN_TX_RX_func.c ****     CyIntEnable(CAN_ISR_NUMBER);
+ 239              		.loc 1 144 0
+ 240 0110 1B20     		movs	r0, #27
+ 241 0112 FFF7FEFF 		bl	CyIntEnable
+ 242              	.LVL16:
+ 145:CAN_TX_RX_func.c **** 
+ 146:CAN_TX_RX_func.c ****                         result = CYRET_SUCCESS;
+ 243              		.loc 1 146 0
+ 244 0116 0020     		movs	r0, #0
+ 245              	.LVL17:
+ 246              	.L3:
+ 147:CAN_TX_RX_func.c ****                     }
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 8
+
+
+ 148:CAN_TX_RX_func.c ****             }
+ 149:CAN_TX_RX_func.c ****             shift <<= 1u;
+ 247              		.loc 1 149 0
+ 248 0118 6D00     		lsls	r5, r5, #1
+ 249              	.LVL18:
+ 250 011a EDB2     		uxtb	r5, r5
+ 251              	.LVL19:
+ 150:CAN_TX_RX_func.c ****             if (result == CYRET_SUCCESS)
+ 252              		.loc 1 150 0
+ 253 011c 0028     		cmp	r0, #0
+ 254 011e 07D0     		beq	.L17
+  68:CAN_TX_RX_func.c ****         {
+ 255              		.loc 1 68 0 discriminator 2
+ 256 0120 0134     		adds	r4, r4, #1
+ 257              	.LVL20:
+ 258 0122 E4B2     		uxtb	r4, r4
+ 259              	.LVL21:
+ 260 0124 01E0     		b	.L20
+ 261              	.LVL22:
+ 262              	.L22:
+ 263 0126 0125     		movs	r5, #1
+ 264 0128 0024     		movs	r4, #0
+ 265              	.L20:
+ 266              	.LVL23:
+  68:CAN_TX_RX_func.c ****         {
+ 267              		.loc 1 68 0 is_stmt 0 discriminator 1
+ 268 012a 072C     		cmp	r4, #7
+ 269 012c 00D8     		bhi	.LCB273
+ 270 012e 70E7     		b	.L18	@long jump
+ 271              	.LCB273:
+ 272              	.L17:
+ 151:CAN_TX_RX_func.c ****             {
+ 152:CAN_TX_RX_func.c ****                 break;
+ 153:CAN_TX_RX_func.c ****             }
+ 154:CAN_TX_RX_func.c ****         }
+ 155:CAN_TX_RX_func.c ****         if (result == CYRET_SUCCESS)
+ 273              		.loc 1 155 0 is_stmt 1
+ 274 0130 0028     		cmp	r0, #0
+ 275 0132 06D0     		beq	.L19
+ 156:CAN_TX_RX_func.c ****         {
+ 157:CAN_TX_RX_func.c ****             break;
+ 158:CAN_TX_RX_func.c ****         }
+ 159:CAN_TX_RX_func.c ****         else
+ 160:CAN_TX_RX_func.c ****         {
+ 161:CAN_TX_RX_func.c ****             retry++;
+ 276              		.loc 1 161 0
+ 277 0134 4346     		mov	r3, r8
+ 278 0136 0133     		adds	r3, r3, #1
+ 279 0138 DBB2     		uxtb	r3, r3
+ 280 013a 9846     		mov	r8, r3
+ 281              	.LVL24:
+ 282              	.L2:
+  65:CAN_TX_RX_func.c ****     {
+ 283              		.loc 1 65 0
+ 284 013c 4346     		mov	r3, r8
+ 285 013e 022B     		cmp	r3, #2
+ 286 0140 F1D9     		bls	.L22
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 9
+
+
+ 287              	.L19:
+ 162:CAN_TX_RX_func.c ****         }
+ 163:CAN_TX_RX_func.c ****     }
+ 164:CAN_TX_RX_func.c **** 
+ 165:CAN_TX_RX_func.c ****     return (result);
+ 166:CAN_TX_RX_func.c **** }
+ 288              		.loc 1 166 0
+ 289              		@ sp needed
+ 290              	.LVL25:
+ 291              	.LVL26:
+ 292 0142 0CBC     		pop	{r2, r3}
+ 293 0144 9046     		mov	r8, r2
+ 294 0146 9946     		mov	r9, r3
+ 295 0148 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 296              	.L24:
+ 297 014a C046     		.align	2
+ 298              	.L23:
+ 299 014c 08002E40 		.word	1076756488
+ 300 0150 20002E40 		.word	1076756512
+ 301 0154 2C002E40 		.word	1076756524
+ 302 0158 08008000 		.word	8388616
+ 303              		.cfi_endproc
+ 304              	.LFE1:
+ 305              		.size	CAN_SendMsg, .-CAN_SendMsg
+ 306              		.section	.text.CAN_TxCancel,"ax",%progbits
+ 307              		.align	2
+ 308              		.global	CAN_TxCancel
+ 309              		.code	16
+ 310              		.thumb_func
+ 311              		.type	CAN_TxCancel, %function
+ 312              	CAN_TxCancel:
+ 313              	.LFB2:
+ 167:CAN_TX_RX_func.c **** 
+ 168:CAN_TX_RX_func.c **** 
+ 169:CAN_TX_RX_func.c **** /*******************************************************************************
+ 170:CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_TxCancel
+ 171:CAN_TX_RX_func.c **** ********************************************************************************
+ 172:CAN_TX_RX_func.c **** *
+ 173:CAN_TX_RX_func.c **** * Summary:
+ 174:CAN_TX_RX_func.c **** *  This function cancels transmission of a message that has been queued to be
+ 175:CAN_TX_RX_func.c **** *  transmitted. Values between 0 and 7 are valid.
+ 176:CAN_TX_RX_func.c **** *
+ 177:CAN_TX_RX_func.c **** * Parameters:
+ 178:CAN_TX_RX_func.c **** *  bufferId: The mailbox number.
+ 179:CAN_TX_RX_func.c **** *
+ 180:CAN_TX_RX_func.c **** * Return:
+ 181:CAN_TX_RX_func.c **** *  None.
+ 182:CAN_TX_RX_func.c **** *
+ 183:CAN_TX_RX_func.c **** *******************************************************************************/
+ 184:CAN_TX_RX_func.c **** void CAN_TxCancel(uint8 bufferId) 
+ 185:CAN_TX_RX_func.c **** {
+ 314              		.loc 1 185 0
+ 315              		.cfi_startproc
+ 316              		@ args = 0, pretend = 0, frame = 0
+ 317              		@ frame_needed = 0, uses_anonymous_args = 0
+ 318              		@ link register save eliminated.
+ 319              	.LVL27:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 10
+
+
+ 186:CAN_TX_RX_func.c ****     if (bufferId < CAN_NUMBER_OF_TX_MAILBOXES)
+ 320              		.loc 1 186 0
+ 321 0000 0728     		cmp	r0, #7
+ 322 0002 09D8     		bhi	.L25
+ 187:CAN_TX_RX_func.c ****     {
+ 188:CAN_TX_RX_func.c ****         CAN_TX_ABORT_MESSAGE(bufferId);
+ 323              		.loc 1 188 0
+ 324 0004 0001     		lsls	r0, r0, #4
+ 325              	.LVL28:
+ 326 0006 054B     		ldr	r3, .L27
+ 327 0008 9C46     		mov	ip, r3
+ 328 000a 6044     		add	r0, r0, ip
+ 329 000c 0368     		ldr	r3, [r0]
+ 330 000e 0322     		movs	r2, #3
+ 331 0010 9343     		bics	r3, r2
+ 332 0012 013A     		subs	r2, r2, #1
+ 333 0014 1343     		orrs	r3, r2
+ 334 0016 0360     		str	r3, [r0]
+ 335              	.L25:
+ 189:CAN_TX_RX_func.c ****     }
+ 190:CAN_TX_RX_func.c **** }
+ 336              		.loc 1 190 0
+ 337              		@ sp needed
+ 338 0018 7047     		bx	lr
+ 339              	.L28:
+ 340 001a C046     		.align	2
+ 341              	.L27:
+ 342 001c 20002E40 		.word	1076756512
+ 343              		.cfi_endproc
+ 344              	.LFE2:
+ 345              		.size	CAN_TxCancel, .-CAN_TxCancel
+ 346              		.section	.text.CAN_SendMsg0,"ax",%progbits
+ 347              		.align	2
+ 348              		.global	CAN_SendMsg0
+ 349              		.code	16
+ 350              		.thumb_func
+ 351              		.type	CAN_SendMsg0, %function
+ 352              	CAN_SendMsg0:
+ 353              	.LFB3:
+ 191:CAN_TX_RX_func.c **** 
+ 192:CAN_TX_RX_func.c **** 
+ 193:CAN_TX_RX_func.c **** #if (CAN_TX0_FUNC_ENABLE)
+ 194:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 195:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg0
+ 196:CAN_TX_RX_func.c ****     ********************************************************************************
+ 197:CAN_TX_RX_func.c ****     *
+ 198:CAN_TX_RX_func.c ****     * Summary:
+ 199:CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 0. The function checks
+ 200:CAN_TX_RX_func.c ****     *  if mailbox 0 doesn't already have un-transmitted messages waiting for
+ 201:CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 202:CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 203:CAN_TX_RX_func.c ****     *
+ 204:CAN_TX_RX_func.c ****     * Parameters:
+ 205:CAN_TX_RX_func.c ****     *  None.
+ 206:CAN_TX_RX_func.c ****     *
+ 207:CAN_TX_RX_func.c ****     * Return:
+ 208:CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 11
+
+
+ 209:CAN_TX_RX_func.c ****     *   Define                             Description
+ 210:CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 211:CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 212:CAN_TX_RX_func.c ****     *
+ 213:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 214:CAN_TX_RX_func.c ****     uint8 CAN_SendMsg0(void) 
+ 215:CAN_TX_RX_func.c ****     {
+ 354              		.loc 1 215 0
+ 355              		.cfi_startproc
+ 356              		@ args = 0, pretend = 0, frame = 0
+ 357              		@ frame_needed = 0, uses_anonymous_args = 0
+ 358 0000 70B5     		push	{r4, r5, r6, lr}
+ 359              		.cfi_def_cfa_offset 16
+ 360              		.cfi_offset 4, -16
+ 361              		.cfi_offset 5, -12
+ 362              		.cfi_offset 6, -8
+ 363              		.cfi_offset 14, -4
+ 364              	.LVL29:
+ 216:CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 217:CAN_TX_RX_func.c **** 
+ 218:CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 219:CAN_TX_RX_func.c ****             if ((CAN_TX[0u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 220:CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 221:CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(0u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 365              		.loc 1 221 0
+ 366 0002 234B     		ldr	r3, .L32
+ 367 0004 1B68     		ldr	r3, [r3]
+ 368 0006 DB07     		lsls	r3, r3, #31
+ 369 0008 3FD4     		bmi	.L31
+ 222:CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 223:CAN_TX_RX_func.c ****             {
+ 224:CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 225:CAN_TX_RX_func.c ****             }
+ 226:CAN_TX_RX_func.c ****             else
+ 227:CAN_TX_RX_func.c ****             {
+ 228:CAN_TX_RX_func.c ****                 /* `#START MESSAGE_0_TRASMITTED` */
+ 229:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(0,0,dato_enviado[0]);
+ 370              		.loc 1 229 0
+ 371 000a 224B     		ldr	r3, .L32+4
+ 372 000c 1968     		ldr	r1, [r3]
+ 373 000e 0902     		lsls	r1, r1, #8
+ 374 0010 090A     		lsrs	r1, r1, #8
+ 375 0012 214A     		ldr	r2, .L32+8
+ 376 0014 1078     		ldrb	r0, [r2]
+ 377 0016 0006     		lsls	r0, r0, #24
+ 378 0018 0143     		orrs	r1, r0
+ 379 001a 1960     		str	r1, [r3]
+ 230:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(0,1,dato_enviado[1]);
+ 380              		.loc 1 230 0
+ 381 001c 1968     		ldr	r1, [r3]
+ 382 001e 1F48     		ldr	r0, .L32+12
+ 383 0020 0140     		ands	r1, r0
+ 384 0022 0C00     		movs	r4, r1
+ 385 0024 5178     		ldrb	r1, [r2, #1]
+ 386 0026 0904     		lsls	r1, r1, #16
+ 387 0028 2143     		orrs	r1, r4
+ 388 002a 1960     		str	r1, [r3]
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 12
+
+
+ 231:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(0,2,dato_enviado[2]);
+ 389              		.loc 1 231 0
+ 390 002c 1C68     		ldr	r4, [r3]
+ 391 002e 1C49     		ldr	r1, .L32+16
+ 392 0030 0C40     		ands	r4, r1
+ 393 0032 2500     		movs	r5, r4
+ 394 0034 9478     		ldrb	r4, [r2, #2]
+ 395 0036 2402     		lsls	r4, r4, #8
+ 396 0038 2C43     		orrs	r4, r5
+ 397 003a 1C60     		str	r4, [r3]
+ 232:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(0,3,dato_enviado[3]);
+ 398              		.loc 1 232 0
+ 399 003c 1C68     		ldr	r4, [r3]
+ 400 003e FF26     		movs	r6, #255
+ 401 0040 B443     		bics	r4, r6
+ 402 0042 D578     		ldrb	r5, [r2, #3]
+ 403 0044 2C43     		orrs	r4, r5
+ 404 0046 1C60     		str	r4, [r3]
+ 233:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(0,4,dato_enviado[4]);
+ 405              		.loc 1 233 0
+ 406 0048 164B     		ldr	r3, .L32+20
+ 407 004a 1C68     		ldr	r4, [r3]
+ 408 004c 2402     		lsls	r4, r4, #8
+ 409 004e 240A     		lsrs	r4, r4, #8
+ 410 0050 1579     		ldrb	r5, [r2, #4]
+ 411 0052 2D06     		lsls	r5, r5, #24
+ 412 0054 2C43     		orrs	r4, r5
+ 413 0056 1C60     		str	r4, [r3]
+ 234:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(0,5,dato_enviado[5]);
+ 414              		.loc 1 234 0
+ 415 0058 1C68     		ldr	r4, [r3]
+ 416 005a 2040     		ands	r0, r4
+ 417 005c 5479     		ldrb	r4, [r2, #5]
+ 418 005e 2404     		lsls	r4, r4, #16
+ 419 0060 2043     		orrs	r0, r4
+ 420 0062 1860     		str	r0, [r3]
+ 235:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(0,6,dato_enviado[6]);
+ 421              		.loc 1 235 0
+ 422 0064 1868     		ldr	r0, [r3]
+ 423 0066 0140     		ands	r1, r0
+ 424 0068 9079     		ldrb	r0, [r2, #6]
+ 425 006a 0002     		lsls	r0, r0, #8
+ 426 006c 0143     		orrs	r1, r0
+ 427 006e 1960     		str	r1, [r3]
+ 236:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(0,7,dato_enviado[7]);                           
+ 428              		.loc 1 236 0
+ 429 0070 1868     		ldr	r0, [r3]
+ 430 0072 B043     		bics	r0, r6
+ 431 0074 D179     		ldrb	r1, [r2, #7]
+ 432 0076 0200     		movs	r2, r0
+ 433 0078 0A43     		orrs	r2, r1
+ 434 007a 1A60     		str	r2, [r3]
+ 237:CAN_TX_RX_func.c ****                 /* `#END` */
+ 238:CAN_TX_RX_func.c **** 
+ 239:CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_0_CALLBACK
+ 240:CAN_TX_RX_func.c ****                     CAN_SendMsg_0_Callback();
+ 241:CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_0_CALLBACK */
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 13
+
+
+ 242:CAN_TX_RX_func.c **** 
+ 243:CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(0u),
+ 435              		.loc 1 243 0
+ 436 007c 044A     		ldr	r2, .L32
+ 437 007e 1168     		ldr	r1, [r2]
+ 438 0080 0123     		movs	r3, #1
+ 439 0082 0B43     		orrs	r3, r1
+ 440 0084 1360     		str	r3, [r2]
+ 216:CAN_TX_RX_func.c **** 
+ 441              		.loc 1 216 0
+ 442 0086 0020     		movs	r0, #0
+ 443 0088 00E0     		b	.L30
+ 444              	.L31:
+ 224:CAN_TX_RX_func.c ****             }
+ 445              		.loc 1 224 0
+ 446 008a 0120     		movs	r0, #1
+ 447              	.L30:
+ 448              	.LVL30:
+ 244:CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(0u)) | CAN_SEND_MESSAGE);
+ 245:CAN_TX_RX_func.c ****             }
+ 246:CAN_TX_RX_func.c **** 
+ 247:CAN_TX_RX_func.c ****         return (result);
+ 248:CAN_TX_RX_func.c ****     }
+ 449              		.loc 1 248 0
+ 450              		@ sp needed
+ 451 008c 70BD     		pop	{r4, r5, r6, pc}
+ 452              	.L33:
+ 453 008e C046     		.align	2
+ 454              	.L32:
+ 455 0090 20002E40 		.word	1076756512
+ 456 0094 28002E40 		.word	1076756520
+ 457 0098 00000000 		.word	dato_enviado
+ 458 009c FFFF00FF 		.word	-16711681
+ 459 00a0 FF00FFFF 		.word	-65281
+ 460 00a4 2C002E40 		.word	1076756524
+ 461              		.cfi_endproc
+ 462              	.LFE3:
+ 463              		.size	CAN_SendMsg0, .-CAN_SendMsg0
+ 464              		.section	.text.CAN_SendMsg1,"ax",%progbits
+ 465              		.align	2
+ 466              		.global	CAN_SendMsg1
+ 467              		.code	16
+ 468              		.thumb_func
+ 469              		.type	CAN_SendMsg1, %function
+ 470              	CAN_SendMsg1:
+ 471              	.LFB4:
+ 249:CAN_TX_RX_func.c **** #endif /* CAN_TX0_FUNC_ENABLE */
+ 250:CAN_TX_RX_func.c **** 
+ 251:CAN_TX_RX_func.c **** 
+ 252:CAN_TX_RX_func.c **** #if (CAN_TX1_FUNC_ENABLE)
+ 253:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 254:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg1
+ 255:CAN_TX_RX_func.c ****     ********************************************************************************
+ 256:CAN_TX_RX_func.c ****     *
+ 257:CAN_TX_RX_func.c ****     * Summary:
+ 258:CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 1. The function checks
+ 259:CAN_TX_RX_func.c ****     *  if mailbox 1 doesn't already have un-transmitted messages waiting for
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 14
+
+
+ 260:CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 261:CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 262:CAN_TX_RX_func.c ****     *
+ 263:CAN_TX_RX_func.c ****     * Parameters:
+ 264:CAN_TX_RX_func.c ****     *  None.
+ 265:CAN_TX_RX_func.c ****     *
+ 266:CAN_TX_RX_func.c ****     * Return:
+ 267:CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 268:CAN_TX_RX_func.c ****     *   Define                             Description
+ 269:CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 270:CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 271:CAN_TX_RX_func.c ****     *
+ 272:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 273:CAN_TX_RX_func.c ****     uint8 CAN_SendMsg1(void) 
+ 274:CAN_TX_RX_func.c ****     {
+ 472              		.loc 1 274 0
+ 473              		.cfi_startproc
+ 474              		@ args = 0, pretend = 0, frame = 0
+ 475              		@ frame_needed = 0, uses_anonymous_args = 0
+ 476 0000 70B5     		push	{r4, r5, r6, lr}
+ 477              		.cfi_def_cfa_offset 16
+ 478              		.cfi_offset 4, -16
+ 479              		.cfi_offset 5, -12
+ 480              		.cfi_offset 6, -8
+ 481              		.cfi_offset 14, -4
+ 482              	.LVL31:
+ 275:CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 276:CAN_TX_RX_func.c **** 
+ 277:CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 278:CAN_TX_RX_func.c ****             if ((CAN_TX[1u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 279:CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 280:CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(1u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 483              		.loc 1 280 0
+ 484 0002 234B     		ldr	r3, .L37
+ 485 0004 1B68     		ldr	r3, [r3]
+ 486 0006 DB07     		lsls	r3, r3, #31
+ 487 0008 3FD4     		bmi	.L36
+ 281:CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 282:CAN_TX_RX_func.c ****             {
+ 283:CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 284:CAN_TX_RX_func.c ****             }
+ 285:CAN_TX_RX_func.c ****             else
+ 286:CAN_TX_RX_func.c ****             {
+ 287:CAN_TX_RX_func.c ****                 /* `#START MESSAGE_1_TRASMITTED` */
+ 288:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(1,0,dato_enviado_1[0]);
+ 488              		.loc 1 288 0
+ 489 000a 224B     		ldr	r3, .L37+4
+ 490 000c 1968     		ldr	r1, [r3]
+ 491 000e 0902     		lsls	r1, r1, #8
+ 492 0010 090A     		lsrs	r1, r1, #8
+ 493 0012 214A     		ldr	r2, .L37+8
+ 494 0014 1078     		ldrb	r0, [r2]
+ 495 0016 0006     		lsls	r0, r0, #24
+ 496 0018 0143     		orrs	r1, r0
+ 497 001a 1960     		str	r1, [r3]
+ 289:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(1,1,dato_enviado_1[1]);
+ 498              		.loc 1 289 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 15
+
+
+ 499 001c 1968     		ldr	r1, [r3]
+ 500 001e 1F48     		ldr	r0, .L37+12
+ 501 0020 0140     		ands	r1, r0
+ 502 0022 0C00     		movs	r4, r1
+ 503 0024 5178     		ldrb	r1, [r2, #1]
+ 504 0026 0904     		lsls	r1, r1, #16
+ 505 0028 2143     		orrs	r1, r4
+ 506 002a 1960     		str	r1, [r3]
+ 290:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(1,2,dato_enviado_1[2]);
+ 507              		.loc 1 290 0
+ 508 002c 1C68     		ldr	r4, [r3]
+ 509 002e 1C49     		ldr	r1, .L37+16
+ 510 0030 0C40     		ands	r4, r1
+ 511 0032 2500     		movs	r5, r4
+ 512 0034 9478     		ldrb	r4, [r2, #2]
+ 513 0036 2402     		lsls	r4, r4, #8
+ 514 0038 2C43     		orrs	r4, r5
+ 515 003a 1C60     		str	r4, [r3]
+ 291:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(1,3,dato_enviado_1[3]);
+ 516              		.loc 1 291 0
+ 517 003c 1C68     		ldr	r4, [r3]
+ 518 003e FF26     		movs	r6, #255
+ 519 0040 B443     		bics	r4, r6
+ 520 0042 D578     		ldrb	r5, [r2, #3]
+ 521 0044 2C43     		orrs	r4, r5
+ 522 0046 1C60     		str	r4, [r3]
+ 292:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(1,4,dato_enviado_1[4]);
+ 523              		.loc 1 292 0
+ 524 0048 164B     		ldr	r3, .L37+20
+ 525 004a 1C68     		ldr	r4, [r3]
+ 526 004c 2402     		lsls	r4, r4, #8
+ 527 004e 240A     		lsrs	r4, r4, #8
+ 528 0050 1579     		ldrb	r5, [r2, #4]
+ 529 0052 2D06     		lsls	r5, r5, #24
+ 530 0054 2C43     		orrs	r4, r5
+ 531 0056 1C60     		str	r4, [r3]
+ 293:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(1,5,dato_enviado_1[5]);
+ 532              		.loc 1 293 0
+ 533 0058 1C68     		ldr	r4, [r3]
+ 534 005a 2040     		ands	r0, r4
+ 535 005c 5479     		ldrb	r4, [r2, #5]
+ 536 005e 2404     		lsls	r4, r4, #16
+ 537 0060 2043     		orrs	r0, r4
+ 538 0062 1860     		str	r0, [r3]
+ 294:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(1,6,dato_enviado_1[6]);
+ 539              		.loc 1 294 0
+ 540 0064 1868     		ldr	r0, [r3]
+ 541 0066 0140     		ands	r1, r0
+ 542 0068 9079     		ldrb	r0, [r2, #6]
+ 543 006a 0002     		lsls	r0, r0, #8
+ 544 006c 0143     		orrs	r1, r0
+ 545 006e 1960     		str	r1, [r3]
+ 295:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(1,7,dato_enviado_1[7]);
+ 546              		.loc 1 295 0
+ 547 0070 1868     		ldr	r0, [r3]
+ 548 0072 B043     		bics	r0, r6
+ 549 0074 D179     		ldrb	r1, [r2, #7]
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 16
+
+
+ 550 0076 0200     		movs	r2, r0
+ 551 0078 0A43     		orrs	r2, r1
+ 552 007a 1A60     		str	r2, [r3]
+ 296:CAN_TX_RX_func.c ****                 /* `#END` */
+ 297:CAN_TX_RX_func.c **** 
+ 298:CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_1_CALLBACK
+ 299:CAN_TX_RX_func.c ****                     CAN_SendMsg_1_Callback();
+ 300:CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_1_CALLBACK */
+ 301:CAN_TX_RX_func.c **** 
+ 302:CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(1u),
+ 553              		.loc 1 302 0
+ 554 007c 044A     		ldr	r2, .L37
+ 555 007e 1168     		ldr	r1, [r2]
+ 556 0080 0123     		movs	r3, #1
+ 557 0082 0B43     		orrs	r3, r1
+ 558 0084 1360     		str	r3, [r2]
+ 275:CAN_TX_RX_func.c **** 
+ 559              		.loc 1 275 0
+ 560 0086 0020     		movs	r0, #0
+ 561 0088 00E0     		b	.L35
+ 562              	.L36:
+ 283:CAN_TX_RX_func.c ****             }
+ 563              		.loc 1 283 0
+ 564 008a 0120     		movs	r0, #1
+ 565              	.L35:
+ 566              	.LVL32:
+ 303:CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(1u)) | CAN_SEND_MESSAGE);
+ 304:CAN_TX_RX_func.c ****             }
+ 305:CAN_TX_RX_func.c **** 
+ 306:CAN_TX_RX_func.c ****         return (result);
+ 307:CAN_TX_RX_func.c ****     }
+ 567              		.loc 1 307 0
+ 568              		@ sp needed
+ 569 008c 70BD     		pop	{r4, r5, r6, pc}
+ 570              	.L38:
+ 571 008e C046     		.align	2
+ 572              	.L37:
+ 573 0090 30002E40 		.word	1076756528
+ 574 0094 38002E40 		.word	1076756536
+ 575 0098 00000000 		.word	dato_enviado_1
+ 576 009c FFFF00FF 		.word	-16711681
+ 577 00a0 FF00FFFF 		.word	-65281
+ 578 00a4 3C002E40 		.word	1076756540
+ 579              		.cfi_endproc
+ 580              	.LFE4:
+ 581              		.size	CAN_SendMsg1, .-CAN_SendMsg1
+ 582              		.section	.text.CAN_SendMsg4,"ax",%progbits
+ 583              		.align	2
+ 584              		.global	CAN_SendMsg4
+ 585              		.code	16
+ 586              		.thumb_func
+ 587              		.type	CAN_SendMsg4, %function
+ 588              	CAN_SendMsg4:
+ 589              	.LFB5:
+ 308:CAN_TX_RX_func.c **** #endif /* CAN_TX1_FUNC_ENABLE */
+ 309:CAN_TX_RX_func.c **** 
+ 310:CAN_TX_RX_func.c **** 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 17
+
+
+ 311:CAN_TX_RX_func.c **** #if (CAN_TX2_FUNC_ENABLE)
+ 312:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 313:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg2
+ 314:CAN_TX_RX_func.c ****     ********************************************************************************
+ 315:CAN_TX_RX_func.c ****     *
+ 316:CAN_TX_RX_func.c ****     * Summary:
+ 317:CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 2. The function checks
+ 318:CAN_TX_RX_func.c ****     *  if mailbox 2 doesn't already have un-transmitted messages waiting for
+ 319:CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 320:CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 321:CAN_TX_RX_func.c ****     *
+ 322:CAN_TX_RX_func.c ****     * Parameters:
+ 323:CAN_TX_RX_func.c ****     *  None.
+ 324:CAN_TX_RX_func.c ****     *
+ 325:CAN_TX_RX_func.c ****     * Return:
+ 326:CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 327:CAN_TX_RX_func.c ****     *   Define                             Description
+ 328:CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 329:CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 330:CAN_TX_RX_func.c ****     *
+ 331:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 332:CAN_TX_RX_func.c ****     uint8 CAN_SendMsg2(void) 
+ 333:CAN_TX_RX_func.c ****     {
+ 334:CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 335:CAN_TX_RX_func.c **** 
+ 336:CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 337:CAN_TX_RX_func.c ****             if ((CAN_TX[2u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 338:CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 339:CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(2u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 340:CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 341:CAN_TX_RX_func.c ****             {
+ 342:CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 343:CAN_TX_RX_func.c ****             }
+ 344:CAN_TX_RX_func.c ****             else
+ 345:CAN_TX_RX_func.c ****             {
+ 346:CAN_TX_RX_func.c ****                 /* `#START MESSAGE_2_TRASMITTED` */
+ 347:CAN_TX_RX_func.c **** 
+ 348:CAN_TX_RX_func.c ****                 /* `#END` */
+ 349:CAN_TX_RX_func.c **** 
+ 350:CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_2_CALLBACK
+ 351:CAN_TX_RX_func.c ****                     CAN_SendMsg_2_Callback();
+ 352:CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_2_CALLBACK */
+ 353:CAN_TX_RX_func.c **** 
+ 354:CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(2u),
+ 355:CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(2u)) | CAN_SEND_MESSAGE);
+ 356:CAN_TX_RX_func.c ****             }
+ 357:CAN_TX_RX_func.c **** 
+ 358:CAN_TX_RX_func.c ****         return (result);
+ 359:CAN_TX_RX_func.c ****     }
+ 360:CAN_TX_RX_func.c **** #endif /* CAN_TX2_FUNC_ENABLE */
+ 361:CAN_TX_RX_func.c **** 
+ 362:CAN_TX_RX_func.c **** 
+ 363:CAN_TX_RX_func.c **** #if (CAN_TX3_FUNC_ENABLE)
+ 364:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 365:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg3
+ 366:CAN_TX_RX_func.c ****     ********************************************************************************
+ 367:CAN_TX_RX_func.c ****     *
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 18
+
+
+ 368:CAN_TX_RX_func.c ****     * Summary:
+ 369:CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 3. The function checks
+ 370:CAN_TX_RX_func.c ****     *  if mailbox 3 doesn't already have un-transmitted messages waiting for
+ 371:CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 372:CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 373:CAN_TX_RX_func.c ****     *
+ 374:CAN_TX_RX_func.c ****     * Parameters:
+ 375:CAN_TX_RX_func.c ****     *  None.
+ 376:CAN_TX_RX_func.c ****     *
+ 377:CAN_TX_RX_func.c ****     * Return:
+ 378:CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 379:CAN_TX_RX_func.c ****     *   Define                             Description
+ 380:CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 381:CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 382:CAN_TX_RX_func.c ****     *
+ 383:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 384:CAN_TX_RX_func.c ****     uint8 CAN_SendMsg3(void) 
+ 385:CAN_TX_RX_func.c ****     {
+ 386:CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 387:CAN_TX_RX_func.c **** 
+ 388:CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 389:CAN_TX_RX_func.c ****             if ((CAN_TX[3u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 390:CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 391:CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(3u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 392:CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 393:CAN_TX_RX_func.c ****             {
+ 394:CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 395:CAN_TX_RX_func.c ****             }
+ 396:CAN_TX_RX_func.c ****             else
+ 397:CAN_TX_RX_func.c ****             {
+ 398:CAN_TX_RX_func.c ****                 /* `#START MESSAGE_3_TRASMITTED` */
+ 399:CAN_TX_RX_func.c **** 
+ 400:CAN_TX_RX_func.c ****                 /* `#END` */
+ 401:CAN_TX_RX_func.c **** 
+ 402:CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_3_CALLBACK
+ 403:CAN_TX_RX_func.c ****                     CAN_SendMsg_3_Callback();
+ 404:CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_3_CALLBACK */
+ 405:CAN_TX_RX_func.c **** 
+ 406:CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(3u),
+ 407:CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(3u)) | CAN_SEND_MESSAGE);
+ 408:CAN_TX_RX_func.c ****             }
+ 409:CAN_TX_RX_func.c **** 
+ 410:CAN_TX_RX_func.c ****         return (result);
+ 411:CAN_TX_RX_func.c ****     }
+ 412:CAN_TX_RX_func.c **** #endif /* CAN_TX3_FUNC_ENABLE */
+ 413:CAN_TX_RX_func.c **** 
+ 414:CAN_TX_RX_func.c **** 
+ 415:CAN_TX_RX_func.c **** #if (CAN_TX4_FUNC_ENABLE)
+ 416:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 417:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg4
+ 418:CAN_TX_RX_func.c ****     ********************************************************************************
+ 419:CAN_TX_RX_func.c ****     *
+ 420:CAN_TX_RX_func.c ****     * Summary:
+ 421:CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 4. The function checks
+ 422:CAN_TX_RX_func.c ****     *  if mailbox 4 doesn't already have un-transmitted messages waiting for
+ 423:CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 424:CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 19
+
+
+ 425:CAN_TX_RX_func.c ****     *
+ 426:CAN_TX_RX_func.c ****     * Parameters:
+ 427:CAN_TX_RX_func.c ****     *  None.
+ 428:CAN_TX_RX_func.c ****     *
+ 429:CAN_TX_RX_func.c ****     * Return:
+ 430:CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 431:CAN_TX_RX_func.c ****     *   Define                             Description
+ 432:CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 433:CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 434:CAN_TX_RX_func.c ****     *
+ 435:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 436:CAN_TX_RX_func.c ****     uint8 CAN_SendMsg4(void) 
+ 437:CAN_TX_RX_func.c ****     {
+ 590              		.loc 1 437 0
+ 591              		.cfi_startproc
+ 592              		@ args = 0, pretend = 0, frame = 0
+ 593              		@ frame_needed = 0, uses_anonymous_args = 0
+ 594 0000 70B5     		push	{r4, r5, r6, lr}
+ 595              		.cfi_def_cfa_offset 16
+ 596              		.cfi_offset 4, -16
+ 597              		.cfi_offset 5, -12
+ 598              		.cfi_offset 6, -8
+ 599              		.cfi_offset 14, -4
+ 600              	.LVL33:
+ 438:CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 439:CAN_TX_RX_func.c **** 
+ 440:CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 441:CAN_TX_RX_func.c ****             if ((CAN_TX[4u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 442:CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 443:CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(4u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 601              		.loc 1 443 0
+ 602 0002 234B     		ldr	r3, .L42
+ 603 0004 1B68     		ldr	r3, [r3]
+ 604 0006 DB07     		lsls	r3, r3, #31
+ 605 0008 3FD4     		bmi	.L41
+ 444:CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 445:CAN_TX_RX_func.c ****             {
+ 446:CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 447:CAN_TX_RX_func.c ****             }
+ 448:CAN_TX_RX_func.c ****             else
+ 449:CAN_TX_RX_func.c ****             {
+ 450:CAN_TX_RX_func.c ****                 /* `#START MESSAGE_4_TRASMITTED` */
+ 451:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(4,0,dato_enviado_1[0]);
+ 606              		.loc 1 451 0
+ 607 000a 224B     		ldr	r3, .L42+4
+ 608 000c 1968     		ldr	r1, [r3]
+ 609 000e 0902     		lsls	r1, r1, #8
+ 610 0010 090A     		lsrs	r1, r1, #8
+ 611 0012 214A     		ldr	r2, .L42+8
+ 612 0014 1078     		ldrb	r0, [r2]
+ 613 0016 0006     		lsls	r0, r0, #24
+ 614 0018 0143     		orrs	r1, r0
+ 615 001a 1960     		str	r1, [r3]
+ 452:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(4,1,dato_enviado_1[1]);
+ 616              		.loc 1 452 0
+ 617 001c 1968     		ldr	r1, [r3]
+ 618 001e 1F48     		ldr	r0, .L42+12
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 20
+
+
+ 619 0020 0140     		ands	r1, r0
+ 620 0022 0C00     		movs	r4, r1
+ 621 0024 5178     		ldrb	r1, [r2, #1]
+ 622 0026 0904     		lsls	r1, r1, #16
+ 623 0028 2143     		orrs	r1, r4
+ 624 002a 1960     		str	r1, [r3]
+ 453:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(4,2,dato_enviado_1[2]);
+ 625              		.loc 1 453 0
+ 626 002c 1C68     		ldr	r4, [r3]
+ 627 002e 1C49     		ldr	r1, .L42+16
+ 628 0030 0C40     		ands	r4, r1
+ 629 0032 2500     		movs	r5, r4
+ 630 0034 9478     		ldrb	r4, [r2, #2]
+ 631 0036 2402     		lsls	r4, r4, #8
+ 632 0038 2C43     		orrs	r4, r5
+ 633 003a 1C60     		str	r4, [r3]
+ 454:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(4,3,dato_enviado_1[3]);
+ 634              		.loc 1 454 0
+ 635 003c 1C68     		ldr	r4, [r3]
+ 636 003e FF26     		movs	r6, #255
+ 637 0040 B443     		bics	r4, r6
+ 638 0042 D578     		ldrb	r5, [r2, #3]
+ 639 0044 2C43     		orrs	r4, r5
+ 640 0046 1C60     		str	r4, [r3]
+ 455:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(4,4,dato_enviado_1[4]);
+ 641              		.loc 1 455 0
+ 642 0048 164B     		ldr	r3, .L42+20
+ 643 004a 1C68     		ldr	r4, [r3]
+ 644 004c 2402     		lsls	r4, r4, #8
+ 645 004e 240A     		lsrs	r4, r4, #8
+ 646 0050 1579     		ldrb	r5, [r2, #4]
+ 647 0052 2D06     		lsls	r5, r5, #24
+ 648 0054 2C43     		orrs	r4, r5
+ 649 0056 1C60     		str	r4, [r3]
+ 456:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(4,5,dato_enviado_1[5]);
+ 650              		.loc 1 456 0
+ 651 0058 1C68     		ldr	r4, [r3]
+ 652 005a 2040     		ands	r0, r4
+ 653 005c 5479     		ldrb	r4, [r2, #5]
+ 654 005e 2404     		lsls	r4, r4, #16
+ 655 0060 2043     		orrs	r0, r4
+ 656 0062 1860     		str	r0, [r3]
+ 457:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(4,6,dato_enviado_1[6]);
+ 657              		.loc 1 457 0
+ 658 0064 1868     		ldr	r0, [r3]
+ 659 0066 0140     		ands	r1, r0
+ 660 0068 9079     		ldrb	r0, [r2, #6]
+ 661 006a 0002     		lsls	r0, r0, #8
+ 662 006c 0143     		orrs	r1, r0
+ 663 006e 1960     		str	r1, [r3]
+ 458:CAN_TX_RX_func.c ****                 CAN_TX_DATA_BYTE(4,7,dato_enviado_1[7]);
+ 664              		.loc 1 458 0
+ 665 0070 1868     		ldr	r0, [r3]
+ 666 0072 B043     		bics	r0, r6
+ 667 0074 D179     		ldrb	r1, [r2, #7]
+ 668 0076 0200     		movs	r2, r0
+ 669 0078 0A43     		orrs	r2, r1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 21
+
+
+ 670 007a 1A60     		str	r2, [r3]
+ 459:CAN_TX_RX_func.c ****                 /* `#END` */
+ 460:CAN_TX_RX_func.c **** 
+ 461:CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_4_CALLBACK
+ 462:CAN_TX_RX_func.c ****                     CAN_SendMsg_4_Callback();
+ 463:CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_4_CALLBACK */
+ 464:CAN_TX_RX_func.c **** 
+ 465:CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(4u),
+ 671              		.loc 1 465 0
+ 672 007c 044A     		ldr	r2, .L42
+ 673 007e 1168     		ldr	r1, [r2]
+ 674 0080 0123     		movs	r3, #1
+ 675 0082 0B43     		orrs	r3, r1
+ 676 0084 1360     		str	r3, [r2]
+ 438:CAN_TX_RX_func.c **** 
+ 677              		.loc 1 438 0
+ 678 0086 0020     		movs	r0, #0
+ 679 0088 00E0     		b	.L40
+ 680              	.L41:
+ 446:CAN_TX_RX_func.c ****             }
+ 681              		.loc 1 446 0
+ 682 008a 0120     		movs	r0, #1
+ 683              	.L40:
+ 684              	.LVL34:
+ 466:CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(4u)) | CAN_SEND_MESSAGE);
+ 467:CAN_TX_RX_func.c ****             }
+ 468:CAN_TX_RX_func.c **** 
+ 469:CAN_TX_RX_func.c ****         return (result);
+ 470:CAN_TX_RX_func.c ****     }
+ 685              		.loc 1 470 0
+ 686              		@ sp needed
+ 687 008c 70BD     		pop	{r4, r5, r6, pc}
+ 688              	.L43:
+ 689 008e C046     		.align	2
+ 690              	.L42:
+ 691 0090 60002E40 		.word	1076756576
+ 692 0094 68002E40 		.word	1076756584
+ 693 0098 00000000 		.word	dato_enviado_1
+ 694 009c FFFF00FF 		.word	-16711681
+ 695 00a0 FF00FFFF 		.word	-65281
+ 696 00a4 6C002E40 		.word	1076756588
+ 697              		.cfi_endproc
+ 698              	.LFE5:
+ 699              		.size	CAN_SendMsg4, .-CAN_SendMsg4
+ 700              		.section	.text.CAN_ReceiveMsg,"ax",%progbits
+ 701              		.align	2
+ 702              		.global	CAN_ReceiveMsg
+ 703              		.code	16
+ 704              		.thumb_func
+ 705              		.type	CAN_ReceiveMsg, %function
+ 706              	CAN_ReceiveMsg:
+ 707              	.LFB6:
+ 471:CAN_TX_RX_func.c **** #endif /* CAN_TX4_FUNC_ENABLE */
+ 472:CAN_TX_RX_func.c **** 
+ 473:CAN_TX_RX_func.c **** 
+ 474:CAN_TX_RX_func.c **** #if (CAN_TX5_FUNC_ENABLE)
+ 475:CAN_TX_RX_func.c ****     /*******************************************************************************
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 22
+
+
+ 476:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg5
+ 477:CAN_TX_RX_func.c ****     ********************************************************************************
+ 478:CAN_TX_RX_func.c ****     *
+ 479:CAN_TX_RX_func.c ****     * Summary:
+ 480:CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 5. The function checks
+ 481:CAN_TX_RX_func.c ****     *  if mailbox 5 doesn't already have un-transmitted messages waiting for
+ 482:CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 483:CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 484:CAN_TX_RX_func.c ****     *
+ 485:CAN_TX_RX_func.c ****     * Parameters:
+ 486:CAN_TX_RX_func.c ****     *  None.
+ 487:CAN_TX_RX_func.c ****     *
+ 488:CAN_TX_RX_func.c ****     * Return:
+ 489:CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 490:CAN_TX_RX_func.c ****     *   Define                             Description
+ 491:CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 492:CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 493:CAN_TX_RX_func.c ****     *
+ 494:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 495:CAN_TX_RX_func.c ****     uint8 CAN_SendMsg5(void) 
+ 496:CAN_TX_RX_func.c ****     {
+ 497:CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 498:CAN_TX_RX_func.c **** 
+ 499:CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 500:CAN_TX_RX_func.c ****             if ((CAN_TX[5u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 501:CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 502:CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(5u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 503:CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 504:CAN_TX_RX_func.c ****             {
+ 505:CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 506:CAN_TX_RX_func.c ****             }
+ 507:CAN_TX_RX_func.c ****             else
+ 508:CAN_TX_RX_func.c ****             {
+ 509:CAN_TX_RX_func.c ****                 /* `#START MESSAGE_5_TRASMITTED` */
+ 510:CAN_TX_RX_func.c **** 
+ 511:CAN_TX_RX_func.c ****                 /* `#END` */
+ 512:CAN_TX_RX_func.c **** 
+ 513:CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_5_CALLBACK
+ 514:CAN_TX_RX_func.c ****                     CAN_SendMsg_5_Callback();
+ 515:CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_5_CALLBACK */
+ 516:CAN_TX_RX_func.c **** 
+ 517:CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(5u),
+ 518:CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(5u)) | CAN_SEND_MESSAGE);
+ 519:CAN_TX_RX_func.c ****             }
+ 520:CAN_TX_RX_func.c **** 
+ 521:CAN_TX_RX_func.c ****         return (result);
+ 522:CAN_TX_RX_func.c ****     }
+ 523:CAN_TX_RX_func.c **** #endif /* CAN_TX5_FUNC_ENABLE */
+ 524:CAN_TX_RX_func.c **** 
+ 525:CAN_TX_RX_func.c **** 
+ 526:CAN_TX_RX_func.c **** #if (CAN_TX6_FUNC_ENABLE)
+ 527:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 528:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg6
+ 529:CAN_TX_RX_func.c ****     ********************************************************************************
+ 530:CAN_TX_RX_func.c ****     *
+ 531:CAN_TX_RX_func.c ****     * Summary:
+ 532:CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 6. The function checks
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 23
+
+
+ 533:CAN_TX_RX_func.c ****     *  if mailbox 6 doesn't already have un-transmitted messages waiting for
+ 534:CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 535:CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 536:CAN_TX_RX_func.c ****     *
+ 537:CAN_TX_RX_func.c ****     * Parameters:
+ 538:CAN_TX_RX_func.c ****     *  None.
+ 539:CAN_TX_RX_func.c ****     *
+ 540:CAN_TX_RX_func.c ****     * Return:
+ 541:CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 542:CAN_TX_RX_func.c ****     *   Define                             Description
+ 543:CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 544:CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 545:CAN_TX_RX_func.c ****     *
+ 546:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 547:CAN_TX_RX_func.c ****     uint8 CAN_SendMsg6(void) 
+ 548:CAN_TX_RX_func.c ****     {
+ 549:CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 550:CAN_TX_RX_func.c **** 
+ 551:CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 552:CAN_TX_RX_func.c ****             if ((CAN_TX[6u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 553:CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 554:CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(6u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 555:CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 556:CAN_TX_RX_func.c ****             {
+ 557:CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 558:CAN_TX_RX_func.c ****             }
+ 559:CAN_TX_RX_func.c ****             else
+ 560:CAN_TX_RX_func.c ****             {
+ 561:CAN_TX_RX_func.c ****                 /* `#START MESSAGE_6_TRASMITTED` */
+ 562:CAN_TX_RX_func.c **** 
+ 563:CAN_TX_RX_func.c ****                 /* `#END` */
+ 564:CAN_TX_RX_func.c **** 
+ 565:CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_6_CALLBACK
+ 566:CAN_TX_RX_func.c ****                     CAN_SendMsg_6_Callback();
+ 567:CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_6_CALLBACK */
+ 568:CAN_TX_RX_func.c **** 
+ 569:CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(6u),
+ 570:CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(6u)) | CAN_SEND_MESSAGE);
+ 571:CAN_TX_RX_func.c ****             }
+ 572:CAN_TX_RX_func.c **** 
+ 573:CAN_TX_RX_func.c ****         return (result);
+ 574:CAN_TX_RX_func.c ****     }
+ 575:CAN_TX_RX_func.c **** #endif /* CAN_TX6_FUNC_ENABLE */
+ 576:CAN_TX_RX_func.c **** 
+ 577:CAN_TX_RX_func.c **** 
+ 578:CAN_TX_RX_func.c **** #if (CAN_TX7_FUNC_ENABLE)
+ 579:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 580:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg7)
+ 581:CAN_TX_RX_func.c ****     ********************************************************************************
+ 582:CAN_TX_RX_func.c ****     *
+ 583:CAN_TX_RX_func.c ****     * Summary:
+ 584:CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 7. The function checks
+ 585:CAN_TX_RX_func.c ****     *  if mailbox 7 doesn't already have un-transmitted messages waiting for
+ 586:CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 587:CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 588:CAN_TX_RX_func.c ****     *
+ 589:CAN_TX_RX_func.c ****     * Parameters:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 24
+
+
+ 590:CAN_TX_RX_func.c ****     *  None.
+ 591:CAN_TX_RX_func.c ****     *
+ 592:CAN_TX_RX_func.c ****     * Return:
+ 593:CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 594:CAN_TX_RX_func.c ****     *   Define                             Description
+ 595:CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 596:CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 597:CAN_TX_RX_func.c ****     *
+ 598:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 599:CAN_TX_RX_func.c ****     uint8 CAN_SendMsg7(void) 
+ 600:CAN_TX_RX_func.c ****     {
+ 601:CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 602:CAN_TX_RX_func.c **** 
+ 603:CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 604:CAN_TX_RX_func.c ****             if ((CAN_TX[7u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 605:CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 606:CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(7u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 607:CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 608:CAN_TX_RX_func.c ****             {
+ 609:CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 610:CAN_TX_RX_func.c ****             }
+ 611:CAN_TX_RX_func.c ****             else
+ 612:CAN_TX_RX_func.c ****             {
+ 613:CAN_TX_RX_func.c ****                 /* `#START MESSAGE_7_TRASMITTED` */
+ 614:CAN_TX_RX_func.c **** 
+ 615:CAN_TX_RX_func.c ****                 /* `#END` */
+ 616:CAN_TX_RX_func.c **** 
+ 617:CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_7_CALLBACK
+ 618:CAN_TX_RX_func.c ****                     CAN_SendMsg_7_Callback();
+ 619:CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_7_CALLBACK */
+ 620:CAN_TX_RX_func.c **** 
+ 621:CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(7u),
+ 622:CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(7u)) | CAN_SEND_MESSAGE);
+ 623:CAN_TX_RX_func.c ****             }
+ 624:CAN_TX_RX_func.c **** 
+ 625:CAN_TX_RX_func.c ****         return (result);
+ 626:CAN_TX_RX_func.c ****     }
+ 627:CAN_TX_RX_func.c **** #endif /* CAN_TX7_FUNC_ENABLE */
+ 628:CAN_TX_RX_func.c **** 
+ 629:CAN_TX_RX_func.c **** 
+ 630:CAN_TX_RX_func.c **** /*******************************************************************************
+ 631:CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_ReceiveMsg
+ 632:CAN_TX_RX_func.c **** ********************************************************************************
+ 633:CAN_TX_RX_func.c **** *
+ 634:CAN_TX_RX_func.c **** * Summary:
+ 635:CAN_TX_RX_func.c **** *  This function is the entry point to Receive Message Interrupt for Basic
+ 636:CAN_TX_RX_func.c **** *  mailboxes. Clears the Receive particular Message interrupt flag. Generated
+ 637:CAN_TX_RX_func.c **** *  only if one of the Receive mailboxes is designed as Basic.
+ 638:CAN_TX_RX_func.c **** *
+ 639:CAN_TX_RX_func.c **** * Parameters:
+ 640:CAN_TX_RX_func.c **** *  rxMailbox: The mailbox number that trig Receive Message Interrupt.
+ 641:CAN_TX_RX_func.c **** *
+ 642:CAN_TX_RX_func.c **** * Return:
+ 643:CAN_TX_RX_func.c **** *  None.
+ 644:CAN_TX_RX_func.c **** *
+ 645:CAN_TX_RX_func.c **** * Reentrant:
+ 646:CAN_TX_RX_func.c **** *  Depends on the Customer code.
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 25
+
+
+ 647:CAN_TX_RX_func.c **** *
+ 648:CAN_TX_RX_func.c **** *******************************************************************************/
+ 649:CAN_TX_RX_func.c **** void CAN_ReceiveMsg(uint8 rxMailbox) 
+ 650:CAN_TX_RX_func.c **** {
+ 708              		.loc 1 650 0
+ 709              		.cfi_startproc
+ 710              		@ args = 0, pretend = 0, frame = 0
+ 711              		@ frame_needed = 0, uses_anonymous_args = 0
+ 712              		@ link register save eliminated.
+ 713              	.LVL35:
+ 651:CAN_TX_RX_func.c ****     #if (CY_PSOC3 || CY_PSOC5)
+ 652:CAN_TX_RX_func.c ****         if ((CAN_RX[rxMailbox].rxcmd.byte[0u] & CAN_RX_ACK_MSG) != 0u)
+ 653:CAN_TX_RX_func.c ****     #else  /* CY_PSOC4 */
+ 654:CAN_TX_RX_func.c ****         if ((CAN_RX_CMD_REG(rxMailbox) & CAN_RX_ACK_MSG) != 0u)
+ 714              		.loc 1 654 0
+ 715 0000 4001     		lsls	r0, r0, #5
+ 716              	.LVL36:
+ 717 0002 054B     		ldr	r3, .L46
+ 718 0004 9C46     		mov	ip, r3
+ 719 0006 6044     		add	r0, r0, ip
+ 720 0008 0368     		ldr	r3, [r0]
+ 721 000a DB07     		lsls	r3, r3, #31
+ 722 000c 03D5     		bpl	.L44
+ 655:CAN_TX_RX_func.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+ 656:CAN_TX_RX_func.c ****         {
+ 657:CAN_TX_RX_func.c ****             /* `#START MESSAGE_BASIC_RECEIVED` */
+ 658:CAN_TX_RX_func.c **** 
+ 659:CAN_TX_RX_func.c ****             /* `#END` */
+ 660:CAN_TX_RX_func.c **** 
+ 661:CAN_TX_RX_func.c ****             #ifdef CAN_RECEIVE_MSG_CALLBACK
+ 662:CAN_TX_RX_func.c ****                 CAN_ReceiveMsg_Callback();
+ 663:CAN_TX_RX_func.c ****             #endif /* CAN_RECEIVE_MSG_CALLBACK */
+ 664:CAN_TX_RX_func.c **** 
+ 665:CAN_TX_RX_func.c ****             #if (CY_PSOC3 || CY_PSOC5)
+ 666:CAN_TX_RX_func.c ****                 CAN_RX[rxMailbox].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
+ 667:CAN_TX_RX_func.c ****             #else  /* CY_PSOC4 */
+ 668:CAN_TX_RX_func.c ****                 CAN_RX_CMD_REG(rxMailbox) |= CAN_RX_ACK_MSG;
+ 723              		.loc 1 668 0
+ 724 000e 0268     		ldr	r2, [r0]
+ 725 0010 0123     		movs	r3, #1
+ 726 0012 1343     		orrs	r3, r2
+ 727 0014 0360     		str	r3, [r0]
+ 728              	.L44:
+ 669:CAN_TX_RX_func.c ****             #endif /* CY_PSOC3 || CY_PSOC5 */
+ 670:CAN_TX_RX_func.c ****         }
+ 671:CAN_TX_RX_func.c **** }
+ 729              		.loc 1 671 0
+ 730              		@ sp needed
+ 731 0016 7047     		bx	lr
+ 732              	.L47:
+ 733              		.align	2
+ 734              	.L46:
+ 735 0018 A0002E40 		.word	1076756640
+ 736              		.cfi_endproc
+ 737              	.LFE6:
+ 738              		.size	CAN_ReceiveMsg, .-CAN_ReceiveMsg
+ 739              		.section	.text.CAN_ReceiveMsg0,"ax",%progbits
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 26
+
+
+ 740              		.align	2
+ 741              		.global	CAN_ReceiveMsg0
+ 742              		.code	16
+ 743              		.thumb_func
+ 744              		.type	CAN_ReceiveMsg0, %function
+ 745              	CAN_ReceiveMsg0:
+ 746              	.LFB7:
+ 672:CAN_TX_RX_func.c **** 
+ 673:CAN_TX_RX_func.c **** 
+ 674:CAN_TX_RX_func.c **** #if (CAN_RX0_FUNC_ENABLE)
+ 675:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 676:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsg0
+ 677:CAN_TX_RX_func.c ****     ********************************************************************************
+ 678:CAN_TX_RX_func.c ****     *
+ 679:CAN_TX_RX_func.c ****     * Summary:
+ 680:CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 0 Interrupt. Clears the
+ 681:CAN_TX_RX_func.c ****     *  Receive Message 0 interrupt flag. Generated only for the Receive mailbox
+ 682:CAN_TX_RX_func.c ****     *  designed as Full.
+ 683:CAN_TX_RX_func.c ****     *
+ 684:CAN_TX_RX_func.c ****     * Parameters:
+ 685:CAN_TX_RX_func.c ****     *  None.
+ 686:CAN_TX_RX_func.c ****     *
+ 687:CAN_TX_RX_func.c ****     * Return:
+ 688:CAN_TX_RX_func.c ****     *  None.
+ 689:CAN_TX_RX_func.c ****     *
+ 690:CAN_TX_RX_func.c ****     * Reentrant:
+ 691:CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 692:CAN_TX_RX_func.c ****     *
+ 693:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 694:CAN_TX_RX_func.c ****     void CAN_ReceiveMsg0(void) 
+ 695:CAN_TX_RX_func.c ****     {
+ 747              		.loc 1 695 0
+ 748              		.cfi_startproc
+ 749              		@ args = 0, pretend = 0, frame = 0
+ 750              		@ frame_needed = 0, uses_anonymous_args = 0
+ 751              		@ link register save eliminated.
+ 696:CAN_TX_RX_func.c ****         /* `#START MESSAGE_0_RECEIVED` */
+ 697:CAN_TX_RX_func.c ****   
+ 698:CAN_TX_RX_func.c ****         mailbox0[0]=CAN_RX_DATA_BYTE1(0);
+ 752              		.loc 1 698 0
+ 753 0000 0F4A     		ldr	r2, .L49
+ 754 0002 1168     		ldr	r1, [r2]
+ 755 0004 090E     		lsrs	r1, r1, #24
+ 756 0006 0F4B     		ldr	r3, .L49+4
+ 757 0008 1970     		strb	r1, [r3]
+ 699:CAN_TX_RX_func.c ****         mailbox0[1]=CAN_RX_DATA_BYTE2(0);
+ 758              		.loc 1 699 0
+ 759 000a 1168     		ldr	r1, [r2]
+ 760 000c 090C     		lsrs	r1, r1, #16
+ 761 000e 5970     		strb	r1, [r3, #1]
+ 700:CAN_TX_RX_func.c ****         mailbox0[2]=CAN_RX_DATA_BYTE3(0);
+ 762              		.loc 1 700 0
+ 763 0010 1168     		ldr	r1, [r2]
+ 764 0012 090A     		lsrs	r1, r1, #8
+ 765 0014 9970     		strb	r1, [r3, #2]
+ 701:CAN_TX_RX_func.c ****         mailbox0[3]=CAN_RX_DATA_BYTE4(0);
+ 766              		.loc 1 701 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 27
+
+
+ 767 0016 1268     		ldr	r2, [r2]
+ 768 0018 DA70     		strb	r2, [r3, #3]
+ 702:CAN_TX_RX_func.c ****         mailbox0[4]=CAN_RX_DATA_BYTE5(0);
+ 769              		.loc 1 702 0
+ 770 001a 0B4A     		ldr	r2, .L49+8
+ 771 001c 1168     		ldr	r1, [r2]
+ 772 001e 090E     		lsrs	r1, r1, #24
+ 773 0020 1971     		strb	r1, [r3, #4]
+ 703:CAN_TX_RX_func.c ****         mailbox0[5]=CAN_RX_DATA_BYTE6(0);
+ 774              		.loc 1 703 0
+ 775 0022 1168     		ldr	r1, [r2]
+ 776 0024 090C     		lsrs	r1, r1, #16
+ 777 0026 5971     		strb	r1, [r3, #5]
+ 704:CAN_TX_RX_func.c ****         mailbox0[6]=CAN_RX_DATA_BYTE7(0);
+ 778              		.loc 1 704 0
+ 779 0028 1168     		ldr	r1, [r2]
+ 780 002a 090A     		lsrs	r1, r1, #8
+ 781 002c 9971     		strb	r1, [r3, #6]
+ 705:CAN_TX_RX_func.c ****         mailbox0[7]=CAN_RX_DATA_BYTE8(0);
+ 782              		.loc 1 705 0
+ 783 002e 1268     		ldr	r2, [r2]
+ 784 0030 DA71     		strb	r2, [r3, #7]
+ 706:CAN_TX_RX_func.c ****       
+ 707:CAN_TX_RX_func.c ****         
+ 708:CAN_TX_RX_func.c ****         
+ 709:CAN_TX_RX_func.c ****         /* `#END` */
+ 710:CAN_TX_RX_func.c **** 
+ 711:CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_0_CALLBACK
+ 712:CAN_TX_RX_func.c ****             CAN_ReceiveMsg_0_Callback();
+ 713:CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_0_CALLBACK */
+ 714:CAN_TX_RX_func.c **** 
+ 715:CAN_TX_RX_func.c ****         CAN_RX_ACK_MESSAGE(0u);
+ 785              		.loc 1 715 0
+ 786 0032 064A     		ldr	r2, .L49+12
+ 787 0034 1168     		ldr	r1, [r2]
+ 788 0036 0123     		movs	r3, #1
+ 789 0038 0B43     		orrs	r3, r1
+ 790 003a 1360     		str	r3, [r2]
+ 716:CAN_TX_RX_func.c ****     }
+ 791              		.loc 1 716 0
+ 792              		@ sp needed
+ 793 003c 7047     		bx	lr
+ 794              	.L50:
+ 795 003e C046     		.align	2
+ 796              	.L49:
+ 797 0040 A8002E40 		.word	1076756648
+ 798 0044 00000000 		.word	mailbox0
+ 799 0048 AC002E40 		.word	1076756652
+ 800 004c A0002E40 		.word	1076756640
+ 801              		.cfi_endproc
+ 802              	.LFE7:
+ 803              		.size	CAN_ReceiveMsg0, .-CAN_ReceiveMsg0
+ 804              		.section	.text.CAN_ReceiveMsg1,"ax",%progbits
+ 805              		.align	2
+ 806              		.global	CAN_ReceiveMsg1
+ 807              		.code	16
+ 808              		.thumb_func
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 28
+
+
+ 809              		.type	CAN_ReceiveMsg1, %function
+ 810              	CAN_ReceiveMsg1:
+ 811              	.LFB8:
+ 717:CAN_TX_RX_func.c **** #endif /* CAN_RX0_FUNC_ENABLE */
+ 718:CAN_TX_RX_func.c **** 
+ 719:CAN_TX_RX_func.c **** 
+ 720:CAN_TX_RX_func.c **** #if (CAN_RX1_FUNC_ENABLE)
+ 721:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 722:CAN_TX_RX_func.c ****     * FUNCTION NAME:    CAN_ReceiveMsg1
+ 723:CAN_TX_RX_func.c ****     ********************************************************************************
+ 724:CAN_TX_RX_func.c ****     *
+ 725:CAN_TX_RX_func.c ****     * Summary:
+ 726:CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 1 Interrupt. Clears the
+ 727:CAN_TX_RX_func.c ****     *  Receive Message 1 interrupt flag. Generated only for the Receive mailbox
+ 728:CAN_TX_RX_func.c ****     *  designed as Full.
+ 729:CAN_TX_RX_func.c ****     *
+ 730:CAN_TX_RX_func.c ****     * Parameters:
+ 731:CAN_TX_RX_func.c ****     *  None.
+ 732:CAN_TX_RX_func.c ****     *
+ 733:CAN_TX_RX_func.c ****     * Return:
+ 734:CAN_TX_RX_func.c ****     *  None.
+ 735:CAN_TX_RX_func.c ****     *
+ 736:CAN_TX_RX_func.c ****     * Reentrant:
+ 737:CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 738:CAN_TX_RX_func.c ****     *
+ 739:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 740:CAN_TX_RX_func.c ****     void CAN_ReceiveMsg1(void) 
+ 741:CAN_TX_RX_func.c ****     {
+ 812              		.loc 1 741 0
+ 813              		.cfi_startproc
+ 814              		@ args = 0, pretend = 0, frame = 0
+ 815              		@ frame_needed = 0, uses_anonymous_args = 0
+ 816              		@ link register save eliminated.
+ 742:CAN_TX_RX_func.c ****         /* `#START MESSAGE_1_RECEIVED` */
+ 743:CAN_TX_RX_func.c ****             mailbox1[0]=CAN_RX_DATA_BYTE1(1);
+ 817              		.loc 1 743 0
+ 818 0000 0F4A     		ldr	r2, .L52
+ 819 0002 1168     		ldr	r1, [r2]
+ 820 0004 090E     		lsrs	r1, r1, #24
+ 821 0006 0F4B     		ldr	r3, .L52+4
+ 822 0008 1970     		strb	r1, [r3]
+ 744:CAN_TX_RX_func.c ****             mailbox1[1]=CAN_RX_DATA_BYTE2(1);
+ 823              		.loc 1 744 0
+ 824 000a 1168     		ldr	r1, [r2]
+ 825 000c 090C     		lsrs	r1, r1, #16
+ 826 000e 5970     		strb	r1, [r3, #1]
+ 745:CAN_TX_RX_func.c ****             mailbox1[2]=CAN_RX_DATA_BYTE3(1);
+ 827              		.loc 1 745 0
+ 828 0010 1168     		ldr	r1, [r2]
+ 829 0012 090A     		lsrs	r1, r1, #8
+ 830 0014 9970     		strb	r1, [r3, #2]
+ 746:CAN_TX_RX_func.c ****             mailbox1[3]=CAN_RX_DATA_BYTE4(1);
+ 831              		.loc 1 746 0
+ 832 0016 1268     		ldr	r2, [r2]
+ 833 0018 DA70     		strb	r2, [r3, #3]
+ 747:CAN_TX_RX_func.c ****             mailbox1[4]=CAN_RX_DATA_BYTE5(1);
+ 834              		.loc 1 747 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 29
+
+
+ 835 001a 0B4A     		ldr	r2, .L52+8
+ 836 001c 1168     		ldr	r1, [r2]
+ 837 001e 090E     		lsrs	r1, r1, #24
+ 838 0020 1971     		strb	r1, [r3, #4]
+ 748:CAN_TX_RX_func.c ****             mailbox1[5]=CAN_RX_DATA_BYTE6(1);
+ 839              		.loc 1 748 0
+ 840 0022 1168     		ldr	r1, [r2]
+ 841 0024 090C     		lsrs	r1, r1, #16
+ 842 0026 5971     		strb	r1, [r3, #5]
+ 749:CAN_TX_RX_func.c ****             mailbox1[6]=CAN_RX_DATA_BYTE7(1);
+ 843              		.loc 1 749 0
+ 844 0028 1168     		ldr	r1, [r2]
+ 845 002a 090A     		lsrs	r1, r1, #8
+ 846 002c 9971     		strb	r1, [r3, #6]
+ 750:CAN_TX_RX_func.c ****             mailbox1[7]=CAN_RX_DATA_BYTE8(1);
+ 847              		.loc 1 750 0
+ 848 002e 1268     		ldr	r2, [r2]
+ 849 0030 DA71     		strb	r2, [r3, #7]
+ 751:CAN_TX_RX_func.c ****         /* `#END` */
+ 752:CAN_TX_RX_func.c **** 
+ 753:CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_1_CALLBACK
+ 754:CAN_TX_RX_func.c ****             CAN_ReceiveMsg_1_Callback();
+ 755:CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_1_CALLBACK */
+ 756:CAN_TX_RX_func.c **** 
+ 757:CAN_TX_RX_func.c ****         CAN_RX_ACK_MESSAGE(1u);
+ 850              		.loc 1 757 0
+ 851 0032 064A     		ldr	r2, .L52+12
+ 852 0034 1168     		ldr	r1, [r2]
+ 853 0036 0123     		movs	r3, #1
+ 854 0038 0B43     		orrs	r3, r1
+ 855 003a 1360     		str	r3, [r2]
+ 758:CAN_TX_RX_func.c ****     }
+ 856              		.loc 1 758 0
+ 857              		@ sp needed
+ 858 003c 7047     		bx	lr
+ 859              	.L53:
+ 860 003e C046     		.align	2
+ 861              	.L52:
+ 862 0040 C8002E40 		.word	1076756680
+ 863 0044 00000000 		.word	mailbox1
+ 864 0048 CC002E40 		.word	1076756684
+ 865 004c C0002E40 		.word	1076756672
+ 866              		.cfi_endproc
+ 867              	.LFE8:
+ 868              		.size	CAN_ReceiveMsg1, .-CAN_ReceiveMsg1
+ 869              		.section	.text.CAN_ReceiveMsg2,"ax",%progbits
+ 870              		.align	2
+ 871              		.global	CAN_ReceiveMsg2
+ 872              		.code	16
+ 873              		.thumb_func
+ 874              		.type	CAN_ReceiveMsg2, %function
+ 875              	CAN_ReceiveMsg2:
+ 876              	.LFB9:
+ 759:CAN_TX_RX_func.c **** #endif /* CAN_RX1_FUNC_ENABLE */
+ 760:CAN_TX_RX_func.c **** 
+ 761:CAN_TX_RX_func.c **** 
+ 762:CAN_TX_RX_func.c **** #if (CAN_RX2_FUNC_ENABLE)
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 30
+
+
+ 763:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 764:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsg2
+ 765:CAN_TX_RX_func.c ****     ********************************************************************************
+ 766:CAN_TX_RX_func.c ****     *
+ 767:CAN_TX_RX_func.c ****     * Summary:
+ 768:CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 2 Interrupt. Clears the
+ 769:CAN_TX_RX_func.c ****     *  Receive Message 2 interrupt flag. Generated only for the Receive mailbox
+ 770:CAN_TX_RX_func.c ****     *  designed as Full.
+ 771:CAN_TX_RX_func.c ****     *
+ 772:CAN_TX_RX_func.c ****     * Parameters:
+ 773:CAN_TX_RX_func.c ****     *  None.
+ 774:CAN_TX_RX_func.c ****     *
+ 775:CAN_TX_RX_func.c ****     * Return:
+ 776:CAN_TX_RX_func.c ****     *  None.
+ 777:CAN_TX_RX_func.c ****     *
+ 778:CAN_TX_RX_func.c ****     * Reentrant:
+ 779:CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 780:CAN_TX_RX_func.c ****     *
+ 781:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 782:CAN_TX_RX_func.c ****     void CAN_ReceiveMsg2(void) 
+ 783:CAN_TX_RX_func.c ****     {
+ 877              		.loc 1 783 0
+ 878              		.cfi_startproc
+ 879              		@ args = 0, pretend = 0, frame = 0
+ 880              		@ frame_needed = 0, uses_anonymous_args = 0
+ 881              		@ link register save eliminated.
+ 784:CAN_TX_RX_func.c ****         /* `#START MESSAGE_2_RECEIVED` */
+ 785:CAN_TX_RX_func.c ****             mailbox2[0]=CAN_RX_DATA_BYTE1(2);
+ 882              		.loc 1 785 0
+ 883 0000 0F4A     		ldr	r2, .L55
+ 884 0002 1168     		ldr	r1, [r2]
+ 885 0004 090E     		lsrs	r1, r1, #24
+ 886 0006 0F4B     		ldr	r3, .L55+4
+ 887 0008 1970     		strb	r1, [r3]
+ 786:CAN_TX_RX_func.c ****             mailbox2[1]=CAN_RX_DATA_BYTE2(2);
+ 888              		.loc 1 786 0
+ 889 000a 1168     		ldr	r1, [r2]
+ 890 000c 090C     		lsrs	r1, r1, #16
+ 891 000e 5970     		strb	r1, [r3, #1]
+ 787:CAN_TX_RX_func.c ****             mailbox2[2]=CAN_RX_DATA_BYTE3(2);
+ 892              		.loc 1 787 0
+ 893 0010 1168     		ldr	r1, [r2]
+ 894 0012 090A     		lsrs	r1, r1, #8
+ 895 0014 9970     		strb	r1, [r3, #2]
+ 788:CAN_TX_RX_func.c ****             mailbox2[3]=CAN_RX_DATA_BYTE4(2);
+ 896              		.loc 1 788 0
+ 897 0016 1268     		ldr	r2, [r2]
+ 898 0018 DA70     		strb	r2, [r3, #3]
+ 789:CAN_TX_RX_func.c ****             mailbox2[4]=CAN_RX_DATA_BYTE5(2);
+ 899              		.loc 1 789 0
+ 900 001a 0B4A     		ldr	r2, .L55+8
+ 901 001c 1168     		ldr	r1, [r2]
+ 902 001e 090E     		lsrs	r1, r1, #24
+ 903 0020 1971     		strb	r1, [r3, #4]
+ 790:CAN_TX_RX_func.c ****             mailbox2[5]=CAN_RX_DATA_BYTE6(2);
+ 904              		.loc 1 790 0
+ 905 0022 1168     		ldr	r1, [r2]
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 31
+
+
+ 906 0024 090C     		lsrs	r1, r1, #16
+ 907 0026 5971     		strb	r1, [r3, #5]
+ 791:CAN_TX_RX_func.c ****             mailbox2[6]=CAN_RX_DATA_BYTE7(2);
+ 908              		.loc 1 791 0
+ 909 0028 1168     		ldr	r1, [r2]
+ 910 002a 090A     		lsrs	r1, r1, #8
+ 911 002c 9971     		strb	r1, [r3, #6]
+ 792:CAN_TX_RX_func.c ****             mailbox2[7]=CAN_RX_DATA_BYTE8(2);    
+ 912              		.loc 1 792 0
+ 913 002e 1268     		ldr	r2, [r2]
+ 914 0030 DA71     		strb	r2, [r3, #7]
+ 793:CAN_TX_RX_func.c ****         /* `#END` */
+ 794:CAN_TX_RX_func.c **** 
+ 795:CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_2_CALLBACK
+ 796:CAN_TX_RX_func.c ****             CAN_ReceiveMsg_2_Callback();
+ 797:CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_2_CALLBACK */
+ 798:CAN_TX_RX_func.c **** 
+ 799:CAN_TX_RX_func.c ****         CAN_RX_ACK_MESSAGE(2u);
+ 915              		.loc 1 799 0
+ 916 0032 064A     		ldr	r2, .L55+12
+ 917 0034 1168     		ldr	r1, [r2]
+ 918 0036 0123     		movs	r3, #1
+ 919 0038 0B43     		orrs	r3, r1
+ 920 003a 1360     		str	r3, [r2]
+ 800:CAN_TX_RX_func.c ****     }
+ 921              		.loc 1 800 0
+ 922              		@ sp needed
+ 923 003c 7047     		bx	lr
+ 924              	.L56:
+ 925 003e C046     		.align	2
+ 926              	.L55:
+ 927 0040 E8002E40 		.word	1076756712
+ 928 0044 00000000 		.word	mailbox2
+ 929 0048 EC002E40 		.word	1076756716
+ 930 004c E0002E40 		.word	1076756704
+ 931              		.cfi_endproc
+ 932              	.LFE9:
+ 933              		.size	CAN_ReceiveMsg2, .-CAN_ReceiveMsg2
+ 934              		.section	.text.CAN_ReceiveMsg3,"ax",%progbits
+ 935              		.align	2
+ 936              		.global	CAN_ReceiveMsg3
+ 937              		.code	16
+ 938              		.thumb_func
+ 939              		.type	CAN_ReceiveMsg3, %function
+ 940              	CAN_ReceiveMsg3:
+ 941              	.LFB10:
+ 801:CAN_TX_RX_func.c **** #endif /* CAN_RX2_FUNC_ENABLE */
+ 802:CAN_TX_RX_func.c **** 
+ 803:CAN_TX_RX_func.c **** 
+ 804:CAN_TX_RX_func.c **** #if (CAN_RX3_FUNC_ENABLE)
+ 805:CAN_TX_RX_func.c ****     /*******************************************************************************
+ 806:CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsg3
+ 807:CAN_TX_RX_func.c ****     ********************************************************************************
+ 808:CAN_TX_RX_func.c ****     *
+ 809:CAN_TX_RX_func.c ****     * Summary:
+ 810:CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 3 Interrupt. Clears the
+ 811:CAN_TX_RX_func.c ****     *  Receive Message 3 interrupt flag. Generated only for the Receive mailbox
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 32
+
+
+ 812:CAN_TX_RX_func.c ****     *  designed as Full.
+ 813:CAN_TX_RX_func.c ****     *
+ 814:CAN_TX_RX_func.c ****     * Parameters:
+ 815:CAN_TX_RX_func.c ****     *  None.
+ 816:CAN_TX_RX_func.c ****     *
+ 817:CAN_TX_RX_func.c ****     * Return:
+ 818:CAN_TX_RX_func.c ****     *  None.
+ 819:CAN_TX_RX_func.c ****     *
+ 820:CAN_TX_RX_func.c ****     * Reentrant:
+ 821:CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 822:CAN_TX_RX_func.c ****     *
+ 823:CAN_TX_RX_func.c ****     *******************************************************************************/
+ 824:CAN_TX_RX_func.c ****     void CAN_ReceiveMsg3(void) 
+ 825:CAN_TX_RX_func.c ****     {
+ 942              		.loc 1 825 0
+ 943              		.cfi_startproc
+ 944              		@ args = 0, pretend = 0, frame = 0
+ 945              		@ frame_needed = 0, uses_anonymous_args = 0
+ 946              		@ link register save eliminated.
+ 826:CAN_TX_RX_func.c ****         /* `#START MESSAGE_3_RECEIVED` */
+ 827:CAN_TX_RX_func.c ****             mailbox3[0]=CAN_RX_DATA_BYTE1(3);
+ 947              		.loc 1 827 0
+ 948 0000 0F4A     		ldr	r2, .L58
+ 949 0002 1168     		ldr	r1, [r2]
+ 950 0004 090E     		lsrs	r1, r1, #24
+ 951 0006 0F4B     		ldr	r3, .L58+4
+ 952 0008 1970     		strb	r1, [r3]
+ 828:CAN_TX_RX_func.c ****             mailbox3[1]=CAN_RX_DATA_BYTE2(3);
+ 953              		.loc 1 828 0
+ 954 000a 1168     		ldr	r1, [r2]
+ 955 000c 090C     		lsrs	r1, r1, #16
+ 956 000e 5970     		strb	r1, [r3, #1]
+ 829:CAN_TX_RX_func.c ****             mailbox3[2]=CAN_RX_DATA_BYTE3(3);
+ 957              		.loc 1 829 0
+ 958 0010 1168     		ldr	r1, [r2]
+ 959 0012 090A     		lsrs	r1, r1, #8
+ 960 0014 9970     		strb	r1, [r3, #2]
+ 830:CAN_TX_RX_func.c ****             mailbox3[3]=CAN_RX_DATA_BYTE4(3);
+ 961              		.loc 1 830 0
+ 962 0016 1268     		ldr	r2, [r2]
+ 963 0018 DA70     		strb	r2, [r3, #3]
+ 831:CAN_TX_RX_func.c ****             mailbox3[4]=CAN_RX_DATA_BYTE5(3);
+ 964              		.loc 1 831 0
+ 965 001a 0B4A     		ldr	r2, .L58+8
+ 966 001c 1168     		ldr	r1, [r2]
+ 967 001e 090E     		lsrs	r1, r1, #24
+ 968 0020 1971     		strb	r1, [r3, #4]
+ 832:CAN_TX_RX_func.c ****             mailbox3[5]=CAN_RX_DATA_BYTE6(3);
+ 969              		.loc 1 832 0
+ 970 0022 1168     		ldr	r1, [r2]
+ 971 0024 090C     		lsrs	r1, r1, #16
+ 972 0026 5971     		strb	r1, [r3, #5]
+ 833:CAN_TX_RX_func.c ****             mailbox3[6]=CAN_RX_DATA_BYTE7(3);
+ 973              		.loc 1 833 0
+ 974 0028 1168     		ldr	r1, [r2]
+ 975 002a 090A     		lsrs	r1, r1, #8
+ 976 002c 9971     		strb	r1, [r3, #6]
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 33
+
+
+ 834:CAN_TX_RX_func.c ****             mailbox3[7]=CAN_RX_DATA_BYTE8(3);   
+ 977              		.loc 1 834 0
+ 978 002e 1268     		ldr	r2, [r2]
+ 979 0030 DA71     		strb	r2, [r3, #7]
+ 835:CAN_TX_RX_func.c ****         /* `#END` */
+ 836:CAN_TX_RX_func.c **** 
+ 837:CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_3_CALLBACK
+ 838:CAN_TX_RX_func.c ****             CAN_ReceiveMsg_3_Callback();
+ 839:CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_3_CALLBACK */
+ 840:CAN_TX_RX_func.c **** 
+ 841:CAN_TX_RX_func.c ****         CAN_RX_ACK_MESSAGE(3u);
+ 980              		.loc 1 841 0
+ 981 0032 064A     		ldr	r2, .L58+12
+ 982 0034 1168     		ldr	r1, [r2]
+ 983 0036 0123     		movs	r3, #1
+ 984 0038 0B43     		orrs	r3, r1
+ 985 003a 1360     		str	r3, [r2]
+ 842:CAN_TX_RX_func.c ****     }
+ 986              		.loc 1 842 0
+ 987              		@ sp needed
+ 988 003c 7047     		bx	lr
+ 989              	.L59:
+ 990 003e C046     		.align	2
+ 991              	.L58:
+ 992 0040 08012E40 		.word	1076756744
+ 993 0044 00000000 		.word	mailbox3
+ 994 0048 0C012E40 		.word	1076756748
+ 995 004c 00012E40 		.word	1076756736
+ 996              		.cfi_endproc
+ 997              	.LFE10:
+ 998              		.size	CAN_ReceiveMsg3, .-CAN_ReceiveMsg3
+ 999              		.text
+ 1000              	.Letext0:
+ 1001              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 1002              		.file 3 "Generated_Source\\PSoC4/CAN.h"
+ 1003              		.file 4 "Generated_Source\\PSoC4/CyLib.h"
+ 1004              		.section	.debug_info,"",%progbits
+ 1005              	.Ldebug_info0:
+ 1006 0000 83040000 		.4byte	0x483
+ 1007 0004 0400     		.2byte	0x4
+ 1008 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1009 000a 04       		.byte	0x4
+ 1010 000b 01       		.uleb128 0x1
+ 1011 000c 00000000 		.4byte	.LASF60
+ 1012 0010 0C       		.byte	0xc
+ 1013 0011 06030000 		.4byte	.LASF61
+ 1014 0015 6D010000 		.4byte	.LASF62
+ 1015 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1016 001d 00000000 		.4byte	0
+ 1017 0021 00000000 		.4byte	.Ldebug_line0
+ 1018 0025 02       		.uleb128 0x2
+ 1019 0026 01       		.byte	0x1
+ 1020 0027 06       		.byte	0x6
+ 1021 0028 C0000000 		.4byte	.LASF0
+ 1022 002c 02       		.uleb128 0x2
+ 1023 002d 01       		.byte	0x1
+ 1024 002e 08       		.byte	0x8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 34
+
+
+ 1025 002f 60020000 		.4byte	.LASF1
+ 1026 0033 02       		.uleb128 0x2
+ 1027 0034 02       		.byte	0x2
+ 1028 0035 05       		.byte	0x5
+ 1029 0036 6E020000 		.4byte	.LASF2
+ 1030 003a 02       		.uleb128 0x2
+ 1031 003b 02       		.byte	0x2
+ 1032 003c 07       		.byte	0x7
+ 1033 003d EA010000 		.4byte	.LASF3
+ 1034 0041 02       		.uleb128 0x2
+ 1035 0042 04       		.byte	0x4
+ 1036 0043 05       		.byte	0x5
+ 1037 0044 F0000000 		.4byte	.LASF4
+ 1038 0048 02       		.uleb128 0x2
+ 1039 0049 04       		.byte	0x4
+ 1040 004a 07       		.byte	0x7
+ 1041 004b 5B010000 		.4byte	.LASF5
+ 1042 004f 02       		.uleb128 0x2
+ 1043 0050 08       		.byte	0x8
+ 1044 0051 05       		.byte	0x5
+ 1045 0052 B2000000 		.4byte	.LASF6
+ 1046 0056 02       		.uleb128 0x2
+ 1047 0057 08       		.byte	0x8
+ 1048 0058 07       		.byte	0x7
+ 1049 0059 8E000000 		.4byte	.LASF7
+ 1050 005d 03       		.uleb128 0x3
+ 1051 005e 04       		.byte	0x4
+ 1052 005f 05       		.byte	0x5
+ 1053 0060 696E7400 		.ascii	"int\000"
+ 1054 0064 02       		.uleb128 0x2
+ 1055 0065 04       		.byte	0x4
+ 1056 0066 07       		.byte	0x7
+ 1057 0067 4E010000 		.4byte	.LASF8
+ 1058 006b 04       		.uleb128 0x4
+ 1059 006c 0D010000 		.4byte	.LASF9
+ 1060 0070 02       		.byte	0x2
+ 1061 0071 9801     		.2byte	0x198
+ 1062 0073 2C000000 		.4byte	0x2c
+ 1063 0077 04       		.uleb128 0x4
+ 1064 0078 26010000 		.4byte	.LASF10
+ 1065 007c 02       		.byte	0x2
+ 1066 007d 9A01     		.2byte	0x19a
+ 1067 007f 48000000 		.4byte	0x48
+ 1068 0083 02       		.uleb128 0x2
+ 1069 0084 04       		.byte	0x4
+ 1070 0085 04       		.byte	0x4
+ 1071 0086 55020000 		.4byte	.LASF11
+ 1072 008a 02       		.uleb128 0x2
+ 1073 008b 08       		.byte	0x8
+ 1074 008c 04       		.byte	0x4
+ 1075 008d 19010000 		.4byte	.LASF12
+ 1076 0091 02       		.uleb128 0x2
+ 1077 0092 01       		.byte	0x1
+ 1078 0093 08       		.byte	0x8
+ 1079 0094 A5020000 		.4byte	.LASF13
+ 1080 0098 04       		.uleb128 0x4
+ 1081 0099 5B020000 		.4byte	.LASF14
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 35
+
+
+ 1082 009d 02       		.byte	0x2
+ 1083 009e 4202     		.2byte	0x242
+ 1084 00a0 A4000000 		.4byte	0xa4
+ 1085 00a4 05       		.uleb128 0x5
+ 1086 00a5 6B000000 		.4byte	0x6b
+ 1087 00a9 04       		.uleb128 0x4
+ 1088 00aa 1C020000 		.4byte	.LASF15
+ 1089 00ae 02       		.byte	0x2
+ 1090 00af 4402     		.2byte	0x244
+ 1091 00b1 B5000000 		.4byte	0xb5
+ 1092 00b5 05       		.uleb128 0x5
+ 1093 00b6 77000000 		.4byte	0x77
+ 1094 00ba 02       		.uleb128 0x2
+ 1095 00bb 08       		.byte	0x8
+ 1096 00bc 04       		.byte	0x4
+ 1097 00bd 36020000 		.4byte	.LASF16
+ 1098 00c1 02       		.uleb128 0x2
+ 1099 00c2 04       		.byte	0x4
+ 1100 00c3 07       		.byte	0x7
+ 1101 00c4 2D020000 		.4byte	.LASF17
+ 1102 00c8 06       		.uleb128 0x6
+ 1103 00c9 08       		.byte	0x8
+ 1104 00ca 03       		.byte	0x3
+ 1105 00cb 6F       		.byte	0x6f
+ 1106 00cc DD000000 		.4byte	0xdd
+ 1107 00d0 07       		.uleb128 0x7
+ 1108 00d1 3A010000 		.4byte	.LASF19
+ 1109 00d5 03       		.byte	0x3
+ 1110 00d6 71       		.byte	0x71
+ 1111 00d7 DD000000 		.4byte	0xdd
+ 1112 00db 00       		.byte	0
+ 1113 00dc 00       		.byte	0
+ 1114 00dd 08       		.uleb128 0x8
+ 1115 00de 6B000000 		.4byte	0x6b
+ 1116 00e2 ED000000 		.4byte	0xed
+ 1117 00e6 09       		.uleb128 0x9
+ 1118 00e7 C1000000 		.4byte	0xc1
+ 1119 00eb 07       		.byte	0x7
+ 1120 00ec 00       		.byte	0
+ 1121 00ed 0A       		.uleb128 0xa
+ 1122 00ee 84020000 		.4byte	.LASF18
+ 1123 00f2 03       		.byte	0x3
+ 1124 00f3 72       		.byte	0x72
+ 1125 00f4 C8000000 		.4byte	0xc8
+ 1126 00f8 06       		.uleb128 0x6
+ 1127 00f9 08       		.byte	0x8
+ 1128 00fa 03       		.byte	0x3
+ 1129 00fb 75       		.byte	0x75
+ 1130 00fc 0D010000 		.4byte	0x10d
+ 1131 0100 07       		.uleb128 0x7
+ 1132 0101 3A010000 		.4byte	.LASF19
+ 1133 0105 03       		.byte	0x3
+ 1134 0106 77       		.byte	0x77
+ 1135 0107 1D010000 		.4byte	0x11d
+ 1136 010b 00       		.byte	0
+ 1137 010c 00       		.byte	0
+ 1138 010d 08       		.uleb128 0x8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 36
+
+
+ 1139 010e 98000000 		.4byte	0x98
+ 1140 0112 1D010000 		.4byte	0x11d
+ 1141 0116 09       		.uleb128 0x9
+ 1142 0117 C1000000 		.4byte	0xc1
+ 1143 011b 07       		.byte	0x7
+ 1144 011c 00       		.byte	0
+ 1145 011d 05       		.uleb128 0x5
+ 1146 011e 0D010000 		.4byte	0x10d
+ 1147 0122 0A       		.uleb128 0xa
+ 1148 0123 B7020000 		.4byte	.LASF20
+ 1149 0127 03       		.byte	0x3
+ 1150 0128 78       		.byte	0x78
+ 1151 0129 F8000000 		.4byte	0xf8
+ 1152 012d 06       		.uleb128 0x6
+ 1153 012e 04       		.byte	0x4
+ 1154 012f 03       		.byte	0x3
+ 1155 0130 7B       		.byte	0x7b
+ 1156 0131 42010000 		.4byte	0x142
+ 1157 0135 07       		.uleb128 0x7
+ 1158 0136 3A010000 		.4byte	.LASF19
+ 1159 013a 03       		.byte	0x3
+ 1160 013b 7D       		.byte	0x7d
+ 1161 013c 52010000 		.4byte	0x152
+ 1162 0140 00       		.byte	0
+ 1163 0141 00       		.byte	0
+ 1164 0142 08       		.uleb128 0x8
+ 1165 0143 98000000 		.4byte	0x98
+ 1166 0147 52010000 		.4byte	0x152
+ 1167 014b 09       		.uleb128 0x9
+ 1168 014c C1000000 		.4byte	0xc1
+ 1169 0150 03       		.byte	0x3
+ 1170 0151 00       		.byte	0
+ 1171 0152 05       		.uleb128 0x5
+ 1172 0153 42010000 		.4byte	0x142
+ 1173 0157 0A       		.uleb128 0xa
+ 1174 0158 22020000 		.4byte	.LASF21
+ 1175 015c 03       		.byte	0x3
+ 1176 015d 7E       		.byte	0x7e
+ 1177 015e 2D010000 		.4byte	0x12d
+ 1178 0162 06       		.uleb128 0x6
+ 1179 0163 10       		.byte	0x10
+ 1180 0164 03       		.byte	0x3
+ 1181 0165 81       		.byte	0x81
+ 1182 0166 BE010000 		.4byte	0x1be
+ 1183 016a 0B       		.uleb128 0xb
+ 1184 016b 696400   		.ascii	"id\000"
+ 1185 016e 03       		.byte	0x3
+ 1186 016f 83       		.byte	0x83
+ 1187 0170 77000000 		.4byte	0x77
+ 1188 0174 00       		.byte	0
+ 1189 0175 0B       		.uleb128 0xb
+ 1190 0176 72747200 		.ascii	"rtr\000"
+ 1191 017a 03       		.byte	0x3
+ 1192 017b 84       		.byte	0x84
+ 1193 017c 6B000000 		.4byte	0x6b
+ 1194 0180 04       		.byte	0x4
+ 1195 0181 0B       		.uleb128 0xb
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 37
+
+
+ 1196 0182 69646500 		.ascii	"ide\000"
+ 1197 0186 03       		.byte	0x3
+ 1198 0187 85       		.byte	0x85
+ 1199 0188 6B000000 		.4byte	0x6b
+ 1200 018c 05       		.byte	0x5
+ 1201 018d 0B       		.uleb128 0xb
+ 1202 018e 646C6300 		.ascii	"dlc\000"
+ 1203 0192 03       		.byte	0x3
+ 1204 0193 86       		.byte	0x86
+ 1205 0194 6B000000 		.4byte	0x6b
+ 1206 0198 06       		.byte	0x6
+ 1207 0199 0B       		.uleb128 0xb
+ 1208 019a 69727100 		.ascii	"irq\000"
+ 1209 019e 03       		.byte	0x3
+ 1210 019f 87       		.byte	0x87
+ 1211 01a0 6B000000 		.4byte	0x6b
+ 1212 01a4 07       		.byte	0x7
+ 1213 01a5 0B       		.uleb128 0xb
+ 1214 01a6 73737400 		.ascii	"sst\000"
+ 1215 01aa 03       		.byte	0x3
+ 1216 01ab 89       		.byte	0x89
+ 1217 01ac 6B000000 		.4byte	0x6b
+ 1218 01b0 08       		.byte	0x8
+ 1219 01b1 0B       		.uleb128 0xb
+ 1220 01b2 6D736700 		.ascii	"msg\000"
+ 1221 01b6 03       		.byte	0x3
+ 1222 01b7 8B       		.byte	0x8b
+ 1223 01b8 BE010000 		.4byte	0x1be
+ 1224 01bc 0C       		.byte	0xc
+ 1225 01bd 00       		.byte	0
+ 1226 01be 0C       		.uleb128 0xc
+ 1227 01bf 04       		.byte	0x4
+ 1228 01c0 ED000000 		.4byte	0xed
+ 1229 01c4 0A       		.uleb128 0xa
+ 1230 01c5 1D030000 		.4byte	.LASF22
+ 1231 01c9 03       		.byte	0x3
+ 1232 01ca 8C       		.byte	0x8c
+ 1233 01cb 62010000 		.4byte	0x162
+ 1234 01cf 06       		.uleb128 0x6
+ 1235 01d0 20       		.byte	0x20
+ 1236 01d1 03       		.byte	0x3
+ 1237 01d2 A0       		.byte	0xa0
+ 1238 01d3 2C020000 		.4byte	0x22c
+ 1239 01d7 07       		.uleb128 0x7
+ 1240 01d8 17030000 		.4byte	.LASF23
+ 1241 01dc 03       		.byte	0x3
+ 1242 01dd A2       		.byte	0xa2
+ 1243 01de 57010000 		.4byte	0x157
+ 1244 01e2 00       		.byte	0
+ 1245 01e3 07       		.uleb128 0x7
+ 1246 01e4 42020000 		.4byte	.LASF24
+ 1247 01e8 03       		.byte	0x3
+ 1248 01e9 A3       		.byte	0xa3
+ 1249 01ea 57010000 		.4byte	0x157
+ 1250 01ee 04       		.byte	0x4
+ 1251 01ef 07       		.uleb128 0x7
+ 1252 01f0 06010000 		.4byte	.LASF25
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 38
+
+
+ 1253 01f4 03       		.byte	0x3
+ 1254 01f5 A4       		.byte	0xa4
+ 1255 01f6 22010000 		.4byte	0x122
+ 1256 01fa 08       		.byte	0x8
+ 1257 01fb 07       		.uleb128 0x7
+ 1258 01fc 13010000 		.4byte	.LASF26
+ 1259 0200 03       		.byte	0x3
+ 1260 0201 A5       		.byte	0xa5
+ 1261 0202 57010000 		.4byte	0x157
+ 1262 0206 10       		.byte	0x10
+ 1263 0207 07       		.uleb128 0x7
+ 1264 0208 2D030000 		.4byte	.LASF27
+ 1265 020c 03       		.byte	0x3
+ 1266 020d A6       		.byte	0xa6
+ 1267 020e 57010000 		.4byte	0x157
+ 1268 0212 14       		.byte	0x14
+ 1269 0213 07       		.uleb128 0x7
+ 1270 0214 AB000000 		.4byte	.LASF28
+ 1271 0218 03       		.byte	0x3
+ 1272 0219 A7       		.byte	0xa7
+ 1273 021a 57010000 		.4byte	0x157
+ 1274 021e 18       		.byte	0x18
+ 1275 021f 07       		.uleb128 0x7
+ 1276 0220 33030000 		.4byte	.LASF29
+ 1277 0224 03       		.byte	0x3
+ 1278 0225 A8       		.byte	0xa8
+ 1279 0226 57010000 		.4byte	0x157
+ 1280 022a 1C       		.byte	0x1c
+ 1281 022b 00       		.byte	0
+ 1282 022c 0A       		.uleb128 0xa
+ 1283 022d FD010000 		.4byte	.LASF30
+ 1284 0231 03       		.byte	0x3
+ 1285 0232 A9       		.byte	0xa9
+ 1286 0233 CF010000 		.4byte	0x1cf
+ 1287 0237 06       		.uleb128 0x6
+ 1288 0238 10       		.byte	0x10
+ 1289 0239 03       		.byte	0x3
+ 1290 023a AC       		.byte	0xac
+ 1291 023b 64020000 		.4byte	0x264
+ 1292 023f 07       		.uleb128 0x7
+ 1293 0240 A5000000 		.4byte	.LASF31
+ 1294 0244 03       		.byte	0x3
+ 1295 0245 AE       		.byte	0xae
+ 1296 0246 57010000 		.4byte	0x157
+ 1297 024a 00       		.byte	0
+ 1298 024b 07       		.uleb128 0x7
+ 1299 024c 28030000 		.4byte	.LASF32
+ 1300 0250 03       		.byte	0x3
+ 1301 0251 AF       		.byte	0xaf
+ 1302 0252 57010000 		.4byte	0x157
+ 1303 0256 04       		.byte	0x4
+ 1304 0257 07       		.uleb128 0x7
+ 1305 0258 15020000 		.4byte	.LASF33
+ 1306 025c 03       		.byte	0x3
+ 1307 025d B0       		.byte	0xb0
+ 1308 025e 22010000 		.4byte	0x122
+ 1309 0262 08       		.byte	0x8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 39
+
+
+ 1310 0263 00       		.byte	0
+ 1311 0264 0A       		.uleb128 0xa
+ 1312 0265 97020000 		.4byte	.LASF34
+ 1313 0269 03       		.byte	0x3
+ 1314 026a B1       		.byte	0xb1
+ 1315 026b 37020000 		.4byte	0x237
+ 1316 026f 0D       		.uleb128 0xd
+ 1317 0270 CD010000 		.4byte	.LASF41
+ 1318 0274 01       		.byte	0x1
+ 1319 0275 3A       		.byte	0x3a
+ 1320 0276 6B000000 		.4byte	0x6b
+ 1321 027a 00000000 		.4byte	.LFB1
+ 1322 027e 5C010000 		.4byte	.LFE1-.LFB1
+ 1323 0282 01       		.uleb128 0x1
+ 1324 0283 9C       		.byte	0x9c
+ 1325 0284 10030000 		.4byte	0x310
+ 1326 0288 0E       		.uleb128 0xe
+ 1327 0289 4D020000 		.4byte	.LASF39
+ 1328 028d 01       		.byte	0x1
+ 1329 028e 3A       		.byte	0x3a
+ 1330 028f 10030000 		.4byte	0x310
+ 1331 0293 00000000 		.4byte	.LLST0
+ 1332 0297 0F       		.uleb128 0xf
+ 1333 0298 6900     		.ascii	"i\000"
+ 1334 029a 01       		.byte	0x1
+ 1335 029b 3C       		.byte	0x3c
+ 1336 029c 6B000000 		.4byte	0x6b
+ 1337 02a0 2C000000 		.4byte	.LLST1
+ 1338 02a4 0F       		.uleb128 0xf
+ 1339 02a5 6A00     		.ascii	"j\000"
+ 1340 02a7 01       		.byte	0x1
+ 1341 02a8 3C       		.byte	0x3c
+ 1342 02a9 6B000000 		.4byte	0x6b
+ 1343 02ad 55000000 		.4byte	.LLST2
+ 1344 02b1 10       		.uleb128 0x10
+ 1345 02b2 20010000 		.4byte	.LASF35
+ 1346 02b6 01       		.byte	0x1
+ 1347 02b7 3C       		.byte	0x3c
+ 1348 02b8 6B000000 		.4byte	0x6b
+ 1349 02bc 7F000000 		.4byte	.LLST3
+ 1350 02c0 10       		.uleb128 0x10
+ 1351 02c1 47020000 		.4byte	.LASF36
+ 1352 02c5 01       		.byte	0x1
+ 1353 02c6 3D       		.byte	0x3d
+ 1354 02c7 6B000000 		.4byte	0x6b
+ 1355 02cb A8000000 		.4byte	.LLST4
+ 1356 02cf 10       		.uleb128 0x10
+ 1357 02d0 70030000 		.4byte	.LASF37
+ 1358 02d4 01       		.byte	0x1
+ 1359 02d5 3E       		.byte	0x3e
+ 1360 02d6 6B000000 		.4byte	0x6b
+ 1361 02da C7000000 		.4byte	.LLST5
+ 1362 02de 10       		.uleb128 0x10
+ 1363 02df E2010000 		.4byte	.LASF38
+ 1364 02e3 01       		.byte	0x1
+ 1365 02e4 3F       		.byte	0x3f
+ 1366 02e5 77000000 		.4byte	0x77
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 40
+
+
+ 1367 02e9 FD000000 		.4byte	.LLST6
+ 1368 02ed 11       		.uleb128 0x11
+ 1369 02ee E8000000 		.4byte	.LVL15
+ 1370 02f2 70040000 		.4byte	0x470
+ 1371 02f6 00030000 		.4byte	0x300
+ 1372 02fa 12       		.uleb128 0x12
+ 1373 02fb 01       		.uleb128 0x1
+ 1374 02fc 50       		.byte	0x50
+ 1375 02fd 01       		.uleb128 0x1
+ 1376 02fe 4B       		.byte	0x4b
+ 1377 02ff 00       		.byte	0
+ 1378 0300 13       		.uleb128 0x13
+ 1379 0301 16010000 		.4byte	.LVL16
+ 1380 0305 7B040000 		.4byte	0x47b
+ 1381 0309 12       		.uleb128 0x12
+ 1382 030a 01       		.uleb128 0x1
+ 1383 030b 50       		.byte	0x50
+ 1384 030c 01       		.uleb128 0x1
+ 1385 030d 4B       		.byte	0x4b
+ 1386 030e 00       		.byte	0
+ 1387 030f 00       		.byte	0
+ 1388 0310 0C       		.uleb128 0xc
+ 1389 0311 04       		.byte	0x4
+ 1390 0312 16030000 		.4byte	0x316
+ 1391 0316 14       		.uleb128 0x14
+ 1392 0317 C4010000 		.4byte	0x1c4
+ 1393 031b 15       		.uleb128 0x15
+ 1394 031c 2D010000 		.4byte	.LASF45
+ 1395 0320 01       		.byte	0x1
+ 1396 0321 B8       		.byte	0xb8
+ 1397 0322 00000000 		.4byte	.LFB2
+ 1398 0326 20000000 		.4byte	.LFE2-.LFB2
+ 1399 032a 01       		.uleb128 0x1
+ 1400 032b 9C       		.byte	0x9c
+ 1401 032c 40030000 		.4byte	0x340
+ 1402 0330 0E       		.uleb128 0xe
+ 1403 0331 D9010000 		.4byte	.LASF40
+ 1404 0335 01       		.byte	0x1
+ 1405 0336 B8       		.byte	0xb8
+ 1406 0337 6B000000 		.4byte	0x6b
+ 1407 033b 3D010000 		.4byte	.LLST7
+ 1408 033f 00       		.byte	0
+ 1409 0340 0D       		.uleb128 0xd
+ 1410 0341 3A030000 		.4byte	.LASF42
+ 1411 0345 01       		.byte	0x1
+ 1412 0346 D6       		.byte	0xd6
+ 1413 0347 6B000000 		.4byte	0x6b
+ 1414 034b 00000000 		.4byte	.LFB3
+ 1415 034f A8000000 		.4byte	.LFE3-.LFB3
+ 1416 0353 01       		.uleb128 0x1
+ 1417 0354 9C       		.byte	0x9c
+ 1418 0355 69030000 		.4byte	0x369
+ 1419 0359 10       		.uleb128 0x10
+ 1420 035a 70030000 		.4byte	.LASF37
+ 1421 035e 01       		.byte	0x1
+ 1422 035f D8       		.byte	0xd8
+ 1423 0360 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 41
+
+
+ 1424 0364 5E010000 		.4byte	.LLST8
+ 1425 0368 00       		.byte	0
+ 1426 0369 16       		.uleb128 0x16
+ 1427 036a 47030000 		.4byte	.LASF43
+ 1428 036e 01       		.byte	0x1
+ 1429 036f 1101     		.2byte	0x111
+ 1430 0371 6B000000 		.4byte	0x6b
+ 1431 0375 00000000 		.4byte	.LFB4
+ 1432 0379 A8000000 		.4byte	.LFE4-.LFB4
+ 1433 037d 01       		.uleb128 0x1
+ 1434 037e 9C       		.byte	0x9c
+ 1435 037f 94030000 		.4byte	0x394
+ 1436 0383 17       		.uleb128 0x17
+ 1437 0384 70030000 		.4byte	.LASF37
+ 1438 0388 01       		.byte	0x1
+ 1439 0389 1301     		.2byte	0x113
+ 1440 038b 6B000000 		.4byte	0x6b
+ 1441 038f 7D010000 		.4byte	.LLST9
+ 1442 0393 00       		.byte	0
+ 1443 0394 16       		.uleb128 0x16
+ 1444 0395 54030000 		.4byte	.LASF44
+ 1445 0399 01       		.byte	0x1
+ 1446 039a B401     		.2byte	0x1b4
+ 1447 039c 6B000000 		.4byte	0x6b
+ 1448 03a0 00000000 		.4byte	.LFB5
+ 1449 03a4 A8000000 		.4byte	.LFE5-.LFB5
+ 1450 03a8 01       		.uleb128 0x1
+ 1451 03a9 9C       		.byte	0x9c
+ 1452 03aa BF030000 		.4byte	0x3bf
+ 1453 03ae 17       		.uleb128 0x17
+ 1454 03af 70030000 		.4byte	.LASF37
+ 1455 03b3 01       		.byte	0x1
+ 1456 03b4 B601     		.2byte	0x1b6
+ 1457 03b6 6B000000 		.4byte	0x6b
+ 1458 03ba 9C010000 		.4byte	.LLST10
+ 1459 03be 00       		.byte	0
+ 1460 03bf 18       		.uleb128 0x18
+ 1461 03c0 61030000 		.4byte	.LASF46
+ 1462 03c4 01       		.byte	0x1
+ 1463 03c5 8902     		.2byte	0x289
+ 1464 03c7 00000000 		.4byte	.LFB6
+ 1465 03cb 1C000000 		.4byte	.LFE6-.LFB6
+ 1466 03cf 01       		.uleb128 0x1
+ 1467 03d0 9C       		.byte	0x9c
+ 1468 03d1 E6030000 		.4byte	0x3e6
+ 1469 03d5 19       		.uleb128 0x19
+ 1470 03d6 0B020000 		.4byte	.LASF47
+ 1471 03da 01       		.byte	0x1
+ 1472 03db 8902     		.2byte	0x289
+ 1473 03dd 6B000000 		.4byte	0x6b
+ 1474 03e1 BB010000 		.4byte	.LLST11
+ 1475 03e5 00       		.byte	0
+ 1476 03e6 1A       		.uleb128 0x1a
+ 1477 03e7 F6020000 		.4byte	.LASF48
+ 1478 03eb 01       		.byte	0x1
+ 1479 03ec B602     		.2byte	0x2b6
+ 1480 03ee 00000000 		.4byte	.LFB7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 42
+
+
+ 1481 03f2 50000000 		.4byte	.LFE7-.LFB7
+ 1482 03f6 01       		.uleb128 0x1
+ 1483 03f7 9C       		.byte	0x9c
+ 1484 03f8 1A       		.uleb128 0x1a
+ 1485 03f9 C6020000 		.4byte	.LASF49
+ 1486 03fd 01       		.byte	0x1
+ 1487 03fe E402     		.2byte	0x2e4
+ 1488 0400 00000000 		.4byte	.LFB8
+ 1489 0404 50000000 		.4byte	.LFE8-.LFB8
+ 1490 0408 01       		.uleb128 0x1
+ 1491 0409 9C       		.byte	0x9c
+ 1492 040a 1A       		.uleb128 0x1a
+ 1493 040b D6020000 		.4byte	.LASF50
+ 1494 040f 01       		.byte	0x1
+ 1495 0410 0E03     		.2byte	0x30e
+ 1496 0412 00000000 		.4byte	.LFB9
+ 1497 0416 50000000 		.4byte	.LFE9-.LFB9
+ 1498 041a 01       		.uleb128 0x1
+ 1499 041b 9C       		.byte	0x9c
+ 1500 041c 1A       		.uleb128 0x1a
+ 1501 041d E6020000 		.4byte	.LASF51
+ 1502 0421 01       		.byte	0x1
+ 1503 0422 3803     		.2byte	0x338
+ 1504 0424 00000000 		.4byte	.LFB10
+ 1505 0428 50000000 		.4byte	.LFE10-.LFB10
+ 1506 042c 01       		.uleb128 0x1
+ 1507 042d 9C       		.byte	0x9c
+ 1508 042e 1B       		.uleb128 0x1b
+ 1509 042f AA020000 		.4byte	.LASF52
+ 1510 0433 01       		.byte	0x1
+ 1511 0434 1C       		.byte	0x1c
+ 1512 0435 DD000000 		.4byte	0xdd
+ 1513 0439 1B       		.uleb128 0x1b
+ 1514 043a 3F010000 		.4byte	.LASF53
+ 1515 043e 01       		.byte	0x1
+ 1516 043f 1D       		.byte	0x1d
+ 1517 0440 DD000000 		.4byte	0xdd
+ 1518 0444 1B       		.uleb128 0x1b
+ 1519 0445 CC000000 		.4byte	.LASF54
+ 1520 0449 01       		.byte	0x1
+ 1521 044a 1E       		.byte	0x1e
+ 1522 044b DD000000 		.4byte	0xdd
+ 1523 044f 1B       		.uleb128 0x1b
+ 1524 0450 D5000000 		.4byte	.LASF55
+ 1525 0454 01       		.byte	0x1
+ 1526 0455 1F       		.byte	0x1f
+ 1527 0456 DD000000 		.4byte	0xdd
+ 1528 045a 1B       		.uleb128 0x1b
+ 1529 045b DE000000 		.4byte	.LASF56
+ 1530 045f 01       		.byte	0x1
+ 1531 0460 20       		.byte	0x20
+ 1532 0461 DD000000 		.4byte	0xdd
+ 1533 0465 1B       		.uleb128 0x1b
+ 1534 0466 E7000000 		.4byte	.LASF57
+ 1535 046a 01       		.byte	0x1
+ 1536 046b 21       		.byte	0x21
+ 1537 046c DD000000 		.4byte	0xdd
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 43
+
+
+ 1538 0470 1C       		.uleb128 0x1c
+ 1539 0471 F9000000 		.4byte	.LASF58
+ 1540 0475 F9000000 		.4byte	.LASF58
+ 1541 0479 04       		.byte	0x4
+ 1542 047a C3       		.byte	0xc3
+ 1543 047b 1C       		.uleb128 0x1c
+ 1544 047c 78020000 		.4byte	.LASF59
+ 1545 0480 78020000 		.4byte	.LASF59
+ 1546 0484 04       		.byte	0x4
+ 1547 0485 C1       		.byte	0xc1
+ 1548 0486 00       		.byte	0
+ 1549              		.section	.debug_abbrev,"",%progbits
+ 1550              	.Ldebug_abbrev0:
+ 1551 0000 01       		.uleb128 0x1
+ 1552 0001 11       		.uleb128 0x11
+ 1553 0002 01       		.byte	0x1
+ 1554 0003 25       		.uleb128 0x25
+ 1555 0004 0E       		.uleb128 0xe
+ 1556 0005 13       		.uleb128 0x13
+ 1557 0006 0B       		.uleb128 0xb
+ 1558 0007 03       		.uleb128 0x3
+ 1559 0008 0E       		.uleb128 0xe
+ 1560 0009 1B       		.uleb128 0x1b
+ 1561 000a 0E       		.uleb128 0xe
+ 1562 000b 55       		.uleb128 0x55
+ 1563 000c 17       		.uleb128 0x17
+ 1564 000d 11       		.uleb128 0x11
+ 1565 000e 01       		.uleb128 0x1
+ 1566 000f 10       		.uleb128 0x10
+ 1567 0010 17       		.uleb128 0x17
+ 1568 0011 00       		.byte	0
+ 1569 0012 00       		.byte	0
+ 1570 0013 02       		.uleb128 0x2
+ 1571 0014 24       		.uleb128 0x24
+ 1572 0015 00       		.byte	0
+ 1573 0016 0B       		.uleb128 0xb
+ 1574 0017 0B       		.uleb128 0xb
+ 1575 0018 3E       		.uleb128 0x3e
+ 1576 0019 0B       		.uleb128 0xb
+ 1577 001a 03       		.uleb128 0x3
+ 1578 001b 0E       		.uleb128 0xe
+ 1579 001c 00       		.byte	0
+ 1580 001d 00       		.byte	0
+ 1581 001e 03       		.uleb128 0x3
+ 1582 001f 24       		.uleb128 0x24
+ 1583 0020 00       		.byte	0
+ 1584 0021 0B       		.uleb128 0xb
+ 1585 0022 0B       		.uleb128 0xb
+ 1586 0023 3E       		.uleb128 0x3e
+ 1587 0024 0B       		.uleb128 0xb
+ 1588 0025 03       		.uleb128 0x3
+ 1589 0026 08       		.uleb128 0x8
+ 1590 0027 00       		.byte	0
+ 1591 0028 00       		.byte	0
+ 1592 0029 04       		.uleb128 0x4
+ 1593 002a 16       		.uleb128 0x16
+ 1594 002b 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 44
+
+
+ 1595 002c 03       		.uleb128 0x3
+ 1596 002d 0E       		.uleb128 0xe
+ 1597 002e 3A       		.uleb128 0x3a
+ 1598 002f 0B       		.uleb128 0xb
+ 1599 0030 3B       		.uleb128 0x3b
+ 1600 0031 05       		.uleb128 0x5
+ 1601 0032 49       		.uleb128 0x49
+ 1602 0033 13       		.uleb128 0x13
+ 1603 0034 00       		.byte	0
+ 1604 0035 00       		.byte	0
+ 1605 0036 05       		.uleb128 0x5
+ 1606 0037 35       		.uleb128 0x35
+ 1607 0038 00       		.byte	0
+ 1608 0039 49       		.uleb128 0x49
+ 1609 003a 13       		.uleb128 0x13
+ 1610 003b 00       		.byte	0
+ 1611 003c 00       		.byte	0
+ 1612 003d 06       		.uleb128 0x6
+ 1613 003e 13       		.uleb128 0x13
+ 1614 003f 01       		.byte	0x1
+ 1615 0040 0B       		.uleb128 0xb
+ 1616 0041 0B       		.uleb128 0xb
+ 1617 0042 3A       		.uleb128 0x3a
+ 1618 0043 0B       		.uleb128 0xb
+ 1619 0044 3B       		.uleb128 0x3b
+ 1620 0045 0B       		.uleb128 0xb
+ 1621 0046 01       		.uleb128 0x1
+ 1622 0047 13       		.uleb128 0x13
+ 1623 0048 00       		.byte	0
+ 1624 0049 00       		.byte	0
+ 1625 004a 07       		.uleb128 0x7
+ 1626 004b 0D       		.uleb128 0xd
+ 1627 004c 00       		.byte	0
+ 1628 004d 03       		.uleb128 0x3
+ 1629 004e 0E       		.uleb128 0xe
+ 1630 004f 3A       		.uleb128 0x3a
+ 1631 0050 0B       		.uleb128 0xb
+ 1632 0051 3B       		.uleb128 0x3b
+ 1633 0052 0B       		.uleb128 0xb
+ 1634 0053 49       		.uleb128 0x49
+ 1635 0054 13       		.uleb128 0x13
+ 1636 0055 38       		.uleb128 0x38
+ 1637 0056 0B       		.uleb128 0xb
+ 1638 0057 00       		.byte	0
+ 1639 0058 00       		.byte	0
+ 1640 0059 08       		.uleb128 0x8
+ 1641 005a 01       		.uleb128 0x1
+ 1642 005b 01       		.byte	0x1
+ 1643 005c 49       		.uleb128 0x49
+ 1644 005d 13       		.uleb128 0x13
+ 1645 005e 01       		.uleb128 0x1
+ 1646 005f 13       		.uleb128 0x13
+ 1647 0060 00       		.byte	0
+ 1648 0061 00       		.byte	0
+ 1649 0062 09       		.uleb128 0x9
+ 1650 0063 21       		.uleb128 0x21
+ 1651 0064 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 45
+
+
+ 1652 0065 49       		.uleb128 0x49
+ 1653 0066 13       		.uleb128 0x13
+ 1654 0067 2F       		.uleb128 0x2f
+ 1655 0068 0B       		.uleb128 0xb
+ 1656 0069 00       		.byte	0
+ 1657 006a 00       		.byte	0
+ 1658 006b 0A       		.uleb128 0xa
+ 1659 006c 16       		.uleb128 0x16
+ 1660 006d 00       		.byte	0
+ 1661 006e 03       		.uleb128 0x3
+ 1662 006f 0E       		.uleb128 0xe
+ 1663 0070 3A       		.uleb128 0x3a
+ 1664 0071 0B       		.uleb128 0xb
+ 1665 0072 3B       		.uleb128 0x3b
+ 1666 0073 0B       		.uleb128 0xb
+ 1667 0074 49       		.uleb128 0x49
+ 1668 0075 13       		.uleb128 0x13
+ 1669 0076 00       		.byte	0
+ 1670 0077 00       		.byte	0
+ 1671 0078 0B       		.uleb128 0xb
+ 1672 0079 0D       		.uleb128 0xd
+ 1673 007a 00       		.byte	0
+ 1674 007b 03       		.uleb128 0x3
+ 1675 007c 08       		.uleb128 0x8
+ 1676 007d 3A       		.uleb128 0x3a
+ 1677 007e 0B       		.uleb128 0xb
+ 1678 007f 3B       		.uleb128 0x3b
+ 1679 0080 0B       		.uleb128 0xb
+ 1680 0081 49       		.uleb128 0x49
+ 1681 0082 13       		.uleb128 0x13
+ 1682 0083 38       		.uleb128 0x38
+ 1683 0084 0B       		.uleb128 0xb
+ 1684 0085 00       		.byte	0
+ 1685 0086 00       		.byte	0
+ 1686 0087 0C       		.uleb128 0xc
+ 1687 0088 0F       		.uleb128 0xf
+ 1688 0089 00       		.byte	0
+ 1689 008a 0B       		.uleb128 0xb
+ 1690 008b 0B       		.uleb128 0xb
+ 1691 008c 49       		.uleb128 0x49
+ 1692 008d 13       		.uleb128 0x13
+ 1693 008e 00       		.byte	0
+ 1694 008f 00       		.byte	0
+ 1695 0090 0D       		.uleb128 0xd
+ 1696 0091 2E       		.uleb128 0x2e
+ 1697 0092 01       		.byte	0x1
+ 1698 0093 3F       		.uleb128 0x3f
+ 1699 0094 19       		.uleb128 0x19
+ 1700 0095 03       		.uleb128 0x3
+ 1701 0096 0E       		.uleb128 0xe
+ 1702 0097 3A       		.uleb128 0x3a
+ 1703 0098 0B       		.uleb128 0xb
+ 1704 0099 3B       		.uleb128 0x3b
+ 1705 009a 0B       		.uleb128 0xb
+ 1706 009b 27       		.uleb128 0x27
+ 1707 009c 19       		.uleb128 0x19
+ 1708 009d 49       		.uleb128 0x49
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 46
+
+
+ 1709 009e 13       		.uleb128 0x13
+ 1710 009f 11       		.uleb128 0x11
+ 1711 00a0 01       		.uleb128 0x1
+ 1712 00a1 12       		.uleb128 0x12
+ 1713 00a2 06       		.uleb128 0x6
+ 1714 00a3 40       		.uleb128 0x40
+ 1715 00a4 18       		.uleb128 0x18
+ 1716 00a5 9742     		.uleb128 0x2117
+ 1717 00a7 19       		.uleb128 0x19
+ 1718 00a8 01       		.uleb128 0x1
+ 1719 00a9 13       		.uleb128 0x13
+ 1720 00aa 00       		.byte	0
+ 1721 00ab 00       		.byte	0
+ 1722 00ac 0E       		.uleb128 0xe
+ 1723 00ad 05       		.uleb128 0x5
+ 1724 00ae 00       		.byte	0
+ 1725 00af 03       		.uleb128 0x3
+ 1726 00b0 0E       		.uleb128 0xe
+ 1727 00b1 3A       		.uleb128 0x3a
+ 1728 00b2 0B       		.uleb128 0xb
+ 1729 00b3 3B       		.uleb128 0x3b
+ 1730 00b4 0B       		.uleb128 0xb
+ 1731 00b5 49       		.uleb128 0x49
+ 1732 00b6 13       		.uleb128 0x13
+ 1733 00b7 02       		.uleb128 0x2
+ 1734 00b8 17       		.uleb128 0x17
+ 1735 00b9 00       		.byte	0
+ 1736 00ba 00       		.byte	0
+ 1737 00bb 0F       		.uleb128 0xf
+ 1738 00bc 34       		.uleb128 0x34
+ 1739 00bd 00       		.byte	0
+ 1740 00be 03       		.uleb128 0x3
+ 1741 00bf 08       		.uleb128 0x8
+ 1742 00c0 3A       		.uleb128 0x3a
+ 1743 00c1 0B       		.uleb128 0xb
+ 1744 00c2 3B       		.uleb128 0x3b
+ 1745 00c3 0B       		.uleb128 0xb
+ 1746 00c4 49       		.uleb128 0x49
+ 1747 00c5 13       		.uleb128 0x13
+ 1748 00c6 02       		.uleb128 0x2
+ 1749 00c7 17       		.uleb128 0x17
+ 1750 00c8 00       		.byte	0
+ 1751 00c9 00       		.byte	0
+ 1752 00ca 10       		.uleb128 0x10
+ 1753 00cb 34       		.uleb128 0x34
+ 1754 00cc 00       		.byte	0
+ 1755 00cd 03       		.uleb128 0x3
+ 1756 00ce 0E       		.uleb128 0xe
+ 1757 00cf 3A       		.uleb128 0x3a
+ 1758 00d0 0B       		.uleb128 0xb
+ 1759 00d1 3B       		.uleb128 0x3b
+ 1760 00d2 0B       		.uleb128 0xb
+ 1761 00d3 49       		.uleb128 0x49
+ 1762 00d4 13       		.uleb128 0x13
+ 1763 00d5 02       		.uleb128 0x2
+ 1764 00d6 17       		.uleb128 0x17
+ 1765 00d7 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 47
+
+
+ 1766 00d8 00       		.byte	0
+ 1767 00d9 11       		.uleb128 0x11
+ 1768 00da 898201   		.uleb128 0x4109
+ 1769 00dd 01       		.byte	0x1
+ 1770 00de 11       		.uleb128 0x11
+ 1771 00df 01       		.uleb128 0x1
+ 1772 00e0 31       		.uleb128 0x31
+ 1773 00e1 13       		.uleb128 0x13
+ 1774 00e2 01       		.uleb128 0x1
+ 1775 00e3 13       		.uleb128 0x13
+ 1776 00e4 00       		.byte	0
+ 1777 00e5 00       		.byte	0
+ 1778 00e6 12       		.uleb128 0x12
+ 1779 00e7 8A8201   		.uleb128 0x410a
+ 1780 00ea 00       		.byte	0
+ 1781 00eb 02       		.uleb128 0x2
+ 1782 00ec 18       		.uleb128 0x18
+ 1783 00ed 9142     		.uleb128 0x2111
+ 1784 00ef 18       		.uleb128 0x18
+ 1785 00f0 00       		.byte	0
+ 1786 00f1 00       		.byte	0
+ 1787 00f2 13       		.uleb128 0x13
+ 1788 00f3 898201   		.uleb128 0x4109
+ 1789 00f6 01       		.byte	0x1
+ 1790 00f7 11       		.uleb128 0x11
+ 1791 00f8 01       		.uleb128 0x1
+ 1792 00f9 31       		.uleb128 0x31
+ 1793 00fa 13       		.uleb128 0x13
+ 1794 00fb 00       		.byte	0
+ 1795 00fc 00       		.byte	0
+ 1796 00fd 14       		.uleb128 0x14
+ 1797 00fe 26       		.uleb128 0x26
+ 1798 00ff 00       		.byte	0
+ 1799 0100 49       		.uleb128 0x49
+ 1800 0101 13       		.uleb128 0x13
+ 1801 0102 00       		.byte	0
+ 1802 0103 00       		.byte	0
+ 1803 0104 15       		.uleb128 0x15
+ 1804 0105 2E       		.uleb128 0x2e
+ 1805 0106 01       		.byte	0x1
+ 1806 0107 3F       		.uleb128 0x3f
+ 1807 0108 19       		.uleb128 0x19
+ 1808 0109 03       		.uleb128 0x3
+ 1809 010a 0E       		.uleb128 0xe
+ 1810 010b 3A       		.uleb128 0x3a
+ 1811 010c 0B       		.uleb128 0xb
+ 1812 010d 3B       		.uleb128 0x3b
+ 1813 010e 0B       		.uleb128 0xb
+ 1814 010f 27       		.uleb128 0x27
+ 1815 0110 19       		.uleb128 0x19
+ 1816 0111 11       		.uleb128 0x11
+ 1817 0112 01       		.uleb128 0x1
+ 1818 0113 12       		.uleb128 0x12
+ 1819 0114 06       		.uleb128 0x6
+ 1820 0115 40       		.uleb128 0x40
+ 1821 0116 18       		.uleb128 0x18
+ 1822 0117 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 48
+
+
+ 1823 0119 19       		.uleb128 0x19
+ 1824 011a 01       		.uleb128 0x1
+ 1825 011b 13       		.uleb128 0x13
+ 1826 011c 00       		.byte	0
+ 1827 011d 00       		.byte	0
+ 1828 011e 16       		.uleb128 0x16
+ 1829 011f 2E       		.uleb128 0x2e
+ 1830 0120 01       		.byte	0x1
+ 1831 0121 3F       		.uleb128 0x3f
+ 1832 0122 19       		.uleb128 0x19
+ 1833 0123 03       		.uleb128 0x3
+ 1834 0124 0E       		.uleb128 0xe
+ 1835 0125 3A       		.uleb128 0x3a
+ 1836 0126 0B       		.uleb128 0xb
+ 1837 0127 3B       		.uleb128 0x3b
+ 1838 0128 05       		.uleb128 0x5
+ 1839 0129 27       		.uleb128 0x27
+ 1840 012a 19       		.uleb128 0x19
+ 1841 012b 49       		.uleb128 0x49
+ 1842 012c 13       		.uleb128 0x13
+ 1843 012d 11       		.uleb128 0x11
+ 1844 012e 01       		.uleb128 0x1
+ 1845 012f 12       		.uleb128 0x12
+ 1846 0130 06       		.uleb128 0x6
+ 1847 0131 40       		.uleb128 0x40
+ 1848 0132 18       		.uleb128 0x18
+ 1849 0133 9742     		.uleb128 0x2117
+ 1850 0135 19       		.uleb128 0x19
+ 1851 0136 01       		.uleb128 0x1
+ 1852 0137 13       		.uleb128 0x13
+ 1853 0138 00       		.byte	0
+ 1854 0139 00       		.byte	0
+ 1855 013a 17       		.uleb128 0x17
+ 1856 013b 34       		.uleb128 0x34
+ 1857 013c 00       		.byte	0
+ 1858 013d 03       		.uleb128 0x3
+ 1859 013e 0E       		.uleb128 0xe
+ 1860 013f 3A       		.uleb128 0x3a
+ 1861 0140 0B       		.uleb128 0xb
+ 1862 0141 3B       		.uleb128 0x3b
+ 1863 0142 05       		.uleb128 0x5
+ 1864 0143 49       		.uleb128 0x49
+ 1865 0144 13       		.uleb128 0x13
+ 1866 0145 02       		.uleb128 0x2
+ 1867 0146 17       		.uleb128 0x17
+ 1868 0147 00       		.byte	0
+ 1869 0148 00       		.byte	0
+ 1870 0149 18       		.uleb128 0x18
+ 1871 014a 2E       		.uleb128 0x2e
+ 1872 014b 01       		.byte	0x1
+ 1873 014c 3F       		.uleb128 0x3f
+ 1874 014d 19       		.uleb128 0x19
+ 1875 014e 03       		.uleb128 0x3
+ 1876 014f 0E       		.uleb128 0xe
+ 1877 0150 3A       		.uleb128 0x3a
+ 1878 0151 0B       		.uleb128 0xb
+ 1879 0152 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 49
+
+
+ 1880 0153 05       		.uleb128 0x5
+ 1881 0154 27       		.uleb128 0x27
+ 1882 0155 19       		.uleb128 0x19
+ 1883 0156 11       		.uleb128 0x11
+ 1884 0157 01       		.uleb128 0x1
+ 1885 0158 12       		.uleb128 0x12
+ 1886 0159 06       		.uleb128 0x6
+ 1887 015a 40       		.uleb128 0x40
+ 1888 015b 18       		.uleb128 0x18
+ 1889 015c 9742     		.uleb128 0x2117
+ 1890 015e 19       		.uleb128 0x19
+ 1891 015f 01       		.uleb128 0x1
+ 1892 0160 13       		.uleb128 0x13
+ 1893 0161 00       		.byte	0
+ 1894 0162 00       		.byte	0
+ 1895 0163 19       		.uleb128 0x19
+ 1896 0164 05       		.uleb128 0x5
+ 1897 0165 00       		.byte	0
+ 1898 0166 03       		.uleb128 0x3
+ 1899 0167 0E       		.uleb128 0xe
+ 1900 0168 3A       		.uleb128 0x3a
+ 1901 0169 0B       		.uleb128 0xb
+ 1902 016a 3B       		.uleb128 0x3b
+ 1903 016b 05       		.uleb128 0x5
+ 1904 016c 49       		.uleb128 0x49
+ 1905 016d 13       		.uleb128 0x13
+ 1906 016e 02       		.uleb128 0x2
+ 1907 016f 17       		.uleb128 0x17
+ 1908 0170 00       		.byte	0
+ 1909 0171 00       		.byte	0
+ 1910 0172 1A       		.uleb128 0x1a
+ 1911 0173 2E       		.uleb128 0x2e
+ 1912 0174 00       		.byte	0
+ 1913 0175 3F       		.uleb128 0x3f
+ 1914 0176 19       		.uleb128 0x19
+ 1915 0177 03       		.uleb128 0x3
+ 1916 0178 0E       		.uleb128 0xe
+ 1917 0179 3A       		.uleb128 0x3a
+ 1918 017a 0B       		.uleb128 0xb
+ 1919 017b 3B       		.uleb128 0x3b
+ 1920 017c 05       		.uleb128 0x5
+ 1921 017d 27       		.uleb128 0x27
+ 1922 017e 19       		.uleb128 0x19
+ 1923 017f 11       		.uleb128 0x11
+ 1924 0180 01       		.uleb128 0x1
+ 1925 0181 12       		.uleb128 0x12
+ 1926 0182 06       		.uleb128 0x6
+ 1927 0183 40       		.uleb128 0x40
+ 1928 0184 18       		.uleb128 0x18
+ 1929 0185 9742     		.uleb128 0x2117
+ 1930 0187 19       		.uleb128 0x19
+ 1931 0188 00       		.byte	0
+ 1932 0189 00       		.byte	0
+ 1933 018a 1B       		.uleb128 0x1b
+ 1934 018b 34       		.uleb128 0x34
+ 1935 018c 00       		.byte	0
+ 1936 018d 03       		.uleb128 0x3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 50
+
+
+ 1937 018e 0E       		.uleb128 0xe
+ 1938 018f 3A       		.uleb128 0x3a
+ 1939 0190 0B       		.uleb128 0xb
+ 1940 0191 3B       		.uleb128 0x3b
+ 1941 0192 0B       		.uleb128 0xb
+ 1942 0193 49       		.uleb128 0x49
+ 1943 0194 13       		.uleb128 0x13
+ 1944 0195 3F       		.uleb128 0x3f
+ 1945 0196 19       		.uleb128 0x19
+ 1946 0197 3C       		.uleb128 0x3c
+ 1947 0198 19       		.uleb128 0x19
+ 1948 0199 00       		.byte	0
+ 1949 019a 00       		.byte	0
+ 1950 019b 1C       		.uleb128 0x1c
+ 1951 019c 2E       		.uleb128 0x2e
+ 1952 019d 00       		.byte	0
+ 1953 019e 3F       		.uleb128 0x3f
+ 1954 019f 19       		.uleb128 0x19
+ 1955 01a0 3C       		.uleb128 0x3c
+ 1956 01a1 19       		.uleb128 0x19
+ 1957 01a2 6E       		.uleb128 0x6e
+ 1958 01a3 0E       		.uleb128 0xe
+ 1959 01a4 03       		.uleb128 0x3
+ 1960 01a5 0E       		.uleb128 0xe
+ 1961 01a6 3A       		.uleb128 0x3a
+ 1962 01a7 0B       		.uleb128 0xb
+ 1963 01a8 3B       		.uleb128 0x3b
+ 1964 01a9 0B       		.uleb128 0xb
+ 1965 01aa 00       		.byte	0
+ 1966 01ab 00       		.byte	0
+ 1967 01ac 00       		.byte	0
+ 1968              		.section	.debug_loc,"",%progbits
+ 1969              	.Ldebug_loc0:
+ 1970              	.LLST0:
+ 1971 0000 00000000 		.4byte	.LVL0
+ 1972 0004 0C000000 		.4byte	.LVL2
+ 1973 0008 0100     		.2byte	0x1
+ 1974 000a 50       		.byte	0x50
+ 1975 000b 0C000000 		.4byte	.LVL2
+ 1976 000f 42010000 		.4byte	.LVL25
+ 1977 0013 0100     		.2byte	0x1
+ 1978 0015 56       		.byte	0x56
+ 1979 0016 42010000 		.4byte	.LVL25
+ 1980 001a 5C010000 		.4byte	.LFE1
+ 1981 001e 0400     		.2byte	0x4
+ 1982 0020 F3       		.byte	0xf3
+ 1983 0021 01       		.uleb128 0x1
+ 1984 0022 50       		.byte	0x50
+ 1985 0023 9F       		.byte	0x9f
+ 1986 0024 00000000 		.4byte	0
+ 1987 0028 00000000 		.4byte	0
+ 1988              	.LLST1:
+ 1989 002c 12000000 		.4byte	.LVL3
+ 1990 0030 22010000 		.4byte	.LVL20
+ 1991 0034 0100     		.2byte	0x1
+ 1992 0036 54       		.byte	0x54
+ 1993 0037 24010000 		.4byte	.LVL21
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 51
+
+
+ 1994 003b 26010000 		.4byte	.LVL22
+ 1995 003f 0100     		.2byte	0x1
+ 1996 0041 54       		.byte	0x54
+ 1997 0042 2A010000 		.4byte	.LVL23
+ 1998 0046 3C010000 		.4byte	.LVL24
+ 1999 004a 0100     		.2byte	0x1
+ 2000 004c 54       		.byte	0x54
+ 2001 004d 00000000 		.4byte	0
+ 2002 0051 00000000 		.4byte	0
+ 2003              	.LLST2:
+ 2004 0055 7E000000 		.4byte	.LVL11
+ 2005 0059 82000000 		.4byte	.LVL12
+ 2006 005d 0200     		.2byte	0x2
+ 2007 005f 30       		.byte	0x30
+ 2008 0060 9F       		.byte	0x9f
+ 2009 0061 82000000 		.4byte	.LVL12
+ 2010 0065 D6000000 		.4byte	.LVL13
+ 2011 0069 0100     		.2byte	0x1
+ 2012 006b 53       		.byte	0x53
+ 2013 006c D8000000 		.4byte	.LVL14
+ 2014 0070 E7000000 		.4byte	.LVL15-1
+ 2015 0074 0100     		.2byte	0x1
+ 2016 0076 53       		.byte	0x53
+ 2017 0077 00000000 		.4byte	0
+ 2018 007b 00000000 		.4byte	0
+ 2019              	.LLST3:
+ 2020 007f 12000000 		.4byte	.LVL3
+ 2021 0083 1A010000 		.4byte	.LVL18
+ 2022 0087 0100     		.2byte	0x1
+ 2023 0089 55       		.byte	0x55
+ 2024 008a 1C010000 		.4byte	.LVL19
+ 2025 008e 26010000 		.4byte	.LVL22
+ 2026 0092 0100     		.2byte	0x1
+ 2027 0094 55       		.byte	0x55
+ 2028 0095 2A010000 		.4byte	.LVL23
+ 2029 0099 3C010000 		.4byte	.LVL24
+ 2030 009d 0100     		.2byte	0x1
+ 2031 009f 55       		.byte	0x55
+ 2032 00a0 00000000 		.4byte	0
+ 2033 00a4 00000000 		.4byte	0
+ 2034              	.LLST4:
+ 2035 00a8 0A000000 		.4byte	.LVL1
+ 2036 00ac 12000000 		.4byte	.LVL3
+ 2037 00b0 0200     		.2byte	0x2
+ 2038 00b2 30       		.byte	0x30
+ 2039 00b3 9F       		.byte	0x9f
+ 2040 00b4 12000000 		.4byte	.LVL3
+ 2041 00b8 42010000 		.4byte	.LVL26
+ 2042 00bc 0100     		.2byte	0x1
+ 2043 00be 58       		.byte	0x58
+ 2044 00bf 00000000 		.4byte	0
+ 2045 00c3 00000000 		.4byte	0
+ 2046              	.LLST5:
+ 2047 00c7 0A000000 		.4byte	.LVL1
+ 2048 00cb 12000000 		.4byte	.LVL3
+ 2049 00cf 0200     		.2byte	0x2
+ 2050 00d1 31       		.byte	0x31
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 52
+
+
+ 2051 00d2 9F       		.byte	0x9f
+ 2052 00d3 12000000 		.4byte	.LVL3
+ 2053 00d7 82000000 		.4byte	.LVL12
+ 2054 00db 0100     		.2byte	0x1
+ 2055 00dd 50       		.byte	0x50
+ 2056 00de 16010000 		.4byte	.LVL16
+ 2057 00e2 18010000 		.4byte	.LVL17
+ 2058 00e6 0200     		.2byte	0x2
+ 2059 00e8 30       		.byte	0x30
+ 2060 00e9 9F       		.byte	0x9f
+ 2061 00ea 18010000 		.4byte	.LVL17
+ 2062 00ee 5C010000 		.4byte	.LFE1
+ 2063 00f2 0100     		.2byte	0x1
+ 2064 00f4 50       		.byte	0x50
+ 2065 00f5 00000000 		.4byte	0
+ 2066 00f9 00000000 		.4byte	0
+ 2067              	.LLST6:
+ 2068 00fd 22000000 		.4byte	.LVL4
+ 2069 0101 30000000 		.4byte	.LVL5
+ 2070 0105 0200     		.2byte	0x2
+ 2071 0107 30       		.byte	0x30
+ 2072 0108 9F       		.byte	0x9f
+ 2073 0109 30000000 		.4byte	.LVL5
+ 2074 010d 64000000 		.4byte	.LVL7
+ 2075 0111 0100     		.2byte	0x1
+ 2076 0113 57       		.byte	0x57
+ 2077 0114 66000000 		.4byte	.LVL8
+ 2078 0118 6E000000 		.4byte	.LVL9
+ 2079 011c 0100     		.2byte	0x1
+ 2080 011e 57       		.byte	0x57
+ 2081 011f 70000000 		.4byte	.LVL10
+ 2082 0123 7E000000 		.4byte	.LVL11
+ 2083 0127 0100     		.2byte	0x1
+ 2084 0129 57       		.byte	0x57
+ 2085 012a 7E000000 		.4byte	.LVL11
+ 2086 012e 18010000 		.4byte	.LVL17
+ 2087 0132 0100     		.2byte	0x1
+ 2088 0134 59       		.byte	0x59
+ 2089 0135 00000000 		.4byte	0
+ 2090 0139 00000000 		.4byte	0
+ 2091              	.LLST7:
+ 2092 013d 00000000 		.4byte	.LVL27
+ 2093 0141 06000000 		.4byte	.LVL28
+ 2094 0145 0100     		.2byte	0x1
+ 2095 0147 50       		.byte	0x50
+ 2096 0148 06000000 		.4byte	.LVL28
+ 2097 014c 20000000 		.4byte	.LFE2
+ 2098 0150 0400     		.2byte	0x4
+ 2099 0152 F3       		.byte	0xf3
+ 2100 0153 01       		.uleb128 0x1
+ 2101 0154 50       		.byte	0x50
+ 2102 0155 9F       		.byte	0x9f
+ 2103 0156 00000000 		.4byte	0
+ 2104 015a 00000000 		.4byte	0
+ 2105              	.LLST8:
+ 2106 015e 02000000 		.4byte	.LVL29
+ 2107 0162 8C000000 		.4byte	.LVL30
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 53
+
+
+ 2108 0166 0200     		.2byte	0x2
+ 2109 0168 30       		.byte	0x30
+ 2110 0169 9F       		.byte	0x9f
+ 2111 016a 8C000000 		.4byte	.LVL30
+ 2112 016e A8000000 		.4byte	.LFE3
+ 2113 0172 0100     		.2byte	0x1
+ 2114 0174 50       		.byte	0x50
+ 2115 0175 00000000 		.4byte	0
+ 2116 0179 00000000 		.4byte	0
+ 2117              	.LLST9:
+ 2118 017d 02000000 		.4byte	.LVL31
+ 2119 0181 8C000000 		.4byte	.LVL32
+ 2120 0185 0200     		.2byte	0x2
+ 2121 0187 30       		.byte	0x30
+ 2122 0188 9F       		.byte	0x9f
+ 2123 0189 8C000000 		.4byte	.LVL32
+ 2124 018d A8000000 		.4byte	.LFE4
+ 2125 0191 0100     		.2byte	0x1
+ 2126 0193 50       		.byte	0x50
+ 2127 0194 00000000 		.4byte	0
+ 2128 0198 00000000 		.4byte	0
+ 2129              	.LLST10:
+ 2130 019c 02000000 		.4byte	.LVL33
+ 2131 01a0 8C000000 		.4byte	.LVL34
+ 2132 01a4 0200     		.2byte	0x2
+ 2133 01a6 30       		.byte	0x30
+ 2134 01a7 9F       		.byte	0x9f
+ 2135 01a8 8C000000 		.4byte	.LVL34
+ 2136 01ac A8000000 		.4byte	.LFE5
+ 2137 01b0 0100     		.2byte	0x1
+ 2138 01b2 50       		.byte	0x50
+ 2139 01b3 00000000 		.4byte	0
+ 2140 01b7 00000000 		.4byte	0
+ 2141              	.LLST11:
+ 2142 01bb 00000000 		.4byte	.LVL35
+ 2143 01bf 02000000 		.4byte	.LVL36
+ 2144 01c3 0100     		.2byte	0x1
+ 2145 01c5 50       		.byte	0x50
+ 2146 01c6 02000000 		.4byte	.LVL36
+ 2147 01ca 1C000000 		.4byte	.LFE6
+ 2148 01ce 0400     		.2byte	0x4
+ 2149 01d0 F3       		.byte	0xf3
+ 2150 01d1 01       		.uleb128 0x1
+ 2151 01d2 50       		.byte	0x50
+ 2152 01d3 9F       		.byte	0x9f
+ 2153 01d4 00000000 		.4byte	0
+ 2154 01d8 00000000 		.4byte	0
+ 2155              		.section	.debug_aranges,"",%progbits
+ 2156 0000 64000000 		.4byte	0x64
+ 2157 0004 0200     		.2byte	0x2
+ 2158 0006 00000000 		.4byte	.Ldebug_info0
+ 2159 000a 04       		.byte	0x4
+ 2160 000b 00       		.byte	0
+ 2161 000c 0000     		.2byte	0
+ 2162 000e 0000     		.2byte	0
+ 2163 0010 00000000 		.4byte	.LFB1
+ 2164 0014 5C010000 		.4byte	.LFE1-.LFB1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 54
+
+
+ 2165 0018 00000000 		.4byte	.LFB2
+ 2166 001c 20000000 		.4byte	.LFE2-.LFB2
+ 2167 0020 00000000 		.4byte	.LFB3
+ 2168 0024 A8000000 		.4byte	.LFE3-.LFB3
+ 2169 0028 00000000 		.4byte	.LFB4
+ 2170 002c A8000000 		.4byte	.LFE4-.LFB4
+ 2171 0030 00000000 		.4byte	.LFB5
+ 2172 0034 A8000000 		.4byte	.LFE5-.LFB5
+ 2173 0038 00000000 		.4byte	.LFB6
+ 2174 003c 1C000000 		.4byte	.LFE6-.LFB6
+ 2175 0040 00000000 		.4byte	.LFB7
+ 2176 0044 50000000 		.4byte	.LFE7-.LFB7
+ 2177 0048 00000000 		.4byte	.LFB8
+ 2178 004c 50000000 		.4byte	.LFE8-.LFB8
+ 2179 0050 00000000 		.4byte	.LFB9
+ 2180 0054 50000000 		.4byte	.LFE9-.LFB9
+ 2181 0058 00000000 		.4byte	.LFB10
+ 2182 005c 50000000 		.4byte	.LFE10-.LFB10
+ 2183 0060 00000000 		.4byte	0
+ 2184 0064 00000000 		.4byte	0
+ 2185              		.section	.debug_ranges,"",%progbits
+ 2186              	.Ldebug_ranges0:
+ 2187 0000 00000000 		.4byte	.LFB1
+ 2188 0004 5C010000 		.4byte	.LFE1
+ 2189 0008 00000000 		.4byte	.LFB2
+ 2190 000c 20000000 		.4byte	.LFE2
+ 2191 0010 00000000 		.4byte	.LFB3
+ 2192 0014 A8000000 		.4byte	.LFE3
+ 2193 0018 00000000 		.4byte	.LFB4
+ 2194 001c A8000000 		.4byte	.LFE4
+ 2195 0020 00000000 		.4byte	.LFB5
+ 2196 0024 A8000000 		.4byte	.LFE5
+ 2197 0028 00000000 		.4byte	.LFB6
+ 2198 002c 1C000000 		.4byte	.LFE6
+ 2199 0030 00000000 		.4byte	.LFB7
+ 2200 0034 50000000 		.4byte	.LFE7
+ 2201 0038 00000000 		.4byte	.LFB8
+ 2202 003c 50000000 		.4byte	.LFE8
+ 2203 0040 00000000 		.4byte	.LFB9
+ 2204 0044 50000000 		.4byte	.LFE9
+ 2205 0048 00000000 		.4byte	.LFB10
+ 2206 004c 50000000 		.4byte	.LFE10
+ 2207 0050 00000000 		.4byte	0
+ 2208 0054 00000000 		.4byte	0
+ 2209              		.section	.debug_line,"",%progbits
+ 2210              	.Ldebug_line0:
+ 2211 0000 C4010000 		.section	.debug_str,"MS",%progbits,1
+ 2211      02005F00 
+ 2211      00000201 
+ 2211      FB0E0D00 
+ 2211      01010101 
+ 2212              	.LASF60:
+ 2213 0000 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2213      43313120 
+ 2213      352E342E 
+ 2213      31203230 
+ 2213      31363036 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 55
+
+
+ 2214 0033 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 2214      20726576 
+ 2214      6973696F 
+ 2214      6E203233 
+ 2214      37373135 
+ 2215 0066 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2215      66756E63 
+ 2215      74696F6E 
+ 2215      2D736563 
+ 2215      74696F6E 
+ 2216              	.LASF7:
+ 2217 008e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2217      206C6F6E 
+ 2217      6720756E 
+ 2217      7369676E 
+ 2217      65642069 
+ 2218              	.LASF31:
+ 2219 00a5 7478636D 		.ascii	"txcmd\000"
+ 2219      6400
+ 2220              	.LASF28:
+ 2221 00ab 7278616D 		.ascii	"rxamrd\000"
+ 2221      726400
+ 2222              	.LASF6:
+ 2223 00b2 6C6F6E67 		.ascii	"long long int\000"
+ 2223      206C6F6E 
+ 2223      6720696E 
+ 2223      7400
+ 2224              	.LASF0:
+ 2225 00c0 7369676E 		.ascii	"signed char\000"
+ 2225      65642063 
+ 2225      68617200 
+ 2226              	.LASF54:
+ 2227 00cc 6D61696C 		.ascii	"mailbox0\000"
+ 2227      626F7830 
+ 2227      00
+ 2228              	.LASF55:
+ 2229 00d5 6D61696C 		.ascii	"mailbox1\000"
+ 2229      626F7831 
+ 2229      00
+ 2230              	.LASF56:
+ 2231 00de 6D61696C 		.ascii	"mailbox2\000"
+ 2231      626F7832 
+ 2231      00
+ 2232              	.LASF57:
+ 2233 00e7 6D61696C 		.ascii	"mailbox3\000"
+ 2233      626F7833 
+ 2233      00
+ 2234              	.LASF4:
+ 2235 00f0 6C6F6E67 		.ascii	"long int\000"
+ 2235      20696E74 
+ 2235      00
+ 2236              	.LASF58:
+ 2237 00f9 4379496E 		.ascii	"CyIntDisable\000"
+ 2237      74446973 
+ 2237      61626C65 
+ 2237      00
+ 2238              	.LASF25:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 56
+
+
+ 2239 0106 72786461 		.ascii	"rxdata\000"
+ 2239      746100
+ 2240              	.LASF9:
+ 2241 010d 75696E74 		.ascii	"uint8\000"
+ 2241      3800
+ 2242              	.LASF26:
+ 2243 0113 7278616D 		.ascii	"rxamr\000"
+ 2243      7200
+ 2244              	.LASF12:
+ 2245 0119 646F7562 		.ascii	"double\000"
+ 2245      6C6500
+ 2246              	.LASF35:
+ 2247 0120 73686966 		.ascii	"shift\000"
+ 2247      7400
+ 2248              	.LASF10:
+ 2249 0126 75696E74 		.ascii	"uint32\000"
+ 2249      333200
+ 2250              	.LASF45:
+ 2251 012d 43414E5F 		.ascii	"CAN_TxCancel\000"
+ 2251      54784361 
+ 2251      6E63656C 
+ 2251      00
+ 2252              	.LASF19:
+ 2253 013a 62797465 		.ascii	"byte\000"
+ 2253      00
+ 2254              	.LASF53:
+ 2255 013f 6461746F 		.ascii	"dato_enviado_1\000"
+ 2255      5F656E76 
+ 2255      6961646F 
+ 2255      5F3100
+ 2256              	.LASF8:
+ 2257 014e 756E7369 		.ascii	"unsigned int\000"
+ 2257      676E6564 
+ 2257      20696E74 
+ 2257      00
+ 2258              	.LASF5:
+ 2259 015b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2259      20756E73 
+ 2259      69676E65 
+ 2259      6420696E 
+ 2259      7400
+ 2260              	.LASF62:
+ 2261 016d 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 2261      73657273 
+ 2261      5C48656E 
+ 2261      72792041 
+ 2261      6C626572 
+ 2262 019b 6F64756C 		.ascii	"odular\\Optimization_Algorithms\\Acelerometer.cydsn"
+ 2262      61725C4F 
+ 2262      7074696D 
+ 2262      697A6174 
+ 2262      696F6E5F 
+ 2263 01cc 00       		.ascii	"\000"
+ 2264              	.LASF41:
+ 2265 01cd 43414E5F 		.ascii	"CAN_SendMsg\000"
+ 2265      53656E64 
+ 2265      4D736700 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 57
+
+
+ 2266              	.LASF40:
+ 2267 01d9 62756666 		.ascii	"bufferId\000"
+ 2267      65724964 
+ 2267      00
+ 2268              	.LASF38:
+ 2269 01e2 72656754 		.ascii	"regTemp\000"
+ 2269      656D7000 
+ 2270              	.LASF3:
+ 2271 01ea 73686F72 		.ascii	"short unsigned int\000"
+ 2271      7420756E 
+ 2271      7369676E 
+ 2271      65642069 
+ 2271      6E7400
+ 2272              	.LASF30:
+ 2273 01fd 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 2273      52585F53 
+ 2273      54525543 
+ 2273      5400
+ 2274              	.LASF47:
+ 2275 020b 72784D61 		.ascii	"rxMailbox\000"
+ 2275      696C626F 
+ 2275      7800
+ 2276              	.LASF33:
+ 2277 0215 74786461 		.ascii	"txdata\000"
+ 2277      746100
+ 2278              	.LASF15:
+ 2279 021c 72656733 		.ascii	"reg32\000"
+ 2279      3200
+ 2280              	.LASF21:
+ 2281 0222 43414E5F 		.ascii	"CAN_REG_32\000"
+ 2281      5245475F 
+ 2281      333200
+ 2282              	.LASF17:
+ 2283 022d 73697A65 		.ascii	"sizetype\000"
+ 2283      74797065 
+ 2283      00
+ 2284              	.LASF16:
+ 2285 0236 6C6F6E67 		.ascii	"long double\000"
+ 2285      20646F75 
+ 2285      626C6500 
+ 2286              	.LASF24:
+ 2287 0242 72786964 		.ascii	"rxid\000"
+ 2287      00
+ 2288              	.LASF36:
+ 2289 0247 72657472 		.ascii	"retry\000"
+ 2289      7900
+ 2290              	.LASF39:
+ 2291 024d 6D657373 		.ascii	"message\000"
+ 2291      61676500 
+ 2292              	.LASF11:
+ 2293 0255 666C6F61 		.ascii	"float\000"
+ 2293      7400
+ 2294              	.LASF14:
+ 2295 025b 72656738 		.ascii	"reg8\000"
+ 2295      00
+ 2296              	.LASF1:
+ 2297 0260 756E7369 		.ascii	"unsigned char\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 58
+
+
+ 2297      676E6564 
+ 2297      20636861 
+ 2297      7200
+ 2298              	.LASF2:
+ 2299 026e 73686F72 		.ascii	"short int\000"
+ 2299      7420696E 
+ 2299      7400
+ 2300              	.LASF59:
+ 2301 0278 4379496E 		.ascii	"CyIntEnable\000"
+ 2301      74456E61 
+ 2301      626C6500 
+ 2302              	.LASF18:
+ 2303 0284 43414E5F 		.ascii	"CAN_DATA_BYTES_MSG\000"
+ 2303      44415441 
+ 2303      5F425954 
+ 2303      45535F4D 
+ 2303      534700
+ 2304              	.LASF34:
+ 2305 0297 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
+ 2305      54585F53 
+ 2305      54525543 
+ 2305      5400
+ 2306              	.LASF13:
+ 2307 02a5 63686172 		.ascii	"char\000"
+ 2307      00
+ 2308              	.LASF52:
+ 2309 02aa 6461746F 		.ascii	"dato_enviado\000"
+ 2309      5F656E76 
+ 2309      6961646F 
+ 2309      00
+ 2310              	.LASF20:
+ 2311 02b7 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
+ 2311      44415441 
+ 2311      5F425954 
+ 2311      455300
+ 2312              	.LASF49:
+ 2313 02c6 43414E5F 		.ascii	"CAN_ReceiveMsg1\000"
+ 2313      52656365 
+ 2313      6976654D 
+ 2313      73673100 
+ 2314              	.LASF50:
+ 2315 02d6 43414E5F 		.ascii	"CAN_ReceiveMsg2\000"
+ 2315      52656365 
+ 2315      6976654D 
+ 2315      73673200 
+ 2316              	.LASF51:
+ 2317 02e6 43414E5F 		.ascii	"CAN_ReceiveMsg3\000"
+ 2317      52656365 
+ 2317      6976654D 
+ 2317      73673300 
+ 2318              	.LASF48:
+ 2319 02f6 43414E5F 		.ascii	"CAN_ReceiveMsg0\000"
+ 2319      52656365 
+ 2319      6976654D 
+ 2319      73673000 
+ 2320              	.LASF61:
+ 2321 0306 43414E5F 		.ascii	"CAN_TX_RX_func.c\000"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccnCD7an.s 			page 59
+
+
+ 2321      54585F52 
+ 2321      585F6675 
+ 2321      6E632E63 
+ 2321      00
+ 2322              	.LASF23:
+ 2323 0317 7278636D 		.ascii	"rxcmd\000"
+ 2323      6400
+ 2324              	.LASF22:
+ 2325 031d 43414E5F 		.ascii	"CAN_TX_MSG\000"
+ 2325      54585F4D 
+ 2325      534700
+ 2326              	.LASF32:
+ 2327 0328 74786964 		.ascii	"txid\000"
+ 2327      00
+ 2328              	.LASF27:
+ 2329 032d 72786163 		.ascii	"rxacr\000"
+ 2329      7200
+ 2330              	.LASF29:
+ 2331 0333 72786163 		.ascii	"rxacrd\000"
+ 2331      726400
+ 2332              	.LASF42:
+ 2333 033a 43414E5F 		.ascii	"CAN_SendMsg0\000"
+ 2333      53656E64 
+ 2333      4D736730 
+ 2333      00
+ 2334              	.LASF43:
+ 2335 0347 43414E5F 		.ascii	"CAN_SendMsg1\000"
+ 2335      53656E64 
+ 2335      4D736731 
+ 2335      00
+ 2336              	.LASF44:
+ 2337 0354 43414E5F 		.ascii	"CAN_SendMsg4\000"
+ 2337      53656E64 
+ 2337      4D736734 
+ 2337      00
+ 2338              	.LASF46:
+ 2339 0361 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
+ 2339      52656365 
+ 2339      6976654D 
+ 2339      736700
+ 2340              	.LASF37:
+ 2341 0370 72657375 		.ascii	"result\000"
+ 2341      6C7400
+ 2342              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

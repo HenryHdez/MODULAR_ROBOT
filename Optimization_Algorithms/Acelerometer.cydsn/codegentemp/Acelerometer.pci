@@ -1,0 +1,19 @@
+# Acelerometer
+# 2018-01-19 02:09:25Z
+
+# IO_4@[IOP=(0)][IoId=(4)] is reserved: KhzXtalEnabled
+dont_use_io iocell 0 4
+# IO_5@[IOP=(0)][IoId=(5)] is reserved: KhzXtalEnabled
+dont_use_io iocell 0 5
+# IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 2
+# IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 3
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "LED_1(0)" iocell 6 5
+set_io "RX_2(0)" iocell 4 0
+set_io "TX_2(0)" iocell 4 1
+set_io "X(0)" iocell 2 0
+set_io "Y(0)" iocell 2 1
+set_io "Z(0)" iocell 2 6
+set_location "\ADC:cy_psoc4_sar\" p4sarcell -1 -1 0

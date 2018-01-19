@@ -1,5 +1,5 @@
 -- Project:   C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Optimization_Algorithms\Xbee_Snifer_Teraterm.cydsn\Xbee_Snifer_Teraterm.cyprj
--- Generated: 01/14/2018 21:50:34
+-- Generated: 01/18/2018 21:16:28
 -- PSoC Creator  4.1 Update 1
 
 ENTITY Xbee_Snifer_Teraterm IS
@@ -43,6 +43,7 @@ ARCHITECTURE __DEFAULT__ OF Xbee_Snifer_Teraterm IS
     SIGNAL Net_158 : bit;
     ATTRIBUTE placement_force OF Net_158 : SIGNAL IS "U(1,1,B)3";
     SIGNAL Net_163 : bit;
+    SIGNAL Net_176 : bit;
     SIGNAL Net_183 : bit;
     SIGNAL Net_184 : bit;
     SIGNAL Net_244 : bit;
@@ -88,7 +89,7 @@ ARCHITECTURE __DEFAULT__ OF Xbee_Snifer_Teraterm IS
     SIGNAL \XBEE:BUART:rx_fifofull\ : bit;
     SIGNAL \XBEE:BUART:rx_fifonotempty\ : bit;
     SIGNAL \XBEE:BUART:rx_last\ : bit;
-    ATTRIBUTE placement_force OF \XBEE:BUART:rx_last\ : SIGNAL IS "U(1,0,B)3";
+    ATTRIBUTE placement_force OF \XBEE:BUART:rx_last\ : SIGNAL IS "U(0,0,B)0";
     SIGNAL \XBEE:BUART:rx_load_fifo\ : bit;
     ATTRIBUTE placement_force OF \XBEE:BUART:rx_load_fifo\ : SIGNAL IS "U(1,0,A)1";
     SIGNAL \XBEE:BUART:rx_postpoll\ : bit;
@@ -104,28 +105,28 @@ ARCHITECTURE __DEFAULT__ OF Xbee_Snifer_Teraterm IS
     SIGNAL \XBEE:BUART:rx_status_3\ : bit;
     ATTRIBUTE placement_force OF \XBEE:BUART:rx_status_3\ : SIGNAL IS "U(1,0,A)3";
     SIGNAL \XBEE:BUART:rx_status_4\ : bit;
-    ATTRIBUTE placement_force OF \XBEE:BUART:rx_status_4\ : SIGNAL IS "U(0,0,A)3";
+    ATTRIBUTE placement_force OF \XBEE:BUART:rx_status_4\ : SIGNAL IS "U(0,0,A)2";
     SIGNAL \XBEE:BUART:rx_status_5\ : bit;
-    ATTRIBUTE placement_force OF \XBEE:BUART:rx_status_5\ : SIGNAL IS "U(0,0,A)2";
+    ATTRIBUTE placement_force OF \XBEE:BUART:rx_status_5\ : SIGNAL IS "U(0,0,A)3";
     SIGNAL \XBEE:BUART:tx_bitclk\ : bit;
     ATTRIBUTE placement_force OF \XBEE:BUART:tx_bitclk\ : SIGNAL IS "U(0,1,B)1";
     SIGNAL \XBEE:BUART:tx_bitclk_enable_pre\ : bit;
     SIGNAL \XBEE:BUART:tx_counter_dp\ : bit;
     SIGNAL \XBEE:BUART:tx_ctrl_mark_last\ : bit;
-    ATTRIBUTE placement_force OF \XBEE:BUART:tx_ctrl_mark_last\ : SIGNAL IS "U(0,0,B)0";
+    ATTRIBUTE placement_force OF \XBEE:BUART:tx_ctrl_mark_last\ : SIGNAL IS "U(0,0,B)1";
     SIGNAL \XBEE:BUART:tx_fifo_empty\ : bit;
     SIGNAL \XBEE:BUART:tx_fifo_notfull\ : bit;
     SIGNAL \XBEE:BUART:tx_shift_out\ : bit;
     SIGNAL \XBEE:BUART:tx_state_0\ : bit;
-    ATTRIBUTE placement_force OF \XBEE:BUART:tx_state_0\ : SIGNAL IS "U(0,1,B)0";
+    ATTRIBUTE placement_force OF \XBEE:BUART:tx_state_0\ : SIGNAL IS "U(1,1,A)0";
     SIGNAL \XBEE:BUART:tx_state_1\ : bit;
-    ATTRIBUTE placement_force OF \XBEE:BUART:tx_state_1\ : SIGNAL IS "U(1,1,A)1";
+    ATTRIBUTE placement_force OF \XBEE:BUART:tx_state_1\ : SIGNAL IS "U(0,1,A)1";
     SIGNAL \XBEE:BUART:tx_state_2\ : bit;
-    ATTRIBUTE placement_force OF \XBEE:BUART:tx_state_2\ : SIGNAL IS "U(1,1,A)0";
+    ATTRIBUTE placement_force OF \XBEE:BUART:tx_state_2\ : SIGNAL IS "U(0,1,B)0";
     SIGNAL \XBEE:BUART:tx_status_0\ : bit;
-    ATTRIBUTE placement_force OF \XBEE:BUART:tx_status_0\ : SIGNAL IS "U(0,1,A)1";
+    ATTRIBUTE placement_force OF \XBEE:BUART:tx_status_0\ : SIGNAL IS "U(1,1,A)1";
     SIGNAL \XBEE:BUART:tx_status_2\ : bit;
-    ATTRIBUTE placement_force OF \XBEE:BUART:tx_status_2\ : SIGNAL IS "U(0,0,B)1";
+    ATTRIBUTE placement_force OF \XBEE:BUART:tx_status_2\ : SIGNAL IS "U(1,0,B)3";
     SIGNAL \XBEE:BUART:txn\ : bit;
     ATTRIBUTE placement_force OF \XBEE:BUART:txn\ : SIGNAL IS "U(0,1,A)0";
     SIGNAL \XBEE:Net_9_digital\ : bit;
@@ -164,9 +165,9 @@ ARCHITECTURE __DEFAULT__ OF Xbee_Snifer_Teraterm IS
     ATTRIBUTE lib_model OF \XBEE:BUART:counter_load_not\ : LABEL IS "macrocell2";
     ATTRIBUTE Location OF \XBEE:BUART:counter_load_not\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \XBEE:BUART:tx_status_0\ : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF \XBEE:BUART:tx_status_0\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \XBEE:BUART:tx_status_0\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \XBEE:BUART:tx_status_2\ : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF \XBEE:BUART:tx_status_2\ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF \XBEE:BUART:tx_status_2\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \XBEE:BUART:rx_counter_load\ : LABEL IS "macrocell5";
     ATTRIBUTE Location OF \XBEE:BUART:rx_counter_load\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \XBEE:BUART:rx_postpoll\ : LABEL IS "macrocell6";
@@ -178,16 +179,16 @@ ARCHITECTURE __DEFAULT__ OF Xbee_Snifer_Teraterm IS
     ATTRIBUTE lib_model OF \Timer_1:TimerUDB:status_tc\ : LABEL IS "macrocell9";
     ATTRIBUTE Location OF \Timer_1:TimerUDB:status_tc\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \XBEE:BUART:sTX:TxShifter:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE Location OF \XBEE:BUART:sTX:TxShifter:u0\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \XBEE:BUART:sTX:TxShifter:u0\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \XBEE:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "datapathcell2";
-    ATTRIBUTE Location OF \XBEE:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \XBEE:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \XBEE:BUART:sTX:TxSts\ : LABEL IS "statusicell1";
-    ATTRIBUTE Location OF \XBEE:BUART:sTX:TxSts\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \XBEE:BUART:sTX:TxSts\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \XBEE:BUART:sRX:RxShifter:u0\ : LABEL IS "datapathcell3";
     ATTRIBUTE Location OF \XBEE:BUART:sRX:RxShifter:u0\ : LABEL IS "U(1,0)";
     ATTRIBUTE Location OF \XBEE:BUART:sRX:RxBitCounter\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \XBEE:BUART:sRX:RxSts\ : LABEL IS "statusicell2";
-    ATTRIBUTE Location OF \XBEE:BUART:sRX:RxSts\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \XBEE:BUART:sRX:RxSts\ : LABEL IS "U(0,1)";
     ATTRIBUTE Location OF \CAN:isr\ : LABEL IS "[IntrContainer=(0)][IntrId=(27)]";
     ATTRIBUTE Location OF \CAN:CanIP\ : LABEL IS "F(CAN,0)";
     ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell1";
@@ -196,15 +197,16 @@ ARCHITECTURE __DEFAULT__ OF Xbee_Snifer_Teraterm IS
     ATTRIBUTE Location OF \Timer_1:TimerUDB:rstSts:stsreg\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sT8:timerdp:u0\ : LABEL IS "datapathcell4";
     ATTRIBUTE Location OF \Timer_1:TimerUDB:sT8:timerdp:u0\ : LABEL IS "U(0,0)";
-    ATTRIBUTE Location OF Timer : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
+    ATTRIBUTE Location OF Timer : LABEL IS "[IntrContainer=(0)][IntrId=(1)]";
+    ATTRIBUTE Location OF Interrupcion : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
     ATTRIBUTE lib_model OF \XBEE:BUART:txn\ : LABEL IS "macrocell10";
     ATTRIBUTE Location OF \XBEE:BUART:txn\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \XBEE:BUART:tx_state_1\ : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF \XBEE:BUART:tx_state_1\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \XBEE:BUART:tx_state_1\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \XBEE:BUART:tx_state_0\ : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF \XBEE:BUART:tx_state_0\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \XBEE:BUART:tx_state_0\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \XBEE:BUART:tx_state_2\ : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF \XBEE:BUART:tx_state_2\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \XBEE:BUART:tx_state_2\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \XBEE:BUART:tx_bitclk\ : LABEL IS "macrocell14";
     ATTRIBUTE Location OF \XBEE:BUART:tx_bitclk\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \XBEE:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell15";
@@ -228,7 +230,7 @@ ARCHITECTURE __DEFAULT__ OF Xbee_Snifer_Teraterm IS
     ATTRIBUTE lib_model OF \XBEE:BUART:rx_status_3\ : LABEL IS "macrocell24";
     ATTRIBUTE Location OF \XBEE:BUART:rx_status_3\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \XBEE:BUART:rx_last\ : LABEL IS "macrocell25";
-    ATTRIBUTE Location OF \XBEE:BUART:rx_last\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \XBEE:BUART:rx_last\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF Net_244 : LABEL IS "macrocell26";
     ATTRIBUTE Location OF Net_244 : LABEL IS "U(0,0)";
     COMPONENT cancell
@@ -1614,7 +1616,8 @@ BEGIN
             status_3 => \XBEE:BUART:rx_status_3\,
             status_2 => open,
             status_1 => open,
-            status_0 => open);
+            status_0 => open,
+            interrupt => Net_176);
 
     \CAN:isr\:interrupt
         GENERIC MAP(
@@ -1713,6 +1716,14 @@ BEGIN
             is_nmi => 0)
         PORT MAP(
             interrupt => Net_244,
+            clock => ClockBlock_HFCLK);
+
+    Interrupcion:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_176,
             clock => ClockBlock_HFCLK);
 
     \XBEE:BUART:txn\:macrocell

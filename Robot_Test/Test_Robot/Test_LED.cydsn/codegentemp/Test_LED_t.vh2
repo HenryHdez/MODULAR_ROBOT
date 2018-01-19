@@ -1,6 +1,6 @@
--- Project:   C:\Users\Henry Alberto\Desktop\Test_Robot\Test_LED.cydsn\Test_LED.cyprj
--- Generated: 01/03/2017 14:34:11
--- PSoC Creator  3.3 CP3
+-- Project:   C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Robot_Test\Test_Robot\Test_LED.cydsn\Test_LED.cyprj
+-- Generated: 01/16/2018 19:28:22
+-- PSoC Creator  4.1 Update 1
 
 ENTITY Test_LED IS
     PORT(

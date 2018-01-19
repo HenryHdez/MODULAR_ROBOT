@@ -436,6 +436,8 @@
                             break;
                             case 3u : CAN_ReceiveMsg3();
                             break;
+                            case 4u : CAN_ReceiveMsg4();
+                            break;
                             default:
                             break;
                         }

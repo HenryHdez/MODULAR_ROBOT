@@ -75,7 +75,7 @@ Discarded input sections
  .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\main.o
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\main.o
- .text.readAmbient
+ .text.readProximity
                 0x00000000       0x30 .\CortexM0\ARM_GCC_541\Debug\main.o
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
@@ -494,9 +494,9 @@ END GROUP
  .text.initVCNL
                 0x000001f8       0xf4 .\CortexM0\ARM_GCC_541\Debug\main.o
                 0x000001f8                initVCNL
- .text.readProximity
+ .text.readAmbient
                 0x000002ec       0x30 .\CortexM0\ARM_GCC_541\Debug\main.o
-                0x000002ec                readProximity
+                0x000002ec                readAmbient
  .text.main     0x0000031c       0x58 .\CortexM0\ARM_GCC_541\Debug\main.o
                 0x0000031c                main
  .text.AnalogSetDefault

@@ -2,7 +2,7 @@
 --	Conversion of Xbee_Snifer_Teraterm.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Jan 14 21:50:24 2018
+--	Thu Jan 18 21:16:23 2018
 --
 
 USE cypress.cypress.all;
@@ -1239,7 +1239,7 @@ SLEEP_XBEE:cy_psoc3_pins_v1_10
 		clock=>\XBEE:BUART:clock_op\,
 		status=>(zero, \XBEE:BUART:rx_status_5\, \XBEE:BUART:rx_status_4\, \XBEE:BUART:rx_status_3\,
 			\XBEE:BUART:rx_status_2\, zero, zero),
-		interrupt=>\XBEE:BUART:rx_interrupt_out\);
+		interrupt=>Net_176);
 Rx_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"1425177d-0d0e-4468-8bcc-e638e5509a9b",
 		drive_mode=>"001",
@@ -1669,6 +1669,10 @@ Clock_1:cy_clock_v1_0
 		is_digital=>'1')
 	PORT MAP(clock_out=>Net_10,
 		dig_domain_out=>open);
+Interrupcion:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_176);
 \XBEE:BUART:reset_reg\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\XBEE:BUART:clock_op\,

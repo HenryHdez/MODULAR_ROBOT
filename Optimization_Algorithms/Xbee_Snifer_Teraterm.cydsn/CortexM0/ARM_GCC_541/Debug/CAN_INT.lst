@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
   28:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
   29:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_ArbLostIsr
   30:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 2
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 2
 
 
   31:Generated_Source\PSoC4/CAN_INT.c ****     *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
   85:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Overload Error flag */
   86:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_OVERLOAD_ERROR_MASK;
   87:Generated_Source\PSoC4/CAN_INT.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 3
 
 
   88:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START OVER_LOAD_ERROR_ISR` */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
  142:Generated_Source\PSoC4/CAN_INT.c ****     *  in Customizer.
  143:Generated_Source\PSoC4/CAN_INT.c ****     *
  144:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 4
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 4
 
 
  145:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
  199:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_ACK_ERROR_ISR_CALLBACK
  200:Generated_Source\PSoC4/CAN_INT.c ****             CAN_AckErrorIsr_Callback();
  201:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_ACK_ERROR_ISR_CALLBACK */
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 5
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 5
 
 
  202:Generated_Source\PSoC4/CAN_INT.c ****     }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
  256:Generated_Source\PSoC4/CAN_INT.c ****     * Reentrant:
  257:Generated_Source\PSoC4/CAN_INT.c ****     *  Depends on Customer code.
  258:Generated_Source\PSoC4/CAN_INT.c ****     *
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 6
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 6
 
 
  259:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
  300:Generated_Source\PSoC4/CAN_INT.c **** 
  301:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START BUS_OFF_ISR` */
  302:Generated_Source\PSoC4/CAN_INT.c **** 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 7
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 7
 
 
  303:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
  336:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_RX_MSG_LOST_MASK;
  337:Generated_Source\PSoC4/CAN_INT.c **** 
  338:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START MESSAGE_LOST_ISR` */
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 8
 
 
  339:Generated_Source\PSoC4/CAN_INT.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
  393:Generated_Source\PSoC4/CAN_INT.c ****     *  interrupt based mailboxes. Only generated if Receive Message Interrupt
  394:Generated_Source\PSoC4/CAN_INT.c ****     *  enable in Customizer. Recommended setting to enable this interrupt.
  395:Generated_Source\PSoC4/CAN_INT.c ****     *
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 9
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 9
 
 
  396:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
@@ -509,7 +509,7 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
   73              		.loc 1 409 0
   74 0002 8022     		movs	r2, #128
   75 0004 5201     		lsls	r2, r2, #5
-  76 0006 184B     		ldr	r3, .L13
+  76 0006 184B     		ldr	r3, .L15
   77 0008 1A60     		str	r2, [r3]
   78              	.LVL2:
  406:Generated_Source\PSoC4/CAN_INT.c **** 
@@ -529,23 +529,23 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
   82 000c 0024     		movs	r4, #0
   83 000e 28E0     		b	.L5
   84              	.LVL3:
-  85              	.L12:
+  85              	.L14:
  420:Generated_Source\PSoC4/CAN_INT.c ****         {
  421:Generated_Source\PSoC4/CAN_INT.c **** 
  422:Generated_Source\PSoC4/CAN_INT.c ****             if ((CAN_BUF_SR_REG & shift) != 0u)
   86              		.loc 1 422 0
-  87 0010 164B     		ldr	r3, .L13+4
+  87 0010 164B     		ldr	r3, .L15+4
   88 0012 1B68     		ldr	r3, [r3]
   89 0014 2B42     		tst	r3, r5
   90 0016 20D0     		beq	.L6
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 10
 
 
  423:Generated_Source\PSoC4/CAN_INT.c ****             {
  424:Generated_Source\PSoC4/CAN_INT.c ****                 if ((CAN_RX_CMD_REG(mailboxNumber) & CAN_RX_INT_ENABLE_MASK) != 0u)
   91              		.loc 1 424 0
   92 0018 6301     		lsls	r3, r4, #5
-  93 001a 154A     		ldr	r2, .L13+8
+  93 001a 154A     		ldr	r2, .L15+8
   94 001c 9446     		mov	ip, r2
   95 001e 6344     		add	r3, r3, ip
   96 0020 1B68     		ldr	r3, [r3]
@@ -554,1302 +554,1333 @@ ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 1
  425:Generated_Source\PSoC4/CAN_INT.c ****                 {
  426:Generated_Source\PSoC4/CAN_INT.c ****                     if ((CAN_RX_MAILBOX_TYPE & shift) != 0u)
   99              		.loc 1 426 0
- 100 0026 2B07     		lsls	r3, r5, #28
+ 100 0026 EB06     		lsls	r3, r5, #27
  101 0028 14D0     		beq	.L7
  427:Generated_Source\PSoC4/CAN_INT.c ****                     {
  428:Generated_Source\PSoC4/CAN_INT.c ****                         /* RX Full mailboxes handler */
  429:Generated_Source\PSoC4/CAN_INT.c ****                         switch(mailboxNumber)
  102              		.loc 1 429 0
- 103 002a 012C     		cmp	r4, #1
- 104 002c 09D0     		beq	.L8
- 105 002e 002C     		cmp	r4, #0
- 106 0030 04D0     		beq	.L9
- 107 0032 022C     		cmp	r4, #2
- 108 0034 08D0     		beq	.L10
- 109 0036 032C     		cmp	r4, #3
- 110 0038 09D0     		beq	.L11
- 111 003a 0EE0     		b	.L6
- 112              	.L9:
+ 103 002a 042C     		cmp	r4, #4
+ 104 002c 15D8     		bhi	.L6
+ 105 002e A300     		lsls	r3, r4, #2
+ 106 0030 104A     		ldr	r2, .L15+12
+ 107 0032 D358     		ldr	r3, [r2, r3]
+ 108 0034 9F46     		mov	pc, r3
+ 109              		.section	.rodata
+ 110              		.align	2
+ 111              	.L9:
+ 112 0000 36000000 		.word	.L8
+ 113 0004 3C000000 		.word	.L10
+ 114 0008 42000000 		.word	.L11
+ 115 000c 48000000 		.word	.L12
+ 116 0010 4E000000 		.word	.L13
+ 117              		.section	.text.CAN_MsgRXIsr
+ 118              	.L8:
  430:Generated_Source\PSoC4/CAN_INT.c ****                         {
  431:Generated_Source\PSoC4/CAN_INT.c ****                             case 0u : CAN_ReceiveMsg0();
- 113              		.loc 1 431 0
- 114 003c FFF7FEFF 		bl	CAN_ReceiveMsg0
- 115              	.LVL4:
+ 119              		.loc 1 431 0
+ 120 0036 FFF7FEFF 		bl	CAN_ReceiveMsg0
+ 121              	.LVL4:
  432:Generated_Source\PSoC4/CAN_INT.c ****                             break;
- 116              		.loc 1 432 0
- 117 0040 0BE0     		b	.L6
- 118              	.L8:
- 433:Generated_Source\PSoC4/CAN_INT.c ****                             case 1u : CAN_ReceiveMsg1();
- 119              		.loc 1 433 0
- 120 0042 FFF7FEFF 		bl	CAN_ReceiveMsg1
- 121              	.LVL5:
- 434:Generated_Source\PSoC4/CAN_INT.c ****                             break;
- 122              		.loc 1 434 0
- 123 0046 08E0     		b	.L6
+ 122              		.loc 1 432 0
+ 123 003a 0EE0     		b	.L6
  124              	.L10:
- 435:Generated_Source\PSoC4/CAN_INT.c ****                             case 2u : CAN_ReceiveMsg2();
- 125              		.loc 1 435 0
- 126 0048 FFF7FEFF 		bl	CAN_ReceiveMsg2
- 127              	.LVL6:
- 436:Generated_Source\PSoC4/CAN_INT.c ****                             break;
- 128              		.loc 1 436 0
- 129 004c 05E0     		b	.L6
+ 433:Generated_Source\PSoC4/CAN_INT.c ****                             case 1u : CAN_ReceiveMsg1();
+ 125              		.loc 1 433 0
+ 126 003c FFF7FEFF 		bl	CAN_ReceiveMsg1
+ 127              	.LVL5:
+ 434:Generated_Source\PSoC4/CAN_INT.c ****                             break;
+ 128              		.loc 1 434 0
+ 129 0040 0BE0     		b	.L6
  130              	.L11:
+ 435:Generated_Source\PSoC4/CAN_INT.c ****                             case 2u : CAN_ReceiveMsg2();
+ 131              		.loc 1 435 0
+ 132 0042 FFF7FEFF 		bl	CAN_ReceiveMsg2
+ 133              	.LVL6:
+ 436:Generated_Source\PSoC4/CAN_INT.c ****                             break;
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 11
+
+
+ 134              		.loc 1 436 0
+ 135 0046 08E0     		b	.L6
+ 136              	.L12:
  437:Generated_Source\PSoC4/CAN_INT.c ****                             case 3u : CAN_ReceiveMsg3();
- 131              		.loc 1 437 0
- 132 004e FFF7FEFF 		bl	CAN_ReceiveMsg3
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 11
-
-
- 133              	.LVL7:
+ 137              		.loc 1 437 0
+ 138 0048 FFF7FEFF 		bl	CAN_ReceiveMsg3
+ 139              	.LVL7:
  438:Generated_Source\PSoC4/CAN_INT.c ****                             break;
- 134              		.loc 1 438 0
- 135 0052 02E0     		b	.L6
- 136              	.L7:
- 439:Generated_Source\PSoC4/CAN_INT.c ****                             default:
+ 140              		.loc 1 438 0
+ 141 004c 05E0     		b	.L6
+ 142              	.L13:
+ 439:Generated_Source\PSoC4/CAN_INT.c ****                             case 4u : CAN_ReceiveMsg4();
+ 143              		.loc 1 439 0
+ 144 004e FFF7FEFF 		bl	CAN_ReceiveMsg4
+ 145              	.LVL8:
  440:Generated_Source\PSoC4/CAN_INT.c ****                             break;
- 441:Generated_Source\PSoC4/CAN_INT.c ****                         }
- 442:Generated_Source\PSoC4/CAN_INT.c ****                     }
- 443:Generated_Source\PSoC4/CAN_INT.c ****                     else
- 444:Generated_Source\PSoC4/CAN_INT.c ****                     {
- 445:Generated_Source\PSoC4/CAN_INT.c ****                         /* RX Basic mailbox handler */
- 446:Generated_Source\PSoC4/CAN_INT.c ****                         CAN_ReceiveMsg(mailboxNumber);
- 137              		.loc 1 446 0
- 138 0054 2000     		movs	r0, r4
- 139 0056 FFF7FEFF 		bl	CAN_ReceiveMsg
- 140              	.LVL8:
- 141              	.L6:
- 447:Generated_Source\PSoC4/CAN_INT.c ****                     }
- 448:Generated_Source\PSoC4/CAN_INT.c ****                 }
- 449:Generated_Source\PSoC4/CAN_INT.c ****             }
- 450:Generated_Source\PSoC4/CAN_INT.c ****             shift <<= 1u;
- 142              		.loc 1 450 0 discriminator 2
- 143 005a 6D00     		lsls	r5, r5, #1
- 144              	.LVL9:
- 145 005c ADB2     		uxth	r5, r5
- 146              	.LVL10:
+ 146              		.loc 1 440 0
+ 147 0052 02E0     		b	.L6
+ 148              	.L7:
+ 441:Generated_Source\PSoC4/CAN_INT.c ****                             default:
+ 442:Generated_Source\PSoC4/CAN_INT.c ****                             break;
+ 443:Generated_Source\PSoC4/CAN_INT.c ****                         }
+ 444:Generated_Source\PSoC4/CAN_INT.c ****                     }
+ 445:Generated_Source\PSoC4/CAN_INT.c ****                     else
+ 446:Generated_Source\PSoC4/CAN_INT.c ****                     {
+ 447:Generated_Source\PSoC4/CAN_INT.c ****                         /* RX Basic mailbox handler */
+ 448:Generated_Source\PSoC4/CAN_INT.c ****                         CAN_ReceiveMsg(mailboxNumber);
+ 149              		.loc 1 448 0
+ 150 0054 2000     		movs	r0, r4
+ 151 0056 FFF7FEFF 		bl	CAN_ReceiveMsg
+ 152              	.LVL9:
+ 153              	.L6:
+ 449:Generated_Source\PSoC4/CAN_INT.c ****                     }
+ 450:Generated_Source\PSoC4/CAN_INT.c ****                 }
+ 451:Generated_Source\PSoC4/CAN_INT.c ****             }
+ 452:Generated_Source\PSoC4/CAN_INT.c ****             shift <<= 1u;
+ 154              		.loc 1 452 0 discriminator 2
+ 155 005a 6D00     		lsls	r5, r5, #1
+ 156              	.LVL10:
+ 157 005c ADB2     		uxth	r5, r5
+ 158              	.LVL11:
  419:Generated_Source\PSoC4/CAN_INT.c ****         {
- 147              		.loc 1 419 0 discriminator 2
- 148 005e 0134     		adds	r4, r4, #1
- 149              	.LVL11:
- 150 0060 E4B2     		uxtb	r4, r4
- 151              	.LVL12:
- 152              	.L5:
+ 159              		.loc 1 419 0 discriminator 2
+ 160 005e 0134     		adds	r4, r4, #1
+ 161              	.LVL12:
+ 162 0060 E4B2     		uxtb	r4, r4
+ 163              	.LVL13:
+ 164              	.L5:
  419:Generated_Source\PSoC4/CAN_INT.c ****         {
- 153              		.loc 1 419 0 is_stmt 0 discriminator 1
- 154 0062 0F2C     		cmp	r4, #15
- 155 0064 D4D9     		bls	.L12
- 451:Generated_Source\PSoC4/CAN_INT.c ****         }
- 452:Generated_Source\PSoC4/CAN_INT.c ****     }
- 156              		.loc 1 452 0 is_stmt 1
- 157              		@ sp needed
- 158              	.LVL13:
- 159              	.LVL14:
- 160 0066 70BD     		pop	{r4, r5, r6, pc}
- 161              	.L14:
- 162              		.align	2
- 163              	.L13:
- 164 0068 00002E40 		.word	1076756480
- 165 006c 08002E40 		.word	1076756488
- 166 0070 A0002E40 		.word	1076756640
- 167              		.cfi_endproc
- 168              	.LFE2:
- 169              		.size	CAN_MsgRXIsr, .-CAN_MsgRXIsr
- 170              		.section	.text.CAN_ISR,"ax",%progbits
- 171              		.align	2
- 172              		.global	CAN_ISR
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 12
+ 165              		.loc 1 419 0 is_stmt 0 discriminator 1
+ 166 0062 0F2C     		cmp	r4, #15
+ 167 0064 D4D9     		bls	.L14
+ 453:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 454:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 168              		.loc 1 454 0 is_stmt 1
+ 169              		@ sp needed
+ 170              	.LVL14:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 12
 
 
- 173              		.code	16
- 174              		.thumb_func
- 175              		.type	CAN_ISR, %function
- 176              	CAN_ISR:
- 177              	.LFB3:
- 453:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_RX_MESSAGE */
- 454:Generated_Source\PSoC4/CAN_INT.c **** 
- 455:Generated_Source\PSoC4/CAN_INT.c **** 
- 456:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_RTR_AUTO_MSG_SENT)
- 457:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 458:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_RtrAutoMsgSentIsr
- 459:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 460:Generated_Source\PSoC4/CAN_INT.c ****     *
- 461:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 462:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to the RTR automatic message sent Interrupt.
- 463:Generated_Source\PSoC4/CAN_INT.c ****     *  It is only generated if RTR message sent Interrupt is enabled in Customizer.
- 464:Generated_Source\PSoC4/CAN_INT.c ****     *
- 465:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 466:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 467:Generated_Source\PSoC4/CAN_INT.c ****     *
- 468:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 469:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 470:Generated_Source\PSoC4/CAN_INT.c ****     *
- 471:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 472:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_RtrAutoMsgSentIsr(void)
- 473:Generated_Source\PSoC4/CAN_INT.c ****     {
- 474:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear RTR auto-reply message sent flag */
- 475:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_RTR_MSG_MASK;
- 476:Generated_Source\PSoC4/CAN_INT.c **** 
- 477:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START RTR_AUTO_MSG_SENT_ISR` */
+ 171              	.LVL15:
+ 172 0066 70BD     		pop	{r4, r5, r6, pc}
+ 173              	.L16:
+ 174              		.align	2
+ 175              	.L15:
+ 176 0068 00002E40 		.word	1076756480
+ 177 006c 08002E40 		.word	1076756488
+ 178 0070 A0002E40 		.word	1076756640
+ 179 0074 00000000 		.word	.L9
+ 180              		.cfi_endproc
+ 181              	.LFE2:
+ 182              		.size	CAN_MsgRXIsr, .-CAN_MsgRXIsr
+ 183              		.section	.text.CAN_ISR,"ax",%progbits
+ 184              		.align	2
+ 185              		.global	CAN_ISR
+ 186              		.code	16
+ 187              		.thumb_func
+ 188              		.type	CAN_ISR, %function
+ 189              	CAN_ISR:
+ 190              	.LFB3:
+ 455:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_RX_MESSAGE */
+ 456:Generated_Source\PSoC4/CAN_INT.c **** 
+ 457:Generated_Source\PSoC4/CAN_INT.c **** 
+ 458:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_RTR_AUTO_MSG_SENT)
+ 459:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 460:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_RtrAutoMsgSentIsr
+ 461:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 462:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 463:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 464:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is entry point to the RTR automatic message sent Interrupt.
+ 465:Generated_Source\PSoC4/CAN_INT.c ****     *  It is only generated if RTR message sent Interrupt is enabled in Customizer.
+ 466:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 467:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 468:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 469:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 470:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 471:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 472:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 473:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 474:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_RtrAutoMsgSentIsr(void)
+ 475:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 476:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear RTR auto-reply message sent flag */
+ 477:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_RTR_MSG_MASK;
  478:Generated_Source\PSoC4/CAN_INT.c **** 
- 479:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 479:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START RTR_AUTO_MSG_SENT_ISR` */
  480:Generated_Source\PSoC4/CAN_INT.c **** 
- 481:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_RTR_AUTO_MSG_SENT_ISR_CALLBACK
- 482:Generated_Source\PSoC4/CAN_INT.c ****             CAN_RtrAutoMsgSentIsr_Callback();
- 483:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_RTR_AUTO_MSG_SENT_ISR_CALLBACK */
- 484:Generated_Source\PSoC4/CAN_INT.c ****     }
- 485:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_RTR_AUTO_MSG_SENT */
- 486:Generated_Source\PSoC4/CAN_INT.c **** 
- 487:Generated_Source\PSoC4/CAN_INT.c **** 
- 488:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_STUCK_AT_ZERO)
- 489:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 490:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_StuckAtZeroIsr
- 491:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 492:Generated_Source\PSoC4/CAN_INT.c ****     *
- 493:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 494:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is the entry point to the stuck at dominant bit Interrupt.
- 495:Generated_Source\PSoC4/CAN_INT.c ****     *  It is only generated if stuck at zero Interrupt is enabled in Customizer.
- 496:Generated_Source\PSoC4/CAN_INT.c ****     *  Enabling this interrupt is recommended.
- 497:Generated_Source\PSoC4/CAN_INT.c ****     *
- 498:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 499:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 500:Generated_Source\PSoC4/CAN_INT.c ****     *
- 501:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 502:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 503:Generated_Source\PSoC4/CAN_INT.c ****     *
- 504:Generated_Source\PSoC4/CAN_INT.c ****     * Side Effects:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 13
+ 481:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 482:Generated_Source\PSoC4/CAN_INT.c **** 
+ 483:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_RTR_AUTO_MSG_SENT_ISR_CALLBACK
+ 484:Generated_Source\PSoC4/CAN_INT.c ****             CAN_RtrAutoMsgSentIsr_Callback();
+ 485:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_RTR_AUTO_MSG_SENT_ISR_CALLBACK */
+ 486:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 487:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_RTR_AUTO_MSG_SENT */
+ 488:Generated_Source\PSoC4/CAN_INT.c **** 
+ 489:Generated_Source\PSoC4/CAN_INT.c **** 
+ 490:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_STUCK_AT_ZERO)
+ 491:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 13
 
 
- 505:Generated_Source\PSoC4/CAN_INT.c ****     *  Stops CAN component operation.
- 506:Generated_Source\PSoC4/CAN_INT.c ****     *
- 507:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 508:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_StuckAtZeroIsr(void)
- 509:Generated_Source\PSoC4/CAN_INT.c ****     {
- 510:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Stuck at dominant error flag */
- 511:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_STUCK_AT_ZERO_MASK;
- 512:Generated_Source\PSoC4/CAN_INT.c **** 
- 513:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START STUCK_AT_ZERO_ISR` */
+ 492:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_StuckAtZeroIsr
+ 493:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 494:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 495:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 496:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is the entry point to the stuck at dominant bit Interrupt.
+ 497:Generated_Source\PSoC4/CAN_INT.c ****     *  It is only generated if stuck at zero Interrupt is enabled in Customizer.
+ 498:Generated_Source\PSoC4/CAN_INT.c ****     *  Enabling this interrupt is recommended.
+ 499:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 500:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 501:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 502:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 503:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 504:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 505:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 506:Generated_Source\PSoC4/CAN_INT.c ****     * Side Effects:
+ 507:Generated_Source\PSoC4/CAN_INT.c ****     *  Stops CAN component operation.
+ 508:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 509:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 510:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_StuckAtZeroIsr(void)
+ 511:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 512:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Stuck at dominant error flag */
+ 513:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_STUCK_AT_ZERO_MASK;
  514:Generated_Source\PSoC4/CAN_INT.c **** 
- 515:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 515:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START STUCK_AT_ZERO_ISR` */
  516:Generated_Source\PSoC4/CAN_INT.c **** 
- 517:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_STUCK_AT_ZERO_ISR_CALLBACK
- 518:Generated_Source\PSoC4/CAN_INT.c ****             CAN_StuckAtZeroIsr_Callback();
- 519:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_STUCK_AT_ZERO_ISR_CALLBACK */
- 520:Generated_Source\PSoC4/CAN_INT.c **** 
- 521:Generated_Source\PSoC4/CAN_INT.c ****         (void) CAN_Stop();
- 522:Generated_Source\PSoC4/CAN_INT.c ****     }
- 523:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_STUCK_AT_ZERO */
- 524:Generated_Source\PSoC4/CAN_INT.c **** 
- 525:Generated_Source\PSoC4/CAN_INT.c **** 
- 526:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_SST_FAILURE)
- 527:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
- 528:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_SSTErrorIsr
- 529:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
- 530:Generated_Source\PSoC4/CAN_INT.c ****     *
- 531:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
- 532:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is the entry point to the single shot transmission error
- 533:Generated_Source\PSoC4/CAN_INT.c ****     *  Interrupt. It is only generated if the single shot transmission Interrupt
- 534:Generated_Source\PSoC4/CAN_INT.c ****     *  is enabled in Customizer. Generated when the mailbox set for single shot
- 535:Generated_Source\PSoC4/CAN_INT.c ****     *  transmission experienced an arbitration loss or a bus error during
- 536:Generated_Source\PSoC4/CAN_INT.c ****     *  transmission.
- 537:Generated_Source\PSoC4/CAN_INT.c ****     *
- 538:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
- 539:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 540:Generated_Source\PSoC4/CAN_INT.c ****     *
- 541:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
- 542:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
- 543:Generated_Source\PSoC4/CAN_INT.c ****     *
- 544:Generated_Source\PSoC4/CAN_INT.c ****     * Side Effects:
- 545:Generated_Source\PSoC4/CAN_INT.c ****     *  Removes message that failed SST transmission from the Tx mailbox.
- 546:Generated_Source\PSoC4/CAN_INT.c ****     *
- 547:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
- 548:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_SSTErrorIsr(void)
- 549:Generated_Source\PSoC4/CAN_INT.c ****     {
- 550:Generated_Source\PSoC4/CAN_INT.c ****         uint8 i;
- 551:Generated_Source\PSoC4/CAN_INT.c **** 
- 552:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Single shot transmission failure flag */
- 553:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_SST_FAILURE_MASK;
- 554:Generated_Source\PSoC4/CAN_INT.c **** 
- 555:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START SST_FAILURE_ISR_PRE` */
+ 517:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 518:Generated_Source\PSoC4/CAN_INT.c **** 
+ 519:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_STUCK_AT_ZERO_ISR_CALLBACK
+ 520:Generated_Source\PSoC4/CAN_INT.c ****             CAN_StuckAtZeroIsr_Callback();
+ 521:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_STUCK_AT_ZERO_ISR_CALLBACK */
+ 522:Generated_Source\PSoC4/CAN_INT.c **** 
+ 523:Generated_Source\PSoC4/CAN_INT.c ****         (void) CAN_Stop();
+ 524:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 525:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_STUCK_AT_ZERO */
+ 526:Generated_Source\PSoC4/CAN_INT.c **** 
+ 527:Generated_Source\PSoC4/CAN_INT.c **** 
+ 528:Generated_Source\PSoC4/CAN_INT.c **** #if (CAN_SST_FAILURE)
+ 529:Generated_Source\PSoC4/CAN_INT.c ****     /*******************************************************************************
+ 530:Generated_Source\PSoC4/CAN_INT.c ****     * FUNCTION NAME:   CAN_SSTErrorIsr
+ 531:Generated_Source\PSoC4/CAN_INT.c ****     ********************************************************************************
+ 532:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 533:Generated_Source\PSoC4/CAN_INT.c ****     * Summary:
+ 534:Generated_Source\PSoC4/CAN_INT.c ****     *  This function is the entry point to the single shot transmission error
+ 535:Generated_Source\PSoC4/CAN_INT.c ****     *  Interrupt. It is only generated if the single shot transmission Interrupt
+ 536:Generated_Source\PSoC4/CAN_INT.c ****     *  is enabled in Customizer. Generated when the mailbox set for single shot
+ 537:Generated_Source\PSoC4/CAN_INT.c ****     *  transmission experienced an arbitration loss or a bus error during
+ 538:Generated_Source\PSoC4/CAN_INT.c ****     *  transmission.
+ 539:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 540:Generated_Source\PSoC4/CAN_INT.c ****     * Parameters:
+ 541:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 542:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 543:Generated_Source\PSoC4/CAN_INT.c ****     * Return:
+ 544:Generated_Source\PSoC4/CAN_INT.c ****     *  None.
+ 545:Generated_Source\PSoC4/CAN_INT.c ****     *
+ 546:Generated_Source\PSoC4/CAN_INT.c ****     * Side Effects:
+ 547:Generated_Source\PSoC4/CAN_INT.c ****     *  Removes message that failed SST transmission from the Tx mailbox.
+ 548:Generated_Source\PSoC4/CAN_INT.c ****     *
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 14
+
+
+ 549:Generated_Source\PSoC4/CAN_INT.c ****     *******************************************************************************/
+ 550:Generated_Source\PSoC4/CAN_INT.c ****     void CAN_SSTErrorIsr(void)
+ 551:Generated_Source\PSoC4/CAN_INT.c ****     {
+ 552:Generated_Source\PSoC4/CAN_INT.c ****         uint8 i;
+ 553:Generated_Source\PSoC4/CAN_INT.c **** 
+ 554:Generated_Source\PSoC4/CAN_INT.c ****         /* Clear Single shot transmission failure flag */
+ 555:Generated_Source\PSoC4/CAN_INT.c ****         CAN_INT_SR_REG = CAN_SST_FAILURE_MASK;
  556:Generated_Source\PSoC4/CAN_INT.c **** 
- 557:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 557:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START SST_FAILURE_ISR_PRE` */
  558:Generated_Source\PSoC4/CAN_INT.c **** 
- 559:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_SST_ERROR_ISR_PRE_CALLBACK
- 560:Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr_Pre_Callback();
- 561:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_SST_ERROR_ISR_PRE_CALLBACK */
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 14
-
-
- 562:Generated_Source\PSoC4/CAN_INT.c **** 
- 563:Generated_Source\PSoC4/CAN_INT.c ****         /* Removes message that failed SST transmission from the Tx mailbox */
- 564:Generated_Source\PSoC4/CAN_INT.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
- 565:Generated_Source\PSoC4/CAN_INT.c ****         {
- 566:Generated_Source\PSoC4/CAN_INT.c ****             if ((CAN_TX_CMD_REG(i) & CAN_TX_ABORT_MASK) != 0u)
- 567:Generated_Source\PSoC4/CAN_INT.c ****             {
- 568:Generated_Source\PSoC4/CAN_INT.c ****                 CAN_TX_CMD_REG(i) = (CAN_TX_CMD_REG(i) & (uint32) (~(uint32) CAN_TX_TRANSMIT_REQUES
- 569:Generated_Source\PSoC4/CAN_INT.c ****                                     CAN_TX_ABORT_MASK;
- 570:Generated_Source\PSoC4/CAN_INT.c ****             }
- 571:Generated_Source\PSoC4/CAN_INT.c ****         }
- 572:Generated_Source\PSoC4/CAN_INT.c **** 
- 573:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START SST_FAILURE_ISR_POST` */
+ 559:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 560:Generated_Source\PSoC4/CAN_INT.c **** 
+ 561:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_SST_ERROR_ISR_PRE_CALLBACK
+ 562:Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr_Pre_Callback();
+ 563:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_SST_ERROR_ISR_PRE_CALLBACK */
+ 564:Generated_Source\PSoC4/CAN_INT.c **** 
+ 565:Generated_Source\PSoC4/CAN_INT.c ****         /* Removes message that failed SST transmission from the Tx mailbox */
+ 566:Generated_Source\PSoC4/CAN_INT.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
+ 567:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 568:Generated_Source\PSoC4/CAN_INT.c ****             if ((CAN_TX_CMD_REG(i) & CAN_TX_ABORT_MASK) != 0u)
+ 569:Generated_Source\PSoC4/CAN_INT.c ****             {
+ 570:Generated_Source\PSoC4/CAN_INT.c ****                 CAN_TX_CMD_REG(i) = (CAN_TX_CMD_REG(i) & (uint32) (~(uint32) CAN_TX_TRANSMIT_REQUES
+ 571:Generated_Source\PSoC4/CAN_INT.c ****                                     CAN_TX_ABORT_MASK;
+ 572:Generated_Source\PSoC4/CAN_INT.c ****             }
+ 573:Generated_Source\PSoC4/CAN_INT.c ****         }
  574:Generated_Source\PSoC4/CAN_INT.c **** 
- 575:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 575:Generated_Source\PSoC4/CAN_INT.c ****         /* `#START SST_FAILURE_ISR_POST` */
  576:Generated_Source\PSoC4/CAN_INT.c **** 
- 577:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_SST_ERROR_ISR_POST_CALLBACK
- 578:Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr_Post_Callback();
- 579:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_SST_ERROR_ISR_POST_CALLBACK */
- 580:Generated_Source\PSoC4/CAN_INT.c ****     }
- 581:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_SST_FAILURE */
- 582:Generated_Source\PSoC4/CAN_INT.c **** 
- 583:Generated_Source\PSoC4/CAN_INT.c **** 
- 584:Generated_Source\PSoC4/CAN_INT.c **** /*******************************************************************************
- 585:Generated_Source\PSoC4/CAN_INT.c **** * Function Name: CAN_ISR
- 586:Generated_Source\PSoC4/CAN_INT.c **** ********************************************************************************
- 587:Generated_Source\PSoC4/CAN_INT.c **** *
- 588:Generated_Source\PSoC4/CAN_INT.c **** * Summary:
- 589:Generated_Source\PSoC4/CAN_INT.c **** *  This ISR is executed when CAN Core generates and interrupt on one of events:
- 590:Generated_Source\PSoC4/CAN_INT.c **** *  Arb_lost, Overload, Bit_err, Stuff_err, Ack_err, Form_err, Crc_err,
- 591:Generated_Source\PSoC4/CAN_INT.c **** *  Buss_off, Rx_msg_lost, Tx_msg or Rx_msg. The interrupt sources depends
- 592:Generated_Source\PSoC4/CAN_INT.c **** *  on the Customizer inputs.
- 593:Generated_Source\PSoC4/CAN_INT.c **** *
- 594:Generated_Source\PSoC4/CAN_INT.c **** * Parameters:
- 595:Generated_Source\PSoC4/CAN_INT.c **** *  None.
- 596:Generated_Source\PSoC4/CAN_INT.c **** *
- 597:Generated_Source\PSoC4/CAN_INT.c **** * Return:
- 598:Generated_Source\PSoC4/CAN_INT.c **** *  None.
- 599:Generated_Source\PSoC4/CAN_INT.c **** *
- 600:Generated_Source\PSoC4/CAN_INT.c **** *******************************************************************************/
- 601:Generated_Source\PSoC4/CAN_INT.c **** CY_ISR(CAN_ISR)
- 602:Generated_Source\PSoC4/CAN_INT.c **** {
- 178              		.loc 1 602 0
- 179              		.cfi_startproc
- 180              		@ args = 0, pretend = 0, frame = 0
- 181              		@ frame_needed = 0, uses_anonymous_args = 0
- 182 0000 10B5     		push	{r4, lr}
- 183              		.cfi_def_cfa_offset 8
- 184              		.cfi_offset 4, -8
- 185              		.cfi_offset 14, -4
- 603:Generated_Source\PSoC4/CAN_INT.c ****     #ifdef CAN_ISR_INTERRUPT_CALLBACK
- 604:Generated_Source\PSoC4/CAN_INT.c ****         CAN_ISR_InterruptCallback();
- 605:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ISR_INTERRUPT_CALLBACK */
- 606:Generated_Source\PSoC4/CAN_INT.c ****     
- 607:Generated_Source\PSoC4/CAN_INT.c ****     /* Place your Interrupt code here. */
- 608:Generated_Source\PSoC4/CAN_INT.c ****     /* `#START CAN_ISR` */
- 609:Generated_Source\PSoC4/CAN_INT.c **** 
- 610:Generated_Source\PSoC4/CAN_INT.c ****     /* `#END` */
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 15
+ 577:Generated_Source\PSoC4/CAN_INT.c ****         /* `#END` */
+ 578:Generated_Source\PSoC4/CAN_INT.c **** 
+ 579:Generated_Source\PSoC4/CAN_INT.c ****         #ifdef CAN_SST_ERROR_ISR_POST_CALLBACK
+ 580:Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr_Post_Callback();
+ 581:Generated_Source\PSoC4/CAN_INT.c ****         #endif /* CAN_SST_ERROR_ISR_POST_CALLBACK */
+ 582:Generated_Source\PSoC4/CAN_INT.c ****     }
+ 583:Generated_Source\PSoC4/CAN_INT.c **** #endif /* CAN_SST_FAILURE */
+ 584:Generated_Source\PSoC4/CAN_INT.c **** 
+ 585:Generated_Source\PSoC4/CAN_INT.c **** 
+ 586:Generated_Source\PSoC4/CAN_INT.c **** /*******************************************************************************
+ 587:Generated_Source\PSoC4/CAN_INT.c **** * Function Name: CAN_ISR
+ 588:Generated_Source\PSoC4/CAN_INT.c **** ********************************************************************************
+ 589:Generated_Source\PSoC4/CAN_INT.c **** *
+ 590:Generated_Source\PSoC4/CAN_INT.c **** * Summary:
+ 591:Generated_Source\PSoC4/CAN_INT.c **** *  This ISR is executed when CAN Core generates and interrupt on one of events:
+ 592:Generated_Source\PSoC4/CAN_INT.c **** *  Arb_lost, Overload, Bit_err, Stuff_err, Ack_err, Form_err, Crc_err,
+ 593:Generated_Source\PSoC4/CAN_INT.c **** *  Buss_off, Rx_msg_lost, Tx_msg or Rx_msg. The interrupt sources depends
+ 594:Generated_Source\PSoC4/CAN_INT.c **** *  on the Customizer inputs.
+ 595:Generated_Source\PSoC4/CAN_INT.c **** *
+ 596:Generated_Source\PSoC4/CAN_INT.c **** * Parameters:
+ 597:Generated_Source\PSoC4/CAN_INT.c **** *  None.
+ 598:Generated_Source\PSoC4/CAN_INT.c **** *
+ 599:Generated_Source\PSoC4/CAN_INT.c **** * Return:
+ 600:Generated_Source\PSoC4/CAN_INT.c **** *  None.
+ 601:Generated_Source\PSoC4/CAN_INT.c **** *
+ 602:Generated_Source\PSoC4/CAN_INT.c **** *******************************************************************************/
+ 603:Generated_Source\PSoC4/CAN_INT.c **** CY_ISR(CAN_ISR)
+ 604:Generated_Source\PSoC4/CAN_INT.c **** {
+ 191              		.loc 1 604 0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 15
 
 
- 611:Generated_Source\PSoC4/CAN_INT.c ****     
- 612:Generated_Source\PSoC4/CAN_INT.c ****     /* Arbitration */
- 613:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_ARB_LOST && (CAN_ARB_LOST_USE_HELPER || \
- 614:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 615:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_ARBITRATION_LOST_MASK) != 0u)
- 616:Generated_Source\PSoC4/CAN_INT.c ****         {
- 617:Generated_Source\PSoC4/CAN_INT.c ****             CAN_ArbLostIsr();
- 618:Generated_Source\PSoC4/CAN_INT.c ****         }
- 619:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ARB_LOST && CAN_ARB_LOST_USE_HELPER */
- 620:Generated_Source\PSoC4/CAN_INT.c **** 
- 621:Generated_Source\PSoC4/CAN_INT.c ****     /* Overload Error */
- 622:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_OVERLOAD && (CAN_OVERLOAD_USE_HELPER || \
- 623:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 624:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_OVERLOAD_ERROR_MASK) != 0u)
- 625:Generated_Source\PSoC4/CAN_INT.c ****         {
- 626:Generated_Source\PSoC4/CAN_INT.c ****             CAN_OvrLdErrorIsr();
- 627:Generated_Source\PSoC4/CAN_INT.c ****         }
- 628:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_OVERLOAD && CAN_OVERLOAD_USE_HELPER */
- 629:Generated_Source\PSoC4/CAN_INT.c **** 
- 630:Generated_Source\PSoC4/CAN_INT.c ****     /* Bit Error */
- 631:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_BIT_ERR && (CAN_BIT_ERR_USE_HELPER || \
- 632:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 633:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_BIT_ERROR_MASK) != 0u)
- 634:Generated_Source\PSoC4/CAN_INT.c ****         {
- 635:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitErrorIsr();
- 636:Generated_Source\PSoC4/CAN_INT.c ****         }
- 637:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_BIT_ERR && CAN_BIT_ERR_USE_HELPER */
- 638:Generated_Source\PSoC4/CAN_INT.c **** 
- 639:Generated_Source\PSoC4/CAN_INT.c ****     /* Bit Staff Error */
- 640:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_STUFF_ERR && (CAN_STUFF_ERR_USE_HELPER || \
- 641:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 642:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_STUFF_ERROR_MASK) != 0u)
- 643:Generated_Source\PSoC4/CAN_INT.c ****         {
- 644:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitStuffErrorIsr();
- 645:Generated_Source\PSoC4/CAN_INT.c ****         }
- 646:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_STUFF_ERR && CAN_STUFF_ERR_USE_HELPER */
- 647:Generated_Source\PSoC4/CAN_INT.c **** 
- 648:Generated_Source\PSoC4/CAN_INT.c ****     /* ACK Error */
- 649:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_ACK_ERR && (CAN_ACK_ERR_USE_HELPER || \
- 650:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 651:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_ACK_ERROR_MASK) != 0u)
- 652:Generated_Source\PSoC4/CAN_INT.c ****         {
- 653:Generated_Source\PSoC4/CAN_INT.c ****             CAN_AckErrorIsr();
- 654:Generated_Source\PSoC4/CAN_INT.c ****         }
- 655:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ACK_ERR && CAN_ACK_ERR_USE_HELPER */
- 656:Generated_Source\PSoC4/CAN_INT.c **** 
- 657:Generated_Source\PSoC4/CAN_INT.c ****     /* Form(msg) Error */
- 658:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_FORM_ERR && (CAN_FORM_ERR_USE_HELPER || \
- 659:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 660:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_FORM_ERROR_MASK) != 0u)
- 661:Generated_Source\PSoC4/CAN_INT.c ****         {
- 662:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgErrorIsr();
- 663:Generated_Source\PSoC4/CAN_INT.c ****         }
- 664:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_FORM_ERR && CAN_FORM_ERR_USE_HELPER */
- 665:Generated_Source\PSoC4/CAN_INT.c **** 
- 666:Generated_Source\PSoC4/CAN_INT.c ****     /* CRC Error */
- 667:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_CRC_ERR && (CAN_CRC_ERR_USE_HELPER || \
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 16
+ 192              		.cfi_startproc
+ 193              		@ args = 0, pretend = 0, frame = 0
+ 194              		@ frame_needed = 0, uses_anonymous_args = 0
+ 195 0000 10B5     		push	{r4, lr}
+ 196              		.cfi_def_cfa_offset 8
+ 197              		.cfi_offset 4, -8
+ 198              		.cfi_offset 14, -4
+ 605:Generated_Source\PSoC4/CAN_INT.c ****     #ifdef CAN_ISR_INTERRUPT_CALLBACK
+ 606:Generated_Source\PSoC4/CAN_INT.c ****         CAN_ISR_InterruptCallback();
+ 607:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ISR_INTERRUPT_CALLBACK */
+ 608:Generated_Source\PSoC4/CAN_INT.c ****     
+ 609:Generated_Source\PSoC4/CAN_INT.c ****     /* Place your Interrupt code here. */
+ 610:Generated_Source\PSoC4/CAN_INT.c ****     /* `#START CAN_ISR` */
+ 611:Generated_Source\PSoC4/CAN_INT.c **** 
+ 612:Generated_Source\PSoC4/CAN_INT.c ****     /* `#END` */
+ 613:Generated_Source\PSoC4/CAN_INT.c ****     
+ 614:Generated_Source\PSoC4/CAN_INT.c ****     /* Arbitration */
+ 615:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_ARB_LOST && (CAN_ARB_LOST_USE_HELPER || \
+ 616:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 617:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_ARBITRATION_LOST_MASK) != 0u)
+ 618:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 619:Generated_Source\PSoC4/CAN_INT.c ****             CAN_ArbLostIsr();
+ 620:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 621:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ARB_LOST && CAN_ARB_LOST_USE_HELPER */
+ 622:Generated_Source\PSoC4/CAN_INT.c **** 
+ 623:Generated_Source\PSoC4/CAN_INT.c ****     /* Overload Error */
+ 624:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_OVERLOAD && (CAN_OVERLOAD_USE_HELPER || \
+ 625:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 626:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_OVERLOAD_ERROR_MASK) != 0u)
+ 627:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 628:Generated_Source\PSoC4/CAN_INT.c ****             CAN_OvrLdErrorIsr();
+ 629:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 630:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_OVERLOAD && CAN_OVERLOAD_USE_HELPER */
+ 631:Generated_Source\PSoC4/CAN_INT.c **** 
+ 632:Generated_Source\PSoC4/CAN_INT.c ****     /* Bit Error */
+ 633:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_BIT_ERR && (CAN_BIT_ERR_USE_HELPER || \
+ 634:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 635:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_BIT_ERROR_MASK) != 0u)
+ 636:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 637:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitErrorIsr();
+ 638:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 639:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_BIT_ERR && CAN_BIT_ERR_USE_HELPER */
+ 640:Generated_Source\PSoC4/CAN_INT.c **** 
+ 641:Generated_Source\PSoC4/CAN_INT.c ****     /* Bit Staff Error */
+ 642:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_STUFF_ERR && (CAN_STUFF_ERR_USE_HELPER || \
+ 643:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 644:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_STUFF_ERROR_MASK) != 0u)
+ 645:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 646:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BitStuffErrorIsr();
+ 647:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 648:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_STUFF_ERR && CAN_STUFF_ERR_USE_HELPER */
+ 649:Generated_Source\PSoC4/CAN_INT.c **** 
+ 650:Generated_Source\PSoC4/CAN_INT.c ****     /* ACK Error */
+ 651:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_ACK_ERR && (CAN_ACK_ERR_USE_HELPER || \
+ 652:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 653:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_ACK_ERROR_MASK) != 0u)
+ 654:Generated_Source\PSoC4/CAN_INT.c ****         {
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 16
 
 
- 668:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 669:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_CRC_ERROR_MASK) != 0u)
- 670:Generated_Source\PSoC4/CAN_INT.c ****         {
- 671:Generated_Source\PSoC4/CAN_INT.c ****             CAN_CrcErrorIsr();
- 672:Generated_Source\PSoC4/CAN_INT.c ****         }
- 673:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_CRC_ERR && CAN_CRC_ERR_USE_HELPER */
- 674:Generated_Source\PSoC4/CAN_INT.c **** 
- 675:Generated_Source\PSoC4/CAN_INT.c ****     /* Bus Off state */
- 676:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_BUS_OFF && (CAN_BUS_OFF_USE_HELPER || \
- 677:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 678:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_BUS_OFF_MASK) != 0u)
- 186              		.loc 1 678 0
- 187 0002 064B     		ldr	r3, .L18
- 188 0004 1B68     		ldr	r3, [r3]
- 189 0006 9B05     		lsls	r3, r3, #22
- 190 0008 01D5     		bpl	.L16
- 679:Generated_Source\PSoC4/CAN_INT.c ****         {
- 680:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BusOffIsr();
- 191              		.loc 1 680 0
- 192 000a FFF7FEFF 		bl	CAN_BusOffIsr
- 193              	.LVL15:
- 194              	.L16:
- 681:Generated_Source\PSoC4/CAN_INT.c ****         }
- 682:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_BUS_OFF && CAN_BUS_OFF_USE_HELPER */
- 683:Generated_Source\PSoC4/CAN_INT.c **** 
- 684:Generated_Source\PSoC4/CAN_INT.c ****     /* Message Lost */
- 685:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RX_MSG_LOST && (CAN_RX_MSG_LOST_USE_HELPER || \
- 686:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 687:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RX_MSG_LOST_MASK) != 0u)
- 688:Generated_Source\PSoC4/CAN_INT.c ****         {
- 689:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgLostIsr();
- 690:Generated_Source\PSoC4/CAN_INT.c ****         }
- 691:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RX_MSG_LOST && CAN_RX_MSG_LOST_USE_HELPER */
- 692:Generated_Source\PSoC4/CAN_INT.c **** 
- 693:Generated_Source\PSoC4/CAN_INT.c ****     /* TX Message Send */
- 694:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_TX_MESSAGE && (CAN_TX_MESSAGE_USE_HELPER || \
- 695:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 696:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_TX_MESSAGE_MASK) != 0u)
- 697:Generated_Source\PSoC4/CAN_INT.c ****         {
- 698:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgTXIsr();
- 699:Generated_Source\PSoC4/CAN_INT.c ****         }
- 700:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_TX_MESSAGE && CAN_TX_MESSAGE_USE_HELPER */
- 701:Generated_Source\PSoC4/CAN_INT.c **** 
- 702:Generated_Source\PSoC4/CAN_INT.c ****     /* RX Message Available */
- 703:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RX_MESSAGE && (CAN_RX_MESSAGE_USE_HELPER || \
- 704:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 705:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RX_MESSAGE_MASK) != 0u)
- 195              		.loc 1 705 0
- 196 000e 034B     		ldr	r3, .L18
- 197 0010 1B68     		ldr	r3, [r3]
- 198 0012 DB04     		lsls	r3, r3, #19
- 199 0014 01D5     		bpl	.L15
- 706:Generated_Source\PSoC4/CAN_INT.c ****         {
- 707:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgRXIsr();
- 200              		.loc 1 707 0
- 201 0016 FFF7FEFF 		bl	CAN_MsgRXIsr
- 202              	.LVL16:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 17
+ 655:Generated_Source\PSoC4/CAN_INT.c ****             CAN_AckErrorIsr();
+ 656:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 657:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_ACK_ERR && CAN_ACK_ERR_USE_HELPER */
+ 658:Generated_Source\PSoC4/CAN_INT.c **** 
+ 659:Generated_Source\PSoC4/CAN_INT.c ****     /* Form(msg) Error */
+ 660:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_FORM_ERR && (CAN_FORM_ERR_USE_HELPER || \
+ 661:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 662:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_FORM_ERROR_MASK) != 0u)
+ 663:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 664:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgErrorIsr();
+ 665:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 666:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_FORM_ERR && CAN_FORM_ERR_USE_HELPER */
+ 667:Generated_Source\PSoC4/CAN_INT.c **** 
+ 668:Generated_Source\PSoC4/CAN_INT.c ****     /* CRC Error */
+ 669:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_CRC_ERR && (CAN_CRC_ERR_USE_HELPER || \
+ 670:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 671:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_CRC_ERROR_MASK) != 0u)
+ 672:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 673:Generated_Source\PSoC4/CAN_INT.c ****             CAN_CrcErrorIsr();
+ 674:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 675:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_CRC_ERR && CAN_CRC_ERR_USE_HELPER */
+ 676:Generated_Source\PSoC4/CAN_INT.c **** 
+ 677:Generated_Source\PSoC4/CAN_INT.c ****     /* Bus Off state */
+ 678:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_BUS_OFF && (CAN_BUS_OFF_USE_HELPER || \
+ 679:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 680:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_BUS_OFF_MASK) != 0u)
+ 199              		.loc 1 680 0
+ 200 0002 064B     		ldr	r3, .L20
+ 201 0004 1B68     		ldr	r3, [r3]
+ 202 0006 9B05     		lsls	r3, r3, #22
+ 203 0008 01D5     		bpl	.L18
+ 681:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 682:Generated_Source\PSoC4/CAN_INT.c ****             CAN_BusOffIsr();
+ 204              		.loc 1 682 0
+ 205 000a FFF7FEFF 		bl	CAN_BusOffIsr
+ 206              	.LVL16:
+ 207              	.L18:
+ 683:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 684:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_BUS_OFF && CAN_BUS_OFF_USE_HELPER */
+ 685:Generated_Source\PSoC4/CAN_INT.c **** 
+ 686:Generated_Source\PSoC4/CAN_INT.c ****     /* Message Lost */
+ 687:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RX_MSG_LOST && (CAN_RX_MSG_LOST_USE_HELPER || \
+ 688:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 689:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RX_MSG_LOST_MASK) != 0u)
+ 690:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 691:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgLostIsr();
+ 692:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 693:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RX_MSG_LOST && CAN_RX_MSG_LOST_USE_HELPER */
+ 694:Generated_Source\PSoC4/CAN_INT.c **** 
+ 695:Generated_Source\PSoC4/CAN_INT.c ****     /* TX Message Send */
+ 696:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_TX_MESSAGE && (CAN_TX_MESSAGE_USE_HELPER || \
+ 697:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 698:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_TX_MESSAGE_MASK) != 0u)
+ 699:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 700:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgTXIsr();
+ 701:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 702:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_TX_MESSAGE && CAN_TX_MESSAGE_USE_HELPER */
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 17
 
 
- 203              	.L15:
- 708:Generated_Source\PSoC4/CAN_INT.c ****         }
- 709:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RX_MESSAGE && CAN_RX_MESSAGE_USE_HELPER */
- 710:Generated_Source\PSoC4/CAN_INT.c **** 
- 711:Generated_Source\PSoC4/CAN_INT.c ****     /* RTR Auto-reply Message Sent */
- 712:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RTR_AUTO_MSG_SENT && (CAN_RTR_MESSAGE_USE_HELPER || \
- 713:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 714:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RTR_MSG_MASK) != 0u)
- 715:Generated_Source\PSoC4/CAN_INT.c ****         {
- 716:Generated_Source\PSoC4/CAN_INT.c ****             CAN_RtrAutoMsgSentIsr();
- 717:Generated_Source\PSoC4/CAN_INT.c ****         }
- 718:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RTR_AUTO_MSG_SENT && CAN_RTR_MESSAGE_USE_HELPER */
- 719:Generated_Source\PSoC4/CAN_INT.c **** 
- 720:Generated_Source\PSoC4/CAN_INT.c ****     /* Stuck at dominant error */
- 721:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_STUCK_AT_ZERO && (CAN_STUCK_AT_ZERO_USE_HELPER || \
- 722:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 723:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_STUCK_AT_ZERO_MASK) != 0u)
- 724:Generated_Source\PSoC4/CAN_INT.c ****         {
- 725:Generated_Source\PSoC4/CAN_INT.c ****             CAN_StuckAtZeroIsr();
- 726:Generated_Source\PSoC4/CAN_INT.c ****         }
- 727:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_STUCK_AT_ZERO && CAN_STUCK_AT_ZERO_USE_HELPER */
- 728:Generated_Source\PSoC4/CAN_INT.c **** 
- 729:Generated_Source\PSoC4/CAN_INT.c ****     /* Single shot transmission failure */
- 730:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_SST_FAILURE && (CAN_SST_FAILURE_USE_HELPER || \
- 731:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
- 732:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_SST_FAILURE_MASK) != 0u)
- 733:Generated_Source\PSoC4/CAN_INT.c ****         {
- 734:Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr();
- 735:Generated_Source\PSoC4/CAN_INT.c ****         }
- 736:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_SST_FAILURE && CAN_SST_FAILURE_USE_HELPER */
- 737:Generated_Source\PSoC4/CAN_INT.c **** }
- 204              		.loc 1 737 0
- 205              		@ sp needed
- 206 001a 10BD     		pop	{r4, pc}
- 207              	.L19:
- 208              		.align	2
- 209              	.L18:
- 210 001c 00002E40 		.word	1076756480
- 211              		.cfi_endproc
- 212              	.LFE3:
- 213              		.size	CAN_ISR, .-CAN_ISR
- 214              		.text
- 215              	.Letext0:
- 216              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
- 217              		.file 3 "Generated_Source\\PSoC4\\CAN.h"
- 218              		.section	.debug_info,"",%progbits
- 219              	.Ldebug_info0:
- 220 0000 9E020000 		.4byte	0x29e
- 221 0004 0400     		.2byte	0x4
- 222 0006 00000000 		.4byte	.Ldebug_abbrev0
- 223 000a 04       		.byte	0x4
- 224 000b 01       		.uleb128 0x1
- 225 000c 54010000 		.4byte	.LASF41
- 226 0010 0C       		.byte	0xc
- 227 0011 15000000 		.4byte	.LASF42
- 228 0015 52020000 		.4byte	.LASF43
- 229 0019 00000000 		.4byte	.Ldebug_ranges0+0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 18
+ 703:Generated_Source\PSoC4/CAN_INT.c **** 
+ 704:Generated_Source\PSoC4/CAN_INT.c ****     /* RX Message Available */
+ 705:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RX_MESSAGE && (CAN_RX_MESSAGE_USE_HELPER || \
+ 706:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 707:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RX_MESSAGE_MASK) != 0u)
+ 208              		.loc 1 707 0
+ 209 000e 034B     		ldr	r3, .L20
+ 210 0010 1B68     		ldr	r3, [r3]
+ 211 0012 DB04     		lsls	r3, r3, #19
+ 212 0014 01D5     		bpl	.L17
+ 708:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 709:Generated_Source\PSoC4/CAN_INT.c ****             CAN_MsgRXIsr();
+ 213              		.loc 1 709 0
+ 214 0016 FFF7FEFF 		bl	CAN_MsgRXIsr
+ 215              	.LVL17:
+ 216              	.L17:
+ 710:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 711:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RX_MESSAGE && CAN_RX_MESSAGE_USE_HELPER */
+ 712:Generated_Source\PSoC4/CAN_INT.c **** 
+ 713:Generated_Source\PSoC4/CAN_INT.c ****     /* RTR Auto-reply Message Sent */
+ 714:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_RTR_AUTO_MSG_SENT && (CAN_RTR_MESSAGE_USE_HELPER || \
+ 715:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 716:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_RTR_MSG_MASK) != 0u)
+ 717:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 718:Generated_Source\PSoC4/CAN_INT.c ****             CAN_RtrAutoMsgSentIsr();
+ 719:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 720:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_RTR_AUTO_MSG_SENT && CAN_RTR_MESSAGE_USE_HELPER */
+ 721:Generated_Source\PSoC4/CAN_INT.c **** 
+ 722:Generated_Source\PSoC4/CAN_INT.c ****     /* Stuck at dominant error */
+ 723:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_STUCK_AT_ZERO && (CAN_STUCK_AT_ZERO_USE_HELPER || \
+ 724:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 725:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_STUCK_AT_ZERO_MASK) != 0u)
+ 726:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 727:Generated_Source\PSoC4/CAN_INT.c ****             CAN_StuckAtZeroIsr();
+ 728:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 729:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_STUCK_AT_ZERO && CAN_STUCK_AT_ZERO_USE_HELPER */
+ 730:Generated_Source\PSoC4/CAN_INT.c **** 
+ 731:Generated_Source\PSoC4/CAN_INT.c ****     /* Single shot transmission failure */
+ 732:Generated_Source\PSoC4/CAN_INT.c ****     #if (CAN_SST_FAILURE && (CAN_SST_FAILURE_USE_HELPER || \
+ 733:Generated_Source\PSoC4/CAN_INT.c ****         (!CAN_ADVANCED_INTERRUPT_CFG)))
+ 734:Generated_Source\PSoC4/CAN_INT.c ****         if ((CAN_INT_SR_REG & CAN_SST_FAILURE_MASK) != 0u)
+ 735:Generated_Source\PSoC4/CAN_INT.c ****         {
+ 736:Generated_Source\PSoC4/CAN_INT.c ****             CAN_SSTErrorIsr();
+ 737:Generated_Source\PSoC4/CAN_INT.c ****         }
+ 738:Generated_Source\PSoC4/CAN_INT.c ****     #endif /* CAN_SST_FAILURE && CAN_SST_FAILURE_USE_HELPER */
+ 739:Generated_Source\PSoC4/CAN_INT.c **** }
+ 217              		.loc 1 739 0
+ 218              		@ sp needed
+ 219 001a 10BD     		pop	{r4, pc}
+ 220              	.L21:
+ 221              		.align	2
+ 222              	.L20:
+ 223 001c 00002E40 		.word	1076756480
+ 224              		.cfi_endproc
+ 225              	.LFE3:
+ 226              		.size	CAN_ISR, .-CAN_ISR
+ 227              		.text
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 18
 
 
- 230 001d 00000000 		.4byte	0
- 231 0021 00000000 		.4byte	.Ldebug_line0
- 232 0025 02       		.uleb128 0x2
- 233 0026 01       		.byte	0x1
- 234 0027 06       		.byte	0x6
- 235 0028 46020000 		.4byte	.LASF0
- 236 002c 02       		.uleb128 0x2
- 237 002d 01       		.byte	0x1
- 238 002e 08       		.byte	0x8
- 239 002f 81000000 		.4byte	.LASF1
- 240 0033 02       		.uleb128 0x2
- 241 0034 02       		.byte	0x2
- 242 0035 05       		.byte	0x5
- 243 0036 1B020000 		.4byte	.LASF2
- 244 003a 02       		.uleb128 0x2
- 245 003b 02       		.byte	0x2
- 246 003c 07       		.byte	0x7
- 247 003d 55000000 		.4byte	.LASF3
- 248 0041 02       		.uleb128 0x2
- 249 0042 04       		.byte	0x4
- 250 0043 05       		.byte	0x5
- 251 0044 2B020000 		.4byte	.LASF4
- 252 0048 02       		.uleb128 0x2
- 253 0049 04       		.byte	0x4
- 254 004a 07       		.byte	0x7
- 255 004b 9F000000 		.4byte	.LASF5
- 256 004f 02       		.uleb128 0x2
- 257 0050 08       		.byte	0x8
- 258 0051 05       		.byte	0x5
- 259 0052 FF010000 		.4byte	.LASF6
- 260 0056 02       		.uleb128 0x2
- 261 0057 08       		.byte	0x8
- 262 0058 07       		.byte	0x7
- 263 0059 2F010000 		.4byte	.LASF7
- 264 005d 03       		.uleb128 0x3
- 265 005e 04       		.byte	0x4
- 266 005f 05       		.byte	0x5
- 267 0060 696E7400 		.ascii	"int\000"
- 268 0064 02       		.uleb128 0x2
- 269 0065 04       		.byte	0x4
- 270 0066 07       		.byte	0x7
- 271 0067 12010000 		.4byte	.LASF8
- 272 006b 04       		.uleb128 0x4
- 273 006c B1000000 		.4byte	.LASF9
- 274 0070 02       		.byte	0x2
- 275 0071 9801     		.2byte	0x198
- 276 0073 2C000000 		.4byte	0x2c
- 277 0077 04       		.uleb128 0x4
- 278 0078 D4000000 		.4byte	.LASF10
- 279 007c 02       		.byte	0x2
- 280 007d 9901     		.2byte	0x199
- 281 007f 3A000000 		.4byte	0x3a
- 282 0083 04       		.uleb128 0x4
- 283 0084 DB000000 		.4byte	.LASF11
- 284 0088 02       		.byte	0x2
- 285 0089 9A01     		.2byte	0x19a
- 286 008b 48000000 		.4byte	0x48
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 19
+ 228              	.Letext0:
+ 229              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 230              		.file 3 "Generated_Source\\PSoC4\\CAN.h"
+ 231              		.section	.debug_info,"",%progbits
+ 232              	.Ldebug_info0:
+ 233 0000 B3020000 		.4byte	0x2b3
+ 234 0004 0400     		.2byte	0x4
+ 235 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 236 000a 04       		.byte	0x4
+ 237 000b 01       		.uleb128 0x1
+ 238 000c 64010000 		.4byte	.LASF42
+ 239 0010 0C       		.byte	0xc
+ 240 0011 15000000 		.4byte	.LASF43
+ 241 0015 62020000 		.4byte	.LASF44
+ 242 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 243 001d 00000000 		.4byte	0
+ 244 0021 00000000 		.4byte	.Ldebug_line0
+ 245 0025 02       		.uleb128 0x2
+ 246 0026 01       		.byte	0x1
+ 247 0027 06       		.byte	0x6
+ 248 0028 56020000 		.4byte	.LASF0
+ 249 002c 02       		.uleb128 0x2
+ 250 002d 01       		.byte	0x1
+ 251 002e 08       		.byte	0x8
+ 252 002f 81000000 		.4byte	.LASF1
+ 253 0033 02       		.uleb128 0x2
+ 254 0034 02       		.byte	0x2
+ 255 0035 05       		.byte	0x5
+ 256 0036 2B020000 		.4byte	.LASF2
+ 257 003a 02       		.uleb128 0x2
+ 258 003b 02       		.byte	0x2
+ 259 003c 07       		.byte	0x7
+ 260 003d 55000000 		.4byte	.LASF3
+ 261 0041 02       		.uleb128 0x2
+ 262 0042 04       		.byte	0x4
+ 263 0043 05       		.byte	0x5
+ 264 0044 3B020000 		.4byte	.LASF4
+ 265 0048 02       		.uleb128 0x2
+ 266 0049 04       		.byte	0x4
+ 267 004a 07       		.byte	0x7
+ 268 004b 9F000000 		.4byte	.LASF5
+ 269 004f 02       		.uleb128 0x2
+ 270 0050 08       		.byte	0x8
+ 271 0051 05       		.byte	0x5
+ 272 0052 0F020000 		.4byte	.LASF6
+ 273 0056 02       		.uleb128 0x2
+ 274 0057 08       		.byte	0x8
+ 275 0058 07       		.byte	0x7
+ 276 0059 3F010000 		.4byte	.LASF7
+ 277 005d 03       		.uleb128 0x3
+ 278 005e 04       		.byte	0x4
+ 279 005f 05       		.byte	0x5
+ 280 0060 696E7400 		.ascii	"int\000"
+ 281 0064 02       		.uleb128 0x2
+ 282 0065 04       		.byte	0x4
+ 283 0066 07       		.byte	0x7
+ 284 0067 12010000 		.4byte	.LASF8
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 19
 
 
- 287 008f 02       		.uleb128 0x2
- 288 0090 04       		.byte	0x4
- 289 0091 04       		.byte	0x4
- 290 0092 7B000000 		.4byte	.LASF12
- 291 0096 02       		.uleb128 0x2
- 292 0097 08       		.byte	0x8
- 293 0098 04       		.byte	0x4
- 294 0099 BF000000 		.4byte	.LASF13
- 295 009d 02       		.uleb128 0x2
- 296 009e 01       		.byte	0x1
- 297 009f 08       		.byte	0x8
- 298 00a0 0D020000 		.4byte	.LASF14
- 299 00a4 04       		.uleb128 0x4
- 300 00a5 94000000 		.4byte	.LASF15
- 301 00a9 02       		.byte	0x2
- 302 00aa 4202     		.2byte	0x242
- 303 00ac B0000000 		.4byte	0xb0
- 304 00b0 05       		.uleb128 0x5
- 305 00b1 6B000000 		.4byte	0x6b
- 306 00b5 04       		.uleb128 0x4
- 307 00b6 34020000 		.4byte	.LASF16
- 308 00ba 02       		.byte	0x2
- 309 00bb 4402     		.2byte	0x244
- 310 00bd C1000000 		.4byte	0xc1
- 311 00c1 05       		.uleb128 0x5
- 312 00c2 83000000 		.4byte	0x83
- 313 00c6 02       		.uleb128 0x2
- 314 00c7 08       		.byte	0x8
- 315 00c8 04       		.byte	0x4
- 316 00c9 3A020000 		.4byte	.LASF17
- 317 00cd 02       		.uleb128 0x2
- 318 00ce 04       		.byte	0x4
- 319 00cf 07       		.byte	0x7
- 320 00d0 EF010000 		.4byte	.LASF18
- 321 00d4 06       		.uleb128 0x6
- 322 00d5 08       		.byte	0x8
- 323 00d6 03       		.byte	0x3
- 324 00d7 75       		.byte	0x75
- 325 00d8 E9000000 		.4byte	0xe9
- 326 00dc 07       		.uleb128 0x7
- 327 00dd 68000000 		.4byte	.LASF20
- 328 00e1 03       		.byte	0x3
- 329 00e2 77       		.byte	0x77
- 330 00e3 F9000000 		.4byte	0xf9
- 331 00e7 00       		.byte	0
- 332 00e8 00       		.byte	0
- 333 00e9 08       		.uleb128 0x8
- 334 00ea A4000000 		.4byte	0xa4
- 335 00ee F9000000 		.4byte	0xf9
- 336 00f2 09       		.uleb128 0x9
- 337 00f3 CD000000 		.4byte	0xcd
- 338 00f7 07       		.byte	0x7
- 339 00f8 00       		.byte	0
- 340 00f9 05       		.uleb128 0x5
- 341 00fa E9000000 		.4byte	0xe9
- 342 00fe 0A       		.uleb128 0xa
- 343 00ff 06000000 		.4byte	.LASF19
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 20
+ 285 006b 04       		.uleb128 0x4
+ 286 006c B1000000 		.4byte	.LASF9
+ 287 0070 02       		.byte	0x2
+ 288 0071 9801     		.2byte	0x198
+ 289 0073 2C000000 		.4byte	0x2c
+ 290 0077 04       		.uleb128 0x4
+ 291 0078 D4000000 		.4byte	.LASF10
+ 292 007c 02       		.byte	0x2
+ 293 007d 9901     		.2byte	0x199
+ 294 007f 3A000000 		.4byte	0x3a
+ 295 0083 04       		.uleb128 0x4
+ 296 0084 DB000000 		.4byte	.LASF11
+ 297 0088 02       		.byte	0x2
+ 298 0089 9A01     		.2byte	0x19a
+ 299 008b 48000000 		.4byte	0x48
+ 300 008f 02       		.uleb128 0x2
+ 301 0090 04       		.byte	0x4
+ 302 0091 04       		.byte	0x4
+ 303 0092 7B000000 		.4byte	.LASF12
+ 304 0096 02       		.uleb128 0x2
+ 305 0097 08       		.byte	0x8
+ 306 0098 04       		.byte	0x4
+ 307 0099 BF000000 		.4byte	.LASF13
+ 308 009d 02       		.uleb128 0x2
+ 309 009e 01       		.byte	0x1
+ 310 009f 08       		.byte	0x8
+ 311 00a0 1D020000 		.4byte	.LASF14
+ 312 00a4 04       		.uleb128 0x4
+ 313 00a5 94000000 		.4byte	.LASF15
+ 314 00a9 02       		.byte	0x2
+ 315 00aa 4202     		.2byte	0x242
+ 316 00ac B0000000 		.4byte	0xb0
+ 317 00b0 05       		.uleb128 0x5
+ 318 00b1 6B000000 		.4byte	0x6b
+ 319 00b5 04       		.uleb128 0x4
+ 320 00b6 44020000 		.4byte	.LASF16
+ 321 00ba 02       		.byte	0x2
+ 322 00bb 4402     		.2byte	0x244
+ 323 00bd C1000000 		.4byte	0xc1
+ 324 00c1 05       		.uleb128 0x5
+ 325 00c2 83000000 		.4byte	0x83
+ 326 00c6 02       		.uleb128 0x2
+ 327 00c7 08       		.byte	0x8
+ 328 00c8 04       		.byte	0x4
+ 329 00c9 4A020000 		.4byte	.LASF17
+ 330 00cd 02       		.uleb128 0x2
+ 331 00ce 04       		.byte	0x4
+ 332 00cf 07       		.byte	0x7
+ 333 00d0 FF010000 		.4byte	.LASF18
+ 334 00d4 06       		.uleb128 0x6
+ 335 00d5 08       		.byte	0x8
+ 336 00d6 03       		.byte	0x3
+ 337 00d7 75       		.byte	0x75
+ 338 00d8 E9000000 		.4byte	0xe9
+ 339 00dc 07       		.uleb128 0x7
+ 340 00dd 68000000 		.4byte	.LASF20
+ 341 00e1 03       		.byte	0x3
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 20
 
 
- 344 0103 03       		.byte	0x3
- 345 0104 78       		.byte	0x78
- 346 0105 D4000000 		.4byte	0xd4
- 347 0109 06       		.uleb128 0x6
- 348 010a 04       		.byte	0x4
- 349 010b 03       		.byte	0x3
- 350 010c 7B       		.byte	0x7b
- 351 010d 1E010000 		.4byte	0x11e
- 352 0111 07       		.uleb128 0x7
- 353 0112 68000000 		.4byte	.LASF20
- 354 0116 03       		.byte	0x3
- 355 0117 7D       		.byte	0x7d
- 356 0118 2E010000 		.4byte	0x12e
- 357 011c 00       		.byte	0
- 358 011d 00       		.byte	0
- 359 011e 08       		.uleb128 0x8
- 360 011f A4000000 		.4byte	0xa4
- 361 0123 2E010000 		.4byte	0x12e
- 362 0127 09       		.uleb128 0x9
- 363 0128 CD000000 		.4byte	0xcd
- 364 012c 03       		.byte	0x3
- 365 012d 00       		.byte	0
- 366 012e 05       		.uleb128 0x5
- 367 012f 1E010000 		.4byte	0x11e
- 368 0133 0A       		.uleb128 0xa
- 369 0134 4A000000 		.4byte	.LASF21
- 370 0138 03       		.byte	0x3
- 371 0139 7E       		.byte	0x7e
- 372 013a 09010000 		.4byte	0x109
- 373 013e 06       		.uleb128 0x6
- 374 013f 20       		.byte	0x20
- 375 0140 03       		.byte	0x3
- 376 0141 A0       		.byte	0xa0
- 377 0142 9B010000 		.4byte	0x19b
- 378 0146 07       		.uleb128 0x7
- 379 0147 99000000 		.4byte	.LASF22
- 380 014b 03       		.byte	0x3
- 381 014c A2       		.byte	0xa2
- 382 014d 33010000 		.4byte	0x133
- 383 0151 00       		.byte	0
- 384 0152 07       		.uleb128 0x7
- 385 0153 8F000000 		.4byte	.LASF23
- 386 0157 03       		.byte	0x3
- 387 0158 A3       		.byte	0xa3
- 388 0159 33010000 		.4byte	0x133
- 389 015d 04       		.byte	0x4
- 390 015e 07       		.uleb128 0x7
- 391 015f 6D000000 		.4byte	.LASF24
- 392 0163 03       		.byte	0x3
- 393 0164 A4       		.byte	0xa4
- 394 0165 FE000000 		.4byte	0xfe
- 395 0169 08       		.byte	0x8
- 396 016a 07       		.uleb128 0x7
- 397 016b 36000000 		.4byte	.LASF25
- 398 016f 03       		.byte	0x3
- 399 0170 A5       		.byte	0xa5
- 400 0171 33010000 		.4byte	0x133
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 21
+ 342 00e2 77       		.byte	0x77
+ 343 00e3 F9000000 		.4byte	0xf9
+ 344 00e7 00       		.byte	0
+ 345 00e8 00       		.byte	0
+ 346 00e9 08       		.uleb128 0x8
+ 347 00ea A4000000 		.4byte	0xa4
+ 348 00ee F9000000 		.4byte	0xf9
+ 349 00f2 09       		.uleb128 0x9
+ 350 00f3 CD000000 		.4byte	0xcd
+ 351 00f7 07       		.byte	0x7
+ 352 00f8 00       		.byte	0
+ 353 00f9 05       		.uleb128 0x5
+ 354 00fa E9000000 		.4byte	0xe9
+ 355 00fe 0A       		.uleb128 0xa
+ 356 00ff 06000000 		.4byte	.LASF19
+ 357 0103 03       		.byte	0x3
+ 358 0104 78       		.byte	0x78
+ 359 0105 D4000000 		.4byte	0xd4
+ 360 0109 06       		.uleb128 0x6
+ 361 010a 04       		.byte	0x4
+ 362 010b 03       		.byte	0x3
+ 363 010c 7B       		.byte	0x7b
+ 364 010d 1E010000 		.4byte	0x11e
+ 365 0111 07       		.uleb128 0x7
+ 366 0112 68000000 		.4byte	.LASF20
+ 367 0116 03       		.byte	0x3
+ 368 0117 7D       		.byte	0x7d
+ 369 0118 2E010000 		.4byte	0x12e
+ 370 011c 00       		.byte	0
+ 371 011d 00       		.byte	0
+ 372 011e 08       		.uleb128 0x8
+ 373 011f A4000000 		.4byte	0xa4
+ 374 0123 2E010000 		.4byte	0x12e
+ 375 0127 09       		.uleb128 0x9
+ 376 0128 CD000000 		.4byte	0xcd
+ 377 012c 03       		.byte	0x3
+ 378 012d 00       		.byte	0
+ 379 012e 05       		.uleb128 0x5
+ 380 012f 1E010000 		.4byte	0x11e
+ 381 0133 0A       		.uleb128 0xa
+ 382 0134 4A000000 		.4byte	.LASF21
+ 383 0138 03       		.byte	0x3
+ 384 0139 7E       		.byte	0x7e
+ 385 013a 09010000 		.4byte	0x109
+ 386 013e 06       		.uleb128 0x6
+ 387 013f 20       		.byte	0x20
+ 388 0140 03       		.byte	0x3
+ 389 0141 A0       		.byte	0xa0
+ 390 0142 9B010000 		.4byte	0x19b
+ 391 0146 07       		.uleb128 0x7
+ 392 0147 99000000 		.4byte	.LASF22
+ 393 014b 03       		.byte	0x3
+ 394 014c A2       		.byte	0xa2
+ 395 014d 33010000 		.4byte	0x133
+ 396 0151 00       		.byte	0
+ 397 0152 07       		.uleb128 0x7
+ 398 0153 8F000000 		.4byte	.LASF23
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 21
 
 
- 401 0175 10       		.byte	0x10
- 402 0176 07       		.uleb128 0x7
- 403 0177 25020000 		.4byte	.LASF26
- 404 017b 03       		.byte	0x3
- 405 017c A6       		.byte	0xa6
- 406 017d 33010000 		.4byte	0x133
- 407 0181 14       		.byte	0x14
- 408 0182 07       		.uleb128 0x7
- 409 0183 F8010000 		.4byte	.LASF27
- 410 0187 03       		.byte	0x3
- 411 0188 A7       		.byte	0xa7
- 412 0189 33010000 		.4byte	0x133
- 413 018d 18       		.byte	0x18
- 414 018e 07       		.uleb128 0x7
- 415 018f 74000000 		.4byte	.LASF28
- 416 0193 03       		.byte	0x3
- 417 0194 A8       		.byte	0xa8
- 418 0195 33010000 		.4byte	0x133
- 419 0199 1C       		.byte	0x1c
- 420 019a 00       		.byte	0
- 421 019b 0A       		.uleb128 0xa
- 422 019c 46010000 		.4byte	.LASF29
- 423 01a0 03       		.byte	0x3
- 424 01a1 A9       		.byte	0xa9
- 425 01a2 3E010000 		.4byte	0x13e
- 426 01a6 0B       		.uleb128 0xb
- 427 01a7 C6000000 		.4byte	.LASF30
- 428 01ab 01       		.byte	0x1
- 429 01ac 2801     		.2byte	0x128
- 430 01ae 00000000 		.4byte	.LFB1
- 431 01b2 14000000 		.4byte	.LFE1-.LFB1
- 432 01b6 01       		.uleb128 0x1
- 433 01b7 9C       		.byte	0x9c
- 434 01b8 C6010000 		.4byte	0x1c6
- 435 01bc 0C       		.uleb128 0xc
- 436 01bd 0E000000 		.4byte	.LVL0
- 437 01c1 5A020000 		.4byte	0x25a
- 438 01c5 00       		.byte	0
- 439 01c6 0B       		.uleb128 0xb
- 440 01c7 E2010000 		.4byte	.LASF31
- 441 01cb 01       		.byte	0x1
- 442 01cc 9301     		.2byte	0x193
- 443 01ce 00000000 		.4byte	.LFB2
- 444 01d2 74000000 		.4byte	.LFE2-.LFB2
- 445 01d6 01       		.uleb128 0x1
- 446 01d7 9C       		.byte	0x9c
- 447 01d8 31020000 		.4byte	0x231
- 448 01dc 0D       		.uleb128 0xd
- 449 01dd 3C000000 		.4byte	.LASF32
- 450 01e1 01       		.byte	0x1
- 451 01e2 9501     		.2byte	0x195
- 452 01e4 6B000000 		.4byte	0x6b
- 453 01e8 00000000 		.4byte	.LLST0
- 454 01ec 0D       		.uleb128 0xd
- 455 01ed 00000000 		.4byte	.LASF33
- 456 01f1 01       		.byte	0x1
- 457 01f2 9601     		.2byte	0x196
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 22
+ 399 0157 03       		.byte	0x3
+ 400 0158 A3       		.byte	0xa3
+ 401 0159 33010000 		.4byte	0x133
+ 402 015d 04       		.byte	0x4
+ 403 015e 07       		.uleb128 0x7
+ 404 015f 6D000000 		.4byte	.LASF24
+ 405 0163 03       		.byte	0x3
+ 406 0164 A4       		.byte	0xa4
+ 407 0165 FE000000 		.4byte	0xfe
+ 408 0169 08       		.byte	0x8
+ 409 016a 07       		.uleb128 0x7
+ 410 016b 36000000 		.4byte	.LASF25
+ 411 016f 03       		.byte	0x3
+ 412 0170 A5       		.byte	0xa5
+ 413 0171 33010000 		.4byte	0x133
+ 414 0175 10       		.byte	0x10
+ 415 0176 07       		.uleb128 0x7
+ 416 0177 35020000 		.4byte	.LASF26
+ 417 017b 03       		.byte	0x3
+ 418 017c A6       		.byte	0xa6
+ 419 017d 33010000 		.4byte	0x133
+ 420 0181 14       		.byte	0x14
+ 421 0182 07       		.uleb128 0x7
+ 422 0183 08020000 		.4byte	.LASF27
+ 423 0187 03       		.byte	0x3
+ 424 0188 A7       		.byte	0xa7
+ 425 0189 33010000 		.4byte	0x133
+ 426 018d 18       		.byte	0x18
+ 427 018e 07       		.uleb128 0x7
+ 428 018f 74000000 		.4byte	.LASF28
+ 429 0193 03       		.byte	0x3
+ 430 0194 A8       		.byte	0xa8
+ 431 0195 33010000 		.4byte	0x133
+ 432 0199 1C       		.byte	0x1c
+ 433 019a 00       		.byte	0
+ 434 019b 0A       		.uleb128 0xa
+ 435 019c 56010000 		.4byte	.LASF29
+ 436 01a0 03       		.byte	0x3
+ 437 01a1 A9       		.byte	0xa9
+ 438 01a2 3E010000 		.4byte	0x13e
+ 439 01a6 0B       		.uleb128 0xb
+ 440 01a7 C6000000 		.4byte	.LASF30
+ 441 01ab 01       		.byte	0x1
+ 442 01ac 2801     		.2byte	0x128
+ 443 01ae 00000000 		.4byte	.LFB1
+ 444 01b2 14000000 		.4byte	.LFE1-.LFB1
+ 445 01b6 01       		.uleb128 0x1
+ 446 01b7 9C       		.byte	0x9c
+ 447 01b8 C6010000 		.4byte	0x1c6
+ 448 01bc 0C       		.uleb128 0xc
+ 449 01bd 0E000000 		.4byte	.LVL0
+ 450 01c1 63020000 		.4byte	0x263
+ 451 01c5 00       		.byte	0
+ 452 01c6 0B       		.uleb128 0xb
+ 453 01c7 F2010000 		.4byte	.LASF31
+ 454 01cb 01       		.byte	0x1
+ 455 01cc 9301     		.2byte	0x193
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 22
 
 
- 458 01f4 77000000 		.4byte	0x77
- 459 01f8 2A000000 		.4byte	.LLST1
- 460 01fc 0C       		.uleb128 0xc
- 461 01fd 40000000 		.4byte	.LVL4
- 462 0201 65020000 		.4byte	0x265
- 463 0205 0C       		.uleb128 0xc
- 464 0206 46000000 		.4byte	.LVL5
- 465 020a 71020000 		.4byte	0x271
- 466 020e 0C       		.uleb128 0xc
- 467 020f 4C000000 		.4byte	.LVL6
- 468 0213 7D020000 		.4byte	0x27d
- 469 0217 0C       		.uleb128 0xc
- 470 0218 52000000 		.4byte	.LVL7
- 471 021c 89020000 		.4byte	0x289
- 472 0220 0E       		.uleb128 0xe
- 473 0221 5A000000 		.4byte	.LVL8
- 474 0225 95020000 		.4byte	0x295
- 475 0229 0F       		.uleb128 0xf
- 476 022a 01       		.uleb128 0x1
- 477 022b 50       		.byte	0x50
- 478 022c 02       		.uleb128 0x2
- 479 022d 74       		.byte	0x74
- 480 022e 00       		.sleb128 0
- 481 022f 00       		.byte	0
- 482 0230 00       		.byte	0
- 483 0231 0B       		.uleb128 0xb
- 484 0232 B7000000 		.4byte	.LASF34
- 485 0236 01       		.byte	0x1
- 486 0237 5902     		.2byte	0x259
- 487 0239 00000000 		.4byte	.LFB3
- 488 023d 20000000 		.4byte	.LFE3-.LFB3
- 489 0241 01       		.uleb128 0x1
- 490 0242 9C       		.byte	0x9c
- 491 0243 5A020000 		.4byte	0x25a
- 492 0247 0C       		.uleb128 0xc
- 493 0248 0E000000 		.4byte	.LVL15
- 494 024c A6010000 		.4byte	0x1a6
- 495 0250 0C       		.uleb128 0xc
- 496 0251 1A000000 		.4byte	.LVL16
- 497 0255 C6010000 		.4byte	0x1c6
- 498 0259 00       		.byte	0
- 499 025a 10       		.uleb128 0x10
- 500 025b 12020000 		.4byte	.LASF35
- 501 025f 12020000 		.4byte	.LASF35
- 502 0263 03       		.byte	0x3
- 503 0264 C6       		.byte	0xc6
- 504 0265 11       		.uleb128 0x11
- 505 0266 E2000000 		.4byte	.LASF36
- 506 026a E2000000 		.4byte	.LASF36
- 507 026e 03       		.byte	0x3
- 508 026f 3501     		.2byte	0x135
- 509 0271 11       		.uleb128 0x11
- 510 0272 F2000000 		.4byte	.LASF37
- 511 0276 F2000000 		.4byte	.LASF37
- 512 027a 03       		.byte	0x3
- 513 027b 3801     		.2byte	0x138
- 514 027d 11       		.uleb128 0x11
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 23
+ 456 01ce 00000000 		.4byte	.LFB2
+ 457 01d2 78000000 		.4byte	.LFE2-.LFB2
+ 458 01d6 01       		.uleb128 0x1
+ 459 01d7 9C       		.byte	0x9c
+ 460 01d8 3A020000 		.4byte	0x23a
+ 461 01dc 0D       		.uleb128 0xd
+ 462 01dd 3C000000 		.4byte	.LASF32
+ 463 01e1 01       		.byte	0x1
+ 464 01e2 9501     		.2byte	0x195
+ 465 01e4 6B000000 		.4byte	0x6b
+ 466 01e8 00000000 		.4byte	.LLST0
+ 467 01ec 0D       		.uleb128 0xd
+ 468 01ed 00000000 		.4byte	.LASF33
+ 469 01f1 01       		.byte	0x1
+ 470 01f2 9601     		.2byte	0x196
+ 471 01f4 77000000 		.4byte	0x77
+ 472 01f8 2A000000 		.4byte	.LLST1
+ 473 01fc 0C       		.uleb128 0xc
+ 474 01fd 3A000000 		.4byte	.LVL4
+ 475 0201 6E020000 		.4byte	0x26e
+ 476 0205 0C       		.uleb128 0xc
+ 477 0206 40000000 		.4byte	.LVL5
+ 478 020a 7A020000 		.4byte	0x27a
+ 479 020e 0C       		.uleb128 0xc
+ 480 020f 46000000 		.4byte	.LVL6
+ 481 0213 86020000 		.4byte	0x286
+ 482 0217 0C       		.uleb128 0xc
+ 483 0218 4C000000 		.4byte	.LVL7
+ 484 021c 92020000 		.4byte	0x292
+ 485 0220 0C       		.uleb128 0xc
+ 486 0221 52000000 		.4byte	.LVL8
+ 487 0225 9E020000 		.4byte	0x29e
+ 488 0229 0E       		.uleb128 0xe
+ 489 022a 5A000000 		.4byte	.LVL9
+ 490 022e AA020000 		.4byte	0x2aa
+ 491 0232 0F       		.uleb128 0xf
+ 492 0233 01       		.uleb128 0x1
+ 493 0234 50       		.byte	0x50
+ 494 0235 02       		.uleb128 0x2
+ 495 0236 74       		.byte	0x74
+ 496 0237 00       		.sleb128 0
+ 497 0238 00       		.byte	0
+ 498 0239 00       		.byte	0
+ 499 023a 0B       		.uleb128 0xb
+ 500 023b B7000000 		.4byte	.LASF34
+ 501 023f 01       		.byte	0x1
+ 502 0240 5B02     		.2byte	0x25b
+ 503 0242 00000000 		.4byte	.LFB3
+ 504 0246 20000000 		.4byte	.LFE3-.LFB3
+ 505 024a 01       		.uleb128 0x1
+ 506 024b 9C       		.byte	0x9c
+ 507 024c 63020000 		.4byte	0x263
+ 508 0250 0C       		.uleb128 0xc
+ 509 0251 0E000000 		.4byte	.LVL16
+ 510 0255 A6010000 		.4byte	0x1a6
+ 511 0259 0C       		.uleb128 0xc
+ 512 025a 1A000000 		.4byte	.LVL17
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 23
 
 
- 515 027e 02010000 		.4byte	.LASF38
- 516 0282 02010000 		.4byte	.LASF38
- 517 0286 03       		.byte	0x3
- 518 0287 3B01     		.2byte	0x13b
- 519 0289 11       		.uleb128 0x11
- 520 028a 1F010000 		.4byte	.LASF39
- 521 028e 1F010000 		.4byte	.LASF39
- 522 0292 03       		.byte	0x3
- 523 0293 3E01     		.2byte	0x13e
- 524 0295 11       		.uleb128 0x11
- 525 0296 BA020000 		.4byte	.LASF40
- 526 029a BA020000 		.4byte	.LASF40
- 527 029e 03       		.byte	0x3
- 528 029f 1A01     		.2byte	0x11a
- 529 02a1 00       		.byte	0
- 530              		.section	.debug_abbrev,"",%progbits
- 531              	.Ldebug_abbrev0:
- 532 0000 01       		.uleb128 0x1
- 533 0001 11       		.uleb128 0x11
- 534 0002 01       		.byte	0x1
- 535 0003 25       		.uleb128 0x25
- 536 0004 0E       		.uleb128 0xe
- 537 0005 13       		.uleb128 0x13
- 538 0006 0B       		.uleb128 0xb
- 539 0007 03       		.uleb128 0x3
- 540 0008 0E       		.uleb128 0xe
- 541 0009 1B       		.uleb128 0x1b
- 542 000a 0E       		.uleb128 0xe
- 543 000b 55       		.uleb128 0x55
- 544 000c 17       		.uleb128 0x17
- 545 000d 11       		.uleb128 0x11
- 546 000e 01       		.uleb128 0x1
- 547 000f 10       		.uleb128 0x10
- 548 0010 17       		.uleb128 0x17
- 549 0011 00       		.byte	0
- 550 0012 00       		.byte	0
- 551 0013 02       		.uleb128 0x2
- 552 0014 24       		.uleb128 0x24
- 553 0015 00       		.byte	0
- 554 0016 0B       		.uleb128 0xb
- 555 0017 0B       		.uleb128 0xb
- 556 0018 3E       		.uleb128 0x3e
- 557 0019 0B       		.uleb128 0xb
- 558 001a 03       		.uleb128 0x3
- 559 001b 0E       		.uleb128 0xe
- 560 001c 00       		.byte	0
- 561 001d 00       		.byte	0
- 562 001e 03       		.uleb128 0x3
- 563 001f 24       		.uleb128 0x24
- 564 0020 00       		.byte	0
- 565 0021 0B       		.uleb128 0xb
- 566 0022 0B       		.uleb128 0xb
- 567 0023 3E       		.uleb128 0x3e
- 568 0024 0B       		.uleb128 0xb
- 569 0025 03       		.uleb128 0x3
- 570 0026 08       		.uleb128 0x8
- 571 0027 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 24
+ 513 025e C6010000 		.4byte	0x1c6
+ 514 0262 00       		.byte	0
+ 515 0263 10       		.uleb128 0x10
+ 516 0264 22020000 		.4byte	.LASF35
+ 517 0268 22020000 		.4byte	.LASF35
+ 518 026c 03       		.byte	0x3
+ 519 026d C6       		.byte	0xc6
+ 520 026e 11       		.uleb128 0x11
+ 521 026f E2000000 		.4byte	.LASF36
+ 522 0273 E2000000 		.4byte	.LASF36
+ 523 0277 03       		.byte	0x3
+ 524 0278 3501     		.2byte	0x135
+ 525 027a 11       		.uleb128 0x11
+ 526 027b F2000000 		.4byte	.LASF37
+ 527 027f F2000000 		.4byte	.LASF37
+ 528 0283 03       		.byte	0x3
+ 529 0284 3801     		.2byte	0x138
+ 530 0286 11       		.uleb128 0x11
+ 531 0287 02010000 		.4byte	.LASF38
+ 532 028b 02010000 		.4byte	.LASF38
+ 533 028f 03       		.byte	0x3
+ 534 0290 3B01     		.2byte	0x13b
+ 535 0292 11       		.uleb128 0x11
+ 536 0293 2F010000 		.4byte	.LASF39
+ 537 0297 2F010000 		.4byte	.LASF39
+ 538 029b 03       		.byte	0x3
+ 539 029c 3E01     		.2byte	0x13e
+ 540 029e 11       		.uleb128 0x11
+ 541 029f 1F010000 		.4byte	.LASF40
+ 542 02a3 1F010000 		.4byte	.LASF40
+ 543 02a7 03       		.byte	0x3
+ 544 02a8 4101     		.2byte	0x141
+ 545 02aa 11       		.uleb128 0x11
+ 546 02ab CA020000 		.4byte	.LASF41
+ 547 02af CA020000 		.4byte	.LASF41
+ 548 02b3 03       		.byte	0x3
+ 549 02b4 1A01     		.2byte	0x11a
+ 550 02b6 00       		.byte	0
+ 551              		.section	.debug_abbrev,"",%progbits
+ 552              	.Ldebug_abbrev0:
+ 553 0000 01       		.uleb128 0x1
+ 554 0001 11       		.uleb128 0x11
+ 555 0002 01       		.byte	0x1
+ 556 0003 25       		.uleb128 0x25
+ 557 0004 0E       		.uleb128 0xe
+ 558 0005 13       		.uleb128 0x13
+ 559 0006 0B       		.uleb128 0xb
+ 560 0007 03       		.uleb128 0x3
+ 561 0008 0E       		.uleb128 0xe
+ 562 0009 1B       		.uleb128 0x1b
+ 563 000a 0E       		.uleb128 0xe
+ 564 000b 55       		.uleb128 0x55
+ 565 000c 17       		.uleb128 0x17
+ 566 000d 11       		.uleb128 0x11
+ 567 000e 01       		.uleb128 0x1
+ 568 000f 10       		.uleb128 0x10
+ 569 0010 17       		.uleb128 0x17
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 24
 
 
- 572 0028 00       		.byte	0
- 573 0029 04       		.uleb128 0x4
- 574 002a 16       		.uleb128 0x16
- 575 002b 00       		.byte	0
- 576 002c 03       		.uleb128 0x3
- 577 002d 0E       		.uleb128 0xe
- 578 002e 3A       		.uleb128 0x3a
- 579 002f 0B       		.uleb128 0xb
- 580 0030 3B       		.uleb128 0x3b
- 581 0031 05       		.uleb128 0x5
- 582 0032 49       		.uleb128 0x49
- 583 0033 13       		.uleb128 0x13
- 584 0034 00       		.byte	0
- 585 0035 00       		.byte	0
- 586 0036 05       		.uleb128 0x5
- 587 0037 35       		.uleb128 0x35
- 588 0038 00       		.byte	0
- 589 0039 49       		.uleb128 0x49
- 590 003a 13       		.uleb128 0x13
- 591 003b 00       		.byte	0
- 592 003c 00       		.byte	0
- 593 003d 06       		.uleb128 0x6
- 594 003e 13       		.uleb128 0x13
- 595 003f 01       		.byte	0x1
- 596 0040 0B       		.uleb128 0xb
- 597 0041 0B       		.uleb128 0xb
- 598 0042 3A       		.uleb128 0x3a
- 599 0043 0B       		.uleb128 0xb
- 600 0044 3B       		.uleb128 0x3b
- 601 0045 0B       		.uleb128 0xb
- 602 0046 01       		.uleb128 0x1
- 603 0047 13       		.uleb128 0x13
- 604 0048 00       		.byte	0
- 605 0049 00       		.byte	0
- 606 004a 07       		.uleb128 0x7
- 607 004b 0D       		.uleb128 0xd
- 608 004c 00       		.byte	0
- 609 004d 03       		.uleb128 0x3
- 610 004e 0E       		.uleb128 0xe
- 611 004f 3A       		.uleb128 0x3a
- 612 0050 0B       		.uleb128 0xb
- 613 0051 3B       		.uleb128 0x3b
- 614 0052 0B       		.uleb128 0xb
- 615 0053 49       		.uleb128 0x49
- 616 0054 13       		.uleb128 0x13
- 617 0055 38       		.uleb128 0x38
- 618 0056 0B       		.uleb128 0xb
- 619 0057 00       		.byte	0
- 620 0058 00       		.byte	0
- 621 0059 08       		.uleb128 0x8
- 622 005a 01       		.uleb128 0x1
- 623 005b 01       		.byte	0x1
- 624 005c 49       		.uleb128 0x49
- 625 005d 13       		.uleb128 0x13
- 626 005e 01       		.uleb128 0x1
- 627 005f 13       		.uleb128 0x13
- 628 0060 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 25
+ 570 0011 00       		.byte	0
+ 571 0012 00       		.byte	0
+ 572 0013 02       		.uleb128 0x2
+ 573 0014 24       		.uleb128 0x24
+ 574 0015 00       		.byte	0
+ 575 0016 0B       		.uleb128 0xb
+ 576 0017 0B       		.uleb128 0xb
+ 577 0018 3E       		.uleb128 0x3e
+ 578 0019 0B       		.uleb128 0xb
+ 579 001a 03       		.uleb128 0x3
+ 580 001b 0E       		.uleb128 0xe
+ 581 001c 00       		.byte	0
+ 582 001d 00       		.byte	0
+ 583 001e 03       		.uleb128 0x3
+ 584 001f 24       		.uleb128 0x24
+ 585 0020 00       		.byte	0
+ 586 0021 0B       		.uleb128 0xb
+ 587 0022 0B       		.uleb128 0xb
+ 588 0023 3E       		.uleb128 0x3e
+ 589 0024 0B       		.uleb128 0xb
+ 590 0025 03       		.uleb128 0x3
+ 591 0026 08       		.uleb128 0x8
+ 592 0027 00       		.byte	0
+ 593 0028 00       		.byte	0
+ 594 0029 04       		.uleb128 0x4
+ 595 002a 16       		.uleb128 0x16
+ 596 002b 00       		.byte	0
+ 597 002c 03       		.uleb128 0x3
+ 598 002d 0E       		.uleb128 0xe
+ 599 002e 3A       		.uleb128 0x3a
+ 600 002f 0B       		.uleb128 0xb
+ 601 0030 3B       		.uleb128 0x3b
+ 602 0031 05       		.uleb128 0x5
+ 603 0032 49       		.uleb128 0x49
+ 604 0033 13       		.uleb128 0x13
+ 605 0034 00       		.byte	0
+ 606 0035 00       		.byte	0
+ 607 0036 05       		.uleb128 0x5
+ 608 0037 35       		.uleb128 0x35
+ 609 0038 00       		.byte	0
+ 610 0039 49       		.uleb128 0x49
+ 611 003a 13       		.uleb128 0x13
+ 612 003b 00       		.byte	0
+ 613 003c 00       		.byte	0
+ 614 003d 06       		.uleb128 0x6
+ 615 003e 13       		.uleb128 0x13
+ 616 003f 01       		.byte	0x1
+ 617 0040 0B       		.uleb128 0xb
+ 618 0041 0B       		.uleb128 0xb
+ 619 0042 3A       		.uleb128 0x3a
+ 620 0043 0B       		.uleb128 0xb
+ 621 0044 3B       		.uleb128 0x3b
+ 622 0045 0B       		.uleb128 0xb
+ 623 0046 01       		.uleb128 0x1
+ 624 0047 13       		.uleb128 0x13
+ 625 0048 00       		.byte	0
+ 626 0049 00       		.byte	0
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 25
 
 
- 629 0061 00       		.byte	0
- 630 0062 09       		.uleb128 0x9
- 631 0063 21       		.uleb128 0x21
- 632 0064 00       		.byte	0
- 633 0065 49       		.uleb128 0x49
- 634 0066 13       		.uleb128 0x13
- 635 0067 2F       		.uleb128 0x2f
- 636 0068 0B       		.uleb128 0xb
- 637 0069 00       		.byte	0
- 638 006a 00       		.byte	0
- 639 006b 0A       		.uleb128 0xa
- 640 006c 16       		.uleb128 0x16
- 641 006d 00       		.byte	0
- 642 006e 03       		.uleb128 0x3
- 643 006f 0E       		.uleb128 0xe
- 644 0070 3A       		.uleb128 0x3a
- 645 0071 0B       		.uleb128 0xb
- 646 0072 3B       		.uleb128 0x3b
- 647 0073 0B       		.uleb128 0xb
- 648 0074 49       		.uleb128 0x49
- 649 0075 13       		.uleb128 0x13
- 650 0076 00       		.byte	0
- 651 0077 00       		.byte	0
- 652 0078 0B       		.uleb128 0xb
- 653 0079 2E       		.uleb128 0x2e
- 654 007a 01       		.byte	0x1
- 655 007b 3F       		.uleb128 0x3f
- 656 007c 19       		.uleb128 0x19
- 657 007d 03       		.uleb128 0x3
- 658 007e 0E       		.uleb128 0xe
- 659 007f 3A       		.uleb128 0x3a
- 660 0080 0B       		.uleb128 0xb
- 661 0081 3B       		.uleb128 0x3b
- 662 0082 05       		.uleb128 0x5
- 663 0083 27       		.uleb128 0x27
- 664 0084 19       		.uleb128 0x19
- 665 0085 11       		.uleb128 0x11
- 666 0086 01       		.uleb128 0x1
- 667 0087 12       		.uleb128 0x12
- 668 0088 06       		.uleb128 0x6
- 669 0089 40       		.uleb128 0x40
- 670 008a 18       		.uleb128 0x18
- 671 008b 9742     		.uleb128 0x2117
- 672 008d 19       		.uleb128 0x19
- 673 008e 01       		.uleb128 0x1
- 674 008f 13       		.uleb128 0x13
- 675 0090 00       		.byte	0
- 676 0091 00       		.byte	0
- 677 0092 0C       		.uleb128 0xc
- 678 0093 898201   		.uleb128 0x4109
- 679 0096 00       		.byte	0
- 680 0097 11       		.uleb128 0x11
- 681 0098 01       		.uleb128 0x1
- 682 0099 31       		.uleb128 0x31
- 683 009a 13       		.uleb128 0x13
- 684 009b 00       		.byte	0
- 685 009c 00       		.byte	0
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 26
+ 627 004a 07       		.uleb128 0x7
+ 628 004b 0D       		.uleb128 0xd
+ 629 004c 00       		.byte	0
+ 630 004d 03       		.uleb128 0x3
+ 631 004e 0E       		.uleb128 0xe
+ 632 004f 3A       		.uleb128 0x3a
+ 633 0050 0B       		.uleb128 0xb
+ 634 0051 3B       		.uleb128 0x3b
+ 635 0052 0B       		.uleb128 0xb
+ 636 0053 49       		.uleb128 0x49
+ 637 0054 13       		.uleb128 0x13
+ 638 0055 38       		.uleb128 0x38
+ 639 0056 0B       		.uleb128 0xb
+ 640 0057 00       		.byte	0
+ 641 0058 00       		.byte	0
+ 642 0059 08       		.uleb128 0x8
+ 643 005a 01       		.uleb128 0x1
+ 644 005b 01       		.byte	0x1
+ 645 005c 49       		.uleb128 0x49
+ 646 005d 13       		.uleb128 0x13
+ 647 005e 01       		.uleb128 0x1
+ 648 005f 13       		.uleb128 0x13
+ 649 0060 00       		.byte	0
+ 650 0061 00       		.byte	0
+ 651 0062 09       		.uleb128 0x9
+ 652 0063 21       		.uleb128 0x21
+ 653 0064 00       		.byte	0
+ 654 0065 49       		.uleb128 0x49
+ 655 0066 13       		.uleb128 0x13
+ 656 0067 2F       		.uleb128 0x2f
+ 657 0068 0B       		.uleb128 0xb
+ 658 0069 00       		.byte	0
+ 659 006a 00       		.byte	0
+ 660 006b 0A       		.uleb128 0xa
+ 661 006c 16       		.uleb128 0x16
+ 662 006d 00       		.byte	0
+ 663 006e 03       		.uleb128 0x3
+ 664 006f 0E       		.uleb128 0xe
+ 665 0070 3A       		.uleb128 0x3a
+ 666 0071 0B       		.uleb128 0xb
+ 667 0072 3B       		.uleb128 0x3b
+ 668 0073 0B       		.uleb128 0xb
+ 669 0074 49       		.uleb128 0x49
+ 670 0075 13       		.uleb128 0x13
+ 671 0076 00       		.byte	0
+ 672 0077 00       		.byte	0
+ 673 0078 0B       		.uleb128 0xb
+ 674 0079 2E       		.uleb128 0x2e
+ 675 007a 01       		.byte	0x1
+ 676 007b 3F       		.uleb128 0x3f
+ 677 007c 19       		.uleb128 0x19
+ 678 007d 03       		.uleb128 0x3
+ 679 007e 0E       		.uleb128 0xe
+ 680 007f 3A       		.uleb128 0x3a
+ 681 0080 0B       		.uleb128 0xb
+ 682 0081 3B       		.uleb128 0x3b
+ 683 0082 05       		.uleb128 0x5
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 26
 
 
- 686 009d 0D       		.uleb128 0xd
- 687 009e 34       		.uleb128 0x34
- 688 009f 00       		.byte	0
- 689 00a0 03       		.uleb128 0x3
- 690 00a1 0E       		.uleb128 0xe
- 691 00a2 3A       		.uleb128 0x3a
- 692 00a3 0B       		.uleb128 0xb
- 693 00a4 3B       		.uleb128 0x3b
- 694 00a5 05       		.uleb128 0x5
- 695 00a6 49       		.uleb128 0x49
- 696 00a7 13       		.uleb128 0x13
- 697 00a8 02       		.uleb128 0x2
- 698 00a9 17       		.uleb128 0x17
- 699 00aa 00       		.byte	0
- 700 00ab 00       		.byte	0
- 701 00ac 0E       		.uleb128 0xe
- 702 00ad 898201   		.uleb128 0x4109
- 703 00b0 01       		.byte	0x1
- 704 00b1 11       		.uleb128 0x11
- 705 00b2 01       		.uleb128 0x1
- 706 00b3 31       		.uleb128 0x31
- 707 00b4 13       		.uleb128 0x13
- 708 00b5 00       		.byte	0
- 709 00b6 00       		.byte	0
- 710 00b7 0F       		.uleb128 0xf
- 711 00b8 8A8201   		.uleb128 0x410a
- 712 00bb 00       		.byte	0
- 713 00bc 02       		.uleb128 0x2
- 714 00bd 18       		.uleb128 0x18
- 715 00be 9142     		.uleb128 0x2111
- 716 00c0 18       		.uleb128 0x18
- 717 00c1 00       		.byte	0
- 718 00c2 00       		.byte	0
- 719 00c3 10       		.uleb128 0x10
- 720 00c4 2E       		.uleb128 0x2e
- 721 00c5 00       		.byte	0
- 722 00c6 3F       		.uleb128 0x3f
- 723 00c7 19       		.uleb128 0x19
- 724 00c8 3C       		.uleb128 0x3c
- 725 00c9 19       		.uleb128 0x19
- 726 00ca 6E       		.uleb128 0x6e
- 727 00cb 0E       		.uleb128 0xe
- 728 00cc 03       		.uleb128 0x3
- 729 00cd 0E       		.uleb128 0xe
- 730 00ce 3A       		.uleb128 0x3a
- 731 00cf 0B       		.uleb128 0xb
- 732 00d0 3B       		.uleb128 0x3b
- 733 00d1 0B       		.uleb128 0xb
- 734 00d2 00       		.byte	0
- 735 00d3 00       		.byte	0
- 736 00d4 11       		.uleb128 0x11
- 737 00d5 2E       		.uleb128 0x2e
- 738 00d6 00       		.byte	0
- 739 00d7 3F       		.uleb128 0x3f
- 740 00d8 19       		.uleb128 0x19
- 741 00d9 3C       		.uleb128 0x3c
- 742 00da 19       		.uleb128 0x19
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 27
+ 684 0083 27       		.uleb128 0x27
+ 685 0084 19       		.uleb128 0x19
+ 686 0085 11       		.uleb128 0x11
+ 687 0086 01       		.uleb128 0x1
+ 688 0087 12       		.uleb128 0x12
+ 689 0088 06       		.uleb128 0x6
+ 690 0089 40       		.uleb128 0x40
+ 691 008a 18       		.uleb128 0x18
+ 692 008b 9742     		.uleb128 0x2117
+ 693 008d 19       		.uleb128 0x19
+ 694 008e 01       		.uleb128 0x1
+ 695 008f 13       		.uleb128 0x13
+ 696 0090 00       		.byte	0
+ 697 0091 00       		.byte	0
+ 698 0092 0C       		.uleb128 0xc
+ 699 0093 898201   		.uleb128 0x4109
+ 700 0096 00       		.byte	0
+ 701 0097 11       		.uleb128 0x11
+ 702 0098 01       		.uleb128 0x1
+ 703 0099 31       		.uleb128 0x31
+ 704 009a 13       		.uleb128 0x13
+ 705 009b 00       		.byte	0
+ 706 009c 00       		.byte	0
+ 707 009d 0D       		.uleb128 0xd
+ 708 009e 34       		.uleb128 0x34
+ 709 009f 00       		.byte	0
+ 710 00a0 03       		.uleb128 0x3
+ 711 00a1 0E       		.uleb128 0xe
+ 712 00a2 3A       		.uleb128 0x3a
+ 713 00a3 0B       		.uleb128 0xb
+ 714 00a4 3B       		.uleb128 0x3b
+ 715 00a5 05       		.uleb128 0x5
+ 716 00a6 49       		.uleb128 0x49
+ 717 00a7 13       		.uleb128 0x13
+ 718 00a8 02       		.uleb128 0x2
+ 719 00a9 17       		.uleb128 0x17
+ 720 00aa 00       		.byte	0
+ 721 00ab 00       		.byte	0
+ 722 00ac 0E       		.uleb128 0xe
+ 723 00ad 898201   		.uleb128 0x4109
+ 724 00b0 01       		.byte	0x1
+ 725 00b1 11       		.uleb128 0x11
+ 726 00b2 01       		.uleb128 0x1
+ 727 00b3 31       		.uleb128 0x31
+ 728 00b4 13       		.uleb128 0x13
+ 729 00b5 00       		.byte	0
+ 730 00b6 00       		.byte	0
+ 731 00b7 0F       		.uleb128 0xf
+ 732 00b8 8A8201   		.uleb128 0x410a
+ 733 00bb 00       		.byte	0
+ 734 00bc 02       		.uleb128 0x2
+ 735 00bd 18       		.uleb128 0x18
+ 736 00be 9142     		.uleb128 0x2111
+ 737 00c0 18       		.uleb128 0x18
+ 738 00c1 00       		.byte	0
+ 739 00c2 00       		.byte	0
+ 740 00c3 10       		.uleb128 0x10
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 27
 
 
- 743 00db 6E       		.uleb128 0x6e
- 744 00dc 0E       		.uleb128 0xe
- 745 00dd 03       		.uleb128 0x3
- 746 00de 0E       		.uleb128 0xe
- 747 00df 3A       		.uleb128 0x3a
- 748 00e0 0B       		.uleb128 0xb
- 749 00e1 3B       		.uleb128 0x3b
- 750 00e2 05       		.uleb128 0x5
- 751 00e3 00       		.byte	0
- 752 00e4 00       		.byte	0
- 753 00e5 00       		.byte	0
- 754              		.section	.debug_loc,"",%progbits
- 755              	.Ldebug_loc0:
- 756              	.LLST0:
- 757 0000 0A000000 		.4byte	.LVL2
- 758 0004 10000000 		.4byte	.LVL3
- 759 0008 0200     		.2byte	0x2
- 760 000a 30       		.byte	0x30
- 761 000b 9F       		.byte	0x9f
- 762 000c 10000000 		.4byte	.LVL3
- 763 0010 60000000 		.4byte	.LVL11
- 764 0014 0100     		.2byte	0x1
- 765 0016 54       		.byte	0x54
- 766 0017 62000000 		.4byte	.LVL12
- 767 001b 66000000 		.4byte	.LVL13
- 768 001f 0100     		.2byte	0x1
- 769 0021 54       		.byte	0x54
- 770 0022 00000000 		.4byte	0
- 771 0026 00000000 		.4byte	0
- 772              	.LLST1:
- 773 002a 02000000 		.4byte	.LVL1
- 774 002e 10000000 		.4byte	.LVL3
- 775 0032 0200     		.2byte	0x2
- 776 0034 31       		.byte	0x31
- 777 0035 9F       		.byte	0x9f
- 778 0036 10000000 		.4byte	.LVL3
- 779 003a 5C000000 		.4byte	.LVL9
- 780 003e 0100     		.2byte	0x1
- 781 0040 55       		.byte	0x55
- 782 0041 5E000000 		.4byte	.LVL10
- 783 0045 66000000 		.4byte	.LVL14
- 784 0049 0100     		.2byte	0x1
- 785 004b 55       		.byte	0x55
- 786 004c 00000000 		.4byte	0
- 787 0050 00000000 		.4byte	0
- 788              		.section	.debug_aranges,"",%progbits
- 789 0000 2C000000 		.4byte	0x2c
- 790 0004 0200     		.2byte	0x2
- 791 0006 00000000 		.4byte	.Ldebug_info0
- 792 000a 04       		.byte	0x4
- 793 000b 00       		.byte	0
- 794 000c 0000     		.2byte	0
- 795 000e 0000     		.2byte	0
- 796 0010 00000000 		.4byte	.LFB1
- 797 0014 14000000 		.4byte	.LFE1-.LFB1
- 798 0018 00000000 		.4byte	.LFB2
- 799 001c 74000000 		.4byte	.LFE2-.LFB2
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 28
+ 741 00c4 2E       		.uleb128 0x2e
+ 742 00c5 00       		.byte	0
+ 743 00c6 3F       		.uleb128 0x3f
+ 744 00c7 19       		.uleb128 0x19
+ 745 00c8 3C       		.uleb128 0x3c
+ 746 00c9 19       		.uleb128 0x19
+ 747 00ca 6E       		.uleb128 0x6e
+ 748 00cb 0E       		.uleb128 0xe
+ 749 00cc 03       		.uleb128 0x3
+ 750 00cd 0E       		.uleb128 0xe
+ 751 00ce 3A       		.uleb128 0x3a
+ 752 00cf 0B       		.uleb128 0xb
+ 753 00d0 3B       		.uleb128 0x3b
+ 754 00d1 0B       		.uleb128 0xb
+ 755 00d2 00       		.byte	0
+ 756 00d3 00       		.byte	0
+ 757 00d4 11       		.uleb128 0x11
+ 758 00d5 2E       		.uleb128 0x2e
+ 759 00d6 00       		.byte	0
+ 760 00d7 3F       		.uleb128 0x3f
+ 761 00d8 19       		.uleb128 0x19
+ 762 00d9 3C       		.uleb128 0x3c
+ 763 00da 19       		.uleb128 0x19
+ 764 00db 6E       		.uleb128 0x6e
+ 765 00dc 0E       		.uleb128 0xe
+ 766 00dd 03       		.uleb128 0x3
+ 767 00de 0E       		.uleb128 0xe
+ 768 00df 3A       		.uleb128 0x3a
+ 769 00e0 0B       		.uleb128 0xb
+ 770 00e1 3B       		.uleb128 0x3b
+ 771 00e2 05       		.uleb128 0x5
+ 772 00e3 00       		.byte	0
+ 773 00e4 00       		.byte	0
+ 774 00e5 00       		.byte	0
+ 775              		.section	.debug_loc,"",%progbits
+ 776              	.Ldebug_loc0:
+ 777              	.LLST0:
+ 778 0000 0A000000 		.4byte	.LVL2
+ 779 0004 10000000 		.4byte	.LVL3
+ 780 0008 0200     		.2byte	0x2
+ 781 000a 30       		.byte	0x30
+ 782 000b 9F       		.byte	0x9f
+ 783 000c 10000000 		.4byte	.LVL3
+ 784 0010 60000000 		.4byte	.LVL12
+ 785 0014 0100     		.2byte	0x1
+ 786 0016 54       		.byte	0x54
+ 787 0017 62000000 		.4byte	.LVL13
+ 788 001b 66000000 		.4byte	.LVL14
+ 789 001f 0100     		.2byte	0x1
+ 790 0021 54       		.byte	0x54
+ 791 0022 00000000 		.4byte	0
+ 792 0026 00000000 		.4byte	0
+ 793              	.LLST1:
+ 794 002a 02000000 		.4byte	.LVL1
+ 795 002e 10000000 		.4byte	.LVL3
+ 796 0032 0200     		.2byte	0x2
+ 797 0034 31       		.byte	0x31
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 28
 
 
- 800 0020 00000000 		.4byte	.LFB3
- 801 0024 20000000 		.4byte	.LFE3-.LFB3
- 802 0028 00000000 		.4byte	0
- 803 002c 00000000 		.4byte	0
- 804              		.section	.debug_ranges,"",%progbits
- 805              	.Ldebug_ranges0:
- 806 0000 00000000 		.4byte	.LFB1
- 807 0004 14000000 		.4byte	.LFE1
- 808 0008 00000000 		.4byte	.LFB2
- 809 000c 74000000 		.4byte	.LFE2
- 810 0010 00000000 		.4byte	.LFB3
- 811 0014 20000000 		.4byte	.LFE3
- 812 0018 00000000 		.4byte	0
- 813 001c 00000000 		.4byte	0
- 814              		.section	.debug_line,"",%progbits
- 815              	.Ldebug_line0:
- 816 0000 BC000000 		.section	.debug_str,"MS",%progbits,1
- 816      02004D00 
- 816      00000201 
- 816      FB0E0D00 
- 816      01010101 
- 817              	.LASF33:
- 818 0000 73686966 		.ascii	"shift\000"
- 818      7400
- 819              	.LASF19:
- 820 0006 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
- 820      44415441 
- 820      5F425954 
- 820      455300
- 821              	.LASF42:
- 822 0015 47656E65 		.ascii	"Generated_Source\\PSoC4\\CAN_INT.c\000"
- 822      72617465 
- 822      645F536F 
- 822      75726365 
- 822      5C50536F 
- 823              	.LASF25:
- 824 0036 7278616D 		.ascii	"rxamr\000"
- 824      7200
- 825              	.LASF32:
- 826 003c 6D61696C 		.ascii	"mailboxNumber\000"
- 826      626F784E 
- 826      756D6265 
- 826      7200
- 827              	.LASF21:
- 828 004a 43414E5F 		.ascii	"CAN_REG_32\000"
- 828      5245475F 
- 828      333200
- 829              	.LASF3:
- 830 0055 73686F72 		.ascii	"short unsigned int\000"
- 830      7420756E 
- 830      7369676E 
- 830      65642069 
- 830      6E7400
- 831              	.LASF20:
- 832 0068 62797465 		.ascii	"byte\000"
- 832      00
- 833              	.LASF24:
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 29
+ 798 0035 9F       		.byte	0x9f
+ 799 0036 10000000 		.4byte	.LVL3
+ 800 003a 5C000000 		.4byte	.LVL10
+ 801 003e 0100     		.2byte	0x1
+ 802 0040 55       		.byte	0x55
+ 803 0041 5E000000 		.4byte	.LVL11
+ 804 0045 66000000 		.4byte	.LVL15
+ 805 0049 0100     		.2byte	0x1
+ 806 004b 55       		.byte	0x55
+ 807 004c 00000000 		.4byte	0
+ 808 0050 00000000 		.4byte	0
+ 809              		.section	.debug_aranges,"",%progbits
+ 810 0000 2C000000 		.4byte	0x2c
+ 811 0004 0200     		.2byte	0x2
+ 812 0006 00000000 		.4byte	.Ldebug_info0
+ 813 000a 04       		.byte	0x4
+ 814 000b 00       		.byte	0
+ 815 000c 0000     		.2byte	0
+ 816 000e 0000     		.2byte	0
+ 817 0010 00000000 		.4byte	.LFB1
+ 818 0014 14000000 		.4byte	.LFE1-.LFB1
+ 819 0018 00000000 		.4byte	.LFB2
+ 820 001c 78000000 		.4byte	.LFE2-.LFB2
+ 821 0020 00000000 		.4byte	.LFB3
+ 822 0024 20000000 		.4byte	.LFE3-.LFB3
+ 823 0028 00000000 		.4byte	0
+ 824 002c 00000000 		.4byte	0
+ 825              		.section	.debug_ranges,"",%progbits
+ 826              	.Ldebug_ranges0:
+ 827 0000 00000000 		.4byte	.LFB1
+ 828 0004 14000000 		.4byte	.LFE1
+ 829 0008 00000000 		.4byte	.LFB2
+ 830 000c 78000000 		.4byte	.LFE2
+ 831 0010 00000000 		.4byte	.LFB3
+ 832 0014 20000000 		.4byte	.LFE3
+ 833 0018 00000000 		.4byte	0
+ 834 001c 00000000 		.4byte	0
+ 835              		.section	.debug_line,"",%progbits
+ 836              	.Ldebug_line0:
+ 837 0000 BE000000 		.section	.debug_str,"MS",%progbits,1
+ 837      02004D00 
+ 837      00000201 
+ 837      FB0E0D00 
+ 837      01010101 
+ 838              	.LASF33:
+ 839 0000 73686966 		.ascii	"shift\000"
+ 839      7400
+ 840              	.LASF19:
+ 841 0006 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
+ 841      44415441 
+ 841      5F425954 
+ 841      455300
+ 842              	.LASF43:
+ 843 0015 47656E65 		.ascii	"Generated_Source\\PSoC4\\CAN_INT.c\000"
+ 843      72617465 
+ 843      645F536F 
+ 843      75726365 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 29
 
 
- 834 006d 72786461 		.ascii	"rxdata\000"
- 834      746100
- 835              	.LASF28:
- 836 0074 72786163 		.ascii	"rxacrd\000"
- 836      726400
- 837              	.LASF12:
- 838 007b 666C6F61 		.ascii	"float\000"
- 838      7400
- 839              	.LASF1:
- 840 0081 756E7369 		.ascii	"unsigned char\000"
- 840      676E6564 
- 840      20636861 
- 840      7200
- 841              	.LASF23:
- 842 008f 72786964 		.ascii	"rxid\000"
- 842      00
- 843              	.LASF15:
- 844 0094 72656738 		.ascii	"reg8\000"
- 844      00
- 845              	.LASF22:
- 846 0099 7278636D 		.ascii	"rxcmd\000"
- 846      6400
- 847              	.LASF5:
- 848 009f 6C6F6E67 		.ascii	"long unsigned int\000"
- 848      20756E73 
- 848      69676E65 
- 848      6420696E 
- 848      7400
- 849              	.LASF9:
- 850 00b1 75696E74 		.ascii	"uint8\000"
- 850      3800
- 851              	.LASF34:
- 852 00b7 43414E5F 		.ascii	"CAN_ISR\000"
- 852      49535200 
- 853              	.LASF13:
- 854 00bf 646F7562 		.ascii	"double\000"
- 854      6C6500
- 855              	.LASF30:
- 856 00c6 43414E5F 		.ascii	"CAN_BusOffIsr\000"
- 856      4275734F 
- 856      66664973 
- 856      7200
- 857              	.LASF10:
- 858 00d4 75696E74 		.ascii	"uint16\000"
- 858      313600
- 859              	.LASF11:
- 860 00db 75696E74 		.ascii	"uint32\000"
- 860      333200
- 861              	.LASF36:
- 862 00e2 43414E5F 		.ascii	"CAN_ReceiveMsg0\000"
- 862      52656365 
- 862      6976654D 
- 862      73673000 
- 863              	.LASF37:
- 864 00f2 43414E5F 		.ascii	"CAN_ReceiveMsg1\000"
- 864      52656365 
- 864      6976654D 
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 30
+ 843      5C50536F 
+ 844              	.LASF25:
+ 845 0036 7278616D 		.ascii	"rxamr\000"
+ 845      7200
+ 846              	.LASF32:
+ 847 003c 6D61696C 		.ascii	"mailboxNumber\000"
+ 847      626F784E 
+ 847      756D6265 
+ 847      7200
+ 848              	.LASF21:
+ 849 004a 43414E5F 		.ascii	"CAN_REG_32\000"
+ 849      5245475F 
+ 849      333200
+ 850              	.LASF3:
+ 851 0055 73686F72 		.ascii	"short unsigned int\000"
+ 851      7420756E 
+ 851      7369676E 
+ 851      65642069 
+ 851      6E7400
+ 852              	.LASF20:
+ 853 0068 62797465 		.ascii	"byte\000"
+ 853      00
+ 854              	.LASF24:
+ 855 006d 72786461 		.ascii	"rxdata\000"
+ 855      746100
+ 856              	.LASF28:
+ 857 0074 72786163 		.ascii	"rxacrd\000"
+ 857      726400
+ 858              	.LASF12:
+ 859 007b 666C6F61 		.ascii	"float\000"
+ 859      7400
+ 860              	.LASF1:
+ 861 0081 756E7369 		.ascii	"unsigned char\000"
+ 861      676E6564 
+ 861      20636861 
+ 861      7200
+ 862              	.LASF23:
+ 863 008f 72786964 		.ascii	"rxid\000"
+ 863      00
+ 864              	.LASF15:
+ 865 0094 72656738 		.ascii	"reg8\000"
+ 865      00
+ 866              	.LASF22:
+ 867 0099 7278636D 		.ascii	"rxcmd\000"
+ 867      6400
+ 868              	.LASF5:
+ 869 009f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 869      20756E73 
+ 869      69676E65 
+ 869      6420696E 
+ 869      7400
+ 870              	.LASF9:
+ 871 00b1 75696E74 		.ascii	"uint8\000"
+ 871      3800
+ 872              	.LASF34:
+ 873 00b7 43414E5F 		.ascii	"CAN_ISR\000"
+ 873      49535200 
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 30
 
 
- 864      73673100 
- 865              	.LASF38:
- 866 0102 43414E5F 		.ascii	"CAN_ReceiveMsg2\000"
- 866      52656365 
- 866      6976654D 
- 866      73673200 
- 867              	.LASF8:
- 868 0112 756E7369 		.ascii	"unsigned int\000"
- 868      676E6564 
- 868      20696E74 
- 868      00
- 869              	.LASF39:
- 870 011f 43414E5F 		.ascii	"CAN_ReceiveMsg3\000"
- 870      52656365 
- 870      6976654D 
- 870      73673300 
- 871              	.LASF7:
- 872 012f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 872      206C6F6E 
- 872      6720756E 
- 872      7369676E 
- 872      65642069 
- 873              	.LASF29:
- 874 0146 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
- 874      52585F53 
- 874      54525543 
- 874      5400
- 875              	.LASF41:
- 876 0154 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 876      43313120 
- 876      352E342E 
- 876      31203230 
- 876      31363036 
- 877 0187 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 877      20726576 
- 877      6973696F 
- 877      6E203233 
- 877      37373135 
- 878 01ba 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 878      66756E63 
- 878      74696F6E 
- 878      2D736563 
- 878      74696F6E 
- 879              	.LASF31:
- 880 01e2 43414E5F 		.ascii	"CAN_MsgRXIsr\000"
- 880      4D736752 
- 880      58497372 
- 880      00
- 881              	.LASF18:
- 882 01ef 73697A65 		.ascii	"sizetype\000"
- 882      74797065 
- 882      00
- 883              	.LASF27:
- 884 01f8 7278616D 		.ascii	"rxamrd\000"
- 884      726400
- 885              	.LASF6:
- 886 01ff 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccn1LNRY.s 			page 31
+ 874              	.LASF13:
+ 875 00bf 646F7562 		.ascii	"double\000"
+ 875      6C6500
+ 876              	.LASF30:
+ 877 00c6 43414E5F 		.ascii	"CAN_BusOffIsr\000"
+ 877      4275734F 
+ 877      66664973 
+ 877      7200
+ 878              	.LASF10:
+ 879 00d4 75696E74 		.ascii	"uint16\000"
+ 879      313600
+ 880              	.LASF11:
+ 881 00db 75696E74 		.ascii	"uint32\000"
+ 881      333200
+ 882              	.LASF36:
+ 883 00e2 43414E5F 		.ascii	"CAN_ReceiveMsg0\000"
+ 883      52656365 
+ 883      6976654D 
+ 883      73673000 
+ 884              	.LASF37:
+ 885 00f2 43414E5F 		.ascii	"CAN_ReceiveMsg1\000"
+ 885      52656365 
+ 885      6976654D 
+ 885      73673100 
+ 886              	.LASF38:
+ 887 0102 43414E5F 		.ascii	"CAN_ReceiveMsg2\000"
+ 887      52656365 
+ 887      6976654D 
+ 887      73673200 
+ 888              	.LASF8:
+ 889 0112 756E7369 		.ascii	"unsigned int\000"
+ 889      676E6564 
+ 889      20696E74 
+ 889      00
+ 890              	.LASF40:
+ 891 011f 43414E5F 		.ascii	"CAN_ReceiveMsg4\000"
+ 891      52656365 
+ 891      6976654D 
+ 891      73673400 
+ 892              	.LASF39:
+ 893 012f 43414E5F 		.ascii	"CAN_ReceiveMsg3\000"
+ 893      52656365 
+ 893      6976654D 
+ 893      73673300 
+ 894              	.LASF7:
+ 895 013f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 895      206C6F6E 
+ 895      6720756E 
+ 895      7369676E 
+ 895      65642069 
+ 896              	.LASF29:
+ 897 0156 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 897      52585F53 
+ 897      54525543 
+ 897      5400
+ 898              	.LASF42:
+ 899 0164 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 31
 
 
- 886      206C6F6E 
- 886      6720696E 
- 886      7400
- 887              	.LASF14:
- 888 020d 63686172 		.ascii	"char\000"
- 888      00
- 889              	.LASF35:
- 890 0212 43414E5F 		.ascii	"CAN_Stop\000"
- 890      53746F70 
- 890      00
- 891              	.LASF2:
- 892 021b 73686F72 		.ascii	"short int\000"
- 892      7420696E 
- 892      7400
- 893              	.LASF26:
- 894 0225 72786163 		.ascii	"rxacr\000"
- 894      7200
- 895              	.LASF4:
- 896 022b 6C6F6E67 		.ascii	"long int\000"
- 896      20696E74 
- 896      00
- 897              	.LASF16:
- 898 0234 72656733 		.ascii	"reg32\000"
- 898      3200
- 899              	.LASF17:
- 900 023a 6C6F6E67 		.ascii	"long double\000"
- 900      20646F75 
- 900      626C6500 
- 901              	.LASF0:
- 902 0246 7369676E 		.ascii	"signed char\000"
- 902      65642063 
- 902      68617200 
- 903              	.LASF43:
- 904 0252 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
- 904      73657273 
- 904      5C48656E 
- 904      72792041 
- 904      6C626572 
- 905 0280 6F64756C 		.ascii	"odular\\Optimization_Algorithms\\Xbee_Snifer_Terate"
- 905      61725C4F 
- 905      7074696D 
- 905      697A6174 
- 905      696F6E5F 
- 906 02b1 726D2E63 		.ascii	"rm.cydsn\000"
- 906      7964736E 
- 906      00
- 907              	.LASF40:
- 908 02ba 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
- 908      52656365 
- 908      6976654D 
- 908      736700
- 909              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 899      43313120 
+ 899      352E342E 
+ 899      31203230 
+ 899      31363036 
+ 900 0197 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 900      20726576 
+ 900      6973696F 
+ 900      6E203233 
+ 900      37373135 
+ 901 01ca 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 901      66756E63 
+ 901      74696F6E 
+ 901      2D736563 
+ 901      74696F6E 
+ 902              	.LASF31:
+ 903 01f2 43414E5F 		.ascii	"CAN_MsgRXIsr\000"
+ 903      4D736752 
+ 903      58497372 
+ 903      00
+ 904              	.LASF18:
+ 905 01ff 73697A65 		.ascii	"sizetype\000"
+ 905      74797065 
+ 905      00
+ 906              	.LASF27:
+ 907 0208 7278616D 		.ascii	"rxamrd\000"
+ 907      726400
+ 908              	.LASF6:
+ 909 020f 6C6F6E67 		.ascii	"long long int\000"
+ 909      206C6F6E 
+ 909      6720696E 
+ 909      7400
+ 910              	.LASF14:
+ 911 021d 63686172 		.ascii	"char\000"
+ 911      00
+ 912              	.LASF35:
+ 913 0222 43414E5F 		.ascii	"CAN_Stop\000"
+ 913      53746F70 
+ 913      00
+ 914              	.LASF2:
+ 915 022b 73686F72 		.ascii	"short int\000"
+ 915      7420696E 
+ 915      7400
+ 916              	.LASF26:
+ 917 0235 72786163 		.ascii	"rxacr\000"
+ 917      7200
+ 918              	.LASF4:
+ 919 023b 6C6F6E67 		.ascii	"long int\000"
+ 919      20696E74 
+ 919      00
+ 920              	.LASF16:
+ 921 0244 72656733 		.ascii	"reg32\000"
+ 921      3200
+ 922              	.LASF17:
+ 923 024a 6C6F6E67 		.ascii	"long double\000"
+ 923      20646F75 
+ 923      626C6500 
+ 924              	.LASF0:
+ARM GAS  C:\Users\HENRYA~1\AppData\Local\Temp\ccgeO9ua.s 			page 32
+
+
+ 925 0256 7369676E 		.ascii	"signed char\000"
+ 925      65642063 
+ 925      68617200 
+ 926              	.LASF44:
+ 927 0262 433A5C55 		.ascii	"C:\\Users\\Henry Alberto\\Documents\\GitHub\\Psoc_M"
+ 927      73657273 
+ 927      5C48656E 
+ 927      72792041 
+ 927      6C626572 
+ 928 0290 6F64756C 		.ascii	"odular\\Optimization_Algorithms\\Xbee_Snifer_Terate"
+ 928      61725C4F 
+ 928      7074696D 
+ 928      697A6174 
+ 928      696F6E5F 
+ 929 02c1 726D2E63 		.ascii	"rm.cydsn\000"
+ 929      7964736E 
+ 929      00
+ 930              	.LASF41:
+ 931 02ca 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
+ 931      52656365 
+ 931      6976654D 
+ 931      736700
+ 932              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

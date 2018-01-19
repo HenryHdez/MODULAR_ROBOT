@@ -13,9 +13,27 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Optimization_Algorithms\Aditive_Control">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Optimization_Algorithms\Genetic_Algorithm">
 <ExpandedNodeIds>
 <v>Optimization_Algorithms</v>
+<v>Optimization_Algorithms\Acelerometer\TopDesign</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.cydwr</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.cydwr\Pins</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.cydwr\Analog</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.cydwr\DMA</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.cydwr\Clocks</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.cydwr\Interrupts</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.cydwr\System</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.cydwr\Directives</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.cydwr\Flash Security</v>
+<v>Optimization_Algorithms\Acelerometer\Header Files</v>
+<v>Optimization_Algorithms\Acelerometer\Header Files\cyapicallbacks.h</v>
+<v>Optimization_Algorithms\Acelerometer\Header Files\protocolo can.h</v>
+<v>Optimization_Algorithms\Acelerometer\Source Files</v>
+<v>Optimization_Algorithms\Acelerometer\Source Files\main.c</v>
+<v>Optimization_Algorithms\Acelerometer\Generated_Source</v>
+<v>Optimization_Algorithms\Acelerometer\Generated_Source\PSoC4</v>
+<v>Optimization_Algorithms\Acelerometer\Generated_Source\PSoC4\CAN</v>
 <v>Optimization_Algorithms\Aditive_Control\TopDesign</v>
 <v>Optimization_Algorithms\Aditive_Control\Aditive_Control.cydwr</v>
 <v>Optimization_Algorithms\Aditive_Control\Aditive_Control.cydwr\Pins</v>
@@ -176,9 +194,11 @@
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\Source Files\main.c</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\Generated_Source</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\Generated_Source\PSoC4</v>
+<v>Optimization_Algorithms\Xbee_Snifer_Teraterm\Generated_Source\PSoC4\CAN</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Optimization_Algorithms</v>
+<v>Optimization_Algorithms\Acelerometer</v>
 <v>Optimization_Algorithms\Aditive_Control</v>
 <v>Optimization_Algorithms\Genetic_Algorithm</v>
 <v>Optimization_Algorithms\Hill_Climbing_1</v>
@@ -193,6 +213,9 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Optimization_Algorithms</v>
+<v>Optimization_Algorithms\Acelerometer</v>
+<v>Optimization_Algorithms\Acelerometer\TopDesign</v>
+<v>Optimization_Algorithms\Acelerometer\TopDesign\TopDesign.cysch</v>
 <v>Optimization_Algorithms\Aditive_Control</v>
 <v>Optimization_Algorithms\Aditive_Control\TopDesign</v>
 <v>Optimization_Algorithms\Aditive_Control\TopDesign\TopDesign.cysch</v>
@@ -223,6 +246,9 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Optimization_Algorithms</v>
+<v>Optimization_Algorithms\Acelerometer</v>
+<v>Optimization_Algorithms\Acelerometer\TopDesign</v>
+<v>Optimization_Algorithms\Acelerometer\TopDesign\TopDesign.cysch</v>
 <v>Optimization_Algorithms\Aditive_Control</v>
 <v>Optimization_Algorithms\Aditive_Control\TopDesign</v>
 <v>Optimization_Algorithms\Aditive_Control\TopDesign\TopDesign.cysch</v>
@@ -238,14 +264,60 @@
 <v>Optimization_Algorithms\Module</v>
 <v>Optimization_Algorithms\Module\TopDesign</v>
 <v>Optimization_Algorithms\Module\TopDesign\TopDesign.cysch</v>
-<v>Optimization_Algorithms\Reactive_Control</v>
-<v>Optimization_Algorithms\Reactive_Control\TopDesign</v>
-<v>Optimization_Algorithms\Reactive_Control\TopDesign\TopDesign.cysch</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Optimization_Algorithms</v>
+<v>Optimization_Algorithms\Acelerometer</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_intClock.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_HFCLK.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_INT.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_isr.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_PM.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_TX_RX_func.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_1.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_1_PM.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_2.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_2_PM.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\TX_2.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\TX_2_PM.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\X.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\X_PM.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\Y.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\Y_PM.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\Z.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Listing Files\Z_PM.lst</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Acelerometer.elf</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Acelerometer.hex</v>
+<v>Optimization_Algorithms\Acelerometer\CortexM0\ARM_GCC_541\Debug\Acelerometer.map</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.gpdsc</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer.rpt</v>
+<v>Optimization_Algorithms\Acelerometer\Acelerometer_timing.html</v>
 <v>Optimization_Algorithms\Aditive_Control</v>
 <v>Optimization_Algorithms\Aditive_Control\CortexM0</v>
 <v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541</v>
@@ -680,6 +752,7 @@
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Optimization_Algorithms\Xbee_Snifer_Teraterm\CortexM0\ARM_GCC_541\Debug\Listing Files\Interrupcion.lst</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_1.lst</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_1_PM.lst</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
@@ -710,24 +783,7 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Optimization_Algorithms</v>
-<v>Optimization_Algorithms\Aditive_Control</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_HFCLK.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_INT.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_isr.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_PM.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_TX_RX_func.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>Optimization_Algorithms\Aditive_Control\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Optimization_Algorithms\Acelerometer</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -738,6 +794,21 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Optimization_Algorithms</v>
+<v>Optimization_Algorithms\Acelerometer</v>
+<v>Optimization_Algorithms\Acelerometer\PSoC 4 Architecture TRM</v>
+<v>Optimization_Algorithms\Acelerometer\PSoC 4200M Family Datasheet</v>
+<v>Optimization_Algorithms\Acelerometer\System Reference Guides</v>
+<v>Optimization_Algorithms\Acelerometer\System Reference Guides\cy_boot_v5_40</v>
+<v>Optimization_Algorithms\Acelerometer\System Reference Guides\cy_dmac_v1_10</v>
+<v>Optimization_Algorithms\Acelerometer\System Reference Guides\cy_lfclk_v1_10</v>
+<v>Optimization_Algorithms\Acelerometer\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\CAN_v3_0.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\cy_clock_v2_20.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\cy_isr_v1_70.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\cy_pins_v2_20</v>
+<v>Optimization_Algorithms\Acelerometer\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\Timer_v2_70.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\ZeroTerminal.pdf</v>
 <v>Optimization_Algorithms\Aditive_Control</v>
 <v>Optimization_Algorithms\Aditive_Control\PSoC 4 Architecture TRM</v>
 <v>Optimization_Algorithms\Aditive_Control\PSoC 4200M Family Datasheet</v>
@@ -878,7 +949,8 @@
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\System Reference Guides\cy_lfclk_v1_10</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\CAN_v3_0.pdf</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\cy_clock_v2_20.pdf</v>
-<v>Optimization_Algorithms\Xbee_Snifer_Teraterm\cy_isr_v1_70.pdf</v>
+<v>Optimization_Algorithms\Xbee_Snifer_Teraterm\cy_isr_v1_70</v>
+<v>Optimization_Algorithms\Xbee_Snifer_Teraterm\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\cy_pins_v2_20</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Optimization_Algorithms\Xbee_Snifer_Teraterm\Timer_v2_70.pdf</v>
@@ -887,24 +959,24 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Optimization_Algorithms</v>
+<v>Optimization_Algorithms\Acelerometer</v>
+<v>Optimization_Algorithms\Acelerometer\PSoC 4 Architecture TRM</v>
+<v>Optimization_Algorithms\Acelerometer\PSoC 4200M Family Datasheet</v>
+<v>Optimization_Algorithms\Acelerometer\System Reference Guides</v>
+<v>Optimization_Algorithms\Acelerometer\System Reference Guides\cy_boot_v5_40</v>
+<v>Optimization_Algorithms\Acelerometer\System Reference Guides\cy_dmac_v1_10</v>
+<v>Optimization_Algorithms\Acelerometer\System Reference Guides\cy_lfclk_v1_10</v>
+<v>Optimization_Algorithms\Acelerometer\ADC_SAR_SEQ_P4_v2_50.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\CAN_v3_0.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\cy_clock_v2_20.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\cy_isr_v1_70.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\cy_pins_v2_20</v>
+<v>Optimization_Algorithms\Acelerometer\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\Timer_v2_70.pdf</v>
+<v>Optimization_Algorithms\Acelerometer\ZeroTerminal.pdf</v>
 <v>Optimization_Algorithms\Aditive_Control</v>
 <v>Optimization_Algorithms\Aditive_Control\PSoC 4 Architecture TRM</v>
 <v>Optimization_Algorithms\Aditive_Control\PSoC 4200M Family Datasheet</v>
-<v>Optimization_Algorithms\Aditive_Control\System Reference Guides</v>
-<v>Optimization_Algorithms\Aditive_Control\System Reference Guides\cy_boot_v5_40</v>
-<v>Optimization_Algorithms\Aditive_Control\System Reference Guides\cy_dmac_v1_10</v>
-<v>Optimization_Algorithms\Aditive_Control\System Reference Guides\cy_lfclk_v1_10</v>
-<v>Optimization_Algorithms\Aditive_Control\CAN_v3_0.pdf</v>
-<v>Optimization_Algorithms\Aditive_Control\cy_clock_v2_20.pdf</v>
-<v>Optimization_Algorithms\Aditive_Control\cy_isr_v1_70</v>
-<v>Optimization_Algorithms\Aditive_Control\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>Optimization_Algorithms\Aditive_Control\cy_pins_v2_20</v>
-<v>Optimization_Algorithms\Aditive_Control\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Optimization_Algorithms\Aditive_Control\Timer_v2_70.pdf</v>
-<v>Optimization_Algorithms\Aditive_Control\UART_v2_50.pdf</v>
-<v>Optimization_Algorithms\Aditive_Control\ZeroTerminal.pdf</v>
-<v>Optimization_Algorithms\Genetic_Algorithm</v>
-<v>Optimization_Algorithms\Genetic_Algorithm\PSoC 4 Architecture TRM</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -919,7 +991,8 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Aditive_Control.cydsn\main.c" />
+<name v=".\Xbee_Snifer_Teraterm.cydsn\main.c" />
+<name v=".\Genetic_Algorithm.cydsn\main.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -927,7 +1000,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="753, 399" SelectedTabbedMdiWindow="65a868a4-57f8-4a9d-8259-ff3abe75bc5d"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="43850630-c835-437f-9fe3-2e8d4db89471" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Optimization_Algorithms\Aditive_Control.cydsn\main.c" Guid="65a868a4-57f8-4a9d-8259-ff3abe75bc5d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="753, 399" SelectedTabbedMdiWindow="c7f26394-1b99-41e2-aa9c-3439ddd677f7"><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Optimization_Algorithms\Xbee_Snifer_Teraterm.cydsn\main.c" Guid="c7f26394-1b99-41e2-aa9c-3439ddd677f7" /><DocumentWindow Key="C:\Users\Henry Alberto\Documents\GitHub\Psoc_Modular\Optimization_Algorithms\Genetic_Algorithm.cydsn\main.c" Guid="a6a42f3f-7d8c-4fd5-b63c-bcf1a772ba5d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
