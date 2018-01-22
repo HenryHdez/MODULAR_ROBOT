@@ -1,8 +1,0 @@
-C:/Users/Henry\ Alberto/Desktop/Test_Robot/Test_Sensor_F1.cydsn/CortexM0/ARM_GCC_493/Debug/CyBootAsmGnu.o : C:/Users/Henry\ Alberto/Desktop/Test_Robot/Test_Sensor_F1.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s C:/Users/Henry\ Alberto/Desktop/Test_Robot/Test_Sensor_F1.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc C:/Users/Henry\ Alberto/Desktop/Test_Robot/Test_Sensor_F1.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
-
-C:/Users/Henry\ Alberto/Desktop/Test_Robot/Test_Sensor_F1.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
-
-C:/Users/Henry\ Alberto/Desktop/Test_Robot/Test_Sensor_F1.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
-
-C:/Users/Henry\ Alberto/Desktop/Test_Robot/Test_Sensor_F1.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
-
