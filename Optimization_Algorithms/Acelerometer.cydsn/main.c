@@ -32,18 +32,20 @@ int main()
     //Init LED's
     LED_1_Write(0);
     ADC_Start();
+    ADC_StartConvert();
     CAN_Start();                    //Start CAN
-    CAN_isr_StartEx(interrutcan);   //Interrupcion CAN 
+    //CAN_isr_StartEx(interrutcan);   //Interrupcion CAN 
     CAN_GlobalIntEnable();
     CyGlobalIntEnable;
     for(;;){  
         LED_1_Write(0);
         dato_enviado_1[0]=ADC_GetResult16(0);
-        dato_enviado_1[0]=ADC_GetResult16(1);
-        dato_enviado_1[0]=ADC_GetResult16(2);
+        dato_enviado_1[1]=ADC_GetResult16(1);
+        dato_enviado_1[2]=ADC_GetResult16(2);
         CAN_SendMsg4();
-        CyDelay(3000);
+        CyDelay(1500);
         LED_1_Write(1);
+        CyDelay(1500);
         }
 }
 
